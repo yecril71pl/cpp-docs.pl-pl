@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214129"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470922"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) , w której mają zostać zwrócone dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , który określa format danych.
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której znajdują się dane.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) , w której znajdują się dane.
 
 *bRelease*<br/>
 PRAWDA, jeśli formant powinien zwolnić nośnik magazynu; Wartość FALSE, jeśli formant nie powinien zwalniać nośnika magazynu.

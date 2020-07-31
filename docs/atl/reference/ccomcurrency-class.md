@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 541944e03e9caf6cba15612cf9e7cbbd239555ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b3c260f250fdb198c8317355628fa2fe62c44eb
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327943"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470787"
 ---
 # <a name="ccomcurrency-class"></a>Klasa CComCurrency
 
-`CComCurrency`posiada metody i operatory do tworzenia i zarządzania obiektem CURRENCY.
+`CComCurrency`ma metody i operatory do tworzenia obiektu waluty i zarządzania nim.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,66 +38,66 @@ class CComCurrency
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|Konstruktor `CComCurrency` dla obiektu.|
+|[CComCurrency::CComCurrency](#ccomcurrency)|Konstruktor dla `CComCurrency` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Zwraca adres członka `m_currency` danych.|
-|[CComCurrency::GetFraction](#getfraction)|Wywołanie tej metody, aby zwrócić `CComCurrency` składnik ułamkowy obiektu.|
-|[CComCurrency::GetInteger](#getinteger)|Wywołanie tej metody, aby zwrócić `CComCurrency` składnik liczby całkowitej obiektu.|
-|[CComCurrency::Okrągły](#round)|Wywołanie tej metody, aby zaokrąglić `CComCurrency` obiekt do najbliższej wartości całkowitej.|
-|[CComCurrency::SetFraction](#setfraction)|Wywołanie tej metody, aby ustawić `CComCurrency` składnik ułamkowy obiektu.|
-|[CComCurrency::SetInteger](#setinteger)|Wywołanie tej metody, aby ustawić `CComCurrency` składnik liczby całkowitej obiektu.|
+|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Zwraca adres `m_currency` elementu członkowskiego danych.|
+|[CComCurrency:: getułamek](#getfraction)|Wywołaj tę metodę, aby zwrócić składnik częściowy `CComCurrency` obiektu.|
+|[CComCurrency:: GetInteger](#getinteger)|Wywołaj tę metodę, aby zwrócić składnik całkowity `CComCurrency` obiektu.|
+|[CComCurrency:: Round](#round)|Wywołaj tę metodę, aby zaokrąglić `CComCurrency` obiekt do najbliższej wartości całkowitej.|
+|[CComCurrency:: setułamek](#setfraction)|Wywołaj tę metodę, aby ustawić ułamek składnika `CComCurrency` obiektu.|
+|[CComCurrency:: setinteger](#setinteger)|Wywołaj tę metodę, aby ustawić składnik Integer `CComCurrency` obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCurrency::operator -](#operator_-)|Ten operator jest używany do odejmowania obiektu. `CComCurrency`|
-|[CComCurrency::operator !=](#operator_neq)|Porównuje dwa `CComCurrency` obiekty dla nierówności.|
-|[CComCurrency::operator *](#operator_star)|Ten operator jest używany do wykonywania `CComCurrency` mnożenia na obiekcie.|
-|[CComCurrency::operator *=](#operator_star_eq)|Ten operator jest używany do wykonywania `CComCurrency` mnożenia na obiekcie i przypisać mu wynik.|
-|[CComCurrency::operator /](#operator_div)|Ten operator jest używany do `CComCurrency` wykonywania podziału na obiekcie.|
-|[CComCurrency::operator /=](#operator_div_eq)|Ten operator jest używany do `CComCurrency` wykonywania podziału na obiekcie i przypisać mu wynik.|
-|[CComCurrency::operator +](#operator_add)|Ten operator jest używany do `CComCurrency` wykonywania dodawania na obiekcie.|
-|[CComCurrency::operator +=](#operator_add_eq)|Ten operator jest używany do `CComCurrency` dodawania obiektu i przypisywania wyniku do bieżącego obiektu.|
-|[CComCurrency::operator <](#operator_lt)|Ten operator porównuje `CComCurrency` dwa obiekty, aby określić mniejsze.|
-|[CComCurrency::operator <=](#operator_lt_eq)|Ten operator porównuje `CComCurrency` dwa obiekty do określenia równości lub mniejsze.|
-|[CComCurrency::operator =](#operator_eq)|Ten operator przypisuje `CComCurrency` obiekt do nowej wartości.|
-|[CComCurrency::operator -=](#operator_-_eq)|Ten operator jest używany do wykonywania `CComCurrency` odejmowania na obiekcie i przypisać mu wynik.|
-|[CComCurrency::operator ==](#operator_eq_eq)|Ten operator porównuje `CComCurrency` dwa obiekty dla równości.|
-|[CComCurrency::operator >](#operator_gt)|Ten operator porównuje `CComCurrency` dwa obiekty, aby określić większe.|
-|[CComCurrency::operator >=](#operator_gt_eq)|Ten operator porównuje `CComCurrency` dwa obiekty do określenia równości lub większe.|
-|[CComCurrency::operator WALUTA](#operator_currency)|Rzutuje obiekt CURRENCY.|
+|[CComCurrency:: operator-](#operator_-)|Ten operator służy do wykonywania odejmowania `CComCurrency` obiektu.|
+|[CComCurrency:: operator! =](#operator_neq)|Porównuje dwa `CComCurrency` obiekty pod kątem nierówności.|
+|[CComCurrency:: operator *](#operator_star)|Ten operator służy do wykonywania mnożenia w `CComCurrency` obiekcie.|
+|[CComCurrency:: operator * =](#operator_star_eq)|Ten operator służy do wykonywania mnożenia `CComCurrency` obiektów i przypisywania wyniku.|
+|[CComCurrency:: operator/](#operator_div)|Ten operator służy do wykonywania dzielenia na `CComCurrency` obiekt.|
+|[CComCurrency:: operator/=](#operator_div_eq)|Ten operator służy do wykonywania dzielenia na `CComCurrency` obiekt i przypisywania go do wyniku.|
+|[CComCurrency:: operator +](#operator_add)|Ten operator służy do wykonywania dodawania do `CComCurrency` obiektu.|
+|[CComCurrency:: operator + =](#operator_add_eq)|Ten operator służy do wykonywania dodawania do `CComCurrency` obiektu i przypisywania wyniku do bieżącego obiektu.|
+|[CComCurrency:: operator <](#operator_lt)|Ten operator porównuje dwa `CComCurrency` obiekty, aby określić, że są one mniejsze.|
+|[CComCurrency:: operator <=](#operator_lt_eq)|Ten operator porównuje dwa `CComCurrency` obiekty, aby określić równość lub mniejszą.|
+|[CComCurrency:: operator =](#operator_eq)|Ten operator przypisuje `CComCurrency` obiekt do nowej wartości.|
+|[CComCurrency:: operator-=](#operator_-_eq)|Ten operator służy do wykonywania odejmowania `CComCurrency` obiektu i przypisywania go do wyniku.|
+|[CComCurrency:: operator = =](#operator_eq_eq)|Ten operator porównuje dwa `CComCurrency` obiekty pod kątem równości.|
+|[CComCurrency:: operator >](#operator_gt)|Ten operator porównuje dwa `CComCurrency` obiekty w celu określenia większego.|
+|[CComCurrency:: operator >=](#operator_gt_eq)|Ten operator porównuje dwa `CComCurrency` obiekty, aby określić równość lub większą.|
+|[CComCurrency:: operator — waluta](#operator_currency)|Rzutuje obiekt waluty.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCurrency::m_currency](#m_currency)|Zmienna WALUTA utworzona przez wystąpienie klasy.|
+|[CComCurrency:: m_currency](#m_currency)|Zmienna waluty utworzona przez wystąpienie klasy.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComCurrency`jest otoką dla typu danych CURRENCY. WALUTA jest implementowana jako 8-bajtowa wartość całkowita z dopełnieniem 2000 skalowana przez 10 000. Daje to stały numer punktowy z 15 cyframi po lewej stronie przecinka dziesiętnego i 4 cyframi po prawej stronie. Typ danych CURRENCY jest niezwykle przydatny w obliczeniach dotyczących pieniądza lub w obliczeniach o stałym punkcie, w których dokładność jest ważna.
+`CComCurrency`jest otoką dla typu danych Waluta. WALUTA jest implementowana jako 8-bajtowa liczba całkowita uzupełniająca, skalowana przez 10 000. Daje to stałą liczbę z 15 cyfr po lewej stronie przecinka dziesiętnego i 4 cyfry po prawej stronie. Typ danych WALUTowych jest niezwykle przydatny do obliczeń związanych z pieniędzmi lub w przypadku obliczeń mających stałe znaczenie.
 
-Otoka `CComCurrency` implementuje operacje arytmetyczne, przypisania i porównania dla tego typu stałego punktu. Obsługiwane aplikacje zostały wybrane do kontrolowania błędów zaokrąglania, które mogą wystąpić podczas obliczeń stałych punktów.
+`CComCurrency`Otoka implementuje operacje arytmetyczne, przypisywania i porównywania dla tego typu stałego. Obsługiwane aplikacje zostały wybrane do kontrolowania błędów zaokrąglania, które mogą wystąpić podczas obliczeń z ustalonym punktem.
 
-Obiekt `CComCurrency` zapewnia dostęp do liczb po obu stronach przecinka dziesiętnego w postaci dwóch składników: składnika liczby całkowitej, który przechowuje wartość po lewej stronie przecinka dziesiętnego oraz składnika ułamkowego, który przechowuje wartość po prawej stronie przecinka dziesiętnego. Składnik ułamkowy jest przechowywany wewnętrznie jako wartość całkowita między -9999 (CY_MIN_FRACTION) i +9999 (CY_MAX_FRACTION). Metoda [CComCurrency::GetFraction](#getfraction) zwraca wartość skalowana przez współczynnik 10000 (CY_SCALE).
+`CComCurrency`Obiekt umożliwia dostęp do liczb znajdujących się po obu stronach przecinka dziesiętnego w postaci dwóch składników: składnika liczb całkowitych, który przechowuje wartość z lewej strony punktu dziesiętnego i składnik Ułamkowy, który przechowuje wartość z prawej strony punktu dziesiętnego. Składnik Ułamkowy jest przechowywany wewnętrznie jako wartość całkowita z zakresu od-9999 (CY_MIN_FRACTION) do + 9999 (CY_MAX_FRACTION). Metoda [CComCurrency:: getułamek](#getfraction) zwraca wartość przeskalowana przez współczynnik 10000 (CY_SCALE).
 
-Określając składniki całkowite i ułamkowe `CComCurrency` obiektu, należy pamiętać, że składnik ułamkowy jest liczbą w zakresie od 0 do 9999. Jest to ważne w przypadku waluty, takiej jak dolar amerykański, która wyraża kwoty przy użyciu tylko dwóch cyfr znaczących po przecinku dziesiętnym. Mimo że dwie ostatnie cyfry nie są wyświetlane, należy je wziąć pod uwagę.
+Podczas określania wartości całkowitych i częściowych `CComCurrency` obiektu należy pamiętać, że składnik Ułamkowy jest liczbą z zakresu od 0 do 9999. Jest to ważne, gdy chodzi o użycie waluty, takiej jak Dolar amerykański, która wyraża kwoty, używając tylko dwóch cyfr znaczących po przecinku dziesiętnym. Mimo że ostatnie dwie cyfry nie są wyświetlane, muszą być brane pod uwagę.
 
 |Wartość|Możliwe przypisania CComCurrency|
 |-----------|---------------------------------------|
-|zł.|CComCurrency(10,5000) *lub* CComCurrency(10.50)|
-|zł.|CComCurrency(10,500) *lub* CComCurrency(10.05)|
+|$10,50|CComCurrency (10, 5000) *lub* CComCurrency (10.50)|
+|$10,05|CComCurrency (10500) *lub* CComCurrency (10.05)|
 
-Wartości CY_MIN_FRACTION, CY_MAX_FRACTION i CY_SCALE są zdefiniowane w pliku atlcur.h.
+Wartości CY_MIN_FRACTION, CY_MAX_FRACTION i CY_SCALE są zdefiniowane w atlcur. h.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcur.h
+**Nagłówek:** atlcur. h
 
 ## <a name="ccomcurrencyccomcurrency"></a><a name="ccomcurrency"></a>CComCurrency::CComCurrency
 
@@ -125,41 +125,41 @@ explicit CComCurrency(LPCSTR szSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc ( curSrc )*<br/>
+*curSrc*<br/>
 Istniejący `CComCurrency` obiekt.
 
-*cysrc (cysrc)*<br/>
-Zmienna typu WALUTA.
+*cySrc*<br/>
+Zmienna typu CURRENCY.
 
 *bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
-Wartość początkowa podana `m_currency`zmiennej członkowskiej .
+Początkowa wartość nadana zmiennej członkowskiej `m_currency` .
 
-*Csrc*<br/>
-Znak zawierający wartość początkową podana `m_currency`zmiennej członkowskiej .
+*cSrc*<br/>
+Znak zawierający początkową wartość podaną dla zmiennej składowej `m_currency` .
 
 *nInteger*, *nFraction*<br/>
-Składniki całkowite i ułamkowe początkowej wartości pieniężnej. Zobacz [przegląd CComCurrency,](../../atl/reference/ccomcurrency-class.md) aby uzyskać więcej informacji.
+Całkowite i ułamkowe składniki początkowej wartości pieniężnej. Aby uzyskać więcej informacji, zobacz Omówienie [CComCurrency](../../atl/reference/ccomcurrency-class.md) .
 
-*pDispSrc (Niedłumice stronicowanie)*<br/>
-Wskaźnik. `IDispatch`
+*pDispSrc*<br/>
+`IDispatch`Wskaźnik.
 
-*varSrc ( varSrc )*<br/>
-Zmienna typu VARIANT. Ustawienia regionalne bieżącego wątku jest używany do wykonywania konwersji.
+*varSrc*<br/>
+Zmienna typu VARIANT. Ustawienia regionalne bieżącego wątku są używane do wykonania konwersji.
 
-*szsrc ( szsrc )*<br/>
-Ciąg Unicode lub ANSI zawierający wartość początkową. Ustawienia regionalne bieżącego wątku jest używany do wykonywania konwersji.
+*szSrc*<br/>
+Ciąg Unicode lub ANSI zawierający wartość początkową. Ustawienia regionalne bieżącego wątku są używane do wykonania konwersji.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor ustawia wartość początkową [CComCurrency::m_currency](#m_currency)i akceptuje szeroki zakres typów danych, w tym liczby całkowite, ciągi, liczby zmienne `CComCurrency` zmienne, zmienne WALUTOWE i inne obiekty. Jeśli nie podano `m_currency` żadnej wartości, jest ustawiona na 0.
+Konstruktor ustawia początkową wartość [CComCurrency:: m_currency](#m_currency)i akceptuje szeroki zakres typów danych, w tym liczby całkowite, ciągi, liczby zmiennoprzecinkowe, zmienne walutowe i inne `CComCurrency` obiekty. Jeśli nie podano wartości, `m_currency` jest ustawiona na 0.
 
-W przypadku błędu, takiego jak przepełnienie, konstruktorów brak pustej specyfikacji wyjątku **(throw()**) wywołać `AtlThrow` z HRESULT opisujące błąd.
+W przypadku błędu, takiego jak przepełnienie, konstruktory nie mają pustego wywołania specyfikacji wyjątku (**throw ()**) `AtlThrow` z wynikiem HRESULT opisującym błąd.
 
-W przypadku przypisywania wartości zmiennoprzecinkowej `CComCurrency(10.50)` lub `CComCurrency(10,5000)` podwójnej `CComCurrency(10,50)`przy użyciu wartości zmiennoprzecinkowych lub podwójnych należy pamiętać, że jest ona równoważna wartości, a nie .
+W przypadku używania wartości zmiennoprzecinkowych lub podwójnych do przypisywania wartości, należy pamiętać, że `CComCurrency(10.50)` jest ona odpowiednikiem `CComCurrency(10,5000)` i nie `CComCurrency(10,50)` .
 
 ## <a name="ccomcurrencygetcurrencyptr"></a><a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr
 
-Zwraca adres członka `m_currency` danych.
+Zwraca adres `m_currency` elementu członkowskiego danych.
 
 ```
 CURRENCY* GetCurrencyPtr() throw();
@@ -167,11 +167,11 @@ CURRENCY* GetCurrencyPtr() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca adres elementu `m_currency` członkowskiego danych
+Zwraca adres `m_currency` elementu członkowskiego danych
 
-## <a name="ccomcurrencygetfraction"></a><a name="getfraction"></a>CComCurrency::GetFraction
+## <a name="ccomcurrencygetfraction"></a><a name="getfraction"></a>CComCurrency:: getułamek
 
-Wywołanie tej metody, aby zwrócić `CComCurrency` składnik ułamkowy obiektu.
+Wywołaj tę metodę, aby zwrócić składnik częściowy `CComCurrency` obiektu.
 
 ```
 SHORT GetFraction() const;
@@ -179,19 +179,19 @@ SHORT GetFraction() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca składnik ułamkowy `m_currency` elementu członkowskiego danych.
+Zwraca składnik częściowy `m_currency` elementu członkowskiego danych.
 
 ### <a name="remarks"></a>Uwagi
 
-Składnik ułamkowy jest 4-cyfrową wartością całkowitą między -9999 (CY_MIN_FRACTION) i +9999 (CY_MAX_FRACTION). `GetFraction`zwraca tę wartość skalowane przez 10000 (CY_SCALE). Wartości CY_MIN_FRACTION, CY_MAX_FRACTION i CY_SCALE są zdefiniowane w pliku atlcur.h.
+Składnik Ułamkowy jest 4-cyfrową wartością całkowitą z zakresu od-9999 (CY_MIN_FRACTION) do + 9999 (CY_MAX_FRACTION). `GetFraction`zwraca tę wartość skalowanej przez 10000 (CY_SCALE). Wartości CY_MIN_FRACTION, CY_MAX_FRACTION i CY_SCALE są zdefiniowane w atlcur. h.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#50](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]
 
-## <a name="ccomcurrencygetinteger"></a><a name="getinteger"></a>CComCurrency::GetInteger
+## <a name="ccomcurrencygetinteger"></a><a name="getinteger"></a>CComCurrency:: GetInteger
 
-Wywołanie tej metody, aby uzyskać `CComCurrency` składnik liczby całkowitej obiektu.
+Wywołaj tę metodę, aby uzyskać składnik całkowity `CComCurrency` obiektu.
 
 ```
 LONGLONG GetInteger() const;
@@ -199,15 +199,15 @@ LONGLONG GetInteger() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca składnik liczby całkowitej `m_currency` elementu członkowskiego danych.
+Zwraca składnik Integer `m_currency` elementu członkowskiego danych.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#51](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]
 
-## <a name="ccomcurrencym_currency"></a><a name="m_currency"></a>CComCurrency::m_currency
+## <a name="ccomcurrencym_currency"></a><a name="m_currency"></a>CComCurrency:: m_currency
 
-Element członkowski danych WALUTY.
+Element członkowski danych waluty.
 
 ```
 CURRENCY m_currency;
@@ -215,11 +215,11 @@ CURRENCY m_currency;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski przechowuje waluty dostępne i manipulowane przez metody tej klasy.
+Ten element członkowski zawiera walutę dostępną i manipulowaną przez metody tej klasy.
 
-## <a name="ccomcurrencyoperator--"></a><a name="operator_-"></a>CComCurrency::operator -
+## <a name="ccomcurrencyoperator--"></a><a name="operator_-"></a>CComCurrency:: operator-
 
-Ten operator jest używany do odejmowania obiektu. `CComCurrency`
+Ten operator służy do wykonywania odejmowania `CComCurrency` obiektu.
 
 ```
 CComCurrency operator-() const;
@@ -228,20 +228,20 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CComCurrency` obiekt reprezentujący wynik odejmowania. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca `CComCurrency` obiekt reprezentujący wynik odejmowania. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_neq"></a>CComCurrency::operator !=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_neq"></a>CComCurrency:: operator! =
 
-Ten operator porównuje dwa obiekty dla nierówności.
+Ten operator porównuje dwa obiekty pod kątem nierówności.
 
 ```
 bool operator!= (const CComCurrency& cur) const;
@@ -249,20 +249,20 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
-Obiekt `CComCurrency` do porównania.
+*bieżący*<br/>
+`CComCurrency`Obiekt, który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli porównywany `CComCurrency` element nie jest równy obiektowi; w przeciwnym razie FALSE.
+Zwraca wartość PRAWDA, jeśli porównywany element nie jest równy `CComCurrency` obiektowi; w przeciwnym razie, FAŁSZ.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_star"></a>CComCurrency::operator *
+## <a name="ccomcurrencyoperator-"></a><a name="operator_star"></a>CComCurrency:: operator *
 
-Ten operator jest używany do wykonywania `CComCurrency` mnożenia na obiekcie.
+Ten operator służy do wykonywania mnożenia w `CComCurrency` obiekcie.
 
 ```
 CComCurrency operator*(long nOperand) const;
@@ -274,20 +274,20 @@ CComCurrency operator*(const CComCurrency& cur) const;
 *nOperand*<br/>
 Mnożnik.
 
-*Cur*<br/>
-Obiekt `CComCurrency` używany jako mnożnik.
+*bieżący*<br/>
+`CComCurrency`Obiekt używany jako mnożnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CComCurrency` obiekt reprezentujący wynik mnożenia. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca `CComCurrency` obiekt reprezentujący wynik mnożenia. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_star_eq"></a>CComCurrency::operator\*=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_star_eq"></a>CComCurrency:: operator\*=
 
-Ten operator jest używany do wykonywania `CComCurrency` mnożenia na obiekcie i przypisać mu wynik.
+Ten operator służy do wykonywania mnożenia `CComCurrency` obiektów i przypisywania wyniku.
 
 ```
 const CComCurrency& operator*= (long nOperand);
@@ -299,20 +299,20 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 *nOperand*<br/>
 Mnożnik.
 
-*Cur*<br/>
-Obiekt `CComCurrency` używany jako mnożnik.
+*bieżący*<br/>
+`CComCurrency`Obiekt używany jako mnożnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_div"></a>CComCurrency::operator /
+## <a name="ccomcurrencyoperator-"></a><a name="operator_div"></a>CComCurrency:: operator/
 
-Ten operator jest używany do `CComCurrency` wykonywania podziału na obiekcie.
+Ten operator służy do wykonywania dzielenia na `CComCurrency` obiekt.
 
 ```
 CComCurrency operator/(long nOperand) const;
@@ -325,15 +325,15 @@ Dzielnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CComCurrency` obiekt reprezentujący wynik podziału. Jeśli dzielnik jest 0, wystąpi błąd potwierdzenia.
+Zwraca `CComCurrency` obiekt reprezentujący wynik dzielenia. Jeśli dzielnik ma wartość 0, wystąpi błąd potwierdzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_div_eq"></a>CComCurrency::operator /=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_div_eq"></a>CComCurrency:: operator/=
 
-Ten operator jest używany do `CComCurrency` wykonywania podziału na obiekcie i przypisać mu wynik.
+Ten operator służy do wykonywania dzielenia na `CComCurrency` obiekt i przypisywania go do wyniku.
 
 ```
 const CComCurrency& operator/= (long nOperand);
@@ -346,15 +346,15 @@ Dzielnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComCurrency` obiekt. Jeśli dzielnik jest 0, wystąpi błąd potwierdzenia.
+Zwraca zaktualizowany `CComCurrency` obiekt. Jeśli dzielnik ma wartość 0, wystąpi błąd potwierdzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#60](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_add"></a>CComCurrency::operator +
+## <a name="ccomcurrencyoperator-"></a><a name="operator_add"></a>CComCurrency:: operator +
 
-Ten operator jest używany do `CComCurrency` wykonywania dodawania na obiekcie.
+Ten operator służy do wykonywania dodawania do `CComCurrency` obiektu.
 
 ```
 CComCurrency operator+(const CComCurrency& cur) const;
@@ -362,20 +362,20 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
-Obiekt, `CComCurrency` który ma zostać dodany do oryginalnego obiektu.
+*bieżący*<br/>
+`CComCurrency`Obiekt, który ma zostać dodany do oryginalnego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CComCurrency` obiekt reprezentujący wynik dodania. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca `CComCurrency` obiekt reprezentujący wynik dodania. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_add_eq"></a>CComCurrency::operator +=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_add_eq"></a>CComCurrency:: operator + =
 
-Ten operator jest używany do `CComCurrency` dodawania obiektu i przypisywania wyniku do bieżącego obiektu.
+Ten operator służy do wykonywania dodawania do `CComCurrency` obiektu i przypisywania wyniku do bieżącego obiektu.
 
 ```
 const CComCurrency& operator+= (const CComCurrency& cur);
@@ -383,20 +383,20 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]
 
-## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt"></a>CComCurrency::operator&lt;
+## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt"></a>CComCurrency:: operator&lt;
 
-Ten operator porównuje `CComCurrency` dwa obiekty, aby określić mniejsze.
+Ten operator porównuje dwa `CComCurrency` obiekty, aby określić, że są one mniejsze.
 
 ```
 bool operator<(const CComCurrency& cur) const;
@@ -404,20 +404,20 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest mniejszy niż drugi, w przeciwnym razie wartość FAŁSZ.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest mniejszy niż drugi, w przeciwnym razie FALSE.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]
 
-## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a>CComCurrency::operator&lt;=
+## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a>CComCurrency:: operator&lt;=
 
-Ten operator porównuje `CComCurrency` dwa obiekty do określenia równości lub mniejsze.
+Ten operator porównuje dwa `CComCurrency` obiekty, aby określić równość lub mniejszą.
 
 ```
 bool operator<= (const CComCurrency& cur) const;
@@ -425,18 +425,18 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest mniejszy lub równy drugiemu, wartość FAŁsz w przeciwnym razie.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest mniejszy lub równy drugiemu, FAŁSZ w przeciwnym razie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_eq"></a>CComCurrency::operator =
+## <a name="ccomcurrencyoperator-"></a><a name="operator_eq"></a>CComCurrency:: operator =
 
 Ten operator przypisuje `CComCurrency` obiekt do nowej wartości.
 
@@ -456,26 +456,26 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc ( curSrc )*<br/>
+*curSrc*<br/>
 Obiekt `CComCurrency`.
 
-*cysrc (cysrc)*<br/>
-Zmienna typu WALUTA.
+*cySrc*<br/>
+Zmienna typu CURRENCY.
 
 *sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
-Wartość liczbowa do przypisania do `CComCurrency` obiektu.
+Wartość liczbowa, która ma zostać przypisana do `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-## <a name="ccomcurrencyoperator--"></a><a name="operator_-_eq"></a>CComCurrency::operator -=
+## <a name="ccomcurrencyoperator--"></a><a name="operator_-_eq"></a>CComCurrency:: operator-=
 
-Ten operator jest używany do wykonywania `CComCurrency` odejmowania na obiekcie i przypisać mu wynik.
+Ten operator służy do wykonywania odejmowania `CComCurrency` obiektu i przypisywania go do wyniku.
 
 ```
 const CComCurrency& operator-= (const CComCurrency& cur);
@@ -483,20 +483,20 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, `AtlThrow` ten operator wywołuje z HRESULT opisujące błąd.
+Zwraca zaktualizowany `CComCurrency` obiekt. W przypadku błędu, takiego jak przepełnienie, ten operator wywołuje `AtlThrow` wynik HRESULT opisujący błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a>CComCurrency::operator ==
+## <a name="ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a>CComCurrency:: operator = =
 
-Ten operator porównuje `CComCurrency` dwa obiekty dla równości.
+Ten operator porównuje dwa `CComCurrency` obiekty pod kątem równości.
 
 ```
 bool operator== (const CComCurrency& cur) const;
@@ -504,20 +504,20 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
-Obiekt `CComCurrency` do porównania.
+*bieżący*<br/>
+`CComCurrency`Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli obiekty są `m_currency` równe (czyli elementy członkowskie danych, zarówno liczby całkowitej, jak i ułamkowe, w obu obiektach mają tę samą wartość), WARTOŚĆ FAŁSZ W przeciwnym razie.
+Zwraca wartość TRUE, jeśli obiekty są równe (oznacza to, że `m_currency` elementy członkowskie danych, zarówno liczba całkowita, jak i ułamek, w obu obiektach mają tę samą wartość), w przeciwnym razie false.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]
 
-## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt"></a>CComCurrency::operator&gt;
+## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt"></a>CComCurrency:: operator&gt;
 
-Ten operator porównuje `CComCurrency` dwa obiekty, aby określić większe.
+Ten operator porównuje dwa `CComCurrency` obiekty w celu określenia większego.
 
 ```
 bool operator>(const CComCurrency& cur) const;
@@ -525,20 +525,20 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest większy niż drugi, w przeciwnym razie wartość FAŁSZ.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest większy niż drugi, w przeciwnym razie FALSE.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]
 
-## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a>CComCurrency::operator&gt;=
+## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a>CComCurrency:: operator&gt;=
 
-Ten operator porównuje `CComCurrency` dwa obiekty do określenia równości lub większe.
+Ten operator porównuje dwa `CComCurrency` obiekty, aby określić równość lub większą.
 
 ```
 bool operator>= (const CComCurrency& cur) const;
@@ -546,20 +546,20 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Cur*<br/>
+*bieżący*<br/>
 Obiekt `CComCurrency`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest większy lub równy drugiemu, WARTOŚĆ FAŁSZ W przeciwnym razie.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest większy lub równy drugiemu, FAŁSZ w przeciwnym razie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]
 
-## <a name="ccomcurrencyoperator-currency"></a><a name="operator_currency"></a>CComCurrency::operator WALUTA
+## <a name="ccomcurrencyoperator-currency"></a><a name="operator_currency"></a>CComCurrency:: operator — waluta
 
-Te operatory są `CComCurrency` używane do rzutu obiektu na typ danych CURRENCY.
+Operatory te służą do rzutowania `CComCurrency` obiektu na typ danych walutowych.
 
 ```
 operator CURRENCY&() throw();
@@ -568,15 +568,15 @@ operator const CURRENCY&() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do obiektu CURRENCY.
+Zwraca odwołanie do obiektu waluty.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#70](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]
 
-## <a name="ccomcurrencyround"></a><a name="round"></a>CComCurrency::Okrągły
+## <a name="ccomcurrencyround"></a><a name="round"></a>CComCurrency:: Round
 
-Wywołanie tej metody, aby zaokrąglić walutę do określonej liczby miejsc dziesiętnych.
+Wywołaj tę metodę, aby zaokrąglić walutę do określonej liczby miejsc dziesiętnych.
 
 ```
 HRESULT Roundint nDecimals);
@@ -584,20 +584,20 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Parametry
 
-*nDecymals*<br/>
-Liczba cyfr, do `m_currency` których zostanie zaokrąglona, w zakresie od 0 do 4.
+*nDecimals*<br/>
+Liczba cyfr, do których `m_currency` zostanie zaokrąglona, z zakresu od 0 do 4.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]
 
-## <a name="ccomcurrencysetfraction"></a><a name="setfraction"></a>CComCurrency::SetFraction
+## <a name="ccomcurrencysetfraction"></a><a name="setfraction"></a>CComCurrency:: setułamek
 
-Wywołanie tej metody, aby ustawić `CComCurrency` składnik ułamkowy obiektu.
+Wywołaj tę metodę, aby ustawić ułamek składnika `CComCurrency` obiektu.
 
 ```
 HRESULT SetFraction(SHORT nFraction);
@@ -605,20 +605,20 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Parametry
 
-*nFraction (nFraction)*<br/>
-Wartość, która ma być przypisana do `m_currency` składnika ułamkowego elementu członkowskiego danych. Znak składnika ułamkowego musi być taki sam jak składnik liczby całkowitej, a wartość musi znajdować się w zakresie od -9999 (CY_MIN_FRACTION) do +9999 (CY_MAX_FRACTION).
+*nFraction*<br/>
+Wartość, która ma zostać przypisana do części ułamkowej `m_currency` elementu członkowskiego danych. Znak części ułamkowej musi być taki sam jak składnik Integer, a wartość musi należeć do zakresu-9999 (CY_MIN_FRACTION) do + 9999 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#53](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]
 
-## <a name="ccomcurrencysetinteger"></a><a name="setinteger"></a>CComCurrency::SetInteger
+## <a name="ccomcurrencysetinteger"></a><a name="setinteger"></a>CComCurrency:: setinteger
 
-Wywołanie tej metody, aby ustawić `CComCurrency` składnik liczby całkowitej obiektu.
+Wywołaj tę metodę, aby ustawić składnik Integer `CComCurrency` obiektu.
 
 ```
 HRESULT SetInteger(LONGLONG nInteger);
@@ -627,20 +627,20 @@ HRESULT SetInteger(LONGLONG nInteger);
 ### <a name="parameters"></a>Parametry
 
 *nInteger*<br/>
-Wartość, która ma być przypisana do `m_currency` składnika liczby całkowitej elementu członkowskiego danych. Znak składnika liczby całkowitej musi być zgodny ze znakiem istniejącego składnika ułamkowego.
+Wartość, która ma zostać przypisana do składnika Integer `m_currency` elementu członkowskiego danych. Znak składnika Integer musi być zgodny ze znakiem istniejącego składnika ułamkowego.
 
-*nInteger* musi znajdować się w zakresie CY_MIN_INTEGER CY_MAX_INTEGER włącznie. Wartości te są zdefiniowane w pliku atlcur.h.
+*nInteger* musi znajdować się w zakresie CY_MIN_INTEGER, aby CY_MAX_INTEGER włącznie. Te wartości są zdefiniowane w atlcur. h.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#54](../../atl/codesnippet/cpp/ccomcurrency-class_21.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
-[Waluty](/windows/win32/api/wtypes/ns-wtypes-cy~r1)<br/>
+[CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy-r1)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 7fc81cd5210167ee9df77605677349d6907f3e5d
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373908"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470800"
 ---
 # <a name="vc-directories-property-page-windows"></a>Strona właściwości katalogów VC + + (system Windows)
 
@@ -74,7 +74,7 @@ Własne makra można definiować na dwa sposoby:
 
 - Zdefiniuj makra użytkownika w pliku. props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](../working-with-project-properties.md).
 
-Aby uzyskać więcej informacji, zobacz te wpisy w blogu: [Katalogi VC + +](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [dziedziczone właściwości i arkusze właściwości](https://docs.microsoft.com/archive/blogs/vsproject/inherited-properties-and-property-sheets)oraz [Podręcznik uaktualniania projektu programu Visual Studio 2010 C++](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Aby uzyskać więcej informacji, zobacz te wpisy w blogu: [Katalogi VC + +](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [dziedziczone właściwości i arkusze właściwości](https://docs.microsoft.com/cpp/build/project-property-inheritance)oraz [Podręcznik uaktualniania projektu programu Visual Studio 2010 C++](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Typy katalogów
 

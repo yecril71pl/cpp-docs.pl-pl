@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e9cb8c452cc3eea32b6eed9bf23fb454344c105d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214090"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470943"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 
@@ -76,7 +76,7 @@ Te rodzaje transferów danych obejmują źródło i miejsce docelowe. Źródło 
 
 Ta klasa umożliwia określenie, czy dane istnieją w określonym formacie. Możesz również wyliczyć dostępne formaty danych lub sprawdzić, czy dany format jest dostępny, a następnie pobrać dane w preferowanym formacie. Pobieranie obiektów można wykonać na kilka różnych sposobów, w tym użycie [CFile](../../mfc/reference/cfile-class.md), HGLOBAL lub `STGMEDIUM` struktury.
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) w Windows SDK.
 
 Aby uzyskać więcej informacji na temat używania obiektów danych w aplikacji, zobacz temat [obiekty danych artykułu i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -189,7 +189,7 @@ BOOL GetData(
 Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpStgMedium*<br/>
-Wskazuje na strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać dane.
+Wskazuje na strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) , która będzie odbierać dane.
 
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól `FORMATETC` struktury.
@@ -200,7 +200,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
