@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222072"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Instrukcje: definiowanie dostępu i wartości kontroli (C++)
 
@@ -40,17 +40,17 @@ Nawet kontrolki, które nie mają właściwości **TabStop** ustawionej na **war
 > [!NOTE]
 > Jeśli okno dialogowe zawiera nakładające się kontrolki, zmiana kolejności tabulacji może zmienić sposób wyświetlania kontrolek. Formanty, które są późniejsze w kolejności tabulacji, są zawsze wyświetlane na wszystkich nakładających się kontrolkach, które poprzedzają je w kolejności tabulacji.
 
-- Aby wyświetlić bieżącą kolejność tabulacji dla wszystkich kontrolek, przejdź do pozycji menu **Format** > **kolejność tabulacji**lub naciśnij **klawisze CTRL** + **D**.
+- Aby wyświetlić bieżącą kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format**  >  **kolejność tabulacji**lub naciśnij klawisz **Ctrl**  +  **D**.
 
    Liczba w lewym górnym rogu każdej kontrolki pokazuje jej miejsce w bieżącej kolejności tabulacji.
 
-- Aby zmienić kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format** , > **kolejność tabulacji** i ustaw kolejność tabulacji, wybierając poszczególne kontrolki w kolejności, w której ma następować klawisz **Tab** .
+- Aby zmienić kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format**  >  **kolejność kart** i ustaw kolejność tabulacji, wybierając poszczególne kontrolki w kolejności, w której ma następować klawisz **Tab** .
 
-- Aby zmienić kolejność tabulacji dla dwóch lub więcej kontrolek, przejdź do pozycji menu **Format** > **kolejność tabulacji**. Przytrzymaj klawisz **Ctrl** i wybierz kontrolkę, w której rozpocznie się zmiana w kolejności, a następnie zwolnij klawisz **Ctrl** i wybierz kontrolki w kolejności, w której ma następować klawisz **Tab** .
+- Aby zmienić kolejność tabulacji dla dwóch lub więcej kontrolek, przejdź do menu **Format**  >  **kolejność tabulacji**. Przytrzymaj klawisz **Ctrl** i wybierz kontrolkę, w której rozpocznie się zmiana w kolejności, a następnie zwolnij klawisz **Ctrl** i wybierz kontrolki w kolejności, w której ma następować klawisz **Tab** .
 
-   Na przykład jeśli chcesz zmienić kolejność formantów `7` przez `9`, przytrzymaj wciśnięty klawisz **Ctrl**, a następnie wybierz pozycję Control `6` najpierw.
+   Na przykład jeśli chcesz zmienić kolejność kontrolek, przytrzymaj wciśnięty `7` klawisz `9` **Ctrl**, a następnie wybierz pozycję Kontrola `6` jako pierwsza.
 
-- Aby ustawić określony formant na numer `1`lub pierwszy w kolejności tabulacji, kliknij dwukrotnie formant.
+- Aby ustawić określony formant na numer `1` lub pierwszy w kolejności tabulacji, kliknij dwukrotnie formant.
 
 > [!TIP]
 > Po wprowadzeniu trybu **kolejności tabulacji** naciśnij klawisz **ESC** lub **Enter** , aby wyjść z trybu **kolejności kart** i wyłączyć możliwość zmiany kolejności tabulacji.
@@ -63,9 +63,9 @@ Zwykle Użytkownicy klawiatury przesuwają fokus wprowadzania z jednej kontrolki
 
 1. Zaznacz kontrolkę w oknie dialogowym.
 
-1. W [oknie właściwości](/visualstudio/ide/reference/properties-window), we właściwości **Caption** wpisz nową nazwę dla kontrolki, wpisując znak handlowego "i" (`&`) przed literą, która ma być kluczem dostępu dla tego formantu. Na przykład `&Radio1`.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w właściwości **Caption** wpisz nową nazwę kontrolki, wpisując znak handlowego "i" ( `&` ) przed literą, która ma być kluczem dostępu dla tego formantu. Na przykład `&Radio1`.
 
-1. Naciśnij klawisz **Enter**.
+1.  Naciśnij klawisz **Enter**.
 
    W wyświetlonym nagłówku zostanie wyświetlone podkreślenie wskazujące na klucz dostępu, na przykład **R**adio1.
 
@@ -73,12 +73,12 @@ Zwykle Użytkownicy klawiatury przesuwają fokus wprowadzania z jednej kontrolki
 
 1. Utwórz podpis dla kontrolki przy użyciu **statycznej kontrolki tekstowej** w [przyborniku](/visualstudio/ide/reference/toolbox).
 
-1. W podpisie tekst statyczny wpisz znak handlowego "i" (`&`) przed literą, która ma być kluczem dostępu.
+1. W podpisie tekst statyczny wpisz znak handlowego "i" ( `&` ) przed literą, która ma być kluczem dostępu.
 
 1. Upewnij się, że formant tekstu statycznego bezpośrednio poprzedza formant, który jest etykietą w kolejności tabulacji.
 
 > [!NOTE]
-> Wszystkie klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić zduplikowane klucze dostępu, przejdź do menu **Format** , > **zaznacz**.
+> Wszystkie klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić zduplikowane klucze dostępu, przejdź do pozycji menu **Formatowanie**  >  **Check Mnemonics**.
 
 ## <a name="combo-box-values"></a>Wartości pola kombi
 
@@ -133,7 +133,7 @@ Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym
    Zmiana właściwości **grupy** na **True** powoduje dodanie WS_GROUP stylu do wpisu przycisku w obiekcie okna dialogowego skryptu zasobu i uniemożliwia użytkownikowi wybranie więcej niż jednego przycisku radiowego w danej chwili w grupie przycisków (Jeśli użytkownik wybierze jeden przycisk radiowy, inne w grupie są wyczyszczone).
 
    > [!NOTE]
-   > Tylko pierwszy przycisk radiowy w grupie powinien mieć właściwość **Group** ustawioną na **wartość true**. Jeśli masz dodatkowe kontrolki, które nie są częścią grupy przycisków, ustaw właściwość **grupy** pierwszej kontrolki, *która znajduje się poza grupą* na **wartość true** . Możesz szybko identyfikować pierwszą kontrolkę poza grupą przy użyciu **kombinacji klawiszy Ctrl**+**D** , aby wyświetlić kolejność tabulacji.
+   > Tylko pierwszy przycisk radiowy w grupie powinien mieć właściwość **Group** ustawioną na **wartość true**. Jeśli masz dodatkowe kontrolki, które nie są częścią grupy przycisków, ustaw właściwość **grupy** pierwszej kontrolki, *która znajduje się poza grupą* na **wartość true** . Możesz szybko identyfikować pierwszą kontrolkę poza grupą, używając **klawisza Ctrl** + **D** , aby wyświetlić kolejność tabulacji.
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmienną członkowską dla grupy przycisków radiowych
 
@@ -143,7 +143,7 @@ Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym
 
    - W polu **Nazwa zmiennej** wpisz nazwę nowej zmiennej członkowskiej.
 
-   - W polu listy **Typ zmiennej** wybierz opcję **int** lub type *int*.
+   - W polu listy **Typ zmiennej** wybierz **`int`** lub wpisz *int*.
 
    Teraz można zmodyfikować kod, aby określić, który przycisk radiowy powinien zostać wybrany. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.
 
@@ -151,7 +151,7 @@ Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie kontrolkami okien dialogowych](controls-in-dialog-boxes.md)<br/>
 [Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)<br/>
