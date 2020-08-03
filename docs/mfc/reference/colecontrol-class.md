@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470922"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520697"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -1204,7 +1204,7 @@ Argument *pbParams* jest rozdzieloną spacjami listą **VTS_**. Co najmniej jedn
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu konwencji **VTS_P** `constantname` . Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
+> Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu \<CONSTANT-NAME> konwencji VTS_P. Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown
 

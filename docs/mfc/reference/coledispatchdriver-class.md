@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214103"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520645"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 
@@ -148,11 +148,11 @@ Odwołanie do istniejącego `COleDispatchDriver` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Formularz `COleDispatchDriver` ( `LPDISPATCH lpDispatch` , **bool** `bAutoRelease`  =  **true**) łączy Interfejs [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
+Formularz `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` łączy Interfejs [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
 
-Formularz `COleDispatchDriver` ( **`const`** `COleDispatchDriver` &  `dispatchSrc` ) kopiuje istniejący `COleDispatchDriver` obiekt i zwiększa liczbę odwołań.
+Formularz `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` kopiuje istniejący `COleDispatchDriver` obiekt i zwiększa liczbę odwołań.
 
-Formularz `COleDispatchDriver` () tworzy `COleDispatchDriver` obiekt, ale nie łączy się z `IDispatch` interfejsem. Przed użyciem `COleDispatchDriver` () bez argumentów należy połączyć się z `IDispatch` nim za pomocą [COleDispatchDriver::](#createdispatch) lub [COleDispatchDriver:: AttachDispatch](#attachdispatch). Aby uzyskać więcej informacji, zobacz [implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Formularz `COleDispatchDriver( )` tworzy `COleDispatchDriver` obiekt, ale nie łączy się z `IDispatch` interfejsem. Przed użyciem `COleDispatchDriver( )` bez argumentów, należy połączyć się `IDispatch` z nim za pomocą [COleDispatchDriver::](#createdispatch) lub [COleDispatchDriver:: AttachDispatch](#attachdispatch). Aby uzyskać więcej informacji, zobacz [implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Przykład
 

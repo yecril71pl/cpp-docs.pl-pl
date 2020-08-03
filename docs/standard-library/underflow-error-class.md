@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f521e8ec083cd158212b3ae9cb9fcf26edc7e76
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454990"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520515"
 ---
-# <a name="underflowerror-class"></a>underflow_error — Klasa
+# <a name="underflow_error-class"></a>underflow_error — Klasa
 
 Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych do zgłaszania niedopełnienia arytmetycznego.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
+Wartość zwracana przez `what()` to jest kopia `message.data()` . Aby uzyskać więcej informacji, zobacz [`what`](../standard-library/exception-class.md) i [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Przykład
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept >
+**Nagłówek:**\<stdexcept>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa runtime_error](../standard-library/runtime-error-class.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

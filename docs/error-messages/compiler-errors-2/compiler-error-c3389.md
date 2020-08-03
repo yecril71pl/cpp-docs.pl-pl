@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 823b28deae3e3cfc18cdad8d37007bf8e8cff494
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a040e649074e115b1b86ea56db6c9ef48f4c0d0
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221058"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520477"
 ---
 # <a name="compiler-error-c3389"></a>Błąd kompilatora C3389
 
@@ -19,9 +19,9 @@ ms.locfileid: "87221058"
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
+**`/clr:pure`** **`/clr:safe`** Opcje kompilatora i są przestarzałe w programie visual Studio 2015 i nie są obsługiwane w programie visual Studio 2017.
 
-Użyty modyfikator [__declspec](../../cpp/declspec.md) oznacza stan na proces.  [/CLR: Pure](../../build/reference/clr-common-language-runtime-compilation.md) oznacza stan [domeny aplikacji](../../cpp/appdomain.md) .  Dlatego zadeklarowanie zmiennej z `keyword` **`__declspec`** modyfikatorem i kompilowanie za pomocą **/CLR: Pure** jest niedozwolone.
+[`__declspec`](../../cpp/declspec.md)Używany modyfikator oznacza stan dla procesu.  [`/clr:pure`](../../build/reference/clr-common-language-runtime-compilation.md)oznacza dla [`appdomain`](../../cpp/appdomain.md) stanu.  Dlatego zadeklarowanie zmiennej z modyfikatorem *słowa kluczowego* **`__declspec`** i kompilowanie za pomocą **`/clr:pure`** nie jest dozwolone.
 
 ## <a name="example"></a>Przykład
 

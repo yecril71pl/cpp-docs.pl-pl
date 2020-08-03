@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 063b71100af536a249949a1084ab208b6266fd8d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5939e2b4b0f8054ae5f7db7babd01dbeffc7f359
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222474"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520619"
 ---
 # <a name="hash_map-class"></a>hash_map — Klasa
 
@@ -258,7 +258,7 @@ const Type& at(const Key& key) const;
 
 |Parametr|Opis|
 |-|-|
-|*głównych*|Wartość klucza elementu, który ma zostać znaleziony.|
+|*key*|Wartość klucza elementu, który ma zostać znaleziony.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1737,11 +1737,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Uwagi
 
-`iterator`Zdefiniowane przez hash_map wskazuje elementy, które są obiektami [value_type](#value_type), które są typu **pary \<const Key, Type> ** , których pierwszy element członkowski jest kluczem do elementu, a drugi element członkowski jest zmapowaną podstawą posiadaną przez element.
+`iterator`Zdefiniowane przez hash_map wskazuje elementy, które są obiektami [value_type](#value_type), które są typu `pair<const Key, Type>` , którego pierwszy element członkowski jest kluczem do elementu, a drugi element członkowski jest zmapowaną podstawą zawartą w elemencie.
 
-Aby usunąć odwołanie do **iteratora** `Iter` wskazującego element w multimap, użyj `->` operatora.
+Aby usunąć odwołanie do iteratora o nazwie `Iter` wskazującej element w multimap, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, użyj `Iter`  ->  **pierwszej**, który jest odpowiednikiem ( \* `Iter` ). **najpierw**. Aby uzyskać dostęp do wartości mapowanej podstawy dla elementu, użyj `Iter`  ->  **sekundy**, który jest odpowiednikiem ( \* `Iter` ). **sekunda**.
+Aby uzyskać dostęp do wartości klucza dla elementu, użyj `Iter->first` , który jest odpowiednikiem `(*Iter).first` . Aby uzyskać dostęp do wartości mapowanej podstawy dla elementu, użyj `Iter->second` , który jest odpowiednikiem `(*Iter).second` .
 
 Typ `iterator` może służyć do modyfikowania wartości elementu.
 
@@ -1768,7 +1768,7 @@ Zwraca obiekt funkcji, którego hash_map używa do porządkowania jego elementó
 
 Przechowywany obiekt definiuje funkcję członkowską
 
-**operator bool**( **klucz const&** `left` **, klucz const&** `right` );
+`bool operator( const Key& left, const Key&right );`
 
 zwraca, **`true`** Jeśli `left` poprzedza i nie jest równe `right` w kolejności sortowania.
 
@@ -2021,7 +2021,7 @@ Type& operator[](Key&& key);
 
 |Parametr|Opis|
 |-|-|
-|*głównych*|Wartość klucza elementu, który ma zostać wstawiony.|
+|*key*|Wartość klucza elementu, który ma zostać wstawiony.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
