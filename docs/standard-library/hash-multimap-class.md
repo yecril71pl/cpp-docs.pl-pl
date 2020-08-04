@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 8876995f947823d046e0a3ea9a316a4249055d7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 481836b22544c7bcf35df7fe27e75aae0492af42
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212335"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521268"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap — Klasa
 
@@ -1611,9 +1611,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 `iterator`Zdefiniowane przez hash_multimap punkty do obiektów [value_type](#value_type), które są typu `pair` \< **const Key, Type**> , którego pierwszy element członkowski jest kluczem do elementu, a drugi element członkowski jest zamapowanym wymiarem przytrzymywanym przez element.
 
-Aby usunąć odwołanie do **iteratora** `Iter` wskazującego element w hash_multimap, użyj `->` operatora.
+Aby usunąć odwołanie do iteratora o nazwie wskazujący `Iter` element w hash_multimap, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, użyj `Iter`  ->  **pierwszej**, który jest odpowiednikiem ( \* `Iter` ). **najpierw**. Aby uzyskać dostęp do wartości mapowanej podstawy dla elementu, użyj `Iter`  ->  **sekundy**, który jest odpowiednikiem ( \* `Iter` ). **najpierw**.
+Aby uzyskać dostęp do wartości klucza dla elementu, użyj `Iter->first` , który jest odpowiednikiem `(*Iter).first` . Aby uzyskać dostęp do wartości mapowanej podstawy dla elementu, użyj `Iter->second` , który jest odpowiednikiem `(*Iter).first` .
 
 Typ `iterator` może służyć do modyfikowania wartości elementu.
 
@@ -1640,7 +1640,7 @@ Zwraca obiekt funkcji, którego hash_multimap używa do porządkowania jego elem
 
 Przechowywany obiekt definiuje funkcję członkowską
 
-**operator bool (klucz const&** `left` **, klucz const&** `right` **);**
+`bool operator( const Key& left, const Key& right );`
 
 zwraca, **`true`** Jeśli `left` poprzedza, i nie jest równa `right` w kolejności sortowania.
 

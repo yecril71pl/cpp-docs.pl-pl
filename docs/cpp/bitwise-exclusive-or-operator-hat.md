@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229106"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521164"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operator wyłączny sumy bitowej OR: ^
 
@@ -28,7 +28,7 @@ ms.locfileid: "87229106"
 
 ## <a name="remarks"></a>Uwagi
 
-Operator wyłączny bitowego or ( **`^`** ) porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli bit w pierwszym operandzie ma wartość 0, a drugi bit to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.
+Operator wyłączny bitowego or ( **`^`** ) porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli bit w jednym z operandów ma wartość 0, a bit w drugim operandzie wynosi 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.
 
 Oba operandy operatora muszą mieć typy całkowite. Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów.
 

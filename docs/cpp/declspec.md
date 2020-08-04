@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228950"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521125"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ Składnia atrybutu rozszerzonego określająca informacje klasy magazynu używa 
 
 ## <a name="grammar"></a>Gramatyka
 
-*decl — specyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *Extended-decl-modyfikator-SEQ*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*Extended-decl-modyfikator-SEQ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony-decl-modyfikator*<sub>wyboru</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modyfikator* *Extended-decl-modyfikator-SEQ*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>uszlachetniania</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*Extended-decl-modyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***Liczba***`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ Składnia atrybutu rozszerzonego określająca informacje klasy magazynu używa 
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _Get-Func-Name_ &#124; **`,put=`** _Put-Func-Name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ Spacja oddziela sekwencje modyfikatora deklaracji. Przykłady są zamieszczone w
 
 Rozszerzony Gramatyka atrybutów obsługuje te atrybuty klasy magazynu specyficznych dla firmy Microsoft:,,,,,,,,,, [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) ,, [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) , [`process`](../cpp/process.md) , [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) ,, [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) , i [`thread`](../cpp/thread.md) . Obsługuje również te atrybuty obiektu COM: [`property`](../cpp/property-cpp.md) i [`uuid`](../cpp/uuid-cpp.md) .
 
-Atrybuty klasy,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** i **`uuid`** są właściwości tylko deklaracji obiektu lub funkcji, do których są stosowane. Ten **`thread`** atrybut ma wpływ tylko na dane i obiekty. **`naked`** Atrybuty i **`spectre`** mają wpływ tylko na funkcje. **`dllimport`** Atrybuty i **`dllexport`** mają wpływ na funkcje, dane i obiekty. **`property`** Atrybuty, **`selectany`** i **uu'id** mają wpływ na obiekty com.
+Atrybuty klasy,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** i **`uuid`** są właściwości tylko deklaracji obiektu lub funkcji, do których są stosowane. Ten **`thread`** atrybut ma wpływ tylko na dane i obiekty. **`naked`** Atrybuty i **`spectre`** mają wpływ tylko na funkcje. **`dllimport`** Atrybuty i **`dllexport`** mają wpływ na funkcje, dane i obiekty. **`property`** Atrybuty, **`selectany`** i **`uuid`** mają wpływ na obiekty com.
 
 W celu zapewnienia zgodności z poprzednimi wersjami, **`_declspec`** jest synonimem, **`__declspec`** Jeśli opcja kompilatora [/za \( wyłączone rozszerzenia językowe](../build/reference/za-ze-disable-language-extensions.md) nie została określona.
 

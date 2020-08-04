@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: 1c5caa0129730750a6429d9f7fa883e9af30f225
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb15785cbff18daa1bfa9a1198a64d018383764
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449261"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521203"
 ---
-# <a name="invalidargument-class"></a>invalid_argument — Klasa
+# <a name="invalid_argument-class"></a>invalid_argument — Klasa
 
 Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłoszenia nieprawidłowego argumentu.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
+Wartość zwracana przez `what()` to jest kopia `message.data()` . Aby uzyskać więcej informacji, zobacz [`what`](../standard-library/exception-class.md) i [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Przykład
 
@@ -63,11 +63,11 @@ Type class std::invalid_argument
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept >
+**Nagłówek:**\<stdexcept>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa logic_error](../standard-library/logic-error-class.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

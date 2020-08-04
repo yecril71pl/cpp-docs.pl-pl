@@ -3,12 +3,12 @@ title: System typów języka C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228989"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521216"
 ---
 # <a name="c-type-system"></a>System typów języka C++
 
@@ -51,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Podstawowe (wbudowane) typy
 
-W odróżnieniu do innych języków, C++ nie ma uniwersalnego typu bazowego, z którego wywodzą się wszystkie inne typy. Język zawiera wiele *typów podstawowych*, znanych również jako *typy wbudowane*. Obejmuje to typy liczbowe, takie jak,,,, **`int`** **`double`** **`long`** **`bool`** **`char`** oraz **`wchar_t`** typy i dla znaków ASCII i Unicode. Najbardziej podstawowe typy (z wyjątkiem **`bool`** , **`double`** ,, ** `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` unsigned int**), które również są przechowywane jako 32-bitowe, mogą przechowywać wartość od 0 do 4 294 967 295. Całkowita liczba możliwych wartości w każdym przypadku jest taka sama, zmienia się tylko zakres.
+W odróżnieniu do innych języków, C++ nie ma uniwersalnego typu bazowego, z którego wywodzą się wszystkie inne typy. Język zawiera wiele *typów podstawowych*, znanych również jako *typy wbudowane*. Obejmuje to typy liczbowe, takie jak,,,, **`int`** **`double`** **`long`** **`bool`** **`char`** oraz **`wchar_t`** typy i dla znaków ASCII i Unicode. Wszystkie typy podstawowe (z wyjątkiem **`bool`** , **`double`** , **`wchar_t`** , i powiązane typy) mają wszystkie **`unsigned`** wersje, które modyfikują zakres wartości, które mogą być przechowywane w zmiennej. Na przykład, **`int`** który przechowuje 32-bitową liczbę całkowitą ze znakiem, może reprezentować wartość z-2 147 483 648 do 2 147 483 647. **`unsigned int`** A, który jest również przechowywany jako 32-bitowy, może przechowywać wartość z przeniesień od 0 do 4 294 967 295. Całkowita liczba możliwych wartości w każdym przypadku jest taka sama, zmienia się tylko zakres.
 
 Podstawowe typy są rozpoznawane przez kompilator, który posiada wbudowane reguły rządzące tym, jakie operacje można na nich wykonywać i jak mogą być konwertowane na inne typy podstawowe. Aby uzyskać pełną listę typów wbudowanych oraz ich rozmiar i limity liczbowe, zobacz [typy wbudowane](../cpp/fundamental-types-cpp.md).
 
-Na poniższej ilustracji przedstawiono względne wielkości typów wbudowanych:
+Na poniższej ilustracji przedstawiono względne rozmiary wbudowanych typów w implementacji języka Microsoft C++:
 
 ![Rozmiar w bajtach skompilowanego&#45;w typach](../cpp/media/built-intypesizes.png "Rozmiar w bajtach skompilowanego&#45;w typach")
 
-Poniższa tabela wymienia najczęściej używane typy podstawowe:
+W poniższej tabeli wymieniono najczęściej używane podstawowe typy i ich rozmiary w implementacji języka Microsoft C++:
 
-|Typ|Rozmiar|Komentarz|
-|----------|----------|-------------|
-|int|4 bajty|Wybór domyślny dla wartości całkowitych.|
-|double|8 bajtów|Wybór domyślny dla wartości zmiennopozycyjnych.|
-|bool|1 bajt|Przedstawia wartości, które mogą być prawdziwe lub fałszywe.|
-|char|1 bajt|Używaj dla znaków ASCII w starszych ciągach typu C lub obiektach std::string, które nigdy nie będą musiały zostać skonwertowane na UNICODE.|
-|wchar_t|2 bajty|Przedstawia wartości znaku „szerokiego”, które mogą być zakodowane w formacie UNICODE (UTF-16 w systemie Windows, inne systemy operacyjne mogą się różnić). Jest to typ znaku, który jest używany w ciągach typu `std::wstring` .|
-|znak bez znaku &nbsp;|1 bajt|Język C++ nie ma wbudowanego typu bajtów.  Służy **`unsigned char`** do reprezentowania wartości bajtowej.|
-|unsigned int|4 bajty|Wybór domyślny dla flag bitowych.|
-|long long|8 bajtów|Przedstawia bardzo duże wartości całkowitoliczbowe.|
+| Typ | Rozmiar | Komentarz |
+|--|--|--|
+| **`int`** | 4 bajty | Wybór domyślny dla wartości całkowitych. |
+| **`double`** | 8 bajtów | Wybór domyślny dla wartości zmiennopozycyjnych. |
+| **`bool`** | 1 bajt | Przedstawia wartości, które mogą być prawdziwe lub fałszywe. |
+| **`char`** | 1 bajt | Używaj dla znaków ASCII w starszych ciągach typu C lub obiektach std::string, które nigdy nie będą musiały zostać skonwertowane na UNICODE. |
+| **`wchar_t`** | 2 bajty | Przedstawia wartości znaku „szerokiego”, które mogą być zakodowane w formacie UNICODE (UTF-16 w systemie Windows, inne systemy operacyjne mogą się różnić). Jest to typ znaku, który jest używany w ciągach typu `std::wstring` . |
+| **`unsigned char`** | 1 bajt | Język C++ nie ma wbudowanego typu bajtów.  Służy **`unsigned char`** do reprezentowania wartości bajtowej. |
+| **`unsigned int`** | 4 bajty | Wybór domyślny dla flag bitowych. |
+| **`long long`** | 8 bajtów | Przedstawia bardzo duże wartości całkowitoliczbowe. |
+
+Inne implementacje języka C++ mogą używać różnych rozmiarów dla niektórych typów liczbowych. Aby uzyskać więcej informacji na temat rozmiarów i wielkości relacji, których wymaga standard C++, zobacz [typy wbudowane](fundamental-types-cpp.md).
 
 ## <a name="the-void-type"></a>Typ void (pusty).
 
-**`void`** Typ jest typem specjalnym; nie można zadeklarować zmiennej typu **`void`** , ale można zadeklarować zmienną typu __void \* __ (wskaźnik do **`void`** ), która jest czasami konieczna podczas alokowania pierwotnej (niewpisanej) pamięci. Jednak wskaźniki do **`void`** nie są bezpieczne dla typów i ogólnie ich użycie jest zdecydowanie odradzane w nowoczesnej C++. W deklaracji funkcji **`void`** zwracana wartość oznacza, że funkcja nie zwraca wartości; jest to typowe i akceptowalne użycie **`void`** . Chociaż język C wymaga funkcji, które mają zerowe parametry do zadeklarowania **`void`** na liście parametrów, na przykład, `fou(void)` Ta metoda jest niezalecana w nowoczesnej C++ i powinna być zadeklarowana `fou()` . Aby uzyskać więcej informacji, zobacz [konwersje typów i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+**`void`** Typ jest typem specjalnym; nie można zadeklarować zmiennej typu **`void`** , ale można zadeklarować zmienną typu `void *` (wskaźnik do **`void`** ), która jest czasami konieczna podczas alokowania pierwotnej (niewpisanej) pamięci. Jednak wskaźniki do **`void`** nie są bezpieczne dla typów i ogólnie ich użycie jest zdecydowanie odradzane w nowoczesnej C++. W deklaracji funkcji **`void`** zwracana wartość oznacza, że funkcja nie zwraca wartości; jest to typowe i akceptowalne użycie **`void`** . Chociaż język C wymaga funkcji, które mają zerowe parametry do zadeklarowania **`void`** na liście parametrów, na przykład, `fou(void)` Ta metoda jest niezalecana w nowoczesnej C++ i powinna być zadeklarowana `fou()` . Aby uzyskać więcej informacji, zobacz [konwersje typów i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>kwalifikator typu const
 

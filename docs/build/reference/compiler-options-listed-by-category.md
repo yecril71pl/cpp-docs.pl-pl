@@ -1,16 +1,16 @@
 ---
 title: Opcje kompilatora w rozbiciu na kategorie
 description: Lista odwołań według kategorii opcji wiersza polecenia kompilatora Microsoft C/C++.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223879"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520956"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -171,6 +171,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | Pomija wyświetlanie transparentu logowania. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Umożliwia korzystanie z dodatkowych funkcji zabezpieczeń i ostrzeżeń. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Wyświetla listę wszystkich plików dołączanych podczas kompilacji. |
+| [`/sourceDependencies`](sourcedependencies.md) | Wyświetl nagłówki, moduły i inne zależności źródłowe. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Określa plik źródłowy w języku C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Określa wszystkie pliki źródłowe to C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Określa plik źródłowy języka C++. |

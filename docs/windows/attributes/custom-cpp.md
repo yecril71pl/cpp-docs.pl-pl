@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215325"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521255"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -44,12 +44,10 @@ Atrybut **niestandardowy** ma taką samą funkcjonalność jak [niestandardowy](
 
 ### <a name="attribute-context"></a>Kontekst atrybutu
 
-|||
-|-|-|
-|**Dotyczy**|**Interfejs**niebędący modelem COM, **`class`** , **`enum`** s, `idl_module` metody, elementy członkowskie interfejsu, parametry interfejsu, **`typedef`** s, **`union`** s, **`struct`** s|
-|**Powtarzalne**|Tak|
-|**Wymagane atrybuty**|**Klasa coclass** (używana w klasie)|
-|**Nieprawidłowe atrybuty**|Brak|
+- **Dotyczy**: nie com `interface` , `idl_module` metod, elementów członkowskich interfejsu, parametrów interfejsu,,,,, **`typedef`** **`class`** **`enum`** **`union`** i **`struct`** typów.
+- **Powtarzalne**: tak.
+- **Wymagane atrybuty**: **coclass** (gdy jest używana w klasie).
+- **Nieprawidłowe atrybuty**: Brak.
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 

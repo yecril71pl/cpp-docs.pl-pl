@@ -1,15 +1,15 @@
 ---
 title: Opcje kompilatora w porządku alfabetycznym
 description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia kompilatora Microsoft C/C++.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223892"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520865"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -124,6 +124,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Umożliwia korzystanie z dodatkowych funkcji zabezpieczeń i ostrzeżeń. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Wyświetla listę plików dołączanych podczas kompilacji. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | Ustaw zestaw znaków źródła. |
+| [`/sourceDependencies`](sourcedependencies.md) | Wyświetl nagłówki, moduły i inne zależności źródłowe. |
 | [`/std`](std-specify-language-standard-version.md) | Selektor zgodności wersji standardowej języka C++. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Określa plik źródłowy w języku C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Określa wszystkie pliki źródłowe to C. |

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233018"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520930"
 ---
 # <a name="pair-structure"></a>pair — Struktura
 
@@ -80,7 +80,7 @@ Czwarty Konstruktor inicjuje pierwszy element pary do *Val1* i sekundę do *val2
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu przechowuje parę obiektów typu `T1` i `T2` , odpowiednio. Typ `first_type` jest taki sam jak parametr szablonu `T1` , a typ jest taki `second_type` sam jak parametr szablonu `T2` . `T1``T2`każdy z nich wymaga tylko konstruktora domyślnego, konstruktora pojedynczego argumentu i destruktora. Wszystkie elementy członkowskie tego typu `pair` są publiczne, ponieważ typ jest zadeklarowany jako a, **`struct`** a nie jako **`class`** . Dwa najczęstsze zastosowania dla pary są jako zwracane typy dla funkcji, które zwracają dwie wartości, a jako elementy klas [mapowania](../standard-library/map-class.md) klasy kontenera i klasy [multimap](../standard-library/multimap-class.md) , które mają zarówno klucz, jak i typ wartości skojarzone z każdym elementem. Druga z nich spełnia wymagania dotyczące pary kontenerów asocjacyjnych i ma typ wartości formularza `pair` <  **`const`** `key_type` , `mapped_type`>.
+Struktura szablonu przechowuje parę obiektów typu `T1` i `T2` , odpowiednio. Typ `first_type` jest taki sam jak parametr szablonu `T1` , a typ jest taki `second_type` sam jak parametr szablonu `T2` . `T1``T2`każdy z nich wymaga tylko konstruktora domyślnego, konstruktora pojedynczego argumentu i destruktora. Wszystkie elementy członkowskie tego typu `pair` są publiczne, ponieważ typ jest zadeklarowany jako a, **`struct`** a nie jako **`class`** . Dwa najczęstsze zastosowania dla pary są jako zwracane typy dla funkcji, które zwracają dwie wartości, a jako elementy klas [mapowania](../standard-library/map-class.md) klasy kontenera i klasy [multimap](../standard-library/multimap-class.md) , które mają zarówno klucz, jak i typ wartości skojarzone z każdym elementem. Druga z nich spełnia wymagania dotyczące pary kontenerów asocjacyjnych i ma typ wartości formularza `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Przykład
 

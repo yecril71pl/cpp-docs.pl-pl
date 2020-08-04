@@ -1,6 +1,6 @@
 ---
-title: /cgthreads (wątki generowania kodu)
-ms.date: 11/04/2016
+title: /cgthreads (Wątki generowania kodu)
+ms.date: 07/31/2020
 f1_keywords:
 - /cgthreads
 helpviewer_keywords:
@@ -9,47 +9,50 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: df353eb255c731478863ed6088cafa1cc38053fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294697"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520878"
 ---
-# <a name="cgthreads-code-generation-threads"></a>/cgthreads (wątki generowania kodu)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(Wątki generowania kodu)
 
-Ustawia liczbę wątków cl.exe na potrzeby generowania optymalizacji i kodu.
+Ustawia liczbę cl.exe wątków do użycia na potrzeby optymalizacji i generowania kodu.
 
 ## <a name="syntax"></a>Składnia
 
-```
-/cgthreads[1-8]
-```
+> **`/cgthreads1`**\
+> **`/cgthreads2`**\
+> **`/cgthreads3`**\
+> **`/cgthreads4`**\
+> **`/cgthreads5`**\
+> **`/cgthreads6`**\
+> **`/cgthreads7`**\
+> **`/cgthreads8`**
 
 ## <a name="arguments"></a>Argumenty
 
-*Numer*<br/>
-Maksymalna liczba wątków dla cl.exe, aby korzystać z zakresu od 1 do 8.
+**`cgthreadsN`**\
+Maksymalna liczba wątków używanych przez cl.exe, gdzie *N* to liczba z zakresu od 1 do 8.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Cgthreads** opcja określa maksymalną liczbę wątków cl.exe używa równolegle do optymalizacji i kodu generowania fazy kompilacji. Należy zauważyć, że może istnieć bez spacji między **/cgthreads** i `number` argumentu. Domyślnie program cl.exe używa cztery wątki tak, jakby **/cgthreads4** zostały określone. Jeśli więcej rdzeni procesora są dostępne, większego `number` wartość może skrócić czas kompilacji. Ta opcja jest szczególnie przydatne w połączeniu z [/GL (Optymalizacja Całoprogramowa)](gl-whole-program-optimization.md).
+**`cgthreads`** Opcja określa maksymalną liczbę wątków, cl.exe równolegle używa dla faz optymalizacji i generowania kodu kompilacji. Należy zauważyć, że między **`cgthreads`** i argumentem *Number* nie może znajdować się spacja. Domyślnie cl.exe używa czterech wątków, tak jak gdyby **`/cgthreads4`** zostały określone. Jeśli jest dostępnych więcej rdzeni procesora, większa wartość *liczbowa* może skrócić czas kompilacji. Ta opcja jest szczególnie przydatna w przypadku połączenia z programem [ `/GL` (Optymalizacja całego programu)](gl-whole-program-optimization.md).
 
-Można określić wiele poziomów równoległości dla kompilacji. Przełącznik msbuild.exe **/maxcpucount** określa liczbę procesów programu MSBuild, które mogą być uruchamiane równolegle. [/MP (kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md) flagi kompilatora określa liczbę procesów cl.exe, jednocześnie kompilowane do plików źródłowych. **/Cgthreads** opcja określa liczbę wątków używanych przez każdy proces cl.exe. Ponieważ procesor można uruchamiać tylko tyle wątków w tym samym czasie, są rdzenie procesora, nie jest to przydatne do określenia większe wartości dla wszystkich tych opcji, w tym samym czasie i mogą być unikają szkodliwych dla produkcji. Aby uzyskać więcej informacji na temat sposobu tworzenia projektów wykonywane równolegle, zobacz [tworzenie wielu projektów w sposób równoległy](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+Dla kompilacji można określić wiele poziomów równoległości. Przełącznik msbuild.exe **`/maxcpucount`** określa liczbę procesów programu MSBuild, które mogą być uruchamiane równolegle. Flaga kompilatora [ `/MP` (kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md) określa liczbę procesów cl.exe, które jednocześnie kompilują pliki źródłowe. **`cgthreads`** Opcja określa liczbę wątków używanych przez każdy proces cl.exe. Procesor może pracować tylko z wieloma wątkami w tym samym czasie, w którym występują rdzenie procesora. Nie jest przydatne Określanie większych wartości dla wszystkich tych opcji w tym samym czasie i może być counterproductive. Aby uzyskać więcej informacji o tym, jak kompilować projekty równolegle, zobacz [kompilowanie wielu projektów równolegle](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji**, **C/C++** folderu.
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
-
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/cgthreads**`N`, gdzie `N` jest wartością z zakresu od 1 do 8, a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`cgthreadsN`** , gdzie *`N`* ma wartość od 1 do 8, a następnie wybierz **przycisk OK**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 
