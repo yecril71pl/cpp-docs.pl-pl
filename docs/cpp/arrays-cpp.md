@@ -1,25 +1,25 @@
 ---
 title: Tablice (C++)
-ms.date: 11/14/2019
+ms.date: 08/03/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: d4689162ea38f67b81c0f78bccba557cb40e78d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226037"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565966"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
-Tablica jest sekwencją obiektów tego samego typu, które zajmują ciągły obszar pamięci. Tradycyjne tablice języka C są źródłem wielu błędów, ale są nadal wspólne, szczególnie w przypadku starszych baz kodu. W nowoczesnej C++ zdecydowanie zalecamy użycie [std:: Vector](../standard-library/vector-class.md) lub [std:: Array](../standard-library/array-class-stl.md) zamiast tablic w stylu C opisanych w tej sekcji. Oba te standardowe typy bibliotek przechowują swoje elementy jako ciągły blok pamięci, ale zapewniają znacznie większe bezpieczeństwo typów oraz Iteratory, które mają na celu wskazanie prawidłowej lokalizacji w sekwencji. Aby uzyskać więcej informacji, zobacz [kontenery (Modern C++)](containers-modern-cpp.md).
+Tablica jest sekwencją obiektów tego samego typu, które zajmują ciągły obszar pamięci. Tradycyjne tablice języka C są źródłem wielu błędów, ale są nadal wspólne, szczególnie w przypadku starszych baz kodu. W nowoczesnej C++ zdecydowanie zalecamy użycie [std:: Vector](../standard-library/vector-class.md) lub [std:: Array](../standard-library/array-class-stl.md) zamiast tablic w stylu C opisanych w tej sekcji. Oba te standardowe typy bibliotek przechowują swoje elementy jako ciągły blok pamięci. Jednak zapewniają znacznie większe bezpieczeństwo typów i obsługują Iteratory, które mają na celu wskazanie prawidłowej lokalizacji w ramach sekwencji. Aby uzyskać więcej informacji, zobacz [kontenery (Modern C++)](containers-modern-cpp.md).
 
 ## <a name="stack-declarations"></a>Deklaracje stosu
 
-W deklaracji tablicy języka C++ rozmiar tablicy jest określany po nazwie zmiennej, a nie po nazwie typu, tak jak w innych językach. Poniższy przykład deklaruje tablicę 1000 podwaja się do przydzielenia na stosie. Liczba elementów musi być podana jako literał typu Integer lub else jako wyrażenie stałe, ponieważ kompilator musi wiedzieć, ile miejsca na stosie ma przydzielić; nie można użyć wartości obliczanej w czasie wykonywania. Każdy element w tablicy ma przypisaną wartość domyślną 0. Jeśli nie przypiszesz wartości domyślnej, każdy element początkowo będzie zawierał wszystkie losowe wartości, które będą znajdować się w tej lokalizacji.
+W deklaracji tablicy języka C++ rozmiar tablicy jest określany po nazwie zmiennej, a nie po nazwie typu, tak jak w innych językach. Poniższy przykład deklaruje tablicę 1000 podwaja się do przydzielenia na stosie. Liczba elementów musi być podana jako literał całkowity lub jako wyrażenie stałe. Wynika to z faktu, że kompilator musi znać ilość miejsca na stosie do przydzielenia; nie można użyć wartości obliczanej w czasie wykonywania. Każdy element w tablicy ma przypisaną wartość domyślną 0. Jeśli nie przypiszesz wartości domyślnej, każdy element początkowo zawiera wszystkie losowe wartości, które będą znajdować się w tej lokalizacji pamięci.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ W deklaracji tablicy języka C++ rozmiar tablicy jest określany po nazwie zmien
     }
 ```
 
-Pierwszy element w tablicy to element 0th, a ostatni element to (*n*-1), gdzie *n* to liczba elementów, które może zawierać tablica. Liczba elementów w deklaracji musi być typu całkowitego i musi być większa niż 0. Użytkownik jest odpowiedzialny za zapewnienie, że program nigdy nie przekaże wartości do operatora indeksu dolnego, który jest większy niż `(size - 1)` .
+Pierwszy element w tablicy jest elementem zerowego. Ostatnim elementem jest element (*n*-1), gdzie *n* to liczba elementów, które może zawierać tablica. Liczba elementów w deklaracji musi być typu całkowitego i musi być większa niż 0. Użytkownik jest odpowiedzialny za zapewnienie, że program nigdy nie przekaże wartości do operatora indeksu dolnego, który jest większy niż `(size - 1)` .
 
-Tablica o rozmiarze zerowym jest dozwolona tylko wtedy, gdy tablica jest ostatnim polem w **`struct`** lub **`union`** i po włączeniu rozszerzeń Microsoft (/ze).
+Tablica o rozmiarze zerowym jest dozwolona tylko wtedy, gdy tablica jest ostatnim polem w **`struct`** lub **`union`** i po włączeniu rozszerzeń Microsoft ( **`/Za`** lub **`/permissive-`** nie jest ustawiony).
 
-Tablice oparte na stosie są szybsze do przydzielania i uzyskiwania dostępu do tablic opartych na stercie, ale liczba elementów nie może być tak duża, że zużywa zbyt dużo pamięci stosu. Jak dużo jest zbyt wiele zależy od programu. Za pomocą narzędzi profilowania można określić, czy tablica jest zbyt duża.
+Tablice oparte na stosie są szybsze do przydzielania i uzyskiwania dostępu do tablic opartych na stercie. Jednak przestrzeń stosu jest ograniczona. Liczba elementów tablicy nie może być tak duża, że zużywa zbyt dużo pamięci stosu. Jak dużo jest zbyt wiele zależy od programu. Za pomocą narzędzi profilowania można określić, czy tablica jest zbyt duża.
 
 ## <a name="heap-declarations"></a>Deklaracje sterty
 
-Jeśli potrzebujesz tablicy, która jest zbyt duża, aby można ją było przydzielić na stosie lub którego rozmiar nie może być znany w czasie kompilacji, możesz przydzielić go na stercie z [nowym \[ \] ](new-operator-cpp.md) wyrażeniem. Operator zwraca wskaźnik do pierwszego elementu. Można użyć operatora indeksu dolnego ze zmienną wskaźnika tak samo jak w przypadku macierzy opartej na stosie. Można również użyć [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md) , aby przenieść wskaźnik do dowolnego elementu w tablicy. Jest odpowiedzialny za zapewnienie, że:
+Może być wymagana tablica, która jest zbyt duża, aby można było przydzielić na stosie lub której rozmiar nie jest znany w czasie kompilacji. Istnieje możliwość przydzielenia tej tablicy na stosie przy użyciu [`new[]`](new-operator-cpp.md) wyrażenia. Operator zwraca wskaźnik do pierwszego elementu. Operator indeksu dolnego działa na zmiennej wskaźnika w taki sam sposób, jak w przypadku macierzy opartych na stosie. Można również użyć [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md) , aby przenieść wskaźnik do dowolnego elementu w tablicy. Odpowiedzialność za zapewnienie, że:
 
 - należy zawsze zachować kopię oryginalnego adresu wskaźnika, aby można było usunąć pamięć, gdy nie jest już potrzebna tablica.
 - Nie zwiększaj ani nie zmniejszaj adresu wskaźnika poza granicami tablicy.
 
-Poniższy przykład pokazuje, jak zdefiniować tablicę w stercie w czasie wykonywania i jak uzyskać dostęp do elementów tablicy przy użyciu operatora indeksu dolnego lub przy użyciu arytmetycznego wskaźnika:
+Poniższy przykład pokazuje, jak zdefiniować tablicę na stercie w czasie wykonywania. Pokazuje, jak uzyskać dostęp do elementów tablicy przy użyciu operatora indeksu dolnego i przy użyciu arytmetycznego wskaźnika:
 
 ```cpp
 
@@ -131,7 +131,7 @@ Można zainicjować tablicę w pętli, jeden element w czasie lub w pojedynczej 
 
 ## <a name="passing-arrays-to-functions"></a>Przekazywanie tablic do funkcji
 
-Gdy tablica jest przenoszona do funkcji, jest ona przenoszona jako wskaźnik do pierwszego elementu. Dotyczy to zarówno macierzy opartych na stosach, jak i opartych na stercie. Wskaźnik nie zawiera dodatkowego rozmiaru ani informacji o typie. Takie zachowanie jest nazywane *wskaźnikiem zanikania*. Gdy przekazujesz tablicę do funkcji, musisz zawsze określić liczbę elementów w osobnym parametrze. Takie zachowanie oznacza również, że elementy tablicy nie są kopiowane, gdy tablica jest przenoszona do funkcji. Aby zapobiec modyfikowaniu elementów przez funkcję, określ parametr jako wskaźnik do **`const`** elementów.
+Gdy tablica jest przenoszona do funkcji, jest ona przenoszona jako wskaźnik do pierwszego elementu, niezależnie od tego, czy jest to tablica oparta na stosie czy oparta na stercie. Wskaźnik nie zawiera dodatkowego rozmiaru ani informacji o typie. Takie zachowanie jest nazywane *wskaźnikiem zanikania*. Gdy przekazujesz tablicę do funkcji, musisz zawsze określić liczbę elementów w osobnym parametrze. Takie zachowanie oznacza również, że elementy tablicy nie są kopiowane, gdy tablica jest przenoszona do funkcji. Aby zapobiec modyfikowaniu elementów przez funkcję, określ parametr jako wskaźnik do **`const`** elementów.
 
 Poniższy przykład pokazuje funkcję, która akceptuje tablicę i długość. Wskaźnik wskazuje oryginalną tablicę, a nie kopię. Ponieważ parametr nie jest **`const`** , funkcja może modyfikować elementy tablicy.
 
@@ -156,7 +156,7 @@ Tę samą funkcję można także zadeklarować w taki sposób, bez zmiany w zach
 
 ```cpp
 // Unsized array
-void process(const double p[] const size_t len);
+void process(const double p[], const size_t len);
 
 // Fixed-size array. Length must still be specified explicitly.
 void process(const double p[1000], const size_t len);
@@ -175,7 +175,7 @@ Określa tablicę typu **`int`** , koncepcyjnie ułożonej w dwuwymiarowej macie
 ![Układ koncepcyjny wielo&#45;ej tablicy wymiarowej](../cpp/media/vc38rc1.gif "Układ koncepcyjny wielo&#45;ej tablicy wymiarowej") <br/>
 Układ koncepcyjny macierzy wielowymiarowej
 
-W deklaracjach tablic wielowymiarowych, które mają listę inicjatorów (zgodnie z opisem w [inicjatorach](../cpp/initializers.md)), można pominąć wyrażenie stałe określające granice dla pierwszego wymiaru. Na przykład:
+Można zadeklarować tablice wielowymiarowe, które mają listę inicjatorów (zgodnie z opisem w [inicjatorach](../cpp/initializers.md)). W tych deklaracjach wyrażenie stałe określające granice dla pierwszego wymiaru można pominąć. Na przykład:
 
 ```cpp
 // arrays2.cpp
@@ -197,7 +197,7 @@ Tablice C++ są przechowywane w kolejności najważniejszych wierszy. Wiersz —
 
 ## <a name="example"></a>Przykład
 
-Technika pomijania specyfikacji granic dla pierwszego wymiaru tablicy wielowymiarowej może być również używana w deklaracjach funkcji w następujący sposób:
+Można również pominąć specyfikację granic dla pierwszego wymiaru tablicy wielowymiarowej w deklaracjach funkcji, jak pokazano poniżej:
 
 ```cpp
 // multidimensional_arrays.cpp
@@ -254,7 +254,7 @@ Funkcja `FindMinToMkt` jest zapisywana w taki sposób, że dodanie nowych fabryk
 
 ## <a name="initializing-arrays"></a>Inicjowanie tablic
 
-Jeśli klasa ma Konstruktor, tablice tej klasy są inicjowane przez konstruktora. Jeśli na liście inicjatorów znajduje się mniej elementów niż elementy w tablicy, Konstruktor domyślny jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, lista inicjatorów musi być kompletna — to znaczy, że dla każdego elementu w tablicy musi istnieć jeden inicjator.
+Tablice obiektów, które mają konstruktora klasy, są inicjowane przez konstruktora. Gdy lista inicjatorów zawiera mniej elementów niż elementy w tablicy, Konstruktor domyślny jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, lista inicjatorów musi być *kompletna*, to oznacza, że dla każdego elementu w tablicy musi istnieć jeden inicjator.
 
 Rozważmy `Point` klasę, która definiuje dwa konstruktory:
 
@@ -303,7 +303,7 @@ int main()
 
 ## <a name="accessing-array-elements"></a>Uzyskiwanie dostępu do elementów tablicy
 
-Dostęp do poszczególnych elementów tablicy można uzyskać za pomocą operatora indeksu dolnego ( `[ ]` ). Jeśli tablica Jednowymiarowa jest używana w wyrażeniu, które nie ma indeksu dolnego, nazwa tablicy zostanie przeznaczona do wskaźnika do pierwszego elementu w tablicy.
+Dostęp do poszczególnych elementów tablicy można uzyskać za pomocą operatora indeksu dolnego ( `[ ]` ). Jeśli używasz nazwy jednowymiarowej tablicy bez indeksu dolnego, zostanie ona obliczona jako wskaźnik do pierwszego elementu tablicy.
 
 ```cpp
 // using_arrays.cpp
@@ -344,7 +344,7 @@ Podobnie jak w przypadku innych operatorów, Operator indeksu dolnego ( `[]` ) m
 
 `*((array_name) + (subscript))`
 
-Podobnie jak w przypadku wszystkich elementów, które obejmują typy wskaźników, skalowanie jest wykonywane automatycznie w celu dostosowania rozmiaru typu. W związku z tym wynikowa wartość nie jest *n* bajtami ze źródła nazwy Array-Name; Zamiast tego jest to *n*-ty element tablicy. Aby uzyskać więcej informacji na temat tej konwersji, zobacz [dodatek operatory](additive-operators-plus-and.md).
+Podobnie jak w przypadku wszystkich elementów, które obejmują typy wskaźników, skalowanie jest wykonywane automatycznie w celu dostosowania rozmiaru typu. Wynikowa wartość nie jest *n* bajtami z pochodzenia `array_name` ; zamiast tego, jest to *n*-ty element tablicy. Aby uzyskać więcej informacji na temat tej konwersji, zobacz [dodatek operatory](additive-operators-plus-and.md).
 
 Podobnie w przypadku tablic wielowymiarowych adres jest wyprowadzany przy użyciu następującej metody:
 
@@ -359,12 +359,12 @@ char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Wskaźnik `psz` wskazuje na pierwszy element tablicy `szError1` . Tablice, w przeciwieństwie do wskaźników, nie podlegają modyfikowaniu l-wartości. W związku z tym następujące przypisanie jest niedozwolone:
+Wskaźnik `psz` wskazuje na pierwszy element tablicy `szError1` . Tablice, w przeciwieństwie do wskaźników, nie są modyfikowane l-wartości. Dlatego następujące przypisanie jest niedozwolone:
 
 ```cpp
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [std:: Array](../standard-library/array-class-stl.md)

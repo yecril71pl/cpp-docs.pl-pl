@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246126"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565953"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funkcje charconv
 
@@ -23,12 +23,12 @@ ms.locfileid: "87246126"
 |[to_chars](#to_chars) | Przekonwertuj liczbę całkowitą lub wartość zmiennoprzecinkową na sekwencję **`char`** . |
 |[from_chars](#from_chars) | Konwertuj sekwencję **`char`** do wartości całkowitej lub zmiennoprzecinkowej. |
 
-Te funkcje konwersji są dostrajane pod kątem wydajności, a także obsługują najkrótsze zachowanie. Zachowanie funkcji najkrótszej rundy oznacza, że gdy liczba jest konwertowana na znaki, tylko wystarczająca precyzja jest zapisywana, aby umożliwić odzyskiwanie pierwotnej liczby podczas konwertowania tych znaków z powrotem na zmiennoprzecinkową.
+Te funkcje konwersji są dostrajane pod kątem wydajności, a także obsługują najkrótsze zachowanie. Zachowanie funkcji najkrótszej rundy oznacza, że gdy liczba jest konwertowana na znaki, jest zapisywana tylko wystarczająca precyzja, aby umożliwić odzyskiwanie pierwotnej liczby podczas konwertowania tych znaków z powrotem na zmiennoprzecinkową.
 
 - Podczas konwertowania znaków na liczbę, wartość numeryczna nie musi być zakończona wartością null. Podobnie podczas konwertowania liczby na znaki, wynik nie jest zakończony znakiem null.
 - Funkcje konwersji nie przydzielają pamięci. W każdym przypadku jesteś właocicielem buforu.
 - Funkcje konwersji nie generują. Zostanie zwrócony wynik, za pomocą którego można określić, czy konwersja powiodła się.
-- Funkcje konwersji nie są rozróżniane w trybie zaokrąglania czasu wykonywania.
+- Funkcje konwersji nie są zależne od trybu zaokrąglania środowiska uruchomieniowego.
 - Funkcje konwersji nie obsługują ustawień regionalnych. Zawsze drukują i analizują punkty dziesiętne jako `'.'` , i nigdy jako "," dla ustawień regionalnych, które używają przecinków.
 
 ## `to_chars`
@@ -95,15 +95,15 @@ W przypadku konwersji zmiennoprzecinkowych liczba cyfr dokładności dla skonwer
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja pobierająca parametr [chars_format](chars-format-class.md) określa specyfikator konwersji tak, jakby był używany `printf()` w następujący sposób: specyfikator konwersji to `f` IF, if is `fmt` , `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` (bez wiodącego znaku "0x" w wyniku), jeśli jest `fmt` `chars_format::hex` , i `g` Jeśli `fmt` jest `chars_format::general` . Określenie najkrótszej notacji stałej może nadal powodować długotrwałe dane wyjściowe, ponieważ może to być najkrótsza możliwa reprezentacja, gdy wartość jest bardzo duża lub bardzo mała.
+Funkcja pobierająca parametr [chars_format](chars-format-class.md) określa specyfikator konwersji tak, jakby był używany `printf()` w następujący sposób: specyfikator konwersji to IF, if is, `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` (bez wiodącego `0x` w wyniku), jeśli jest `fmt` `chars_format::hex` , i `'g'` Jeśli `fmt` jest `chars_format::general` . Określenie najkrótszej notacji stałej może nadal powodować długotrwałe dane wyjściowe, ponieważ może to być najkrótsza możliwa reprezentacja, gdy wartość jest bardzo duża lub bardzo mała.
 
-W poniższej tabeli opisano zachowanie konwersji przy użyciu różnych kombinacji `fmt` parametrów i `precision` . Termin "najkrótszy rejs" oznacza zapisanie najmniejszej liczby cyfr niezbędnej do analizy tej reprezentacji przy użyciu odpowiedniej `from_chars` funkcji odzyska wartość dokładnie.
+W poniższej tabeli opisano zachowanie konwersji przy użyciu różnych kombinacji `fmt` parametrów i `precision` . Termin "zachowanie najkrótszej rundy" oznacza zapisanie najmniejszej liczby cyfr, które są niezbędne, aby analizowanie tej reprezentacji przy użyciu odpowiedniej `from_chars` funkcji odzyskał wartość dokładnie.
 
 | `fmt`i `precision` kombinacja | Dane wyjściowe |
 |--|--|
 |  Żadna | W zależności od stałej lub wykładniczej notacji jest krótszy, poprzedzony prefiksem ustalonym jako wczesnego.</br>To zachowanie nie może być symulowane przez żadne Przeciążenie, które pobiera `fmt` parametr. |
-| `fmt` | Najkrótsze zachowanie rundy dla określonego formatu, takie jak najkrótszy format naukowy. |
-| `fmt` i `precision` | Używa danej precyzji, następującego `printf()` stylu, bez najkrótszych zachowań rundy. |
+| `fmt` | Najkrótsze zachowanie dla określonego formatu, takie jak najkrótszy format naukowy. |
+| `fmt` i `precision` | Używa danej precyzji, następującego `printf()` stylu, bez najkrótszych zachowań. |
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:**\<charconv>
+
+**Przestrzeń nazw:** std
+
+wymagany jest/std: c++ 17 lub nowszy.
+
+## <a name="see-also"></a>Zobacz też
 
 [\<charconv>](charconv.md)  
-[Krótki ciąg dziesiętny, który dzieli się na rundy](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[Krótki ciąg dziesiętny, który dzieli](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ się na rundy [specyfikatory formatu printf ()](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
