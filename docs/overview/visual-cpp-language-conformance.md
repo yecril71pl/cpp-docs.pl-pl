@@ -1,17 +1,17 @@
 ---
 title: Tabela zgodności języka Microsoft C++
 description: Tabela aktualizacji zgodności programu Microsoft C++ według wersji programu Visual Studio.
-ms.date: 05/18/2020
+ms.date: 08/05/2020
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4467e9fa47ecdeb0b4c5c44ab4d366222369d994
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213947"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807813"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela zgodności języka Microsoft C++
 
@@ -24,7 +24,7 @@ Aby uzyskać szczegółowe informacje na temat udoskonaleń zgodności programu 
 
 ## <a name="compiler-features"></a>Funkcje kompilatora
 
-|  |  |
+| Cechy | Pomoc techniczna |
 |--|--|
 | __Podstawowe funkcje języka c++ 03/11__ | __Obsługiwane__ |
 | &nbsp;&nbsp;Wszystko inne | VS 2015 <sup> [A](#note_A)</sup> |
@@ -181,7 +181,9 @@ Aby uzyskać szczegółowe informacje na temat udoskonaleń zgodności programu 
 
 ## <a name="standard-library-features"></a>Standardowe funkcje biblioteki
 
-|  |  |
+Bardziej szczegółową listę funkcji biblioteki standardowej i poprawek błędów według wersji produktu można znaleźć na stronie [Dziennik zmian w witrynie GitHub Microsoft STL](https://github.com/microsoft/STL/wiki/Changelog) .
+
+| Cechy | Pomoc techniczna |
 |--|--|
 | __Standardowe funkcje biblioteki c++ 20__ | __Obsługiwane__ |
 | &nbsp;&nbsp;[`P0809R0 Comparing Unordered Containers`](https://wg21.link/p0809r0) | VS 2010 <sup> [14](#note_14)</sup> |
@@ -238,20 +240,29 @@ Aby uzyskać szczegółowe informacje na temat udoskonaleń zgodności programu 
 | &nbsp;&nbsp;[`P1165R1 Consistently Propagating Stateful Allocators In basic_string's operator+()`](https://wg21.link/P1165R1) | VS 2019 16,6 <sup> [14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1423R3 char8_t backward compatibility remediation`](https://wg21.link/P1423R3) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1645R1 constexpr for <numeric> algorithms`](https://wg21.link/P1645R1) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1115R3 erase()/erase_if() Return size_type`](https://wg21.link/P1115R3) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1831R1 Deprecating volatile in the standard library`](https://wg21.link/P1831R1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1956R1 <bit> has_single_bit(), bit_ceil(), bit_floor(), bit_width()`](https://wg21.link/P1956R1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1964R2 Replacing boolean With boolean-testable`](https://wg21.link/P1964R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1976R2 Fixed-size span construction from dynamic range`](https://wg21.link/P1976R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2091R0 Issues with range access CPOs`](https://wg21.link/P2091R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2102R0 Make "implicit expression variations" more explicit`](https://wg21.link/P2102R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2116R0 Remove tuple-like protocol support from fixed-extent span`](https://wg21.link/P2116R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0019R8 atomic_ref`](https://wg21.link/P0019R8) | Nie |
 | &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | Nie |
 | &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | Nie |
 | &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | Nie |
-| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | Nie |
 | &nbsp;&nbsp;[`P0475R1 Guaranteed Copy Elision For Piecewise Construction`](https://wg21.link/P0475R1) | Nie |
-| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | Nie |
 | &nbsp;&nbsp;[`P0528R3 Atomic Compare-And-Exchange With Padding Bits`](https://wg21.link/P0528R3) | Nie |
 | &nbsp;&nbsp;[`P0591R4 Utility Functions For Uses-Allocator Construction`](https://wg21.link/P0591R4) | Nie |
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | Nie |
 | &nbsp;&nbsp;[`P0653R2 to_address()`](https://wg21.link/p0653r2) | Nie |
 | &nbsp;&nbsp;[`P0655R1 visit<R>()`](https://wg21.link/P0655R1) | Nie |
-| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | Nie |
-| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | Nie |
 | &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | Nie |
 | &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | Nie |
 | &nbsp;&nbsp;[`P0896R4 <ranges\>`](https://wg21.link/P0896R4) | Nie |
@@ -260,7 +271,6 @@ Aby uzyskać szczegółowe informacje na temat udoskonaleń zgodności programu 
 | &nbsp;&nbsp;[`P1001R2 execution::unseq`](https://wg21.link/P1001R2) | Nie |
 | &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | Nie |
 | &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | Nie |
-| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | Nie |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | Nie |
 | &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | Nie |
 | __Standardowe funkcje biblioteki c++ 17__ | __Obsługiwane__ |
@@ -393,7 +403,8 @@ __VS 2019 16,2__ wskazuje funkcje, które są obsługiwane w programie Visual St
 __VS 2019 16,3__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,3. \
 __VS 2019 16,4__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,4. \
 __VS 2019 16,5__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,5. \
-__VS 2019 16,6__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,6.
+__VS 2019 16,6__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,6. \
+__VS 2019 16,7__ wskazuje funkcje, które są obsługiwane w programie Visual Studio 2019 w wersji 16,7.
 
 ### <a name="notes"></a>Uwagi
 
@@ -415,7 +426,7 @@ Opcja kompilatora [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 
 
 <a name="note_17"></a>__17__ te funkcje są włączane przez [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcję kompilatora (lub).
 
-<a name="note_20"></a>__20__ te funkcje są włączane przez [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcję kompilatora. Po zakończeniu implementacji języka C++ 20 zostanie dodana nowa opcja kompilatora **/std: c++ 20** , w której te funkcje będą również dostępne.
+<a name="note_20"></a>__20__ te funkcje są włączane przez [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcję kompilatora. Po zakończeniu implementacji języka C++ 20 **`/std:c++20`** zostanie dodana nowa opcja kompilatora, w której te funkcje będą również dostępne.
 
 <a name="note_byte"></a>__bajty__ `std::byte` jest włączona przez [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (lub [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ), ale ponieważ może powodować konflikt z nagłówkami Windows SDK w niektórych przypadkach, zawiera szczegółowe makro rezygnacji. Można ją wyłączyć, definiując `_HAS_STD_BYTE` jako `0` .
 
