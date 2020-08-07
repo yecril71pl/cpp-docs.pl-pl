@@ -972,7 +972,7 @@ Istnieje wiele możliwych poprawek:
 
 Począwszy od programu Visual Studio 2019 w wersji 16,6, kompilator implementuje pewne istniejące ostrzeżenia języka C++ dla kodu skompilowanego jako C. Następujące ostrzeżenia są teraz włączone na różnych poziomach: C4060, C4061, C4062, C4063, C4064, C4065, C4808 i C4809. Ostrzeżenia C4065 i C4060 są domyślnie wyłączone w języku C.
 
-Wyzwalacz ostrzeżeń w przypadku brakujących **`case`** instrukcji, niezdefiniowanych **`enum`** i nieprawidłowych **`bool`** przełączników (czyli tych, które zawierają zbyt wiele przypadków). Na przykład:
+Wyzwalacz ostrzeżeń w przypadku brakujących **`case`** instrukcji, niezdefiniowanych **`enum`** i nieprawidłowych **`bool`** przełączników (czyli tych, które zawierają zbyt wiele przypadków). Przykład:
 
 ```c
 #include <stdbool.h>
