@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: eaa4d50fc50528febf923f1c13a5283b9a1bd389
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
+ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334954"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87870155"
 ---
 # <a name="iterators"></a>Iteratory
 
@@ -34,7 +34,7 @@ Te same czynności można wykonać w przypadku pętli Range for:
 ```cpp
 for (auto num : vec)
 {
-    // no deference operator
+    // no dereference operator
     cout << num << " ";
 }
 ```
@@ -88,7 +88,7 @@ Ważne jest, aby zrozumieć niesie obietnice zwiększenia i ograniczenia każdej
 
 Język Microsoft C++ oferuje teraz sprawdzone Iteratory i Iteratory debugowania, aby upewnić się, że nie zastąpisz granic kontenera. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md) i [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
