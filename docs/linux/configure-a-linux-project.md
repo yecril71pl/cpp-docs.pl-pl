@@ -1,15 +1,16 @@
 ---
-title: Konfigurowanie projektu C++ w systemie Linux w programie Visual Studio
-ms.date: 06/22/2020
+title: Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Studio
+ms.date: 08/06/2020
+description: Skonfiguruj projekt systemu Linux oparty na programie MSBuild w programie Visual Studio, aby można było go skompilować.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269744"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043866"
 ---
-# <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Studio
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-W tym temacie opisano sposób konfigurowania projektu języka C++ w systemie Linux zgodnie z opisem w temacie [Tworzenie nowego projektu c++ w systemie Linux w programie Visual Studio](create-a-new-linux-project.md). W przypadku projektów CMake Linux zobacz [Configure a Linux CMAKE Project](cmake-linux-project.md).
+W tym temacie opisano sposób konfigurowania projektu systemu Linux opartego na programie MSBuild, zgodnie z opisem w artykule [Tworzenie projektu programu Linux MSBuild C++ w programie Visual Studio](create-a-new-linux-project.md). W przypadku projektów CMake systemu Linux zobacz [Konfigurowanie projektu systemu Linux CMAKE](cmake-linux-project.md).
 
 Istnieje możliwość skonfigurowania projektu systemu Linux, który będzie przeznaczony dla fizycznego komputera z systemem Linux, maszyny wirtualnej lub [podsystemu Windows for Linux](/windows/wsl/about) (WSL).
 
@@ -127,7 +128,7 @@ Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 
 Ustawienia języka programu Visual Studio nie są propagowane do celów systemu Linux, ponieważ program Visual Studio nie zarządza ani nie konfiguruje zainstalowanych pakietów. Komunikaty wyświetlane w oknie **danych wyjściowych** , takie jak błędy kompilacji, są wyświetlane przy użyciu języka i ustawień regionalnych docelowego systemu Linux. Należy skonfigurować cele systemu Linux dla żądanych ustawień regionalnych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ustawianie właściwości kompilatora i Build](../build/working-with-project-properties.md)<br/>
 [Ogólne właściwości języka c++ (Linux C++)](prop-pages/general-linux.md)<br/>
