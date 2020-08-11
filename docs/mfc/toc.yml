@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: Style kontrolki ToolBar
           href: reference/toolbar-control-styles.md
+        - name: 'BufferCommand, wyliczenie'
+          href: reference/buffercommand-enumeration.md
         - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE — wyliczenie'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: UICheckState — wyliczenie
