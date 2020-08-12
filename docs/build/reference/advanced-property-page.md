@@ -1,86 +1,108 @@
 ---
-title: Strona właściwości zaawansowanej (projekt)
-ms.date: 07/19/2019
+title: Zaawansowana Strona właściwości (projekt)
+ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 8ce62b768f5cda30501e791bcd040a40b18bfb23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328424"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144168"
 ---
-# <a name="advanced-property-page"></a>Strona właściwości zaawansowanej
+# <a name="advanced-property-page"></a>Zaawansowana Strona właściwości
 
-Strona Właściwości Zaawansowane jest dostępna w programie Visual Studio 2019 i nowszych.
+::: moniker range="<=vs-2017"
+
+Strona właściwości zaawansowane jest dostępna w programie Visual Studio 2019 i nowszych. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
+
+Strona właściwości zaawansowane jest dostępna w programie Visual Studio 2019 i nowszych.
 
 ## <a name="advanced-properties"></a>Właściwości zaawansowane
 
 - **Rozszerzenie pliku docelowego**
 
-   Określa rozszerzenie pliku, które ma być używane dla danych wyjściowych kompilacji. Domyślnie wartość **.exe** dla aplikacji, **.lib** dla bibliotek statycznych i biblioteka **DLL** dla bibliotek DLL.
+   Określa rozszerzenie pliku do użycia dla danych wyjściowych kompilacji. Domyślnie *`.exe`* dla aplikacji, *`.lib`* bibliotek statycznych i *`.dll`* bibliotek DLL.
 
-- **Rozszerzenia do usunięcia przy czyszczeniu**
+- **Rozszerzenia do usunięcia podczas czyszczenia**
 
-   Opcja **Wyczyść** (menu**Kompilacja)** usuwa pliki z katalogu pośredniego, w którym jest zbudowana konfiguracja projektu. Pliki z rozszerzeniami określonymi za pomocą tej właściwości zostaną usunięte po uruchomieniu **clean** lub podczas wykonywania przebudowy. Oprócz plików tych rozszerzeń w katalogu pośrednim, system kompilacji usunie również wszystkie znane dane wyjściowe kompilacji, niezależnie od tego, gdzie się znajduje (w tym pośrednie wyjścia, takie jak pliki obj). Należy zauważyć, że można określić symbole wieloznaczne.
+   Opcja **Oczyść** (menu**kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi w tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po odbudowie. System kompilacji usuwa wszystkie pliki, które mają te rozszerzenia w katalogu pośrednim. Usuwa także wszystkie znane dane wyjściowe kompilacji, niezależnie od tego, gdzie się znajdują. (Obejmuje to pośrednie dane wyjściowe, takie jak *`.obj`* pliki). W tej właściwości można określić symbole wieloznaczne.
 
-   Aby programowo uzyskać dostęp <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>do tej właściwości, zobacz .
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A> .
 
-- **Tworzenie pliku dziennika**
+- **Plik dziennika kompilacji**
 
-   Umożliwia określenie lokalizacji nie domyślnej dla pliku dziennika, który jest tworzony przy każdym tworzeniu projektu. Domyślna lokalizacja jest określona przez makra $(IntDir)$(MSBuildProjectName).log.
+   Umożliwia określenie lokalizacji innej niż domyślna dla pliku dziennika, który jest tworzony za każdym razem, gdy kompilujesz projekt. Domyślna lokalizacja jest określana przez makra `$(IntDir)$(MSBuildProjectName).log` .
 
-   Za pomocą makr projektu można zmienić lokalizację katalogu. Zobacz [Typowe makra dla poleceń kompilacji i właściwości](common-macros-for-build-commands-and-properties.md).
+   Za pomocą makr projektu można zmienić lokalizację katalogu. Zobacz [typowe makra dotyczące poleceń i właściwości kompilacji](common-macros-for-build-commands-and-properties.md).
 
-- **Preferowana architektura narzędzi kompilacji**
+- **Preferowana architektura narzędzia kompilacji**
 
-   Określa, czy mają być używane narzędzia kompilacji x86 czy x64.
+   Określa, czy mają być używane narzędzia kompilacji x86 i x64.
 
-- **Korzystanie z bibliotek debugowania**
+- **Użyj bibliotek debugowania**
 
-   Określa, czy utworzyć kompilację DEBUG lub RELEASE.
+   Określa, czy ma zostać utworzona kompilacja lub wersja kompilacji.
 
-- **Włącz kompilację Unity (JUMBO)**
+- **Włącz kompilację aparatu Unity (duża)**
 
-   Umożliwia proces kompilacji, w którym wiele plików źródłowych języka C++ są łączone w jeden lub więcej plików "jedność" przed kompilacji w celu zwiększenia wydajności kompilacji. Niezwiązane z silnikiem gry Unity.
+   Włącza szybszy proces kompilacji, który łączy wiele plików źródłowych C++ w jeden lub więcej plików przed kompilacją. Te połączone pliki są znane jako pliki *aparatu Unity* . Są one niepowiązane z aparatem gier aparatu Unity.
 
-- **Korzystanie z MFC**
+- **Kopiuj zawartość do OutDir**
 
-   Określa, czy projekt MFC będzie statycznie lub dynamicznie połączyć się z biblioteką DLL MFC. Projekty inne niż MFC można wybrać **użyj standardowych bibliotek systemu Windows,** aby połączyć się z różnymi bibliotekami Win32, które są uwzględniane podczas korzystania z MFC.
+   Skopiuj elementy oznaczone jako *zawartość* w projekcie do katalogu wyjściowego projektu ( `$(OutDir)` ). To ustawienie może uprościć wdrażanie. Ta właściwość jest dostępna od wersji 16,7 programu Visual Studio 2019.
 
-   Aby programowo uzyskać dostęp <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>do tej właściwości, zobacz .
+- **Kopiuj odwołania projektu do OutDir**
+
+   Skopiuj plik wykonywalny (DLL i EXE) do katalogu wyjściowego projektu ( `$(OutDir)` ). W projektach C++/CLI ( [`/clr`](clr-common-language-runtime-compilation.md) ) ta właściwość jest ignorowana. Zamiast tego, właściwość **copy Local** w każdym odwołaniu projektu kontroluje, czy jest ona kopiowana do katalogu wyjściowego. To ustawienie może uprościć wdrożenie lokalne. Jest dostępny od wersji 16,7 programu Visual Studio 2019.
+
+- **Kopiuj symbole odwołań projektu do OutDir**
+
+   Skopiuj pliki PDB dla elementów odwołania projektu wraz z elementami wykonywalnymi odwołania projektu do katalogu wyjściowego projektu ( `$(OutDir)` ). Ta właściwość jest zawsze włączona dla projektów C++/CLI. To ustawienie może uprościć wdrożenie debugowania. Jest dostępny od wersji 16,7 programu Visual Studio 2019.
+
+- **Kopiuj środowisko uruchomieniowe języka C++ do OutDir**
+
+   Skopiuj biblioteki DLL środowiska uruchomieniowego do katalogu wyjściowego projektu ( `$(OutDir)` ). To ustawienie może uprościć wdrożenie lokalne. Jest dostępny od wersji 16,7 programu Visual Studio 2019.
+
+- **Użycie MFC**
+
+   Określa, czy projekt MFC statycznie lub dynamicznie łączy się z biblioteką MFC DLL. W projektach bez klas MFC wybierz opcję **Użyj standardowych bibliotek systemu Windows** , aby połączyć biblioteki Win32 dołączone przez MFC.
+
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A> .
 
 - **Zestaw znaków**
 
-   Określa, czy należy ustawić _UNICODE czy _MBCS. W stosownych przypadkach wpływa również na punkt wejścia konsolidatora.
+   Określa `_UNICODE` , czy `_MBCS` należy ustawić. Ma także wpływ na punkt wejścia konsolidatora, gdy jest to konieczne.
 
-   Aby programowo uzyskać dostęp <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>do tej właściwości, zobacz .
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A> .
 
 - **Optymalizacja całego programu**
 
-   Określa opcję kompilatora [/GL](gl-whole-program-optimization.md) i opcję konsolidatora [/LTCG.](ltcg-link-time-code-generation.md) Domyślnie jest to wyłączone dla konfiguracji debugowania i włączone dla konfiguracji sieci sprzedaży.
+   Określa [`/GL`](gl-whole-program-optimization.md) opcję kompilatora i [`/LTCG`](ltcg-link-time-code-generation.md) opcję konsolidatora. Domyślnie optymalizacja całego programu jest wyłączona dla konfiguracji debugowania i włączona w przypadku konfiguracji wydania.
 
 - **Wersja zestawu narzędzi MSVC**
 
-   Określa pełną wersję zestawu narzędzi MSVC, który będzie używany do tworzenia projektu. Jeśli masz zainstalowane różne wersje aktualizacji i wersji zapoznawczej zestawu narzędzi, możesz określić, który z nich ma być używany w tym miejscu.
+   Określa pełną wersję zestawu narzędzi MSVC, który jest używany do kompilowania projektu. Być może masz zainstalowaną różne wersje aktualizacji i wersji zapoznawczej zestawu narzędzi. Możesz określić, która z nich ma być używana w tym miejscu.
 
-## <a name="ccli-properties"></a>Właściwości języka C++/CLI
+## <a name="ccli-properties"></a>Właściwości/CLI języka C++
 
-- **Obsługa środowiska wykonawczego języka wspólnego**
+- **Obsługa środowiska uruchomieniowego CLR**
 
-   Powoduje, że [opcja kompilatora /clr](clr-common-language-runtime-compilation.md) ma być używana.
+   Powoduje, że [`/clr`](clr-common-language-runtime-compilation.md) Opcja kompilatora ma być używana.
 
-   Aby programowo uzyskać dostęp <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>do tej właściwości, zobacz .
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A> .
 
-- **Wersja docelowej struktury .NET**
+- **Wersja platformy docelowej platformy .NET**
 
-   W projektach zarządzanych określa wersję programu .NET framework do docelowej.
+   W obszarze projekty zarządzane określa wersję programu .NET Framework, która ma być docelowa.
 
-- **Włącz zarządzana kompilacja przyrostowa**
+- **Włącz zarządzaną kompilację przyrostową**
 
-   W przypadku projektów zarządzanych umożliwia to wykrywanie widoczności zewnętrznej podczas generowania zestawów. Jeśli zmiana w projekcie zarządzanym nie jest widoczna dla innych projektów, projekty zależne nie są przebudowywane. Może to znacznie skrócić czas kompilacji w rozwiązaniach, które obejmują projekty zarządzane.
+   W przypadku projektów zarządzanych ta opcja umożliwia wykrywanie widoczności zewnętrznej podczas generowania zestawów. Jeśli zmiana w projekcie zarządzanym nie jest widoczna dla innych projektów, zależne projekty nie są ponownie kompilowane. Zarządzane Kompilacje przyrostowe mogą znacznie skrócić czasy kompilacji w rozwiązaniach, które obejmują projekty zarządzane.
 
 ::: moniker-end

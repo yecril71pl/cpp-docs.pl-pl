@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390003"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144181"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -636,7 +636,7 @@ Dostępne są teraz nowe opcje pisania i pakowania aplikacji C++ dla platforma u
 
 Zostanie dodany szablon projektu **pakietu aplikacji systemu Windows** , który znacznie upraszcza pakowanie aplikacji klasycznych za pomocą mostka programu Desktop. Jest on dostępny w **pliku | Nowy | Projekt | Zainstalowane | Visual C++ | Platforma uniwersalna systemu Windows**. Aby uzyskać więcej informacji, zobacz [pakowanie aplikacji za pomocą programu Visual Studio (mostek Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Podczas pisania nowego kodu można teraz używać języka C++/WinRT, czyli standardowego rzutu języka C++ dla środowisko wykonawcze systemu Windows zaimplementowane wyłącznie w plikach nagłówkowych. Umożliwia korzystanie z interfejsów API środowisko wykonawcze systemu Windows i tworzenie ich przy użyciu dowolnych zgodnych ze standardami kompilatora języka C++. Język c++/WinRT został zaprojektowany, aby zapewnić deweloperom języka C++ dostęp do nowoczesnego interfejsu API systemu Windows przy użyciu pierwszej klasy. Aby uzyskać więcej informacji, zobacz [c++/WinRT: nowoczesny c++ dla środowisko wykonawcze systemu Windows](https://moderncpp.com/).
+Podczas pisania nowego kodu można teraz używać języka C++/WinRT, czyli standardowego rzutu języka C++ dla środowisko wykonawcze systemu Windows zaimplementowane wyłącznie w plikach nagłówkowych. Umożliwia korzystanie z interfejsów API środowisko wykonawcze systemu Windows i tworzenie ich przy użyciu dowolnych zgodnych ze standardami kompilatora języka C++. Język c++/WinRT został zaprojektowany, aby zapewnić deweloperom języka C++ dostęp do nowoczesnego interfejsu API systemu Windows przy użyciu pierwszej klasy. Aby uzyskać więcej informacji, zobacz [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/).
 
 Począwszy od kompilacji 17025 Windows SDK w wersji zapoznawczej, w Windows SDK znajduje się/WinRT C++. Aby uzyskać więcej informacji, zobacz [C++/WinRT jest teraz dołączany do Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/).
 
@@ -696,7 +696,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Wyszukaj](media/search.png)
+  ![Wyszukiwanie](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dla dowolnego zasobu, kliknij ikonę zegara obok dowolnego hiperłącza zasobu.
 
