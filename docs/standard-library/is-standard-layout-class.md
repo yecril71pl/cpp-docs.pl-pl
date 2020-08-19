@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457414"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560598"
 ---
-# <a name="isstandardlayout-class"></a>is_standard_layout — Klasa
+# <a name="is_standard_layout-class"></a>is_standard_layout — Klasa
 
 Testuje, czy typ jest układem standardowym.
 
@@ -27,9 +27,8 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Br*|Typ do zapytania|
+*Br*\
+Typ do zapytania
 
 ## <a name="remarks"></a>Uwagi
 
@@ -37,10 +36,10 @@ Wystąpienie tego predykatu typu ma wartość true, jeśli typ *ty* jest klasą,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

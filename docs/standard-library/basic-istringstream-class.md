@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 6a8ead5f1014e7f750e01988241ab020431312da
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376805"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561781"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream — Klasa
 
-Opisuje obiekt, który steruje wyodrębnianiem elementów i zakodowanych obiektów z buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
+Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR** `Alloc`>.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,62 +34,62 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Alloc*\
+*Alokacj*\
 Klasa alokatora.
 
 *Elem*\
-Typ elementu podstawowego ciągu.
+Typ podstawowego elementu ciągu.
 
-*Tr*\
-Cechy charakteru wyspecjalizowane na podstawowym elemencie ciągu.
+*Zdawczy*\
+Cechy znaków wyspecjalizowane dla elementu Basic ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje obiekt, który steruje wyodrębnianiem elementów i zakodowanych obiektów z buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, z elementami typu *Elem*, którego cechy charakteru są określane przez klasę *Tr*i których elementy są przydzielane przez alokatora klasy *Alokatora klasy Alokator*. Obiekt przechowuje obiekt klasy basic_stringbuf< **Elem**, **Tr** `Alloc` ,>.
+Szablon klasy opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>, z elementami typu *elem*, których cechy znakowe są określane przez klasę *TR*i których elementy są przydzielane przez alokatora klasy *Alloc*. Obiekt przechowuje obiekt klasy basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Opis|
 |-|-|
-|[basic_istringstream](#basic_istringstream)|Konstruuje obiekt `basic_istringstream`typu .|
+|[basic_istringstream](#basic_istringstream)|Konstruuje obiekt typu `basic_istringstream` .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ jest synonimem parametru `Alloc`szablonu .|
+|[allocator_type](#allocator_type)|Typ jest synonimem dla parametru szablonu `Alloc` .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowce|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Rdbuf](#rdbuf)|Zwraca adres typu buforu przechowywanego `pointer` strumienia do `Alloc` [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`>.|
-|[Str](#str)|Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.|
-|[Wymiany](#swap)|Wymienia wartości w `basic_istringstream` tym obiekcie dla wartości podanego obiektu.|
+|[rdbuf](#rdbuf)|Zwraca adres buforu zapisanego strumienia typu `pointer` do [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` , `Tr` , `Alloc`>.|
+|[str](#str)|Ustawia lub pobiera tekst w buforze ciągów bez zmiany pozycji zapisu.|
+|[wymiany](#swap)|Wymienia wartości w tym `basic_istringstream` obiekcie dla podanego obiektu.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Przypisuje wartości do `basic_istringstream` tego obiektu z parametru obiektu.|
+|[operator =](#op_eq)|Przypisuje wartości do tego `basic_istringstream` obiektu z parametru Object.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<sstream>
+**Nagłówek:**\<sstream>
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_istringstreamallocator_type"></a><a name="allocator_type"></a>basic_istringstream::allocator_type
+## <a name="basic_istringstreamallocator_type"></a><a name="allocator_type"></a> basic_istringstream:: allocator_type
 
-Typ jest synonimem parametru `Alloc`szablonu .
+Typ jest synonimem dla parametru szablonu `Alloc` .
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_istringstreambasic_istringstream"></a><a name="basic_istringstream"></a>basic_istringstream::basic_istringstream
+## <a name="basic_istringstreambasic_istringstream"></a><a name="basic_istringstream"></a> basic_istringstream:: basic_istringstream
 
-Konstruuje obiekt `basic_istringstream`typu .
+Konstruuje obiekt typu `basic_istringstream` .
 
 ```cpp
 explicit basic_istringstream(
@@ -105,26 +105,26 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parametry
 
-*_mode*\
-Jedno z wyliczenia w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Mode*\
+Jedno z wyliczeń w [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
 
-*Str*\
+*str*\
 Obiekt typu `basic_string`.
 
-*Prawo*\
-Odwołanie do wartości r `basic_istringstream` obiektu.
+*Kliknij*\
+Odwołanie rvalue do `basic_istringstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktor inicjuje klasę [basic_istream](../standard-library/basic-istream-class.md)podstawową,`sb`wywołując `sb` basic_istream ( ), gdzie jest przechowywanym obiektem [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`klasy , `Tr` `Alloc`>. Inicjuje `sb` również, `basic_stringbuf` <  `Elem` `Tr`dzwoniąc `Alloc` ,>( `_Mode` &#124; `ios_base::in`).
+Pierwszy Konstruktor inicjuje klasę bazową, wywołując [basic_istream](../standard-library/basic-istream-class.md)( `sb` ), gdzie `sb` jest przechowywany obiekt klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` , `Tr` , `Alloc`>. Jest on również inicjowany `sb` przez wywołanie `basic_stringbuf` <  `Elem` , `Tr` , `Alloc`> ( `_Mode` &#124; `ios_base::in` ).
 
-Drugi konstruktor inicjuje klasę `basic_istream(sb)`podstawową, wywołując . `sb` Inicjuje również, `basic_stringbuf` <  `Elem` `Tr`dzwoniąc `Alloc` ,>( `str` `_Mode` , &#124; `ios_base::in`).
+Drugi Konstruktor inicjuje klasę bazową, wywołując `basic_istream(sb)` . Jest on również inicjowany `sb` przez wywołanie `basic_stringbuf` <  `Elem` , `Tr` , `Alloc`> ( `str` , `_Mode` &#124; `ios_base::in` ).
 
-Trzeci konstruktor inicjuje obiekt z zawartością *right*, traktowane jako odwołanie rvalue.
+Trzeci Konstruktor inicjuje obiekt z zawartością *prawa*, traktowany jako odwołanie rvalue.
 
-## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a>basic_istringstream::operator=
+## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a> basic_istringstream:: operator =
 
-Przypisuje wartości do `basic_istringstream` tego obiektu z parametru obiektu.
+Przypisuje wartości do tego `basic_istringstream` obiektu z parametru Object.
 
 ```cpp
 basic_istringstream& operator=(basic_istringstream&& right);
@@ -132,16 +132,16 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
-Odwołanie do `basic_istringstream` wartości r. do obiektu.
+*Kliknij*\
+Odwołanie rvalue do `basic_istringstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zastępuje zawartość obiektu zawartością *prawa,* traktowaną jako przypisanie przenoszenia odwołania rvalue.
+Operator elementu członkowskiego zastępuje zawartość obiektu zawartością z *prawej strony*, traktowaną jako odwołanie rvalue przenoszenia.
 
-## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a>basic_istringstream::rdbuf
+## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a> basic_istringstream:: rdbuf
 
-Zwraca adres buforu przechowywanego `pointer` strumienia typu [do basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
+Zwraca adres buforu zapisanego strumienia typu `pointer` do [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,15 +149,15 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres zapisanego `pointer` buforu strumienia typu do basic_stringbuf< **Elem**, `Alloc` **Tr**,>.
+Adres buforu zapisanego strumienia typu `pointer` do basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) na przykład, który `rdbuf`używa .
+Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `rdbuf` .
 
-## <a name="basic_istringstreamstr"></a><a name="str"></a>basic_istringstream::str
+## <a name="basic_istringstreamstr"></a><a name="str"></a> basic_istringstream:: str
 
-Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.
+Ustawia lub pobiera tekst w buforze ciągów bez zmiany pozycji zapisu.
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
@@ -173,17 +173,17 @@ Nowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez ** \*ten**.
+Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR** `Alloc`>, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez ** \* ten**element.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Druga funkcja elementu `rdbuf`  -> członkowskiego `_Newstr`wywołuje **str**( ).
+Pierwsza funkcja członkowska zwraca [rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str). Druga funkcja członkowska wywołuje `rdbuf`  ->  **str**( `_Newstr` ).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) na przykład, który `str`używa .
+Zapoznaj się z przykładem [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) `str` .
 
-## <a name="basic_istringstreamswap"></a><a name="swap"></a>basic_istringstream::swap
+## <a name="basic_istringstreamswap"></a><a name="swap"></a> basic_istringstream:: swap
 
 Wymienia wartości dwóch `basic_istringstream` obiektów.
 
@@ -193,16 +193,15 @@ void swap(basic_istringstream& right);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Prawo*|Odwołanie `lvalue` do `basic_istringstream` obiektu.|
+*Kliknij*\
+Odwołanie lvalue do `basic_istringstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego wymienia wartości tego obiektu i wartości *prawej*.
+Funkcja członkowska wymienia wartości tego obiektu i wartości z *prawej strony*.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo gwintów w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

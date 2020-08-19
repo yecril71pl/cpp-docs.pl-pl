@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217457"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560455"
 ---
 # <a name="span-class-c-standard-library"></a>span — Klasa (standardowa biblioteka C++)
 
@@ -75,10 +75,11 @@ class span;
 
 ### <a name="template-parameters"></a>Parametry szablonu
 
-|Parametr|Opis|
-|-|-|
-|`T`| Typ elementów w zakresie. |
-|`Extent`| Liczba elementów w zakresie, jeśli określono w czasie kompilacji. W przeciwnym razie `std::dynamic_extent` , jeśli liczba elementów zostanie określona w czasie wykonywania. |
+`T`\
+ Typ elementów w zakresie.
+
+`Extent`\
+ Liczba elementów w zakresie, jeśli określono w czasie kompilacji. W przeciwnym razie  `std::dynamic_extent` , jeśli liczba elementów zostanie określona w czasie wykonywania.
 
 [Przewodnik odejmowania](#deduction_guides)
 
@@ -107,7 +108,7 @@ class span;
 |[Wstecz](#back) | Pobierz ostatni element z zakresu.|
 |[data](#data) | Pobierz adres pierwszego elementu w zakresie.|
 |[FSB](#front) | Pobierz pierwszy element z zakresu.|
-|[operator\[\]](#op_at) | Uzyskaj dostęp do elementu w określonej pozycji.|
+|[zakład\[\]](#op_at) | Uzyskaj dostęp do elementu w określonej pozycji.|
 | **Obserwatorzy** | **Opis** |
 |[puste](#empty)| Sprawdź, czy zakres jest pusty.|
 |[zmienia](#size) | Pobierz liczbę elementów w zakresie.|
@@ -338,7 +339,7 @@ Iterator wskazujący tuż poza końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`end`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`end` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
 Nie odwołuje się do wartości zwracanej przez ten iterator. Użyj go, aby określić, czy iterator osiągnął się poza ostatnim elementem w zakresie.
 
@@ -742,7 +743,7 @@ Iterator odwrotny do symbolu zastępczego po ostatnim elemencie w odwróconym pr
 
 ### <a name="remarks"></a>Uwagi
 
-`rend`jest używany z odwróconym zakresem, tak jak [zakres:: end](#end) jest używany z zakresem. Służy do sprawdzania, czy iterator odwrotny osiągnął koniec zakresu.
+`rend` jest używany z odwróconym zakresem, tak jak [zakres:: end](#end) jest używany z zakresem. Służy do sprawdzania, czy iterator odwrotny osiągnął koniec zakresu.
 
 Nie można usunąć odwołania do wartości zwracanej przez nie `rend` .
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`Konstruktor.
+`span` Konstruktor.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ Zakres nie ma wolnego miejsca w magazynie dla elementów w zakresie, ponieważ n
 |---------|---------|
 |`span()` | Konstruowanie pustego zakresu. Brane pod uwagę tylko podczas rozpoznawania przeciążenia, gdy parametrem szablonu `Extent` jest `0` lub `dynamic_extent` .|
 |`span(It first, size_type count)` | Zbuduj zakres od pierwszego `count` elementu z iteratora `first` .  Brane pod uwagę tylko podczas rozpoznawania przeciążenia, gdy parametr szablonu `Extent` nie jest `dynamic_extent` . |
-|`span(It first, End last)` | Konstruowanie zakresu od elementów w iterator `first` do momentu `last` osiągnięcia końca. Brane pod uwagę tylko podczas rozpoznawania przeciążenia, gdy parametr szablonu `Extent` nie jest `dynamic_extent` . `It`musi być `contiguous_iterator` .  |
+|`span(It first, End last)` | Konstruowanie zakresu od elementów w iterator `first` do momentu `last` osiągnięcia końca. Brane pod uwagę tylko podczas rozpoznawania przeciążenia, gdy parametr szablonu `Extent` nie jest `dynamic_extent` . `It` musi być `contiguous_iterator` .  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  Zbuduj zakres od `N` elementów określonej tablicy. Brane pod uwagę tylko podczas rozpoznawania przeciążenia, gdy parametr szablonu `Extent` ma `dynamic_extent` wartość lub równa się `N` . |
 |`span(R&& r)` |  Zbuduj zakres od zakresu. Jeśli parametr szablonu nie jest, uczestniczy tylko w występowaniu przeciążenia `Extent` `dynamic_extent` .|
 |`span(const span& other)` |  Konstruktor kopiujący wygenerowany przez kompilator. Skrócona kopia wskaźnika danych jest bezpieczna, ponieważ zakres nie przydziela pamięci do przechowywania elementów. |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>Wskazówki dotyczące odejmowania
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> Wskazówki dotyczące odejmowania
 
 Poniższe przewodniki dotyczące odejmowania są dostępne dla zakresu.
 
@@ -1115,7 +1116,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<span>](../standard-library/span.md)  
 [Jak używać odliczania argumentów szablonu klasy](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

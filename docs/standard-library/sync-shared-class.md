@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 9f1a984d38bed9dd3795164e355c7ccac100ae6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232888"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562080"
 ---
 # <a name="sync_shared-class"></a>sync_shared — Klasa
 
@@ -32,9 +32,8 @@ class sync_shared
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Cache*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Chow*\
+Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) , lub [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
@@ -42,7 +41,7 @@ class sync_shared
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
 |[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[równa się](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -50,7 +49,7 @@ class sync_shared
 
 **Przestrzeń nazw:** stdext
 
-## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared:: Allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a> sync_shared:: Allocate
 
 Przydziela blok pamięci.
 
@@ -60,9 +59,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
+*liczbą*\
+Liczba elementów w tablicy, która ma zostać przypisana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -70,9 +68,9 @@ Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska blokuje mutex, wywołuje `cache.allocate(count)` , odblokowuje element mutex i zwraca wynik wcześniejszego wywołania do `cache.allocate(count)` . `cache`reprezentuje bieżący obiekt pamięci podręcznej.
+Funkcja członkowska blokuje mutex, wywołuje `cache.allocate(count)` , odblokowuje element mutex i zwraca wynik wcześniejszego wywołania do `cache.allocate(count)` . `cache` reprezentuje bieżący obiekt pamięci podręcznej.
 
-## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::d eallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a> sync_shared::d eallocate
 
 Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
-|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
+*PTR*\
+Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.
+
+*liczbą*\
+Liczba obiektów do cofnięcia przydziału z magazynu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja członkowska blokuje mutex, wywołuje `cache.deallocate(ptr, count)` , gdzie `cache` reprezentuje obiekt pamięci podręcznej, a następnie odblokowuje element mutex.
 
-## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared:: Equals
+## <a name="sync_sharedequals"></a><a name="equals"></a> sync_shared:: Equals
 
 Porównuje dwie pamięci podręczne pod kątem równości.
 
@@ -101,10 +100,11 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Cache*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji.|
-|*Inne problemy*|Pamięć podręczna do porównania pod kątem równości.|
+*Chow*\
+Typ pamięci podręcznej skojarzonej z filtrem synchronizacji.
+
+*Różnych*\
+Pamięć podręczna do porównania pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -112,6 +112,6 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<allocators>](../standard-library/allocators-header.md)

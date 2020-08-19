@@ -8,12 +8,12 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 611fe53b960a7c8f80990240aa4fc8ac4affb606
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6522b1877dd2517032fc140de42671353ce9c357
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187403"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561404"
 ---
 # <a name="__if_exists-statement"></a>__if_exists — Instrukcja
 
@@ -29,10 +29,11 @@ statements
 
 #### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*identyfikatora*|Identyfikator, którego istnienie ma zostać przetestowane.|
-|*zatwierdzeni*|Jedna lub więcej instrukcji do wykonania, jeśli *Identyfikator* istnieje.|
+*identyfikatora*\
+Identyfikator, którego istnienie ma zostać przetestowane.
+
+*zatwierdzeni*\
+Jedna lub więcej instrukcji do wykonania, jeśli *Identyfikator* istnieje.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -121,7 +122,7 @@ g_bFlag = 1
 C::f exists
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

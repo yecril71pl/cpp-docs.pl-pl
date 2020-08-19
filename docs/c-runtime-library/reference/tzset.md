@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912148"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562028"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -52,15 +52,22 @@ void _tzset( void );
 
 Funkcja **_tzset** używa bieżącego ustawienia zmiennej środowiskowej $ do przypisywania **wartości do trzech** zmiennych globalnych: **_daylight**, **_timezone**i **_tzname**. Te zmienne są używane przez funkcje [_ftime](ftime-ftime32-ftime64.md) i [localtime](localtime-localtime32-localtime64.md) w celu wprowadzania poprawek od uniwersalnego czasu koordynowanego (UTC) do czasu lokalnego, a przez funkcję [Time](time-time32-time64.md) do obliczania czasu UTC z godziny systemowej. Aby ustawić **zmienną środowiskową** programu, należy użyć następującej składni:
 
-> **Set $ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_SS_]] [*dzn*]
+> **Set $ =**_tzn_ \[ **+**&#124;**-** ]*hh* \[ **:**_mm_ \[ **:**_SS_]] [*dzn*]
 
-|Parametr|Opis|
-|-|-|
-| *tzn* | 3-literowa nazwa strefy czasowej, na przykład PST. Należy określić prawidłowe przesunięcie od czasu lokalnego na UTC. |
-| *hh* | Różnica w godzinach między czasem UTC i czasem lokalnym. Znak (+) opcjonalny dla wartości dodatnich. |
-| *–* | Minut. Oddzielona od *hh* przez dwukropek (**:**). |
-| *RR* | S. Oddzielone od *mm* średnikiem (**:**). |
-| *dzn* | Trzy litery strefy czasowej zmiany czasu, takie jak PDT. Jeśli czas letni nigdy nie obowiązuje **, ustaw wartość** opcji UstawWartość bez wartości dla *dzn*. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone "na potrzeby wykonywania obliczeń czasu letniego (DST). |
+ *tzn* \
+ 3-literowa nazwa strefy czasowej, na przykład PST. Należy określić prawidłowe przesunięcie od czasu lokalnego na UTC.
+
+ *formacie* \
+ Różnica w godzinach między czasem UTC i czasem lokalnym. Znak (+) opcjonalny dla wartości dodatnich.
+
+ *–* \
+ Minut. Oddzielona od *hh* przez dwukropek (**:**).
+
+ *RR* \
+ S. Oddzielone od *mm* średnikiem (**:**).
+
+ *dzn* \
+ Trzy litery strefy czasowej zmiany czasu, takie jak PDT. Jeśli czas letni nigdy nie obowiązuje **, ustaw wartość** opcji UstawWartość bez wartości dla *dzn*. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone "na potrzeby wykonywania obliczeń czasu letniego (DST).
 
 > [!NOTE]
 > Weź pod uwagę obliczanie znaku różnicy czasu. Ze względu na to, że różnica czasu jest przesunięta od czasu lokalnego na UTC (a nie odwrotnie), jego znak może być przeciwieństwem do tego, co można intuicyjnie oczekiwać. Dla stref czasowych przed czasem UTC różnica czasu jest ujemna; różnica jest dodatnia dla tych za czas UTC.
@@ -90,7 +97,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_tzset**|\<> godziny. h|
+|**_tzset**|\<time.h>|
 
 Funkcja **_tzset** jest specyficzna dla firmy Microsoft. Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203912"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562574"
 ---
 # <a name="array-class-c-standard-library"></a>Array — Klasa (standardowa biblioteka C++)
 
@@ -116,10 +116,11 @@ class array;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|`Ty`|Typ elementu.|
-|`N`|Liczba elementów.|
+`Ty`\
+Typ elementu.
+
+`N`\
+Liczba elementów.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -180,7 +181,7 @@ Tworzy obiekt `ai` , który przechowuje cztery wartości całkowite, inicjuje pi
 
 **Przestrzeń nazw:** std
 
-## <a name="arrayarray"></a><a name="array"></a>Array:: Array
+## <a name="arrayarray"></a><a name="array"></a> Array:: Array
 
 Konstruuje obiekt Array.
 
@@ -239,11 +240,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>Array:: Assign
+## <a name="arrayassign"></a><a name="assign"></a> Array:: Assign
 
 Przestarzałe w języku C++ 11, zastąpione przez [wypełnienie](#fill). Zamienia wszystkie elementy.
 
-## <a name="arrayat"></a><a name="at"></a>Array:: at
+## <a name="arrayat"></a><a name="at"></a> Array:: at
 
 Uzyskuje dostęp do elementu w określonej pozycji.
 
@@ -289,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>Array:: Back
+## <a name="arrayback"></a><a name="back"></a> Array:: Back
 
 Uzyskuje dostęp do ostatniego elementu.
 
@@ -334,7 +335,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>Array:: BEGIN
+## <a name="arraybegin"></a><a name="begin"></a> Array:: BEGIN
 
 Określa początek kontrolowanej sekwencji.
 
@@ -379,7 +380,7 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>Array:: cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a> Array:: cbegin
 
 Zwraca **`const`** iterator, który odnosi się do pierwszego elementu w zakresie.
 
@@ -405,7 +406,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>Array:: cend
+## <a name="arraycend"></a><a name="cend"></a> Array:: cend
 
 Zwraca **`const`** iterator, który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
@@ -419,7 +420,7 @@ Iterator dostępu swobodnego, który wskazuje tuż za koniec zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
 Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcji składowej, aby zagwarantować, że wartość zwracana to `const_iterator` . Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, `Container` że jest to modyfikowalny **`const`** kontener dowolnego rodzaju, który obsługuje `end()` i `cend()` .
 
@@ -433,7 +434,7 @@ auto i2 = Container.cend();
 
 Nie można usunąć odwołania do wartości zwracanej przez `cend` .
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>Array:: const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a> Array:: const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -481,7 +482,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>Array:: const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a> Array:: const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -525,7 +526,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>Array:: const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a> Array:: const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -569,7 +570,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>Array:: const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> Array:: const_reverse_iterator
 
 Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
 
@@ -613,7 +614,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>Array:: crbegin —
+## <a name="arraycrbegin"></a><a name="crbegin"></a> Array:: crbegin —
 
 Zwraca iterator const do pierwszego elementu w odwróconej tablicy.
 
@@ -657,7 +658,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>Array:: crend
+## <a name="arraycrend"></a><a name="crend"></a> Array:: crend
 
 Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy.
 
@@ -671,11 +672,11 @@ Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokaliz
 
 ### <a name="remarks"></a>Uwagi
 
-`crend`jest używany z odwróconą tablicą, tak jak [Array:: cend](#cend) jest używany z tablicą.
+`crend` jest używany z odwróconą tablicą, tak jak [Array:: cend](#cend) jest używany z tablicą.
 
 Po wartości zwracanej `crend` (odpowiednio zmniejszonej) obiekt Array nie może być modyfikowany.
 
-`crend`może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec tablicy.
+`crend` może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec tablicy.
 
 Nie można usunąć odwołania do wartości zwracanej przez `crend` .
 
@@ -701,7 +702,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>Tablica::d ATA
+## <a name="arraydata"></a><a name="data"></a> Tablica::d ATA
 
 Pobiera adres pierwszego elementu.
 
@@ -747,7 +748,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>Tablica::d ifference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a> Tablica::d ifference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -791,7 +792,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>Array:: Empty
+## <a name="arrayempty"></a><a name="empty"></a> Array:: Empty
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -841,7 +842,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>Array:: end
+## <a name="arrayend"></a><a name="end"></a> Array:: end
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -887,7 +888,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>Array:: Fill
+## <a name="arrayfill"></a><a name="fill"></a> Array:: Fill
 
 Wymazuje tablicę i kopiuje określone elementy do pustej tablicy.
 
@@ -897,13 +898,12 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*użyte*|Wartość wstawianego elementu do tablicy.|
+*użyte*\
+Wartość wstawianego elementu do tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-`fill`zamienia każdy element tablicy na określoną wartość.
+`fill` zamienia każdy element tablicy na określoną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>Array:: front
+## <a name="arrayfront"></a><a name="front"></a> Array:: front
 
 Uzyskuje dostęp do pierwszego elementu.
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>Array:: iterator
+## <a name="arrayiterator"></a><a name="iterator"></a> Array:: iterator
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>Array:: max_size
+## <a name="arraymax_size"></a><a name="max_size"></a> Array:: max_size
 
 Liczy liczbę elementów.
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>Array:: operator []
+## <a name="arrayoperator"></a><a name="op_at"></a> Array:: operator []
 
 Uzyskuje dostęp do elementu w określonej pozycji.
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>Array:: operator =
+## <a name="arrayoperator"></a><a name="op_eq"></a> Array:: operator =
 
 Zastępuje kontrolowaną sekwencję.
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>Tablica::p ointer
+## <a name="arraypointer"></a><a name="pointer"></a> Tablica::p ointer
 
 Typ wskaźnika do elementu.
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>Array:: rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a> Array:: rbegin
 
 Określa początek odwróconej sekwencji kontrolowanej.
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>Array:: Reference
+## <a name="arrayreference"></a><a name="reference"></a> Array:: Reference
 
 Typ odwołania do elementu.
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>Array:: rend
+## <a name="arrayrend"></a><a name="rend"></a> Array:: rend
 
 Określa koniec odwróconej kontrolowanej sekwencji.
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>Array:: reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a> Array:: reverse_iterator
 
 Typ iteratora odwrotnego dla kontrolowanej sekwencji.
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>Array:: size
+## <a name="arraysize"></a><a name="size"></a> Array:: size
 
 Liczy liczbę elementów.
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>Array:: size_type
+## <a name="arraysize_type"></a><a name="size_type"></a> Array:: size_type
 
 Typ niepodpisanej odległości między dwoma elementami.
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>Array:: swap
+## <a name="arrayswap"></a><a name="swap"></a> Array:: swap
 
 Zamienia zawartość tej tablicy na inną tablicę.
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>Array:: value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a> Array:: value_type
 
 Typ elementu.
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<array>](../standard-library/array.md)

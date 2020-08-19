@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: abcc18ee29e2dcb09ca15ae77219ae5dd4d74c65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228937"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561391"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -26,9 +26,8 @@ ms.locfileid: "87228937"
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*wyrażenia*|Wyrażenie. Aby uzyskać więcej informacji, zobacz [Expressions](../cpp/expressions-cpp.md).|
+*wyrażenia*\
+Wyrażenie. Aby uzyskać więcej informacji, zobacz [Expressions](../cpp/expressions-cpp.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -36,7 +35,7 @@ Typ parametru *wyrażenia* .
 
 ## <a name="remarks"></a>Uwagi
 
-**`decltype`** Specyfikator typu jest obsługiwany w programie Visual Studio w wersji 2010 lub nowszej i może być używany z kodem natywnym lub zarządzanym. `decltype(auto)`(C++ 14) jest obsługiwany w programie Visual Studio 2015 i nowszych.
+**`decltype`** Specyfikator typu jest obsługiwany w programie Visual Studio w wersji 2010 lub nowszej i może być używany z kodem natywnym lub zarządzanym. `decltype(auto)` (C++ 14) jest obsługiwany w programie Visual Studio 2015 i nowszych.
 
 Kompilator używa następujących reguł, aby określić typ parametru *wyrażenia* .
 
@@ -204,4 +203,4 @@ static_assert(test2, "PASS2");
 
 Program Visual Studio 2010 lub nowszy.
 
-`decltype(auto)`wymaga programu Visual Studio 2015 lub nowszego.
+`decltype(auto)` wymaga programu Visual Studio 2015 lub nowszego.

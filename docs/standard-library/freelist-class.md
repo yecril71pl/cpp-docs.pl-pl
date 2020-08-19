@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 7425f99f7966548bdb1f94d3007382eeb99863df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193227"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561209"
 ---
 # <a name="freelist-class"></a>freelist — Klasa
 
@@ -30,10 +30,11 @@ class freelist : public Max
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
-|*Maksymalny*|Maksymalna liczba elementów, które mają być przechowywane na liście bezpłatnych. Maksymalna Klasa może być [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).|
+*Sz*\
+Liczba elementów w tablicy, która ma zostać przypisana.
+
+*Maksymalny*\
+Maksymalna liczba elementów, które mają być przechowywane na liście bezpłatnych. Maksymalna Klasa może być [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -58,7 +59,7 @@ Ten szablon klasy służy do zarządzania listą bloków pamięci o rozmiarze *s
 
 **Przestrzeń nazw:** stdext
 
-## <a name="freelistfreelist"></a><a name="freelist"></a>freelist:: freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a> freelist:: freelist
 
 Konstruuje obiekt typu `freelist` .
 
@@ -68,7 +69,7 @@ freelist();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="freelistpop"></a><a name="pop"></a>freelist::p op
+## <a name="freelistpop"></a><a name="pop"></a> freelist::p op
 
 Usuwa pierwszy blok pamięci z listy bezpłatnych.
 
@@ -84,7 +85,7 @@ Zwraca wskaźnik do bloku pamięci usunięty z listy.
 
 Funkcja członkowska zwraca wartość NULL, jeśli lista jest pusta. W przeciwnym razie usuwa pierwszy blok pamięci z listy.
 
-## <a name="freelistpush"></a><a name="push"></a>freelist::p USH
+## <a name="freelistpush"></a><a name="push"></a> freelist::p USH
 
 Dodaje blok pamięci do listy.
 
@@ -94,9 +95,8 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*ptr*|Wskaźnik do bloku pamięci, który ma zostać dodany do listy bezpłatnych.|
+*PTR*\
+Wskaźnik do bloku pamięci, który ma zostać dodany do listy bezpłatnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -106,6 +106,6 @@ bool push(void* ptr);
 
 Jeśli `full` Funkcja klasy Max zwraca **`false`** , ta funkcja członkowska dodaje blok pamięci wskazywany przez *PTR* do nagłówka listy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<allocators>](../standard-library/allocators-header.md)

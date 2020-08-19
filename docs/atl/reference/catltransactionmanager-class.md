@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167828"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562219"
 ---
 # <a name="catltransactionmanager-class"></a>Klasa CAtlTransactionManager
 
@@ -59,7 +59,7 @@ class CAtlTransactionManager;
 |Nazwa|Opis|
 |----------|-----------------|
 |[Zamknij](#close)|Zamyka jeden uchwyt transakcji.|
-|[Zatwierdzenie](#commit)|Żąda zatwierdzenia transakcji.|
+|[Zleca](#commit)|Żąda zatwierdzenia transakcji.|
 |[Utwórz](#create)|Tworzy uchwyt transakcji.|
 |[CreateFile](#createfile)|Tworzy lub otwiera plik, strumień plików lub katalog w ramach operacji transakcyjnej.|
 |[DeleteFile](#deletefile)|Usuwa istniejący plik jako operację transakcji transakcyjnych.|
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **Nagłówek:** atltransactionmanager. h
 
-## <a name="catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>  ~ CAtlTransactionManager
 
 Destruktor CAtlTransactionManager.
 
@@ -104,7 +104,7 @@ virtual ~CAtlTransactionManager();
 
 W przypadku normalnego przetwarzania transakcja jest automatycznie zatwierdzana i zamykana. Jeśli destruktor jest wywoływany podczas operacji unwindy wyjątku, transakcja zostanie wycofana i ZAMKNIĘTA.
 
-## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a> CAtlTransactionManager
 
 Konstruktor CAtlTransactionManager.
 
@@ -122,7 +122,7 @@ Wartość TRUE wskazuje, że program obsługi transakcji jest tworzony automatyc
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="close"></a><a name="close"></a>Ściśle
+## <a name="close"></a><a name="close"></a> Ściśle
 
 Zamyka dojście transakcji.
 
@@ -138,7 +138,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 Ta otoka wywołuje `CloseHandle` funkcję. Metoda jest wywoływana automatycznie w destruktorze.
 
-## <a name="commit"></a><a name="commit"></a>Zleca
+## <a name="commit"></a><a name="commit"></a> Zleca
 
 Żąda zatwierdzenia transakcji.
 
@@ -154,7 +154,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 Ta otoka wywołuje `CommitTransaction` funkcję. Metoda jest wywoływana automatycznie w destruktorze.
 
-## <a name="create"></a><a name="create"></a>Create
+## <a name="create"></a><a name="create"></a> Create
 
 Tworzy uchwyt transakcji.
 
@@ -170,7 +170,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 Ta otoka wywołuje `CreateTransaction` funkcję. Sprawdź dla
 
-## <a name="createfile"></a><a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a> CreateFile
 
 Tworzy lub otwiera plik, strumień plików lub katalog w ramach operacji transakcyjnej.
 
@@ -203,7 +203,7 @@ Wskaźnik do struktury SECURITY_ATTRIBUTES, która zawiera opcjonalny deskryptor
 Akcja do wykonania na plikach, które istnieją i nie istnieją. Ten parametr musi być jedną z następujących wartości, które nie mogą być połączone: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING ani TRUNCATE_EXISTING.
 
 *dwFlagsAndAttributes*<br/>
-Atrybuty i flagi pliku. Ten parametr może zawierać dowolną kombinację dostępnych atrybutów pliku (FILE_ATTRIBUTE_ *). Wszystkie inne atrybuty pliku zastępują FILE_ATTRIBUTE_NORMAL. Ten parametr może również zawierać kombinacje flag (FILE_FLAG_\*) do sterowania zachowaniem buforowania, trybami dostępu i innymi flagami specjalnego przeznaczenia. Łączą się z dowolnymi FILE_ATTRIBUTE_\* wartościami.
+Atrybuty i flagi pliku. Ten parametr może zawierać dowolną kombinację dostępnych atrybutów pliku (FILE_ATTRIBUTE_ *). Wszystkie inne atrybuty pliku zastępują FILE_ATTRIBUTE_NORMAL. Ten parametr może również zawierać kombinacje flag (FILE_FLAG_ \* ) do sterowania zachowaniem buforowania, trybami dostępu i innymi flagami specjalnego przeznaczenia. Łączą się z dowolnymi FILE_ATTRIBUTE_ \* wartościami.
 
 *hTemplateFile*<br/>
 Prawidłowe dojście do pliku szablonu z prawem dostępu GENERIC_READ. Plik szablonu zawiera atrybuty pliku i atrybuty rozszerzone dla tworzonego pliku. Ten parametr może mieć wartość NULL.
@@ -216,7 +216,7 @@ Zwraca dojście, którego można użyć w celu uzyskania dostępu do obiektu.
 
 Ta otoka wywołuje `CreateFileTransacted` funkcję.
 
-## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a> DeleteFile
 
 Usuwa istniejący plik jako operację transakcji transakcyjnych.
 
@@ -233,7 +233,7 @@ Nazwa pliku, który ma zostać usunięty.
 
 Ta otoka wywołuje `DeleteFileTransacted` funkcję.
 
-## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a> FindFirstFile
 
 Wyszukuje w katalogu plik lub podkatalog jako operację transakcji transakcyjnych.
 
@@ -253,13 +253,13 @@ Wskaźnik do struktury WIN32_FIND_DATA, która otrzymuje informacje o znaleziony
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest dojściem wyszukiwania używanym podczas kolejnego wywołania `FindNextFile` do `FindClose`lub. Jeśli funkcja nie powiedzie się lub nie można zlokalizować plików z ciągu wyszukiwania w parametrze *lpFileName* , zwracana wartość jest INVALID_HANDLE_VALUE.
+Jeśli funkcja się powiedzie, wartość zwracana jest dojściem wyszukiwania używanym podczas kolejnego wywołania do `FindNextFile` lub `FindClose` . Jeśli funkcja nie powiedzie się lub nie można zlokalizować plików z ciągu wyszukiwania w parametrze *lpFileName* , zwracana wartość jest INVALID_HANDLE_VALUE.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta otoka wywołuje `FindFirstFileTransacted` funkcję.
 
-## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a> GetFileAttributes
 
 Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacji transakcyjnej.
 
@@ -276,7 +276,7 @@ Nazwa pliku lub katalogu.
 
 Ta otoka wywołuje `GetFileAttributesTransacted` funkcję.
 
-## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>Funkcji GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a> Funkcji GetFileAttributesEx
 
 Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacji transakcyjnej.
 
@@ -302,7 +302,7 @@ Wskaźnik do buforu, który odbiera informacje o atrybutach. Typ informacji o at
 
 Ta otoka wywołuje `GetFileAttributesTransacted` funkcję.
 
-## <a name="gethandle"></a><a name="gethandle"></a>GetHandle —
+## <a name="gethandle"></a><a name="gethandle"></a> GetHandle —
 
 Zwraca dojście transakcji.
 
@@ -312,11 +312,11 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście transakcji dla klasy. Zwraca wartość NULL, `CAtlTransactionManager` Jeśli nie jest dołączony do dojścia.
+Zwraca dojście transakcji dla klasy. Zwraca wartość NULL, jeśli `CAtlTransactionManager` nie jest dołączony do dojścia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="isfallback"></a><a name="isfallback"></a>Isfallback
+## <a name="isfallback"></a><a name="isfallback"></a> Isfallback
 
 Określa, czy wywołania rezerwowe są włączone.
 
@@ -330,7 +330,7 @@ Zwraca wartość TRUE, ponieważ Klasa obsługuje wywołania rezerwowe. W przeci
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a> m_bFallback
 
 PRAWDA, jeśli rezerwa jest obsługiwana; W przeciwnym razie zwraca wartość FALSE.
 
@@ -340,7 +340,7 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a> m_hTransaction
 
 Dojście transakcji.
 
@@ -350,7 +350,7 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="movefile"></a><a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a> MoveFile
 
 Przenosi istniejący plik lub katalog, łącznie z jego elementami podrzędnymi, jako operację transakcyjnej.
 
@@ -370,7 +370,7 @@ Nowa nazwa pliku lub katalogu. Ta nazwa nie może już istnieć. Nowy plik może
 
 Ta otoka wywołuje `MoveFileTransacted` funkcję.
 
-## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a> RegCreateKeyEx
 
 Tworzy określony klucz rejestru i kojarzy go z transakcją. Jeśli klucz już istnieje, funkcja otwiera go.
 
@@ -424,7 +424,7 @@ Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli fun
 
 Ta otoka wywołuje `RegCreateKeyTransacted` funkcję.
 
-## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a> RegDeleteKey
 
 Usuwa podklucz i jego wartości z określonego, specyficznego dla platformy widoku rejestru jako operacji transakcyjnej.
 
@@ -434,10 +434,11 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*hKey*|Uchwyt do otwartego klucza rejestru.|
-|*lpSubKey*|Nazwa klucza, który ma zostać usunięty.|
+*hKey*\
+Uchwyt do otwartego klucza rejestru.
+
+*lpSubKey*\
+Nazwa klucza, który ma zostać usunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -447,7 +448,7 @@ Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli fun
 
 Ta otoka wywołuje `RegDeleteKeyTransacted` funkcję.
 
-## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>Działanie funkcji RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a> Działanie funkcji RegOpenKeyEx
 
 Otwiera określony klucz rejestru i kojarzy go z transakcją.
 
@@ -485,7 +486,7 @@ Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli fun
 
 Ta otoka wywołuje `RegOpenKeyTransacted` funkcję.
 
-## <a name="rollback"></a><a name="rollback"></a>Wycofywania
+## <a name="rollback"></a><a name="rollback"></a> Wycofywania
 
 Żąda wycofania transakcji.
 
@@ -501,7 +502,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 Ta otoka wywołuje `RollbackTransaction` funkcję.
 
-## <a name="setfileattributes"></a><a name="setfileattributes"></a>Setgetfileattributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a> Setgetfileattributes
 
 Ustawia atrybuty dla pliku lub katalogu jako operacji transakcyjnej.
 
@@ -521,6 +522,6 @@ Atrybuty pliku do ustawienia dla pliku. Aby uzyskać więcej informacji, zobacz 
 
 Ta otoka wywołuje `SetFileAttributesTransacted` funkcję.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

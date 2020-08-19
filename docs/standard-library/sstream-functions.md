@@ -1,25 +1,25 @@
 ---
-title: '&lt;funkcje&gt; sstream'
+title: '&lt;&gt;funkcje strumienia'
 ms.date: 11/04/2016
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: bdf7cd26b25680eb7e5270fdc8ae7dac0d10f70f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 722cba257b12bb753aaa61ac2f430df76c2ceb93
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336653"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560377"
 ---
-# <a name="ltsstreamgt-functions"></a>&lt;funkcje&gt; sstream
+# <a name="ltsstreamgt-functions"></a>&lt;&gt;funkcje strumienia
 
 ||
 |-|
-|[Wymiany](#sstream_swap)|
+|[wymiany](#sstream_swap)|
 
-## <a name="swap"></a><a name="sstream_swap"></a>Wymiany
+## <a name="swap"></a><a name="sstream_swap"></a> wymiany
 
-Wymienia wartości między `sstream` dwoma obiektami.
+Wymienia wartości między dwoma `sstream` obiektami.
 
 ```cpp
 template <class Elem, class Tr, class Alloc>
@@ -45,15 +45,16 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Lewej*|Odwołanie do `sstream` obiektu.|
-|*Prawo*|Odwołanie do `sstream` obiektu.|
+*lewym*\
+Odwołanie do `sstream` obiektu.
+
+*Kliknij*\
+Odwołanie do `sstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `left.swap(right)`wykonuje program .
+Funkcja szablonu jest wykonywana `left.swap(right)` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<>](../standard-library/sstream.md)
+[\<sstream>](../standard-library/sstream.md)

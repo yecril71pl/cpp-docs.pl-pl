@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 5dacf0b80acfd376db6738ef0d3bdc881c4c1736
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212322"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561183"
 ---
 # <a name="hash_set-class"></a>hash_set — Klasa
 
@@ -216,7 +216,7 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 
 **Przestrzeń nazw:** stdext
 
-## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set:: allocator_type
+## <a name="hash_setallocator_type"></a><a name="allocator_type"></a> hash_set:: allocator_type
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -229,7 +229,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type`jest synonimem dla *alokatora*parametrów szablonu.
+`allocator_type` jest synonimem dla *alokatora*parametrów szablonu.
 
 Aby uzyskać więcej informacji na temat *alokatora*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
@@ -237,7 +237,7 @@ Aby uzyskać więcej informacji na temat *alokatora*, zobacz sekcję Uwagi w tem
 
 Zobacz przykład dla [get_allocator](#get_allocator) , aby uzyskać przykład, który używa `allocator_type` .
 
-## <a name="hash_setbegin"></a><a name="begin"></a>hash_set:: BEGIN
+## <a name="hash_setbegin"></a><a name="begin"></a> hash_set:: BEGIN
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -298,7 +298,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2
 ```
 
-## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set:: cbegin
+## <a name="hash_setcbegin"></a><a name="cbegin"></a> hash_set:: cbegin
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -345,7 +345,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_setcend"></a><a name="cend"></a>hash_set:: cend
+## <a name="hash_setcend"></a><a name="cend"></a> hash_set:: cend
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -362,7 +362,7 @@ Stały iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim ele
 
 ### <a name="remarks"></a>Uwagi
 
-`cend`służy do sprawdzania, czy iterator osiągnął koniec jego `hash_set` . Nie można usunąć odwołania do wartości zwracanej przez `cend` .
+`cend` służy do sprawdzania, czy iterator osiągnął koniec jego `hash_set` . Nie można usunąć odwołania do wartości zwracanej przez `cend` .
 
 ### <a name="example"></a>Przykład
 
@@ -393,7 +393,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_setclear"></a><a name="clear"></a>hash_set:: Clear
+## <a name="hash_setclear"></a><a name="clear"></a> hash_set:: Clear
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -437,7 +437,7 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.
 ```
 
-## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set:: const_iterator
+## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a> hash_set:: const_iterator
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -456,7 +456,7 @@ Typ `const_iterator` nie może być używany do modyfikacji wartości elementu.
 
 Zobacz przykład [rozpoczęcia](#begin) dla przykładu, który używa `const_iterator` .
 
-## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set:: const_pointer
+## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a> hash_set:: const_pointer
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -473,7 +473,7 @@ Typ `const_pointer` nie może być używany do modyfikacji wartości elementu.
 
 W większości przypadków [const_iterator](#const_iterator) należy używać w celu uzyskania dostępu do elementów w **`const`** obiekcie hash_set.
 
-## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set:: const_reference
+## <a name="hash_setconst_reference"></a><a name="const_reference"></a> hash_set:: const_reference
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -520,7 +520,7 @@ int main( )
 The first element in the hash_set is 10.
 ```
 
-## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator
+## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -537,9 +537,9 @@ Typ `const_reverse_iterator` nie może zmodyfikować wartości elementu i służ
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla programu [rend](#rend) , aby zapoznać się z przykładem sposobu deklarowania i używania`const_reverse_iterator`
+Zapoznaj się z przykładem dla programu [rend](#rend) , aby zapoznać się z przykładem sposobu deklarowania i używania `const_reverse_iterator`
 
-## <a name="hash_setcount"></a><a name="count"></a>hash_set:: Count
+## <a name="hash_setcount"></a><a name="count"></a> hash_set:: Count
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -565,7 +565,7 @@ Klucz elementów do dopasowania z hash_set.
 
 Funkcja członkowska zwraca liczbę elementów w następującym zakresie:
 
-\[lower_bound (*klucz*), upper_bound (*klucz*)).
+\[ lower_bound (*klucz*), upper_bound (*klucz*)).
 
 ### <a name="example"></a>Przykład
 
@@ -603,7 +603,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set:: crbegin —
+## <a name="hash_setcrbegin"></a><a name="crbegin"></a> hash_set:: crbegin —
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -620,11 +620,11 @@ Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconej 
 
 ### <a name="remarks"></a>Uwagi
 
-`crbegin`jest używany z odwróconą hash_set tak samo jak [hash_set:: BEGIN](#begin) jest używany z hash_setem.
+`crbegin` jest używany z odwróconą hash_set tak samo jak [hash_set:: BEGIN](#begin) jest używany z hash_setem.
 
 Z wartością zwracaną `crbegin` , `hash_set` nie można zmodyfikować obiektu.
 
-`crbegin`może służyć do iteracji w `hash_set` tył.
+`crbegin` może służyć do iteracji w `hash_set` tył.
 
 ### <a name="example"></a>Przykład
 
@@ -655,7 +655,7 @@ int main( )
 The first element in the reversed hash_set is 30.
 ```
 
-## <a name="hash_setcrend"></a><a name="crend"></a>hash_set:: crend
+## <a name="hash_setcrend"></a><a name="crend"></a> hash_set:: crend
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -672,11 +672,11 @@ Niepowodzenie odwrotnego iteratora dwukierunkowego, który odnosi się do lokali
 
 ### <a name="remarks"></a>Uwagi
 
-`crend`jest używany z odwróconym działaniem `hash_set` tak samo jak [hash_set:: end](#end) jest używany z `hash_set` .
+`crend` jest używany z odwróconym działaniem `hash_set` tak samo jak [hash_set:: end](#end) jest używany z `hash_set` .
 
 Z wartością zwracaną `crend` , `hash_set` nie można zmodyfikować obiektu.
 
-`crend`można go użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `hash_set` .
+`crend` można go użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `hash_set` .
 
 ### <a name="example"></a>Przykład
 
@@ -708,7 +708,7 @@ int main( )
 The last element in the reversed hash_set is 10.
 ```
 
-## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set::d ifference_type
+## <a name="hash_setdifference_type"></a><a name="difference_type"></a> hash_set::d ifference_type
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -785,7 +785,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.
 ```
 
-## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set:: emplace
+## <a name="hash_setemplace"></a><a name="emplace"></a> hash_set:: emplace
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -801,9 +801,8 @@ emplace(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*użyte*|Wartość elementu, który ma zostać wstawiony do [hash_set](../standard-library/hash-set-class.md) , chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest równoważny uporządkowany.|
+*użyte*\
+Wartość elementu, który ma zostać wstawiony do [hash_set](../standard-library/hash-set-class.md) , chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest równoważny uporządkowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -837,7 +836,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set:: emplace_hint
+## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a> hash_set:: emplace_hint
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -853,10 +852,11 @@ iterator emplace(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*użyte*|Wartość elementu, który ma zostać wstawiony do [hash_set](../standard-library/hash-set-class.md) , chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest równoważny uporządkowany.|
-|*_Where*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania natychmiast następuje *_Where*).|
+*użyte*\
+Wartość elementu, który ma zostać wstawiony do [hash_set](../standard-library/hash-set-class.md) , chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest równoważny uporządkowany.
+
+*_Where*\
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania natychmiast następuje *_Where*).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -892,7 +892,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setempty"></a><a name="empty"></a>hash_set:: Empty
+## <a name="hash_setempty"></a><a name="empty"></a> hash_set:: Empty
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -941,7 +941,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.
 ```
 
-## <a name="hash_setend"></a><a name="end"></a>hash_set:: end
+## <a name="hash_setend"></a><a name="end"></a> hash_set:: end
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -960,7 +960,7 @@ Iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie 
 
 ### <a name="remarks"></a>Uwagi
 
-`end`służy do sprawdzania, czy iterator osiągnął koniec hash_set. Nie można usunąć odwołania do wartości zwracanej przez `end` .
+`end` służy do sprawdzania, czy iterator osiągnął koniec hash_set. Nie można usunąć odwołania do wartości zwracanej przez `end` .
 
 ### <a name="example"></a>Przykład
 
@@ -1004,7 +1004,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2
 ```
 
-## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set:: equal_range
+## <a name="hash_setequal_range"></a><a name="equal_range"></a> hash_set:: equal_range
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1089,7 +1089,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ```
 
-## <a name="hash_seterase"></a><a name="erase"></a>hash_set:: Erase
+## <a name="hash_seterase"></a><a name="erase"></a> hash_set:: Erase
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1209,7 +1209,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ```
 
-## <a name="hash_setfind"></a><a name="find"></a>hash_set:: find
+## <a name="hash_setfind"></a><a name="find"></a> hash_set:: find
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1287,7 +1287,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set:: get_allocator
+## <a name="hash_setget_allocator"></a><a name="get_allocator"></a> hash_set:: get_allocator
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1363,7 +1363,7 @@ int main( )
 }
 ```
 
-## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set:: hash_set
+## <a name="hash_sethash_set"></a><a name="hash_set"></a> hash_set:: hash_set
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1419,13 +1419,20 @@ hash_set(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*Wsp*|Klasa alokatora magazynu, która ma być używana dla tego `hash_set` obiektu, która jest domyślna `Allocator` .|
-|*Comp*|Funkcja porównywania typu `const Traits` służąca do porządkowania elementów w `hash_set` , które domyślnie są `hash_compare` .|
-|*Kliknij*|`hash_set`Którego konstrukcja `hash_set` ma być kopią.|
-|*Pierwsze*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
-|*Ostatniego*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
+*Wsp*\
+Klasa alokatora magazynu, która ma być używana dla tego `hash_set` obiektu, która jest domyślna `Allocator` .
+
+*Przepisów*\
+Funkcja porównywania typu `const Traits` służąca do porządkowania elementów w `hash_set` , które domyślnie są `hash_compare` .
+
+*Kliknij*\
+`hash_set`Którego konstrukcja `hash_set` ma być kopią.
+
+*Pierwszego*\
+Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+
+*Ostatniego*\
+Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1447,7 +1454,7 @@ Ostatni konstruktorzy skopiują zakres [ `First` , `Last` ) z `hash_set` o wzras
 
 Rzeczywista kolejność elementów w `hash_set` kontenerze zależy od funkcji skrótu, funkcji porządkowania i bieżącego rozmiaru tabeli skrótów i nie może być ogólnie przewidywalna, ponieważ może ona znajdować się w kontenerze zestawu, gdzie została określona przez funkcję porządkowania.
 
-## <a name="hash_setinsert"></a><a name="insert"></a>hash_set:: INSERT
+## <a name="hash_setinsert"></a><a name="insert"></a> hash_set:: INSERT
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1472,13 +1479,20 @@ void insert(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*Użyte*|Wartość elementu, który ma zostać wstawiony do obiektu, `hash_set` chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.|
-|*Miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania jest bezpośrednio następujący `_Where` ).|
-|*Pierwsze*|Pozycja pierwszego elementu, który ma zostać skopiowany z `hash_set` .|
-|*Ostatniego*|Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany z `hash_set` .|
-|*IList*|Lista initializer_list, z której mają być skopiowane elementy.|
+*Użyte*\
+Wartość elementu, który ma zostać wstawiony do obiektu, `hash_set` chyba że `hash_set` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.
+
+*Miejscu*\
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania jest bezpośrednio następujący `_Where` ).
+
+*Pierwszego*\
+Pozycja pierwszego elementu, który ma zostać skopiowany z `hash_set` .
+
+*Ostatniego*\
+Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany z `hash_set` .
+
+*IList*\
+Lista initializer_list, z której mają być skopiowane elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1494,7 +1508,7 @@ Trzecia funkcja członkowska wstawia elementy w initializer_list.
 
 Trzecia funkcja członkowska wstawia sekwencję wartości elementu do `hash_set` odpowiadających im elementów, które są kierowane przez iterator z zakresu [ `First` , `Last` ) określonego `hash_set` .
 
-## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set:: iterator
+## <a name="hash_setiterator"></a><a name="iterator"></a> hash_set:: iterator
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1513,7 +1527,7 @@ Typ `iterator` może służyć do modyfikowania wartości elementu.
 
 Zapoznaj [się](#begin) z przykładem dotyczącym sposobu deklarowania i używania `iterator` .
 
-## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set:: key_comp
+## <a name="hash_setkey_comp"></a><a name="key_comp"></a> hash_set:: key_comp
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1589,7 +1603,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set:: key_compare
+## <a name="hash_setkey_compare"></a><a name="key_compare"></a> hash_set:: key_compare
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1602,7 +1616,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_compare`jest synonimem *cech*parametrów szablonu.
+`key_compare` jest synonimem *cech*parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_set](../standard-library/hash-set-class.md) .
 
@@ -1612,7 +1626,7 @@ Należy zauważyć, że oba `key_compare` i [value_compare](#value_compare) są 
 
 Zapoznaj się z przykładem [key_comp](#key_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_compare` .
 
-## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set:: key_type
+## <a name="hash_setkey_type"></a><a name="key_type"></a> hash_set:: key_type
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1625,7 +1639,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_type`jest synonimem dla *klucza*parametru szablonu.
+`key_type` jest synonimem dla *klucza*parametru szablonu.
 
 Aby uzyskać więcej informacji o *kluczu*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
@@ -1635,7 +1649,7 @@ Należy zauważyć, że oba `key_type` i [value_type](#value_type) są synonimam
 
 Zapoznaj się z przykładem [value_type](#value_type) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_type` .
 
-## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set:: lower_bound
+## <a name="hash_setlower_bound"></a><a name="lower_bound"></a> hash_set:: lower_bound
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1709,7 +1723,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set:: max_size
+## <a name="hash_setmax_size"></a><a name="max_size"></a> hash_set:: max_size
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1747,7 +1761,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set:: operator =
+## <a name="hash_setoperator"></a><a name="op_eq"></a> hash_set:: operator =
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1762,9 +1776,8 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*Kliknij*|[Hash_set](../standard-library/hash-set-class.md) kopiowana do programu `hash_set` .|
+*Kliknij*\
+[Hash_set](../standard-library/hash-set-class.md) kopiowana do programu `hash_set` .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1808,7 +1821,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set::p ointer
+## <a name="hash_setpointer"></a><a name="pointer"></a> hash_set::p ointer
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1825,7 +1838,7 @@ Typ `pointer` może służyć do modyfikowania wartości elementu.
 
 W większości przypadków [iterator](#iterator) powinien być używany do uzyskiwania dostępu do elementów w obiekcie hash_set.
 
-## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set:: rbegin
+## <a name="hash_setrbegin"></a><a name="rbegin"></a> hash_set:: rbegin
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1844,11 +1857,11 @@ Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróc
 
 ### <a name="remarks"></a>Uwagi
 
-`rbegin`jest używany z odwróconą hash_set, tak jak [początek](#begin) jest używany z hash_set.
+`rbegin` jest używany z odwróconą hash_set, tak jak [początek](#begin) jest używany z hash_set.
 
 Jeśli wartość zwracana `rbegin` jest przypisana do `const_reverse_iterator` , wówczas obiekt hash_set nie może być modyfikowany. Jeśli wartość zwracana elementu `rbegin` jest przypisana do `reverse_iterator` , można zmodyfikować obiekt hash_set.
 
-`rbegin`może służyć do iteracji w hash_set do tyłu.
+`rbegin` może służyć do iteracji w hash_set do tyłu.
 
 ### <a name="example"></a>Przykład
 
@@ -1908,7 +1921,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreference"></a><a name="reference"></a>hash_set:: Reference
+## <a name="hash_setreference"></a><a name="reference"></a> hash_set:: Reference
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1958,7 +1971,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.
 ```
 
-## <a name="hash_setrend"></a><a name="rend"></a>hash_set:: rend
+## <a name="hash_setrend"></a><a name="rend"></a> hash_set:: rend
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -1977,11 +1990,11 @@ Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim e
 
 ### <a name="remarks"></a>Uwagi
 
-`rend`jest używany z odwróconą hash_set, tak jak [koniec](#end) jest używany z hash_set.
+`rend` jest używany z odwróconą hash_set, tak jak [koniec](#end) jest używany z hash_set.
 
 Jeśli wartość zwracana `rend` jest przypisana do `const_reverse_iterator` , wówczas obiekt hash_set nie może być modyfikowany. Jeśli wartość zwracana elementu `rend` jest przypisana do `reverse_iterator` , można zmodyfikować obiekt hash_set. Nie można usunąć odwołania do wartości zwracanej przez `rend` .
 
-`rend`może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec hash_set.
+`rend` może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec hash_set.
 
 ### <a name="example"></a>Przykład
 
@@ -2044,7 +2057,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator
+## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a> hash_set:: reverse_iterator
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2063,7 +2076,7 @@ Typ `reverse_iterator` jest używany do iteracji przez hash_set w odwrotny spos�
 
 Zapoznaj się z przykładem dla [rbegin](#rbegin) , aby zapoznać się z przykładem sposobu deklarowania i używania `reverse_iterator` .
 
-## <a name="hash_setsize"></a><a name="size"></a>hash_set:: size
+## <a name="hash_setsize"></a><a name="size"></a> hash_set:: size
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2110,7 +2123,7 @@ The hash_set length is 1.
 The hash_set length is now 2.
 ```
 
-## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set:: size_type
+## <a name="hash_setsize_type"></a><a name="size_type"></a> hash_set:: size_type
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2125,9 +2138,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) przykładu sposobu deklarowania i używania`size_type`
+Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) przykładu sposobu deklarowania i używania `size_type`
 
-## <a name="hash_setswap"></a><a name="swap"></a>hash_set:: swap
+## <a name="hash_setswap"></a><a name="swap"></a> hash_set:: swap
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2201,7 +2214,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.
 ```
 
-## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set:: upper_bound
+## <a name="hash_setupper_bound"></a><a name="upper_bound"></a> hash_set:: upper_bound
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2275,7 +2288,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.
 ```
 
-## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set:: value_comp
+## <a name="hash_setvalue_comp"></a><a name="value_comp"></a> hash_set:: value_comp
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2351,7 +2364,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set:: value_compare
+## <a name="hash_setvalue_compare"></a><a name="value_compare"></a> hash_set:: value_compare
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2364,7 +2377,7 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_compare`jest synonimem *cech*parametrów szablonu.
+`value_compare` jest synonimem *cech*parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_set](../standard-library/hash-set-class.md) .
 
@@ -2374,7 +2387,7 @@ Należy zauważyć, że obie [key_compare](#key_compare) i `value_compare` są s
 
 Zapoznaj się z przykładem [value_comp](#value_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `value_compare` .
 
-## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set:: value_type
+## <a name="hash_setvalue_type"></a><a name="value_type"></a> hash_set:: value_type
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -2421,7 +2434,7 @@ int main( )
 The hash_set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

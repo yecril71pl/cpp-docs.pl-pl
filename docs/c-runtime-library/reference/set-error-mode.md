@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948563"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562041"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
@@ -63,7 +63,7 @@ Steruje ujściam wyjściowym błędu przez ustawienie wartości **__error_mode**
 
 Parametr *mode_val* można ustawić na jedną z następujących wartości.
 
-|Parametr|Opis|
+|Wartość|Opis|
 |---------------|-----------------|
 |**_OUT_TO_DEFAULT**|Ujścia błędów jest określana przez **__app_type**.|
 |**_OUT_TO_STDERR**|Błąd ujścia jest standardowym błędem.|
@@ -72,7 +72,7 @@ Parametr *mode_val* można ustawić na jedną z następujących wartości.
 
 Jeśli wartość inna niż wymienione na liście jest przenoszona w programie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_set_error_mode** ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
-Gdy jest używany z [potwierdzeniem](assert-macro-assert-wassert.md), **_set_error_mode** wyświetla niepowodzenie instrukcji w oknie dialogowym i daje możliwość wyboru przycisku **Ignoruj** , aby można było kontynuować uruchamianie programu.
+Gdy jest używany z [potwierdzeniem](assert-macro-assert-wassert.md), **_set_error_mode** wyświetla instrukcję zakończonych niepowodzeniem w oknie dialogowym i daje możliwość wyboru przycisku **Ignoruj** , aby można było kontynuować uruchamianie programu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,6 +102,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[potwierdzj makro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

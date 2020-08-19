@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186103"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561365"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport wyjątków między wątkami
 
@@ -40,12 +40,17 @@ namespace std
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*nieokreślony*|Nieokreślona Klasa wewnętrzna, która jest używana do implementowania `exception_ptr` typu.|
-|*St*|`exception_ptr`Obiekt, który odwołuje się do wyjątku.|
-|*Adres*|Klasa, która reprezentuje wyjątek.|
-|*adres*|Wystąpienie `E` klasy Parameter.|
+*nieokreślony*\
+Nieokreślona Klasa wewnętrzna, która jest używana do implementowania `exception_ptr` typu.
+
+*St*\
+`exception_ptr`Obiekt, który odwołuje się do wyjątku.
+
+*Adres*\
+Klasa, która reprezentuje wyjątek.
+
+*adres*\
+Wystąpienie `E` klasy Parameter.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -90,7 +95,7 @@ Tylko następujące połączenie opcji kompilatora i instrukcji programowania mo
    > [!IMPORTANT]
    > Zalecamy określenie opcji kompilatora **/EHsc** i przechwycenie tylko wyjątków C++. Jeśli używasz opcji kompilatora **/EHa** lub **/CLR** i **`catch`** instrukcji z *deklaracją wyjątku* wielokropka (), narażasz się na zagrożenia bezpieczeństwa `catch(...)` . Prawdopodobnie zamierzasz użyć **`catch`** instrukcji w celu przechwycenia kilku określonych wyjątków. Jednak `catch(...)` instrukcja przechwytuje wszystkie wyjątki C++ i SEH, w tym nieoczekiwane, które powinny być krytyczne. Jeśli zignorujesz lub źle obsłużysz nieoczekiwany wyjątek, złośliwy kod wykorzystać tę szansę do obejścia zabezpieczeń programu.
 
-## <a name="usage"></a>Sposób użycia
+## <a name="usage"></a>Użycie
 
 W poniższych sekcjach opisano, jak transportować wyjątki przy użyciu `exception_ptr` typu, `current_exception` oraz `rethrow_exception` funkcji, i `make_exception_ptr` .
 
@@ -254,7 +259,7 @@ exception_ptr 1: Caught a  myException exception.
 
 **Nagłówek:**\<exception>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH (model obsługi wyjątków)](../build/reference/eh-exception-handling-model.md)<br/>
