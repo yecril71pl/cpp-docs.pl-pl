@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 4e7eba94084a96c833136e4c92de481fdc435c7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183113"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561677"
 ---
 # <a name="ccombobox-class"></a>Klasa CComboBox
 
@@ -238,7 +238,7 @@ Możliwe są następujące wpisy mapy komunikatów:
 
 - ON_CBN_KILLFOCUS pole kombi utraci fokus wprowadzania.
 
-- ON_CBN_SELCHANGE wybór w polu listy kombi zostanie zmieniony w wyniku kliknięcia przycisku w polu listy lub zmiany zaznaczenia przy użyciu klawiszy strzałek w programie. Podczas przetwarzania tego komunikatu tekst w kontrolce edycji pola kombi można pobrać tylko przez `GetLBText` lub inną podobną funkcję. `GetWindowText`nie można użyć.
+- ON_CBN_SELCHANGE wybór w polu listy kombi zostanie zmieniony w wyniku kliknięcia przycisku w polu listy lub zmiany zaznaczenia przy użyciu klawiszy strzałek w programie. Podczas przetwarzania tego komunikatu tekst w kontrolce edycji pola kombi można pobrać tylko przez `GetLBText` lub inną podobną funkcję. `GetWindowText` nie można użyć.
 
 - ON_CBN_SETFOCUS pole kombi odbiera fokus wprowadzania.
 
@@ -262,7 +262,7 @@ Jeśli obiekt zostanie osadzony `CComboBox` w innym obiekcie okna, nie trzeba go
 
 **Nagłówek:** afxwin. h
 
-## <a name="ccomboboxaddstring"></a><a name="addstring"></a>CComboBox:: AddString
+## <a name="ccomboboxaddstring"></a><a name="addstring"></a> CComboBox:: AddString
 
 Dodaje ciąg do pola listy pola kombi.
 
@@ -292,7 +292,7 @@ Aby wstawić ciąg do określonej lokalizacji na liście, użyj funkcji składow
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox::CComboBox
+## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a> CComboBox::CComboBox
 
 Konstruuje `CComboBox` obiekt.
 
@@ -304,7 +304,7 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-## <a name="ccomboboxclear"></a><a name="clear"></a>CComboBox:: Clear
+## <a name="ccomboboxclear"></a><a name="clear"></a> CComboBox:: Clear
 
 Usuwa (czyści) bieżące zaznaczenie, jeśli istnieje, w kontrolce Edycja pola kombi.
 
@@ -320,7 +320,7 @@ Aby usunąć bieżące zaznaczenie i umieścić zawartość w schowku, użyj fun
 
 [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]
 
-## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox::CompareItem
+## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a> CComboBox::CompareItem
 
 Wywoływane przez platformę, by określić względne położenie nowego elementu w części pole listy posortowanego pola kombi rysowania przez właściciela.
 
@@ -353,7 +353,7 @@ Domyślnie ta funkcja członkowska nic nie robi. Jeśli utworzysz pole kombi rys
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-## <a name="ccomboboxcopy"></a><a name="copy"></a>CComboBox:: Copy
+## <a name="ccomboboxcopy"></a><a name="copy"></a> CComboBox:: Copy
 
 Kopiuje bieżące zaznaczenie, jeśli istnieje, w kontrolce Edycja pola kombi do Schowka w formacie CF_TEXT.
 
@@ -365,7 +365,7 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-## <a name="ccomboboxcreate"></a><a name="create"></a>CComboBox:: Create
+## <a name="ccomboboxcreate"></a><a name="create"></a> CComboBox:: Create
 
 Tworzy pole kombi i dołącza je do `CComboBox` obiektu.
 
@@ -423,7 +423,7 @@ Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#wi
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-## <a name="ccomboboxcut"></a><a name="cut"></a>CComboBox:: Wytnij
+## <a name="ccomboboxcut"></a><a name="cut"></a> CComboBox:: Wytnij
 
 Usuwa (wycina) bieżące zaznaczenie, jeśli istnieje, w kontrolce Edycja pola kombi i kopiuje usunięty tekst do Schowka w formacie CF_TEXT.
 
@@ -439,7 +439,7 @@ Aby usunąć bieżące zaznaczenie bez umieszczania w schowku usuniętego tekstu
 
 [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]
 
-## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::D eleteItem
+## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a> CComboBox::D eleteItem
 
 Wywoływane przez platformę, gdy użytkownik usuwa element z obiektu rysowania przez właściciela `CComboBox` lub niszczy pole kombi.
 
@@ -460,7 +460,7 @@ Domyślna implementacja tej funkcji nic nie robi. Zastąp tę funkcję, aby pono
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::D eleteString
+## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a> CComboBox::D eleteString
 
 Usuwa element z pozycji *nIndex* w polu kombi.
 
@@ -485,7 +485,7 @@ Wszystkie elementy po *nIndex* teraz przechodzą w dół o jedno miejsce. Na prz
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-## <a name="ccomboboxdir"></a><a name="dir"></a>CComboBox::D IR
+## <a name="ccomboboxdir"></a><a name="dir"></a> CComboBox::D IR
 
 Dodaje listę nazw plików lub dysków do pola listy pola kombi.
 
@@ -531,7 +531,7 @@ Ta funkcja nie jest obsługiwana przez formant systemu Windows `ComboBoxEx` . Ab
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox::D rawItem
+## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a> CComboBox::D rawItem
 
 Wywoływane przez platformę, gdy wizualny aspekt pola kombi rysowania przez właściciela zmienia się.
 
@@ -554,7 +554,7 @@ Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję element
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-## <a name="ccomboboxfindstring"></a><a name="findstring"></a>CComboBox:: FindStr
+## <a name="ccomboboxfindstring"></a><a name="findstring"></a> CComboBox:: FindStr
 
 Znajduje, ale nie zaznacz, pierwszy ciąg, który zawiera określony prefiks w polu listy pola kombi.
 
@@ -584,7 +584,7 @@ Ta funkcja nie jest obsługiwana przez formant systemu Windows `ComboBoxEx` . Ab
 
 [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]
 
-## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox::FindStringExact
+## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a> CComboBox::FindStringExact
 
 Wywołaj `FindStringExact` funkcję członkowską, aby znaleźć pierwszy ciąg pola listy (w polu kombi), który pasuje do ciągu określonego w *lpszFind*.
 
@@ -614,7 +614,7 @@ Jeśli pole kombi zostało utworzone przy użyciu stylu rysowania przez właści
 
 [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]
 
-## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo
+## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a> CComboBox::GetComboBoxInfo
 
 Pobiera informacje dla `CComboBox` obiektu.
 
@@ -635,7 +635,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="ccomboboxgetcount"></a><a name="getcount"></a>CComboBox:: GetCount
+## <a name="ccomboboxgetcount"></a><a name="getcount"></a> CComboBox:: GetCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę elementów w części pola kombi.
 
@@ -651,7 +651,7 @@ Liczba elementów. Zwracana liczba jest większa niż wartość indeksu ostatnie
 
 [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]
 
-## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox::GetCueBanner
+## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a> CComboBox::GetCueBanner
 
 Pobiera tekst wskaźnika, który jest wyświetlany dla kontrolki pola kombi.
 
@@ -665,10 +665,11 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*lpszText*|określoną Wskaźnik do buforu, który odbiera tekst banera wskaźnika.|
-|*cchText*|podczas Rozmiar buforu, na który wskazuje parametr *lpszText* .|
+*lpszText*\
+określoną Wskaźnik do buforu, który odbiera tekst banera wskaźnika.
+
+*cchText*\
+podczas Rozmiar buforu, na który wskazuje parametr *lpszText* .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -684,7 +685,7 @@ Tekst podpowiedzi jest monitem, który jest wyświetlany w obszarze wejściowym 
 
 Ta metoda wysyła komunikat [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) , który jest opisany w Windows SDK.
 
-## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox::GetCurSel
+## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a> CComboBox::GetCurSel
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, który element w polu kombi jest zaznaczony.
 
@@ -698,13 +699,13 @@ Indeks (liczony od zera) aktualnie zaznaczonego elementu w polu listy pola kombi
 
 ### <a name="remarks"></a>Uwagi
 
-`GetCurSel`zwraca indeks do listy.
+`GetCurSel` zwraca indeks do listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]
 
-## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect
+## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a> CComboBox::GetDroppedControlRect
 
 Wywołaj `GetDroppedControlRect` funkcję członkowską, aby pobrać Współrzędne ekranu widocznego (porzuconego) pola listy rozwijanej pola kombi.
 
@@ -721,7 +722,7 @@ Wskazuje [strukturę Rect](/windows/win32/api/windef/ns-windef-rect) , która ma
 
 [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]
 
-## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox::GetDroppedState
+## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a> CComboBox::GetDroppedState
 
 Wywołaj `GetDroppedState` funkcję członkowską, aby określić, czy pole listy rozwijanej pola kombi jest widoczne (opuszczone).
 
@@ -737,7 +738,7 @@ Różne od zera, jeśli pole listy jest widoczne; w przeciwnym razie 0.
 
 [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]
 
-## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth
+## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a> CComboBox::GetDroppedWidth
 
 Wywołaj tę funkcję, aby pobrać minimalną dozwoloną Szerokość (w pikselach) pola listy pola kombi.
 
@@ -759,7 +760,7 @@ Domyślnie minimalna dozwolona szerokość pola listy rozwijanej to 0. Minimaln�
 
   Zobacz przykład dla [SetDroppedWidth](#setdroppedwidth).
 
-## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox::GetEditSel
+## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a> CComboBox::GetEditSel
 
 Pobiera początkową i końcową pozycję znaku bieżącego zaznaczenia w kontrolce edycji pola kombi.
 
@@ -775,7 +776,7 @@ Wartość 32-bitowa, która zawiera pozycję początkową w wyrazie z małą kol
 
 [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]
 
-## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox::GetExtendedUI
+## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a> CComboBox::GetExtendedUI
 
 Wywołaj `GetExtendedUI` funkcję członkowską, aby określić, czy pole kombi ma domyślny interfejs użytkownika, czy rozszerzony interfejs użytkownika.
 
@@ -801,7 +802,7 @@ Przewijanie w kontrolce statycznej jest wyłączone, gdy lista elementów nie je
 
 [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]
 
-## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent
+## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a> CComboBox::GetHorizontalExtent
 
 Pobiera z pola kombi Szerokość (w pikselach), o jaką część pola listy pola kombi można przewijać w poziomie.
 
@@ -821,7 +822,7 @@ Ma to zastosowanie tylko wtedy, gdy część pola listy pola kombi ma poziomy pa
 
 [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]
 
-## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox::GetItemData
+## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a> CComboBox::GetItemData
 
 Pobiera wartość 32-bitowej dostarczonej przez aplikację skojarzoną z określonym elementem pola kombi.
 
@@ -846,7 +847,7 @@ Wartość 32-bitowej można ustawić za pomocą parametru *dwItemData* wywołani
 
 [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]
 
-## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox::GetItemDataPtr
+## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a> CComboBox::GetItemDataPtr
 
 Pobiera wartość 32-bitowej dostarczonej przez aplikację skojarzoną z określonym elementem pola kombi jako wskaźnikiem ( **`void`** <strong>\*</strong> ).
 
@@ -867,7 +868,7 @@ Pobiera wskaźnik lub-1, jeśli wystąpi błąd.
 
 [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]
 
-## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox::GetItemHeight
+## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a> CComboBox::GetItemHeight
 
 Wywołaj `GetItemHeight` funkcję członkowską, aby pobrać wysokość elementów listy w polu kombi.
 
@@ -888,7 +889,7 @@ Wysokość (w pikselach) określonego elementu w polu kombi. Wartość zwracana 
 
 [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]
 
-## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox::GetLBText
+## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a> CComboBox::GetLBText
 
 Pobiera ciąg z pola listy pola kombi.
 
@@ -925,7 +926,7 @@ Druga forma tej funkcji elementu członkowskiego wypełnia `CString` obiekt z te
 
 [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]
 
-## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox::GetLBTextLen
+## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a> CComboBox::GetLBTextLen
 
 Pobiera długość ciągu w polu listy pola kombi.
 
@@ -946,7 +947,7 @@ Długość ciągu w bajtach, z wyłączeniem kończącego znaku null. Jeśli *nI
 
   Zobacz przykład dla [CComboBox:: GetLBText](#getlbtext).
 
-## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox:: getLocale
+## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a> CComboBox:: getLocale
 
 Pobiera ustawienia regionalne używane przez pole kombi.
 
@@ -966,7 +967,7 @@ Ustawienia regionalne są używane na przykład w celu określenia kolejności s
 
   Zobacz przykład dla [CComboBox:: Setlocals](#setlocale).
 
-## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox::GetMinVisible
+## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a> CComboBox::GetMinVisible
 
 Pobiera minimalną liczbę widocznych elementów z listy rozwijanej bieżącej kontrolki pola kombi.
 
@@ -982,7 +983,7 @@ Minimalna liczba widocznych elementów na bieżącej liście rozwijanej.
 
 Ta metoda wysyła komunikat [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , który jest opisany w Windows SDK.
 
-## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox::GetTopIndex
+## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a> CComboBox::GetTopIndex
 
 Pobiera indeks (liczony od zera) pierwszego widocznego elementu w części pola kombi.
 
@@ -1002,7 +1003,7 @@ Początkowo element 0 znajduje się u góry pola listy, ale jeśli pole listy je
 
 [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]
 
-## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox::InitStorage
+## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a> CComboBox::InitStorage
 
 Przydziela pamięć do przechowywania elementów pola listy w części pola kombi.
 
@@ -1036,7 +1037,7 @@ Ta funkcja pomaga przyspieszyć inicjalizację pól listy, które mają dużą l
 
 [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]
 
-## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox::InsertString
+## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a> CComboBox::InsertString
 
 Wstawia ciąg do pola listy pola kombi.
 
@@ -1069,7 +1070,7 @@ W przeciwieństwie do funkcji składowej [AddString](#addstring) , `InsertString
 
 [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]
 
-## <a name="ccomboboxlimittext"></a><a name="limittext"></a>CComboBox::LimitText
+## <a name="ccomboboxlimittext"></a><a name="limittext"></a> CComboBox::LimitText
 
 Ogranicza długość w bajtach tekstu, który użytkownik może wprowadzić do kontrolki edycji pola kombi.
 
@@ -1090,13 +1091,13 @@ Wartość różna od zera. Jeśli wywoływana dla pola kombi z stylem [CBS_DROPD
 
 Jeśli pole kombi nie ma [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)stylu, ustawienie limitu tekstu na wartość większą niż rozmiar kontrolki edycji nie będzie miało żadnego efektu.
 
-`LimitText`ogranicza tylko tekst, który użytkownik może wprowadzić. Nie ma ono wpływu na żaden tekst znajdujący się już w kontrolce edycji, gdy wiadomość jest wysyłana, ani nie ma wpływu na długość tekstu skopiowanego do kontrolki edycji, gdy zostanie wybrany ciąg w polu listy.
+`LimitText` ogranicza tylko tekst, który użytkownik może wprowadzić. Nie ma ono wpływu na żaden tekst znajdujący się już w kontrolce edycji, gdy wiadomość jest wysyłana, ani nie ma wpływu na długość tekstu skopiowanego do kontrolki edycji, gdy zostanie wybrany ciąg w polu listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]
 
-## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox::MeasureItem
+## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a> CComboBox::MeasureItem
 
 Wywoływane przez platformę, gdy zostanie utworzony pole kombi z stylem rysowania przez właściciela.
 
@@ -1121,7 +1122,7 @@ Opis struktury można znaleźć w temacie [CWnd:: OnMeasureItem](../../mfc/refer
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-## <a name="ccomboboxpaste"></a><a name="paste"></a>CComboBox::P Kopiuj
+## <a name="ccomboboxpaste"></a><a name="paste"></a> CComboBox::P Kopiuj
 
 Wstawia dane ze schowka do kontrolki edycji pola kombi w bieżącym położeniu kursora.
 
@@ -1137,7 +1138,7 @@ Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w formacie CF_TEXT.
 
 [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]
 
-## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox::ResetContent
+## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a> CComboBox::ResetContent
 
 Usuwa wszystkie elementy z pola listy i kontrolki edycji pola kombi.
 
@@ -1149,7 +1150,7 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]
 
-## <a name="ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox::SelectString
+## <a name="ccomboboxselectstring"></a><a name="selectstring"></a> CComboBox::SelectString
 
 Wyszukuje ciąg w polu listy pola kombi, a jeśli ciąg zostanie znaleziony, wybiera ciąg w polu listy i kopiuje go do kontrolki edycji.
 
@@ -1181,7 +1182,7 @@ Należy zauważyć, `SelectString` że `FindString` funkcje i są jednocześnie 
 
 [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]
 
-## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox::SetCueBanner
+## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a> CComboBox::SetCueBanner
 
 Ustawia tekst kontrolny wyświetlany dla kontrolki pola kombi.
 
@@ -1191,9 +1192,8 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*lpszText*|podczas Wskaźnik na bufor zakończony zerem, który zawiera tekst kontrolny.|
+*lpszText*\
+podczas Wskaźnik na bufor zakończony zerem, który zawiera tekst kontrolny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1217,7 +1217,7 @@ Poniższy przykład kodu ustawia transparent wskaźnika dla kontrolki pole kombi
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox::SetCurSel
+## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a> CComboBox::SetCurSel
 
 Wybiera ciąg w polu listy pola kombi.
 
@@ -1242,7 +1242,7 @@ W razie potrzeby pole listy przewija ciąg do widoku (Jeśli pole listy jest wid
 
 [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]
 
-## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth
+## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a> CComboBox::SetDroppedWidth
 
 Wywołaj tę funkcję, aby ustawić minimalną dozwoloną Szerokość (w pikselach) pola listy pola kombi.
 
@@ -1269,7 +1269,7 @@ Domyślnie minimalna dozwolona szerokość pola listy rozwijanej to 0. Gdy zosta
 
 [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]
 
-## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox::SetEditSel
+## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a> CComboBox::SetEditSel
 
 Wybiera znaki w kontrolce edycji pola kombi.
 
@@ -1302,7 +1302,7 @@ Położenie jest zależne od zera. Aby wybrać pierwszy znak kontrolki edycji, n
 
   Zobacz przykład dla [CComboBox:: GetEditSel](#geteditsel).
 
-## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox::SetExtendedUI
+## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a> CComboBox::SetExtendedUI
 
 Wywołaj `SetExtendedUI` funkcję członkowską, aby wybrać domyślny interfejs użytkownika lub rozszerzony interfejs użytkownika dla pola kombi, które ma styl [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) lub [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -1333,7 +1333,7 @@ Przewijanie w kontrolce statycznej jest wyłączone, gdy lista elementów nie je
 
   Zobacz przykład dla [CComboBox:: GetExtendedUI](#getextendedui).
 
-## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent
+## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a> CComboBox::SetHorizontalExtent
 
 Ustawia szerokość (w pikselach), przez jaką część pola listy pola kombi można przewijać w poziomie.
 
@@ -1354,7 +1354,7 @@ Jeśli szerokość pola listy jest mniejsza niż ta wartość, poziomy pasek prz
 
 [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]
 
-## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox::SetItemData
+## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a> CComboBox::SetItemData
 
 Ustawia wartość 32-bitową skojarzoną z określonym elementem w polu kombi.
 
@@ -1384,7 +1384,7 @@ Użyj `SetItemDataPtr` funkcji członkowskiej, jeśli element 32-bitowy ma być 
 
 [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]
 
-## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox::SetItemDataPtr
+## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a> CComboBox::SetItemDataPtr
 
 Ustawia wartość 32-bitową skojarzoną z określonym elementem w polu kombi na określony wskaźnik ( **`void`** <strong>\*</strong> ).
 
@@ -1414,7 +1414,7 @@ Ten wskaźnik pozostaje prawidłowy dla życia pola kombi, nawet jeśli względn
 
 [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]
 
-## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox::SetItemHeight
+## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a> CComboBox::SetItemHeight
 
 Wywołaj `SetItemHeight` funkcję członkowską, aby ustawić wysokość elementów listy w polu kombi lub wysokość części kontrolki edycji (lub statycznego tekstu) pola kombi.
 
@@ -1448,7 +1448,7 @@ Wysokość części kontrolki edycji (lub statycznego tekstu) pola kombi jest us
 
 [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]
 
-## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox:: setlocale
+## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a> CComboBox:: setlocale
 
 Ustawia identyfikator ustawień regionalnych dla tego pola kombi.
 
@@ -1473,7 +1473,7 @@ Jeśli `SetLocale` nie jest wywoływana, domyślne ustawienia regionalne są uzy
 
 [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]
 
-## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems
+## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a> CComboBox::SetMinVisibleItems
 
 Ustawia minimalną liczbę widocznych elementów na liście rozwijanej bieżącej kontrolki pola kombi.
 
@@ -1483,9 +1483,8 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*niewidoczny*|podczas Określa minimalną liczbę widocznych elementów.|
+*niewidoczny*\
+podczas Określa minimalną liczbę widocznych elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1507,7 +1506,7 @@ Poniższy przykład kodu wstawia 20 elementów do listy rozwijanej kontrolki pol
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox::SetTopIndex
+## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a> CComboBox::SetTopIndex
 
 Zapewnia, że określony element jest widoczny w części pola listy pola kombi.
 
@@ -1532,7 +1531,7 @@ System przewija pole listy, dopóki element określony przez *nIndex* pojawia si
 
 [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]
 
-## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox::ShowDropDown
+## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a> CComboBox::ShowDropDown
 
 Pokazuje lub ukrywa pole listy pola kombi, które ma styl [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) lub [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -1555,7 +1554,7 @@ Ta funkcja członkowska nie ma wpływu na pole kombi utworzone przy użyciu styl
 
   Zobacz przykład dla [CComboBox:: GetDroppedState](#getdroppedstate).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CTRLBARS MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

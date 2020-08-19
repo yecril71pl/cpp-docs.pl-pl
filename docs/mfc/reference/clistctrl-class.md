@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: e728ba18d393831765594082ca38bbc935a708e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1fa9f4bb7ba844dd2f0300cf007a786e8fde902
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223060"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562483"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -516,7 +516,7 @@ Domyślnie formant widoku listy niszczy przypisane do niego listy obrazów, gdy 
 
 **Nagłówek:** afxcmn. h
 
-## <a name="clistctrlapproximateviewrect"></a><a name="approximateviewrect"></a>CListCtrl:: ApproximateViewRect
+## <a name="clistctrlapproximateviewrect"></a><a name="approximateviewrect"></a> CListCtrl:: ApproximateViewRect
 
 Określa szerokość i wysokość wymagane do wyświetlenia elementów kontrolki widoku listy.
 
@@ -542,7 +542,7 @@ Liczba elementów, które mają być wyświetlane w formancie. Jeśli ten parame
 
 Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect), zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlarrange"></a><a name="arrange"></a>CListCtrl:: porządkowanie
+## <a name="clistctrlarrange"></a><a name="arrange"></a> CListCtrl:: porządkowanie
 
 Zmienia położenie elementów w widoku ikony, aby były wyrównane do siatki.
 
@@ -580,7 +580,7 @@ Parametr *nCode* określa styl wyrównania.
     m_myListCtrl.Arrange(LVA_ALIGNTOP);
 ```
 
-## <a name="clistctrlcanceleditlabel"></a><a name="canceleditlabel"></a>CListCtrl:: CancelEditLabel
+## <a name="clistctrlcanceleditlabel"></a><a name="canceleditlabel"></a> CListCtrl:: CancelEditLabel
 
 Anuluje operację edycji tekstu elementu.
 
@@ -592,7 +592,7 @@ void CancelEditLabel();
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_CANCELEDITLABEL](/windows/win32/Controls/lvm-canceleditlabel) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlclistctrl"></a><a name="clistctrl"></a>CListCtrl:: CListCtrl
+## <a name="clistctrlclistctrl"></a><a name="clistctrl"></a> CListCtrl:: CListCtrl
 
 Konstruuje `CListCtrl` obiekt.
 
@@ -600,7 +600,7 @@ Konstruuje `CListCtrl` obiekt.
 CListCtrl();
 ```
 
-## <a name="clistctrlcreate"></a><a name="create"></a>CListCtrl:: Create
+## <a name="clistctrlcreate"></a><a name="create"></a> CListCtrl:: Create
 
 Tworzy formant listy i dołącza go do `CListCtrl` obiektu.
 
@@ -644,7 +644,7 @@ Aby zastosować rozszerzone style systemu Windows do obiektu kontrolki listy, wy
         CRect(10,10,400,200), pParentWnd, IDD_MYLISTCTRL);
 ```
 
-## <a name="clistctrlcreateex"></a><a name="createex"></a>CListCtrl:: CreateEx
+## <a name="clistctrlcreateex"></a><a name="createex"></a> CListCtrl:: CreateEx
 
 Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CListCtrl` obiektem.
 
@@ -682,9 +682,9 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** przedniej stylu rozszerzonego systemu Windows.
 
-`CreateEx`tworzy formant przy użyciu rozszerzonych stylów systemu Windows określonych przez *dwExStyle*. Aby ustawić style rozszerzone odpowiednie dla kontrolki, wywołaj metodę [setextended](#setextendedstyle). Na przykład użyj, `CreateEx` Aby ustawić takie style jako WS_EX_CONTEXTHELP, ale użyć `SetExtendedStyle` do ustawienia takich stylów jako LVS_EX_FULLROWSELECT. Aby uzyskać więcej informacji, zobacz Style opisane w [rozszerzonym widoku listy](/windows/win32/Controls/extended-list-view-styles) artykułów w Windows SDK.
+`CreateEx` tworzy formant przy użyciu rozszerzonych stylów systemu Windows określonych przez *dwExStyle*. Aby ustawić style rozszerzone odpowiednie dla kontrolki, wywołaj metodę [setextended](#setextendedstyle). Na przykład użyj, `CreateEx` Aby ustawić takie style jako WS_EX_CONTEXTHELP, ale użyć `SetExtendedStyle` do ustawienia takich stylów jako LVS_EX_FULLROWSELECT. Aby uzyskać więcej informacji, zobacz Style opisane w [rozszerzonym widoku listy](/windows/win32/Controls/extended-list-view-styles) artykułów w Windows SDK.
 
-## <a name="clistctrlcreatedragimage"></a><a name="createdragimage"></a>CListCtrl:: CreateDragImage
+## <a name="clistctrlcreatedragimage"></a><a name="createdragimage"></a> CListCtrl:: CreateDragImage
 
 Tworzy listę obrazów przeciągania dla elementu określonego przez *nitem*.
 
@@ -718,7 +718,7 @@ Wskaźnik do listy obrazów do przeciągnięcia, jeśli zakończy się pomyślni
         delete pImageList;
 ```
 
-## <a name="clistctrldeleteallitems"></a><a name="deleteallitems"></a>CListCtrl::D eleteAllItems
+## <a name="clistctrldeleteallitems"></a><a name="deleteallitems"></a> CListCtrl::D eleteAllItems
 
 Usuwa wszystkie elementy z kontrolki widoku listy.
 
@@ -738,7 +738,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
     ASSERT(m_myListCtrl.GetItemCount() == 0);
 ```
 
-## <a name="clistctrldeletecolumn"></a><a name="deletecolumn"></a>CListCtrl::D eleteColumn
+## <a name="clistctrldeletecolumn"></a><a name="deletecolumn"></a> CListCtrl::D eleteColumn
 
 Usuwa kolumnę z kontrolki widoku listy.
 
@@ -767,7 +767,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         }
 ```
 
-## <a name="clistctrldeleteitem"></a><a name="deleteitem"></a>CListCtrl::D eleteItem
+## <a name="clistctrldeleteitem"></a><a name="deleteitem"></a> CListCtrl::D eleteItem
 
 Usuwa element z kontrolki widoku listy.
 
@@ -796,7 +796,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         }
 ```
 
-## <a name="clistctrldrawitem"></a><a name="drawitem"></a>CListCtrl::D rawItem
+## <a name="clistctrldrawitem"></a><a name="drawitem"></a> CListCtrl::D rawItem
 
 Wywoływane przez platformę, gdy wizualny aspekt kontrolki widoku listy rysowania przez właściciela zmienia się.
 
@@ -817,7 +817,7 @@ Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję element
 
 Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
 
-## <a name="clistctrleditlabel"></a><a name="editlabel"></a>CListCtrl:: EditLabel
+## <a name="clistctrleditlabel"></a><a name="editlabel"></a> CListCtrl:: EditLabel
 
 Rozpoczyna edycję tekstu elementu w miejscu.
 
@@ -852,7 +852,7 @@ Użyj tej funkcji, aby rozpocząć edycję w miejscu określonego tekstu element
         ASSERT(pmyEdit != NULL);
 ```
 
-## <a name="clistctrlenablegroupview"></a><a name="enablegroupview"></a>CListCtrl:: EnableGroupView
+## <a name="clistctrlenablegroupview"></a><a name="enablegroupview"></a> CListCtrl:: EnableGroupView
 
 Włącza lub wyłącza, czy elementy w kontrolce widok listy są wyświetlane jako Grupa.
 
@@ -879,7 +879,7 @@ Zwraca jedną z następujących wartości:
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlensurevisible"></a><a name="ensurevisible"></a>CListCtrl:: EnsureVisible
+## <a name="clistctrlensurevisible"></a><a name="ensurevisible"></a> CListCtrl:: EnsureVisible
 
 Zapewnia, że element widoku listy jest co najmniej częściowo widoczny.
 
@@ -914,7 +914,7 @@ Kontrolka widok listy jest przewijana w razie potrzeby. Jeśli parametr *bPartia
             m_myListCtrl.EnsureVisible(nCount-1, FALSE);
 ```
 
-## <a name="clistctrlfinditem"></a><a name="finditem"></a>CListCtrl:: FindItem
+## <a name="clistctrlfinditem"></a><a name="finditem"></a> CListCtrl:: FindItem
 
 Wyszukuje element widoku listy o określonej charakterystyce.
 
@@ -956,7 +956,7 @@ Parametr *pFindInfo* wskazuje `LVFINDINFO` strukturę, która zawiera informacje
         }
 ```
 
-## <a name="clistctrlgetbkcolor"></a><a name="getbkcolor"></a>CListCtrl:: GetBkColor
+## <a name="clistctrlgetbkcolor"></a><a name="getbkcolor"></a> CListCtrl:: GetBkColor
 
 Pobiera kolor tła kontrolki widoku listy.
 
@@ -972,7 +972,7 @@ Wartość 32-bitowa służąca do określania koloru RGB.
 
 Zobacz przykład dla [CListCtrl:: SetBkColor](#setbkcolor).
 
-## <a name="clistctrlgetbkimage"></a><a name="getbkimage"></a>CListCtrl:: GetBkImage
+## <a name="clistctrlgetbkimage"></a><a name="getbkimage"></a> CListCtrl:: GetBkImage
 
 Pobiera bieżący obraz tła kontrolki widoku listy.
 
@@ -1008,7 +1008,7 @@ Ta metoda implementuje zachowanie makra Win32, [ListView_GetBkImage](/windows/wi
         }
 ```
 
-## <a name="clistctrlgetcallbackmask"></a><a name="getcallbackmask"></a>CListCtrl:: GetCallbackMask
+## <a name="clistctrlgetcallbackmask"></a><a name="getcallbackmask"></a> CListCtrl:: GetCallbackMask
 
 Pobiera maskę wywołania zwrotnego dla kontrolki widoku listy.
 
@@ -1028,7 +1028,7 @@ Maska wywołania zwrotnego kontrolki widoku listy.
 
 Zobacz przykład dla [CListCtrl:: SetCallbackMask](#setcallbackmask).
 
-## <a name="clistctrlgetcheck"></a><a name="getcheck"></a>CListCtrl:: getcheck
+## <a name="clistctrlgetcheck"></a><a name="getcheck"></a> CListCtrl:: getcheck
 
 Pobiera bieżący stan wyświetlania obrazu stanu, który jest skojarzony z elementem.
 
@@ -1053,7 +1053,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetCheckS
 
 Zobacz przykład dla [CListCtrl:: SetCheck](#setcheck).
 
-## <a name="clistctrlgetcolumn"></a><a name="getcolumn"></a>CListCtrl:: GetColumn
+## <a name="clistctrlgetcolumn"></a><a name="getcolumn"></a> CListCtrl:: GetColumn
 
 Pobiera atrybuty kolumny kontrolki widoku listy.
 
@@ -1094,7 +1094,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         }
 ```
 
-## <a name="clistctrlgetcolumnorderarray"></a><a name="getcolumnorderarray"></a>CListCtrl:: GetColumnOrderArray
+## <a name="clistctrlgetcolumnorderarray"></a><a name="getcolumnorderarray"></a> CListCtrl:: GetColumnOrderArray
 
 Pobiera kolejność kolumn (od lewej do prawej) kontrolki widoku listy.
 
@@ -1148,7 +1148,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetColumn
         }
 ```
 
-## <a name="clistctrlgetcolumnwidth"></a><a name="getcolumnwidth"></a>CListCtrl:: GetColumnWidth
+## <a name="clistctrlgetcolumnwidth"></a><a name="getcolumnwidth"></a> CListCtrl:: GetColumnWidth
 
 Pobiera szerokość kolumny w widoku raportu lub widoku listy.
 
@@ -1173,7 +1173,7 @@ Szerokość (w pikselach) kolumny określonej przez *nCol*.
         m_myListCtrl.SetColumnWidth(1, 20 + nWidth);
 ```
 
-## <a name="clistctrlgetcountperpage"></a><a name="getcountperpage"></a>CListCtrl:: GetCountPerPage
+## <a name="clistctrlgetcountperpage"></a><a name="getcountperpage"></a> CListCtrl:: GetCountPerPage
 
 Oblicza liczbę elementów, które mogą zmieścić się w pionie w widocznym obszarze kontrolki widok listy w widoku listy lub widoku raportu.
 
@@ -1189,7 +1189,7 @@ Liczba elementów, które mogą się zmieścić w pionie w widocznym obszarze ko
 
 Zobacz przykład dla [CListCtrl:: GetTopIndex](#gettopindex).
 
-## <a name="clistctrlgeteditcontrol"></a><a name="geteditcontrol"></a>CListCtrl:: GetEditControl
+## <a name="clistctrlgeteditcontrol"></a><a name="geteditcontrol"></a> CListCtrl:: GetEditControl
 
 Pobiera uchwyt kontrolki edycji służący do edytowania tekstu elementu widoku listy.
 
@@ -1216,7 +1216,7 @@ Jeśli to się powiedzie, wskaźnik do obiektu [CEdit](cedit-class.md) , który 
         }
 ```
 
-## <a name="clistctrlgetemptytext"></a><a name="getemptytext"></a>CListCtrl:: GetEmptyText
+## <a name="clistctrlgetemptytext"></a><a name="getemptytext"></a> CListCtrl:: GetEmptyText
 
 Pobiera ciąg, który ma być wyświetlany, jeśli bieżąca kontrolka widoku listy jest pusta.
 
@@ -1232,7 +1232,7 @@ Element [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który zaw
 
 Ta metoda wysyła komunikat [LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CListCtrl:: getextendeds
+## <a name="clistctrlgetextendedstyle"></a><a name="getextendedstyle"></a> CListCtrl:: getextendeds
 
 Pobiera bieżące rozszerzone style kontrolki widoku listy.
 
@@ -1252,7 +1252,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetExtend
 
 Zobacz przykład dla [CListCtrl:: setextended](#setextendedstyle).
 
-## <a name="clistctrlgetfirstselecteditemposition"></a><a name="getfirstselecteditemposition"></a>CListCtrl:: GetFirstSelectedItemPosition
+## <a name="clistctrlgetfirstselecteditemposition"></a><a name="getfirstselecteditemposition"></a> CListCtrl:: GetFirstSelectedItemPosition
 
 Pobiera pozycję pierwszego wybranego elementu w kontrolce widoku listy.
 
@@ -1285,7 +1285,7 @@ Poniższy przykład kodu demonstruje użycie tej funkcji.
         }
 ```
 
-## <a name="clistctrlgetfocusedgroup"></a><a name="getfocusedgroup"></a>CListCtrl:: getkoncentracji
+## <a name="clistctrlgetfocusedgroup"></a><a name="getfocusedgroup"></a> CListCtrl:: getkoncentracji
 
 Pobiera grupę, która ma fokus klawiatury w bieżącym formancie widoku listy.
 
@@ -1301,7 +1301,7 @@ Indeks grupy, której stan jest LVGS_FOCUSED, jeśli istnieje taka Grupa; w prze
 
 Ta metoda wysyła komunikat [LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup) , który jest opisany w Windows SDK. Aby uzyskać więcej informacji, zobacz wartość LVGS_FOCUSED `state` elementu członkowskiego struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
-## <a name="clistctrlgetgroupcount"></a><a name="getgroupcount"></a>CListCtrl:: GetGroupCount
+## <a name="clistctrlgetgroupcount"></a><a name="getgroupcount"></a> CListCtrl:: GetGroupCount
 
 Pobiera liczbę grup z bieżącej kontrolki widoku listy.
 
@@ -1317,7 +1317,7 @@ Liczba grup w kontrolce widoku listy.
 
 Ta metoda wysyła komunikat [LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount) , który jest opisany w Windows SDK-->.
 
-## <a name="clistctrlgetgroupinfo"></a><a name="getgroupinfo"></a>CListCtrl:: GetGroupInfo
+## <a name="clistctrlgetgroupinfo"></a><a name="getgroupinfo"></a> CListCtrl:: GetGroupInfo
 
 Pobiera informacje dla określonej grupy kontrolki widok listy.
 
@@ -1343,7 +1343,7 @@ Zwraca identyfikator grupy, jeśli się powiedzie, lub-1 w przeciwnym razie.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetgroupinfobyindex"></a><a name="getgroupinfobyindex"></a>CListCtrl:: GetGroupInfoByIndex
+## <a name="clistctrlgetgroupinfobyindex"></a><a name="getgroupinfobyindex"></a> CListCtrl:: GetGroupInfoByIndex
 
 Pobiera informacje o określonej grupie w bieżącej kontrolce widoku listy.
 
@@ -1355,10 +1355,11 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*iIndex*|podczas Indeks grupy (liczony od zera).|
-|*pGroup*|określoną Wskaźnik do struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , która otrzymuje informacje o grupie określonej przez parametr *IIndex* .<br /><br /> Obiekt wywołujący jest odpowiedzialny za Inicjowanie elementów członkowskich struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) . Ustaw `cbSize` element członkowski na rozmiar struktury i flagi `mask` elementu członkowskiego, aby określić informacje do pobrania.|
+*iIndex*\
+podczas Indeks grupy (liczony od zera).
+
+*pGroup*\
+określoną Wskaźnik do struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , która otrzymuje informacje o grupie określonej przez parametr *IIndex* . Obiekt wywołujący jest odpowiedzialny za Inicjowanie elementów członkowskich struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) . Ustaw `cbSize` element członkowski na rozmiar struktury i flagi `mask` elementu członkowskiego, aby określić informacje do pobrania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1409,7 +1410,7 @@ Poniższy przykład kodu demonstruje `GetGroupInfoByIndex` metodę. W poprzednie
     }
 ```
 
-## <a name="clistctrlgetgroupmetrics"></a><a name="getgroupmetrics"></a>CListCtrl:: GetGroupMetrics
+## <a name="clistctrlgetgroupmetrics"></a><a name="getgroupmetrics"></a> CListCtrl:: GetGroupMetrics
 
 Pobiera metryki grupy.
 
@@ -1426,7 +1427,7 @@ Wskaźnik do elementu [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-l
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetgrouprect"></a><a name="getgrouprect"></a>CListCtrl:: GetGroupRect
+## <a name="clistctrlgetgrouprect"></a><a name="getgrouprect"></a> CListCtrl:: GetGroupRect
 
 Pobiera prostokąt związany z określoną grupą w bieżącej kontrolce widoku listy.
 
@@ -1439,11 +1440,20 @@ BOOL GetGroupRect(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*iGroupId*|podczas Określa grupę.|
-|*lpRect*|[in. out] Wskaźnik do struktury [prostokąta](/windows/win32/api/windef/ns-windef-rect) . Jeśli ta metoda zakończy się pomyślnie, struktura otrzymuje współrzędne prostokąta grupy, która jest określona przez *iGroupId*.|
-|*iCoords*|podczas Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> -LVGGR_GROUP-(domyślnie) współrzędne całej rozwiniętej grupy.<br />-LVGGR_HEADER-współrzędne tylko nagłówka (Grupa zwinięte).<br />-LVGGR_SUBSETLINK — koordynuje tylko link podzbiór (podzbiór znaczników).|
+*iGroupId*\
+podczas Określa grupę.
+
+*lpRect*\
+[in. out] Wskaźnik do struktury [prostokąta](/windows/win32/api/windef/ns-windef-rect) . Jeśli ta metoda zakończy się pomyślnie, struktura otrzymuje współrzędne prostokąta grupy, która jest określona przez *iGroupId*.
+
+*iCoords*\
+podczas Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:
+
+- LVGGR_GROUP-(domyślnie) współrzędne całej rozwiniętej grupy.
+
+- LVGGR_HEADER — współrzędne tylko nagłówka (Grupa zwinięte).
+
+- LVGGR_SUBSETLINK — współrzędne tylko łącza podzestawu (podzbiór znaczników).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1484,7 +1494,7 @@ Poniższy przykład kodu demonstruje `GetGroupRect` metodę. W poprzedniej sekcj
     }
 ```
 
-## <a name="clistctrlgetgroupstate"></a><a name="getgroupstate"></a>CListCtrl:: GetGroupState
+## <a name="clistctrlgetgroupstate"></a><a name="getgroupstate"></a> CListCtrl:: GetGroupState
 
 Pobiera stan dla określonej grupy w bieżącej kontrolce widoku listy.
 
@@ -1496,10 +1506,11 @@ UINT GetGroupState(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*iGroupId*|podczas Indeks grupy (liczony od zera).|
-|*dwMask*|podczas Maska określająca wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` element członkowski struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .|
+*iGroupId*\
+podczas Indeks grupy (liczony od zera).
+
+*dwMask*\
+podczas Maska określająca wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` element członkowski struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1511,7 +1522,7 @@ Wartość zwracana jest wynikiem wartości bitowej i operacji na parametrze *dwM
 
 Ta metoda wysyła komunikat [LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate) , który jest opisany w Windows SDK. Aby uzyskać więcej informacji, zobacz makro [ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate) .
 
-## <a name="clistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CListCtrl:: GetHeaderCtrl
+## <a name="clistctrlgetheaderctrl"></a><a name="getheaderctrl"></a> CListCtrl:: GetHeaderCtrl
 
 Pobiera kontrolkę nagłówka kontrolki widoku listy.
 
@@ -1531,7 +1542,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetHeader
 
 Zobacz przykład dla [CListCtrl:: GetColumnOrderArray](#getcolumnorderarray).
 
-## <a name="clistctrlgethotcursor"></a><a name="gethotcursor"></a>CListCtrl:: GetHotCursor
+## <a name="clistctrlgethotcursor"></a><a name="gethotcursor"></a> CListCtrl:: GetHotCursor
 
 Pobiera kursor używany, gdy aktywne śledzenie jest włączone dla kontrolki widok listy.
 
@@ -1556,7 +1567,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetHotCur
         ASSERT(m_myListCtrl.GetHotCursor() == hCursor);
 ```
 
-## <a name="clistctrlgethotitem"></a><a name="gethotitem"></a>CListCtrl:: GetHotItem
+## <a name="clistctrlgethotitem"></a><a name="gethotitem"></a> CListCtrl:: GetHotItem
 
 Pobiera element widoku listy, który jest aktualnie pod kursorem.
 
@@ -1583,7 +1594,7 @@ Jeśli śledzenie automatyczne jest włączone, gdy użytkownik wstrzyma pracę 
         m_myListCtrl.SetHotItem(0);
 ```
 
-## <a name="clistctrlgethovertime"></a><a name="gethovertime"></a>CListCtrl:: GetHoverTime
+## <a name="clistctrlgethovertime"></a><a name="gethovertime"></a> CListCtrl:: GetHoverTime
 
 Pobiera bieżący czas aktywowania kontrolki widoku listy.
 
@@ -1608,7 +1619,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetHoverT
             m_myListCtrl.SetHoverTime(1000);
 ```
 
-## <a name="clistctrlgetimagelist"></a><a name="getimagelist"></a>CListCtrl:: GetImageList
+## <a name="clistctrlgetimagelist"></a><a name="getimagelist"></a> CListCtrl:: GetImageList
 
 Pobiera uchwyt listy obrazów używany do rysowania elementów widoku listy.
 
@@ -1639,7 +1650,7 @@ Wskaźnik do listy obrazów używany do rysowania elementów widoku listy.
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
-## <a name="clistctrlgetinsertmark"></a><a name="getinsertmark"></a>CListCtrl:: GetInsertMark
+## <a name="clistctrlgetinsertmark"></a><a name="getinsertmark"></a> CListCtrl:: GetInsertMark
 
 Pobiera bieżącą pozycję znacznika wstawiania.
 
@@ -1660,7 +1671,7 @@ Zwraca wartość TRUE, jeśli powodzenie, lub FALSE w przeciwnym razie. Zwraca w
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CListCtrl:: GetInsertMarkColor
+## <a name="clistctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a> CListCtrl:: GetInsertMarkColor
 
 Pobiera bieżący kolor znacznika wstawiania.
 
@@ -1676,7 +1687,7 @@ Zwraca strukturę [COLORREF](/windows/win32/gdi/colorref) , która zawiera kolor
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetinsertmarkrect"></a><a name="getinsertmarkrect"></a>CListCtrl:: GetInsertMarkRect
+## <a name="clistctrlgetinsertmarkrect"></a><a name="getinsertmarkrect"></a> CListCtrl:: GetInsertMarkRect
 
 Pobiera prostokąt, który jest powiązany z punktem wstawiania.
 
@@ -1701,7 +1712,7 @@ Zwraca jedną z następujących wartości:
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETINSERTMARKRECT](/windows/win32/Controls/lvm-getinsertmarkrect) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetitem"></a><a name="getitem"></a>CListCtrl:: GetItem
+## <a name="clistctrlgetitem"></a><a name="getitem"></a> CListCtrl:: GetItem
 
 Pobiera niektóre lub wszystkie atrybuty elementu widoku listy.
 
@@ -1722,7 +1733,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 `LVITEM`Struktura określa lub odbiera atrybuty elementu widoku listy.
 
-## <a name="clistctrlgetitemcount"></a><a name="getitemcount"></a>CListCtrl:: GetItemCount
+## <a name="clistctrlgetitemcount"></a><a name="getitemcount"></a> CListCtrl:: GetItemCount
 
 Pobiera liczbę elementów w kontrolce widoku listy.
 
@@ -1738,7 +1749,7 @@ Liczba elementów w kontrolce widoku listy.
 
 Zobacz przykład dla [CListCtrl::D eleteitem](#deleteitem).
 
-## <a name="clistctrlgetitemdata"></a><a name="getitemdata"></a>CListCtrl:: GetItemData
+## <a name="clistctrlgetitemdata"></a><a name="getitemdata"></a> CListCtrl:: GetItemData
 
 Pobiera 32-bitową wartość specyficzną dla aplikacji skojarzoną z elementem określonym przez `nItem` .
 
@@ -1772,7 +1783,7 @@ Ta wartość jest `lParam` składową struktury [LVITEM](/windows/win32/api/comm
     }
 ```
 
-## <a name="clistctrlgetitemindexrect"></a><a name="getitemindexrect"></a>CListCtrl:: GetItemIndexRect
+## <a name="clistctrlgetitemindexrect"></a><a name="getitemindexrect"></a> CListCtrl:: GetItemIndexRect
 
 Pobiera prostokąt ograniczający dla wszystkich lub części podelementu w bieżącej kontrolce widoku listy.
 
@@ -1786,12 +1797,23 @@ BOOL GetItemIndexRect(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pItemIndex*|podczas Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) elementu nadrzędnego.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) . Ten parametr nie może mieć wartości NULL.|
-|*iColumn*|podczas Indeks kolumny w kontrolce liczony od zera.|
-|*recttype*|podczas Część elementu podrzędnego widoku listy, dla którego jest pobierany prostokąt ograniczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt ograniczający całą podelement, łącznie z ikoną i etykietą.<br /><br /> LVIR_ICON — zwraca prostokąt związany z ikoną lub małą ikoną podelementu.<br /><br /> LVIR_LABEL — zwraca prostokąt związany z tekstem elementu SubItem.|
-|*pRect*|określoną Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) , która otrzymuje informacje o granicach prostokąta elementu podrzędnego.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury [Rect](/windows/win32/api/windef/ns-windef-rect) . Ten parametr nie może mieć wartości NULL.|
+*pItemIndex*\
+podczas Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) elementu nadrzędnego. Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) . Ten parametr nie może mieć wartości NULL.
+
+*iColumn*\
+podczas Indeks kolumny w kontrolce liczony od zera.
+
+*recttype*\
+podczas Część elementu podrzędnego widoku listy, dla którego jest pobierany prostokąt ograniczający. Określ jedną z następujących wartości:
+
+- LVIR_BOUNDS — zwraca prostokąt ograniczający całą podelement, łącznie z ikoną i etykietą.
+
+- LVIR_ICON — zwraca prostokąt związany z ikoną lub małą ikoną podelementu.
+
+- LVIR_LABEL — zwraca prostokąt związany z tekstem elementu SubItem.
+
+*pRect*\
+określoną Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) , która otrzymuje informacje o granicach prostokąta elementu podrzędnego. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury [Rect](/windows/win32/api/windef/ns-windef-rect) . Ten parametr nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1829,7 +1851,7 @@ Poniższy przykład kodu demonstruje `GetGroupRect` metodę. Przed wprowadzeniem
     m_listCtrl.GetDC()->Draw3dRect( &rect, RGB(255, 0, 0), RGB(255, 0, 0) );
 ```
 
-## <a name="clistctrlgetitemposition"></a><a name="getitemposition"></a>CListCtrl:: GetItemPosition
+## <a name="clistctrlgetitemposition"></a><a name="getitemposition"></a> CListCtrl:: GetItemPosition
 
 Pobiera pozycję elementu widoku listy.
 
@@ -1867,7 +1889,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         }
 ```
 
-## <a name="clistctrlgetitemrect"></a><a name="getitemrect"></a>CListCtrl:: GetItemRect
+## <a name="clistctrlgetitemrect"></a><a name="getitemrect"></a> CListCtrl:: GetItemRect
 
 Pobiera prostokąt ograniczający dla całości lub części elementu w bieżącym widoku.
 
@@ -1941,7 +1963,7 @@ void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="clistctrlgetitemspacing"></a><a name="getitemspacing"></a>CListCtrl:: GetItemSpacing
+## <a name="clistctrlgetitemspacing"></a><a name="getitemspacing"></a> CListCtrl:: GetItemSpacing
 
 Oblicza odstęp między elementami w bieżącym formancie widoku listy.
 
@@ -1954,11 +1976,14 @@ BOOL GetItemSpacing(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*fSmall*|podczas Widok, dla którego mają zostać pobrane odstępy między elementami. Określ wartość TRUE dla małego widoku ikony lub wartość FALSE dla widoku ikony.|
-|*pnHorzSpacing*|określoną Zawiera poziomy odstęp między elementami.|
-|*pnVertSpacing*|określoną Zawiera odstępy w pionie między elementami.|
+*fSmall*\
+podczas Widok, dla którego mają zostać pobrane odstępy między elementami. Określ wartość TRUE dla małego widoku ikony lub wartość FALSE dla widoku ikony.
+
+*pnHorzSpacing*\
+określoną Zawiera poziomy odstęp między elementami.
+
+*pnVertSpacing*\
+określoną Zawiera odstępy w pionie między elementami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1968,7 +1993,7 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 Ta metoda wysyła komunikat [LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlgetitemstate"></a><a name="getitemstate"></a>CListCtrl:: GetItemState
+## <a name="clistctrlgetitemstate"></a><a name="getitemstate"></a> CListCtrl:: GetItemState
 
 Pobiera stan elementu widoku listy.
 
@@ -1998,7 +2023,7 @@ Stan elementu jest określany przez `state` element członkowski struktury [LVIT
 
 Zobacz przykład dla [CListCtrl:: GetTopIndex](#gettopindex).
 
-## <a name="clistctrlgetitemtext"></a><a name="getitemtext"></a>CListCtrl:: GetItemText
+## <a name="clistctrlgetitemtext"></a><a name="getitemtext"></a> CListCtrl:: GetItemText
 
 Pobiera tekst elementu lub podelementu widoku listy.
 
@@ -2038,7 +2063,7 @@ Zwracana wersja `CString` zwraca tekst elementu.
 
 Jeśli *nSubItem* ma wartość zero, ta funkcja pobiera etykietę elementu; Jeśli *nSubItem* jest różna od zera, pobiera tekst podelementu. Aby uzyskać więcej informacji na temat argumentu SubItem, zobacz Omówienie struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) w Windows SDK.
 
-## <a name="clistctrlgetnextitem"></a><a name="getnextitem"></a>CListCtrl:: GetNextItem
+## <a name="clistctrlgetnextitem"></a><a name="getnextitem"></a> CListCtrl:: GetNextItem
 
 Wyszukuje element widoku listy, który ma określone właściwości i który nosi określoną relację do danego elementu.
 
@@ -2080,7 +2105,7 @@ Jeśli dla elementu nie są ustawione wszystkie określone flagi stanu, wyszukiw
 
 Indeks następnego elementu, jeśli się powiedzie, lub-1 w przeciwnym razie.
 
-## <a name="clistctrlgetnextitemindex"></a><a name="getnextitemindex"></a>CListCtrl:: GetNextItemIndex
+## <a name="clistctrlgetnextitemindex"></a><a name="getnextitemindex"></a> CListCtrl:: GetNextItemIndex
 
 Pobiera indeks elementu z bieżącej kontrolki widoku listy, który ma określony zestaw właściwości.
 
@@ -2092,10 +2117,11 @@ BOOL GetNextItemIndex(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pItemIndex*|[in. out] Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , który opisuje element, w którym rozpoczyna się wyszukiwanie, lub-1, aby znaleźć pierwszy element, który jest zgodny z flagami w parametrze *nFlags* .<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` Struktura opisuje element znaleziony przez wyszukiwanie.|
-|*nFlags*|podczas Kombinacja bitowa (lub) flag, które określają sposób wykonania wyszukiwania.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wyglądu elementu docelowego lub fizycznego położenia elementu docelowego względem elementu określonego przez parametr *pItemIndex* . Aby uzyskać więcej informacji, zobacz parametr *flags* w komunikacie [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .|
+*pItemIndex*\
+[in. out] Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , który opisuje element, w którym rozpoczyna się wyszukiwanie, lub-1, aby znaleźć pierwszy element, który jest zgodny z flagami w parametrze *nFlags* . Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` Struktura opisuje element znaleziony przez wyszukiwanie.
+
+*nFlags*\
+podczas Kombinacja bitowa (lub) flag, które określają sposób wykonania wyszukiwania. Wyszukiwanie może zależeć od indeksu, stanu lub wyglądu elementu docelowego lub fizycznego położenia elementu docelowego względem elementu określonego przez parametr *pItemIndex* . Aby uzyskać więcej informacji, zobacz parametr *flags* w komunikacie [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2107,7 +2133,7 @@ Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów
 
 Ta metoda wysyła komunikat [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a>CListCtrl:: GetNextSelectedItem
+## <a name="clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a> CListCtrl:: GetNextSelectedItem
 
 Pobiera indeks elementu listy identyfikowanego przez *pos*, a następnie ustawia *punkt sprzedaży* na wartość pozycji.
 
@@ -2151,7 +2177,7 @@ Poniższy przykład kodu demonstruje użycie tej funkcji.
         }
 ```
 
-## <a name="clistctrlgetnumberofworkareas"></a><a name="getnumberofworkareas"></a>CListCtrl:: GetNumberOfWorkAreas
+## <a name="clistctrlgetnumberofworkareas"></a><a name="getnumberofworkareas"></a> CListCtrl:: GetNumberOfWorkAreas
 
 Pobiera bieżącą liczbę obszarów roboczych dla kontrolki widoku listy.
 
@@ -2194,7 +2220,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetNumber
         }
 ```
 
-## <a name="clistctrlgetoutlinecolor"></a><a name="getoutlinecolor"></a>CListCtrl:: GetOutlineColor
+## <a name="clistctrlgetoutlinecolor"></a><a name="getoutlinecolor"></a> CListCtrl:: GetOutlineColor
 
 Pobiera kolor obramowania kontrolki widoku listy.
 
@@ -2210,7 +2236,7 @@ Zwraca strukturę [COLORREF](/windows/win32/gdi/colorref) zawierającą kolor ko
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetorigin"></a><a name="getorigin"></a>CListCtrl:: getorigin
+## <a name="clistctrlgetorigin"></a><a name="getorigin"></a> CListCtrl:: getorigin
 
 Pobiera bieżący pierwotny widok dla kontrolki widoku listy.
 
@@ -2227,7 +2253,7 @@ Adres struktury [punktu](/windows/win32/api/windef/ns-windef-point) , który odb
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero. Jeśli jednak formant jest w widoku Raport, wartość zwracana jest zawsze równa zero.
 
-## <a name="clistctrlgetselectedcolumn"></a><a name="getselectedcolumn"></a>CListCtrl:: GetSelectedColumn
+## <a name="clistctrlgetselectedcolumn"></a><a name="getselectedcolumn"></a> CListCtrl:: GetSelectedColumn
 
 Pobiera indeks aktualnie zaznaczonej kolumny w kontrolce listy.
 
@@ -2243,7 +2269,7 @@ Indeks zaznaczonej kolumny.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetselectedcount"></a><a name="getselectedcount"></a>CListCtrl:: GetSelectedCount
+## <a name="clistctrlgetselectedcount"></a><a name="getselectedcount"></a> CListCtrl:: GetSelectedCount
 
 Pobiera liczbę wybranych elementów w kontrolce widok listy.
 
@@ -2273,7 +2299,7 @@ Liczba wybranych elementów w kontrolce widoku listy.
         }
 ```
 
-## <a name="clistctrlgetselectionmark"></a><a name="getselectionmark"></a>CListCtrl:: GetSelectionMark
+## <a name="clistctrlgetselectionmark"></a><a name="getselectionmark"></a> CListCtrl:: GetSelectionMark
 
 Pobiera znacznik wyboru kontrolki widoku listy.
 
@@ -2298,7 +2324,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetSelect
         m_myListCtrl.SetSelectionMark(0);
 ```
 
-## <a name="clistctrlgetstringwidth"></a><a name="getstringwidth"></a>CListCtrl:: GetStringWidth
+## <a name="clistctrlgetstringwidth"></a><a name="getstringwidth"></a> CListCtrl:: GetStringWidth
 
 Określa minimalną szerokość kolumny, która jest niezbędna do wyświetlenia całego danego ciągu.
 
@@ -2335,7 +2361,7 @@ Zwracana szerokość uwzględnia bieżącą czcionkę i marginesy kolumny kontro
         }
 ```
 
-## <a name="clistctrlgetsubitemrect"></a><a name="getsubitemrect"></a>CListCtrl:: GetSubItemRect
+## <a name="clistctrlgetsubitemrect"></a><a name="getsubitemrect"></a> CListCtrl:: GetSubItemRect
 
 Pobiera prostokąt powiązany elementu w kontrolce widoku listy.
 
@@ -2375,7 +2401,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect), zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgettextbkcolor"></a><a name="gettextbkcolor"></a>CListCtrl:: GetTextBkColor
+## <a name="clistctrlgettextbkcolor"></a><a name="gettextbkcolor"></a> CListCtrl:: GetTextBkColor
 
 Pobiera kolor tła tekstu kontrolki widoku listy.
 
@@ -2391,7 +2417,7 @@ Wartość 32-bitowa służąca do określania koloru RGB.
 
 Zobacz przykład dla [CListCtrl:: SetTextBkColor](#settextbkcolor).
 
-## <a name="clistctrlgettextcolor"></a><a name="gettextcolor"></a>CListCtrl:: GetTextColor
+## <a name="clistctrlgettextcolor"></a><a name="gettextcolor"></a> CListCtrl:: GetTextColor
 
 Pobiera kolor tekstu kontrolki widoku listy.
 
@@ -2407,7 +2433,7 @@ Wartość 32-bitowa służąca do określania koloru RGB.
 
 Zobacz przykład dla [CListCtrl:: SetTextColor](#settextcolor).
 
-## <a name="clistctrlgettileinfo"></a><a name="gettileinfo"></a>CListCtrl:: GetTileInfo
+## <a name="clistctrlgettileinfo"></a><a name="gettileinfo"></a> CListCtrl:: GetTileInfo
 
 Pobiera informacje o kafelku w kontrolce widoku listy.
 
@@ -2428,7 +2454,7 @@ Wartość zwracana nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgettileviewinfo"></a><a name="gettileviewinfo"></a>CListCtrl:: GetTileViewInfo
+## <a name="clistctrlgettileviewinfo"></a><a name="gettileviewinfo"></a> CListCtrl:: GetTileViewInfo
 
 Pobiera informacje o kontrolce widoku listy w widoku kafelków.
 
@@ -2449,7 +2475,7 @@ Wartość zwracana nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgettooltips"></a><a name="gettooltips"></a>CListCtrl:: GetToolTips
+## <a name="clistctrlgettooltips"></a><a name="gettooltips"></a> CListCtrl:: GetToolTips
 
 Pobiera kontrolkę etykietki narzędzia używaną przez kontrolkę widok listy do wyświetlania etykietek narzędzi.
 
@@ -2476,7 +2502,7 @@ Ta funkcja członkowska implementuje zachowanie [LVM_GETTOOLTIPS](/windows/win32
         }
 ```
 
-## <a name="clistctrlgettopindex"></a><a name="gettopindex"></a>CListCtrl:: GetTopIndex
+## <a name="clistctrlgettopindex"></a><a name="gettopindex"></a> CListCtrl:: GetTopIndex
 
 Pobiera indeks najwyższego widocznego elementu w widoku listy lub widoku raportu.
 
@@ -2505,7 +2531,7 @@ Indeks najwyższego widocznego elementu.
         }
 ```
 
-## <a name="clistctrlgetview"></a><a name="getview"></a>CListCtrl:: GetView
+## <a name="clistctrlgetview"></a><a name="getview"></a> CListCtrl:: GetView
 
 Pobiera widok kontrolki widoku listy.
 
@@ -2521,7 +2547,7 @@ Bieżący widok kontrolki widok listy.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_GETVIEW](/windows/win32/Controls/lvm-getview) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlgetviewrect"></a><a name="getviewrect"></a>CListCtrl:: GetViewRect
+## <a name="clistctrlgetviewrect"></a><a name="getviewrect"></a> CListCtrl:: GetViewRect
 
 Pobiera prostokąt związany ze wszystkimi elementami w kontrolce widoku listy.
 
@@ -2542,7 +2568,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Widok listy musi znajdować się w widoku ikon lub w małej ikonie.
 
-## <a name="clistctrlgetworkareas"></a><a name="getworkareas"></a>CListCtrl:: GetWorkAreas
+## <a name="clistctrlgetworkareas"></a><a name="getworkareas"></a> CListCtrl:: GetWorkAreas
 
 Pobiera bieżące obszary robocze kontrolki widoku listy.
 
@@ -2568,7 +2594,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_GetWorkAr
 
 Zobacz przykład dla [CListCtrl:: GetNumberOfWorkAreas](#getnumberofworkareas).
 
-## <a name="clistctrlhasgroup"></a><a name="hasgroup"></a>CListCtrl:: HasGroup
+## <a name="clistctrlhasgroup"></a><a name="hasgroup"></a> CListCtrl:: HasGroup
 
 Określa, czy kontrolka widoku listy ma określoną grupę.
 
@@ -2589,7 +2615,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlhittest"></a><a name="hittest"></a>CListCtrl:: HitTest
+## <a name="clistctrlhittest"></a><a name="hittest"></a> CListCtrl:: HitTest
 
 Określa, który element widoku listy, jeśli istnieje, znajduje się na określonej pozycji.
 
@@ -2644,7 +2670,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="clistctrlinsertcolumn"></a><a name="insertcolumn"></a>CListCtrl:: InsertColumn
+## <a name="clistctrlinsertcolumn"></a><a name="insertcolumn"></a> CListCtrl:: InsertColumn
 
 Wstawia nową kolumnę w kontrolce widoku listy.
 
@@ -2691,7 +2717,7 @@ Kolumna z lewej strony w kontrolce widoku listy musi być wyrównana do lewej.
 
 Struktura [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) zawiera atrybuty kolumny w widoku raportu. Jest on również używany do uzyskiwania informacji o kolumnie. Ta struktura jest opisana w Windows SDK.
 
-## <a name="clistctrlinsertgroup"></a><a name="insertgroup"></a>CListCtrl:: INSERT
+## <a name="clistctrlinsertgroup"></a><a name="insertgroup"></a> CListCtrl:: INSERT
 
 Wstawia grupę do kontrolki widok listy.
 
@@ -2717,7 +2743,7 @@ Zwraca indeks elementu, do którego Grupa została dodana, lub-1, jeśli operacj
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlinsertgroupsorted"></a><a name="insertgroupsorted"></a>CListCtrl:: InsertGroupSorted
+## <a name="clistctrlinsertgroupsorted"></a><a name="insertgroupsorted"></a> CListCtrl:: InsertGroupSorted
 
 Wstawia określoną grupę do uporządkowanej listy grup.
 
@@ -2738,7 +2764,7 @@ Wartość zwracana nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlinsertitem"></a><a name="insertitem"></a>CListCtrl:: InsertItem
+## <a name="clistctrlinsertitem"></a><a name="insertitem"></a> CListCtrl:: InsertItem
 
 Wstawia element do kontrolki widoku listy.
 
@@ -2822,7 +2848,7 @@ Wywołanie tej metody może spowodować wysłanie komunikatu LVM_INSERTITEM do o
         }
 ```
 
-## <a name="clistctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CListCtrl:: InsertMarkHitTest
+## <a name="clistctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a> CListCtrl:: InsertMarkHitTest
 
 Pobiera punkt wstawiania najbliżej określonego punktu.
 
@@ -2848,7 +2874,7 @@ Punkt wstawiania znajdujący się najbliżej określonego punktu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlisgroupviewenabled"></a><a name="isgroupviewenabled"></a>CListCtrl:: IsGroupViewEnabled
+## <a name="clistctrlisgroupviewenabled"></a><a name="isgroupviewenabled"></a> CListCtrl:: IsGroupViewEnabled
 
 Określa, czy widok grupy jest włączony dla kontrolki widok listy.
 
@@ -2864,7 +2890,7 @@ Zwraca wartość TRUE, jeśli widok grupy jest włączony lub w przeciwnym razie
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlisitemvisible"></a><a name="isitemvisible"></a>CListCtrl:: IsItemVisible
+## <a name="clistctrlisitemvisible"></a><a name="isitemvisible"></a> CListCtrl:: IsItemVisible
 
 Wskazuje, czy określony element w bieżącym formancie listy jest widoczny.
 
@@ -2874,9 +2900,8 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*indeks*|podczas Indeks elementu na bieżącym formancie listy (liczony od zera).|
+*indeks*\
+podczas Indeks elementu na bieżącym formancie listy (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2886,7 +2911,7 @@ PRAWDA, jeśli określony element jest widoczny; w przeciwnym razie FALSE.
 
 Ta metoda wysyła komunikat [LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlmapidtoindex"></a><a name="mapidtoindex"></a>CListCtrl:: MapIDToIndex
+## <a name="clistctrlmapidtoindex"></a><a name="mapidtoindex"></a> CListCtrl:: MapIDToIndex
 
 Mapuje unikatowy identyfikator elementu na bieżącym formancie listy na indeks.
 
@@ -2896,9 +2921,8 @@ UINT MapIDToIndex(UINT id) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*id*|podczas Unikatowy identyfikator elementu.|
+*#c1*\
+podczas Unikatowy identyfikator elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2912,7 +2936,7 @@ Należy pamiętać, że w środowisku wielowątkowym indeks jest gwarantowany ty
 
 Ta metoda wysyła komunikat [LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlmapindextoid"></a><a name="mapindextoid"></a>CListCtrl:: MapIndexToID
+## <a name="clistctrlmapindextoid"></a><a name="mapindextoid"></a> CListCtrl:: MapIndexToID
 
 Mapuje indeks elementu w bieżącym formancie listy na unikatowy identyfikator.
 
@@ -2922,9 +2946,8 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*indeks*|podczas Indeks elementu (liczony od zera).|
+*indeks*\
+podczas Indeks elementu (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2978,7 +3001,7 @@ Poniższy przykład kodu demonstruje `MapIndexToID` metodę. W poprzedniej sekcj
         MB_ICONINFORMATION);
 ```
 
-## <a name="clistctrlmovegroup"></a><a name="movegroup"></a>CListCtrl:: Move
+## <a name="clistctrlmovegroup"></a><a name="movegroup"></a> CListCtrl:: Move
 
 Przenosi określoną grupę do określonego indeksu na podstawie zera w kontrolce widoku listy.
 
@@ -3004,7 +3027,7 @@ Wartość zwracana nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlmoveitemtogroup"></a><a name="moveitemtogroup"></a>CListCtrl:: MoveItemToGroup
+## <a name="clistctrlmoveitemtogroup"></a><a name="moveitemtogroup"></a> CListCtrl:: MoveItemToGroup
 
 Przenosi określony element do określonej grupy.
 
@@ -3029,7 +3052,7 @@ podczas Identyfikator grupy, do której zostanie przesunięty element.
 
 Ta metoda emuluje funkcjonalność komunikatu [LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlredrawitems"></a><a name="redrawitems"></a>CListCtrl:: RedrawItems
+## <a name="clistctrlredrawitems"></a><a name="redrawitems"></a> CListCtrl:: RedrawItems
 
 Wymusza, aby formant widoku listy odświeżał zakres elementów.
 
@@ -3055,7 +3078,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Określone elementy nie są w rzeczywistości odświeżane, dopóki okno widoku listy nie odbierze komunikatu WM_PAINT. Aby natychmiast wykonać odświeżenie, wywołaj funkcję [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) systemu Windows po użyciu tej funkcji.
 
-## <a name="clistctrlremoveallgroups"></a><a name="removeallgroups"></a>CListCtrl:: RemoveAllGroups
+## <a name="clistctrlremoveallgroups"></a><a name="removeallgroups"></a> CListCtrl:: RemoveAllGroups
 
 Usuwa wszystkie grupy z kontrolki widoku listy.
 
@@ -3067,7 +3090,7 @@ void RemoveAllGroups();
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlremovegroup"></a><a name="removegroup"></a>CListCtrl:: Remove
+## <a name="clistctrlremovegroup"></a><a name="removegroup"></a> CListCtrl:: Remove
 
 Usuwa określoną grupę z kontrolki widok listy.
 
@@ -3088,7 +3111,7 @@ Zwraca indeks grupy, jeśli się to powiedzie, lub-1 w przeciwnym razie.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_REMOVEGROUP](/windows/win32/Controls/lvm-removegroup) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlscroll"></a><a name="scroll"></a>CListCtrl:: Scroll
+## <a name="clistctrlscroll"></a><a name="scroll"></a> CListCtrl:: Scroll
 
 Przewija zawartość kontrolki widoku listy.
 
@@ -3105,7 +3128,7 @@ BOOL Scroll(CSize size);
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
-## <a name="clistctrlsetbkcolor"></a><a name="setbkcolor"></a>CListCtrl:: SetBkColor
+## <a name="clistctrlsetbkcolor"></a><a name="setbkcolor"></a> CListCtrl:: SetBkColor
 
 Ustawia kolor tła kontrolki widoku listy.
 
@@ -3131,7 +3154,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-## <a name="clistctrlsetbkimage"></a><a name="setbkimage"></a>CListCtrl:: SetBkImage
+## <a name="clistctrlsetbkimage"></a><a name="setbkimage"></a> CListCtrl:: SetBkImage
 
 Ustawia obraz tła kontrolki widoku listy.
 
@@ -3184,7 +3207,7 @@ Zwraca wartość różną od zera, jeśli kończy się pomyślnie, lub zero w pr
 
 Zobacz przykład dla [CListCtrl:: GetBkImage](#getbkimage).
 
-## <a name="clistctrlsetcallbackmask"></a><a name="setcallbackmask"></a>CListCtrl:: SetCallbackMask
+## <a name="clistctrlsetcallbackmask"></a><a name="setcallbackmask"></a> CListCtrl:: SetCallbackMask
 
 Ustawia maskę wywołania zwrotnego dla kontrolki widoku listy.
 
@@ -3211,7 +3234,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         (LVIS_SELECTED|LVIS_FOCUSED));
 ```
 
-## <a name="clistctrlsetcheck"></a><a name="setcheck"></a>CListCtrl:: SetCheck
+## <a name="clistctrlsetcheck"></a><a name="setcheck"></a> CListCtrl:: SetCheck
 
 Określa, czy obraz stanu elementu kontrolki listy jest widoczny.
 
@@ -3250,7 +3273,7 @@ Niezerowe, jeśli element jest zaznaczony, w przeciwnym razie 0.
         }
 ```
 
-## <a name="clistctrlsetcolumn"></a><a name="setcolumn"></a>CListCtrl:: SetColumn
+## <a name="clistctrlsetcolumn"></a><a name="setcolumn"></a> CListCtrl:: SetColumn
 
 Ustawia atrybuty kolumny widoku listy.
 
@@ -3276,7 +3299,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Zobacz przykład dla [CListCtrl:: GetColumn](#getcolumn).
 
-## <a name="clistctrlsetcolumnorderarray"></a><a name="setcolumnorderarray"></a>CListCtrl:: SetColumnOrderArray
+## <a name="clistctrlsetcolumnorderarray"></a><a name="setcolumnorderarray"></a> CListCtrl:: SetColumnOrderArray
 
 Ustawia kolejność kolumn (od lewej do prawej) kontrolki widoku listy.
 
@@ -3306,7 +3329,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetColumn
 
 Zobacz przykład dla [CListCtrl:: GetColumnOrderArray](#getcolumnorderarray).
 
-## <a name="clistctrlsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListCtrl:: SetColumnWidth
+## <a name="clistctrlsetcolumnwidth"></a><a name="setcolumnwidth"></a> CListCtrl:: SetColumnWidth
 
 Zmienia szerokość kolumny w widoku raportu lub widoku listy.
 
@@ -3328,7 +3351,7 @@ Nowa szerokość kolumny. Może to być LVSCW_AUTOSIZE lub LVSCW_AUTOSIZE_USEHEA
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
-## <a name="clistctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CListCtrl:: setextended
+## <a name="clistctrlsetextendedstyle"></a><a name="setextendedstyle"></a> CListCtrl:: setextended
 
 Ustawia bieżące rozszerzone style kontrolki widoku listy.
 
@@ -3357,7 +3380,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetExtend
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-## <a name="clistctrlsetgroupinfo"></a><a name="setgroupinfo"></a>CListCtrl:: SetGroupInfo
+## <a name="clistctrlsetgroupinfo"></a><a name="setgroupinfo"></a> CListCtrl:: SetGroupInfo
 
 Ustawia informacje opisujące określoną grupę bieżącej kontrolki widoku listy.
 
@@ -3383,7 +3406,7 @@ Identyfikator grupy, jeśli metoda zakończy się pomyślnie; w przeciwnym razie
 
 Ta metoda wysyła komunikat [LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlsetgroupmetrics"></a><a name="setgroupmetrics"></a>CListCtrl:: SetGroupMetrics
+## <a name="clistctrlsetgroupmetrics"></a><a name="setgroupmetrics"></a> CListCtrl:: SetGroupMetrics
 
 Ustawia metryki grupy kontrolki widoku listy.
 
@@ -3400,7 +3423,7 @@ Wskaźnik do struktury [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsethotcursor"></a><a name="sethotcursor"></a>CListCtrl:: SetHotCursor
+## <a name="clistctrlsethotcursor"></a><a name="sethotcursor"></a> CListCtrl:: SetHotCursor
 
 Ustawia kursor używany, gdy aktywne śledzenie jest włączone dla kontrolki widok listy.
 
@@ -3427,7 +3450,7 @@ Kursor gorące, widoczny tylko po włączeniu opcji przesuwania, pojawia się, g
 
 Zobacz przykład dla [CListCtrl:: GetHotCursor](#gethotcursor).
 
-## <a name="clistctrlsethotitem"></a><a name="sethotitem"></a>CListCtrl:: SetHotItem
+## <a name="clistctrlsethotitem"></a><a name="sethotitem"></a> CListCtrl:: SetHotItem
 
 Ustawia bieżący gorącą pozycję kontrolki widoku listy.
 
@@ -3452,7 +3475,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetHotIte
 
 Zobacz przykład dla [CListCtrl:: GetHotItem](#gethotitem).
 
-## <a name="clistctrlsethovertime"></a><a name="sethovertime"></a>CListCtrl:: SetHoverTime
+## <a name="clistctrlsethovertime"></a><a name="sethovertime"></a> CListCtrl:: SetHoverTime
 
 Ustawia bieżący czas aktywowania kontrolki widoku listy.
 
@@ -3477,7 +3500,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetHoverT
 
 Zobacz przykład dla [CListCtrl:: GetHoverTime](#gethovertime).
 
-## <a name="clistctrlseticonspacing"></a><a name="seticonspacing"></a>CListCtrl:: SetIconSpacing
+## <a name="clistctrlseticonspacing"></a><a name="seticonspacing"></a> CListCtrl:: SetIconSpacing
 
 Ustawia odstępy między ikonami w kontrolce widoku listy.
 
@@ -3515,7 +3538,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetIconSp
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-## <a name="clistctrlsetimagelist"></a><a name="setimagelist"></a>CListCtrl:: SetImageList
+## <a name="clistctrlsetimagelist"></a><a name="setimagelist"></a> CListCtrl:: SetImageList
 
 Przypisuje listę obrazów do kontrolki widok listy.
 
@@ -3547,7 +3570,7 @@ Wskaźnik do poprzedniej listy obrazów.
 
 Zobacz przykład dla [CListCtrl:: GetImageList](#getimagelist).
 
-## <a name="clistctrlsetinfotip"></a><a name="setinfotip"></a>CListCtrl:: SetInfoTip
+## <a name="clistctrlsetinfotip"></a><a name="setinfotip"></a> CListCtrl:: SetInfoTip
 
 Ustawia tekst etykietki narzędzia.
 
@@ -3568,7 +3591,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetinsertmark"></a><a name="setinsertmark"></a>CListCtrl:: SetInsertMark
+## <a name="clistctrlsetinsertmark"></a><a name="setinsertmark"></a> CListCtrl:: SetInsertMark
 
 Ustawia punkt wstawiania na zdefiniowaną pozycję.
 
@@ -3589,7 +3612,7 @@ Zwraca wartość TRUE, jeśli powodzenie, lub FALSE w przeciwnym razie. Zwraca w
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CListCtrl:: SetInsertMarkColor
+## <a name="clistctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a> CListCtrl:: SetInsertMarkColor
 
 Ustawia kolor punktu wstawiania.
 
@@ -3610,7 +3633,7 @@ Zwraca `COLORREF` strukturę zawierającą poprzedni kolor.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetitem"></a><a name="setitem"></a>CListCtrl:: SetItem
+## <a name="clistctrlsetitem"></a><a name="setitem"></a> CListCtrl:: SetItem
 
 Ustawia niektóre lub wszystkie atrybuty elementu widoku listy.
 
@@ -3689,7 +3712,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Zobacz przykład dla [CListCtrl:: HitTest](#hittest).
 
-## <a name="clistctrlsetitemcount"></a><a name="setitemcount"></a>CListCtrl:: SetItemCount
+## <a name="clistctrlsetitemcount"></a><a name="setitemcount"></a> CListCtrl:: SetItemCount
 
 Przygotowuje kontrolkę widok listy do dodawania dużej liczby elementów.
 
@@ -3725,7 +3748,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetItemCo
         }
 ```
 
-## <a name="clistctrlsetitemcountex"></a><a name="setitemcountex"></a>CListCtrl:: SetItemCountEx
+## <a name="clistctrlsetitemcountex"></a><a name="setitemcountex"></a> CListCtrl:: SetItemCountEx
 
 Ustawia liczbę elementów dla kontrolki widoku listy wirtualnej.
 
@@ -3774,7 +3797,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetItemCo
         }
 ```
 
-## <a name="clistctrlsetitemdata"></a><a name="setitemdata"></a>CListCtrl:: SetItemData
+## <a name="clistctrlsetitemdata"></a><a name="setitemdata"></a> CListCtrl:: SetItemData
 
 Ustawia 32-bitową wartość specyficzną dla aplikacji skojarzoną z elementem określonym przez *nitem*.
 
@@ -3808,7 +3831,7 @@ Ta wartość jest `lParam` składową struktury [LVITEM](/windows/win32/api/comm
     }
 ```
 
-## <a name="clistctrlsetitemindexstate"></a><a name="setitemindexstate"></a>CListCtrl:: SetItemIndexState
+## <a name="clistctrlsetitemindexstate"></a><a name="setitemindexstate"></a> CListCtrl:: SetItemIndexState
 
 Ustawia stan elementu w bieżącej kontrolce widoku listy.
 
@@ -3821,11 +3844,14 @@ BOOL SetItemIndexState(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pItemIndex*|podczas Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , która opisuje element. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i Ustawianie jej elementów członkowskich.|
-|*dwState*|podczas Stan ustawiania elementu, który jest bitową kombinacją [Stanów elementów widoku listy](/windows/win32/Controls/list-view-item-states). Określ wartość zero do zresetowania lub jeden do ustawienia stan.|
-|*dwMask*|podczas Maska prawidłowych bitów stanu określonego przez parametr *dwState* . Określ kombinację bitową (lub) [elementów widoku listy](/windows/win32/Controls/list-view-item-states).|
+*pItemIndex*\
+podczas Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , która opisuje element. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i Ustawianie jej elementów członkowskich.
+
+*dwState*\
+podczas Stan ustawiania elementu, który jest bitową kombinacją [Stanów elementów widoku listy](/windows/win32/Controls/list-view-item-states). Określ wartość zero do zresetowania lub jeden do ustawienia stan.
+
+*dwMask*\
+podczas Maska prawidłowych bitów stanu określonego przez parametr *dwState* . Określ kombinację bitową (lub) [elementów widoku listy](/windows/win32/Controls/list-view-item-states).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3839,7 +3865,7 @@ Aby uzyskać więcej informacji na temat parametru *dwMask* , zobacz element cz�
 
 Ta metoda wysyła komunikat [LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate) , który jest opisany w Windows SDK.
 
-## <a name="clistctrlsetitemposition"></a><a name="setitemposition"></a>CListCtrl:: SetItemPosition
+## <a name="clistctrlsetitemposition"></a><a name="setitemposition"></a> CListCtrl:: SetItemPosition
 
 Przenosi element do określonej pozycji w kontrolce widoku listy.
 
@@ -3871,7 +3897,7 @@ Jeśli kontrolka widok listy ma styl LVS_AUTOARRANGE, widok listy jest układany
 
 Zobacz przykład dla [CListCtrl:: GetItemPosition](#getitemposition).
 
-## <a name="clistctrlsetitemstate"></a><a name="setitemstate"></a>CListCtrl:: SetItemState
+## <a name="clistctrlsetitemstate"></a><a name="setitemstate"></a> CListCtrl:: SetItemState
 
 Zmienia stan elementu w kontrolce widoku listy.
 
@@ -3912,7 +3938,7 @@ Element "State" jest wartością, która określa dostępność elementu, wskazu
 
 Zobacz przykład dla [CListCtrl:: GetTopIndex](#gettopindex).
 
-## <a name="clistctrlsetitemtext"></a><a name="setitemtext"></a>CListCtrl:: SetItemText
+## <a name="clistctrlsetitemtext"></a><a name="setitemtext"></a> CListCtrl:: SetItemText
 
 Zmienia tekst elementu lub podelementu widoku listy.
 
@@ -3946,7 +3972,7 @@ Ta metoda nie jest przeznaczona do użycia z kontrolkami zawierającymi styl okn
 
 Zobacz przykład dla [CListCtrl:: InsertItem](#insertitem).
 
-## <a name="clistctrlsetoutlinecolor"></a><a name="setoutlinecolor"></a>CListCtrl:: SetOutlineColor
+## <a name="clistctrlsetoutlinecolor"></a><a name="setoutlinecolor"></a> CListCtrl:: SetOutlineColor
 
 Ustawia kolor obramowania kontrolki widoku listy, jeśli ustawiono styl okna rozszerzonego [LVS_EX_BORDERSELECT](/windows/win32/Controls/list-view-window-styles) .
 
@@ -3967,7 +3993,7 @@ Poprzednia `COLORREF` struktura zawierająca kolor konturu
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetselectedcolumn"></a><a name="setselectedcolumn"></a>CListCtrl:: SetSelectedColumn
+## <a name="clistctrlsetselectedcolumn"></a><a name="setselectedcolumn"></a> CListCtrl:: SetSelectedColumn
 
 Ustawia wybraną kolumnę kontrolki widok listy.
 
@@ -3988,7 +4014,7 @@ Wartość zwracana nie jest używana.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETSELECTEDCOLUMN](/windows/win32/Controls/lvm-setselectedcolumn) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetselectionmark"></a><a name="setselectionmark"></a>CListCtrl:: SetSelectionMark
+## <a name="clistctrlsetselectionmark"></a><a name="setselectionmark"></a> CListCtrl:: SetSelectionMark
 
 Ustawia znacznik wyboru kontrolki widoku listy.
 
@@ -4013,7 +4039,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetSelect
 
 Zobacz przykład dla [CListCtrl:: GetSelectionMark](#getselectionmark).
 
-## <a name="clistctrlsettextbkcolor"></a><a name="settextbkcolor"></a>CListCtrl:: SetTextBkColor
+## <a name="clistctrlsettextbkcolor"></a><a name="settextbkcolor"></a> CListCtrl:: SetTextBkColor
 
 Ustawia kolor tła tekstu w kontrolce widoku listy.
 
@@ -4039,7 +4065,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
         ASSERT(m_myListCtrl.GetTextBkColor() == crBkColor);
 ```
 
-## <a name="clistctrlsettextcolor"></a><a name="settextcolor"></a>CListCtrl:: SetTextColor
+## <a name="clistctrlsettextcolor"></a><a name="settextcolor"></a> CListCtrl:: SetTextColor
 
 Ustawia kolor tekstu kontrolki widoku listy.
 
@@ -4066,7 +4092,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-## <a name="clistctrlsettileinfo"></a><a name="settileinfo"></a>CListCtrl:: SetTileInfo
+## <a name="clistctrlsettileinfo"></a><a name="settileinfo"></a> CListCtrl:: SetTileInfo
 
 Ustawia informacje dla kafelka kontrolki widok listy.
 
@@ -4087,7 +4113,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsettileviewinfo"></a><a name="settileviewinfo"></a>CListCtrl:: SetTileViewInfo
+## <a name="clistctrlsettileviewinfo"></a><a name="settileviewinfo"></a> CListCtrl:: SetTileViewInfo
 
 Ustawia informacje, które są używane przez kontrolkę widok listy w widoku kafelków.
 
@@ -4108,7 +4134,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsettooltips"></a><a name="settooltips"></a>CListCtrl:: setetykietki narzędzi
+## <a name="clistctrlsettooltips"></a><a name="settooltips"></a> CListCtrl:: setetykietki narzędzi
 
 Ustawia kontrolkę etykietki narzędzia, która będzie używana przez kontrolkę widok listy do wyświetlania etykietek narzędzi.
 
@@ -4131,7 +4157,7 @@ Ta funkcja członkowska implementuje zachowanie [LVM_SETTOOLTIPS](/windows/win32
 
 Aby nie używać etykietek narzędzi, wskaż LVS_NOTOOLTIPS stylu podczas tworzenia `CListCtrl` obiektu.
 
-## <a name="clistctrlsetview"></a><a name="setview"></a>CListCtrl:: setview
+## <a name="clistctrlsetview"></a><a name="setview"></a> CListCtrl:: setview
 
 Ustawia widok kontrolki widoku listy.
 
@@ -4152,7 +4178,7 @@ Zwraca wartość 1, jeśli się powiedzie, lub-1 w przeciwnym razie. Na przykła
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SETVIEW](/windows/win32/Controls/lvm-setview) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsetworkareas"></a><a name="setworkareas"></a>CListCtrl:: SetWorkAreas
+## <a name="clistctrlsetworkareas"></a><a name="setworkareas"></a> CListCtrl:: SetWorkAreas
 
 Ustawia obszar, w którym ikony mogą być wyświetlane w kontrolce widoku listy.
 
@@ -4181,7 +4207,7 @@ Ta funkcja członkowska implementuje zachowanie makra Win32, [ListView_SetWorkAr
     m_myListCtrl.SetWorkAreas(0, NULL);
 ```
 
-## <a name="clistctrlsortgroups"></a><a name="sortgroups"></a>CListCtrl:: SortGroups
+## <a name="clistctrlsortgroups"></a><a name="sortgroups"></a> CListCtrl:: SortGroups
 
 Używa funkcji porównywania zdefiniowanej przez aplikację do sortowania grup według identyfikatora w kontrolce widoku listy.
 
@@ -4207,7 +4233,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistctrlsortitems"></a><a name="sortitems"></a>CListCtrl:: SortItems
+## <a name="clistctrlsortitems"></a><a name="sortitems"></a> CListCtrl:: SortItems
 
 Sortuje elementy widoku listy przy użyciu funkcji porównywania zdefiniowanej przez aplikację.
 
@@ -4271,7 +4297,7 @@ void CListCtrlDlg::Sort()
 }
 ```
 
-## <a name="clistctrlsortitemsex"></a><a name="sortitemsex"></a>CListCtrl:: SortItemsEx
+## <a name="clistctrlsortitemsex"></a><a name="sortitemsex"></a> CListCtrl:: SortItemsEx
 
 Sortuje elementy bieżącej kontrolki widoku listy przy użyciu funkcji porównywania zdefiniowanej przez aplikację.
 
@@ -4283,10 +4309,11 @@ BOOL SortItemsEx(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pfnCompare*|podczas Adres funkcji porównywania zdefiniowanej przez aplikację.<br /><br /> Operacja sortowania wywołuje funkcję porównania za każdym razem, gdy należy określić względną kolejność dwóch elementów listy. Funkcja porównania musi być statycznym elementem członkowskim klasy lub autonomiczną funkcją, która nie jest elementem członkowskim żadnej klasy.|
-|*dwData*|podczas Wartość zdefiniowana przez aplikację przeniesiona do funkcji porównania.|
+*pfnCompare*\
+podczas Adres funkcji porównywania zdefiniowanej przez aplikację. Operacja sortowania wywołuje funkcję porównania za każdym razem, gdy należy określić względną kolejność dwóch elementów listy. Funkcja porównania musi być statycznym elementem członkowskim klasy lub autonomiczną funkcją, która nie jest elementem członkowskim żadnej klasy.
+
+*dwData*\
+podczas Wartość zdefiniowana przez aplikację przeniesiona do funkcji porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4357,7 +4384,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 }
 ```
 
-## <a name="clistctrlsubitemhittest"></a><a name="subitemhittest"></a>CListCtrl:: SubItemHitTest
+## <a name="clistctrlsubitemhittest"></a><a name="subitemhittest"></a> CListCtrl:: SubItemHitTest
 
 Określa, który element widoku listy, jeśli istnieje, znajduje się w danym położeniu.
 
@@ -4398,7 +4425,7 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="clistctrlupdate"></a><a name="update"></a>CListCtrl:: Update
+## <a name="clistctrlupdate"></a><a name="update"></a> CListCtrl:: Update
 
 Wymusza odświeżenie przez formant widoku listy elementu określonego przez *nitem*.
 
@@ -4423,7 +4450,7 @@ Ta funkcja Rozmieszcza również formant widoku listy, jeśli ma styl LVS_AUTOAR
 
 Zobacz przykład dla [CListCtrl:: GetSelectedCount](#getselectedcount).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład ROWLIST MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>

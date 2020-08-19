@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 594cec7d4898960cb78284dcbb5ad677027cd947
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219212"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561833"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf — Klasa
 
@@ -230,7 +230,7 @@ Obiekt klasy `basic_streambuf` <  `Elem` , `Tr`> przechowuje sześć wcześniej 
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf:: basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a> basic_streambuf:: basic_streambuf
 
 Konstruuje obiekt typu `basic_streambuf` .
 
@@ -251,7 +251,7 @@ Pierwszy chroniony Konstruktor przechowuje wskaźnik o wartości null we wszystk
 
 Drugi chroniony Konstruktor kopiuje wskaźniki i ustawienia regionalne z *prawej strony*.
 
-## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf:: char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
 Kojarzy nazwę typu z parametrem szablonu **elem** .
 
@@ -259,7 +259,7 @@ Kojarzy nazwę typu z parametrem szablonu **elem** .
 typedef Elem char_type;
 ```
 
-## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf:: eback
+## <a name="basic_streambufeback"></a><a name="eback"></a> basic_streambuf:: eback
 
 Funkcja chroniona zwracająca wskaźnik do początku buforu wejściowego.
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 Wskaźnik do początku buforu wejściowego.
 
-## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf:: egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a> basic_streambuf:: egptr
 
 Funkcja chroniona zwracająca wskaźnik tuż poza końcem buforu wejściowego.
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 Wskaźnik tuż poza końcem buforu wejściowego.
 
-## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf:: epptr
+## <a name="basic_streambufepptr"></a><a name="epptr"></a> basic_streambuf:: epptr
 
 Funkcja chroniona zwracająca wskaźnik tuż poza końcem buforu wyjściowego.
 
@@ -295,7 +295,7 @@ char_type *epptr() const;
 
 Wskaźnik tuż poza końcem buforu wyjściowego.
 
-## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf:: gbump
+## <a name="basic_streambufgbump"></a><a name="gbump"></a> basic_streambuf:: gbump
 
 Funkcja chroniona, która dodaje *liczbę* do następnego wskaźnika dla buforu wejściowego.
 
@@ -308,7 +308,7 @@ void gbump(int count);
 *liczbą*\
 Wartość, według której ma zostać umieszczony wskaźnik.
 
-## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf:: getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a> basic_streambuf:: getloc
 
 Pobiera ustawienia regionalne obiektu basic_streambuf.
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf:: GPTR
+## <a name="basic_streambufgptr"></a><a name="gptr"></a> basic_streambuf:: GPTR
 
 Funkcja chroniona zwracająca wskaźnik do następnego elementu buforu wejściowego.
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 Wskaźnik do następnego elementu buforu wejściowego.
 
-## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf:: imbue —
+## <a name="basic_streambufimbue"></a><a name="imbue"></a> basic_streambuf:: imbue —
 
 Chroniona funkcja wirtualna wywołana przez [pubimbue](#pubimbue).
 
@@ -371,7 +371,7 @@ Odwołanie do ustawień regionalnych.
 
 Zachowanie domyślne to nic nie rób.
 
-## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf:: in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a> basic_streambuf:: in_avail
 
 Zwraca liczbę elementów, które są gotowe do odczytu z bufora.
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf:: int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a> basic_streambuf:: int_type
 
 Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze szablonu.
 
@@ -413,7 +413,7 @@ Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze sz
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf:: off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a> basic_streambuf:: off_type
 
 Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze szablonu.
 
@@ -421,7 +421,7 @@ Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze sz
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf:: operator =
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a> basic_streambuf:: operator =
 
 Przypisuje wartości tego obiektu z innego `basic_streambuf` obiektu.
 
@@ -438,7 +438,7 @@ Odwołanie lvalue do `basic_streambuf` obiektu, który jest używany do przypisy
 
 Chroniony operator członkowski kopiuje z *prawej strony* wskaźniki kontrolujące bufor wejściowy i bufor wyjściowy. Przechowuje również `right.` [getloc ()](#getloc) w `locale object` . Zwraca wartość **`*this`** .
 
-## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf:: overflow
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a> basic_streambuf:: overflow
 
 Chroniona funkcja wirtualna, która może być wywoływana, gdy nowy znak zostanie wstawiony do pełnego buforu.
 
@@ -473,7 +473,7 @@ Funkcja zużywa znaki w obszarze Put między `pbase` `pptr` wskaźnikami i, a na
 
 Definicja użycia różni się między klasami pochodnymi. Na przykład `filebuf` Klasa zapisuje swoje znaki do pliku, podczas gdy `strstreambuf` Klasa przechowuje je w buforze i (Jeśli bufor jest wyznaczono jako dynamiczny), rozszerza bufor w odpowiedzi na wywołanie przepełnienia. To rozszerzenie jest osiągane przez zwolnienie starego buforu i zastąpienie go nowym, większym. Wskaźniki są dostosowywane w razie potrzeby.
 
-## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf::p nie powiodło się
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a> basic_streambuf::p nie powiodło się
 
 Chroniona funkcja wirtualna elementu członkowskiego, która próbuje umieścić element w strumieniu wejściowym, a następnie uczynić go bieżącym elementem (wskazywanym przez następny wskaźnik).
 
@@ -500,7 +500,7 @@ Jeśli * \_ meta* porównuje równe **traits_type:: EOF**, element do wypchnięc
 
 - W przypadku bufora strumienia ze wspólnymi strumieniami wejściowymi i wyjściowymi można ustawić pozycję putback, aby uzyskać dostęp do niektórych zewnętrznych miejsc docelowych, niektórych lub wszystkich elementów między wskaźnikiem początkowym i następnym dla buforu wyjściowego.
 
-## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::p Base
+## <a name="basic_streambufpbase"></a><a name="pbase"></a> basic_streambuf::p Base
 
 Funkcja chroniona zwracająca wskaźnik do początku buforu wyjściowego.
 
@@ -512,7 +512,7 @@ char_type *pbase() const;
 
 Wskaźnik do początku buforu wyjściowego.
 
-## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::p nierówności
+## <a name="basic_streambufpbump"></a><a name="pbump"></a> basic_streambuf::p nierówności
 
 Funkcja chroniona, która dodaje *liczbę* do następnego wskaźnika dla buforu danych wyjściowych.
 
@@ -525,7 +525,7 @@ void pbump(int count);
 *liczbą*\
 Liczba znaków, przez jaką należy przenieść pozycję zapisu do przodu.
 
-## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::p os_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a> basic_streambuf::p os_type
 
 Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze szablonu.
 
@@ -533,7 +533,7 @@ Kojarzy nazwę typu w basic_streambuf zakresie z jednym z typów w parametrze sz
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::p PTR
+## <a name="basic_streambufpptr"></a><a name="pptr"></a> basic_streambuf::p PTR
 
 Funkcja chroniona zwracająca wskaźnik do następnego elementu buforu wyjściowego.
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 Wskaźnik do następnego elementu buforu wyjściowego.
 
-## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::p ubimbue
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a> basic_streambuf::p ubimbue
 
 Ustawia ustawienia regionalne obiektu basic_streambuf.
 
@@ -570,7 +570,7 @@ Funkcja członkowska przechowuje wartość _ *Loc* w obiekcie Locals i wywołuje
 
 Zapoznaj się z przykładem [basic_ios:: imbue —](../standard-library/basic-ios-class.md#imbue) `pubimbue` .
 
-## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::p ubseekoff
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a> basic_streambuf::p ubseekoff
 
 Wywołuje [seekoff](#seekoff), chronioną funkcję wirtualną, która została zastąpiona w klasie pochodnej.
 
@@ -599,7 +599,7 @@ Zwraca nową pozycję lub nieprawidłową pozycję strumienia ( [seekoff](#seeko
 
 Przesuwa wskaźnik względem *_Way*.
 
-## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::p ubseekpos
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p ubseekpos
 
 Wywołuje [seekpos](#seekpos), chronioną funkcję wirtualną, która została zastąpiona w klasie pochodnej i resetuje bieżącą pozycję wskaźnika.
 
@@ -623,7 +623,7 @@ Nowa pozycja lub nieprawidłowa pozycja strumienia. Aby określić, czy pozycja 
 
 Funkcja członkowska zwraca [seekpos](#seekpos)(_ *SP*, `_Which` ).
 
-## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::p ubsetbuf
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a> basic_streambuf::p ubsetbuf
 
 Wywołuje [setbuf](#setbuf), chronioną funkcję wirtualną, która została zastąpiona w klasie pochodnej.
 
@@ -645,7 +645,7 @@ Rozmiar buforu.
 
 Zwraca [setbuf](#setbuf)( `_Buffer` , `count` ).
 
-## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::p ubsync
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a> basic_streambuf::p ubsync
 
 Wywołuje [synchronizację](#sync), chronioną funkcję wirtualną, która jest zastępowana w klasie pochodnej, i aktualizuje zewnętrzny strumień skojarzony z tym buforem.
 
@@ -657,7 +657,7 @@ int pubsync();
 
 Zwraca wartość [Sync](#sync) lub-1, jeśli wystąpi błąd.
 
-## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf:: sbumpc —
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a> basic_streambuf:: sbumpc —
 
 Odczytuje i zwraca bieżący element, przesuwając wskaźnik strumienia.
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf:: seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a> basic_streambuf:: seekoff
 
 Chroniona funkcja wirtualna elementu członkowskiego, która próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -738,7 +738,7 @@ Zwykle, jeśli **& ios_base:: w** ma wartość różną od zera, wpłynie to na 
 
 Jeśli funkcja się powiedzie w przypadku zmiany położenia lub położenia strumienia, zwraca wynikową pozycję strumienia lub jedną z wynikowych pozycji strumienia. W przeciwnym razie zwraca nieprawidłową pozycję strumienia. Domyślnym zachowaniem jest zwrócenie nieprawidłowej pozycji strumienia.
 
-## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf:: seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a> basic_streambuf:: seekpos
 
 Chroniona funkcja wirtualna elementu członkowskiego, która próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -766,7 +766,7 @@ Zwykle, jeśli **& ios_base:: w** ma wartość różną od zera, wpłynie to na 
 
 Jeśli funkcja się powiedzie w przypadku zmiany położenia lub położenia strumienia, zwraca wynikową pozycję strumienia lub jedną z wynikowych pozycji strumienia. W przeciwnym razie zwraca nieprawidłową pozycję strumienia (-1). Domyślnym zachowaniem jest zwrócenie nieprawidłowej pozycji strumienia.
 
-## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf:: setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a> basic_streambuf:: setbuf
 
 Chroniona funkcja wirtualna elementu członkowskiego, która wykonuje operację konkretną dla każdego pochodnego buforu strumienia.
 
@@ -790,9 +790,9 @@ Domyślne zachowanie to Return **`this`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf`zapewnia obszar pamięci, `streambuf` który ma być używany przez obiekt. Sposób użycia bufora zdefiniowanego w klasach pochodnych.
+Zobacz [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` zapewnia obszar pamięci, `streambuf` który ma być używany przez obiekt. Sposób użycia bufora zdefiniowanego w klasach pochodnych.
 
-## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf:: setg
+## <a name="basic_streambufsetg"></a><a name="setg"></a> basic_streambuf:: setg
 
 Funkcja chroniona, która przechowuje _ *Gbeg* w wskaźniku początkowym, `_Gnext` w następnym wskaźniku i `_Gend` w końcowym wskaźniku dla buforu wejściowego.
 
@@ -813,7 +813,7 @@ Wskaźnik do dowolnego miejsca w środku buforu.
 *_Gend*\
 Wskaźnik do końca buforu.
 
-## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf:: setp
+## <a name="basic_streambufsetp"></a><a name="setp"></a> basic_streambuf:: setp
 
 Funkcja chroniona, która przechowuje *_Pbeg* na początkowym wskaźniku i *_Pend* w końcowym wskaźniku dla buforu wyjściowego.
 
@@ -829,7 +829,7 @@ Wskaźnik do początku buforu.
 *_Pend*\
 Wskaźnik do końca buforu.
 
-## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf:: sgetc —
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a> basic_streambuf:: sgetc —
 
 Zwraca bieżący element bez zmiany pozycji w strumieniu.
 
@@ -865,7 +865,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf:: sgetn
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: sgetn
 
 Wyodrębnia do *liczby* znaków z buforu wejściowego i przechowuje je w udostępnionym buforze *PTR*.
 
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf:: showmanyc
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a> basic_streambuf:: showmanyc
 
 Chroniona funkcja wirtualna elementu członkowskiego zwracająca liczbę znaków, które mogą zostać wyodrębnione ze strumienia wejściowego, i upewnić się, że program nie będzie podlegać nieograniczonemu czekaniu.
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 Domyślne zachowanie ma zwrócić wartość zero.
 
-## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf:: snextc
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a> basic_streambuf:: snextc
 
 Odczytuje bieżący element i zwraca następujący element.
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf:: sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a> basic_streambuf:: sputbackc
 
 Umieszcza char_type w strumieniu.
 
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf:: sputc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a> basic_streambuf:: sputc
 
 Umieszcza znak w strumieniu.
 
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf:: sputn
+## <a name="basic_streambufsputn"></a><a name="sputn"></a> basic_streambuf:: sputn
 
 Umieszcza ciąg znaków w strumieniu.
 
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf:: stossc
+## <a name="basic_streambufstossc"></a><a name="stossc"></a> basic_streambuf:: stossc
 
 Przenieś poza bieżący element w strumieniu.
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf:: sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a> basic_streambuf:: sungetc
 
 Pobiera znak ze strumienia.
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf:: swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf:: swap
 
 Wymienia wartości w tym obiekcie dla wartości z podanego `basic_streambuf` obiektu.
 
@@ -1200,15 +1200,14 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Kliknij*|Odwołanie lvalue do `basic_streambuf` obiektu, który jest używany do wymiany wartości.|
+*Kliknij*\
+Odwołanie lvalue do `basic_streambuf` obiektu, który jest używany do wymiany wartości.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja chronionego elementu członkowskiego *wymienia wszystkie wskaźniki* kontrolujące `input buffer` i `output buffer` . Wymienia również `right.` [getloc ()](#getloc) z `locale` obiektem.
 
-## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf:: Sync
+## <a name="basic_streambufsync"></a><a name="sync"></a> basic_streambuf:: Sync
 
 Chroniona funkcja wirtualna, która próbuje zsynchronizować kontrolowane strumienie ze wszystkimi skojarzonymi strumieniami zewnętrznymi.
 
@@ -1222,9 +1221,9 @@ Jeśli funkcja nie może się powieść, zwraca wartość-1. Domyślne zachowani
 
 ### <a name="remarks"></a>Uwagi
 
-`sync`polega na zapisywaniu wszelkich elementów między wskaźnikiem początkowym i następnym dla buforu danych wyjściowych. Nie obejmuje umieszczania żadnych elementów między następnymi i końcowymi wskaźnikami dla buforu wejściowego.
+`sync` polega na zapisywaniu wszelkich elementów między wskaźnikiem początkowym i następnym dla buforu danych wyjściowych. Nie obejmuje umieszczania żadnych elementów między następnymi i końcowymi wskaźnikami dla buforu wejściowego.
 
-## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf:: traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a> basic_streambuf:: traits_type
 
 Kojarzy nazwę typu z parametrem szablonu **TR** .
 
@@ -1232,7 +1231,7 @@ Kojarzy nazwę typu z parametrem szablonu **TR** .
 typedef Tr traits_type;
 ```
 
-## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf:: uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a> basic_streambuf:: uflow
 
 Chroniona funkcja wirtualna, która wyodrębnia bieżący element ze strumienia wejściowego.
 
@@ -1256,7 +1255,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje wyodrębnić bież
 
 Jeśli funkcja nie może się powieść, zwraca **traits_type::**[EOF](../standard-library/char-traits-struct.md#eof)lub zgłasza wyjątek. W przeciwnym razie zwraca bieżący element `ch` w strumieniu wejściowym, przekonwertowany zgodnie z powyższym opisem, i postępuje następnym wskaźnikiem dla buforu wejściowego. Domyślnym zachowaniem [jest wywołanie](#underflow) niedopełnienia i, jeśli ta funkcja zwraca **traits_type:: EOF**, aby zwrócić **traits_type:: EOF**. W przeciwnym razie funkcja zwraca bieżący element **ch** w strumieniu wejściowym, przekonwertowany w opisany wcześniej sposób i postępuje zgodnie z kolejnymi wskaźnikami dla buforu wejściowego.
 
-## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf:: niedopełnienie
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a> basic_streambuf:: niedopełnienie
 
 Chroniona funkcja wirtualna w celu wyodrębnienia bieżącego elementu ze strumienia wejściowego.
 
@@ -1286,7 +1285,7 @@ Funkcja wirtualna `underflow` , z funkcjami [synchronizacji](#sync) i [przepełn
 
 W `strstreambuf` klasie `underflow` dostosowuje wskaźnik [egptr](#egptr) , aby uzyskać dostęp do magazynu, który został dynamicznie przydzielony przez wywołanie `overflow` .
 
-## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf:: xsgetn
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a> basic_streambuf:: xsgetn
 
 Chroniona funkcja wirtualna w celu wyodrębnienia elementów ze strumienia wejściowego.
 
@@ -1314,7 +1313,7 @@ Liczba wyodrębnionych elementów.
 
 Chroniona wirtualna funkcja członkowska wyodrębnia do *liczby* elementów ze strumienia wejściowego, tak jak gdyby powtarzające się wywołania [sbumpc —](#sbumpc)i zapisuje je w tablicy rozpoczynającej się od *PTR*. Zwraca liczbę elementów, które faktycznie zostały wyodrębnione.
 
-## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf:: xsputn
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: xsputn
 
 Chroniona funkcja wirtualna, która umożliwia wstawianie elementów do strumienia wyjściowego.
 
@@ -1338,7 +1337,7 @@ Liczba elementów rzeczywiście wstawionych do strumienia.
 
 Chroniona funkcja wirtualna elementu członkowskiego wstawia do *liczby* elementów w strumieniu danych wyjściowych, tak jak gdyby przez powtarzające się wywołania [sputc](#sputc), od tablicy rozpoczynającej się o *PTR*. Wstawianie znaków do strumienia wyjściowego zostaje zatrzymane po zapisaniu wszystkich znaków *Count* lub wywołania `sputc( count)` zostałyby zwrócone `traits::eof()` . Zwraca liczbę elementów, które faktycznie wstawiono.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\

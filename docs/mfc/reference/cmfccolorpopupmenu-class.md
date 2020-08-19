@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752495"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560988"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Klasa CMFCColorPopupMenu
 
-Reprezentuje wyskakujące menu używane przez użytkowników do wybierania kolorów w dokumencie lub aplikacji.
+Reprezentuje menu podręczne, którego użytkownicy używają do wybierania kolorów w dokumencie lub aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,53 +39,53 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |-|-|
 |Nazwa|Opis|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Konstruuje `CMFCColorPopupMenu` obiekt.|
-|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destruktora.|
+|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Tworzy dokowany pasek kolorów odrywany. (Zastępuje [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Zwraca [CMFCPopupMenuBar,](../../mfc/reference/cmfcpopupmenubar-class.md) który jest osadzony wewnątrz menu podręcznego. (Zastępuje [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
-|`CMFCColorPopupMenu::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|Ustawia obiekt kontrolny siatki właściwości `CMFCColorBar` osadzonego obiektu.|
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Tworzy pasek koloru odrywania było dokować. (Przesłania [CMFCPopupMenu:: CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
+|[CMFCColorPopupMenu:: getmenubar](#getmenubar)|Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzony w menu podręcznym. (Przesłania [CMFCPopupMenu:: getmenubar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)).|
+|`CMFCColorPopupMenu::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCColorPopupMenu::SetPropList](#setproplist)|Ustawia obiekt kontrolny siatki właściwości obiektu osadzonego `CMFCColorBar` .|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |||
 |-|-|
 |Nazwa|Opis|
-|`m_bEnabledInCustomizeMode`|Wartość logiczna określająca, czy pasek kolorów ma być pokazywał.|
-|`m_wndColorBar`|Obiekt, `CMFCColorBar` który zapewnia wybór kolorów.|
+|`m_bEnabledInCustomizeMode`|Wartość logiczna określająca, czy ma być pokazywany pasek koloru.|
+|`m_wndColorBar`|`CMFCColorBar`Obiekt, który zapewnia wybór koloru.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa dziedziczy funkcję menu podręcznego `CMFCPopupMenu` klasy i `CMFCColorBar` zarządza obiektem, który zapewnia wybór kolorów. Gdy struktura paska narzędzi jest w `m_bEnabledInCustomizeMode` trybie dostosowywania, a element członkowski jest ustawiony na FAŁSZ, obiekt paska kolorów nie jest wyświetlany. Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
+Ta klasa dziedziczy funkcje menu podręcznego `CMFCPopupMenu` klasy i zarządza `CMFCColorBar` obiektem, który zapewnia wybór koloru. Gdy struktura paska narzędzi jest w trybie dostosowywania, a `m_bEnabledInCustomizeMode` element członkowski ma wartość FAŁSZ, obiekt paska koloru nie jest pokazywany. Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar:: Isdostosowywaniemode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
 
-Aby uzyskać `CMFCColorBar`więcej informacji na temat , zobacz [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md).
+Aby uzyskać więcej informacji na temat `CMFCColorBar` , zobacz [Klasa CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[CMiniFrameWnd (CMiniFrameWnd)](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[Cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)
+[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
 [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcolorpopupmenu.h
+**Nagłówek:** afxcolorpopupmenu. h
 
-## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu
+## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a> CMFCColorPopupMenu::CMFCColorPopupMenu
 
 Konstruuje `CMFCColorPopupMenu` obiekt.
 
@@ -127,65 +127,65 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolory*<br/>
-[w] Tablica kolorów wyświetlanych w menu podręcznym.
+*świat*<br/>
+podczas Tablica kolorów, które są wyświetlane w strukturze w menu podręcznym.
 
-*color*<br/>
-[w] Domyślny wybrany kolor.
+*Kolor*<br/>
+podczas Domyślny wybrany kolor.
 
-*lpszautoColor*<br/>
-[w] Etykieta tekstowa *automatycznego* (domyślnego) przycisku koloru lub NULL.
+*lpszAutoColor*<br/>
+podczas Etykieta tekstowa *automatycznego* (domyślnego) przycisku koloru lub wartość null.
 
-Standardową etykietą przycisku automatycznego jest **Automatyczna**.
+Standardowa etykieta przycisku automatycznego jest **Automatyczna**.
 
 *lpszOtherColor*<br/>
-[w] Etykieta tekstowa *drugiego* przycisku, który wyświetla więcej opcji kolorów lub NULL.
+podczas Etykieta tekstowa *drugiego* przycisku, która wyświetla więcej opcji kolorów lub wartość null.
 
-Standardową etykietą dla drugiego przycisku jest **Więcej kolorów...**.
+Standardowa etykieta dla drugiego przycisku ma **więcej kolorów..**.
 
-*lpszDocKolory*<br/>
-[w] Etykieta tekstowa przycisku kolory dokumentu. Paleta kolorów dokumentu zawiera listę wszystkich kolorów używanych obecnie przez dokument.
+*lpszDocColors*<br/>
+podczas Etykieta tekstowa przycisku kolory dokumentu. W palecie kolory dokumentu są wyświetlane wszystkie kolory, których aktualnie używa dokument.
 
-*lstDocKolory*<br/>
-[w] Lista kolorów aktualnie używanych przez dokument.
+*lstDocColors*<br/>
+podczas Lista kolorów używanych obecnie przez dokument.
 
-*nKolumny*<br/>
-[w] Liczba kolumn, które ma tablica kolorów.
+*nColumns*<br/>
+podczas Liczba kolumn, które ma Tablica kolorów.
 
 *nHorzDockRows*<br/>
-[w] Liczba wierszy, które pasek kolorów ma, gdy jest zadokowany poziomo.
+podczas Liczba wierszy, po których pasek koloru jest zadokowany w poziomie.
 
-*nVertDockKolumny*<br/>
-[w] Liczba kolumn, które pasek kolorów ma, gdy jest zadokowany w pionie.
+*nVertDockColumns*<br/>
+podczas Liczba kolumn, które znajdują się na pasku kolorów, gdy jest zadokowany w pionie.
 
-*kolorAutomatyczny*<br/>
-[w] Domyślny kolor, który stosuje się po kliknięciu przycisku automatycznego.
+*colorAutomatic*<br/>
+podczas Domyślny kolor stosowany przez platformę po kliknięciu przycisku automatyczne.
 
-*identyfikator uiCommandID*<br/>
-[w] Identyfikator polecenia sterowania paska kolorów.
+*uiCommandID*<br/>
+podczas Identyfikator polecenia kontrolki paska kolorów.
 
 *bStdColorDlg*<br/>
-[w] Wartość logiczna wskazująca, czy ma być wyświetlane okno dialogowe standardowy kolor systemu, czy okno dialogowe [CMFCColorDialog.](../../mfc/reference/cmfccolordialog-class.md)
+podczas Wartość logiczna wskazująca, czy ma być wyświetlane okno dialogowe standardowy kolor systemu czy okno dialogowe [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) .
 
 *pParentBtn*<br/>
-[w] Wskaźnik do przycisku nadrzędnego.
+podczas Wskaźnik do przycisku nadrzędnego.
 
-*Nid*<br/>
-[w] Identyfikator polecenia.
+*nID*<br/>
+podczas Identyfikator polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy przeciążony konstruktor `m_bEnabledInCustomizeMode` ustawia element członkowski na FAŁSZ.
+Każdy przeciążony Konstruktor ustawia `m_bEnabledInCustomizeMode` element członkowski na wartość false.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak skonstruować `CMFCColorPopupMenu` obiekt.
+Poniższy przykład ilustruje sposób konstruowania `CMFCColorPopupMenu` obiektu.
 
 [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]
 
-## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar
+## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a> CMFCColorPopupMenu::CreateTearOffBar
 
-Tworzy dokowany pasek kolorów odrywany.
+Tworzy pasek koloru odrywania było dokować.
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -196,24 +196,26 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-|Parametr|Opis|
-|*pWndMain (Niem.*|[w] Wskaźnik do okna nadrzędnego paska odrywać.|
-|*Uiid*|[w] Identyfikator polecenia paska odrywu.|
-|*Lpszname*|[w] Tekst okna paska odrywu.|
+*pWndMain*\
+podczas Wskaźnik do okna nadrzędnego paska odrywania.
+
+*uiID*\
+podczas Identyfikator polecenia paska odrywania.
+
+*lpszName*\
+podczas Tekst okna paska odrywania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowego obiektu paska sterowania odrywać.
+Wskaźnik do nowego obiektu paska kontroli odrywania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) obiektu i rzutuje go do wskaźnika [klasy CPane.](../../mfc/reference/cpane-class.md) Tę wartość można oddać z powrotem do wskaźnika [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) przy użyciu jednego z makr rzutowania opisanych w [polu Rzutowanie typu obiektów klasy MFC.](../../mfc/reference/type-casting-of-mfc-class-objects.md)
+Ta metoda tworzy obiekt [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) i rzutuje go na wskaźnik [klasy CPane](../../mfc/reference/cpane-class.md) . Można rzutować tę wartość z powrotem na wskaźnik [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) przy użyciu jednego z makr rzutowania opisanych w obszarze [rzutowania obiektów klas MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).
 
-## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar
+## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a> CMFCColorPopupMenu:: getmenubar
 
-Zwraca [CMFCPopupMenuBar,](../../mfc/reference/cmfcpopupmenubar-class.md) który jest osadzony wewnątrz menu podręcznego.
+Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzony w menu podręcznym.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -221,15 +223,15 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do osadzonego `CMFCPopupMenuBar`.
+Wskaźnik do osadzonej `CMFCPopupMenuBar` .
 
 ### <a name="remarks"></a>Uwagi
 
-Kolorowe menu podręczne ma osadzony obiekt [CMFCPopupMenuBar Class.](../../mfc/reference/cmfcpopupmenubar-class.md) Zastąpuj tę metodę w klasie pochodnej, jeśli aplikacja używa innego typu osadzonego.
+Menu rozwijane kolor zawiera osadzony obiekt [klasy CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) . Zastąp tę metodę w klasie pochodnej, jeśli aplikacja używa innego typu osadzonego.
 
-## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFCColorPopupMenu::SetPropList
+## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a> CMFCColorPopupMenu::SetPropList
 
-Ustawia obiekt kontrolny siatki właściwości `CMFCColorBar` osadzonego obiektu.
+Ustawia obiekt kontrolny siatki właściwości obiektu osadzonego `CMFCColorBar` .
 
 ```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
@@ -237,8 +239,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 ### <a name="parameters"></a>Parametry
 
-*pWndList (Lista pWnd)*<br/>
-[w] Wskaźnik do obiektu sterującego siatką właściwości.
+*pWndList*<br/>
+podczas Wskaźnik do obiektu kontrolki siatki właściwości.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: f98b5698ff14349abf9300799f00c6d9121bcf65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222267"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561651"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size — Klasa
 
@@ -55,7 +55,7 @@ class max_variable_size
 
 **Przestrzeń nazw:** stdext
 
-## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size:: przydzielono
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a> max_variable_size:: przydzielono
 
 Zwiększa liczbę przydzieloną bloków pamięci.
 
@@ -65,15 +65,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Nx*|Wartość przyrostu.|
+*_Nx*\
+Wartość przyrostu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja członkowska dodaje *_Nx* do przechowywanej wartości `_Nallocs` . Ta funkcja członkowska jest wywoływana po każdym pomyślnym wywołaniu `cache_freelist::allocate` operatora **`new`** . Argument *_Nx* jest liczbą bloków pamięci w fragmencie przydzielonym przez operatora **`new`** .
 
-## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::d eallocated
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a> max_variable_size::d eallocated
 
 Zmniejsza liczbę przydzieloną bloków pamięci.
 
@@ -83,15 +82,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Nx*|Wartość przyrostu.|
+*_Nx*\
+Wartość przyrostu.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja członkowska odejmuje *_Nx* od przechowywanej wartości `_Nallocs` . Ta funkcja członkowska jest wywoływana po każdym wywołaniu `cache_freelist::deallocate` operatora **`delete`** . Argument *_Nx* jest liczbą bloków pamięci w przydzielonym operatorze fragmentów **`delete`** .
 
-## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size:: Full
+## <a name="max_variable_sizefull"></a><a name="full"></a> max_variable_size:: Full
 
 Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.
 
@@ -107,7 +105,7 @@ bool full();
 
 Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate` . Jeśli wywołanie zwraca **`true`** , `deallocate` umieszcza blok pamięci na liście bezpłatnej; jeśli zwraca wartość false, `deallocate` operator wywołań, **`delete`** Aby cofnąć alokację bloku.
 
-## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size:: max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a> max_variable_size:: max_variable_size
 
 Konstruuje obiekt typu `max_variable_size` .
 
@@ -119,7 +117,7 @@ max_variable_size();
 
 Konstruktor inicjuje przechowywane wartości `_Nblocks` i `_Nallocs` zero.
 
-## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size:: wydano
+## <a name="max_variable_sizereleased"></a><a name="released"></a> max_variable_size:: wydano
 
 Zmniejsza liczbę bloków pamięci na liście bezpłatnych.
 
@@ -131,7 +129,7 @@ void released();
 
 Ta funkcja członkowska zmniejsza przechowywaną wartość `_Nblocks` . `released`Funkcja członkowska bieżącej klasy Max jest wywoływana za `cache_freelist::allocate` każdym razem, gdy usuwa blok pamięci z listy bezpłatnych.
 
-## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size:: Zapisano
+## <a name="max_variable_sizesaved"></a><a name="saved"></a> max_variable_size:: Zapisano
 
 Zwiększa liczbę bloków pamięci na liście bezpłatnych.
 
@@ -143,6 +141,6 @@ void saved();
 
 Ta funkcja członkowska zwiększa przechowywaną wartość `_Nblocks` . Ta funkcja członkowska jest wywoływana za `cache_freelist::deallocate` każdym razem, gdy umieszcza blok pamięci na liście bezpłatnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<allocators>](../standard-library/allocators-header.md)

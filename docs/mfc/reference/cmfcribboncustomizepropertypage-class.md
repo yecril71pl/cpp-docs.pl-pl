@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d36e3a301aa5b861c296b0bb4859e9442dbdb75e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754177"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560884"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Klasa CMFCRibbonCustomizePropertyPage
 
-Implementuje niestandardową stronę okna dialogowego **Dostosowywanie** w aplikacjach opartych na wstążce.
+Implementuje niestandardową stronę dla okna dialogowego **Dostosowywanie** w aplikacjach opartych na wstążki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,51 +37,51 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |-|-|
 |Nazwa|Opis|
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Konstruuje `CMFCRibbonCustomizePropertyPage` obiekt.|
-|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destruktora.|
+|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Dodaje kategorię niestandardową do pola kombi **Polecenia.**|
-|`CMFCRibbonCustomizePropertyPage::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Wywoływane przez system, gdy użytkownik kliknie **przycisk OK** w oknie dialogowym **Dostosowywanie.**|
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Dodaje kategorię niestandardową do pola kombi **Commands** .|
+|`CMFCRibbonCustomizePropertyPage::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCRibbonCustomizePropertyPage:: OnOK —](#onok)|Wywoływane przez system, gdy użytkownik kliknie przycisk **OK** w oknie dialogowym **Dostosuj** .|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby dodać polecenia niestandardowe do okna dialogowego **Dostosowywanie,** należy obsłużyć komunikat AFX_WM_ON_RIBBON_CUSTOMIZE. W programie obsługi wiadomości wystąpienia `CMFCRibbonCustomizePropertyPage` obiektu na stosie. Utwórz listę poleceń niestandardowych, `AddCustomCategory` a następnie zadzwoń, aby dodać nową stronę do okna dialogowego **Dostosowywanie.**
+Jeśli chcesz dodać niestandardowe polecenia do okna dialogowego **Dostosowywanie** , musisz obsłużyć AFX_WM_ON_RIBBON_CUSTOMIZE komunikat. W programie obsługi komunikatów Utwórz wystąpienie `CMFCRibbonCustomizePropertyPage` obiektu na stosie. Utwórz listę poleceń niestandardowych, a następnie Wywołaj polecenie, `AddCustomCategory` Aby dodać nową stronę do okna dialogowego **Dostosowywanie** .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak skonstruować `CMFCRibbonCustomizePropertyPage` obiekt i dodać kategorię niestandardową.
+Poniższy przykład ilustruje sposób konstruowania `CMFCRibbonCustomizePropertyPage` obiektu i dodawania kategorii niestandardowej.
 
 [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cpropertypage](../../mfc/reference/cpropertypage-class.md)
+[CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[STRONA CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
+[CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
 [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxribboncustomizedialog.h
+**Nagłówek:** afxribboncustomizedialog. h
 
-## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory
+## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a> CMFCRibbonCustomizePropertyPage::AddCustomCategory
 
-Dodaje kategorię niestandardową do pola kombi **Polecenia.**
+Dodaje kategorię niestandardową do pola kombi **Commands** .
 
 ```cpp
 void AddCustomCategory(
@@ -91,17 +91,17 @@ void AddCustomCategory(
 
 ### <a name="parameters"></a>Parametry
 
-|||
-|-|-|
-|Parametr|Opis|
-|*Lpszname*|[w] Określa niestandardową nazwę kategorii.|
-|*lstIDS (lstIDS)*|[w] Zawiera identyfikatory poleceń wstążki, które mają być wyświetlane w kategorii niestandardowej.|
+*lpszName*\
+podczas Określa niestandardową nazwę kategorii.
+
+*lstIDS*\
+podczas Zawiera identyfikatory poleceń wstążki, które mają być wyświetlane w kategorii niestandardowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda dodaje kategorię o nazwie *lpszName* do pola kombi **Polecenia.** Gdy użytkownik wybierze kategorię, polecenia określone w *lstIDS* pojawiają się na liście poleceń.
+Ta metoda dodaje kategorię o nazwie *lpszName* do pola kombi **Commands** . Gdy użytkownik wybierze kategorię, polecenia określone w *lstIDS* pojawiają się na liście poleceń.
 
-## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a> CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
 
 Konstruuje `CMFCRibbonCustomizePropertyPage` obiekt.
 
@@ -111,12 +111,12 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pRibbonBar (pRibbonBar)*<br/>
-[w] Wskaźnik do formantu wstążki, dla którego opcje dostosowywania.
+*pRibbonBar*<br/>
+podczas Wskaźnik do kontrolki wstążki, dla której można dostosować opcje.
 
-## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK
+## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a> CMFCRibbonCustomizePropertyPage:: OnOK —
 
-Wywołanie przez system, gdy użytkownik kliknie **przycisk OK** w oknie dialogowym **Dostosowywanie.**
+Calleld przez system, gdy użytkownik kliknie przycisk **OK** w oknie dialogowym **Dostosuj** .
 
 ```
 virtual void OnOK();
@@ -124,7 +124,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja stosuje opcje wybrane w oknie dialogowym **Dostosowywanie** do paska narzędzi Szybki dostęp.
+Implementacja domyślna stosuje opcje wybrane w oknie dialogowym **Dostosuj** do paska narzędzi Szybki dostęp.
 
 ## <a name="see-also"></a>Zobacz też
 

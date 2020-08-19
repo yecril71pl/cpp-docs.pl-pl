@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: b31e8d28cba5199d0a40a050bb2b284cfafc5c55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e40f08447d24eed51588b5c2dfa87e289d99eed
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212426"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561581"
 ---
 # <a name="cframewnd-class"></a>Klasa obiektu CFrameWnd
 
@@ -211,7 +211,7 @@ Przed wywołaniem `Create` lub należy `LoadFrame` skonstruować obiekt okna ram
 
 Użyj `Create` funkcji członkowskiej, aby przekazać parametry tworzenia ramki jako natychmiastowe argumenty.
 
-`LoadFrame`wymaga mniej argumentów niż `Create` , a zamiast tego pobiera większość wartości domyślnych z zasobów, w tym podpis ramki, ikonę, tabelę akceleratorów i menu. Aby można było uzyskać dostęp do programu `LoadFrame` , wszystkie te zasoby muszą mieć ten sam identyfikator zasobu (na przykład IDR_MAINFRAME).
+`LoadFrame` wymaga mniej argumentów niż `Create` , a zamiast tego pobiera większość wartości domyślnych z zasobów, w tym podpis ramki, ikonę, tabelę akceleratorów i menu. Aby można było uzyskać dostęp do programu `LoadFrame` , wszystkie te zasoby muszą mieć ten sam identyfikator zasobu (na przykład IDR_MAINFRAME).
 
 Gdy `CFrameWnd` obiekt zawiera widoki i dokumenty, są one tworzone pośrednio przez platformę, a nie bezpośrednio przez programistę. Obiekt organizuje `CDocTemplate` Tworzenie ramki, Tworzenie widoków zawierających i łączenie widoków z odpowiednim dokumentem. Parametry `CDocTemplate` konstruktora określają `CRuntimeClass` spośród trzech należących do siebie klas (dokumentu, ramki i widoku). `CRuntimeClass`Obiekt jest używany przez platformę do dynamicznego tworzenia nowych ramek, gdy jest określony przez użytkownika (na przykład przy użyciu polecenia New lub New File Interface (MDI) okna.
 
@@ -257,7 +257,7 @@ Aby uzyskać więcej informacji na temat `CFrameWnd` , zobacz [okna ramek](../..
 
 **Nagłówek:** afxwin. h
 
-## <a name="cframewndactivateframe"></a><a name="activateframe"></a>Obiektu CFrameWnd:: ActivateFrame
+## <a name="cframewndactivateframe"></a><a name="activateframe"></a> Obiektu CFrameWnd:: ActivateFrame
 
 Wywołaj tę funkcję elementu członkowskiego, aby uaktywnić i przywrócić okno ramki, aby było ono widoczne i dostępne dla użytkownika.
 
@@ -282,7 +282,7 @@ Przesłoń tę funkcję elementu członkowskiego, aby zmienić sposób uaktywnia
 
 [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]
 
-## <a name="cframewndbeginmodalstate"></a><a name="beginmodalstate"></a>Obiektu CFrameWnd:: BeginModalState
+## <a name="cframewndbeginmodalstate"></a><a name="beginmodalstate"></a> Obiektu CFrameWnd:: BeginModalState
 
 Wywołaj tę funkcję elementu członkowskiego, aby uczynić ramką modalną okna.
 
@@ -290,7 +290,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uczynić ramką modalną okn
 virtual void BeginModalState();
 ```
 
-## <a name="cframewndcframewnd"></a><a name="cframewnd"></a>Obiektu CFrameWnd:: obiektu CFrameWnd
+## <a name="cframewndcframewnd"></a><a name="cframewnd"></a> Obiektu CFrameWnd:: obiektu CFrameWnd
 
 Konstruuje `CFrameWnd` obiekt, ale nie tworzy okna widocznej ramki.
 
@@ -302,7 +302,7 @@ CFrameWnd();
 
 Wywołaj `Create` , aby utworzyć widoczne okno.
 
-## <a name="cframewndcreate"></a><a name="create"></a>Obiektu CFrameWnd:: Create
+## <a name="cframewndcreate"></a><a name="create"></a> Obiektu CFrameWnd:: Create
 
 Wywołaj, aby utworzyć i zainicjować okno ramki systemu Windows skojarzone z `CFrameWnd` obiektem.
 
@@ -350,11 +350,11 @@ Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Utwórz `CFrameWnd` obiekt w dwóch krokach. Najpierw Wywołaj konstruktora, który konstruuje `CFrameWnd` obiekt, a następnie Wywołaj `Create` , który tworzy okno ramki systemu Windows i dołącza go do `CFrameWnd` obiektu. `Create`Inicjuje nazwę klasy okna i nazwę okna i rejestruje wartości domyślne dla jego stylu, elementu nadrzędnego i menu skojarzone.
+Utwórz `CFrameWnd` obiekt w dwóch krokach. Najpierw Wywołaj konstruktora, który konstruuje `CFrameWnd` obiekt, a następnie Wywołaj `Create` , który tworzy okno ramki systemu Windows i dołącza go do `CFrameWnd` obiektu. `Create` Inicjuje nazwę klasy okna i nazwę okna i rejestruje wartości domyślne dla jego stylu, elementu nadrzędnego i menu skojarzone.
 
 Zamiast `LoadFrame` określania argumentów, należy użyć zamiast nie `Create` ładować okna ramki z zasobu.
 
-## <a name="cframewndcreateview"></a><a name="createview"></a>Obiektu CFrameWnd:: isView
+## <a name="cframewndcreateview"></a><a name="createview"></a> Obiektu CFrameWnd:: isView
 
 Wywołanie `CreateView` tworzenia widoku w obrębie ramki.
 
@@ -380,7 +380,7 @@ Wskaźnik do `CWnd` obiektu, jeśli się powiedzie; w przeciwnym razie wartość
 
 Użyj tej funkcji elementu członkowskiego, aby utworzyć "widoki", które nie są `CView` wyprowadzane wewnątrz ramki. Po wywołaniu `CreateView` należy ręcznie ustawić widok na aktywny i ustawić go jako widoczny. te zadania nie są automatycznie wykonywane przez program `CreateView` .
 
-## <a name="cframewnddockcontrolbar"></a><a name="dockcontrolbar"></a>Obiektu CFrameWnd::D ockControlBar
+## <a name="cframewnddockcontrolbar"></a><a name="dockcontrolbar"></a> Obiektu CFrameWnd::D ockControlBar
 
 Powoduje zadokowanie paska sterowania do okna ramki.
 
@@ -416,7 +416,7 @@ Określa współrzędne ekranu, w których pasek sterowania będzie zadokowany w
 
 Pasek sterowania zostanie zadokowany do jednej z boków okna ramki określonego w wywołaniach do obu [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) i [obiektu CFrameWnd:: EnableDocking](#enabledocking). Wybrana strona jest określana przez *nDockBarID*.
 
-## <a name="cframewndenabledocking"></a><a name="enabledocking"></a>Obiektu CFrameWnd:: EnableDocking
+## <a name="cframewndenabledocking"></a><a name="enabledocking"></a> Obiektu CFrameWnd:: EnableDocking
 
 Wywołaj tę funkcję, aby włączyć paski kontrolne było dokować w oknie ramki.
 
@@ -447,7 +447,7 @@ Domyślnie paski sterowania będą zadokowane po stronie okna ramki w następuj�
 
   Zobacz przykład dla [CToolBar:: Create](../../mfc/reference/ctoolbar-class.md#create).
 
-## <a name="cframewndendmodalstate"></a><a name="endmodalstate"></a>Obiektu CFrameWnd:: EndModalState
+## <a name="cframewndendmodalstate"></a><a name="endmodalstate"></a> Obiektu CFrameWnd:: EndModalState
 
 Wywołaj tę funkcję elementu członkowskiego, aby zmienić okno ramki z modalne na niemodalne.
 
@@ -457,9 +457,9 @@ virtual void EndModalState();
 
 ### <a name="remarks"></a>Uwagi
 
-`EndModalState`włącza wszystkie okna wyłączone przez [BeginModalState](#beginmodalstate).
+`EndModalState` włącza wszystkie okna wyłączone przez [BeginModalState](#beginmodalstate).
 
-## <a name="cframewndfloatcontrolbar"></a><a name="floatcontrolbar"></a>Obiektu CFrameWnd:: FloatControlBar
+## <a name="cframewndfloatcontrolbar"></a><a name="floatcontrolbar"></a> Obiektu CFrameWnd:: FloatControlBar
 
 Wywołaj tę funkcję, aby uniemożliwić przedokowanie paska sterowania do okna ramki.
 
@@ -497,7 +497,7 @@ Zwykle odbywa się to podczas uruchamiania aplikacji, gdy program przywraca usta
 
 Ta funkcja jest wywoływana przez platformę, gdy użytkownik powoduje operację usuwania, zwalniając lewy przycisk myszy, przeciągając pasek sterowania na lokalizację, która nie jest dostępna do dokowania.
 
-## <a name="cframewndgetactivedocument"></a><a name="getactivedocument"></a>Obiektu CFrameWnd:: GetActiveDocument
+## <a name="cframewndgetactivedocument"></a><a name="getactivedocument"></a> Obiektu CFrameWnd:: GetActiveDocument
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do bieżącego `CDocument` dołączonego aktywnego widoku.
 
@@ -509,7 +509,7 @@ virtual CDocument* GetActiveDocument();
 
 Wskaźnik do bieżącego [CDocumentu](../../mfc/reference/cdocument-class.md). Jeśli nie ma bieżącego dokumentu, zwraca wartość NULL.
 
-## <a name="cframewndgetactiveframe"></a><a name="getactiveframe"></a>Obiektu CFrameWnd:: GetActiveFrame —
+## <a name="cframewndgetactiveframe"></a><a name="getactiveframe"></a> Obiektu CFrameWnd:: GetActiveFrame —
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do okna podrzędnego aktywnego interfejsu wielu dokumentów (MDI) okna ramki MDI.
 
@@ -525,7 +525,7 @@ Wskaźnik do aktywnego okna podrzędnego MDI. Jeśli aplikacja jest aplikacją S
 
 Jeśli nie ma aktywnego elementu podrzędnego MDI lub aplikacja jest interfejsem pojedynczego dokumentu (SDI), **`this`** zwracany jest wskaźnik niejawny.
 
-## <a name="cframewndgetactiveview"></a><a name="getactiveview"></a>Obiektu CFrameWnd:: GetActiveView
+## <a name="cframewndgetactiveview"></a><a name="getactiveview"></a> Obiektu CFrameWnd:: GetActiveView
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do aktywnego widoku (jeśli istnieje) dołączony do okna ramki ( `CFrameWnd` ).
 
@@ -543,7 +543,7 @@ Ta funkcja zwraca wartość NULL, gdy jest wywoływana dla głównego okna ramki
 
 [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]
 
-## <a name="cframewndgetcontrolbar"></a><a name="getcontrolbar"></a>Obiektu CFrameWnd:: GetControlBar
+## <a name="cframewndgetcontrolbar"></a><a name="getcontrolbar"></a> Obiektu CFrameWnd:: GetControlBar
 
 Wywołaj, `GetControlBar` Aby uzyskać dostęp do paska sterowania skojarzonego z identyfikatorem.
 
@@ -564,9 +564,9 @@ Wskaźnik do paska sterowania, który jest skojarzony z IDENTYFIKATORem.
 
 Parametr *NID* odwołuje się do unikatowego identyfikatora przesłanego do `Create` metody paska sterowania. Aby uzyskać więcej informacji na temat pasków sterowania, zapoznaj się z tematem zatytułowanym [Paski kontroli](../../mfc/control-bars.md).
 
-`GetControlBar`zwróci pasek sterowania nawet wtedy, gdy jest przepływany i w ten sposób nie jest obecnie oknem podrzędnym ramki.
+`GetControlBar` zwróci pasek sterowania nawet wtedy, gdy jest przepływany i w ten sposób nie jest obecnie oknem podrzędnym ramki.
 
-## <a name="cframewndgetdockstate"></a><a name="getdockstate"></a>Obiektu CFrameWnd:: GetDockState
+## <a name="cframewndgetdockstate"></a><a name="getdockstate"></a> Obiektu CFrameWnd:: GetDockState
 
 Wywołaj tę funkcję elementu członkowskiego, aby przechowywać informacje o stanie na pasku sterowania okna ramki w `CDockState` obiekcie.
 
@@ -583,7 +583,7 @@ Zawiera bieżący stan pasków sterowania okna ramki po powrocie.
 
 Następnie można napisać zawartość `CDockState` do magazynu przy użyciu `CDockState::SaveState` lub `Serialize` . Jeśli chcesz później przywrócić paski kontroli do poprzedniego stanu, Załaduj stan z `CDockState::LoadState` lub `Serialize` , a następnie Wywołaj polecenie `SetDockState` Zastosuj poprzedni stan do pasków sterowania okna ramki.
 
-## <a name="cframewndgetmenubarstate"></a><a name="getmenubarstate"></a>Obiektu CFrameWnd:: GetMenuBarState
+## <a name="cframewndgetmenubarstate"></a><a name="getmenubarstate"></a> Obiektu CFrameWnd:: GetMenuBarState
 
 Pobiera stan wyświetlania menu w bieżącej aplikacji MFC.
 
@@ -603,7 +603,7 @@ Wartość zwracana może mieć następujące wartości:
 
 Jeśli wystąpi błąd środowiska uruchomieniowego, ta metoda zostanie potwierdzona w trybie debugowania i wywołuje wyjątek pochodzący z klasy [CException](../../mfc/reference/cexception-class.md) .
 
-## <a name="cframewndgetmenubarvisibility"></a><a name="getmenubarvisibility"></a>Obiektu CFrameWnd:: GetMenuBarVisibility
+## <a name="cframewndgetmenubarvisibility"></a><a name="getmenubarvisibility"></a> Obiektu CFrameWnd:: GetMenuBarVisibility
 
 Wskazuje, czy domyślny stan menu w bieżącej aplikacji MFC jest ukryty czy widoczny.
 
@@ -625,7 +625,7 @@ Ta metoda zwraca jedną z następujących wartości:
 
 Jeśli wystąpi błąd środowiska uruchomieniowego, ta metoda zostanie potwierdzona w trybie debugowania i wywołuje wyjątek pochodzący z klasy [CException](../../mfc/reference/cexception-class.md) .
 
-## <a name="cframewndgetmessagebar"></a><a name="getmessagebar"></a>Obiektu CFrameWnd:: GetMessageBar
+## <a name="cframewndgetmessagebar"></a><a name="getmessagebar"></a> Obiektu CFrameWnd:: GetMessageBar
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do paska stanu.
 
@@ -637,7 +637,7 @@ virtual CWnd* GetMessageBar();
 
 Wskaźnik do okna pasek stanu.
 
-## <a name="cframewndgetmessagestring"></a><a name="getmessagestring"></a>Obiektu CFrameWnd:: GetMessageString
+## <a name="cframewndgetmessagestring"></a><a name="getmessagestring"></a> Obiektu CFrameWnd:: GetMessageString
 
 Zastąp tę funkcję, aby zapewnić niestandardowe ciągi dla identyfikatorów poleceń.
 
@@ -653,13 +653,13 @@ virtual void GetMessageString(
 Identyfikator zasobu wymaganego komunikatu.
 
 *rMessage*<br/>
-`CString`Obiekt, w którym ma zostać umieszczony komunikat.
+`CString` Obiekt, w którym ma zostać umieszczony komunikat.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślna implementacja po prostu ładuje ciąg określony przez *NID* z pliku zasobów. Ta funkcja jest wywoływana przez platformę, gdy ciąg wiadomości w pasku stanu wymaga aktualizacji.
 
-## <a name="cframewndgettitle"></a><a name="gettitle"></a>Obiektu CFrameWnd:: getTitle
+## <a name="cframewndgettitle"></a><a name="gettitle"></a> Obiektu CFrameWnd:: getTitle
 
 Pobiera tytuł obiektu okna.
 
@@ -671,7 +671,7 @@ CString GetTitle() const;
 
 Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający bieżący tytuł obiektu window.
 
-## <a name="cframewndinitialupdateframe"></a><a name="initialupdateframe"></a>Obiektu CFrameWnd:: InitialUpdateFrame
+## <a name="cframewndinitialupdateframe"></a><a name="initialupdateframe"></a> Obiektu CFrameWnd:: InitialUpdateFrame
 
 Wywołaj `IntitialUpdateFrame` po utworzeniu nowej ramki przy użyciu `Create` .
 
@@ -695,7 +695,7 @@ Powoduje to, że wszystkie widoki w tym oknie ramki są odbierane `OnInitialUpda
 
 Ponadto, jeśli nie był wcześniej aktywny widok, podstawowy widok okna ramki zostanie uaktywniony. Widok podstawowy to widok z IDENTYFIKATORem podrzędnym AFX_IDW_PANE_FIRST. Na koniec okno ramki jest widoczne, jeśli *bMakeVisible* jest różna od zera. Jeśli *bMakeVisible* ma wartość 0, bieżący fokus i stan widoczny okna ramki pozostaną bez zmian. Nie jest konieczne Wywołaj tę funkcję w przypadku korzystania z implementacji pliku New i Open pliku przez platformę.
 
-## <a name="cframewndinmodalstate"></a><a name="inmodalstate"></a>Obiektu CFrameWnd:: InModalState
+## <a name="cframewndinmodalstate"></a><a name="inmodalstate"></a> Obiektu CFrameWnd:: InModalState
 
 Wywołaj tę funkcję elementu członkowskiego, aby sprawdzić, czy okno ramki jest modalne lub niemodalne.
 
@@ -707,7 +707,7 @@ BOOL InModalState() const;
 
 Niezerowe, jeśli tak; w przeciwnym razie 0.
 
-## <a name="cframewndistracking"></a><a name="istracking"></a>Obiektu CFrameWnd:: istracking
+## <a name="cframewndistracking"></a><a name="istracking"></a> Obiektu CFrameWnd:: istracking
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy pasek rozdzielacza w oknie jest aktualnie przenoszony.
 
@@ -719,7 +719,7 @@ BOOL IsTracking() const;
 
 Różne od zera, jeśli operacja rozdzielacza jest w toku; w przeciwnym razie 0.
 
-## <a name="cframewndloadacceltable"></a><a name="loadacceltable"></a>Obiektu CFrameWnd:: LoadAccelTable
+## <a name="cframewndloadacceltable"></a><a name="loadacceltable"></a> Obiektu CFrameWnd:: LoadAccelTable
 
 Wywołaj, aby załadować określoną tabelę akceleratora.
 
@@ -744,7 +744,7 @@ Tabele akceleratorów ładowane z zasobów są zwalniane automatycznie po zakoń
 
 Jeśli wywołasz `LoadFrame` do utworzenia okna ramki, struktura ładuje tabelę akceleratora wraz z menu i zasobami ikon, a kolejne wywołanie tej funkcji składowej jest niepotrzebne.
 
-## <a name="cframewndloadbarstate"></a><a name="loadbarstate"></a>Obiektu CFrameWnd:: LoadBarState
+## <a name="cframewndloadbarstate"></a><a name="loadbarstate"></a> Obiektu CFrameWnd:: LoadBarState
 
 Wywołaj tę funkcję, aby przywrócić ustawienia każdego paska sterowania należącego do okna ramki.
 
@@ -763,7 +763,7 @@ Przywrócone informacje obejmują widoczność, orientację poziomą/pionową, s
 
 Ustawienia, które mają zostać przywrócone, muszą być zapisywane w rejestrze przed wywołaniem `LoadBarState` . Zapisz informacje w rejestrze, wywołując [CWinApp:: SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey). Zapisz informacje w pliku INI, wywołując [SaveBarState](#savebarstate).
 
-## <a name="cframewndloadframe"></a><a name="loadframe"></a>Obiektu CFrameWnd:: LoadFrame
+## <a name="cframewndloadframe"></a><a name="loadframe"></a> Obiektu CFrameWnd:: LoadFrame
 
 Wywołanie dynamicznego tworzenia okna ramki na podstawie informacji o zasobach.
 
@@ -799,7 +799,7 @@ Struktura wywołuje się, `LoadFrame` gdy tworzy okno ramki przy użyciu obiektu
 
 Struktura używa argumentu *pContext* , aby określić obiekty, które mają być połączone z oknem ramki, w tym wszystkie zawarte w nim obiekty widoku. Argument *pContext* można ustawić na wartość null podczas wywoływania metody `LoadFrame` .
 
-## <a name="cframewndm_bautomenuenable"></a><a name="m_bautomenuenable"></a>Obiektu CFrameWnd:: m_bAutoMenuEnable
+## <a name="cframewndm_bautomenuenable"></a><a name="m_bautomenuenable"></a> Obiektu CFrameWnd:: m_bAutoMenuEnable
 
 Gdy ten element członkowski danych jest włączony (co jest ustawieniem domyślnym), elementy menu, które nie mają programu obsługi ON_UPDATE_COMMAND_UI lub ON_COMMAND, zostaną automatycznie wyłączone, gdy użytkownik pobierze menu.
 
@@ -814,7 +814,7 @@ Elementy menu, które mają procedurę obsługi ON_COMMAND, ale żadna procedura
 Gdy ten element członkowski danych jest ustawiony, elementy menu są włączane automatycznie w taki sam sposób, w jaki przyciski paska narzędzi są włączone.
 
 > [!NOTE]
-> `m_bAutoMenuEnable`nie ma wpływu na elementy menu najwyższego poziomu.
+> `m_bAutoMenuEnable` nie ma wpływu na elementy menu najwyższego poziomu.
 
 Ten element członkowski danych upraszcza implementację opcjonalnych poleceń opartych na bieżącym zaznaczeniu i zmniejsza konieczność pisania ON_UPDATE_COMMAND_UI obsługi w celu włączania i wyłączania elementów menu.
 
@@ -822,7 +822,7 @@ Ten element członkowski danych upraszcza implementację opcjonalnych poleceń o
 
 [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]
 
-## <a name="cframewndnegotiateborderspace"></a><a name="negotiateborderspace"></a>Obiektu CFrameWnd:: NegotiateBorderSpace
+## <a name="cframewndnegotiateborderspace"></a><a name="negotiateborderspace"></a> Obiektu CFrameWnd:: NegotiateBorderSpace
 
 Wywołaj tę funkcję elementu członkowskiego, aby wynegocjować miejsce w obramowaniu w oknie ramki podczas aktywacji w miejscu OLE.
 
@@ -837,11 +837,11 @@ virtual BOOL NegotiateBorderSpace(
 *nBorderCmd*<br/>
 Zawiera jedną z następujących wartości z `enum BorderCmd` :
 
-- `borderGet`= 1
+- `borderGet` = 1
 
-- `borderRequest`= 2
+- `borderRequest` = 2
 
-- `borderSet`= 3
+- `borderSet` = 3
 
 *lpRectBorder*<br/>
 Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne obramowania.
@@ -854,7 +854,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 Ta funkcja członkowska jest `CFrameWnd` implementacją negocjacji przestrzeni obramowania OLE.
 
-## <a name="cframewndonbarcheck"></a><a name="onbarcheck"></a>Obiektu CFrameWnd:: OnBarCheck
+## <a name="cframewndonbarcheck"></a><a name="onbarcheck"></a> Obiektu CFrameWnd:: OnBarCheck
 
 Wywoływana za każdym razem, gdy akcja jest wykonywana na określonym pasku sterowania.
 
@@ -871,7 +871,7 @@ Identyfikator wyświetlanego paska sterowania.
 
 Różne od zera, jeśli pasek sterowania istniał. w przeciwnym razie 0.
 
-## <a name="cframewndoncontexthelp"></a><a name="oncontexthelp"></a>Obiektu CFrameWnd:: OnContextHelp
+## <a name="cframewndoncontexthelp"></a><a name="oncontexthelp"></a> Obiektu CFrameWnd:: OnContextHelp
 
 Obsługuje SHIFT + F1 — Pomoc dla elementów w miejscu.
 
@@ -889,7 +889,7 @@ Instrukcja do `CFrameWnd` mapy komunikatów klasy i dodawania wpisu akceleratora
 
 Jeśli aplikacja jest kontenerem OLE, `OnContextHelp` umieszcza wszystkie elementy w miejscu zawarte w obiekcie okna ramki w trybie pomoc. Kursor zmieni się w strzałkę i znak zapytania, a użytkownik będzie mógł przenieść wskaźnik myszy i nacisnąć lewy przycisk myszy, aby zaznaczyć okno dialogowe, okno, menu lub przycisk polecenia. Ta funkcja członkowska wywołuje funkcję systemu Windows `WinHelp` z kontekstem pomocy dla obiektu pod kursorem.
 
-## <a name="cframewndoncreateclient"></a><a name="oncreateclient"></a>Obiektu CFrameWnd:: OnCreateClient
+## <a name="cframewndoncreateclient"></a><a name="oncreateclient"></a> Obiektu CFrameWnd:: OnCreateClient
 
 Wywoływane przez platformę w czasie wykonywania `OnCreate` .
 
@@ -922,7 +922,7 @@ Przesłoń tę funkcję, aby przesłonić wartości przesłane w `CCreateContext
 > [!NOTE]
 > Nie zamieniaj wartości przekazaną w `CREATESTRUCT` strukturze. Są one przeznaczone tylko do celów informacyjnych. Jeśli chcesz przesłonić początkowy prostokąt okna, na przykład Przesłoń `CWnd` funkcję elementu członkowskiego [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).
 
-## <a name="cframewndonhidemenubar"></a><a name="onhidemenubar"></a>Obiektu CFrameWnd:: OnHideMenuBar
+## <a name="cframewndonhidemenubar"></a><a name="onhidemenubar"></a> Obiektu CFrameWnd:: OnHideMenuBar
 
 Ta funkcja jest wywoływana, gdy system zamierza ukryć pasek menu w bieżącej aplikacji MFC.
 
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 Ta procedura obsługi zdarzeń umożliwia aplikacji wykonywanie akcji niestandardowych, gdy system ukryje menu. Nie można zapobiec ukrywaniu menu, ale można na przykład wywoływać inne metody w celu pobrania stylu menu lub stanu.
 
-## <a name="cframewndonsetpreviewmode"></a><a name="onsetpreviewmode"></a>Obiektu CFrameWnd:: OnSetPreviewMode
+## <a name="cframewndonsetpreviewmode"></a><a name="onsetpreviewmode"></a> Obiektu CFrameWnd:: OnSetPreviewMode
 
 Wywołaj tę funkcję elementu członkowskiego, aby ustawić okno głównej ramki aplikacji do i z trybu podglądu wydruku.
 
@@ -958,7 +958,7 @@ Domyślna implementacja powoduje wyłączenie wszystkich standardowych pasków n
 
 Przesłoń tę funkcję elementu członkowskiego, aby dostosować ukrywanie i wyświetlanie pasków sterowania i innych części okna ramki podczas podglądu wydruku. Wywołaj implementację klasy bazowej z poziomu przesłoniętej wersji.
 
-## <a name="cframewndonshowmenubar"></a><a name="onshowmenubar"></a>Obiektu CFrameWnd:: OnShowMenuBar
+## <a name="cframewndonshowmenubar"></a><a name="onshowmenubar"></a> Obiektu CFrameWnd:: OnShowMenuBar
 
 Ta funkcja jest wywoływana, gdy system ma wyświetlić pasek menu w bieżącej aplikacji MFC.
 
@@ -970,7 +970,7 @@ virtual void OnShowMenuBar();
 
 Ta procedura obsługi zdarzeń umożliwia aplikacji wykonywanie akcji niestandardowych, gdy menu ma zostać wyświetlone. Nie można uniemożliwić wyświetlania menu, ale można na przykład wywołać inne metody, aby pobrać styl menu lub stan.
 
-## <a name="cframewndonupdatecontrolbarmenu"></a><a name="onupdatecontrolbarmenu"></a>Obiektu CFrameWnd:: OnUpdateControlBarMenu
+## <a name="cframewndonupdatecontrolbarmenu"></a><a name="onupdatecontrolbarmenu"></a> Obiektu CFrameWnd:: OnUpdateControlBarMenu
 
 Wywoływane przez platformę, gdy skojarzone menu zostanie zaktualizowane.
 
@@ -983,7 +983,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 *pCmdUI*<br/>
 Wskaźnik do obiektu [CCmdUI](../../mfc/reference/ccmdui-class.md) reprezentujący menu, które wygenerowało polecenie aktualizacji. Procedura obsługi aktualizacji wywołuje funkcję [włączania](../../mfc/reference/ccmdui-class.md#enable) elementu członkowskiego `CCmdUI` obiektu za pomocą *pCmdUI* , aby zaktualizować interfejs użytkownika.
 
-## <a name="cframewndrecalclayout"></a><a name="recalclayout"></a>Obiektu CFrameWnd:: RecalcLayout
+## <a name="cframewndrecalclayout"></a><a name="recalclayout"></a> Obiektu CFrameWnd:: RecalcLayout
 
 Wywoływane przez platformę, gdy standardowe paski kontrolki są włączane lub wyłączane lub gdy zmieniany jest rozmiar okna ramki.
 
@@ -1002,7 +1002,7 @@ Domyślna implementacja tej funkcji składowej wywołuje `CWnd` funkcję członk
 
 Przesłoń tę funkcję elementu członkowskiego, aby kontrolować wygląd i zachowanie pasków sterowania po zmianie układu okna ramki. Na przykład Wywołaj je po włączeniu lub wyłączeniu pasków sterowania lub Dodaj inny pasek sterowania.
 
-## <a name="cframewndrectdefault"></a><a name="rectdefault"></a>Obiektu CFrameWnd:: rectDefault
+## <a name="cframewndrectdefault"></a><a name="rectdefault"></a> Obiektu CFrameWnd:: rectDefault
 
 Przekaż ten statyczny `CRect` jako parametr podczas tworzenia okna, aby zezwolić systemowi Windows na wybranie początkowego rozmiaru i położenia okna.
 
@@ -1010,7 +1010,7 @@ Przekaż ten statyczny `CRect` jako parametr podczas tworzenia okna, aby zezwoli
 static AFX_DATA const CRect rectDefault;
 ```
 
-## <a name="cframewndsavebarstate"></a><a name="savebarstate"></a>Obiektu CFrameWnd:: SaveBarState
+## <a name="cframewndsavebarstate"></a><a name="savebarstate"></a> Obiektu CFrameWnd:: SaveBarState
 
 Wywołaj tę funkcję, aby przechowywać informacje o każdym pasku sterowania należącym do okna ramki.
 
@@ -1027,7 +1027,7 @@ Nazwa sekcji w pliku inicjującym lub klucz w rejestrze systemu Windows, w któr
 
 Te informacje można odczytać z pliku inicjującego za pomocą [LoadBarState](#loadbarstate). Informacje przechowywane obejmują widoczność, orientację poziomą/pionową, stan dokowania i położenie paska sterowania.
 
-## <a name="cframewndsetactivepreviewview"></a><a name="setactivepreviewview"></a>Obiektu CFrameWnd:: SetActivePreviewView
+## <a name="cframewndsetactivepreviewview"></a><a name="setactivepreviewview"></a> Obiektu CFrameWnd:: SetActivePreviewView
 
 Określa, że określony widok ma być aktywnym widokiem dla zaawansowanej wersji zapoznawczej.
 
@@ -1042,7 +1042,7 @@ Wskaźnik do widoku, który ma zostać aktywowany.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cframewndsetactiveview"></a><a name="setactiveview"></a>Obiektu CFrameWnd:: SetActiveView
+## <a name="cframewndsetactiveview"></a><a name="setactiveview"></a> Obiektu CFrameWnd:: SetActiveView
 
 Wywołaj tę funkcję elementu członkowskiego, aby ustawić aktywny widok.
 
@@ -1064,7 +1064,7 @@ Określa, czy widok ma być powiadamiany o aktywacji. Jeśli wartość jest rów
 
 Platforma wywoła tę funkcję automatycznie, gdy użytkownik zmieni fokus w widoku w oknie ramki. Można jawnie wywołać, `SetActiveView` Aby zmienić fokus do określonego widoku.
 
-## <a name="cframewndsetdockstate"></a><a name="setdockstate"></a>Obiektu CFrameWnd:: SetDockState
+## <a name="cframewndsetdockstate"></a><a name="setdockstate"></a> Obiektu CFrameWnd:: SetDockState
 
 Wywołaj tę funkcję elementu członkowskiego, aby zastosować informacje o stanie przechowywane w `CDockState` obiekcie do pasków sterowania okna ramki.
 
@@ -1079,9 +1079,9 @@ Zastosuj stan przechowywany do pasków sterowania okna ramki.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby przywrócić poprzedni stan pasków sterowania, można załadować zapisany stan z `CDockState::LoadState` lub `Serialize` , a następnie użyć, `SetDockState` Aby zastosować go do pasków sterowania okna ramki. Poprzedni stan jest przechowywany w `CDockState` obiekcie z`GetDockState`
+Aby przywrócić poprzedni stan pasków sterowania, można załadować zapisany stan z `CDockState::LoadState` lub `Serialize` , a następnie użyć, `SetDockState` Aby zastosować go do pasków sterowania okna ramki. Poprzedni stan jest przechowywany w `CDockState` obiekcie z `GetDockState`
 
-## <a name="cframewndsetmenubarstate"></a><a name="setmenubarstate"></a>Obiektu CFrameWnd:: SetMenuBarState
+## <a name="cframewndsetmenubarstate"></a><a name="setmenubarstate"></a> Obiektu CFrameWnd:: SetMenuBarState
 
 Ustawia stan wyświetlania menu w bieżącej aplikacji MFC na wartość Hidden lub Display.
 
@@ -1091,9 +1091,11 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*nInformacje*|podczas Określa, czy menu ma być wyświetlane, czy ukryte. Parametr *nInformacje* może mieć następujące wartości:<br /><br />-AFX_MBS_VISIBLE (0x01) — wyświetla menu, jeśli jest ukryte, ale nie działa, jeśli jest widoczne.<br />-AFX_MBS_HIDDEN (0x02) — ukrywa menu, jeśli jest widoczne, ale nie działa, jeśli jest ukryte.|
+*nInformacje*\
+podczas Określa, czy menu ma być wyświetlane, czy ukryte. Parametr *nInformacje* może mieć następujące wartości:
+
+- `AFX_MBS_VISIBLE` (0x01) — wyświetla menu, jeśli jest ukryte, ale nie działa, jeśli jest widoczne.
+- `AFX_MBS_HIDDEN` (0x02) — ukrywa menu, jeśli jest widoczne, ale nie działa, jeśli jest ukryte.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1103,7 +1105,7 @@ PRAWDA, jeśli ta metoda pomyślnie zmienia stan menu; w przeciwnym razie FALSE.
 
 Jeśli wystąpi błąd środowiska uruchomieniowego, ta metoda zostanie potwierdzona w trybie debugowania i wywołuje wyjątek pochodzący z klasy [CException](../../mfc/reference/cexception-class.md) .
 
-## <a name="cframewndsetmenubarvisibility"></a><a name="setmenubarvisibility"></a>Obiektu CFrameWnd:: SetMenuBarVisibility
+## <a name="cframewndsetmenubarvisibility"></a><a name="setmenubarvisibility"></a> Obiektu CFrameWnd:: SetMenuBarVisibility
 
 Ustawia domyślne zachowanie menu w bieżącej aplikacji MFC jako ukryte lub widoczne.
 
@@ -1113,9 +1115,14 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*nStyle*|podczas Określa, czy menu jest domyślnie ukryte, czy jest widoczne i ma fokus. Parametr *nStyle* może mieć następujące wartości:<br /><br />-AFX_MBV_KEEPVISIBLE (0x01) —<br />     Menu jest wyświetlane przez cały czas i domyślnie nie ma fokusu.<br />-AFX_MBV_DISPLAYONFOCUS (0x02) —<br />     Menu jest domyślnie ukryte. Jeśli menu jest ukryte, naciśnij klawisz ALT, aby wyświetlić menu i nadać fokus. Jeśli menu jest wyświetlane, naciśnij klawisz ALT lub ESC, aby ukryć menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (kombinacja bitowa (lub)) — menu jest domyślnie ukryte. Jeśli menu jest ukryte, naciśnij klawisz F10, aby wyświetlić menu i nadać mu fokus. Jeśli menu jest wyświetlane, naciśnij klawisz F10, aby przełączyć fokus na lub wyłączyć menu. Menu jest wyświetlane do momentu naciśnięcia klawisza ALT lub ESC, aby je ukryć.|
+*nStyle*\
+podczas Określa, czy menu jest domyślnie ukryte, czy jest widoczne i ma fokus. Parametr *nStyle* może mieć następujące wartości:
+
+- `AFX_MBV_KEEPVISIBLE` (0x01) — menu jest wyświetlane przez cały czas i domyślnie nie ma fokusu.
+
+- `AFX_MBV_DISPLAYONFOCUS` (0x02) — menu jest domyślnie ukryte. Jeśli menu jest ukryte, naciśnij klawisz ALT, aby wyświetlić menu i nadać fokus. Jeśli menu jest wyświetlane, naciśnij klawisz ALT lub ESC, aby ukryć menu.
+
+- `AFX_MBV_DISPLAYONFOCUS` (0x02) &#124; `AFX_MBV_DISPLAYONF10` (0x04) (kombinacja bitowa (lub)) — menu jest domyślnie ukryte. Jeśli menu jest ukryte, naciśnij klawisz F10, aby wyświetlić menu i nadać mu fokus. Jeśli menu jest wyświetlane, naciśnij klawisz F10, aby przełączyć fokus na lub wyłączyć menu. Menu jest wyświetlane do momentu naciśnięcia klawisza ALT lub ESC, aby je ukryć.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1123,7 +1130,7 @@ Jeśli wartość parametru *nStyle* jest nieprawidłowa, ta metoda potwierdza tr
 
 Ta metoda ma wpływ na stan menu w aplikacjach utworzonych dla systemu Windows Vista i nowszych.
 
-## <a name="cframewndsetmessagetext"></a><a name="setmessagetext"></a>Obiektu CFrameWnd:: SetMessageText
+## <a name="cframewndsetmessagetext"></a><a name="setmessagetext"></a> Obiektu CFrameWnd:: SetMessageText
 
 Wywołaj tę funkcję, aby umieścić ciąg w okienku Pasek stanu o IDENTYFIKATORze 0.
 
@@ -1144,7 +1151,7 @@ Identyfikator zasobu ciągu, który ma zostać umieszczony na pasku stanu.
 
 Jest to zazwyczaj skrajne lewe i najdłuższe okienko paska stanu.
 
-## <a name="cframewndsetprogressbarposition"></a><a name="setprogressbarposition"></a>Obiektu CFrameWnd:: SetProgressBarPosition
+## <a name="cframewndsetprogressbarposition"></a><a name="setprogressbarposition"></a> Obiektu CFrameWnd:: SetProgressBarPosition
 
 Ustawia bieżącą pozycję paska postępu systemu Windows 7 wyświetlanego na pasku zadań.
 
@@ -1159,7 +1166,7 @@ Określa pozycję do ustawienia. Musi znajdować się w zakresie określonym prz
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cframewndsetprogressbarrange"></a><a name="setprogressbarrange"></a>Obiektu CFrameWnd:: SetProgressBarRange
+## <a name="cframewndsetprogressbarrange"></a><a name="setprogressbarrange"></a> Obiektu CFrameWnd:: SetProgressBarRange
 
 Ustawia zakres dla paska postępu systemu Windows 7 wyświetlanego na pasku zadań.
 
@@ -1179,7 +1186,7 @@ Maksymalna wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cframewndsetprogressbarstate"></a><a name="setprogressbarstate"></a>Obiektu CFrameWnd:: SetProgressBarState
+## <a name="cframewndsetprogressbarstate"></a><a name="setprogressbarstate"></a> Obiektu CFrameWnd:: SetProgressBarState
 
 Ustawia typ i stan wskaźnika postępu wyświetlanego na przycisku paska zadań.
 
@@ -1194,7 +1201,7 @@ Flagi kontrolujące bieżący stan przycisku postępu. Określ tylko jedną z na
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cframewndsettaskbaroverlayicon"></a><a name="settaskbaroverlayicon"></a>Obiektu CFrameWnd:: SetTaskbarOverlayIcon
+## <a name="cframewndsettaskbaroverlayicon"></a><a name="settaskbaroverlayicon"></a> Obiektu CFrameWnd:: SetTaskbarOverlayIcon
 
 Przeciążone. Stosuje nakładkę do przycisku paska zadań w celu wskazania stanu aplikacji lub powiadomienia użytkownika.
 
@@ -1225,7 +1232,7 @@ Wartość TRUE, jeśli powodzenie; Wartość FALSE, jeśli wersja systemu operac
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cframewndsettitle"></a><a name="settitle"></a>Obiektu CFrameWnd:: settitle
+## <a name="cframewndsettitle"></a><a name="settitle"></a> Obiektu CFrameWnd:: settitle
 
 Ustawia tytuł obiektu okna.
 
@@ -1238,7 +1245,7 @@ void SetTitle(LPCTSTR lpszTitle);
 *lpszTitle*<br/>
 Wskaźnik do ciągu znaków zawierającego tytuł obiektu okna.
 
-## <a name="cframewndshowcontrolbar"></a><a name="showcontrolbar"></a>Obiektu CFrameWnd:: ShowControlBar
+## <a name="cframewndshowcontrolbar"></a><a name="showcontrolbar"></a> Obiektu CFrameWnd:: ShowControlBar
 
 Wywołaj tę funkcję elementu członkowskiego, aby pokazać lub ukryć pasek sterowania.
 
@@ -1260,7 +1267,7 @@ Jeśli wartość jest równa TRUE, określa, że pasek sterowania ma być pokazy
 *bDelay*<br/>
 Jeśli wartość jest równa TRUE, opóźnienie wyświetla pasek sterowania. W przypadku wartości FALSE Pokaż pasek sterowania natychmiast.
 
-## <a name="cframewndshowownedwindows"></a><a name="showownedwindows"></a>Obiektu CFrameWnd:: ShowOwnedWindows
+## <a name="cframewndshowownedwindows"></a><a name="showownedwindows"></a> Obiektu CFrameWnd:: ShowOwnedWindows
 
 Wywołaj tę funkcję elementu członkowskiego, aby pokazać wszystkie okna, które są elementami podrzędnymi `CFrameWnd` obiektu.
 
@@ -1273,7 +1280,7 @@ void ShowOwnedWindows(BOOL bShow);
 *bShow*<br/>
 Określa, czy należące do systemu Windows mają być pokazywane czy ukryte.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

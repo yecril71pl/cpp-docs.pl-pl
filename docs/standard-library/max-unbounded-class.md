@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: 8ec0f1c6c84399ef4b3d048a99d1c191541b7c6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0254563cc60db4a171527735b373c2954a5a9e5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222280"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561963"
 ---
 # <a name="max_unbounded-class"></a>max_unbounded — Klasa
 
@@ -49,7 +49,7 @@ class max_unbounded
 
 **Przestrzeń nazw:** stdext
 
-## <a name="max_unboundedallocated"></a><a name="allocated"></a>max_unbounded:: przydzielono
+## <a name="max_unboundedallocated"></a><a name="allocated"></a> max_unbounded:: przydzielono
 
 Zwiększa liczbę przydzieloną bloków pamięci.
 
@@ -59,15 +59,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Nx*|Wartość przyrostu.|
+*_Nx*\
+Wartość przyrostu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja członkowska nic nie robi. Jest wywoływana po każdym pomyślnym wywołaniu `cache_freelist::allocate` operatora by **`new`** . Argument *_Nx* jest liczbą bloków pamięci w fragmencie przydzielonym przez operatora **`new`** .
 
-## <a name="max_unboundeddeallocated"></a><a name="deallocated"></a>max_unbounded::d eallocated
+## <a name="max_unboundeddeallocated"></a><a name="deallocated"></a> max_unbounded::d eallocated
 
 Zmniejsza liczbę przydzieloną bloków pamięci.
 
@@ -77,15 +76,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Nx*|Wartość przyrostu.|
+*_Nx*\
+Wartość przyrostu.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja członkowska nic nie robi. Ta funkcja członkowska jest wywoływana po każdym wywołaniu `cache_freelist::deallocate` operatora **`delete`** . Argument *_Nx* jest liczbą bloków pamięci w przydzielonym operatorze fragmentów **`delete`** .
 
-## <a name="max_unboundedfull"></a><a name="full"></a>max_unbounded:: Full
+## <a name="max_unboundedfull"></a><a name="full"></a> max_unbounded:: Full
 
 Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.
 
@@ -101,7 +99,7 @@ Funkcja członkowska zawsze zwraca wartość **`false`** .
 
 Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate` . Jeśli wywołanie zwraca **`true`** , `deallocate` umieszcza blok pamięci na liście bezpłatnej; jeśli zwraca wartość false, `deallocate` operator wywołań, **`delete`** Aby cofnąć alokację bloku.
 
-## <a name="max_unboundedreleased"></a><a name="released"></a>max_unbounded:: wydano
+## <a name="max_unboundedreleased"></a><a name="released"></a> max_unbounded:: wydano
 
 Zmniejsza liczbę bloków pamięci na liście bezpłatnych.
 
@@ -113,7 +111,7 @@ void released();
 
 Ta funkcja członkowska nic nie robi. `released`Funkcja członkowska bieżącej klasy Max jest wywoływana za `cache_freelist::allocate` każdym razem, gdy usuwa blok pamięci z listy bezpłatnych.
 
-## <a name="max_unboundedsaved"></a><a name="saved"></a>max_unbounded:: Zapisano
+## <a name="max_unboundedsaved"></a><a name="saved"></a> max_unbounded:: Zapisano
 
 Zwiększa liczbę bloków pamięci na liście bezpłatnych.
 
@@ -125,6 +123,6 @@ void saved();
 
 Ta funkcja członkowska nic nie robi. Jest wywoływana za `cache_freelist::deallocate` każdym razem, gdy umieszcza blok pamięci na liście bezpłatnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<allocators>](../standard-library/allocators-header.md)

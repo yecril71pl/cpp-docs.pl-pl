@@ -8,16 +8,16 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 24778b761ada56830b155a2fc65e90f54ba729ed
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 87a49643e7cd11ae57dc01130f250895cf012065
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217510"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562496"
 ---
 # <a name="__lidt"></a>__lidt
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Ładuje rejestr tabeli deskryptorów przerwań (IDTR) z wartością w określonej lokalizacji pamięci.
 
@@ -29,9 +29,8 @@ void __lidt(void * Source);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Element źródłowy*|podczas Wskaźnik do wartości, która ma zostać skopiowana do IDTR.|
+*Zewnętrz*\
+podczas Wskaźnik do wartości, która ma zostać skopiowana do IDTR.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -39,15 +38,15 @@ void __lidt(void * Source);
 |---------------|------------------|
 |`__lidt`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja jest równoważna `LIDT` z instrukcją Machine i jest dostępna tylko w trybie jądra. `__lidt` Aby uzyskać więcej informacji, Wyszukaj dokument "Podręcznik Intel Architecture Developer, Tom 2: Odwołanie do zestawu instrukcji "w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+`__lidt`Funkcja jest równoważna z `LIDT` instrukcją Machine i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, Wyszukaj dokument "Podręcznik Intel Architecture Software Developer, Tom 2: odwołanie do zestawu instrukcji" w witrynie [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

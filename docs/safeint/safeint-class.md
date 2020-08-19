@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219355"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560964"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
 Rozszerza elementy pierwotne całkowite, aby zapobiec przepełnieniu liczby całkowitej i umożliwia porównywanie różnych typów liczb całkowitych.
 
 > [!NOTE]
-> Najnowsza wersja biblioteki SafeInt znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Aby użyć biblioteki SafeInt, Sklonuj repozytorium i`#include "SafeInt.hpp"`
+> Najnowsza wersja biblioteki SafeInt znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Aby użyć biblioteki SafeInt, Sklonuj repozytorium i `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,17 +33,23 @@ class SafeInt;
 
 ### <a name="parameters"></a>Parametry
 
-| Szablon  |  Opis |
-|--------|------------|
-| T         |  Typ liczby całkowitej lub parametru logicznego, który `SafeInt` zastępuje. |
-| E         |  Wyliczany typ danych, który definiuje zasady obsługi błędów. |
-| U         |  Typ liczby całkowitej lub parametru logicznego operandu pomocniczego. |
+*`T`*\
+Typ liczby całkowitej lub parametru logicznego, który `SafeInt` zastępuje.
 
-| Parametr  |  Opis |
-|---------|-----------------|
-| *RHS*      |  podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych. |
-| *i*        |  podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych. |
-| *bitów*     |  podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych. |
+*`E`*\
+Wyliczany typ danych, który definiuje zasady obsługi błędów.
+
+*`U`*\
+Typ liczby całkowitej lub parametru logicznego operandu pomocniczego.
+
+*RHS*\
+podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych.
+
+*Mam*\
+podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych.
+
+*bitów*\
+podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie operatora w kilku funkcjach autonomicznych.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -174,7 +180,7 @@ W tabeli Operators w tym temacie wymieniono operatory matematyczne i porównania
 
 Operacje porównania między `SafeInt` a i typem całkowitym można wykonać w dowolnym kierunku. Na przykład oba `SafeInt<int>(x) < y` i `y> SafeInt<int>(x)` są prawidłowe i zwracają ten sam wynik.
 
-Wiele operatorów binarnych nie obsługuje korzystania z dwóch różnych `SafeInt` typów. Przykładem jest `&` operator. `SafeInt<T, E> & int`jest obsługiwane, ale `SafeInt<T, E> & SafeInt<U, E>` nie jest. W tym ostatnim przykładzie kompilator nie wie, jakiego typu parametru zwrócić. Jednym z rozwiązań tego problemu jest rzutowanie drugiego parametru z powrotem na typ podstawowy. Korzystając z tych samych parametrów, można to zrobić za pomocą polecenia `SafeInt<T, E> & (U)SafeInt<U, E>` .
+Wiele operatorów binarnych nie obsługuje korzystania z dwóch różnych `SafeInt` typów. Przykładem jest `&` operator. `SafeInt<T, E> & int` jest obsługiwane, ale `SafeInt<T, E> & SafeInt<U, E>` nie jest. W tym ostatnim przykładzie kompilator nie wie, jakiego typu parametru zwrócić. Jednym z rozwiązań tego problemu jest rzutowanie drugiego parametru z powrotem na typ podstawowy. Korzystając z tych samych parametrów, można to zrobić za pomocą polecenia `SafeInt<T, E> & (U)SafeInt<U, E>` .
 
 > [!NOTE]
 > Dla każdej operacji bitowej dwa różne parametry powinny mieć ten sam rozmiar. Jeśli rozmiary różnią się, kompilator zgłosi wyjątek [.](../mfc/reference/diagnostic-services.md#assert) Nie można zagwarantować dokładnej wyników tej operacji. Aby rozwiązać ten problem, należy rzutować mniejszy parametr, dopóki nie jest to ten sam rozmiar, co większy parametr.
@@ -207,12 +213,12 @@ Jeśli `flag` jest **`false`** , kompilator zgłasza wyjątek zamiast przypisywa
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 ```
 
-`T`i `U` można przypisać typ Boolean, typ znaku lub typ Integer. Typy całkowite mogą być podpisane lub niepodpisane oraz mieć dowolny rozmiar z 8 bitów do 64 bitów.
+`T` i `U` można przypisać typ Boolean, typ znaku lub typ Integer. Typy całkowite mogą być podpisane lub niepodpisane oraz mieć dowolny rozmiar z 8 bitów do 64 bitów.
 
 > [!NOTE]
 > Chociaż `SafeInt` Klasa akceptuje dowolny rodzaj liczby całkowitej, jest bardziej wydajna z niepodpisanymi typami.
 
-`E`jest mechanizmem obsługi błędów, który `SafeInt` używa. Z biblioteką SafeInt są dostarczane dwa mechanizmy obsługi błędów. Zasady domyślne to `SafeIntErrorPolicy_SafeIntException` , które zgłasza wyjątek [klasy SafeIntException](safeintexception-class.md) w przypadku wystąpienia błędu. Inne zasady są `SafeIntErrorPolicy_InvalidParameter` , co powoduje zatrzymanie programu w przypadku wystąpienia błędu.
+`E` jest mechanizmem obsługi błędów, który `SafeInt` używa. Z biblioteką SafeInt są dostarczane dwa mechanizmy obsługi błędów. Zasady domyślne to `SafeIntErrorPolicy_SafeIntException` , które zgłasza wyjątek [klasy SafeIntException](safeintexception-class.md) w przypadku wystąpienia błędu. Inne zasady są `SafeIntErrorPolicy_InvalidParameter` , co powoduje zatrzymanie programu w przypadku wystąpienia błędu.
 
 Istnieją dwie opcje dostosowywania zasad błędów. Pierwsza opcja polega na ustawieniu parametru `E` podczas tworzenia `SafeInt` . Użyj tej opcji, jeśli chcesz zmienić zasady obsługi błędów dla tylko jednego `SafeInt` . Druga opcja polega na zdefiniowaniu _SAFEINT_DEFAULT_ERROR_POLICY jako dostosowanej klasy obsługi błędów przed dołączeniem `SafeInt` biblioteki. Użyj tej opcji, jeśli chcesz zmienić domyślne zasady obsługi błędów dla wszystkich wystąpień `SafeInt` klasy w kodzie.
 
@@ -248,7 +254,7 @@ int main()
 
 **Przestrzeń nazw:** brak
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt:: SafeInt
 
 Konstruuje `SafeInt` obiekt.
 
@@ -277,7 +283,7 @@ podczas Wartość logiczna dla nowego `SafeInt` obiektu.
 `u`<br/>
 podczas A `SafeInt` typu U. Nowy `SafeInt` obiekt będzie mieć taką samą wartość jak *u*, ale będzie typu T.
 
-`U`Typ danych przechowywanych w `SafeInt` . Może to być typ Boolean, znak lub liczba całkowita. Jeśli jest to typ liczba całkowita, może być podpisany lub niepodpisany i zawierać od 8 do 64 bitów.
+`U` Typ danych przechowywanych w `SafeInt` . Może to być typ Boolean, znak lub liczba całkowita. Jeśli jest to typ liczba całkowita, może być podpisany lub niepodpisany i zawierać od 8 do 64 bitów.
 
 ### <a name="remarks"></a>Uwagi
 

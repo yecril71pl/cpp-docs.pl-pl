@@ -150,18 +150,18 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c20ab10ac95ab6788f34367a9d68cdc9eae685b5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754146"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562678"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC \\ atlmfc \\ src \\ MFC** instalacji programu Visual Studio.
 
-Obsługuje edytowalną kontrolę siatki właściwości, która może wyświetlać właściwości w kolejności alfabetycznej lub hierarchicznej.
+Obsługuje edytowalną kontrolkę siatki właściwości, która może wyświetlać właściwości w kolejności alfabetycznej lub hierarchicznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -176,128 +176,128 @@ class CMFCPropertyGridCtrl : public CWnd
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Konstruuje `CMFCPropertyGridCtrl` obiekt.|
-|`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktora.|
+|`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCPropertyGridCtrl::accHitTest`|Wywoływane przez strukturę, aby pobrać element podrzędny lub obiekt podrzędny w danym punkcie na ekranie. (Zastępuje [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CMFCPropertyGridCtrl::accLocation`|Wywoływana przez strukturę do pobierania bieżącej lokalizacji bieżącego ekranu określonego obiektu. (Zastępuje [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CMFCPropertyGridCtrl::accSelect](#accselect)|Wywoływane przez strukturę, aby zmodyfikować zaznaczenie lub przenieść fokus klawiatury określonego obiektu. (Zastępuje [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Dodaje nową właściwość do formantu siatki właściwości.|
+|`CMFCPropertyGridCtrl::accHitTest`|Wywoływane przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym punkcie na ekranie. (Przesłania [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CMFCPropertyGridCtrl::accLocation`|Wywoływane przez platformę, by pobrać bieżącą lokalizację ekranu określonego obiektu. (Przesłania [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CMFCPropertyGridCtrl::accSelect](#accselect)|Wywoływane przez platformę, by zmodyfikować zaznaczenie lub przenieść fokus klawiatury określonego obiektu. (Przesłania [CWnd:: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|[CMFCPropertyGridCtrl:: Add— Właściwość](#addproperty)|Dodaje nową właściwość do kontrolki siatki właściwości.|
 |[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](#alwaysshowusertooltip)||
-|[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Zamyka okno dialogowe wyboru kolorów.|
-|[CMFCPropertyGridCtrl::Tworzenie](#create)|Tworzy formant siatki właściwości i dołącza ją do obiektu sterującego siatką właściwości.|
-|[CMFCPropertyGridCtrl::DeleteProperty](#deleteproperty)|Usuwa określoną właściwość z formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::DrawControlBarColors](#drawcontrolbarcolors)||
-|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Włącza lub wyłącza obszar opisu wyświetlany pod listą właściwości.|
-|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Włącza lub wyłącza formant nagłówka w górnej części formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Przewija formant siatki właściwości i rozwija elementy właściwości, dopóki określona właściwość nie będzie widoczna.|
-|[CMFCPropertyGridCtrl::RozwińWszywszy](#expandall)|Rozwija lub zwija wszystkie węzły kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Pobiera właściwość, która jest skojarzona z wartością DWORD zdefiniowaną przez użytkownika.|
-|`CMFCPropertyGridCtrl::get_accChild`|Wywoływane przez strukturę, aby `IDispatch` pobrać adres interfejsu dla określonego nianiau. (Zastępuje [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Wywoływana przez strukturę, aby pobrać liczbę dzieni należących do tego obiektu. (Zastępuje [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CMFCPropertyGridCtrl::get_accDefaultAction`|Wywoływane przez strukturę, aby pobrać ciąg, który opisuje domyślną akcję obiektu. (Zastępuje [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CMFCPropertyGridCtrl::get_accDescription`|Wywoływane przez strukturę, aby pobrać ciąg, który opisuje wygląd określonego obiektu. (Zastępuje [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Wywoływane przez strukturę, aby pobrać obiekt, który ma fokus klawiatury. (Zastępuje [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Wywoływane przez strukturę, aby `Help` pobrać ciąg właściwości obiektu. (Zastępuje [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Wywoływane przez strukturę, aby pobrać pełną ścieżkę pliku **WinHelp** skojarzone z określonym obiektem i identyfikator odpowiedniego tematu w tym pliku. (Zastępuje [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Wywoływane przez strukturę, aby pobrać klucz skrótu określonego obiektu lub klucz dostępu. (Zastępuje [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CMFCPropertyGridCtrl::get_accName`|Wywoływane przez strukturę, aby pobrać nazwę określonego obiektu. (Zastępuje [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CMFCPropertyGridCtrl::get_accRole`|Wywoływane przez strukturę do pobierania informacji opisujących rolę określonego obiektu. (Zastępuje [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Wywoływane przez strukturę, aby pobrać wybrane części podrzędne tego obiektu. (Zastępuje [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CMFCPropertyGridCtrl::get_accState`|Wywoływane przez strukturę, aby pobrać bieżący stan określonego obiektu. (Zastępuje [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CMFCPropertyGridCtrl::get_accValue`|Wywoływane przez strukturę, aby pobrać wartość określonego obiektu. (Zastępuje [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Pobiera kolor tła bieżącej kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Pobiera czcionkę systemu Windows, która zawiera tekst w bieżącym formancie siatki właściwości w stylu pogrubionym.|
+|[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Zamyka okno dialogowe wyboru koloru.|
+|[CMFCPropertyGridCtrl:: Create](#create)|Tworzy kontrolkę siatka właściwości i dołącza ją do obiektu sterowania siatką właściwości.|
+|[CMFCPropertyGridCtrl::D eleteProperty](#deleteproperty)|Usuwa określoną właściwość z kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::D rawControlBarColors](#drawcontrolbarcolors)||
+|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Włącza lub wyłącza obszar opisu wyświetlany poniżej listy właściwości.|
+|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Włącza lub wyłącza kontrolkę nagłówka w górnej części kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Przewija kontrolkę siatka właściwości i rozwija elementy właściwości, dopóki określona właściwość nie zostanie wyświetlona.|
+|[CMFCPropertyGridCtrl:: Rozwiń wszystko](#expandall)|Rozwija lub zwija wszystkie węzły kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Pobiera właściwość, która jest skojarzona z wartością typu DWORD zdefiniowaną przez użytkownika.|
+|`CMFCPropertyGridCtrl::get_accChild`|Wywoływane przez platformę, by pobrać adres `IDispatch` interfejsu dla określonego elementu podrzędnego. (Przesłania [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|[CMFCPropertyGridCtrl:: get_accChildCount](#get_accchildcount)|Wywoływane przez platformę, by pobrać liczbę elementów podrzędnych należących do tego obiektu. (Przesłania [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CMFCPropertyGridCtrl::get_accDefaultAction`|Wywoływane przez platformę, by pobrać ciąg opisujący domyślną akcję obiektu. (Przesłania [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CMFCPropertyGridCtrl::get_accDescription`|Wywoływane przez platformę, by pobrać ciąg opisujący wygląd określonego obiektu. (Przesłania [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|[CMFCPropertyGridCtrl:: get_accFocus](#get_accfocus)|Wywoływane przez platformę, by pobrać obiekt, który ma fokus klawiatury. (Przesłania [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|[CMFCPropertyGridCtrl:: get_accHelp](#get_acchelp)|Wywoływane przez platformę, by pobrać `Help` ciąg właściwości obiektu. (Przesłania [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CMFCPropertyGridCtrl:: get_accHelpTopic](#get_acchelptopic)|Wywoływane przez platformę, by pobrać pełną ścieżkę pliku **WinHelp** skojarzonego z określonym obiektem oraz identyfikator odpowiedniego tematu w tym pliku. (Przesłania [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|[CMFCPropertyGridCtrl:: get_accKeyboardShortcut](#get_acckeyboardshortcut)|Wywoływane przez platformę w celu pobrania klawisza skrótu lub klawisza dostępu określonego obiektu. (Przesłania [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CMFCPropertyGridCtrl::get_accName`|Wywoływane przez platformę, by pobrać nazwę określonego obiektu. (Przesłania [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CMFCPropertyGridCtrl::get_accRole`|Wywoływane przez platformę, by pobrać informacje opisujące rolę określonego obiektu. (Przesłania [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CMFCPropertyGridCtrl:: get_accSelection](#get_accselection)|Wywoływane przez platformę, by pobrać wybrane elementy podrzędne tego obiektu. (Przesłania [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CMFCPropertyGridCtrl::get_accState`|Wywoływane przez platformę, by pobrać bieżący stan określonego obiektu. (Przesłania [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CMFCPropertyGridCtrl::get_accValue`|Wywoływane przez platformę, by pobrać wartość określonego obiektu. (Przesłania [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Pobiera kolor tła bieżącej kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Pobiera czcionkę systemu Windows, która jest tekstem w bieżącej kontrolce siatki właściwości w stylu pogrubionym.|
 |[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Pobiera aktualnie wybraną właściwość.|
-|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Pobiera kolory niestandardowe, które są obecnie zdefiniowane dla elementów kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Pobiera wysokość obszaru opisu znajdującego się w dolnej części formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Pobiera liczbę wierszy w obszarze opisu bieżącej kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Pobiera wewnętrzny [OBIEKT CMFCHeaderCtrl,](../../mfc/reference/cmfcheaderctrl-class.md) który jest używany przez platformę do wyświetlania bieżącej kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Pobiera wysokość nagłówka formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Pobiera szerokość lewej kolumny bieżącej kontroli siatki właściwości, która zawiera nazwę każdej właściwości.|
-|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Pobiera prostokąt ograniczający formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetProperty](#getproperty)|Pobiera wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi elementu kontroli siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Pobiera kolory niestandardowe, które są obecnie zdefiniowane dla elementów kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Pobiera wysokość obszaru opisu znajdującego się u dołu kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Pobiera liczbę wierszy w obszarze Opis kontrolki siatki bieżącej właściwości.|
+|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Pobiera wewnętrzny obiekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , który jest wykorzystywany przez strukturę do wyświetlania bieżącej kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Pobiera wysokość nagłówka kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Pobiera szerokość lewej kolumny kontrolki siatki bieżącej właściwości, która zawiera nazwę każdej właściwości.|
+|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Pobiera prostokąt związany z kontrolką siatki właściwości.|
+|[CMFCPropertyGridCtrl:: GetProperty](#getproperty)|Pobiera wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi elementu kontrolki siatki właściwości.|
 |[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Pobiera bieżącą szerokość kolumny zawierającej wartości właściwości.|
-|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Pobiera liczbę właściwości w formancie siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Pobiera wysokość wiersza w formancie siatki właściwości.|
-|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Pobiera wskaźnik do formantu paska przewijania w formancie siatki właściwości. (Zastępuje [CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
-|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Pobiera kolor tekstu elementów właściwości w bieżącym formancie siatki właściwości.|
-|`CMFCPropertyGridCtrl::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCPropertyGridCtrl::HitTest](#hittest)|Pobiera wskaźnik do obiektu właściwości, który odpowiada element kontroli siatki właściwości, jeśli określony punkt znajduje się w elemencie. Ta metoda wskazuje również obszar w formancie siatki właściwości, który zawiera punkt.|
-|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Inicjuje wewnętrzny [obiekt CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) używany przez platformę do wyświetlania bieżącej kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::IsAlphabeticMode](#isalphabeticmode)|Wskazuje, czy formant siatki właściwości jest w trybie alfabetycznym.|
+|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Pobiera liczbę właściwości w kontrolce siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Pobiera wysokość wiersza w kontrolce siatki właściwości.|
+|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Pobiera wskaźnik do kontrolki paska przewijania w kontrolce siatki właściwości. (Przesłania [CWnd:: GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
+|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Pobiera kolor tekstu elementów właściwości w bieżącej kontrolce siatki właściwości.|
+|`CMFCPropertyGridCtrl::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCPropertyGridCtrl::HitTest](#hittest)|Pobiera wskaźnik do obiektu właściwości, który odpowiada elementowi kontrolki siatki właściwości, jeśli określony punkt znajduje się w elemencie. Ta metoda wskazuje również obszar w kontrolce siatki właściwości, który zawiera punkt.|
+|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Inicjuje wewnętrzny obiekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , który jest wykorzystywany przez strukturę do wyświetlania bieżącej kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl:: isalphabeticmode](#isalphabeticmode)|Wskazuje, czy kontrolka siatki właściwości jest w trybie alfabetycznym.|
 |[CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip](#isalwaysshowusertooltip)||
-|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Wskazuje, czy wyświetlany jest obszar opisu formantu siatki właściwości.|
-|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Wskazuje, czy nazwa każdej grupy właściwości jest wyświetlana na całej szerokości bieżącej kontroli siatki właściwości.|
+|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Wskazuje, czy jest wyświetlany obszar opis kontrolki siatka właściwości.|
+|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Wskazuje, czy każda nazwa grupy właściwości jest wyświetlana na szerokości bieżącej kontrolki siatki właściwości.|
 |[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Wskazuje, czy formant nagłówka jest wyświetlany.|
-|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Wskazuje, w jaki sposób formant siatki właściwości wyświetla zmodyfikowane właściwości.|
-|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Wskazuje, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontroli siatki właściwości, gdy użytkownik zmienić rozmiar kolumn.|
-|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Wskazuje, czy wygląd formantu siatki właściwości jest w stylu, który jest używany przez VS .NET.|
+|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Wskazuje, w jaki sposób kontrolka siatki właściwości wyświetla zmodyfikowane właściwości.|
+|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Wskazuje, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontrolki siatki właściwości, gdy użytkownik zmienia rozmiar kolumn.|
+|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Wskazuje, czy wygląd kontrolki siatki właściwości znajduje się w stylu używanym przez program VS .NET.|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Określa sposób wyświetlania zmodyfikowanych właściwości.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do tłumaczenia wiadomości okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Zastępuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridCtrl::UsuńWszywszystko](#removeall)|Usuwa wszystkie obiekty właściwości z formantu siatki właściwości.|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okna przed ich wysłaniem do funkcji [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridCtrl::](#removeall)|Usuwa wszystkie obiekty właściwości z kontrolki siatki właściwości.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Przywraca oryginalną wartość wszystkich właściwości.|
-|[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Ustawia lub resetuje tryb alfabetyczny.|
-|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Określa tekst etykiet logicznych.|
-|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Wybiera właściwość w formancie siatki właściwości.|
-|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Określa kolory niestandardowe dla różnych elementów sterujących siatką właściwości.|
-|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Określa liczbę wierszy wyświetlanych w sekcji opisu bieżącej kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Określa, czy ma być wyświetlana pełna szerokość nazwy kategorii dla grupy właściwości w bieżącym formancie siatki właściwości.|
+|[CMFCPropertyGridCtrl:: setalphabeticmode](#setalphabeticmode)|Ustawia lub resetuje tryb alfabetyczny.|
+|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Określa tekst etykiet wartości logicznych.|
+|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Wybiera właściwość w kontrolce siatki właściwości.|
+|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Określa kolory niestandardowe dla różnych elementów kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Określa liczbę wierszy, które mają być wyświetlane w sekcji opis kontrolki siatki bieżącej właściwości.|
+|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Określa, czy ma być wyświetlana Pełna szerokość nazwy kategorii dla grupy właściwości w bieżącej kontrolce siatki właściwości.|
 |[CMFCPropertyGridCtrl::SetListDelimiter](#setlistdelimiter)|Definiuje znak, który będzie używany jako ogranicznik na liście wartości właściwości.|
-|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Określa, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontroli siatki właściwości, gdy użytkownik zmienić rozmiar kolumn.|
-|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Ustawia wygląd formantu siatki właściwości na styl, który jest używany w programie VS .NET.|
-|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Ustawia wartość koloru aktualnie wybranej właściwości koloru.|
+|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Określa, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontrolki siatki właściwości, gdy użytkownik zmienia rozmiar kolumn.|
+|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Ustawia wygląd kontrolki siatki właściwości do stylu, który jest używany w programie VS .NET.|
+|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Ustawia wartość koloru aktualnie wybranej właściwości Color.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl::DopasowywanieLayout](#adjustlayout)|Ponownie rysuje formant siatki właściwości i jej właściwości.|
-|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Wywoływana przez formant siatki właściwości do sortowania właściwości.|
-|[CMFCPropertyGridCtrl::EditItem](#edititem)|Wywoływane przez platformę, gdy użytkownik zaczyna modyfikować właściwość.|
-|[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Wywoływane przez platformę, gdy użytkownik przestaje modyfikować właściwość.|
-|[CMFCPropertyGridCtrl::Init](#init)|Wywoływana przez strukturę do zainicjowania kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::OnChangeSelection](#onchangeselection)|Wywoływana przez strukturę po zmianie bieżącego zaznaczenia.|
-|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Wywoływane przez strukturę po kliknięciu przycisku właściwości.|
-|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Wywoływana przez ramy do rysowania obramowania wokół kontroli siatki właściwości.|
-|[CMFCPropertyGridCtrl::OnDrawDescription](#ondrawdescription)|Wywoływana przez strukturę, aby narysować obszar opisu i wyświetlić tekst opisu.|
-|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Wywoływane przez strukturę do wyświetlania listy właściwości w formancie siatki właściwości.|
-|[CMFCPropertyGridCtrl::OnDrawProperty](#ondrawproperty)|Wywoływana przez strukturę do wyświetlania właściwości.|
-|[CMFCPropertyGridCtrl::OnPropertyZmienił](#onpropertychanged)|Wywoływana przez strukturę, gdy wartość właściwości zostanie zmieniona.|
-|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Wywoływana przez platformę, gdy jest zaznaczona właściwość zawierająca formant pola kombi.|
-|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Wywoływane przez strukturę do sprawdzania poprawności danych właściwości.|
+|[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Ponownie rysuje kontrolkę siatka właściwości i jej właściwości.|
+|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Wywoływane przez kontrolkę siatka właściwości do sortowania właściwości.|
+|[CMFCPropertyGridCtrl::EditItem](#edititem)|Wywoływane przez platformę, gdy użytkownik rozpocznie modyfikowanie właściwości.|
+|[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Wywoływane przez platformę, gdy użytkownik zatrzyma modyfikowanie właściwości.|
+|[CMFCPropertyGridCtrl:: init](#init)|Wywoływane przez platformę, aby zainicjować kontrolkę siatki właściwości.|
+|[CMFCPropertyGridCtrl::OnChangeSelection](#onchangeselection)|Wywoływane przez platformę, gdy bieżące zaznaczenie zostanie zmienione.|
+|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Wywoływane przez platformę, gdy kliknięto przycisk Właściwości.|
+|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Wywoływane przez platformę, by narysować obramowanie wokół kontrolki siatki właściwości.|
+|[CMFCPropertyGridCtrl::OnDrawDescription](#ondrawdescription)|Wywoływane przez platformę, by narysować obszar opisu i wyświetlić tekst opisu.|
+|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Wywoływane przez platformę, by wyświetlić listę właściwości w kontrolce siatki właściwości.|
+|[CMFCPropertyGridCtrl::OnDrawProperty](#ondrawproperty)|Wywoływane przez platformę, by wyświetlić właściwość.|
+|[CMFCPropertyGridCtrl::OnPropertyChanged](#onpropertychanged)|Wywoływane przez platformę, gdy wartość właściwości zostanie zmieniona.|
+|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Wywoływane przez platformę, gdy jest zaznaczona właściwość, która zawiera kontrolkę pola kombi.|
+|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Wywoływane przez platformę, by sprawdzić poprawność danych właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `CMFCPropertyGridCtrl` wyświetla formant siatki właściwości, który zawiera edytowalne właściwości pochodzące z [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) klasy. Każda właściwość może reprezentować typ i może zawierać podwykonań. Formant siatki właściwości obsługuje obszar o zmiennym rozmiarze u dołu, który może wyświetlać opis wybranej właściwości.
+`CMFCPropertyGridCtrl`Klasa wyświetla kontrolkę siatka właściwości, która zawiera właściwości edytowalne pochodne klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Każda właściwość może reprezentować typ i może zawierać elementy SubItems. Kontrolka siatka właściwości obsługuje obszar o zmiennym rozmiarze u dołu, który może wyświetlać opis wybranej właściwości.
 
-Aby użyć formantu siatki `CMFCPropertyGridCtrl` właściwości, skonstruuj obiekt, a następnie wywołaj [metodę CMFCPropertyGridCtrl::Create.](#create) Użyj [METODY CMFCPropertyGridCtrl::AddProperty,](#addproperty) aby dodać właściwości do listy.
+Aby użyć kontrolki siatki właściwości, Utwórz `CMFCPropertyGridCtrl` obiekt, a następnie Wywołaj metodę [CMFCPropertyGridCtrl:: Create](#create) . Użyj metody [CMFCPropertyGridCtrl:: AddProperty](#addproperty) , aby dodać właściwości do listy.
 
-## <a name="selection-properties"></a>Właściwości zaznaczenia
+## <a name="selection-properties"></a>Właściwości wyboru
 
-Zamiast reprezentować wartość, element właściwości można uruchomić okno dialogowe, które umożliwia użytkownikowi wybranie koloru, pliku lub czcionki.
+Zamiast reprezentowania wartości, element właściwości może uruchomić okno dialogowe, które umożliwia użytkownikowi wybranie koloru, pliku lub czcionki.
 
 W poniższej tabeli wymieniono cztery typy właściwości wyboru:
 
 |Klasa|Opis|
 |-----------|-----------------|
-|[Klasa CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Właściwość ogólnego przeznaczenia, która jest używana do określania wartości ciągów, wartości logicznych, dat i tak dalej.|
-|[Klasa CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Właściwość używana do wybierania wartości koloru.|
-|[Klasa CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Właściwość używana do wybierania pliku.|
-|[Klasa CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Właściwość używana do wybierania czcionki.|
+|[Klasa CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Właściwość ogólnego przeznaczenia, która jest używana do określania wartości ciągów, wartości logicznych, dat itd.|
+|[Klasa CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Właściwość, która jest używana do wybierania wartości koloru.|
+|[Klasa CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Właściwość, która jest używana do zaznaczania pliku.|
+|[Klasa CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Właściwość, która jest używana do wybierania czcionki.|
 
 ## <a name="illustrations"></a>Ilustracje
 
-Poniższe ilustracje przedstawiają formant siatki właściwości, który wyświetla właściwości na dwa sposoby. Pierwsza ilustracja wyświetla właściwości hierarchicznie, a druga wyświetla właściwości alfabetycznie.
+Poniższe ilustracje przedstawiają kontrolkę siatka właściwości, która wyświetla właściwości na dwa sposoby. Pierwsza ilustracja przedstawia właściwości hierarchicznie, a druga wyświetla właściwości alfabetycznie.
 
-![Arkusz właściwości listy właściwości](../../mfc/reference/media/proplist.png "Arkusz właściwości listy właściwości")
+![Arkusza właściwości listy właściwości](../../mfc/reference/media/proplist.png "Arkusza właściwości listy właściwości")
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak skonfigurować obiekt kontroli `CMFCPropertyGridCtrl` siatki właściwości przy użyciu różnych metod w klasie. W przykładzie pokazano, jak włączyć formant nagłówka, włączyć obszar opisu i ustawić wygląd formantu siatki właściwości. W przykładzie pokazano również, jak ustawić tryb alfabetyczny dla formantu, przy czym formant sortuje wszystkie właściwości, które zawiera według ich nazwy właściwości i jak ustawić kolory niestandardowe dla różnych elementów formantu siatki właściwości. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób konfigurowania obiektu formantu siatki właściwości przy użyciu różnych metod w `CMFCPropertyGridCtrl` klasie. W przykładzie pokazano, jak włączyć kontrolkę nagłówka, włączyć obszar opis i ustawić wygląd kontrolki siatki właściwości. W przykładzie pokazano również, jak ustawić tryb alfabetyczny dla kontrolki, zgodnie z którą formant sortuje wszystkie właściwości, które zawiera nazwa właściwości, oraz sposób ustawiania niestandardowych kolorów dla różnych elementów kontrolki siatki właściwości. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -307,19 +307,19 @@ W poniższym przykładzie pokazano, jak skonfigurować obiekt kontroli `CMFCProp
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpropertygridctrl.h
+**Nagłówek:** afxpropertygridctrl. h
 
-## <a name="cmfcpropertygridctrlaccselect"></a><a name="accselect"></a>CMFCPropertyGridCtrl::accSelect
+## <a name="cmfcpropertygridctrlaccselect"></a><a name="accselect"></a> CMFCPropertyGridCtrl::accSelect
 
 ```
 virtual HRESULT accSelect(
@@ -329,16 +329,16 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *flagsSelect*<br/>
-[w] *varChild (dziecko)*<br/>
+podczas *flagsSelect*<br/>
+podczas *varChild*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty
+## <a name="cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a> CMFCPropertyGridCtrl:: Add— Właściwość
 
-Dodaje nową właściwość do formantu siatki właściwości.
+Dodaje nową właściwość do kontrolki siatki właściwości.
 
 ```
 int AddProperty(
@@ -349,26 +349,26 @@ int AddProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do właściwości.
+*pProp*<br/>
+podczas Wskaźnik do właściwości.
 
 *bRedraw*<br/>
-[w] TRUE, aby natychmiast przerysować właściwość; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby natychmiast ponownie narysować Właściwość; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 *bAdjustLayout*<br/>
-[w] TRUE, aby ponownie obliczyć sposób rysowania tekstu i wartości właściwości, a następnie narysować właściwość; FALSE, aby użyć istniejących obliczeń do rysowania właściwości. Wartością domyślną jest PRAWDA.
+podczas Wartość TRUE powoduje ponowne obliczenie sposobu rysowania tekstu i wartości właściwości, a następnie narysowanie właściwości; Wartość FALSE, aby użyć istniejących obliczeń do narysowania właściwości. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli ta metoda powiedzie się, indeks od zera pozycji w formancie siatki właściwości, gdzie jest dodawany właściwość; w przeciwnym razie -1.
+Jeśli ta metoda zakończy się powodzeniem, indeks (liczony od zera) pozycji w kontrolce siatki właściwości, w której zostanie dodana Właściwość; w przeciwnym razie-1.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda dodaje wskaźnik do określonej właściwości na końcu listy właściwości w formancie siatki właściwości. Nie należy niszczyć właściwości ani zezwalać na ich wyjęcie poza zakres, zanim formant siatki zostanie zniszczony. Po zakończeniu z formantu siatki właściwości, wywołać [CMFCPropertyGridCtrl::RemoveAll,](#removeall) aby usunąć wszystkie dodane właściwości. AddProperty Metoda kończy się niepowodzeniem, jeśli określona właściwość została już dodana do listy.
+Ta metoda dodaje wskaźnik do określonej właściwości na końcu listy właściwości w kontrolce siatki właściwości. Nie niszczyj właściwości ani nie Zezwalaj im poza zakresem, zanim formant siatki zostanie zniszczony. Gdy wykonujesz kontrolkę siatka właściwości, wywołaj [CMFCPropertyGridCtrl::](#removeall) Usuń, aby usunąć wszystkie dodane właściwości. Metoda AddProperty kończy się niepowodzeniem, jeśli określona właściwość została już dodana do listy.
 
-## <a name="cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a>CMFCPropertyGridCtrl::DopasowywanieLayout
+## <a name="cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a> CMFCPropertyGridCtrl::AdjustLayout
 
-Ponownie rysuje formant siatki właściwości i jej właściwości.
+Ponownie rysuje kontrolkę siatka właściwości i jej właściwości.
 
 ```
 virtual void AdjustLayout();
@@ -376,9 +376,9 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ponownie oblicza sposób rysowania kontroli siatki całej właściwości i jej właściwości, w tym obrazów, czcionek i formantów.
+Ta metoda ponownie oblicza sposób rysowania całej kontrolki siatki właściwości i jej właściwości, w tym obrazów, czcionek i kontrolek.
 
-## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
+## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a> CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
 ```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
@@ -386,13 +386,13 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *bPokaż*<br/>
+podczas *bShow*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup
+## <a name="cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a> CMFCPropertyGridCtrl::CloseColorPopup
 
-Zamyka okno dialogowe wyboru kolorów.
+Zamyka okno dialogowe wyboru koloru.
 
 ```
 virtual void CloseColorPopup();
@@ -400,9 +400,9 @@ virtual void CloseColorPopup();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat okna dialogowego wyboru kolorów, zobacz [CMFCPropertyGridColorProperty Class](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
+Aby uzyskać więcej informacji na temat wyboru koloru okna dialogowego, zobacz [Klasa CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
 
-## <a name="cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
+## <a name="cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a> CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
 
 Konstruuje `CMFCPropertyGridCtrl` obiekt.
 
@@ -414,9 +414,9 @@ CMFCPropertyGridCtrl();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps
+## <a name="cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a> CMFCPropertyGridCtrl::CompareProps
 
-Wywoływana przez formant siatki właściwości do sortowania właściwości.
+Wywoływane przez kontrolkę siatka właściwości do sortowania właściwości.
 
 ```
 virtual int CompareProps(
@@ -436,17 +436,17 @@ Wskaźnik do właściwości.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|Nazwa parametru *pProp1* jest mniejsza niż nazwa parametru *pProp2.*|
-|0|Nazwa parametru *pProp1* jest równa nazwie parametru *pProp2.*|
-|> 0|Nazwa obiektu *pProp1* jest większa niż nazwa parametru *pProp2.*|
+|< 0|Nazwa parametru *pProp1* jest mniejsza niż nazwa parametru *pProp2* .|
+|0|Nazwa parametru *pProp1* jest równa nazwie parametru *pProp2* .|
+|> 0|Nazwa obiektu *pProp1* jest większa niż nazwa parametru *pProp2* .|
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda używa [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metody `CMFCPropertyGridProperty::m_strName` do porównania elementów członkowskich określonych parametrów.
+Domyślnie ta metoda używa metody [CString:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) do porównywania `CMFCPropertyGridProperty::m_strName` elementów członkowskich określonych parametrów.
 
-## <a name="cmfcpropertygridctrlcreate"></a><a name="create"></a>CMFCPropertyGridCtrl::Tworzenie
+## <a name="cmfcpropertygridctrlcreate"></a><a name="create"></a> CMFCPropertyGridCtrl:: Create
 
-Tworzy formant siatki właściwości i dołącza ją do obiektu sterującego siatką właściwości.
+Tworzy kontrolkę siatka właściwości i dołącza ją do obiektu sterowania siatką właściwości.
 
 ```
 virtual BOOL Create(
@@ -458,35 +458,35 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Dwstyle*<br/>
-[w] Bitowa kombinacja (OR) [stylów okien](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+podczas Bitowa kombinacja (lub) [stylów okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[w] Prostokąt ograniczający, który określa rozmiar i położenie okna, we współrzędnych klienta *pParentWnd*.
+*cinania*<br/>
+podczas Prostokąt ograniczający określający rozmiar i położenie okna we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-[w] Wskaźnik do okna nadrzędnego. Nie może być null.
+podczas Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.
 
-*Nid*<br/>
-[w] Identyfikator okna podrzędnego.
+*nID*<br/>
+podczas Identyfikator okna podrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli okno zostało utworzone pomyślnie; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli okno zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby utworzyć formant siatki właściwości, należy najpierw wywołać [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) do konstruowania obiektu siatki właściwości. Następnie `CMFCPropertyGridCtrl::Create`zadzwoń do .
+Aby utworzyć kontrolkę siatki właściwości, najpierw Wywołaj [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) w celu skonstruowania obiektu siatki właściwości. Następnie Wywołaj `CMFCPropertyGridCtrl::Create` .
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać `Create` metody w `CMFCPropertyGridCtrl` klasie. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `Create` metody w `CMFCPropertyGridCtrl` klasie. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
-## <a name="cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty
+## <a name="cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a> CMFCPropertyGridCtrl::D eleteProperty
 
-Usuwa określoną właściwość z formantu siatki właściwości.
+Usuwa określoną właściwość z kontrolki siatki właściwości.
 
 ```
 BOOL DeleteProperty(
@@ -497,24 +497,24 @@ BOOL DeleteProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do właściwości.
+*pProp*<br/>
+podczas Wskaźnik do właściwości.
 
 *bRedraw*<br/>
-[w] TRUE, aby ponownie rysować formant siatki właściwości; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby ponownie narysować kontrolkę siatki właściwości; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 *bAdjustLayout*<br/>
-[w] TRUE, aby ponownie obliczyć sposób rysowania całego tekstu, obrazów i elementów w formancie siatki właściwości, a następnie narysować formant; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas Wartość TRUE powoduje ponowne obliczenie sposobu rysowania całego tekstu, obrazów i elementów w kontrolce siatki właściwości, a następnie narysowanie kontrolki; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do usuwania właściwości i wszelkich podudziałów z formantu siatki właściwości.
+Ta metoda służy do usuwania właściwości i wszelkich elementów podrzędnych z kontrolki siatka właściwości.
 
-## <a name="cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors
+## <a name="cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a> CMFCPropertyGridCtrl::D rawControlBarColors
 
 ```
 BOOL DrawControlBarColors() const;
@@ -524,9 +524,9 @@ BOOL DrawControlBarColors() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrledititem"></a><a name="edititem"></a>CMFCPropertyGridCtrl::EditItem
+## <a name="cmfcpropertygridctrledititem"></a><a name="edititem"></a> CMFCPropertyGridCtrl::EditItem
 
-Wywoływane przez platformę, gdy użytkownik zaczyna modyfikować właściwość.
+Wywoływane przez platformę, gdy użytkownik rozpocznie modyfikowanie właściwości.
 
 ```
 virtual BOOL EditItem(
@@ -536,11 +536,11 @@ virtual BOOL EditItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do właściwości.
+*pProp*<br/>
+podczas Wskaźnik do właściwości.
 
-*lptKlik*<br/>
-[w] Punkt na formancie siatki właściwości, który użytkownik kliknął, aby rozpocząć operację edycji. Punkt znajduje się we współrzędnych klienta formantu. Wartością domyślną jest NULL.
+*lptClick*<br/>
+podczas Punkt w kontrolce siatki właściwości, który został kliknięty przez użytkownika w celu rozpoczęcia operacji edycji. Punkt znajduje się w współrzędnych klienta formantu. Wartość domyślna to NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -548,9 +548,9 @@ PRAWDA, jeśli metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea
+## <a name="cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a> CMFCPropertyGridCtrl::EnableDescriptionArea
 
-Włącza lub wyłącza obszar opisu, który jest wyświetlany pod listą właściwości w formancie siatki właściwości.
+Włącza lub wyłącza obszar opisu wyświetlany poniżej listy właściwości w kontrolce siatka właściwości.
 
 ```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
@@ -558,16 +558,16 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłaszą*<br/>
-[w] PRAWDA, aby włączyć obszar opisu; FALSE, aby wyłączyć obszar opisu. Wartością domyślną jest PRAWDA.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć obszar opisu; Wartość FALSE powoduje wyłączenie obszaru opisu. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Obszar opisu jest wyświetlany w dolnej części formantu siatki właściwości. Domyślnie obszar opisu jest wyłączony i nie jest widoczny.
+Obszar opis jest wyświetlany w dolnej części kontrolki siatki właściwości. Domyślnie obszar opisu jest wyłączony i niewidoczny.
 
-## <a name="cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl
+## <a name="cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a> CMFCPropertyGridCtrl::EnableHeaderCtrl
 
-Włącza lub wyłącza formant nagłówka w górnej części formantu siatki właściwości.
+Włącza lub wyłącza kontrolkę nagłówka w górnej części kontrolki siatki właściwości.
 
 ```cpp
 void EnableHeaderCtrl(
@@ -578,18 +578,18 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłaszą*<br/>
-[w] PRAWDA, aby włączyć kontrolkę nagłówka; FALSE, aby wyłączyć kontrolkę nagłówka. Wartością domyślną jest PRAWDA.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć kontrolkę nagłówka; Wartość FALSE powoduje wyłączenie kontrolki nagłówka. Wartość domyślna to TRUE.
 
 *lpszLeftColumn*<br/>
-[w] Tytuł lewej kolumny formantu nagłówka. Wartością domyślną jest **Właściwość**.
+podczas Tytuł lewej kolumny kontrolki nagłówek. Wartość domyślna to **Property**.
 
-*lpszRightColumn (lpszRightColumn)*<br/>
-[w] Tytuł prawej kolumny formantu nagłówka. Wartością domyślną jest **Wartość**.
+*lpszRightColumn*<br/>
+podczas Tytuł prawej kolumny kontrolki nagłówka. Wartością domyślną jest **wartość**.
 
-## <a name="cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem
+## <a name="cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a> CMFCPropertyGridCtrl::EndEditItem
 
-Wywoływane przez platformę, gdy użytkownik kończy modyfikowanie właściwości.
+Wywoływane przez platformę, gdy użytkownik zakończy modyfikowanie właściwości.
 
 ```
 virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
@@ -598,17 +598,17 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bUpdateData*<br/>
-[w] PRAWDA, aby określić, że zmodyfikowane dane właściwości muszą zostać zweryfikowane po zakończeniu operacji edycji; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas Wartość TRUE, aby określić, że zmodyfikowane dane właściwości muszą być sprawdzane po zakończeniu operacji edycji; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli operacja edycji zakończy się pomyślnie; FAŁSZ, jeśli zmodyfikowane dane właściwości są nieprawidłowe lub jeśli operacja edycji powinna być kontynuowana.
+Ma wartość TRUE, jeśli operacja edytowania kończy się pomyślnie; Wartość FALSE, jeśli zmodyfikowane dane właściwości są nieprawidłowe lub jeśli operacja edytowania powinna być kontynuowana.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible
+## <a name="cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a> CMFCPropertyGridCtrl::EnsureVisible
 
-Przewija formant siatki właściwości i rozwija elementy właściwości, dopóki określona właściwość nie będzie widoczna.
+Przewija kontrolkę siatka właściwości i rozwija elementy właściwości, dopóki określona właściwość nie zostanie wyświetlona.
 
 ```cpp
 void EnsureVisible(
@@ -618,17 +618,17 @@ void EnsureVisible(
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do właściwości.
+*pProp*<br/>
+podczas Wskaźnik do właściwości.
 
-*bRozwiń Rodzice*<br/>
-[w] PRAWDA, aby rozwinąć elementy nadrzędne, aby określona właściwość była widoczna; w przeciwnym razie FALSE. Wartość domyślna to FALSE.
+*bExpandParents*<br/>
+podczas Wartość TRUE powoduje rozwinięcie elementów nadrzędnych, aby była widoczna określona właściwość; w przeciwnym razie FALSE. Wartość domyślna to FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlexpandall"></a><a name="expandall"></a>CMFCPropertyGridCtrl::RozwińWszywszy
+## <a name="cmfcpropertygridctrlexpandall"></a><a name="expandall"></a> CMFCPropertyGridCtrl:: Rozwiń wszystko
 
-Rozwija lub zwija wszystkie węzły kontroli siatki właściwości.
+Rozwija lub zwija wszystkie węzły kontrolki siatki właściwości.
 
 ```cpp
 void ExpandAll(BOOL bExpand=TRUE);
@@ -636,14 +636,14 @@ void ExpandAll(BOOL bExpand=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bRozwiń*<br/>
-[w] PRAWDA, aby rozwinąć wszystkie węzły; FAŁSZ, aby zwinąć wszystkie węzły. Wartością domyślną jest PRAWDA.
+*bExpand*<br/>
+podczas Wartość TRUE, aby rozwinąć wszystkie węzły; Wartość FALSE, aby zwinąć wszystkie węzły. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData
+## <a name="cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a> CMFCPropertyGridCtrl::FindItemByData
 
-Pobiera właściwość, która jest skojarzona z wartością DWORD zdefiniowaną przez użytkownika.
+Pobiera właściwość, która jest skojarzona z wartością typu DWORD zdefiniowaną przez użytkownika.
 
 ```
 CMFCPropertyGridProperty* FindItemByData(
@@ -653,21 +653,21 @@ CMFCPropertyGridProperty* FindItemByData(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData (dane)*<br/>
-[w] Wartość DWORD.
+*dwData*<br/>
+podczas Wartość typu DWORD.
 
-*bWyszukiwaniewychy*<br/>
-[w] PRAWDA, aby wyszukać podudziały właściwości; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+*bSearchSubItems*<br/>
+podczas Wartość TRUE, aby wyszukać elementy podrzędne właściwości. w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu właściwości skojarzonej, jeśli ta metoda powiedzie się; w przeciwnym razie NULL.
+Wskaźnik do skojarzonego obiektu właściwości, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) konstruktora lub [CMFCPropertyGridProperty::SetData metody skojarzyć](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) DWORD z właściwością.
+Użyj metody [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) konstruktora lub [CMFCPropertyGridProperty:: SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) , aby skojarzyć element DWORD z właściwością.
 
-## <a name="cmfcpropertygridctrlget_accchildcount"></a><a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount
+## <a name="cmfcpropertygridctrlget_accchildcount"></a><a name="get_accchildcount"></a> CMFCPropertyGridCtrl:: get_accChildCount
 
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
@@ -675,13 +675,13 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pcountDzieci*<br/>
+podczas *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlget_accfocus"></a><a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus
+## <a name="cmfcpropertygridctrlget_accfocus"></a><a name="get_accfocus"></a> CMFCPropertyGridCtrl:: get_accFocus
 
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
@@ -689,13 +689,13 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pvarChild (dzieci)*<br/>
+podczas *pvarChild*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlget_acchelp"></a><a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp
+## <a name="cmfcpropertygridctrlget_acchelp"></a><a name="get_acchelp"></a> CMFCPropertyGridCtrl:: get_accHelp
 
 ```
 virtual HRESULT get_accHelp(
@@ -705,14 +705,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *varChild (dziecko)*<br/>
-[w] *PSZPomoc*<br/>
+podczas *varChild*<br/>
+podczas *pszHelp*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlget_acchelptopic"></a><a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic
+## <a name="cmfcpropertygridctrlget_acchelptopic"></a><a name="get_acchelptopic"></a> CMFCPropertyGridCtrl:: get_accHelpTopic
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -723,15 +723,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pszHelpFile*<br/>
-[w] *varChild (dziecko)*<br/>
-[w] *pidTopic (PidTopic)*<br/>
+podczas *pszHelpFile*<br/>
+podczas *varChild*<br/>
+podczas *pidTopic*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlget_acckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut
+## <a name="cmfcpropertygridctrlget_acckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a> CMFCPropertyGridCtrl:: get_accKeyboardShortcut
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -741,14 +741,14 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *varChild (dziecko)*<br/>
-[w] *pszKeyboardShortcut*<br/>
+podczas *varChild*<br/>
+podczas *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlget_accselection"></a><a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection
+## <a name="cmfcpropertygridctrlget_accselection"></a><a name="get_accselection"></a> CMFCPropertyGridCtrl:: get_accSelection
 
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -756,15 +756,15 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pvarDzienie*<br/>
+podczas *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor
+## <a name="cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a> CMFCPropertyGridCtrl::GetBkColor
 
-Pobiera kolor tła bieżącej kontroli siatki właściwości.
+Pobiera kolor tła bieżącej kontrolki siatki właściwości.
 
 ```
 COLORREF GetBkColor() const;
@@ -776,11 +776,11 @@ Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera kolor, który służy do rysowania tła bieżącej kontroli siatki właściwości. [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) metoda pobiera kolor pierwszego planu.
+Ta metoda pobiera kolor, którego struktura używa do rysowania tła bieżącej kontrolki siatki właściwości. [CMFCPropertyGridCtrl:: GetTextColor](#gettextcolor) Metoda pobiera kolor pierwszego planu.
 
-## <a name="cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont
+## <a name="cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a> CMFCPropertyGridCtrl::GetBoldFont
 
-Pobiera czcionkę systemu Windows, która jest używana do rysowania tekstu w bieżącym formancie siatki właściwości w stylu pogrubionym.
+Pobiera czcionkę systemu Windows, która jest używana do rysowania tekstu w bieżącej kontrolce siatki właściwości w stylu pogrubionym.
 
 ```
 CFont& GetBoldFont();
@@ -788,9 +788,9 @@ CFont& GetBoldFont();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu [CFont,](../../mfc/reference/cfont-class.md) który opisuje cechy czcionki pogrubionej.
+Odwołanie do obiektu [CFont](../../mfc/reference/cfont-class.md) , który opisuje charakterystykę czcionki pogrubionej.
 
-## <a name="cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel
+## <a name="cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a> CMFCPropertyGridCtrl::GetCurSel
 
 Pobiera aktualnie wybraną właściwość.
 
@@ -800,13 +800,13 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu właściwości, który odpowiada wybranemu elementowi w formancie siatki właściwości.
+Wskaźnik do obiektu właściwości, który odpowiada wybranemu elementowi w kontrolce siatki właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors
+## <a name="cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a> CMFCPropertyGridCtrl::GetCustomColors
 
-Pobiera kolory niestandardowe, które są obecnie zdefiniowane dla elementów kontroli siatki właściwości.
+Pobiera kolory niestandardowe, które są obecnie zdefiniowane dla elementów kontrolki siatki właściwości.
 
 ```cpp
 void GetCustomColors(
@@ -821,34 +821,34 @@ void GetCustomColors(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackground (ziemia powrotna)*<br/>
-[na zewnątrz] Kolor tła wartości właściwości.
+*clrBackground*<br/>
+określoną Kolor tła wartości właściwości.
 
-*clrTekst*<br/>
-[na zewnątrz] Kolor nazw właściwości i tekstu wartości właściwości.
+*clrText*<br/>
+określoną Kolor nazw właściwości i tekstu wartości właściwości.
 
-*clrGroupBackground (grupa)*<br/>
-[na zewnątrz] Kolor tła grupy właściwości.
+*clrGroupBackground*<br/>
+określoną Kolor tła grupy właściwości.
 
-*clrGroupText (Tekst grupy)*<br/>
-[na zewnątrz] Kolor tekstu w grupie właściwości.
+*clrGroupText*<br/>
+określoną Kolor tekstu w grupie właściwości.
 
-*clrDescriptionZadzienie zwrotne*<br/>
-[na zewnątrz] Kolor tła obszaru opisu.
+*clrDescriptionBackground*<br/>
+określoną Kolor tła obszaru opisu.
 
-*clrDescriptionTekt*<br/>
-[na zewnątrz] Kolor tekstu w obszarze opisu.
+*clrDescriptionText*<br/>
+określoną Kolor tekstu w obszarze opisu.
 
-*clrLine (linia clrline)*<br/>
-[na zewnątrz] Kolor linii, które są rysowane między właściwościami.
+*clrLine*<br/>
+określoną Kolor linii rysowanych między właściwościami.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [metody CMFCPropertyGridCtrl::SetCustomColors,](#setcustomcolors) aby ustawić kolory niestandardowe.
+Użyj metody [CMFCPropertyGridCtrl:: SetCustomColors](#setcustomcolors) , aby ustawić kolory niestandardowe.
 
-## <a name="cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight
+## <a name="cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a> CMFCPropertyGridCtrl::GetDescriptionHeight
 
-Pobiera wysokość obszaru opisu, który znajduje się w dolnej części formantu siatki właściwości.
+Pobiera wysokość obszaru opisu znajdującego się w dolnej części kontrolki siatki właściwości.
 
 ```
 int GetDescriptionHeight() const;
@@ -860,13 +860,13 @@ Wysokość obszaru opisu w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Wysokość obszaru opisu jest obliczana automatycznie i jest ustawiana na 1/4 wysokości formantu siatki właściwości.
+Wysokość obszaru opisu jest obliczana automatycznie i jest ustawiona na 1/4 wysokość kontrolki siatki właściwości.
 
-Użyj [METODY CMFCPropertyGridCtrl::EnableDescriptionArea,](#enabledescriptionarea) aby wyświetlić lub ukryć obszar opisu. Użyj [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) metody, aby ustalić, czy obszar opisu jest wyświetlany lub ukryty.
+Użyj metody [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) , aby wyświetlić lub ukryć obszar opisu. Użyj metody [CMFCPropertyGridCtrl:: IsDescriptionArea](#isdescriptionarea) , aby określić, czy obszar opisu jest wyświetlany, czy ukryty.
 
-## <a name="cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows
+## <a name="cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a> CMFCPropertyGridCtrl::GetDescriptionRows
 
-Pobiera liczbę wierszy w obszarze opisu bieżącej kontroli siatki właściwości.
+Pobiera liczbę wierszy w obszarze Opis kontrolki siatki bieżącej właściwości.
 
 ```
 int GetDescriptionRows() const;
@@ -874,15 +874,15 @@ int GetDescriptionRows() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba wierszy w obszarze opisu bieżącej kontroli siatki właściwości.
+Liczba wierszy w obszarze Opis kontrolki siatki bieżącej właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) inicjuje obszar opisu do 3 wierszy.
+Konstruktor [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) inicjuje obszar opisu do 3 wierszy.
 
-## <a name="cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl
+## <a name="cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a> CMFCPropertyGridCtrl::GetHeaderCtrl
 
-Pobiera wewnętrzny [OBIEKT CMFCHeaderCtrl,](../../mfc/reference/cmfcheaderctrl-class.md) który jest używany przez platformę do wyświetlania bieżącej kontroli siatki właściwości.
+Pobiera wewnętrzny obiekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , który jest wykorzystywany przez strukturę do wyświetlania bieżącej kontrolki siatki właściwości.
 
 ```
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
@@ -892,9 +892,9 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 
 Odwołanie do `CMFCHeaderCtrl` obiektu.
 
-## <a name="cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight
+## <a name="cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a> CMFCPropertyGridCtrl::GetHeaderHeight
 
-Pobiera wysokość nagłówka formantu siatki właściwości.
+Pobiera wysokość nagłówka kontrolki siatki właściwości.
 
 ```
 int GetHeaderHeight() const;
@@ -902,13 +902,13 @@ int GetHeaderHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość nagłówka w pikselach.
+Wysokość nagłówka (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth
+## <a name="cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a> CMFCPropertyGridCtrl::GetLeftColumnWidth
 
-Pobiera szerokość lewej kolumny bieżącej kontroli siatki właściwości, która zawiera nazwę każdej właściwości.
+Pobiera szerokość lewej kolumny kontrolki siatki bieżącej właściwości, która zawiera nazwę każdej właściwości.
 
 ```
 int GetLeftColumnWidth() const;
@@ -920,11 +920,11 @@ Szerokość kolumny nazwy.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawa kolumna formantu siatki właściwości zawiera wartość każdej właściwości.
+Prawa kolumna kontrolki siatki właściwości zawiera wartość każdej właściwości.
 
-## <a name="cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect
+## <a name="cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a> CMFCPropertyGridCtrl::GetListRect
 
-Pobiera prostokąt ograniczający formantu siatki właściwości.
+Pobiera prostokąt związany z kontrolką siatki właściwości.
 
 ```
 CRect GetListRect() const;
@@ -932,13 +932,13 @@ CRect GetListRect() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Prostokąt ograniczający formantu siatki właściwości. Ta rectange nie zawiera obszaru opisu i nagłówka.
+Prostokąt ograniczający kontrolki siatki właściwości. Ten rectange nie zawiera obszaru i nagłówka opisu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty
+## <a name="cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a> CMFCPropertyGridCtrl:: GetProperty
 
-Pobiera wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi elementu w formancie siatki właściwości.
+Pobiera wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi elementu w kontrolce siatki właściwości.
 
 ```
 CMFCPropertyGridProperty* GetProperty(int nIndex) const;
@@ -946,18 +946,18 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-[w] Indeks od zera elementu kontroli siatki właściwości.
+*nIndex*<br/>
+podczas Indeks (liczony od zera) elementu kontrolki siatki właściwości.
 
-Ta metoda potwierdza, jeśli *nIndex* parametr jest mniejszy niż zero lub większa lub równa liczbie właściwości.
+Ta metoda potwierdza, czy wartość parametru *nIndex* jest mniejsza od zera lub większa lub równa liczbie właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi, jeśli ta metoda zakończy się pomyślnie; w `NULL`przeciwnym razie , .
+Wskaźnik do obiektu właściwości, który odpowiada określonemu indeksowi, jeśli ta metoda zostanie zakończona pomyślnie; w przeciwnym razie `NULL` .
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth
+## <a name="cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a> CMFCPropertyGridCtrl::GetPropertyColumnWidth
 
 Pobiera bieżącą szerokość kolumny zawierającej wartości właściwości.
 
@@ -971,11 +971,11 @@ Bieżąca szerokość kolumny zawierającej wartości właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolumna po prawej stronie w formancie siatki właściwości zawiera wartości właściwości. Klient może użyć podzielonego pola formantu siatki właściwości, aby zmienić szerokość kolumny wartości.
+Kolumna po prawej stronie kontrolki siatka właściwości zawiera wartości właściwości. Klient może użyć pola podziału kontrolki siatki właściwości, aby zmienić szerokość kolumny wartości.
 
-## <a name="cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount
+## <a name="cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a> CMFCPropertyGridCtrl::GetPropertyCount
 
-Pobiera liczbę właściwości w formancie siatki właściwości.
+Pobiera liczbę właściwości w kontrolce siatki właściwości.
 
 ```
 int GetPropertyCount() const;
@@ -987,9 +987,9 @@ Liczba właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight
+## <a name="cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a> CMFCPropertyGridCtrl::GetRowHeight
 
-Pobiera wysokość wiersza w formancie siatki właściwości.
+Pobiera wysokość wiersza w kontrolce siatki właściwości.
 
 ```
 int GetRowHeight() const;
@@ -997,15 +997,15 @@ int GetRowHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość rzędu.
+Wysokość wiersza.
 
 ### <a name="remarks"></a>Uwagi
 
-Wysokość wiersza jest równa bieżącej wysokości czcionki plus 4 piksele.
+Wysokość wiersza jest równa bieżącej wysokości czcionki powiększonej o 4 piksele.
 
-## <a name="cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl
+## <a name="cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a> CMFCPropertyGridCtrl::GetScrollBarCtrl
 
-Pobiera wskaźnik do formantu paska przewijania w formancie siatki właściwości.
+Pobiera wskaźnik do kontrolki paska przewijania w kontrolce siatki właściwości.
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1013,20 +1013,20 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nBar (kierownica)*<br/>
-[w] Orientacja paska przewijania, który musi być SB_VERT.
+*nBar*<br/>
+podczas Orientacja paska przewijania, która musi być SB_VERT.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu paska przewijania lub null, jeśli nie ma paska przewijania lub orientacja paska przewijania jest SB_HORZ.
+Wskaźnik do obiektu paska przewijania lub wartość NULL, jeśli nie ma paska przewijania lub Orientacja paska przewijania jest SB_HORZ.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do uzyskiwania bezpośredniego dostępu do pionowego paska przewijania.
+Użyj tej metody, aby uzyskać bezpośredni dostęp do pionowej kontrolki paska przewijania.
 
-## <a name="cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor
+## <a name="cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a> CMFCPropertyGridCtrl::GetTextColor
 
-Pobiera kolor, który jest używany do rysowania tekstu elementów właściwości w bieżącym formancie siatki właściwości.
+Pobiera kolor używany do rysowania tekstu elementów właściwości w bieżącej kontrolce siatki właściwości.
 
 ```
 COLORREF GetTextColor() const;
@@ -1038,11 +1038,11 @@ Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera kolor, który służy do rysowania pierwszego planu bieżącej kontroli siatki właściwości. [METODA CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) pobiera kolor tła.
+Ta metoda pobiera kolor, który jest wykorzystywany przez platformę do rysowania pierwszego planu bieżącej kontrolki siatki właściwości. [CMFCPropertyGridCtrl:: GetBkColor](#getbkcolor) Metoda pobiera kolor tła.
 
-## <a name="cmfcpropertygridctrlhittest"></a><a name="hittest"></a>CMFCPropertyGridCtrl::HitTest
+## <a name="cmfcpropertygridctrlhittest"></a><a name="hittest"></a> CMFCPropertyGridCtrl::HitTest
 
-Pobiera wskaźnik do obiektu właściwości, który odpowiada element kontroli siatki właściwości, jeśli określony punkt znajduje się w elemencie. Ta metoda wskazuje również obszar w formancie siatki właściwości, który zawiera punkt.
+Pobiera wskaźnik do obiektu właściwości, który odpowiada elementowi kontrolki siatki właściwości, jeśli określony punkt znajduje się w elemencie. Ta metoda wskazuje również obszar w kontrolce siatki właściwości, który zawiera punkt.
 
 ```
 CMFCPropertyGridProperty* HitTest(
@@ -1053,37 +1053,37 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Pt*<br/>
-[w] Punkt we współrzędnych klienta.
+*zmiennoprzecinkow*<br/>
+podczas Punkt we współrzędnych klienta.
 
-*PnArea (Obszar)*<br/>
-[w, na zewnątrz] Wskaźnik do `ClickArea` zmiennej. Gdy ta metoda zwraca, zmienna wskazuje *obszar właściwości,* który zawiera określony punkt. Aby uzyskać więcej informacji na temat obszaru właściwości, zobacz Uwagi.
+*pnArea*<br/>
+[in. out] Wskaźnik do `ClickArea` zmiennej. Gdy ta metoda zwraca, zmienna wskazuje *obszar właściwości* , który zawiera określony punkt. Aby uzyskać więcej informacji na temat obszaru właściwości, zobacz uwagi.
 
 *bPropsOnly*<br/>
-[w] TRUE, aby przetestować tylko obszar nieruchomości; FALSE, aby przetestować *obszar opisu,* jeśli określony punkt nie znajduje się w obszarze właściwości. Wartością domyślną jest FAŁSZ. Aby uzyskać więcej informacji na temat obszaru opisu, zobacz Uwagi.
+podczas TRUE, aby przetestować tylko obszar właściwości; Wartość FALSE umożliwia przetestowanie *obszaru opisu* , jeśli określony punkt nie znajduje się w obszarze właściwości. Wartość domyślna to FALSE. Aby uzyskać więcej informacji na temat obszaru Opis, zobacz uwagi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli parametr *bPropsOnly* ma wartość PRAWDA, a określony punkt znajduje się w obszarze właściwości, zwracana wartość jest wskaźnikiem do odpowiedniego obiektu właściwości. Ponadto *pnArea* parametr jest ustawiony na określony obszar, który zawiera określony punkt. W przeciwnym razie zwracana wartość to NULL i parametr *pnArea* nie jest modyfikowany.
+Jeśli parametr *bPropsOnly* ma wartość true, a określony punkt znajduje się w obszarze właściwości, wartość zwracana jest wskaźnikiem do odpowiadającego mu obiektu właściwości. Ponadto parametr *pnArea* jest ustawiany na określony obszar, który zawiera określony punkt. W przeciwnym razie wartość zwracana ma wartość NULL, a parametr *pnArea* nie jest modyfikowany.
 
-Jeśli parametr *bPropsOnly* ma wartość FAŁSZ, zwracana wartość jest zawsze null. Jeśli jednak określony punkt znajduje się w obszarze opisu, parametr `CMFCPropertyGridProperty::ClickDescription` *pnArea* jest ustawiony na .
+Jeśli parametr *bPropsOnly* ma wartość false, zwracana wartość jest zawsze równa null. Jeśli jednak określony punkt znajduje się w obszarze Opis, parametr *pnArea* jest ustawiony na `CMFCPropertyGridProperty::ClickDescription` .
 
 ### <a name="remarks"></a>Uwagi
 
-Obszar *właściwości* term odnosi się do jednego z obszarów nazwy, wartości lub rozwiń pola elementu kontroli siatki właściwości. *Obszar opisu* jest strefą u dołu formantu siatki właściwości. Po kliknięciu elementu kontroli siatki właściwości w obszarze opisu wyświetlany jest opis odpowiedniej właściwości.
+*Obszar właściwości* termin odnosi się do każdej z pól Nazwa, wartość lub pole rozwijane elementu kontrolki siatki właściwości. *Obszar opis* jest strefą u dołu kontrolki siatki właściwości. Po kliknięciu elementu formantu siatki właściwości, w obszarze Opis zostanie wyświetlony Opis odpowiedniej właściwości.
 
-Ta metoda ustawia wartość zmiennej, na którą wskazuje parametr *pnArea.* W poniższej tabeli wymieniono możliwe wartości i odpowiadające im obszary.
+Ta metoda ustawia wartość zmiennej, do której wskazuje parametr *pnArea* . Poniższa tabela zawiera listę możliwych wartości i odpowiednich obszarów.
 
 |Wartość|Obszar|
 |-----------|----------|
-|`ClickArea::ClickExpandBox`|Kontrola pola rozwiń właściwości.|
+|`ClickArea::ClickExpandBox`|Kontrolka pola rozwijanego właściwości.|
 |`ClickArea::ClickName`|Nazwa właściwości.|
 |`ClickArea::ClickValue`|Wartość właściwości.|
-|`CMFCPropertyGridProperty::ClickDescription`|Obszar opisu kontroli siatki właściwości.|
+|`CMFCPropertyGridProperty::ClickDescription`|Obszar opisu kontrolki siatki właściwości.|
 
-## <a name="cmfcpropertygridctrlinit"></a><a name="init"></a>CMFCPropertyGridCtrl::Init
+## <a name="cmfcpropertygridctrlinit"></a><a name="init"></a> CMFCPropertyGridCtrl:: init
 
-Wywoływana przez strukturę do zainicjowania kontroli siatki właściwości.
+Wywoływane przez platformę, aby zainicjować kontrolkę siatki właściwości.
 
 ```
 virtual void Init();
@@ -1091,17 +1091,17 @@ virtual void Init();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlinitheader"></a><a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader
+## <a name="cmfcpropertygridctrlinitheader"></a><a name="initheader"></a> CMFCPropertyGridCtrl::InitHeader
 
-Inicjuje wewnętrzny [obiekt CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) używany przez platformę do wyświetlania bieżącej kontroli siatki właściwości.
+Inicjuje wewnętrzny obiekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , który jest wykorzystywany przez strukturę do wyświetlania bieżącej kontrolki siatki właściwości.
 
 ```
 virtual void InitHeader();
 ```
 
-## <a name="cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode
+## <a name="cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a> CMFCPropertyGridCtrl:: isalphabeticmode
 
-Wskazuje, czy formant siatki właściwości jest w trybie alfabetycznym.
+Wskazuje, czy kontrolka siatki właściwości jest w trybie alfabetycznym.
 
 ```
 BOOL IsAlphabeticMode() const;
@@ -1109,15 +1109,15 @@ BOOL IsAlphabeticMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli kontrolka siatki właściwości jest w trybie alfabetycznym; w przeciwnym razie FALSE.
+Ma wartość TRUE, Jeśli kontrolka siatki właściwości jest w trybie alfabetycznym; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy formant siatki właściwości jest w trybie alfabetycznym, wszystkie właściwości są sortowane alfabetycznie według ich nazw. W przeciwnym razie właściwości są grupowane w ich węzłach nadrzędnych.
+Gdy kontrolka siatki właściwości jest w trybie alfabetycznym, wszystkie właściwości są sortowane alfabetycznie według ich nazw. W przeciwnym razie właściwości są pogrupowane w węzłach nadrzędnych.
 
-Użyj [metody CMFCPropertyGridCtrl::SetAlphabeticMode,](#setalphabeticmode) aby włączyć lub wyłączyć tryb alfabetyczny.
+Aby włączyć lub wyłączyć tryb alfabetyczny, należy użyć metody [CMFCPropertyGridCtrl:: Setalphabeticmode](#setalphabeticmode) .
 
-## <a name="cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
+## <a name="cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a> CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;
@@ -1127,9 +1127,9 @@ BOOL IsAlwaysShowUserToolTip() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea
+## <a name="cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a> CMFCPropertyGridCtrl::IsDescriptionArea
 
-Wskazuje, czy wyświetlany jest obszar opisu formantu siatki właściwości.
+Wskazuje, czy jest wyświetlany obszar opis kontrolki siatka właściwości.
 
 ```
 BOOL IsDescriptionArea() const;
@@ -1137,15 +1137,15 @@ BOOL IsDescriptionArea() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli wyświetlany jest obszar opisu; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli jest wyświetlany obszar opis; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [METODY CMFCPropertyGridCtrl::EnableDescriptionArea,](#enabledescriptionarea) aby ukryć lub wyświetlić obszar opisu.
+Użyj metody [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) , aby ukryć lub wyświetlić obszar opisu.
 
-## <a name="cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth
+## <a name="cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a> CMFCPropertyGridCtrl::IsGroupNameFullWidth
 
-Wskazuje, czy nazwa każdej grupy właściwości jest wyświetlana na całej szerokości bieżącej kontroli siatki właściwości.
+Wskazuje, czy każda nazwa grupy właściwości jest wyświetlana na szerokości bieżącej kontrolki siatki właściwości.
 
 ```
 BOOL IsGroupNameFullWidth() const;
@@ -1153,13 +1153,13 @@ BOOL IsGroupNameFullWidth() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli nazwy grup są wyświetlane na całej szerokości formantu siatki właściwości; FAŁSZ, jeśli nazwy grup są obcinane przez prawą kolumnę (wartość) formantu.
+PRAWDA, jeśli nazwy grup są wyświetlane na szerokości kontrolki siatki właściwości; FAŁSZ, jeśli nazwy grup są obcinane przez kolumnę prawej (wartość) formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-*Grupa* jest kolekcją powiązanych właściwości w formancie siatki właściwości. Jeśli formant jest wyświetlany hierarchicznie, *nazwa grupy* jest wyświetlana jako tytuł kategorii w wierszu nad grupą.
+*Grupa* jest kolekcją powiązanych właściwości w kontrolce siatki właściwości. Jeśli kontrolka jest wyświetlana hierarchicznie, *Nazwa grupy* jest wyświetlana jako tytuł kategorii w wierszu nad grupą.
 
-## <a name="cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl
+## <a name="cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a> CMFCPropertyGridCtrl::IsHeaderCtrl
 
 Wskazuje, czy formant nagłówka jest wyświetlany.
 
@@ -1169,15 +1169,15 @@ BOOL IsHeaderCtrl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli jest wyświetlany formant nagłówka; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli jest wyświetlany formant nagłówka; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [METODY CMFCPropertyGridCtrl::EnableHeaderCtrl,](#enableheaderctrl) aby ukryć lub wyświetlić kontrolkę nagłówka.
+Aby ukryć lub wyświetlić kontrolkę nagłówka, użyj metody [CMFCPropertyGridCtrl:: EnableHeaderCtrl](#enableheaderctrl) .
 
-## <a name="cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties
+## <a name="cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a> CMFCPropertyGridCtrl::IsMarkModifiedProperties
 
-Wskazuje, w jaki sposób formant siatki właściwości wyświetla zmodyfikowane właściwości.
+Wskazuje, w jaki sposób kontrolka siatki właściwości wyświetla zmodyfikowane właściwości.
 
 ```
 BOOL IsMarkModifiedProperties() const;
@@ -1185,13 +1185,13 @@ BOOL IsMarkModifiedProperties() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli styl pogrubiony jest używany do wyświetlania zmodyfikowanych właściwości; FAŁSZ, jeśli styl regularny jest używany do wyświetlania zmodyfikowanych właściwości.
+PRAWDA, jeśli styl pogrubiony jest używany do wyświetlania zmodyfikowanych właściwości; FAŁSZ, jeśli zwykły styl jest używany do wyświetlania zmodyfikowanych właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext
+## <a name="cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a> CMFCPropertyGridCtrl::IsShowDragContext
 
-Wskazuje, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontroli siatki właściwości, gdy użytkownik zmienić rozmiar kolumn.
+Wskazuje, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontrolki siatki właściwości, gdy użytkownik zmienia rozmiar kolumn.
 
 ```
 BOOL IsShowDragContext() const;
@@ -1199,15 +1199,15 @@ BOOL IsShowDragContext() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli struktura ponownie rysuje kolumny nazwy i wartości podczas operacji zmiany rozmiaru; FAŁSZ, jeśli struktura ponownie rysuje kolumny po zakończeniu operacji przeciągania.
+PRAWDA, jeśli struktura ponownie rysuje kolumny nazw i wartości podczas operacji zmiany rozmiaru; FAŁSZ, jeśli struktura ponownie rysuje kolumny po zakończeniu operacji przeciągania.
 
 ### <a name="remarks"></a>Uwagi
 
-Użytkownik może zmienić rozmiar kolumn nazw i wartości formantu siatki właściwości, przeciągając pasek podziału, który znajduje się między kolumnami. Jeśli kontekst przeciągania jest wyświetlany, nazwy i wartości kolumny są zmieniane tak długo, jak użytkownik przeciąga pasek podziału. W przeciwnym razie pasek podziału zostanie przeniesiony, ale kolumny nie zostaną ponownie narysowane, dopóki operacja przeciągania nie zostanie zakończona.
+Użytkownik może zmienić rozmiar kolumn nazwy i wartości kontrolki siatki właściwości, przeciągając pasek podziału między kolumnami. W przypadku wyświetlenia kontekstu przeciągania nazwy i kolumny wartości są zmieniane, o ile użytkownik przeciągnie pasek podziału. W przeciwnym razie pasek podziału jest przenoszony, ale kolumny nie są ponownie rysowane do momentu zakończenia operacji przeciągania.
 
-## <a name="cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook
+## <a name="cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a> CMFCPropertyGridCtrl::IsVSDotNetLook
 
-Wskazuje, czy wygląd formantu siatki właściwości jest w stylu Visual Studio .NET.
+Wskazuje, czy wygląd kontrolki siatki właściwości jest w stylu programu Visual Studio .NET.
 
 ```
 BOOL IsVSDotNetLook() const;
@@ -1215,13 +1215,13 @@ BOOL IsVSDotNetLook() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli formant siatki właściwości jest w stylu visual studio .NET; w przeciwnym razie FALSE.
+Ma wartość TRUE, Jeśli kontrolka siatki właściwości jest w stylu programu Visual Studio .NET. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [METODY CMFCPropertyGridCtrl::SetVSDotNetLook,](#setvsdotnetlook) aby ustawić formant grid właściwości na styl programu Visual Studio .NET.
+Użyj metody [CMFCPropertyGridCtrl:: SetVSDotNetLook](#setvsdotnetlook) , aby ustawić kontrolkę siatka właściwości na styl programu Visual Studio .NET.
 
-## <a name="cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties
+## <a name="cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a> CMFCPropertyGridCtrl::MarkModifiedProperties
 
 Określa sposób wyświetlania zmodyfikowanych właściwości.
 
@@ -1233,17 +1233,17 @@ void MarkModifiedProperties(
 
 ### <a name="parameters"></a>Parametry
 
-*bMark (mark)*<br/>
-[w] PRAWDA, aby wyświetlić zmodyfikowane właściwości w pogrubionym stylu; FAŁSZ, aby wyświetlać zmodyfikowane właściwości w stylu regularnym. Wartością domyślną jest PRAWDA.
+*bMark*<br/>
+podczas TRUE, aby wyświetlić zmodyfikowane właściwości w stylu pogrubionym; Wartość FALSE, aby wyświetlić zmodyfikowane właściwości w zwykłym stylu. Wartość domyślna to TRUE.
 
 *bRedraw*<br/>
-[w] TRUE, aby natychmiast ponownie narysować formant siatki właściwości; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby natychmiast ponownie narysować kontrolkę siatki właściwości; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection
+## <a name="cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a> CMFCPropertyGridCtrl::OnChangeSelection
 
-Wywoływana przez strukturę po zmianie bieżącego zaznaczenia.
+Wywoływane przez platformę, gdy bieżące zaznaczenie zostanie zmienione.
 
 ```
 virtual void OnChangeSelection(
@@ -1253,18 +1253,19 @@ virtual void OnChangeSelection(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pNowySel*|[w] Wskaźnik do nowo wybranej właściwości.|
-|*pOldSel (sie.*|[w] Wskaźnik do wcześniej wybranej właściwości.|
+*pNewSel*\
+podczas Wskaźnik do nowo wybranej właściwości.
+
+*pOldSel*\
+podczas Wskaźnik do wcześniej wybranej właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej metody nic nie robi.
+Domyślna implementacja tej metody nie wykonuje żadnych operacji.
 
-## <a name="cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton
+## <a name="cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a> CMFCPropertyGridCtrl::OnClickButton
 
-Wywoływane przez strukturę po kliknięciu przycisku właściwości.
+Wywoływane przez platformę, gdy kliknięto przycisk Właściwości.
 
 ```
 virtual void OnClickButton(CPoint point);
@@ -1272,16 +1273,16 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[w] Punkt we współrzędnych klienta.
+*moment*<br/>
+podczas Punkt we współrzędnych klienta.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślnie ta metoda aktualizuje bieżącą wartość właściwości.
 
-## <a name="cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder
+## <a name="cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a> CMFCPropertyGridCtrl::OnDrawBorder
 
-Wywoływana przez ramy do rysowania obramowania wokół kontroli siatki właściwości.
+Wywoływane przez platformę, by narysować obramowanie wokół kontrolki siatki właściwości.
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -1289,14 +1290,14 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription
+## <a name="cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a> CMFCPropertyGridCtrl::OnDrawDescription
 
-Wywoływana przez strukturę, aby narysować obszar opisu i wyświetlić tekst opisu.
+Wywoływane przez platformę, by narysować obszar opisu i wyświetlić tekst opisu.
 
 ```
 virtual void OnDrawDescription(
@@ -1306,19 +1307,19 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
-[w] Prostokąt określający, gdzie można narysować obszar opisu.
+*cinania*<br/>
+podczas Prostokąt określający, gdzie ma być rysowany obszar opisu.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) metody, aby wyświetlić obszar opisu.
+Użyj metody [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) , aby wyświetlić obszar opisu.
 
-## <a name="cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList
+## <a name="cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a> CMFCPropertyGridCtrl::OnDrawList
 
-Wywoływane przez strukturę do wyświetlania listy właściwości w formancie siatki właściwości.
+Wywoływane przez platformę, by wyświetlić listę właściwości w kontrolce siatki właściwości.
 
 ```
 virtual void OnDrawList(CDC* pDC);
@@ -1326,14 +1327,14 @@ virtual void OnDrawList(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty
+## <a name="cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a> CMFCPropertyGridCtrl::OnDrawProperty
 
-Wywoływana przez strukturę do wyświetlania właściwości.
+Wywoływane przez platformę, by wyświetlić właściwość.
 
 ```
 virtual int OnDrawProperty(
@@ -1343,21 +1344,21 @@ virtual int OnDrawProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do obiektu właściwości.
+*pProp*<br/>
+podczas Wskaźnik do obiektu właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyZmienił
+## <a name="cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a> CMFCPropertyGridCtrl::OnPropertyChanged
 
-Wywoływana przez strukturę, gdy wartość właściwości zostanie zmieniona.
+Wywoływane przez platformę, gdy wartość właściwości zostanie zmieniona.
 
 ```
 virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
@@ -1365,16 +1366,16 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do obiektu właściwości, którego wartość została zmieniona.
+*pProp*<br/>
+podczas Wskaźnik do obiektu właściwości, którego wartość została zmieniona.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda wysyła komunikat [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) do właściciela formantu siatki właściwości.
+Domyślnie ta metoda wysyła komunikat [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) do właściciela kontrolki siatka właściwości.
 
-## <a name="cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo
+## <a name="cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a> CMFCPropertyGridCtrl::OnSelectCombo
 
-Wywoływana przez platformę, gdy jest zaznaczona właściwość zawierająca formant pola kombi.
+Wywoływane przez platformę, gdy jest zaznaczona właściwość, która zawiera kontrolkę pola kombi.
 
 ```cpp
 void OnSelectCombo();
@@ -1382,9 +1383,9 @@ void OnSelectCombo();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlremoveall"></a><a name="removeall"></a>CMFCPropertyGridCtrl::UsuńWszywszystko
+## <a name="cmfcpropertygridctrlremoveall"></a><a name="removeall"></a> CMFCPropertyGridCtrl::
 
-Usuwa wszystkie obiekty właściwości z formantu siatki właściwości.
+Usuwa wszystkie obiekty właściwości z kontrolki siatki właściwości.
 
 ```cpp
 void RemoveAll();
@@ -1392,7 +1393,7 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues
+## <a name="cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a> CMFCPropertyGridCtrl::ResetOriginalValues
 
 Przywraca oryginalne wartości wszystkich właściwości.
 
@@ -1403,11 +1404,11 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRedraw*<br/>
-[w] TRUE, aby ponownie narysować listę właściwości; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby ponownie narysować listę właściwości; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode
+## <a name="cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a> CMFCPropertyGridCtrl:: setalphabeticmode
 
 Ustawia lub resetuje tryb alfabetyczny.
 
@@ -1417,16 +1418,16 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bStaw*<br/>
-[w] PRAWDA, aby ustawić tryb alfabetyczny; FAŁSZ zresetować tryb alfabetyczny. Wartością domyślną jest PRAWDA.
+*bSet*<br/>
+podczas Wartość TRUE, aby ustawić tryb alfabetyczny; FAŁSZ resetowania trybu alfabetycznego. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy formant siatki właściwości jest w trybie alfabetycznym, formant sortuje wszystkie właściwości, które zawiera według ich nazwy właściwości.
+Gdy kontrolka siatki właściwości jest w trybie alfabetycznym, formant sortuje wszystkie właściwości, które zawiera nazwa właściwości.
 
-## <a name="cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels
+## <a name="cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a> CMFCPropertyGridCtrl::SetBoolLabels
 
-Określa tekst etykiet logicznych.
+Określa tekst etykiet wartości logicznych.
 
 ```cpp
 void SetBoolLabels(
@@ -1436,17 +1437,17 @@ void SetBoolLabels(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszTrue (lpszTrue)*<br/>
-[w] Ciąg tekstowy wyświetlany dla wartości logicznej true.
+*lpszTrue*<br/>
+podczas Ciąg tekstowy, który ma być wyświetlany dla wartości logicznej true.
 
 *lpszFalse*<br/>
-[w] Ciąg tekstowy wyświetlany dla wartości logicznej false.
+podczas Ciąg tekstowy, który ma być wyświetlany dla wartości logicznej false.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel
+## <a name="cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a> CMFCPropertyGridCtrl::SetCurSel
 
-Wybiera właściwość w formancie siatki właściwości.
+Wybiera właściwość w kontrolce siatki właściwości.
 
 ```cpp
 void SetCurSel(
@@ -1456,19 +1457,19 @@ void SetCurSel(
 
 ### <a name="parameters"></a>Parametry
 
-*pProp (pProp)*<br/>
-[w] Wskaźnik do obiektu właściwości.
+*pProp*<br/>
+podczas Wskaźnik do obiektu właściwości.
 
 *bRedraw*<br/>
-[w] TRUE, aby natychmiast ponownie narysować formant siatki właściwości; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby natychmiast ponownie narysować kontrolkę siatki właściwości; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do anulowania wyboru bieżącego elementu w formancie siatki właściwości, a następnie wybierz element, który odpowiada określonej właściwości.
+Użyj tej metody, aby anulować zaznaczenie bieżącego elementu w kontrolce siatki właściwości, a następnie wybierz element, który odpowiada określonej właściwości.
 
-## <a name="cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors
+## <a name="cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a> CMFCPropertyGridCtrl::SetCustomColors
 
-Określa kolory niestandardowe dla różnych elementów formantu siatki właściwości.
+Określa kolory niestandardowe dla różnych elementów kontrolki siatki właściwości.
 
 ```cpp
 void SetCustomColors(
@@ -1483,36 +1484,36 @@ void SetCustomColors(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackground (ziemia powrotna)*<br/>
-[w] Kolor tła wartości właściwości.
+*clrBackground*<br/>
+podczas Kolor tła wartości właściwości.
 
-*clrTekst*<br/>
-[w] Kolor nazw właściwości i tekstu wartości właściwości.
+*clrText*<br/>
+podczas Kolor nazw właściwości i tekstu wartości właściwości.
 
-*clrGroupBackground (grupa)*<br/>
-[w] Kolor tła grupy właściwości.
+*clrGroupBackground*<br/>
+podczas Kolor tła grupy właściwości.
 
-*clrGroupText (Tekst grupy)*<br/>
-[w] Nowy kolor tekstu grupy właściwości.
+*clrGroupText*<br/>
+podczas Nowy kolor tekstu grupy właściwości.
 
-*clrDescriptionZadzienie zwrotne*<br/>
-[w] Kolor tła obszaru opisu.
+*clrDescriptionBackground*<br/>
+podczas Kolor tła obszaru opisu.
 
-*clrDescriptionTekt*<br/>
-[w] Kolor tekstu w obszarze opisu.
+*clrDescriptionText*<br/>
+podczas Kolor tekstu w obszarze opisu.
 
-*clrLine (linia clrline)*<br/>
-[w] Kolor linii, które są rysowane między właściwościami.
+*clrLine*<br/>
+podczas Kolor linii rysowanych między właściwościami.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla dowolnego parametru `((COLORREF)-1)` należy określić wartość koloru, aby użyć domyślnego koloru dla tego elementu formantu siatki właściwości.
+Dla dowolnego parametru należy określić `((COLORREF)-1)` wartość koloru, aby użyć domyślnego koloru dla tego elementu formantu siatki właściwości.
 
-Aby dostosować wygląd określonej właściwości, wyprowadzić klasę z [cmfcpropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) klasy, a następnie zastąpić [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)i [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) metody.
+Aby dostosować wygląd określonej właściwości, należy utworzyć klasę z klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , a następnie zastąpić [CMFCPropertyGridProperty:: ondrawname](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)i [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) metody.
 
-## <a name="cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows
+## <a name="cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a> CMFCPropertyGridCtrl::SetDescriptionRows
 
-Określa liczbę wierszy wyświetlanych w sekcji opisu bieżącej kontroli siatki właściwości.
+Określa liczbę wierszy, które mają być wyświetlane w sekcji opis kontrolki siatki bieżącej właściwości.
 
 ```cpp
 void SetDescriptionRows(int nDescRows);
@@ -1520,12 +1521,12 @@ void SetDescriptionRows(int nDescRows);
 
 ### <a name="parameters"></a>Parametry
 
-*nDescRows (Wychowa do)*<br/>
-[w] Liczba wierszy do wyświetlenia w opisie właściwości.
+*nDescRows*<br/>
+podczas Liczba wierszy do wyświetlenia w opisie właściwości.
 
-## <a name="cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth
+## <a name="cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a> CMFCPropertyGridCtrl::SetGroupNameFullWidth
 
-Określa, czy ma być wyświetlana pełna szerokość nazwy kategorii dla grupy właściwości w bieżącym formancie siatki właściwości.
+Określa, czy ma być wyświetlana Pełna szerokość nazwy kategorii dla grupy właściwości w bieżącej kontrolce siatki właściwości.
 
 ```cpp
 void SetGroupNameFullWidth(
@@ -1536,18 +1537,18 @@ void SetGroupNameFullWidth(
 ### <a name="parameters"></a>Parametry
 
 *bGroupNameFullWidth*<br/>
-[w] PRAWDA, aby wyświetlić pełną szerokość nazwy kategorii, niezależnie od szerokości kolumny nazwy właściwości. FAŁSZ, aby ograniczyć szerokość nazwy kategorii do szerokości kolumny nazwy właściwości. Wartością domyślną jest PRAWDA.
+podczas TRUE, aby wyświetlić pełną szerokość nazwy kategorii niezależnie od szerokości kolumny nazwy właściwości. Wartość FALSE, aby ograniczyć szerokość nazwy kategorii do szerokości kolumny Nazwa właściwości. Wartość domyślna to TRUE.
 
 *bRedraw*<br/>
-[w] TRUE, aby natychmiast zaktualizować formant siatki właściwości; FALSE, aby zaktualizować formant po wystąpieniu następnego zdarzenia ponownego rysowania. Wartością domyślną jest PRAWDA.
+podczas Wartość TRUE, aby natychmiast zaktualizować kontrolkę siatka właściwości; Wartość FALSE, aby zaktualizować formant w przypadku wystąpienia następnego zdarzenia ponownego rysowania. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Formant siatki właściwości składa się z kolumny *nazwy właściwości* o zmiennym rozmiarze i kolumny *wartości właściwości.* Koniec kolumny nazwy jest również początkiem kolumny wartości. Aby zmienić rozmiar kolumn, przeciągnij obramowanie między kolumnami.
+Kontrolka siatka właściwości składa się z kolumny *nazwy właściwości* o zmiennym rozmiarze i kolumny *wartości właściwości* . Koniec kolumny Name jest również początkiem kolumny Value. Aby zmienić rozmiar kolumn, przeciągnij obramowanie między kolumnami.
 
-Terminy *nazwa grupy* i nazwa *kategorii* są używane zamiennie w tej metodzie. Nazwa kategorii jest wyświetlana w wierszu, który kieruje zestawem powiązanych właściwości i wartości. Ta metoda określa, czy szerokość kolumny nazwa właściwości określa również szerokość wyświetlanej nazwy kategorii.
+*Nazwa grupy* warunków i *Nazwa kategorii* są używane zamiennie w tej metodzie. Nazwa kategorii jest wyświetlana w wierszu, który tworzy zestaw powiązanych właściwości i wartości. Ta metoda określa, czy szerokość kolumny Nazwa właściwości określa również szerokość wyświetlanej nazwy kategorii.
 
-## <a name="cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter
+## <a name="cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a> CMFCPropertyGridCtrl::SetListDelimiter
 
 Definiuje znak, który jest używany jako ogranicznik na liście wartości właściwości.
 
@@ -1557,18 +1558,18 @@ void SetListDelimiter(TCHAR c);
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-[w] Znak, który ma służyć jako ogranicznik.
+*s*<br/>
+podczas Znak, który ma być używany jako ogranicznik.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do definiowania znaku ogranicznika na liście wartości właściwości, które są używane w [CMFCPropertyGridProperty::CMFCPropertyGridProperty konstruktora.](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) W tym konstruktorze ustaw parametr *bIsValueList* na TRUE.
+Ta metoda służy do definiowania znaku ogranicznika na liście wartości właściwości, które są używane w konstruktorze [CMFCPropertyGridProperty:: CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) . W tym konstruktorze ustaw parametr *bIsValueList* na wartość true.
 
-Domyślnie [konstruktor CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) ustawia znak ogranicznika na przecinek (',').
+Domyślnie Konstruktor [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) ustawia znak ogranicznika (",").
 
-## <a name="cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext
+## <a name="cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a> CMFCPropertyGridCtrl::SetShowDragContext
 
-Określa, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontroli siatki właściwości, gdy użytkownik zmienić rozmiar kolumn.
+Określa, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontrolki siatki właściwości, gdy użytkownik zmienia rozmiar kolumn.
 
 ```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
@@ -1577,15 +1578,15 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShowDragContext*<br/>
-[w] TRUE, aby ponownie rysować kolumny nazw i wartości podczas operacji zmiany rozmiaru; FAŁSZ, aby ponownie rysować kolumny po zakończeniu operacji przeciągania. Wartością domyślną jest PRAWDA.
+podczas Wartość TRUE powoduje ponowne narysowanie nazw i kolumn wartości podczas operacji zmiany rozmiaru; Wartość FALSE powoduje odświeżenie kolumn po zakończeniu operacji przeciągania. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użytkownik może zmienić rozmiar kolumn nazw i wartości formantu siatki właściwości, przeciągając pasek podziału, który znajduje się między kolumnami. Jeśli kontekst przeciągania jest wyświetlany, nazwy i wartości kolumny są zmieniane tak długo, jak użytkownik przeciąga pasek podziału. W przeciwnym razie pasek podziału zostanie przeniesiony, ale kolumny nie zostaną ponownie narysowane, dopóki operacja przeciągania nie zostanie zakończona.
+Użytkownik może zmienić rozmiar kolumn nazwy i wartości kontrolki siatki właściwości, przeciągając pasek podziału między kolumnami. W przypadku wyświetlenia kontekstu przeciągania nazwy i kolumny wartości są zmieniane, o ile użytkownik przeciągnie pasek podziału. W przeciwnym razie pasek podziału jest przenoszony, ale kolumny nie są ponownie rysowane do momentu zakończenia operacji przeciągania.
 
-## <a name="cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook
+## <a name="cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a> CMFCPropertyGridCtrl::SetVSDotNetLook
 
-Ustawia wygląd formantu siatki właściwości do stylu, który jest używany w programie Visual Studio .NET.
+Ustawia wygląd kontrolki siatki właściwości do stylu, który jest używany w Visual Studio .NET.
 
 ```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
@@ -1593,14 +1594,14 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bStaw*<br/>
-[w] TRUE, aby ustawić formant siatki właściwości do stylu, który jest używany w programie Visual Studio .NET; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
+*bSet*<br/>
+podczas TRUE, aby ustawić kontrolkę siatka właściwości na styl używany w Visual Studio .NET; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor
+## <a name="cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a> CMFCPropertyGridCtrl::UpdateColor
 
-Ustawia wartość koloru aktualnie wybranej właściwości koloru.
+Ustawia wartość koloru aktualnie wybranej właściwości Color.
 
 ```
 virtual void UpdateColor(COLORREF color);
@@ -1608,16 +1609,16 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
-[w] Wartość koloru RGB.
+*Kolor*<br/>
+podczas Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda potwierdza w trybie debugowania, jeśli aktualnie wybrana właściwość formantu siatki właściwości nie jest właściwością color.
+Ta metoda potwierdza tryb debugowania, jeśli aktualnie wybrana właściwość kontrolki siatki właściwości nie jest właściwością Color.
 
-## <a name="cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData
+## <a name="cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a> CMFCPropertyGridCtrl::ValidateItemData
 
-Wywoływane przez strukturę do sprawdzania poprawności danych właściwości.
+Wywoływane przez platformę, by sprawdzić poprawność danych właściwości.
 
 ```
 virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
@@ -1625,9 +1626,8 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*pProp (pProp)*|[w] Wskaźnik do właściwości. Ten parametr nie jest używany.|
+*pProp*\
+podczas Wskaźnik do właściwości. Ten parametr nie jest używany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1635,9 +1635,9 @@ Zawsze wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-[METODA CMFCPropertyGridCtrl::EndEditItem](#endedititem) wywołuje tę metodę w celu sprawdzenia poprawności danych. Domyślnie ta metoda nie używa jego *parametru pProp,* a jego zwracana wartość jest zawsze prawda.
+Metoda [CMFCPropertyGridCtrl:: EndEditItem](#endedititem) wywołuje tę metodę w celu walidacji danych. Domyślnie ta metoda nie używa jego parametru *pProp* , a jego wartość zwracana jest zawsze true.
 
-Jeśli zastąpisz tę metodę, zwróć wartość PRAWDA, jeśli określone dane właściwości są prawidłowe. W przeciwnym razie zwraca FALSE, w którym to przypadku struktura nie aktualizuje właściwości.
+Jeśli zastąpisz tę metodę, zwróć wartość TRUE, jeśli określone dane właściwości są prawidłowe. W przeciwnym razie zwraca wartość FALSE, w takim przypadku struktura nie aktualizuje właściwości.
 
 ## <a name="see-also"></a>Zobacz też
 
