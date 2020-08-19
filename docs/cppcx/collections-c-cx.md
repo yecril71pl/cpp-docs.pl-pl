@@ -2,12 +2,12 @@
 title: Kolekcje (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233512"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610949"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C++/CX)
 
@@ -23,14 +23,14 @@ W programie C++/CX można korzystać z bezpłatnych kontenerów biblioteki szabl
 
 - [Platform:: Collections:: VectorView Class](../cppcx/platform-collections-vectorview-class.md) i[platform:: Collections:: MapView, Klasa](../cppcx/platform-collections-mapview-class.md) jest tylko do odczytu wersji systemów `Vector` i `Map` .
 
-- Iteratory są zdefiniowane w [przestrzeni nazw platform:: Collections](../cppcx/platform-collections-namespace.md). Te Iteratory spełniają wymagania dla iteratorów STL i umożliwiają użycie [std:: find](../standard-library/algorithm-functions.md#find), [std:: count_if](../standard-library/algorithm-functions.md#count_if)i innych algorytmów STL w dowolnym [systemie Windows:: Foundation:: Collections](/uwp/api/windows.foundation.collections) Type lub [platform:: Collections](../cppcx/platform-collections-namespace.md) konkretny typ. Na przykład oznacza to, że można wykonać iterację kolekcji w składniku środowisko wykonawcze systemu Windows utworzonym w języku C# i zastosować do niego algorytm STL.
+- Iteratory są zdefiniowane w [przestrzeni nazw platform:: Collections](../cppcx/platform-collections-namespace.md). Te Iteratory spełniają wymagania dla iteratorów STL i umożliwiają użycie [std:: find](../standard-library/algorithm-functions.md#find),  [std:: count_if](../standard-library/algorithm-functions.md#count_if)i innych algorytmów STL w dowolnym [systemie Windows:: Foundation:: Collections](/uwp/api/windows.foundation.collections) Type lub [platform:: Collections](../cppcx/platform-collections-namespace.md) konkretny typ. Na przykład oznacza to, że można wykonać iterację kolekcji w składniku środowisko wykonawcze systemu Windows utworzonym w języku C# i zastosować do niego algorytm STL.
 
    > [!IMPORTANT]
    > Iteratory serwerów proxy `VectorIterator` i `VectorViewIterator` wykorzystują obiekty proxy `VectoryProxy<T>` oraz umożliwiają korzystanie `ArrowProxy<T>` z kontenerów STL. Aby uzyskać więcej informacji, zobacz "elementy VectorProxy" w dalszej części tego artykułu.
 
 - Typy kolekcji C++/CX obsługują te same gwarancje bezpieczeństwa wątku, które obsługują kontenery STL.
 
-- [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) i [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) definiują zdarzenia, które są wywoływane, gdy kolekcja zostanie zmieniona na różne sposoby. Implementując te interfejsy, [platform:: Collections:: map](../cppcx/platform-collections-map-class.md) i [platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) obsługuje powiązanie danych z kolekcjami XAML. Na przykład jeśli masz `Vector` dane, które są powiązane z danymi `Grid` , po dodaniu elementu do kolekcji, zmiana jest odzwierciedlana w interfejsie użytkownika siatki.
+- [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) i [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) definiują zdarzenia, które są wywoływane, gdy kolekcja zostanie zmieniona na różne sposoby. Implementując te interfejsy,  [platform:: Collections:: map](../cppcx/platform-collections-map-class.md) i [platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) obsługuje powiązanie danych z kolekcjami XAML. Na przykład jeśli masz `Vector` dane, które są powiązane z danymi `Grid` , po dodaniu elementu do kolekcji, zmiana jest odzwierciedlana w interfejsie użytkownika siatki.
 
 ## <a name="vector-usage"></a>Użycie wektora
 
@@ -39,9 +39,9 @@ Gdy klasa musi przekazać kontener sekwencji do innego składnika środowisko wy
 > [!IMPORTANT]
 > Jeśli przekazujesz sekwencję w ramach własnego programu, użyj opcji lub, `Vector` `std::vector` ponieważ są one wydajniejsze niż `IVector` . Używaj `IVector` tylko w przypadku przekazywania kontenera między ABI.
 >
-> System typu środowisko wykonawcze systemu Windows nie obsługuje koncepcji tablic nieregularnych i dlatego nie można przekazać klasy IVector<platform:: Array \<T>> jako wartości zwracanej lub parametru metody. Aby przekazać nieregularną tablicę lub sekwencję sekwencji w ramach ABI, użyj `IVector<IVector<T>^>` .
+> System typu środowisko wykonawcze systemu Windows nie obsługuje koncepcji tablic nieregularnych i w związku z tym nie można przekazać `IVector<Platform::Array<T>>` parametru jako wartości zwracanej lub metody. Aby przekazać nieregularną tablicę lub sekwencję sekwencji w ramach ABI, użyj `IVector<IVector<T>^>` .
 
-`Vector<T>`dostarcza metody, które są wymagane do dodawania, usuwania i uzyskiwania dostępu do elementów w kolekcji, a także niejawnie konwertowane na `IVector<T>` . Można również użyć algorytmów STL w wystąpieniach `Vector<T>` . W poniższym przykładzie przedstawiono podstawowe użycie. Funkcja [BEGIN Function](../cppcx/begin-function.md) i [End](../cppcx/end-function.md) znajduje się w tym miejscu w `Platform::Collections` przestrzeni nazw, a nie w `std` przestrzeni nazw.
+`Vector<T>` dostarcza metody, które są wymagane do dodawania, usuwania i uzyskiwania dostępu do elementów w kolekcji, a także niejawnie konwertowane na `IVector<T>` . Można również użyć algorytmów STL w wystąpieniach `Vector<T>` . W poniższym przykładzie przedstawiono podstawowe użycie. Funkcja [BEGIN Function](../cppcx/begin-function.md) i [End](../cppcx/end-function.md) znajduje się w tym miejscu w `Platform::Collections` przestrzeni nazw, a nie w `std` przestrzeni nazw.
 
 [!code-cpp[cx_collections#01](../cppcx/codesnippet/CPP/collections/class1.cpp#01)]
 
@@ -103,13 +103,13 @@ Elementy kolekcji modyfikowalnej można zmienić, ale elementy kolekcji tylko do
 [Platform:: Collections:: map, Klasa](../cppcx/platform-collections-map-class.md)<br/>
 Modyfikowalna kolekcja asocjacyjna. Elementy mapy to pary klucz-wartość. Wyszukiwanie klucza w celu pobrania jego skojarzonej wartości i przechodzenia przez wszystkie pary klucz-wartość są obsługiwane.
 
-`Map`i `MapView` są szablonem. w związku z tym można `<K, V, C = std::less<K>>` dostosować komparator.  Ponadto `Vector` i `VectorView` są szablonami w programie, `<T, E = std::equal_to<T>>` Aby można było dostosować zachowanie programu `IndexOf()` . Jest to ważne głównie dla `Vector` `VectorView` struktur wartości i. Na przykład, aby utworzyć wektor \<Windows::Foundation::DateTime> , należy podać niestandardowy komparator, ponieważ DateTime nie przeciąża operatora = =.
+`Map` i `MapView` są szablonem. w związku z tym można `<K, V, C = std::less<K>>` dostosować komparator.  Ponadto `Vector` i `VectorView` są szablonami w programie, `<T, E = std::equal_to<T>>` Aby można było dostosować zachowanie programu `IndexOf()` . Jest to ważne głównie dla `Vector` `VectorView` struktur wartości i. Na przykład, aby utworzyć wektor \<Windows::Foundation::DateTime> , należy podać niestandardowy komparator, ponieważ DateTime nie przeciąża operatora = =.
 
 [Platform:: Collections:: MapView, Klasa](../cppcx/platform-collections-mapview-class.md)<br/>
 Wersja programu `Map` .
 
 [Platform:: Collections:: Vector, Klasa](../cppcx/platform-collections-vector-class.md)<br/>
-Modyfikowalna kolekcja sekwencji. `Vector<T>`Program obsługuje dostęp losowy do czasu stałego oraz operacje [dołączania](../cppcx/platform-collections-vector-class.md#append) w czasie stałym.
+Modyfikowalna kolekcja sekwencji. `Vector<T>` Program obsługuje dostęp losowy do czasu stałego oraz operacje [dołączania](../cppcx/platform-collections-vector-class.md#append) w czasie stałym.
 
 [Platform:: Collections:: VectorView, Klasa](../cppcx/platform-collections-vectorview-class.md)<br/>
 Wersja programu `Vector` .
@@ -121,7 +121,7 @@ Iterator STL, który spełnia wymagania iteratora wejściowego STL.
 Iterator STL, który spełnia wymagania dla iteratora dostęp swobodny STL.
 
 [Platform:: Collections:: VectorViewIterator, Klasa](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Iterator STL, który spełnia wymagania **`const`** iteratora dostępu swobodnego STL.
+Iterator STL, który spełnia wymagania  **`const`** iteratora dostępu swobodnego STL.
 
 ### <a name="begin-and-end-functions"></a>funkcje Begin () i End ()
 
@@ -139,11 +139,11 @@ Poniższa tabela zawiera listę dostępnych iteratorów i funkcji.
 
 ### <a name="collection-change-events"></a>Zdarzenia zmiany kolekcji
 
-`Vector`i `Map` obsługują powiązania danych w kolekcjach XAML przez zaimplementowanie zdarzeń, które pojawiają się, gdy obiekt kolekcji jest zmieniany lub resetowany, lub gdy dowolny element kolekcji zostanie wstawiony, usunięty lub zmieniony. Można napisać własne typy obsługujące DataBinding, chociaż nie można dziedziczyć z `Map` lub `Vector` ponieważ te typy są zapieczętowane.
+`Vector` i `Map` obsługują powiązania danych w kolekcjach XAML przez zaimplementowanie zdarzeń, które pojawiają się, gdy obiekt kolekcji jest zmieniany lub resetowany, lub gdy dowolny element kolekcji zostanie wstawiony, usunięty lub zmieniony. Można napisać własne typy obsługujące DataBinding, chociaż nie można dziedziczyć z `Map` lub `Vector` ponieważ te typy są zapieczętowane.
 
 Elementy [Windows:: Foundation:: Collections](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) :: VectorChangedEventHandler i [Windows:: Foundation:: Collections:: MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) określają sygnatury obsługi zdarzeń dla zdarzeń zmiany kolekcji. Klasy [Windows:: Foundation:: Collections:: CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) Public enum i `Platform::Collection::Details::MapChangedEventArgs` `Platform::Collections::Details::VectorChangedEventArgs` klasy ref, przechowują argumenty zdarzenia w celu ustalenia, co spowodowało zdarzenie. `*EventArgs`Typy są zdefiniowane w `Details` przestrzeni nazw, ponieważ nie trzeba ich tworzyć ani używać jawnie w przypadku używania `Map` lub `Vector` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

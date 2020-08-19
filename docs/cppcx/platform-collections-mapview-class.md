@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215000"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610897"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform:: Collections:: MapView, Klasa
 
@@ -41,7 +41,7 @@ Typ klucza w parze klucz-wartość.
 *V*<br/>
 Typ wartości w parze klucz-wartość.
 
-*S*<br/>
+*C*<br/>
 Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w MapView. Domyślnie [std:: less \<K> ](../standard-library/less-struct.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -76,7 +76,7 @@ MapView jest konkretną implementacją języka C++ [systemu Windows:: Foundation
 
 **Przestrzeń nazw:** Platform:: Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>MapView:: First — Metoda
+## <a name="mapviewfirst-method"></a><a name="first"></a> MapView:: First — Metoda
 
 Zwraca iterator, który określa pierwszy element w widoku mapy.
 
@@ -95,7 +95,7 @@ Iterator, który określa pierwszy element w widoku mapy.
 
 Wygodnym sposobem przechowywania iteratora zwracanego przez First () jest przypisanie wartości zwracanej do zmiennej, która jest zadeklarowana za pomocą **`auto`** słowa kluczowego odejmowania. Na przykład `auto x = myMapView->First();`.
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView:: Haskey —, Metoda
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView:: Haskey —, Metoda
 
 Określa, czy bieżący MapView zawiera określony klucz.
 
@@ -115,7 +115,7 @@ Klucz używany do lokalizowania elementu MapView. Typ *klucza* to TypeName *K*.
 
 **`true`** Jeśli klucz zostanie znaleziony; w przeciwnym razie **`false`** .
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView:: Lookup — Metoda
+## <a name="mapviewlookup-method"></a><a name="lookup"></a> MapView:: Lookup — Metoda
 
 Pobiera wartość typu V, która jest skojarzona z określonym kluczem typu K.
 
@@ -134,7 +134,7 @@ Klucz służący do lokalizowania elementu w MapView. Typ `key` to TypeName *K*.
 
 Wartość, która jest sparowana z `key` . Typ zwracanej wartości to TypeName *V*.
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView:: MapView — Konstruktor
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView:: MapView — Konstruktor
 
 Inicjuje nowe wystąpienie klasy MapView.
 
@@ -175,9 +175,9 @@ Iterator wejściowy pierwszego elementu w zakresie elementów używanych do inic
 Iterator wejściowy pierwszego elementu po zakresie elementów użytych do zainicjowania bieżącego MapView.
 
 *II*<br/>
-[Std:: initializer_list<STD \<K,V> > ::p powietrze](../standard-library/initializer-list-class.md) , którego elementy zostaną wstawione do MapView.
+[Std:: initializer_list \<std::pair\<K,V> > ](../standard-library/initializer-list-class.md) , którego elementy zostaną wstawione do MapView.
 
-## <a name="mapviewsize-method"></a><a name="size"></a>MapView:: size — Metoda
+## <a name="mapviewsize-method"></a><a name="size"></a> MapView:: size — Metoda
 
 Zwraca liczbę elementów w bieżącym obiekcie MapView.
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 Liczba elementów w bieżącym MapView.
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>MapView:: Split — metoda
+## <a name="mapviewsplit-method"></a><a name="split"></a> MapView:: Split — metoda
 
 Dzieli bieżący obiekt MapView na dwa obiekty MapView. Ta metoda nie działa.
 
@@ -217,6 +217,6 @@ Druga część oryginalnego obiektu MapView.
 
 Ta metoda nie działa; nic nie robi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)

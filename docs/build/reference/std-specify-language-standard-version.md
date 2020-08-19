@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223827"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610962"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`(Określ wersję standardową języka)
+# <a name="std-specify-language-standard-version"></a>`/std` (Określ wersję standardową języka)
 
 Włącz obsługiwane funkcje języka C++ z określonej wersji standardu języka C++.
 
@@ -21,17 +21,17 @@ Włącz obsługiwane funkcje języka C++ z określonej wersji standardu języka 
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>Uwagi
 
-Ta **`/std`** opcja jest dostępna w programie Visual Studio 2017 i nowszych. Służy do kontrolowania funkcji standardowych języka programowania ISO C++, które są włączone podczas kompilowania kodu. Ta opcja umożliwia wyłączenie obsługi niektórych nowych funkcji języka i biblioteki: te, które mogą spowodować przerwanie istniejącego kodu, który jest zgodny z określoną wersją standardu języka. Domyślnie **`/std:c++14`** jest określona, która wyłącza funkcje języka i biblioteki standardowej dostępne w nowszych wersjach standardu języka C++. Służy **`/std:c++17`** do włączania funkcji i zachowań specyficznych dla języka c++ 17. Aby jawnie włączyć aktualnie zaimplementowane funkcje kompilatora i biblioteki standardowej proponowane dla następnej wersji Standard, użyj **`/std:c++latest`** . Wszystkie funkcje języka C++ 20 wymagają **`/std:c++latest`** . po zakończeniu implementacji **`/std:c++20`** zostanie włączona Nowa opcja.
+Ta **`/std`** opcja jest dostępna w programie Visual Studio 2017 i nowszych. Służy do kontrolowania funkcji standardowych języka programowania ISO C++, które są włączone podczas kompilowania kodu. Ta opcja umożliwia wyłączenie obsługi niektórych nowych funkcji języka i biblioteki: te, które mogą spowodować przerwanie istniejącego kodu, który jest zgodny z określoną wersją standardu języka. Domyślnie **`/std:c++14`** jest określona, która wyłącza funkcje języka i biblioteki standardowej dostępne w nowszych wersjach standardu języka C++. Służy  **`/std:c++17`** do włączania funkcji i zachowań specyficznych dla języka c++ 17. Aby jawnie włączyć aktualnie zaimplementowane funkcje kompilatora i biblioteki standardowej proponowane dla następnej wersji Standard, użyj **`/std:c++latest`** . Wszystkie funkcje języka C++ 20 wymagają **`/std:c++latest`** . po zakończeniu implementacji **`/std:c++20`** zostanie włączona Nowa opcja.
 
 Opcja domyślna **`/std:c++14`** włącza zestaw funkcji języka c++ 14 implementowanych przez KOMPILATOR MSVC. Ta opcja powoduje wyłączenie obsługi biblioteki kompilatora i standardowej dla funkcji, które są zmieniane lub nowe w nowszych wersjach standardu językowego. Nie powoduje wyłączenia niektórych funkcji języka C++ 17 już zaimplementowanych w poprzednich wersjach kompilatora MSVC. Aby uniknąć istotnej zmiany dla użytkowników, którzy już korzystali z funkcji dostępnych w programie lub przed aktualizacją Update 2 programu Visual Studio 2015, te funkcje pozostaną włączone po **`/std:c++14`** określeniu opcji:
 
 - [Reguły dla `auto` z nawiasami klamrowymi-list init](https://wg21.link/n3922)
 
-- [`typename`w szablonie szablonu — parametry](https://wg21.link/n4051)
+- [`typename` w szablonie szablonu — parametry](https://wg21.link/n4051)
 
 - [Usuwanie trigraphs](https://wg21.link/n4086)
 
@@ -63,7 +63,7 @@ Lista funkcji, które są włączone w języku C++ 14 i C++ 17, gdy **`/std:c++1
 
 1. W **standardzie języka C++** wybierz Standard języka, który ma być obsługiwany przez kontrolkę listy rozwijanej, a następnie wybierz przycisk **OK** lub **Zastosuj** , aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
