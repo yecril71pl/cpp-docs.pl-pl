@@ -48,6 +48,8 @@
       href: ../linux/cmake-linux-project.md
     - name: Konfigurowanie projektu CMake systemu Linux
       href: ../linux/cmake-linux-configure.md
+    - name: Konfigurowanie sesji debugowania narzędzia CMake
+      href: ../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json
     - name: 'Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio'
       href: ../build/get-started-linux-cmake.md
 - name: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
