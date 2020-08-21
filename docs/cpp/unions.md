@@ -1,47 +1,50 @@
 ---
-title: Unie
-ms.date: 05/06/2019
+title: union
+description: Opis standardowego union class typu C++ i słowa kluczowego, jego użycia i ograniczeń.
+ms.date: 08/18/2020
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
-- class types [C++], unions as
+- class type [C++], union as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+no-loc:
+- union
+- struct
+- enum
+- class
+- static
+ms.openlocfilehash: a4dc07df5e7858dffe62478509ee1d8dc759ce96
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213141"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722183"
 ---
-# <a name="unions"></a>Unie
+# `union`
 
 > [!NOTE]
-> W języku C++ 17 i nowszych Klasa **std:: Variant** jest bezpieczną alternatywą dla Unii.
+> W języku C++ 17 i nowszych `std::variant` class jest to bezpieczna dla typu alternatywna dla union .
 
-A **`union`** jest typem zdefiniowanym przez użytkownika, w którym wszyscy członkowie mają tę samą lokalizację w pamięci. Oznacza to, że w dowolnym momencie Unia może zawierać nie więcej niż jeden obiekt z listy członków. Oznacza to również, że niezależnie od tego, jak wiele składowych jest Unii, zawsze używa wystarczającej ilości pamięci do przechowywania największego elementu członkowskiego.
+A **`union`** jest typem zdefiniowanym przez użytkownika, w którym wszyscy członkowie mają tę samą lokalizację w pamięci. Ta definicja oznacza, że w danym momencie union może zawierać nie więcej niż jeden obiekt z listy członków. Oznacza to również, że niezależnie od tego, jak wiele składowych union ma, zawsze używa wystarczającej ilości pamięci do przechowywania największego elementu członkowskiego.
 
-Unia może być przydatna do zachowywania pamięci, jeśli masz wiele obiektów i/lub ograniczoną ilość pamięci. Jednak wymaga to poprawnego użycia, ponieważ użytkownik jest odpowiedzialny za zapewnienie, że zawsze uzyskuje się dostęp do ostatniego elementu członkowskiego, który został zapisany. Jeśli jakiekolwiek typy elementów członkowskich mają Konstruktor nieuproszczony, należy napisać dodatkowy kod, aby jawnie skonstruować i zniszczyć ten element członkowski. Przed użyciem Unii należy rozważyć, czy problem, który próbujesz rozwiązać, może być lepiej wyrażony przy użyciu klasy bazowej i klas pochodnych.
+unionMoże być przydatne w przypadku zachowywania pamięci w przypadku dużej ilości obiektów i ograniczonej ilości pamięci. Jednak union wymaga poprawnego użycia. Użytkownik jest odpowiedzialny za zapewnienie, że zawsze uzyskuje się dostęp do tego samego elementu członkowskiego, który został przypisany. Jeśli jakiekolwiek typy elementów członkowskich mają nieuproszczoną con struct lub, należy napisać dodatkowy kod, aby jawnie struct i zniszczyć ten element członkowski. Przed użyciem należy union rozważyć, czy problem, który próbujesz rozwiązać, może być lepiej wyrażony przy użyciu podstawowych class i pochodnych class typów.
 
 ## <a name="syntax"></a>Składnia
 
-```cpp
-union [name]  { member-list };
-```
+> **`union`***`tag`* <sub>opt</sub> **`{`** wybór *`member-list`***`};`**
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwij*<br/>
-Nazwa typu nadana unii.
+*`tag`*<br/>
+Nazwa typu nadana union .
 
-*Lista elementów członkowskich*<br/>
-Elementy członkowskie, które może zawierać Unia. Zobacz uwagi.
+*`member-list`*<br/>
+Elementy członkowskie, które union mogą zawierać.
 
-## <a name="remarks"></a>Uwagi
+## <a name="declare-a-no-locunion"></a>Zadeklaruj union
 
-## <a name="declaring-a-union"></a>Deklarowanie unii
-
-Rozpocznij deklarację Unii ze **`union`** słowem kluczowym i umieść listę elementów członkowskich w nawiasach klamrowych:
+Rozpocznij deklarację a union za pomocą **`union`** słowa kluczowego i umieść listę elementów członkowskich w nawiasach klamrowych:
 
 ```cpp
 // declaring_a_union.cpp
@@ -54,6 +57,7 @@ union RecordType    // Declare a simple union type
     double d;
     int *int_ptr;
 };
+
 int main()
 {
     RecordType t;
@@ -62,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="using-unions"></a>Używanie Unii
+## <a name="use-a-no-locunion"></a>Użyj union
 
-W poprzednim przykładzie każdy kod, który uzyskuje dostęp do Unii, musi wiedzieć, który element członkowski posiada dane. Najbardziej typowym rozwiązaniem tego problemu jest ujęcie Unii w strukturze wraz z dodatkowym elementem członkowskim wyliczenia, który wskazuje typ danych, które są obecnie przechowywane w Unii. Jest to nazywane *Unią rozłącznych* i w poniższym przykładzie przedstawiono wzorzec podstawowy.
+W poprzednim przykładzie każdy kod, który uzyskuje dostęp do union potrzeb, aby wiedzieć, który element członkowski przechowuje dane. Najczęstsze rozwiązanie tego problemu nazywa się *odróżnieniem union *. unionZnajduje się w struct i zawiera enum element członkowski wskazujący typ elementu członkowskiego, który jest obecnie przechowywany w union . Poniższy przykład przedstawia podstawowy wzorzec:
 
 ```cpp
 #include <queue>
@@ -107,16 +111,27 @@ struct Input
 void Process_Temp(TempData t) {}
 void Process_Wind(WindData w) {}
 
-// Container for all the data records
-queue<Input> inputs;
-void Initialize();
+void Initialize(std::queue<Input>& inputs)
+{
+    Input first;
+    first.type = WeatherDataType::Temperature;
+    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
+    inputs.push(first);
+
+    Input second;
+    second.type = WeatherDataType::Wind;
+    second.wind = { 204, 1418859354, 14, 27 };
+    inputs.push(second);
+}
 
 int main(int argc, char* argv[])
 {
-    Initialize();
+    // Container for all the data records
+    queue<Input> inputs;
+    Initialize(inputs);
     while (!inputs.empty())
     {
-        Input i = inputs.front();
+        Input const i = inputs.front();
         switch (i.type)
         {
         case WeatherDataType::Temperature:
@@ -133,29 +148,17 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-
-void Initialize()
-{
-    Input first, second;
-    first.type = WeatherDataType::Temperature;
-    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
-    inputs.push(first);
-
-    second.type = WeatherDataType::Wind;
-    second.wind = { 204,1418859354, 14, 27 };
-    inputs.push(second);
-}
 ```
 
-W poprzednim przykładzie należy zauważyć, że Unia w strukturze wejściowej nie ma nazwy. Jest to anonimowa Unia, a jej członkowie są dostępni tak, jakby byli bezpośrednimi elementami członkowskimi struktury. Więcej informacji na temat anonimowych Unii znajduje się w sekcji poniżej.
+W poprzednim przykładzie, union w `Input` struct nie ma nazwy, dlatego jest nazywana *anonimowo* union . Dostęp do jego członków jest możliwy bezpośrednio, jeśli są członkami struct . Aby uzyskać więcej informacji na temat korzystania z anonimowego union , zobacz [sekcję union anonimowy](#anonymous_unions) .
 
-Oczywiście w poprzednim przykładzie przedstawiono problem, który można również rozwiązać przy użyciu klas, które pochodzą ze wspólnej klasy bazowej, i rozgałęziać kod na podstawie typu środowiska uruchomieniowego każdego obiektu w kontenerze. Może to spowodować, że kod jest łatwiejszy do utrzymania i zrozumienia, ale może być również wolniejszy niż używanie Unii. Ponadto za pomocą Unii można przechowywać całkowicie niepowiązane typy i dynamicznie zmieniać typ wartości przechowywanej bez zmiany typu samej zmiennej Union. W związku z tym można utworzyć niejednorodną tablicę elementu webuniontype, której elementy przechowują różne wartości różnych typów.
+W poprzednim przykładzie przedstawiono problem, który można również rozwiązać, używając class typów, które pochodzą ze wspólnej bazy class . Kod można rozgałęzić na podstawie typu środowiska uruchomieniowego każdego obiektu w kontenerze. Kod może być łatwiejszy do utrzymania i zrozumienia, ale może być również wolniejszy niż użycie union . Ponadto w przypadku programu union można przechowywać niepowiązane typy. A union pozwala dynamicznie zmienić typ przechowywanej wartości bez zmiany typu union samej zmiennej. Można na przykład utworzyć niejednorodną tablicę `MyUnionType` , której elementy przechowują różne wartości różnych typów.
 
-Należy zauważyć, że `Input` Struktura w powyższym przykładzie może być łatwo użyta. Aby uzyskać dostęp do elementu członkowskiego, który zawiera dane, należy prawidłowo użyć rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, przekazując pozycję Union jako prywatną i udostępniając specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
+W przykładzie jest to łatwe w użyciu `Input` struct . W celu uzyskania dostępu do elementu członkowskiego, który zawiera dane, należy do użytkownika poprawnie używać rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, udostępniając union **`private`** specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
 
-## <a name="unrestricted-unions-c11"></a>Nieograniczone związki (C++ 11)
+## <a name="unrestricted-no-locunion-c11"></a>Bez ograniczeń union (c++ 11)
 
-W języku C++ 03 i starszych element Union może zawierać niestatyczne składowe danych o typie klasy, tak długo, jak typ nie ma konstruktorów dostarczonych przez użytkownika, destruktorów ani operatorów przypisania. W języku C++ 11 te ograniczenia są usuwane. W przypadku włączenia takiego elementu członkowskiego do Unii kompilator automatycznie oznaczy wszelkie specjalne funkcje członkowskie, które nie są dostarczane przez użytkownika jako usunięte. Jeśli Unia jest anonimową Unią w obrębie klasy lub struktury, wówczas wszelkie specjalne funkcje członkowskie klasy lub struktury, które nie są dostarczane przez użytkownika, są oznaczane jako usunięte. Poniższy przykład pokazuje, jak obsłużyć przypadek, w którym jeden z elementów członkowskich Unii ma element członkowski, który wymaga tego specjalnego traktowania:
+W języku C++ 03 i starszych union mogą zawierać static elementy członkowskie, które mają class Typ, tak długo, jak typ nie ma struct ORS, de struct ORS lub operator przypisania. W języku C++ 11 te ograniczenia są usuwane. Jeśli dołączysz taki element członkowski w programie union , kompilator automatycznie oznaczy wszelkie specjalne funkcje członkowskie, które nie są podane przez użytkownika jako **`deleted`** . Jeśli union jest to anonimowe union wewnątrz a class lub struct , wszelkie specjalne funkcje członkowskie class lub, struct które nie są podane przez użytkownika, są oznaczone jako **`deleted`** . Poniższy przykład pokazuje, jak obsłużyć ten przypadek. Jeden z członków elementu union Członkowskiego ma element członkowski, który wymaga tego specjalnego traktowania:
 
 ```cpp
 // for MyVariant
@@ -513,99 +516,13 @@ int main()
     char c;
     cin >> c;
 }
-#include <queue>
-#include <iostream>
-using namespace std;
-
-enum class WeatherDataType
-{
-    Temperature, Wind
-};
-
-struct TempData
-{
-    TempData() : StationId(""), time(0), current(0), maxTemp(0), minTemp(0) {}
-    TempData(string id, time_t t, double cur, double max, double min)
-        : StationId(id), time(t), current(cur), maxTemp(max), minTemp(0) {}
-    string StationId;
-    time_t time = 0;
-    double current;
-    double maxTemp;
-    double minTemp;
-};
-
-struct WindData
-{
-    int StationId;
-    time_t time;
-    int speed;
-    short direction;
-};
-
-struct Input
-{
-    Input() {}
-    Input(const Input&) {}
-
-    ~Input()
-    {
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-    }
-
-    WeatherDataType type;
-    void SetTemp(const TempData& td)
-    {
-        type = WeatherDataType::Temperature;
-
-        // must use placement new because of string member!
-        new(&temp) TempData(td);
-    }
-
-    TempData GetTemp()
-    {
-        if (type == WeatherDataType::Temperature)
-            return temp;
-        else
-            throw logic_error("Can't return TempData when Input holds a WindData");
-    }
-    void SetWind(WindData wd)
-    {
-        // Explicitly delete struct member that has a
-        // non-trivial constructor
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-        wind = wd; //placement new not required.
-    }
-    WindData GetWind()
-    {
-        if (type == WeatherDataType::Wind)
-        {
-            return wind;
-        }
-        else
-            throw logic_error("Can't return WindData when Input holds a TempData");
-    }
-
-private:
-
-    union
-    {
-        TempData temp;
-        WindData wind;
-    };
-};
 ```
 
-W związku z tym nie można przechowywać odwołań. Unia nie obsługuje dziedziczenia, dlatego nie można używać samych związków jako klasy bazowej lub dziedziczyć z innej klasy ani mieć funkcji wirtualnych.
+unionNie można zapisać odwołania. unionPonadto nie obsługuje dziedziczenia. Oznacza to, że nie można użyć union jako podstawy class ani dziedziczyć z innego class lub mieć funkcje wirtualne.
 
-## <a name="initializing-unions"></a>Inicjowanie Unii
+## <a name="initialize-a-no-locunion"></a>Zainicjuj union
 
-Można zadeklarować i zainicjować unię w tej samej instrukcji przez przypisanie wyrażenia ujętego w nawiasy klamrowe. Wyrażenie jest oceniane i przypisywane do pierwszego pola unii.
+Można zadeklarować i zainicjować union w tej samej instrukcji przez przypisanie wyrażenia ujętego w nawiasy klamrowe. Wyrażenie jest oceniane i przypisywane do pierwszego pola union .
 
 ```cpp
 #include <iostream>
@@ -623,7 +540,7 @@ int main()
     union NumericType Values = { 10 };   // iValue = 10
     cout << Values.iValue << endl;
     Values.dValue = 3.1416;
-    cout << Values.dValue) << endl;
+    cout << Values.dValue << endl;
 }
 /* Output:
 10
@@ -631,32 +548,30 @@ int main()
 */
 ```
 
-Unia `NumericType` jest umieszczona w pamięci (koncepcyjnie), jak pokazano na poniższym rysunku.
+`NumericType` union Jest on uporządkowany w pamięci (koncepcyjnie), jak pokazano na poniższej ilustracji.
 
-![Magazynowanie danych w Unii typu liczbowego](../cpp/media/vc38ul1.png "Magazynowanie danych w Unii numerycznej") <br/>
-Przechowywanie danych w unii NumericType
+![Magazyn danych w typie liczbowym::: No-Loc (Unia)::](../cpp/media/vc38ul1.png "Magazyn danych w postaci liczbowej::: No-Loc (Unia)::") <br/>
+Przechowywanie danych w `NumericType`union
 
-## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>Anonimowe Unii
+## <a name="anonymous-no-locunion"></a><a name="anonymous_unions"></a> Anonimowe union
 
-Unii anonimowe to Unii, które są zadeklarowane bez *nazwy klasy* lub *listy deklarator*.
+Anonimowy union jest zadeklarowany bez *`class-name`* lub *`declarator-list`* .
 
-```cpp
-union  {  member-list  }
-```
+> **`union  {`**  *`member-list`*  **`}`**
 
-Nazwy zadeklarowane w Unii anonimowej są używane bezpośrednio, podobnie jak zmienne niebędące członkami. W związku z tym nazwy zadeklarowane w anonimowej Unii muszą być unikatowe w otaczającym zakresie.
+Nazwy zadeklarowane w anonimowym union są używane bezpośrednio, podobnie jak zmienne nieczłonkowskie. Oznacza to, że nazwy zadeklarowane w anonimowym union musi być unikatowa w otaczającym zakresie.
 
-Oprócz ograniczeń dla nazwanych Unii, anonimowe Unii podlegają dodatkowym ograniczeniom:
+Anonimowy union podlega tym dodatkowym ograniczeniom:
 
-- Muszą być również zadeklarowane jako **`static`** zadeklarowane w zakresie pliku lub przestrzeni nazw.
+- Jeśli jest zadeklarowany w zakresie pliku lub przestrzeni nazw, musi również być zadeklarowany jako **`static`** .
 
-- Mogą mieć tylko **`public`** członków, **`private`** a **`protected`** Członkowie w Unii anonimowej generują błędy.
+- Może mieć tylko **`public`** członków, członków **`private`** i **`protected`** elementów członkowskich w ramach anonimowego union generowania błędów.
 
-- Nie mogą mieć funkcji Członkowskich.
+- Nie może mieć funkcji składowych.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[określonej](../cpp/class-cpp.md)<br/>
-[konstrukcja](../cpp/struct-cpp.md)
+[`class`](../cpp/class-cpp.md)<br/>
+[`struct`](../cpp/struct-cpp.md)

@@ -1,18 +1,19 @@
 ---
 title: '&lt;&gt;funkcje charconv'
-ms.date: 07/22/2020
+description: Opisuje <charconv> funkcje biblioteki, które konwertują wartości całkowite lub zmiennoprzecinkowe na znaki lub z nich.
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565953"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722157"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funkcje charconv
 
@@ -99,15 +100,11 @@ Funkcja pobierająca parametr [chars_format](chars-format-class.md) określa spe
 
 W poniższej tabeli opisano zachowanie konwersji przy użyciu różnych kombinacji `fmt` parametrów i `precision` . Termin "zachowanie najkrótszej rundy" oznacza zapisanie najmniejszej liczby cyfr, które są niezbędne, aby analizowanie tej reprezentacji przy użyciu odpowiedniej `from_chars` funkcji odzyskał wartość dokładnie.
 
-| `fmt`i `precision` kombinacja | Dane wyjściowe |
+| `fmt` i `precision` kombinacja | Dane wyjściowe |
 |--|--|
 |  Żadna | W zależności od stałej lub wykładniczej notacji jest krótszy, poprzedzony prefiksem ustalonym jako wczesnego.</br>To zachowanie nie może być symulowane przez żadne Przeciążenie, które pobiera `fmt` parametr. |
 | `fmt` | Najkrótsze zachowanie dla określonego formatu, takie jak najkrótszy format naukowy. |
 | `fmt` i `precision` | Używa danej precyzji, następującego `printf()` stylu, bez najkrótszych zachowań. |
-
-### <a name="return-value"></a>Wartość zwracana
-
-[To_chars_result](to-chars-result-structure.md) , który przechowuje wynik konwersji.
 
 ### <a name="example"></a>Przykład
 
@@ -245,7 +242,7 @@ int main()
 
 wymagany jest/std: c++ 17 lub nowszy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<charconv>](charconv.md)  
 [Krótki ciąg dziesiętny, który dzieli](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
