@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3f6c4886d22c7cd12b29950c114fbcde8905c28
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449207"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845747"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Uwzględnij \<standardowy nagłówek iomanip >, aby zdefiniować kilka manipulowania, które każdy z nich przyjmuje jeden argument. `iostreams`
+Dołącz `iostreams` standardowy nagłówek, \<iomanip> Aby zdefiniować kilka manipulowania, które każdy z nich przyjmuje jeden argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,11 +26,11 @@ Uwzględnij \<standardowy nagłówek iomanip >, aby zdefiniować kilka manipulow
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy z tych elementów manipuluje zwraca nieokreślony typ, który `T1` jest `T10`wywoływany przez, `basic_istream`który przeciąża \< **elem**,[> operator](../standard-library/istream-operators.md#op_gt_gt) **TR**>`::`> i `basic_ostream` **Elem,** [operator](../standard-library/ostream-operators.md#op_lt_lt) **TR**<<.> \<`::`
+Każdy z tych elementów manipulowanych zwraca nieokreślony typ wywoływany `T1` przez `T10` , który przeciąża zarówno `basic_istream` \<**Elem**, **Tr**> `::` [>>operatora](../standard-library/istream-operators.md#op_gt_gt) , jak i `basic_ostream` \<**Elem**, **Tr**> `::` [<<operatora ](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipulatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Uzyskuje kwotę pieniężną, opcjonalnie w formacie międzynarodowym.|
 |[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Uzyskuje czas w strukturze czasu przy użyciu określonego formatu.|
@@ -44,9 +44,9 @@ Każdy z tych elementów manipuluje zwraca nieokreślony typ, który `T1` jest `
 |[setprecision](../standard-library/iomanip-functions.md#setprecision)|Ustawia precyzję dla wartości zmiennoprzecinkowych.|
 |[setw](../standard-library/iomanip-functions.md#setw)|Określa szerokość pola wyświetlanego.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845695"
 ---
 # <a name="checked-iterators"></a>Zaznaczone iteratory
 
@@ -25,10 +25,10 @@ Iteratory sprawdzane zapewniają, że granice kontenera nie ulegają nadpisaniu.
 
 Aby uzyskać informacje dotyczące sposobu wyłączania ostrzeżeń generowanych przez sprawdzone Iteratory, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Aby włączyć lub wyłączyć funkcję zaewidencjonowanych iteratorów, można użyć [ \_makra preprocesora\_poziomu debugowania\_iteratora](../standard-library/iterator-debug-level.md) . Jeśli _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 1 lub 2, niebezpieczne użycie iteratorów powoduje błąd w czasie wykonywania, a program zostaje przerwany. Jeśli jest zdefiniowana jako 0, iteratory sprawdzane są wyłączone. Domyślnie wartość dla _ITERATOR_DEBUG_LEVEL jest równa 0 w przypadku kompilacji wydania i 2 dla kompilacji debugowania.
+Aby włączyć lub wyłączyć funkcję zaewidencjonowanych iteratorów, można użyć makra preprocesora [ \_ \_ \_ poziomu debugowania iteratora](../standard-library/iterator-debug-level.md) . Jeśli _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 1 lub 2, niebezpieczne użycie iteratorów powoduje błąd w czasie wykonywania, a program zostaje przerwany. Jeśli jest zdefiniowana jako 0, iteratory sprawdzane są wyłączone. Domyślnie wartość _ITERATOR_DEBUG_LEVEL to 0 w przypadku kompilacji wydania i 2 dla kompilacji debugowania.
 
 > [!IMPORTANT]
-> Starsza dokumentacja i kod źródłowy mogą odwoływać się do makra [_SECURE_SCL](../standard-library/secure-scl.md) . Użyj _ITERATOR_DEBUG_LEVEL do sterowania _SECURE_SCL. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Starsza dokumentacja i kod źródłowy mogą odwoływać się do [_SECURE_SCL](../standard-library/secure-scl.md) makra. Użyj _ITERATOR_DEBUG_LEVEL, aby kontrolować _SECURE_SCL. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 Gdy _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 1 lub 2, są wykonywane następujące testy iteratora:
 
@@ -40,11 +40,26 @@ Gdy _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 1 lub 2, są wykonywane następ
 
 - Poniższe funkcje generują błąd środowiska uruchomieniowego, jeśli istnieje dostęp poza granicami kontenera:
 
-|||||
-|-|-|-|-|
-|[basic_string:: operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset:: operator\[\]](../standard-library/bitset-class.md#op_at)|[back](../standard-library/deque-class.md#back)|[FSB](../standard-library/deque-class.md#front)|
-|[deque:: operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[FSB](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
-|[FSB](../standard-library/queue-class.md#front)|[Vector:: operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[FSB](../standard-library/vector-class.md#front)|
+:::row:::
+   :::column span="":::
+      &emsp;&emsp;[`basic_string::operator[]`](../standard-library/basic-string-class.md#op_at)\
+      &emsp;&emsp;[`bitset::operator[]`](../standard-library/bitset-class.md#op_at)\
+      &emsp;&emsp;[`deque::back`](../standard-library/deque-class.md#back)\
+      &emsp;&emsp;[`deque::front`](../standard-library/deque-class.md#front)
+   :::column-end:::
+   :::column span="":::
+      [`deque::operator[]`](../standard-library/deque-class.md#op_at)\
+      [`list::back`](../standard-library/list-class.md#back)\
+      [`list::front`](../standard-library/list-class.md#front)\
+      [`queue::back`](../standard-library/queue-class.md#back)
+   :::column-end:::
+   :::column span="":::
+      [`queue::front`](../standard-library/queue-class.md#front)\
+      [`vector::back`](../standard-library/vector-class.md#back)\
+      [`vector::front`](../standard-library/vector-class.md#front)\
+      [`vector::operator[]`](../standard-library/vector-class.md#op_at)
+   :::column-end:::
+:::row-end:::
 
 Gdy _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 0:
 
@@ -54,13 +69,13 @@ Gdy _ITERATOR_DEBUG_LEVEL jest zdefiniowany jako 0:
 
 - Jeśli iterator wyjściowy jest iteratorem niesprawdzonym, wywołania funkcji biblioteki standardowej uzyskują niesprawdzone zachowanie.
 
-Sprawdzony iterator odwołuje się do iteratora, `invalid_parameter_handler` który wywołuje się, jeśli próbujesz przenieść poprzednią granicę kontenera. Aby uzyskać więcej informacji `invalid_parameter_handler`na temat, zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md).
+Sprawdzony iterator odwołuje się do iteratora, który wywołuje się, `invalid_parameter_handler` Jeśli próbujesz przenieść poprzednią granicę kontenera. Aby uzyskać więcej informacji na temat `invalid_parameter_handler` , zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md).
 
-Adaptery iteratorów obsługujące sprawdzone Iteratory to Klasa [checked_array_iterator](../standard-library/checked-array-iterator-class.md) i [Klasa unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
+Adaptery iteratorów obsługujące sprawdzone Iteratory są klasami klasy [checked_array_iterator](../standard-library/checked-array-iterator-class.md) i [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
 ## <a name="example"></a>Przykład
 
-Gdy kompilujesz przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu, który znajduje się poza granicami kontenera przy użyciu operatora indeksowania niektórych klas.
+Podczas kompilowania przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu, który znajduje się poza granicami kontenera przy użyciu operatora indeksowania niektórych klas.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +104,7 @@ Ten program drukuje "67", a następnie wyświetla okno dialogowe niepowodzenia p
 
 ## <a name="example"></a>Przykład
 
-Podobnie, gdy kompilujesz przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu przy `front` użyciu `back` lub w klasach kontenera, gdy kontener jest pusty.
+Podobnie, gdy kompilujesz przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu przy użyciu `front` lub `back` w klasach kontenera, gdy kontener jest pusty.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -217,7 +232,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
 [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)

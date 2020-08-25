@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9c1c97795e6d4eeff64ba8be8f22602f4f3fbd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845773"
 ---
 # <a name="independent_bits_engine-class"></a>independent_bits_engine — Klasa
 
@@ -26,23 +26,25 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *silnika*
+*Wyszukiwarce*\
 Typ aparatu podstawowego.
 
-*W* \
+*K*\
 **Rozmiar wyrazu**. Rozmiar w bitach dla każdej wygenerowanej liczby. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-@No__t_1 *UIntType*
-Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+*UInttype*\
+Typ wyniku bez znaku liczby całkowitej. Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="members"></a>Elementy członkowskie
 
-||||
-|-|-|-|
-|`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
-|`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
+`independent_bits_engine::independent_bits_engine`\
+`independent_bits_engine::base`\
+`independent_bits_engine::base_type`\
+`independent_bits_engine::discard`\
+`independent_bits_engine::operator()`\
+`independent_bits_engine::seed`
 
-Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [\<random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -50,10 +52,10 @@ Ten szablon klasy zawiera opis *adaptera* , który tworzy wartości poprzez prze
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<random >
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<random >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

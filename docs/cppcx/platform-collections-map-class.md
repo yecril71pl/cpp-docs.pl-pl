@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610910"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839143"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform:: Collections:: map, Klasa
 
@@ -44,7 +44,7 @@ Typ klucza w parze klucz-wartość.
 *V*<br/>
 Typ wartości w parze klucz-wartość.
 
-*C*<br/>
+*S*<br/>
 Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Domyślnie [std:: less \<K> ](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type ()* Funkcja wygenerowana przez kompilator, która sprawdza poprawność typu *K* i *V* i zapewnia przyjazny komunikat o błędzie, jeśli typ nie może być przechowywany w mapie.
@@ -90,10 +90,9 @@ Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md)
 
 ### <a name="events"></a>Zdarzenia
 
-|||
-|-|-|
-|Nazwa|Opis|
-|[Map:: MapChanged](#mapchanged) , zdarzenie|Występuje, gdy mapa zostanie zmieniona.|
+| Nazwa | Opis |
+|--|--|
+| [Map:: MapChanged](#mapchanged) , zdarzenie | Występuje, gdy mapa zostanie zmieniona. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

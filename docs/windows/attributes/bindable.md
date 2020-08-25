@@ -1,17 +1,17 @@
 ---
-title: możliwe do powiązaniaC++ (atrybut com)
+title: możliwe do powiązania (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167358"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838974"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,7 +25,7 @@ Wskazuje, że właściwość obsługuje powiązanie danych.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut możliwy do **powiązania** ma taką samą funkcjonalność, jak atrybut MIDL do [powiązania.](/windows/win32/Midl/bindable) C++ Można jej użyć na właściwościach zdefiniowanych przy użyciu atrybutów [propget](propget.md), [propput](propput.md)lub [propputref](propputref.md) lub można ręcznie zdefiniować metodę powiązania.
+Atrybut C++ możliwy do **powiązania** ma taką samą funkcjonalność, jak atrybut MIDL do [powiązania](/windows/win32/Midl/bindable) . Można jej użyć na właściwościach zdefiniowanych przy użyciu atrybutów [propget](propget.md), [propput](propput.md)lub [propputref](propputref.md) lub można ręcznie zdefiniować metodę powiązania.
 
 Następujące przykłady MFC przedstawiają użycie elementu możliwego do **powiązania**:
 
@@ -60,14 +60,12 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 

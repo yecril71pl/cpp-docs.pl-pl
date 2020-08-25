@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212309"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845798"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;&gt;operatory hash_set
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[operator! = (hash_multiset)](#op_neq_hash_multiset)|[operator = =](#op_eq_eq)|
-|[operator = = (hash_multiset)](#op_eq_eq_hash_multiset)|
+[operator! =](#op_neq)\
+[operator! = (hash_multiset)](#op_neq_hash_multiset)\
+[operator = =](#op_eq_eq)\
+[operator = = (hash_multiset)](#op_eq_eq_hash_multiset)
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -46,7 +46,7 @@ Obiekt typu `hash_set`.
 
 Porównanie między obiektami hash_set jest oparte na porównaniu z przełączaniem między swoimi elementami. Dwie hash_sets są równe, jeśli mają taką samą liczbę elementów, a ich odpowiednie elementy mają takie same wartości. W przeciwnym razie są one nierówne.
 
-Elementy członkowskie [<hash_map>](../standard-library/hash-map.md) i [<hash_set](../standard-library/hash-set.md)>pliki nagłówkowe znajdują się w [przestrzeni nazw stdext](../standard-library/stdext-namespace.md).
+Elementy członkowskie [<hash_map>](../standard-library/hash-map.md) i [<hash_set ](../standard-library/hash-set.md)>pliki nagłówkowe znajdują się w [przestrzeni nazw stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Przykład
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operator! = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a> operator! = (hash_multiset)
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operator = = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a> operator = = (hash_multiset)
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<hash_set>](../standard-library/hash-set.md)

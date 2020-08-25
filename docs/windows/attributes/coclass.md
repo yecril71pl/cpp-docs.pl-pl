@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838883"
 ---
 # <a name="coclass"></a>coclass
 
@@ -53,15 +53,15 @@ Na koniec wszystkie dwa interfejsy, które nie są zdefiniowane przy użyciu osa
 
 Atrybut **coclass** również udostępnia następujące funkcje za pośrednictwem wstrzykiwanego kodu lub w przypadku `GetObjectCLSID` , jako metoda statyczna w klasie bazowej `CComCoClass` :
 
-- `UpdateRegistry`rejestruje fabryky klas klasy docelowej.
+- `UpdateRegistry` rejestruje fabryky klas klasy docelowej.
 
 - `GetObjectCLSID`, który jest powiązany z rejestracją, może również służyć do uzyskania identyfikatora CLSID klasy docelowej.
 
-- `GetObjectFriendlyName`Domyślnie zwraca ciąg o formacie " \<*target class name*> `Object` ". Jeśli ta funkcja już istnieje, nie jest dodawana. Dodaj tę funkcję do klasy Target, aby zwrócić nazwę bardziej przyjaznej inną niż wygenerowana automatycznie.
+- `GetObjectFriendlyName` Domyślnie zwraca ciąg o formacie " \<*target class name*> `Object` ". Jeśli ta funkcja już istnieje, nie jest dodawana. Dodaj tę funkcję do klasy Target, aby zwrócić nazwę bardziej przyjaznej inną niż wygenerowana automatycznie.
 
 - `GetProgID`, który jest powiązany z rejestracją, zwraca ciąg określony przy użyciu atrybutu [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID`ma takie same funkcje jak `GetProgID` , ale zwraca ciąg określony za pomocą [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID` ma takie same funkcje jak `GetProgID` , ale zwraca ciąg określony za pomocą [vi_progid](vi-progid.md).
 
 Następujące zmiany, które są związane z mapą COM, są tworzone w klasie docelowej:
 
@@ -127,9 +127,7 @@ public:
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
@@ -138,7 +136,7 @@ public:
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty COM](com-attributes.md)<br/>

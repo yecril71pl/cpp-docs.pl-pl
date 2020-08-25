@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c39aa442c9d4eaf3a482e411cda762fe0cc34b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211934"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838532"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -59,9 +59,7 @@ Zobacz przykład [przypadku](case-cpp.md) przykładowego zastosowania **switch_t
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`typedef`**|
 |**Powtarzalne**|Nie|
@@ -70,7 +68,7 @@ Zobacz przykład [przypadku](case-cpp.md) przykładowego zastosowania **switch_t
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -2,16 +2,16 @@
 title: domyślna przestrzeń nazw
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845708"
 ---
 # <a name="default-namespace"></a>domyślna przestrzeń nazw
 
-Przestrzeń nazw zakresów typów wbudowanych, które są obsługiwane przez C++ `default`
+`default`Przestrzeń nazw ma wbudowane typy, które są obsługiwane przez C++/CX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,12 +23,12 @@ namespace default;
 
 Wszystkie typy wbudowane dziedziczą następujące elementy członkowskie.
 
-|||
-|-|-|
-|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|
-|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Zwraca kod skrótu dla tego wystąpienia.|
-|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Zwraca ciąg, który reprezentuje bieżący typ.|
-|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Zwraca ciąg, który reprezentuje bieżący typ.|
+| Nazwa | Opis |
+|--|--|
+| [default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md) | Określa, czy dany obiekt jest taki sam, jak bieżący obiekt. |
+| [default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md) | Zwraca wartość skrótu dla tego wystąpienia. |
+| [default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md) | Zwraca ciąg, który reprezentuje bieżący typ. |
+| [default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md) | Zwraca ciąg, który reprezentuje bieżący typ. |
 
 ### <a name="built-in-types"></a>Typy wbudowane
 
@@ -50,6 +50,6 @@ Wszystkie typy wbudowane dziedziczą następujące elementy członkowskie.
 
 **Nagłówek:** vccorlib. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

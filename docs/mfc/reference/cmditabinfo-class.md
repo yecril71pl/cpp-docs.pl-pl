@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: 30bf7726b35d762be2bbbd119e0303894879cd3d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8e4053bf16672d693adc104c9e88bb46a67ba7dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752649"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845916"
 ---
 # <a name="cmditabinfo-class"></a>Klasa CMDITabInfo
 
-Klasa `CMDITabInfo` jest używana do przekazywania parametrów do [metody CMDIFrameWndEx::EnableMDITabbedGroups.](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) Ustaw członków tej klasy, aby kontrolować zachowanie grup z kartami MDI.
+`CMDITabInfo`Klasa jest używana do przekazywania parametrów do metody [CMDIFrameWndEx:: EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) . Ustaw elementy członkowskie tej klasy, aby kontrolować zachowanie grup z kartami MDI.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,37 +51,37 @@ class CMDITabInfo
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMDITabInfo::CMDITabInfo`|Domyślny konstruktor.|
+|`CMDITabInfo::CMDITabInfo`|Konstruktor domyślny.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDITabInfo::Serialize](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum.|
+|[CMDITabInfo:: serializować](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Określa, czy na etykiecie aktywnej karty jest wyświetlany przycisk **Zamknij.**|
-|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Określa, czy karty MDI mają być kolorowe.|
-|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Określa, czy w grupie kart jest wyświetlane menu podręczne z listą otwartych dokumentów lub przyciskami przewijania.|
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Określa, czy użytkownik może zamienić pozycje kart, przeciągając.|
-|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Określa, czy karty mają płaską ramkę.|
-|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Określa, czy na każdej etykiecie karty jest wyświetlany przycisk **Zamknij.**|
-|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Określa, czy niestandardowe etykietki narzędzi są włączone.|
-|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Określa, czy ikony mają być wyświetlane na kartach MDI.|
-|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Określa rozmiar obramowania każdego okna karty.|
-|[CMDITabInfo::m_style](#m_style)|Określa styl etykiet kart.|
-|[CMDITabInfo::m_tabLocation](#m_tablocation)|Określa, czy etykiety kart znajdują się u góry, czy u dołu strony.|
+|[CMDITabInfo:: m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Określa, czy przycisk **zamykania** jest wyświetlany na etykiecie aktywnej karty.|
+|[CMDITabInfo:: m_bAutoColor](#m_bautocolor)|Określa, czy mają być pokolorować karty MDI.|
+|[CMDITabInfo:: m_bDocumentMenu](#m_bdocumentmenu)|Określa, czy grupa kart wyświetla menu podręczne, które pokazuje listę otwartych dokumentów lub wyświetla przyciski przewijania.|
+|[CMDITabInfo:: m_bEnableTabSwap](#m_benabletabswap)|Określa, czy użytkownik może zamieniać położenia kart przez przeciąganie.|
+|[CMDITabInfo:: m_bFlatFrame](#m_bflatframe)|Określa, czy karty mają płaską ramkę.|
+|[CMDITabInfo:: m_bTabCloseButton](#m_btabclosebutton)|Określa, czy każda etykieta karty wyświetla przycisk **Zamknij** .|
+|[CMDITabInfo:: m_bTabCustomTooltips](#m_btabcustomtooltips)|Określa, czy są włączone niestandardowe etykietki narzędzi.|
+|[CMDITabInfo:: m_bTabIcons](#m_btabicons)|Określa, czy ikony na kartach MDI mają być wyświetlane.|
+|[CMDITabInfo:: m_nTabBorderSize](#m_ntabbordersize)|Określa rozmiar obramowania każdego okna karty.|
+|[CMDITabInfo:: m_style](#m_style)|Określa styl etykiet tabulacji.|
+|[CMDITabInfo:: m_tabLocation](#m_tablocation)|Określa, czy etykiety kart znajdują się u góry, czy u dołu strony.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa określa parametry grup kart MDI, które tworzy struktura.
+Ta klasa określa parametry grup kart MDI tworzonych przez strukturę.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak ustawić wartości `CMDITabInfo` różnych zmiennych członkowskich w klasie.
+Poniższy przykład ilustruje sposób ustawiania wartości różnych zmiennych składowych w `CMDITabInfo` klasie.
 
 [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]
 
@@ -91,11 +91,11 @@ W poniższym przykładzie pokazano, jak ustawić wartości `CMDITabInfo` różny
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxmdiclientareawnd.h
+**Nagłówek:** afxmdiclientareawnd. h
 
-## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;
+## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a> CMDITabInfo:: m_bActiveTabCloseButton;
 
-Określa, czy na etykiecie aktywnej karty jest wyświetlany przycisk **Zamknij.**
+Określa, czy przycisk **zamykania** jest wyświetlany na etykiecie aktywnej karty.
 
 ```
 BOOL m_bActiveTabCloseButton;
@@ -103,11 +103,11 @@ BOOL m_bActiveTabCloseButton;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, na etykiecie aktywnej karty zostanie wyświetlony przycisk **Zamknij.** Przycisk **Zamknij** zostanie usunięty z prawego górnego rogu obszaru karty. W przeciwnym razie na etykiecie aktywnej karty nie zostanie wyświetlony przycisk **Zamknij.** Przycisk **Zamknij** pojawi się w prawym górnym rogu obszaru karty.
+Jeśli wartość jest równa TRUE, etykieta aktywnej karty będzie wyświetlać przycisk **Zamknij** . Przycisk **Zamknij** zostanie usunięty z prawego górnego rogu obszaru kart. W przeciwnym razie etykieta aktywnej karty nie będzie wyświetlać przycisku **Zamknij** . Przycisk **Zamknij** zostanie wyświetlony w prawym górnym rogu obszaru kart.
 
-## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor
+## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a> CMDITabInfo:: m_bAutoColor
 
-Określa, czy każda karta MDI ma swój własny kolor.
+Określa, czy każda karta MDI ma własny kolor.
 
 ```
 BOOL m_bAutoColor;
@@ -115,11 +115,11 @@ BOOL m_bAutoColor;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, każda karta będzie miała swój własny kolor. Zestaw kolorów jest zarządzany przez bibliotekę MFC. W przeciwnym razie karty są wyświetlane w kolorze białym. Wartością domyślną jest FAŁSZ.
+Jeśli wartość jest równa TRUE, każda karta będzie mieć własny kolor. Zestaw kolorów jest zarządzany przez bibliotekę MFC. W przeciwnym razie karty są wyświetlane w kolorze białym. Wartość domyślna to FALSE.
 
-## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu
+## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a> CMDITabInfo:: m_bDocumentMenu
 
-Określa, czy na każdej karcie jest wyświetlane menu podręczne z listą otwartych dokumentów po prawej stronie obszaru karty.
+Określa, czy na każdej karcie jest wyświetlane menu podręczne, które pokazuje listę otwartych dokumentów znajdujących się na prawej krawędzi obszaru kart.
 
 ```
 BOOL m_bDocumentMenu;
@@ -127,11 +127,11 @@ BOOL m_bDocumentMenu;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, każdy windows karty wyświetla menu podręczne, które pokazuje listę otwartych dokumentów na prawej krawędzi obszaru karty; W przeciwnym razie w oknie karty zostaną wyświetlone przyciski przewijania po prawej stronie obszaru karty. Wartością domyślną jest FAŁSZ.
+W przypadku wartości TRUE każda karta okna wyświetla menu podręczne, które pokazuje listę otwartych dokumentów na prawej krawędzi obszaru kart; W przeciwnym razie w oknie karty są wyświetlane przyciski przewijania znajdujące się po prawej krawędzi obszaru karty. Wartość domyślna to FALSE.
 
-## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap
+## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a> CMDITabInfo:: m_bEnableTabSwap
 
-Określa, czy użytkownik może zamienić pozycje kart, przeciągając.
+Określa, czy użytkownik może zamieniać położenia kart przez przeciąganie.
 
 ```
 BOOL m_bEnableTabSwap;
@@ -139,19 +139,19 @@ BOOL m_bEnableTabSwap;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, użytkownik może zmienić pozycje kart, przeciągając karty. W przeciwnym razie użytkownik nie może zmienić pozycji kart. Wartością domyślną jest PRAWDA.
+W przypadku wartości TRUE użytkownik może zmienić położenia kart, przeciągając karty. W przeciwnym razie użytkownik nie może zmienić pozycji tabulatorów. Wartość domyślna to TRUE.
 
-## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame
+## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a> CMDITabInfo:: m_bFlatFrame
 
-Określa, czy każde okno karty ma płaską ramkę.
+Określa, czy poszczególne okna kart mają płaską ramkę.
 
 ```
 BOOL m_bFlatFrame;
 ```
 
-## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton
+## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a> CMDITabInfo:: m_bTabCloseButton
 
-Określa, czy w każdym oknie karty jest wyświetlany przycisk **Zamknij.**
+Określa, czy każde okno karty wyświetla przycisk **Zamknij** .
 
 ```
 BOOL m_bTabCloseButton;
@@ -159,11 +159,11 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli prawda, każde okno karty wyświetla przycisk **Zamknij** po prawej **Close** stronie karty. Wartością domyślną jest PRAWDA.
+Jeśli wartość jest równa TRUE, każde okno karty wyświetla przycisk **Zamknij** po prawej krawędzi karty. w przeciwnym razie przycisk **Zamknij** nie jest wyświetlany. Wartość domyślna to TRUE.
 
-## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips
+## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a> CMDITabInfo:: m_bTabCustomTooltips
 
-Określa, czy na kartach są wyświetlane etykietki narzędzi.
+Określa, czy karty wyświetlają etykietki narzędzi.
 
 ```
 BOOL m_bTabCustomTooltips;
@@ -171,11 +171,11 @@ BOOL m_bTabCustomTooltips;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, aplikacja wysyła komunikat AFX_WM_ON_GET_TAB_TOOLTIP do ramki głównej. Ten komunikat można obsługiwać za pomocą makra ON_REGISTERED_MESSAGE.
+W przypadku wartości TRUE aplikacja wysyła wiadomość AFX_WM_ON_GET_TAB_TOOLTIP do głównej ramki. Ten komunikat można obsłużyć za pomocą makra ON_REGISTERED_MESSAGE.
 
-## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons
+## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a> CMDITabInfo:: m_bTabIcons
 
-Określa, czy ikony mają być wyświetlane na kartach MDI.
+Określa, czy ikony na kartach MDI mają być wyświetlane.
 
 ```
 BOOL m_bTabIcons;
@@ -183,11 +183,11 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli true, ikony są wyświetlane na każdej karcie MDI. W przeciwnym razie ikony nie są wyświetlane na kartach. Wartością domyślną jest FAŁSZ.
+W przypadku wartości TRUE ikony są wyświetlane na poszczególnych kartach MDI. w przeciwnym razie ikony nie są wyświetlane na kartach. Wartość domyślna to FALSE.
 
-## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize
+## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a> CMDITabInfo:: m_nTabBorderSize
 
-Określa rozmiar obramowania w pikselach każdego okna karty.
+Określa rozmiar obramowania (w pikselach) każdego okna karty.
 
 ```
 int m_nTabBorderSize;
@@ -195,11 +195,11 @@ int m_nTabBorderSize;
 
 ### <a name="remarks"></a>Uwagi
 
-[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) zwraca wartość domyślną.
+[CMFCVisualManager:: GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) zwraca wartość domyślną.
 
-## <a name="cmditabinfom_style"></a><a name="m_style"></a>CMDITabInfo::m_style
+## <a name="cmditabinfom_style"></a><a name="m_style"></a> CMDITabInfo:: m_style
 
-Określa styl etykiet kart.
+Określa styl etykiet tabulacji.
 
 ```
 CMFCTabCtrl::Style m_style
@@ -209,16 +209,16 @@ CMFCTabCtrl::Style m_style
 
 Określ jeden z następujących stylów etykiet kart:
 
-|||
+|Makro|Opis|
 |-|-|
-|STYLE_3D|Styl 3D.  |
+|STYLE_3D|styl 3W.  |
 |STYLE_3D_ONENOTE|Styl programu Microsoft OneNote.  |
-|STYLE_3D_VS2005|Styl programu Microsoft Visual Studio 2005.  |
-|STYLE_3D_SCROLLED|Styl 3D z etykietami kart prostokąta.  |
-|STYLE_FLAT_SHARED_HORZ_SCROLL|Płaski styl ze udostępnionym poziomym paskiem przewijania.  |
-|STYLE_3D_ROUNDED_SCROLL|Styl 3D z okrągłymi etykietami kart.  |
+|STYLE_3D_VS2005|Microsoft Visual Studio styl 2005.  |
+|STYLE_3D_SCROLLED|styl 3W z etykietami karty prostokąta.  |
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Styl płaski z udostępnionym poziomym paskiem przewijania.  |
+|STYLE_3D_ROUNDED_SCROLL|styl 3W z etykietami kart okrągłych.  |
 
-## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation
+## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a> CMDITabInfo:: m_tabLocation
 
 Określa, czy etykiety kart znajdują się u góry, czy u dołu strony.
 
@@ -232,11 +232,11 @@ Zastosuj do kart jedną z następujących flag lokalizacji:
 
 - LOCATION_BOTTOM: etykiety kart znajdują się u dołu strony.
 
-- LOCATION_TOP: etykiety kart znajdują się w górnej części strony
+- LOCATION_TOP: etykiety kart znajdują się u góry strony
 
-## <a name="cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serialize
+## <a name="cmditabinfoserialize"></a><a name="serialize"></a> CMDITabInfo:: serializować
 
-Odczytuje lub zapisuje ten obiekt z archiwum lub do archiwum.
+Odczytuje lub zapisuje ten obiekt z archiwum lub archiwum.
 
 ```cpp
 void Serialize(CArchive& ar);
@@ -244,8 +244,8 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*Ar*<br/>
-[w] A [CArchive Class](../../mfc/reference/carchive-class.md) obiektu do serializacji.
+*ty*<br/>
+podczas Obiekt [klasy CArchive](../../mfc/reference/carchive-class.md) do serializacji.
 
 ## <a name="see-also"></a>Zobacz też
 

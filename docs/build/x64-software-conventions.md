@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223775"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838831"
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 
@@ -44,22 +44,21 @@ Chociaż jest możliwe uzyskanie dostępu do danych z dowolnymi wyrównaniami, z
 
 - Octaword-128 bitów
 
-|||||
-|-|-|-|-|
 |Typ skalarny|Typ danych języka C|Rozmiar magazynu (w bajtach)|Zalecane wyrównanie|
-|**INT8**|**`char`**|1|Byte|
-|**UINT8**|**`unsigned char`**|1|Byte|
-|**INT16**|**`short`**|2|Word|
-|**UINT16**|**`unsigned short`**|2|Word|
-|**ELEMENTEM**|**`int`**, **`long`**|4|Doubleword|
-|**RÓWN**|**unsigned int, Long unsigned**|4|Doubleword|
-|**INT64**|**`__int64`**|8|Quadword|
-|**UINT64**|**__int64 bez znaku**|8|Quadword|
-|**OPERACJI FP32 (pojedyncza precyzja)**|**`float`**|4|Doubleword|
-|**FP64 (Podwójna precyzja)**|**`double`**|8|Quadword|
-|**PRZYTRZYMAJ**|__\*__|8|Quadword|
-|**`__m64`**|**__m64 struktury**|8|Quadword|
-|**`__m128`**|**__m128 struktury**|16|Octaword|
+|-|-|-|-|
+|**`INT8`**|**`char`**|1|Byte|
+|**`UINT8`**|**`unsigned char`**|1|Byte|
+|**`INT16`**|**`short`**|2|Word|
+|**`UINT16`**|**`unsigned short`**|2|Word|
+|**`INT32`**|**`int`**, **`long`**|4|Doubleword|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|4|Doubleword|
+|**`INT64`**|**`__int64`**|8|Quadword|
+|**`UINT64`**|**`unsigned __int64`**|8|Quadword|
+|**`FP32`** (pojedyncza precyzja)|**`float`**|4|Doubleword|
+|**`FP64`** (Podwójna precyzja)|**`double`**|8|Quadword|
+|**`POINTER`**|__\*__|8|Quadword|
+|**`__m64`**|**`struct __m64`**|8|Quadword|
+|**`__m128`**|**`struct __m128`**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregaty i unie
 
@@ -79,22 +78,21 @@ Inne typy, takie jak tablice, struktury i związki, mają ostrzejsze wymagania d
 
 W poniższej tabeli przedstawiono silnie sugerowane wyrównanie dla skalarnych elementów członkowskich Unii i struktur.
 
-||||
-|-|-|-|
 |Typ skalarny|Typ danych języka C|Wymagane wyrównanie|
-|**INT8**|**`char`**|Byte|
-|**UINT8**|**`unsigned char`**|Byte|
-|**INT16**|**`short`**|Word|
-|**UINT16**|**`unsigned short`**|Word|
-|**ELEMENTEM**|**`int`**, **`long`**|Doubleword|
-|**RÓWN**|**unsigned int, Long unsigned**|Doubleword|
-|**INT64**|**`__int64`**|Quadword|
-|**UINT64**|**__int64 bez znaku**|Quadword|
-|**OPERACJI FP32 (pojedyncza precyzja)**|**`float`**|Doubleword|
-|**FP64 (Podwójna precyzja)**|**`double`**|Quadword|
-|**PRZYTRZYMAJ**|<strong>\*</strong>|Quadword|
-|**`__m64`**|**__m64 struktury**|Quadword|
-|**`__m128`**|**__m128 struktury**|Octaword|
+|-|-|-|
+|**`INT8`**|**`char`**|Byte|
+|**`UINT8`**|**`unsigned char`**|Byte|
+|**`INT16`**|**`short`**|Word|
+|**`UINT16`**|**`unsigned short`**|Word|
+|**`INT32`**|**`int`**, **`long`**|Doubleword|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|Doubleword|
+|**`INT64`**|**`__int64`**|Quadword|
+|**`UINT64`**|**`unsigned __int64`**|Quadword|
+|**`FP32`** (pojedyncza precyzja)|**`float`**|Doubleword|
+|**`FP64`** (Podwójna precyzja)|**`double`**|Quadword|
+|**`POINTER`**|<strong>\*</strong>|Quadword|
+|**`__m64`**|**`struct __m64`**|Quadword|
+|**`__m128`**|**`struct __m128`**|Octaword|
 
 Stosowane są następujące reguły wyrównania agregacji:
 
@@ -191,9 +189,8 @@ Architektura x64 zapewnia 16 rejestrów ogólnego przeznaczenia (zwanych dalej r
 
 W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramach wywołań funkcji:
 
-||||
-|-|-|-|
 |Zarejestruj|Stan|Zastosowanie|
+|-|-|-|
 |RAX|Volatile|Rejestr wartości zwracanej|
 |RCX|Volatile|Pierwszy argument liczby całkowitej|
 |RDX|Volatile|Drugi argument liczby całkowitej|
@@ -238,6 +235,6 @@ Elementy wewnętrzne obsługiwane przez kompilator są opisane w funkcjach [wewn
 
 Format obrazu pliku wykonywalnego x64 to PE32 +. Obrazy wykonywalne (zarówno biblioteki DLL, jak i exe) są ograniczone do maksymalnego rozmiaru wynoszącego 2 gigabajty, więc względne adresy z przemieszczeniem 32-bitowym mogą służyć do adresowania statycznych danych obrazu. Te dane obejmują tabelę adresów importu, stałe ciągów, statyczne dane globalne itd.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)

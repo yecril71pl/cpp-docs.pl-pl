@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229899"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838805"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Używanie zestawu narzędzi platformy Microsoft C++ w wierszu polecenia
 
@@ -38,7 +38,7 @@ Wymagane zmienne środowiskowe są specyficzne dla danej instalacji i wybranej a
 
 Zestawy narzędzi, pliki poleceń i skróty są instalowane zależnie od procesora komputera i opcji wybranych podczas instalacji. Narzędzia obsługiwane przez architekturę x86 i narzędzia krzyżowe, które tworzą kod x86 i x64, są zawsze zainstalowane. Jeśli masz 64-bitowy system Windows, instalowane są także narzędzia i narzędzia obsługiwane przez procesor x64, które tworzą kod x86 i x64. Jeśli wybierzesz opcjonalne narzędzia platforma uniwersalna systemu Windows języka C++, zostaną również zainstalowane narzędzia x86 i x64, które tworzą kod ARM i ARM64. Inne obciążenia mogą instalować dodatkowe narzędzia.
 
-## <a name="developer-command-prompt-shortcuts"></a><a name="developer_command_prompt_shortcuts"></a>Skróty do wiersza polecenia dla deweloperów
+## <a name="developer-command-prompt-shortcuts"></a><a name="developer_command_prompt_shortcuts"></a> Skróty do wiersza polecenia dla deweloperów
 
 Skróty wiersza polecenia są instalowane w folderze programu Visual Studio specyficznym dla wersji. Poniżej znajduje się lista podstawowych skrótów wiersza polecenia i architektury kompilacji, które obsługują:
 
@@ -64,7 +64,7 @@ Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowa
 
 ::: moniker-end
 
-### <a name="to-open-a-developer-command-prompt-window"></a><a name="developer_command_prompt"></a>Aby otworzyć okno wiersza polecenia dla deweloperów
+### <a name="to-open-a-developer-command-prompt-window"></a><a name="developer_command_prompt"></a> Aby otworzyć okno wiersza polecenia dla deweloperów
 
 1. Na pulpicie Otwórz menu **Start** systemu Windows, a następnie przewiń, aby znaleźć i otworzyć folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**.
 
@@ -72,7 +72,7 @@ Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowa
 
 Aby jeszcze szybszy otworzyć wiersz polecenia dewelopera, wprowadź *wiersz polecenia dewelopera* w polu wyszukiwania na pulpicie. Następnie wybierz żądany wynik.
 
-## <a name="developer-command-file-locations"></a><a name="developer_command_file_locations"></a>Lokalizacje plików poleceń deweloperskich
+## <a name="developer-command-file-locations"></a><a name="developer_command_file_locations"></a> Lokalizacje plików poleceń deweloperskich
 
 Jeśli wolisz ustawić środowisko kompilacji w istniejącym oknie wiersza polecenia, możesz użyć jednego z plików poleceń utworzonych przez Instalatora. Zalecamy ustawienie środowiska w nowym oknie wiersza polecenia. Nie zalecamy później przełączania środowisk w tym samym oknie poleceń.
 
@@ -172,7 +172,7 @@ Użyj **-vcvars_ver = 14,1 x. rrrr** , aby określić określoną wersję zestaw
 
 Użyj **-vcvars_ver = 14.0** , aby określić zestaw narzędzi kompilatora programu Visual Studio 2015.
 
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a>Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
+#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a> Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
 
 1. W wierszu polecenia Użyj polecenia CD, aby przejść do katalogu instalacyjnego programu Visual Studio. Następnie ponownie Użyj dysku CD, aby przejść do podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. W przypadku programów Visual Studio 2019 i Visual Studio 2017 należy użyć podkatalogu * \\ \\ kompilacji pomocniczej VC* . Dla programu Visual Studio 2015 Użyj podkatalogu *VC* .
 
@@ -231,13 +231,13 @@ Aby skompilować projekt C/C++ w wierszu polecenia, program Visual Studio udost�
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 Użyj kompilatora (cl.exe) do kompilowania i łączenia plików kodu źródłowego w aplikacje, biblioteki i biblioteki DLL.
 
-[Powiązań](reference/linking.md)<br/>
+[Łącze](reference/linking.md)<br/>
 Użyj konsolidatora (link.exe), aby połączyć skompilowane pliki i biblioteki obiektów w aplikacje i biblioteki DLL.
 
 [NMAKE](reference/nmake-reference.md)<br/>
 Używaj NMAKE (nmake.exe) w systemie Windows do kompilowania projektów C++ opartych na tradycyjnym pliku reguł programu make.
 
-Gdy kompilujesz w wierszu polecenia, polecenie F1 nie jest dostępne do natychmiastowej pomocy. Zamiast tego można użyć aparatu wyszukiwania, aby uzyskać informacje dotyczące ostrzeżeń, błędów i komunikatów. Możesz również pobrać pliki pomocy w trybie offline i korzystać z nich. Aby użyć wyszukiwania w [docs.Microsoft.com](https://docs.microsoft.com/cpp/), wprowadź zapytanie w polu wyszukiwania w górnej części dowolnego artykułu.
+Gdy kompilujesz w wierszu polecenia, polecenie F1 nie jest dostępne do natychmiastowej pomocy. Zamiast tego można użyć aparatu wyszukiwania, aby uzyskać informacje dotyczące ostrzeżeń, błędów i komunikatów. Możesz również pobrać pliki pomocy w trybie offline i korzystać z nich. Aby użyć wyszukiwania w docs.microsoft.com, wprowadź zapytanie w polu wyszukiwania w górnej części dowolnego artykułu.
 
 ## <a name="command-line-project-management-tools"></a>Narzędzia do zarządzania projektami w wierszu polecenia
 
@@ -288,6 +288,6 @@ Zawiera łącza do artykułów, które omawiają Opcje konsolidatora i LINK.exe.
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)<br/>
 Oferuje linki do narzędzi do kompilacji C/C++, które są zawarte w programie Visual Studio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

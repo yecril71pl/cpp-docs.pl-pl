@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228924"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838441"
 ---
 # <a name="ccommand-class"></a>Klasa CCommand
 
@@ -91,7 +91,7 @@ Aby użyć polecenia OLE DB, które może zwracać wiele wyników, określ [CMul
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Zamknij](#close)|Zamyka bieżące polecenie.|
 |[GetNextResult](#getnextresult)|Pobiera następny wynik przy użyciu wielu zestawów wyników.|
@@ -99,7 +99,7 @@ Aby użyć polecenia OLE DB, które może zwracać wiele wyników, określ [CMul
 
 ### <a name="inherited-methods"></a>Dziedziczone metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Utwórz](#create)|Tworzy nowe polecenie dla określonej sesji, a następnie ustawia tekst polecenia.|
 |[CreateCommand](#createcommand)|Tworzy nowe polecenie.|
@@ -117,7 +117,7 @@ Używana Klasa akcesora określa metodę powiązań parametrów i danych.
 
 Należy pamiętać, że nie można użyć procedur składowanych z dostawcą OLE DB dla aparatu Jet, ponieważ ten dostawca nie obsługuje procedur składowanych (w ciągach zapytań są dozwolone tylko stałe).
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
+## <a name="ccommandclose"></a><a name="close"></a> CCommand:: Close
 
 Zwalnia zestaw wierszy akcesora skojarzony z poleceniem.
 
@@ -141,7 +141,7 @@ Poniższy przykład pokazuje, jak można nawiązać połączenie `Close` i `Rele
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand:: GetNextResult
 
 Pobiera następny zestaw wyników, jeśli jest dostępny.
 
@@ -170,7 +170,7 @@ Jeśli zestaw wyników został wcześniej pobrany, ta funkcja zwolni poprzedni z
 
 Tę funkcję należy wywołać tylko wtedy, gdy określono wiele wyników przez ustawienie `CCommand` parametru szablonu *TMultiple* = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
+## <a name="ccommandopen"></a><a name="open"></a> CCommand:: Open
 
 Wykonuje i opcjonalnie wiąże polecenie.
 
@@ -256,9 +256,9 @@ Trzecia forma `Open` dopuszcza, aby ciąg polecenia miał wartość null, z powo
 Użyj czwartej formy, `Open` gdy utworzono już polecenie i chcesz wykonać pojedyncze [przygotowanie](../../data/oledb/ccommand-prepare.md) i wiele wykonań.
 
 > [!NOTE]
-> `Open`wywołania `Execute` , które z kolei powodują wywoływanie `GetNextResult` .
+> `Open` wywołania `Execute` , które z kolei powodują wywoływanie `GetNextResult` .
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: Create
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
 Wywołuje [CCommand::](../../data/oledb/ccommand-createcommand.md) ICommandText, aby utworzyć polecenie dla określonej sesji, a następnie wywołuje [:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , aby określić tekst polecenia.
 
@@ -296,7 +296,7 @@ Standardowa wartość HRESULT.
 
 Pierwszy formularz `Create` Pobiera ciąg poleceń Unicode. Druga forma `Create` Pobiera ciąg poleceń ANSI (pod kątem zgodności z poprzednimi wersjami z istniejącymi aplikacjami ANSI).
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: SetCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand:: SetCommand
 
 Tworzy nowe polecenie.
 
@@ -309,7 +309,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 #### <a name="parameters"></a>Parametry
 
 *obrad*<br/>
-podczas `CSession`Obiekt, który ma zostać skojarzony z nowym poleceniem.
+podczas `CSession` Obiekt, który ma zostać skojarzony z nowym poleceniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -319,7 +319,7 @@ Standardowa wartość HRESULT.
 
 Ta metoda tworzy polecenie przy użyciu określonego obiektu sesji.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand:: GetParameterInfo
 
 Pobiera listę parametrów poleceń, ich nazw i ich typów.
 
@@ -339,7 +339,7 @@ Zobacz [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/de
 
 Standardowa wartość HRESULT.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P Przygotuj
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand::P Przygotuj
 
 Weryfikuje i optymalizuje bieżące polecenie.
 
@@ -362,7 +362,7 @@ Standardowa wartość HRESULT.
 
 Ta metoda otacza OLE DB Metoda [ICommandPrepare::P Przygotuj](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand:: ReleaseCommand
 
 Zwalnia metodę dostępu do parametrów, a następnie zwalnia samo polecenie.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-`ReleaseCommand`jest używany w połączeniu z `Close` . Zobacz [Zamknij](../../data/oledb/ccommand-close.md) , aby uzyskać szczegółowe informacje na temat użycia.
+`ReleaseCommand` jest używany w połączeniu z `Close` . Zobacz [Zamknij](../../data/oledb/ccommand-close.md) , aby uzyskać szczegółowe informacje na temat użycia.
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
 Określa typ natywny każdego parametru polecenia.
 
@@ -396,7 +396,7 @@ Zobacz [ICommandWithParameters:: SetParameterInfo](/previous-versions/windows/de
 
 Standardowa wartość HRESULT.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: Prepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand:: Prepare
 
 Odrzuca bieżący plan wykonywania polecenia.
 
@@ -414,7 +414,7 @@ Standardowa wartość HRESULT.
 
 Ta metoda otacza metodę OLE DB [ICommandPrepare:: Prepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

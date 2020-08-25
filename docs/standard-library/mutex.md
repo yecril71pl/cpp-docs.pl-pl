@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228183"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838557"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -51,7 +51,7 @@ Typ muteksu jest również znany jako *Typ podlegającego blokowaniu*. Jeśli ni
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Klasa lock_guard](../standard-library/lock-guard-class.md)|Reprezentuje szablon, który może być skonkretyzowany do utworzenia obiektu, którego destruktor odblokowuje `mutex` .|
 |[mutex — Klasa (standardowa biblioteka C++)](../standard-library/mutex-class-stl.md)|Reprezentuje typ muteksu. Użyj obiektów tego typu, aby wymusić wzajemne wykluczenie w ramach programu.|
@@ -61,9 +61,9 @@ Typ muteksu jest również znany jako *Typ podlegającego blokowaniu*. Jeśli ni
 |[Klasa timed_mutex](../standard-library/timed-mutex-class.md)|Reprezentuje typ muteksu czasu. Użyj obiektów tego typu, aby wymusić wzajemne wykluczenia, które mają ograniczone czasowo blokowanie w ramach programu.|
 |[Klasa unique_lock](../standard-library/unique-lock-class.md)|Reprezentuje szablon, który może być skonkretyzowany do tworzenia obiektów, które zarządzają blokowaniem i odblokowywaniem `mutex` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Zapewnia mechanizm wywoływania określonego możliwego do wywołania obiektu dokładnie raz podczas wykonywania.|
 |[skręt](../standard-library/mutex-functions.md#lock)|Próbuje zablokować wszystkie argumenty bez zakleszczenia.|
@@ -72,7 +72,7 @@ Typ muteksu jest również znany jako *Typ podlegającego blokowaniu*. Jeśli ni
 
 ### <a name="structs"></a>Struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[adopt_lock_t — Struktura](../standard-library/adopt-lock-t-structure.md)|Reprezentuje typ, który jest używany do definiowania `adopt_lock` .|
 |[defer_lock_t — Struktura](../standard-library/defer-lock-t-structure.md)|Reprezentuje typ, który definiuje `defer_lock` obiekt, który jest używany do wybrania jednego z przeciążonych konstruktorów `unique_lock` .|
@@ -81,12 +81,12 @@ Typ muteksu jest również znany jako *Typ podlegającego blokowaniu*. Jeśli ni
 
 ### <a name="variables"></a>Zmienne
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Reprezentuje obiekt, który może być przesłany do konstruktorów dla `lock_guard` i, `unique_lock` Aby wskazać, że obiekt mutex, który jest również przesyłany do konstruktora jest zablokowany.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może zostać przesłany do konstruktora dla `unique_lock` , w celu wskazania, że Konstruktor nie powinien blokować obiektu mutex, który jest również przesyłany do niego.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Reprezentuje obiekt, który może zostać przesłany do konstruktora w `unique_lock` celu wskazania, że Konstruktor powinien próbować odblokować, `mutex` który jest również przekazywać do niego bez blokowania.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

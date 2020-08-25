@@ -1,17 +1,17 @@
 ---
-title: ms_union (C++ atrybut com)
+title: ms_union (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166643"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838844"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,7 +25,7 @@ Kontroluje wyrównanie danych sieci do wyrównania niehermetyzowanych Unii.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **ms_union** C++ ma taką samą funkcjonalność jak atrybut [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
+Atrybut **ms_union** C++ ma takie same funkcje jak atrybut [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -56,13 +56,11 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Niehermetyzowane związki|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
@@ -70,4 +68,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)

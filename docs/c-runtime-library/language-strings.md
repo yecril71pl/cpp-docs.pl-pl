@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839255"
 ---
 # <a name="language-strings"></a>Ciągi języka
 
-Funkcje [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) mogą korzystać z obsługiwanych języków NLS API systemu Windows w systemach operacyjnych, które nie korzystają ze strony kodowej Unicode. Aby uzyskać listę obsługiwanych języków według wersji systemu operacyjnego, zobacz [dodatek a: zachowanie produktu](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) w \[ MS-LCID]: dokumentacja identyfikatora kodu języka (LCID) systemu Windows. Ciąg języka może być dowolną wartością w kolumnach **Język** i **Język** listy obsługiwanych języków. Przykład kodu, który wylicza dostępne nazwy ustawień regionalnych i powiązane wartości, można znaleźć w temacie [NLS: Omówienie interfejsów API opartych na nazwach](/windows/win32/intl/nls--name-based-apis-sample).
+Funkcje [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) mogą korzystać z obsługiwanych języków NLS API systemu Windows w systemach operacyjnych, które nie korzystają ze strony kodowej Unicode. Aby uzyskać listę obsługiwanych języków według wersji systemu operacyjnego, zobacz [dodatek a: zachowanie produktu](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) w \[ MS-LCID]: dokumentacja identyfikatora kodu języka (LCID) systemu Windows. Ciąg języka może być dowolną wartością w kolumnach **Język** i **Język** listy obsługiwanych języków. Przykład kodu, który wylicza dostępne nazwy ustawień regionalnych i powiązane wartości, można znaleźć w temacie [NLS: Omówienie interfejsów API opartych na nazwach](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Dodatkowe obsługiwane ciągi języka
 
