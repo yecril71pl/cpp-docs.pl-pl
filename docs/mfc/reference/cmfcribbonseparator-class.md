@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560871"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831804"
 ---
 # <a name="cmfcribbonseparator-class"></a>Klasa CMFCRibbonSeparator
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Konstruuje `CMFCRibbonSeparator` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Dodaje separator do listy **poleceń** w oknie dialogowym **Dostosuj** . (Przesłania [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
 |`CMFCRibbonSeparator::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Metoda kopiowania, która ustawia zmienne składowe separatora z innego obiektu.|
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Zwraca rozmiar separatora.|
 |[CMFCRibbonSeparator:: IsSeparator](#isseparator)|Wskazuje, czy ten element jest separatorem.|

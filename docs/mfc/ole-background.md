@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404297"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830790"
 ---
 # <a name="ole-background"></a>Podstawy OLE
 
@@ -58,15 +58,15 @@ Technologia OLE obejmuje wiele różnych koncepcji, które działają w kierunku
 
 Niektóre z ważniejszych tematów OLE zostały omówione w następujących artykułach:
 
-- [Podstawy OLE: łączenie i osadzanie](ole-background-linking-and-embedding.md)
+- [Tło OLE: łączenie i osadzanie](ole-background-linking-and-embedding.md)
 
-- [Podstawy OLE: kontenery i serwery](ole-background-containers-and-servers.md)
+- [Tło OLE: kontenery i serwery](ole-background-containers-and-servers.md)
 
-- [Podstawy OLE: strategie implementacji](ole-background-implementation-strategies.md)
+- [Tło OLE: strategie implementacji](ole-background-implementation-strategies.md)
 
-- [Podstawy OLE: implementacja MFC](ole-background-mfc-implementation.md)
+- [Tło OLE: implementacja MFC](ole-background-mfc-implementation.md)
 
-Aby uzyskać ogólne informacje o technologii OLE, które nie zostały znalezione w powyższych artykułach, [Wyszukaj ciąg OLE](https://docs.microsoft.com/search/?terms=ole) w Microsoft docs.
+Aby uzyskać ogólne informacje o technologii OLE, które nie zostały znalezione w powyższych artykułach, [Wyszukaj ciąg OLE](/search/?terms=ole) w Microsoft docs.
 
 ## <a name="see-also"></a>Zobacz też
 

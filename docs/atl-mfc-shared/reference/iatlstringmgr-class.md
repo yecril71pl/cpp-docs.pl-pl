@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832012"
 ---
 # <a name="iatlstringmgr-class"></a>Klasa IAtlStringMgr
 
@@ -35,7 +35,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>Metody
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Alokacji](#allocate)|Wywołaj tę metodę, aby przydzielić nową strukturę danych ciągu.|
 |[Klonowanie](#clone)|Wywołaj tę metodę, aby zwrócić wskaźnik do nowego menedżera ciągów do użycia z innym wystąpieniem `CSimpleStringT` .|
@@ -53,7 +53,7 @@ Można również użyć tej klasy do zaimplementowania niestandardowego menedże
 
 **Nagłówek:** atlsimpstr. h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr:: Allocate
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a> IAtlStringMgr:: Allocate
 
 Przypisuje nową strukturę danych ciągu.
 
@@ -83,7 +83,7 @@ Wywołanie [IAtlStringMgr:: Free](#free) lub [IAtlStringMgr:: Reallocate](#reall
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:: Clone
+## <a name="iatlstringmgrclone"></a><a name="clone"></a> IAtlStringMgr:: Clone
 
 Zwraca wskaźnik do nowego menedżera ciągów do użycia z innym wystąpieniem `CSimpleStringT` .
 
@@ -104,7 +104,7 @@ Jeśli jednak Menedżer pamięci nie obsługuje użycia przez wiele wystąpień 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:: Free
+## <a name="iatlstringmgrfree"></a><a name="free"></a> IAtlStringMgr:: Free
 
 Zwalnia strukturę danych ciągu.
 
@@ -124,7 +124,7 @@ Zwalnia określony blok pamięci, który został wcześniej przydzielony po [prz
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a> IAtlStringMgr::GetNilString
 
 Zwraca wskaźnik do struktury danych ciągu dla pustego ciągu.
 
@@ -146,7 +146,7 @@ Wywołaj tę funkcję, aby zwrócić reprezentację pustego ciągu.
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:: Reallocate
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a> IAtlStringMgr:: Reallocate
 
 Ponownie przydziela strukturę danych ciągu.
 
@@ -181,7 +181,7 @@ Wywołaj [IAtlStringMgr:: Free](#free) , aby zwolnić pamięć przydzieloną prz
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

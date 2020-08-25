@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 189fd70ce10b6067646553f2b92a8fc09239d054
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212038"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834222"
 ---
 # <a name="unique_lock-class"></a>unique_lock — Klasa
 
@@ -74,7 +74,7 @@ Wewnętrznie program `unique_lock` zapisuje wskaźnik do skojarzonego `mutex` ob
 
 **Przestrzeń nazw:** std
 
-## <a name="lock"></a><a name="lock"></a>skręt
+## <a name="lock"></a><a name="lock"></a> skręt
 
 Blokuje wątek wywołujący do momentu, aż wątek uzyska własność skojarzonego elementu `mutex` .
 
@@ -90,7 +90,7 @@ Jeśli wątek wywołujący jest już właścicielem skojarzonej `mutex` metody, 
 
 W przeciwnym razie ta metoda wywołuje `lock` dla skojarzonych `mutex` i ustawia flagę wewnętrznego własności wątku **`true`** .
 
-## <a name="mutex"></a><a name="mutex"></a>mutex
+## <a name="mutex"></a><a name="mutex"></a> mutex
 
 Pobiera przechowywany wskaźnik do skojarzonego `mutex` .
 
@@ -98,7 +98,7 @@ Pobiera przechowywany wskaźnik do skojarzonego `mutex` .
 mutex_type *mutex() const noexcept;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>wartość logiczna operatora
+## <a name="operator-bool"></a><a name="op_bool"></a> wartość logiczna operatora
 
 Określa, czy wywołujący wątek ma własność skojarzonego obiektu mutex.
 
@@ -110,7 +110,7 @@ explicit operator bool() noexcept
 
 **`true`** Jeśli wątek jest właścicielem obiektu mutex; w przeciwnym razie **`false`** .
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Kopiuje zapisany `mutex` wskaźnik i stan powiązanej własności z określonego obiektu.
 
@@ -133,7 +133,7 @@ Jeśli wątek wywołujący jest właścicielem wcześniej skojarzonej `mutex` , 
 
 Po skopiowaniu ta metoda jest ustawiana jako *inna* do stanu utworzonego domyślnie.
 
-## <a name="owns_lock"></a><a name="owns_lock"></a>owns_lock
+## <a name="owns_lock"></a><a name="owns_lock"></a> owns_lock
 
 Określa, czy wywołujący wątek jest właścicielem skojarzonego obiektu `mutex` .
 
@@ -145,7 +145,7 @@ bool owns_lock() const noexcept;
 
 **`true`** Jeśli wątek jest własnością `mutex` ; w przeciwnym razie **`false`** .
 
-## <a name="release"></a><a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a> Usuwanie
 
 Usuwa `unique_lock` obiekt z skojarzonego `mutex` obiektu.
 
@@ -161,7 +161,7 @@ Poprzednia wartość przechowywanego `mutex` wskaźnika.
 
 Ta metoda ustawia wartość przechowywanego `mutex` wskaźnika na 0 i ustawia `mutex` flagę wewnętrznej własności na **`false`** .
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia `mutex` stan skojarzonych i własności na określony obiekt.
 
@@ -174,7 +174,7 @@ void swap(unique_lock& Other) noexcept;
 *Różnych*\
 Obiekt `unique_lock`.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Próbuje uzyskać własność skojarzoną `mutex` bez blokowania.
 
@@ -192,7 +192,7 @@ Jeśli przechowywany `mutex` wskaźnik ma wartość null, metoda zgłasza [syste
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , metoda zgłasza, `system_error` że ma kod błędu `resource_deadlock_would_occur` .
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 Próbuje uzyskać własność skojarzoną `mutex` bez blokowania.
 
@@ -217,7 +217,7 @@ Jeśli przechowywany `mutex` wskaźnik ma wartość null, metoda zgłasza [syste
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , metoda zgłasza, `system_error` że ma kod błędu `resource_deadlock_would_occur` .
 
-## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a> try_lock_until
 
 Próbuje uzyskać własność skojarzoną `mutex` bez blokowania.
 
@@ -243,7 +243,7 @@ Jeśli przechowywany `mutex` wskaźnik ma wartość null, metoda zgłasza [syste
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , metoda zgłasza, `system_error` że ma kod błędu `resource_deadlock_would_occur` .
 
-## <a name="unique_lock-constructor"></a><a name="unique_lock"></a>Konstruktor unique_lock
+## <a name="unique_lock-constructor"></a><a name="unique_lock"></a> Konstruktor unique_lock
 
 Konstruuje `unique_lock` obiekt.
 
@@ -293,16 +293,16 @@ Drugi Konstruktor przenosi skojarzony stan obiektu mutex z *innego*. Po przenies
 
 Pozostałe konstruktory przechowują & *MTX* jako składowany `mutex` wskaźnik. Własność `mutex` jest określana przez drugi argument, jeśli istnieje.
 
-|||
+|Nazwa|Opis|
 |-|-|
 |`No argument`|Własność jest uzyskiwana przez wywołanie `lock` metody dla skojarzonego `mutex` obiektu.|
-|`Adopt`|Przyjęto własność. `Mtx`musi być zablokowany, gdy Konstruktor jest wywoływany.|
-|`Defer`|Założono, że wątek wywołujący nie jest właocicielem `mutex` obiektu. `Mtx`nie może być zablokowany, gdy Konstruktor jest wywoływany.|
+|`Adopt`|Przyjęto własność. `Mtx` musi być zablokowany, gdy Konstruktor jest wywoływany.|
+|`Defer`|Założono, że wątek wywołujący nie jest właocicielem `mutex` obiektu. `Mtx` nie może być zablokowany, gdy Konstruktor jest wywoływany.|
 |`Try`|Własność jest określana przez wywołanie `try_lock` skojarzonego `mutex` obiektu. Konstruktor zgłasza Nothing.|
 |`Rel_time`|Własność jest określana przez wywołanie `try_lock_for(Rel_time)` .|
 |`Abs_time`|Własność jest określana przez wywołanie `try_lock_until(Abs_time)` .|
 
-## <a name="unique_lock-destructor"></a><a name="dtorunique_lock_destructor"></a>~ unique_lock destruktor
+## <a name="unique_lock-destructor"></a><a name="dtorunique_lock_destructor"></a>  ~ unique_lock destruktor
 
 Zwalnia wszystkie zasoby skojarzone z `unique_lock` obiektem.
 
@@ -314,7 +314,7 @@ Zwalnia wszystkie zasoby skojarzone z `unique_lock` obiektem.
 
 Jeśli wątek wywołujący jest właścicielem skojarzonego `mutex` , destruktor zwalnia własność przez wywołanie metody unlock dla `mutex` obiektu.
 
-## <a name="unlock"></a><a name="unlock"></a>odblokowania
+## <a name="unlock"></a><a name="unlock"></a> odblokowania
 
 Zwalnia własność skojarzonych `mutex` .
 
@@ -328,7 +328,7 @@ Jeśli wątek wywołujący nie jest elementem skojarzonym `mutex` , Metoda ta zg
 
 W przeciwnym razie ta metoda wywołuje `unlock` dla skojarzonych `mutex` i ustawia flagę wewnętrznego własności wątku **`false`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

@@ -1,17 +1,17 @@
 ---
-title: v1_enum (C++ atrybut com)
+title: v1_enum (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6529a32b0bfe2de09191e9cced8f6bd98e7ffdcc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166110"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832987"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -25,7 +25,7 @@ Określa, że określony typ wyliczeniowy ma być przekazywany jako jednostka 32
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **v1_enum** C++ ma taką samą funkcjonalność jak atrybut [v1_enum](/windows/win32/Midl/v1-enum) MIDL.
+Atrybut **v1_enum** C++ ma takie same funkcje jak atrybut [v1_enum](/windows/win32/Midl/v1-enum) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -44,18 +44,16 @@ enum eList {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Typ wyliczeniowy|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222579"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831505"
 ---
 # <a name="ltcomplexgt"></a>&lt;złożonych&gt;
 
@@ -20,7 +20,7 @@ Definiuje szablon klasy kontenera `complex` i jego szablony pomocnicze.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<complex>
+**Nagłówek**: \<complex>
 
 **Przestrzeń nazw:** std
 
@@ -70,9 +70,9 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Oblicza moduł liczby zespolonej.|
 |[Acos](../standard-library/complex-functions.md#acos)||
@@ -93,7 +93,7 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 |[Wykres](../standard-library/complex-functions.md#polar)|Zwraca liczbę zespoloną, która odnosi się do określonego modułu i argumentu w formie kartezjańskiego.|
 |[pow](../standard-library/complex-functions.md#pow)|Oblicza liczbę zespoloną uzyskaną przez podnoszenie wartości bazowej, która jest liczbą zespoloną do potęgi innej liczby zespolonej.|
 |[proj](../standard-library/complex-functions.md#proj)||
-|[real](../standard-library/complex-functions.md#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
+|[liczba rzeczywista](../standard-library/complex-functions.md#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
 |[sinus](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby zespolonej.|
 |[SINH](../standard-library/complex-functions.md#sinh)|Zwraca sinus hiperboliczny liczby zespolonej.|
 |[sqrt](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy z liczby zespolonej.|
@@ -102,20 +102,20 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator! =](../standard-library/complex-operators.md#op_neq)|Testuje pod kątem nierówności między dwoma złożonymi liczbami, jedną lub obie, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[zakład](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[zakład](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[zakład](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
-|[<operatora\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczbę zespoloną do strumienia wyjściowego.|
+|[<operatora \<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczbę zespoloną do strumienia wyjściowego.|
 |[operator = =](../standard-library/complex-operators.md#op_eq_eq)|Testuje równość między dwoma złożonymi liczbami, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
-|[>>operatora](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
+|[>>operatora ](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[złożonych\<double>](../standard-library/complex-double.md)|Jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obu typów **`double`** , gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
 |[złożonych\<float>](../standard-library/complex-float.md)|Jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obu typów **`float`** , gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
@@ -126,13 +126,13 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 
 \<complex>Nagłówek definiuje następujące [literały zdefiniowane przez użytkownika](../cpp/user-defined-literals-cpp.md) , które tworzą liczbę zespoloną z zerem częścią rzeczywistą i części urojoną wartości parametru wejściowego.
 
-|||
+|Oświadczeń|Opis|
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Typu`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Typu `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Zwraca: `complex<double>{0.0, static_cast<double>(d)}` .|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Zwraca: `complex<float>{0.0f, static_cast<float>(d)}` .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

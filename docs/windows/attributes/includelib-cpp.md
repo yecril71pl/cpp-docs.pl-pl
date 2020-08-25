@@ -1,17 +1,17 @@
 ---
-title: includelib — (C++ atrybut com)
+title: includelib — (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30e84a6c82ec25e07ca0eb08f64c7aa5b560e9e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830699"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -30,7 +30,7 @@ Nazwa pliku. idl, który ma zostać uwzględniony jako część wygenerowanego p
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **includelib —** C++ powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL, po instrukcji `importlib`.
+Atrybut **includelib —** C++ powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL, po `importlib` instrukcji.
 
 ## <a name="example"></a>Przykład
 
@@ -45,22 +45,20 @@ Poniższy kod jest przedstawiony w pliku. cpp:
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|Dowolnym miejscu|
-|**Powtarzalne**|Yes|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Dotyczy**|Dowolne miejsce|
+|**Powtarzalne**|Tak|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)<br/>
-[import](import.md)<br/>
+[Atrybuty autonomiczne](stand-alone-attributes.md)<br/>
+[zaimportować](import.md)<br/>
 [importidl](importidl.md)<br/>
-[include](include-cpp.md)<br/>
+[być](include-cpp.md)<br/>
 [importlib](importlib.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212127"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833183"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -50,18 +50,18 @@ Język C++ i Standardowa biblioteka C++ obsługują dwa typy ciągów:
 |[operator +](../standard-library/string-operators.md#op_add)|Łączy dwa obiekty String.|
 |[operator! =](../standard-library/string-operators.md#op_neq)|Testuje, czy obiekt String po lewej stronie operatora nie jest równy obiektowi ciągu po prawej stronie.|
 |[operator = =](../standard-library/string-operators.md#op_eq_eq)|Testuje, czy obiekt String po lewej stronie operatora jest równy obiektowi ciągu po prawej stronie.|
-|[<operatora](../standard-library/string-operators.md#op_lt)|Testuje, czy obiekt String po lewej stronie operatora jest mniejszy niż obiekt ciągu po prawej stronie.|
+|[<operatora ](../standard-library/string-operators.md#op_lt)|Testuje, czy obiekt String po lewej stronie operatora jest mniejszy niż obiekt ciągu po prawej stronie.|
 |[<operatora =](../standard-library/string-operators.md#op_lt_eq)|Testuje, czy obiekt String po lewej stronie operatora jest mniejszy niż lub równy obiektowi ciągu po prawej stronie.|
-|[<operatora\<](../standard-library/string-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia ciąg do strumienia wyjściowego.|
-|[>operatora](../standard-library/string-operators.md#op_gt)|Testuje, czy obiekt String po lewej stronie operatora jest większy niż obiekt ciągu po prawej stronie.|
+|[<operatora \<](../standard-library/string-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia ciąg do strumienia wyjściowego.|
+|[>operatora ](../standard-library/string-operators.md#op_gt)|Testuje, czy obiekt String po lewej stronie operatora jest większy niż obiekt ciągu po prawej stronie.|
 |[>operatora =](../standard-library/string-operators.md#op_gt_eq)|Testuje, czy obiekt String po lewej stronie operatora jest większy niż lub równy obiektowi ciągu po prawej stronie.|
-|[>>operatora](../standard-library/string-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia ciąg ze strumienia wejściowego.|
+|[>>operatora ](../standard-library/string-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia ciąg ze strumienia wejściowego.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
-|||
+|Nazwa|Opis|
 |-|-|
-|hash|Tworzy skrót ciągu.|
+|`hash`|Tworzy skrót ciągu.|
 |[wymiany](../standard-library/string-functions.md#swap)|Wymienia tablice znaków dwóch ciągów.|
 |[stod](../standard-library/string-functions.md#stod)|Konwertuje sekwencję znaków na **`double`** .|
 |[stof](../standard-library/string-functions.md#stof)|Konwertuje sekwencję znaków na **`float`** .|
@@ -73,7 +73,7 @@ Język C++ i Standardowa biblioteka C++ obsługują dwa typy ciągów:
 |[to_string](../standard-library/string-functions.md#to_string)|Konwertuje wartość na `string` .|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Konwertuje wartość na szeroką `string` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
 |Funkcja|Opis|
 |-|-|
@@ -88,7 +88,7 @@ Język C++ i Standardowa biblioteka C++ obsługują dwa typy ciągów:
 
 ### <a name="specializations"></a>Specjalizacje
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[\<char>struktura char_traits](../standard-library/char-traits-char-struct.md)|Struktura, która jest specjalizacją struktury szablonu `char_traits` \<CharType> do elementu typu **`char`** .|
 |[char_traits<wchar_t>, struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, która jest specjalizacją struktury szablonu `char_traits` \<CharType> do elementu typu **`wchar_t`** .|

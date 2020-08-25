@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 53b1a356f3a7e224cb85c15b8aa725a5f0469157
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201716"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832493"
 ---
 # <a name="licensed"></a>licensed
 
@@ -50,9 +50,7 @@ public:
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
@@ -61,7 +59,7 @@ public:
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

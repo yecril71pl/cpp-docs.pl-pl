@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 7e6ab9ec0f6f55ab0be9624b7343b087b41f2a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e6256c4fb7f7742be52d582fc57316da5e773a6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215247"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834157"
 ---
 # <a name="length_is"></a>length_is
 
@@ -38,9 +38,7 @@ Zobacz [first_is](first-is.md) , aby zapoznać się z przykładem, jak określi�
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Pole w **`struct`** lub **`union`** , parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
@@ -49,7 +47,7 @@ Zobacz [first_is](first-is.md) , aby zapoznać się z przykładem, jak określi�
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>

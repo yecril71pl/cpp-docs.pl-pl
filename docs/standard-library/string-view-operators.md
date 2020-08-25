@@ -17,24 +17,27 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222240"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833221"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;&gt;operatory string_view
 
 Te operatory służą do porównywania dwóch string_view obiektów lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char \* **), dla których podano niejawną konwersję.
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator = =](#op_eq_eq)|[operator "" SV](#op_sv)|
+[operator! =](#op_neq)\
+[zakład&gt;](#op_gt)\
+[zakład&gt;=](#op_gt_eq)\
+[zakład&lt;](#op_lt)\
+[zakład&lt;&lt;](#op_lt_lt)\
+[zakład&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)\
+[operator "" SV](#op_sv)
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
@@ -73,7 +76,7 @@ Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po d
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe. W przeciwnym razie są one nierówne.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
@@ -112,7 +115,7 @@ Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po d
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy niż obiekt z prawej strony sidestring_view
 
@@ -173,7 +176,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
@@ -210,7 +213,7 @@ Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma 
 
 Zobacz [operator &lt; ](#op_lt).
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> zakład&lt;&lt;
 
 Zapisuje string_view w strumieniu wyjściowym.
 
@@ -236,7 +239,7 @@ strumień wyjściowy, w którym jest zapisywane.
 
 Użyj tego operatora, aby wstawić zawartość string_view do strumienia wyjściowego, na przykład używając [std:: cout](iostream.md#cout).
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
@@ -273,7 +276,7 @@ Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma 
 
 Zobacz [operator &lt; ](#op_lt).
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 
@@ -310,7 +313,7 @@ Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma 
 
 Zobacz [operator &lt; ](#op_lt).
 
-## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>operator "" OHR (string_view literal)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a> operator "" OHR (string_view literal)
 
 Konstruuje string_view z literału ciągu. Wymaga przestrzeni nazw `std::literals::string_view_literals` .
 
@@ -327,6 +330,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view>](../standard-library/string-view.md)

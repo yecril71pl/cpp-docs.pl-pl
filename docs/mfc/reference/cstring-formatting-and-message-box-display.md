@@ -4,35 +4,35 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e346fe6ed5235f98f9e1206e92cb53c2fd5c929f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752675"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831128"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 
-Wiele funkcji są dostarczane do formatowania `CString` i analizowania obiektów. Te funkcje można używać zawsze, `CString` gdy trzeba manipulować obiektami, ale są one szczególnie przydatne do formatowania ciągów, które będą wyświetlane w tekście okna wiadomości.
+Wiele funkcji jest dostępnych do formatowania i analizowania `CString` obiektów. Tych funkcji można używać przy każdej operacji manipulowania `CString` obiektami, ale są one szczególnie przydatne w przypadku formatowania ciągów, które pojawią się w tekście okna komunikatu.
 
-Ta grupa funkcji zawiera również globalną procedurę wyświetlania okna komunikatu.
+Ta grupa funkcji zawiera również procedurę globalną do wyświetlania okna komunikatu.
 
 ### <a name="cstring-functions"></a>Funkcje CString
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AfxExtractSubString](#afxextractsubstring)|Wyodrębnia podciągi oddzielone pojedynczym znakiem z danego ciągu źródłowego.|
-|[AfxFormatString1](#afxformatstring1)|Zastępuje dany ciąg znaków formatu "%1" w ciągu zawartym w tabeli ciągów.|
+|[AfxFormatString1](#afxformatstring1)|Zastępuje dany ciąg znaków w formacie "%1" w ciągu zawartym w tabeli ciągów.|
 |[AfxFormatString2](#afxformatstring2)|Zastępuje dwa ciągi znaków formatu "%1" i "%2" w ciągu zawartym w tabeli ciągów.|
-|[Afxmessagebox](#afxmessagebox)|Wyświetla okno komunikatu.|
+|[AfxMessageBox](#afxmessagebox)|Wyświetla okno komunikatu.|
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxwin.h
+  **Nagłówek** afxwin. h
 
-## <a name="afxextractsubstring"></a><a name="afxextractsubstring"></a>AfxExtractSubString
+## <a name="afxextractsubstring"></a><a name="afxextractsubstring"></a> AfxExtractSubString
 
-Ta funkcja globalna może służyć do wyodrębniania podciągów z danego ciągu źródłowego.
+Ta funkcja globalna może służyć do wyodrębniania podciągu z danego ciągu źródłowego.
 
 ```
 BOOL AFXAPI AfxExtractSubString (
@@ -45,26 +45,26 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odwołanie do [CString](../../atl-mfc-shared/using-cstring.md) obiektu, który otrzyma pojedynczy podciąg.
+Odwołanie do obiektu [CString](../../atl-mfc-shared/using-cstring.md) , który będzie otrzymywał pojedynczy podciąg.
 
 *lpszFullString*<br/>
 Ciąg zawierający pełny tekst ciągu do wyodrębnienia.
 
-*ISubString (siekanie)*<br/>
-Indeks zerowy podciągów do wyodrębnienia z *lpszFullString*.
+*iSubString*<br/>
+Indeks podciągu liczony od zera, który ma zostać wyodrębniony z *lpszFullString*.
 
-*chSep (chSep)*<br/>
+*chSep*<br/>
 Znak separatora używany do rozdzielania podciągów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli funkcja pomyślnie wyodrębniła podciąg w podanym indeksie; w przeciwnym razie FALSE.
+PRAWDA, jeśli funkcja pomyślnie wyodrębni podciąg z podanego indeksu; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest przydatna do wyodrębniania wielu podciągów z ciągu źródłowego, gdy znany pojedynczy znak oddziela każdy podciąg. Ta funkcja wyszukuje od początku *parametru lpszFullString* za każdym razem, gdy jest wywoływana.
+Ta funkcja jest przydatna do wyodrębniania wielu podciągów z ciągu źródłowego, gdy znany pojedynczy znak oddziela każdy podciąg. Ta funkcja wyszukuje od początku parametru *lpszFullString* przy każdym wywołaniu.
 
-Ta funkcja zwróci FAŁSZ, jeśli *lpszFullString* jest ustawiona na NULL lub funkcja osiągnie koniec *lpszFullString* bez znajdowania wystąpień *iSubString*+1 określonego znaku separatora. Parametr *rString* nie zostanie zmodyfikowany z oryginalnej wartości, jeśli *lpszFullString* został ustawiony na NULL; w przeciwnym razie *rString* parametr jest ustawiony na pusty ciąg, jeśli nie można wyodrębnić podciąg dla określonego indeksu.
+Ta funkcja zwróci wartość FALSE, jeśli właściwość *lpszFullString* ma wartość null lub funkcja osiągnie koniec *LpszFullString* bez wyszukiwania *iSubString*+ 1 wystąpień określonego znaku separatora. Parametr *rString* nie zostanie zmodyfikowany z oryginalnej wartości, jeśli wartość *lpszFullString* została ustawiona na null; w przeciwnym razie parametr *rString* jest ustawiany na pusty ciąg, jeśli podciąg nie może zostać wyodrębniony dla określonego indeksu.
 
 ### <a name="example"></a>Przykład
 
@@ -72,11 +72,11 @@ Ta funkcja zwróci FAŁSZ, jeśli *lpszFullString* jest ustawiona na NULL lub fu
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxwin.h
+  **Nagłówek** afxwin. h
 
-## <a name="afxformatstring1"></a><a name="afxformatstring1"></a>AfxFormatString1
+## <a name="afxformatstring1"></a><a name="afxformatstring1"></a> AfxFormatString1
 
-Zastępuje ciąg wskazany przez *lpsz1* dla wszelkich wystąpień znaków "%1" w zasobie ciągu szablonu identyfikowanym przez *nIDS*.
+Zastępuje ciąg wskazany przez *lpsz1* dla wszystkich wystąpień znaków "%1" w zasobie ciągu szablonu identyfikowanego przez *nIDS*.
 
 ```cpp
 void  AfxFormatString1(
@@ -88,9 +88,9 @@ void  AfxFormatString1(
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odwołanie do `CString` obiektu, który będzie zawierał wynikowy ciąg po wykonaniu podstawienia.
+Odwołanie do `CString` obiektu, który będzie zawierać wynikowy ciąg po zakończeniu podstawiania.
 
-*nIDS (NIDS)*<br/>
+*nIDS*<br/>
 Identyfikator zasobu ciągu szablonu, na którym zostanie wykonane podstawienie.
 
 *lpsz1*<br/>
@@ -98,9 +98,9 @@ Ciąg, który zastąpi znaki formatu "%1" w ciągu szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nowo utworzony ciąg jest przechowywany w *rString*. Na przykład, jeśli ciąg w tabeli ciągów jest "Plik %1 nie znaleziono", a *lpsz1* jest równa "C:\MYFILE. TXT", a następnie *rString* będzie zawierać ciąg "Plik C:\MYFILE. Nie znaleziono TXT". Ta funkcja jest przydatna do formatowania ciągów wysyłanych do skrzynek wiadomości i innych okien.
+Nowo utworzony ciąg jest przechowywany w *rString*. Na przykład jeśli ciąg w tabeli ciągów ma wartość "plik %1 nie został znaleziony", a *lpsz1* jest równy "C:\MYFILE.TXT", wówczas *rString* będzie zawierać ciąg "nie znaleziono pliku C:\MYFILE.TXT". Ta funkcja jest przydatna w przypadku formatowania ciągów wysyłanych do pól komunikatów i innych okien.
 
-Jeśli znaki formatu "%1" pojawiają się w ciągu więcej niż jeden raz, zostanie dokonanych wiele podstawieńców.
+Jeśli znaki w formacie "%1" pojawiają się w ciągu więcej niż raz, zostanie wykonane wiele podstawiania.
 
 ### <a name="example"></a>Przykład
 
@@ -108,11 +108,11 @@ Jeśli znaki formatu "%1" pojawiają się w ciągu więcej niż jeden raz, zosta
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxwin.h
+  **Nagłówek** afxwin. h
 
-## <a name="afxformatstring2"></a><a name="afxformatstring2"></a>AfxFormatString2
+## <a name="afxformatstring2"></a><a name="afxformatstring2"></a> AfxFormatString2
 
-Zastępuje ciąg wskazany przez *lpsz1* dla wszelkich wystąpień znaków "%1", a ciąg wskazywał przez *lpsz2* dla wszelkich wystąpień znaków "%2", w zasobie ciągu szablonu identyfikowanym przez *nIDS*.
+Zastępuje ciąg wskazany przez *lpsz1* dla wszystkich wystąpień znaków "%1" i ciąg wskazany przez *lpsz2* dla wszystkich wystąpień znaków "%2" w zasobie ciągu szablonu identyfikowanego przez *nIDS*.
 
 ```cpp
 void AfxFormatString2(
@@ -125,10 +125,10 @@ void AfxFormatString2(
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odwołanie do `CString` tego, który będzie zawierać wynikowy ciąg po wykonaniu podstawienia.
+Odwołanie do elementu `CString` , który będzie zawierać wynikowy ciąg po zakończeniu podstawiania.
 
-*nIDS (NIDS)*<br/>
-Identyfikator tabeli ciągów ciągu ciągu ciągu, na którym zostanie wykonane podstawienie.
+*nIDS*<br/>
+Identyfikator tabeli ciągów dla ciągu szablonu, na którym zostanie wykonane podstawienie.
 
 *lpsz1*<br/>
 Ciąg, który zastąpi znaki formatu "%1" w ciągu szablonu.
@@ -138,9 +138,9 @@ Ciąg, który zastąpi znaki formatu "%2" w ciągu szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nowo utworzony ciąg jest przechowywany w *rString*. Jeśli na przykład ciąg w tabeli ciągów to "Nie znaleziono pliku %1 w katalogu %2", *lpsz1* wskazuje na "MYFILE. TXT", a *lpsz2* wskazuje na "C:\MYDIR", a następnie *rString* będzie zawierał ciąg "File MYFILE. Nie znaleziono txt w katalogu C:\MYDIR"
+Nowo utworzony ciąg jest przechowywany w *rString*. Na przykład jeśli ciąg w tabeli ciągów ma wartość "plik %1 nie został znaleziony w katalogu %2", *lpsz1* wskazuje "MYFILE.TXT" i *lpsz2* wskazuje na "C:\mydir", a następnie *rString* będzie zawierać ciąg "nie znaleziono pliku MYFILE.TXT w katalogu C:\mydir"
 
-Jeśli znaki formatu "%1" lub "%2" pojawiają się w ciągu więcej niż jeden raz, zostanie dokonanych wiele podstawień. Nie muszą być w porządku liczbowym.
+Jeśli znaki formatu "%1" lub "%2" pojawiają się w ciągu więcej niż raz, nastąpi przekroczenie wielu podstawiania. Nie muszą one być w kolejności liczbowej.
 
 ### <a name="example"></a>Przykład
 
@@ -148,9 +148,9 @@ Jeśli znaki formatu "%1" lub "%2" pojawiają się w ciągu więcej niż jeden r
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxwin.h
+  **Nagłówek** afxwin. h
 
-## <a name="afxmessagebox"></a><a name="afxmessagebox"></a>Afxmessagebox
+## <a name="afxmessagebox"></a><a name="afxmessagebox"></a> AfxMessageBox
 
 Wyświetla okno komunikatu na ekranie.
 
@@ -168,45 +168,45 @@ int AFXAPI AfxMessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText (tekst)*<br/>
-Wskazuje obiekt `CString` lub ciąg zakończony wartością null zawierający komunikat, który ma być wyświetlany w oknie komunikatu.
+*lpszText*<br/>
+Wskazuje `CString` obiekt lub ciąg zakończony znakiem null zawierający komunikat, który ma być wyświetlany w oknie komunikatu.
 
-*nTyp*<br/>
-Styl okna komunikatu. Zastosuj dowolny ze [stylów pola wiadomości](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) do tego pola.
+*Npowiadomienia*<br/>
+Styl okna komunikatu. Zastosuj wszystkie [Style okna komunikatu](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) do pola.
 
-*nIDHelp (pomoc nID)*<br/>
-Identyfikator kontekstu Pomocy dla wiadomości; 0 oznacza, że zostanie użyty domyślny kontekst Pomocy aplikacji.
+*nIDHelp*<br/>
+Identyfikator kontekstu pomocy dla wiadomości; 0 wskazuje, że domyślny kontekst pomocy aplikacji zostanie użyty.
 
-*nIDPrompt ( nIDPrompt )*<br/>
-Unikatowy identyfikator używany do odwoływania się do ciągu w tabeli ciągów.
+*nIDPrompt*<br/>
+Unikatowy identyfikator używany do odwoływania ciągu w tabeli ciągów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli nie ma wystarczającej ilości pamięci, aby wyświetlić okno komunikatu; w przeciwnym razie zwracana jest jedna z następujących wartości:
+Zero, jeśli nie ma wystarczającej ilości pamięci, aby wyświetlić okno komunikatu. w przeciwnym razie zwracana jest jedna z następujących wartości:
 
-- IDABORT Wybrano przycisk Przerwać.
+- IDABORT został wybrany przycisk Przerwij.
 
-- IDCANCEL Wybrano przycisk Anuluj.
+- IDCANCEL został wybrany przycisk Anuluj.
 
-- IDIGNORE Wybrano przycisk Ignoruj.
+- IDIGNORE został wybrany przycisk Ignoruj.
 
-- IDNO Wybrano przycisk Brak.
+- IDNO przycisk nie został wybrany.
 
-- IDOK Wybrano przycisk OK.
+- IDOK został wybrany przycisk OK.
 
-- IDRETRY Wybrano przycisk Ponów próbę.
+- IDRETRY wybrano przycisk Ponów próbę.
 
-- IDYES Wybrano przycisk Tak.
+- IDYES przycisk Tak.
 
-Jeśli w oknie komunikatu znajduje się przycisk Anuluj, wartość IDCANCEL zostanie zwrócona, jeśli zostanie naciśnięty klawisz ESC lub wybrano przycisk Anuluj. Jeśli w oknie komunikatu nie ma przycisku Anuluj, naciśnięcie klawisza ESC nie ma wpływu.
+Jeśli okno komunikatu ma przycisk Anuluj, wartość IDCANCEL będzie zwracana, jeśli klawisz ESC zostanie naciśnięty lub wybrano przycisk Anuluj. Jeśli okno komunikatu nie ma przycisku Anuluj, naciśnięcie klawisza ESC nie ma żadnego efektu.
 
-Funkcje [AfxFormatString1](#afxformatstring1) i [AfxFormatString2](#afxformatstring2) mogą być przydatne w formatowaniu tekstu wyświetlanego w oknie komunikatu.
+Funkcje [AfxFormatString1](#afxformatstring1) i [AfxFormatString2](#afxformatstring2) mogą być przydatne w formatowaniu tekstu, który pojawia się w oknie komunikatu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza forma tej przeciążonej funkcji wyświetla ciąg tekstowy wskazywał *lpszText* w polu komunikatu i używa *nIDHelp* do opisania kontekstu Pomocy. Kontekst Pomocy jest używany do przechodzenia do skojarzonego tematu Pomocy, gdy użytkownik naciśnie klawisz Pomocy (zazwyczaj F1).
+Pierwsza forma tej przeciążonej funkcji wyświetla ciąg tekstowy wskazywany przez *lpszText* w oknie komunikatu i używa *nIDHelp* do opisywania kontekstu pomocy. Kontekst pomocy służy do przechodzenia do skojarzonego tematu pomocy, gdy użytkownik naciśnie klawisz pomocy (zazwyczaj F1).
 
-Druga forma funkcji używa zasobu ciągu o identyfikatorze *nIDPrompt* do wyświetlania komunikatu w oknie komunikatu. Skojarzona strona Pomocy znajduje się za pomocą wartości *nIDHelp*. Jeśli używana jest wartość domyślna *nIDHelp* (-1), identyfikator zasobu ciągu *nIDPrompt*jest używany w kontekście Pomocy. Aby uzyskać więcej informacji na temat definiowania kontekstów Pomocy, zobacz [Uwaga techniczna 28](../../mfc/tn028-context-sensitive-help-support.md).
+Druga forma funkcji używa zasobu ciągu o IDENTYFIKATORze *nIDPrompt* , aby wyświetlić komunikat w oknie komunikatu. Skojarzona Strona pomocy jest dostępna za pomocą wartości *nIDHelp*. Jeśli wartość domyślna *nIDHelp* jest używana (-1), identyfikator zasobu ciągu, *nIDPrompt*, jest używany dla kontekstu pomocy. Aby uzyskać więcej informacji o definiowaniu kontekstów pomocy, zobacz [Uwagi techniczne 28](../../mfc/tn028-context-sensitive-help-support.md).
 
 ### <a name="example"></a>Przykład
 
@@ -214,5 +214,5 @@ Druga forma funkcji używa zasobu ciągu o identyfikatorze *nIDPrompt* do wyświ
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Klasa CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

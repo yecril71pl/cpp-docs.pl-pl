@@ -9,16 +9,16 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7448730501d6f3b50008966134f708ae99ddb5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267992"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830764"
 ---
 # <a name="signal-action-constants"></a>Stałe akcji sygnałów
 
-Akcję wykonywaną po odebraniu sygnału przerwania zależy od wartości `func`.
+Akcja podejmowana po odebraniu sygnału przerwania zależy od wartości `func` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,17 +28,17 @@ Akcję wykonywaną po odebraniu sygnału przerwania zależy od wartości `func`.
 
 ## <a name="remarks"></a>Uwagi
 
-`func` Argument musi mieć adres funkcji lub jeden stałych manifestu wymienionych poniżej i zdefiniowane w sygnału. H.
+`func`Argument musi być adresem funkcji lub jedną ze stałych manifestu wymienionych poniżej i zdefiniowanym w sygnale. C.
 
-|||
+|Stała|Opis|
 |-|-|
-| `SIG_DFL`  | Używa domyślnej system odpowiedzi. Jeśli program wywołujący używa strumienia we/wy, buforów utworzonych przez bibliotekę uruchomieniową nie zostały przesłane.  |
-| `SIG_IGN`  | Ignores interrupt signal. Ta wartość nigdy nie powinien być podawany dla `SIGFPE`, ponieważ stan zapisu zmiennoprzecinkowego procesu zostanie pozostawiony niezdefiniowane.  |
-| `SIG_SGE`  | Wskazuje, że wystąpił błąd w sygnale.  |
-| `SIG_ACK`  | Wskazuje, że otrzymano potwierdzenia.  |
-| `SIG_ERR`  | Typem zwracanym od sygnałów, co wskazuje na błąd wystąpił.  |
+| `SIG_DFL`  | Używa domyślnej odpowiedzi systemowej. Jeśli program wywołujący korzysta ze strumienia we/wy, bufory utworzone przez bibliotekę wykonawczą nie są opróżniane.  |
+| `SIG_IGN`  | Ignoruje sygnał przerwania. Ta wartość nigdy nie powinna być określona `SIGFPE` , ponieważ stan zmiennoprzecinkowy procesu jest niezdefiniowany.  |
+| `SIG_SGE`  | Wskazuje, że w sygnale Wystąpił błąd.  |
+| `SIG_ACK`  | Wskazuje, że Odebrano potwierdzenie.  |
+| `SIG_ERR`  | Wystąpił zwracany typ z sygnału wskazującego na błąd.  |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[signal](../c-runtime-library/reference/signal.md)<br/>
+[sygnał](../c-runtime-library/reference/signal.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

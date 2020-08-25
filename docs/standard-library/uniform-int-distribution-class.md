@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212051"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831414"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution — Klasa
 
@@ -78,10 +78,8 @@ Typ wyniku liczby całkowitej, wartość domyślna to **`int`** . Aby zapoznać 
 
 Szablon klasy opisuje dystrybucję obejmującą włącznie, która tworzy wartości typu całkowitego określonego przez użytkownika z dystrybucją, tak aby każda wartość była równie prawdopodobna. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 Element członkowski właściwości `a()` zwraca aktualnie przechowywaną minimalną granicę dystrybucji, podczas gdy `b()` zwraca aktualnie przechowywaną granicę maksymalną. Dla tej klasy dystrybucji te wartości minimalne i maksymalne są takie same jak te, które są zwracane przez funkcje wspólne właściwości `min()` i `max()` .
 
@@ -179,7 +177,7 @@ Distribution for 200 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:: uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a> uniform_int_distribution:: uniform_int_distribution
 
 Konstruuje dystrybucję.
 
@@ -208,7 +206,7 @@ Pierwszy Konstruktor konstruuje obiekt, *którego przechowywana wartość utrzym
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p aram_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a> uniform_int_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -242,6 +240,6 @@ Obiekt, który `param_type` ma zostać porównany.
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

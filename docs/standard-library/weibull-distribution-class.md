@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 73b307fe0231b549a41accd48bba2a6f017486e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224516"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831700"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution — Klasa
 
@@ -77,10 +77,8 @@ Typ wyniku zmiennoprzecinkowego, wartość domyślna to **`double`** . Aby zapoz
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Weibulla. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
+[weibull_distribution](#weibull_distribution)\
+[param_type](#param_type)|
 
 Właściwość działa `a()` i `b()` zwraca odpowiednie wartości dla przechowywanych parametrów dystrybucji *a* i *b*.
 
@@ -213,7 +211,7 @@ Distribution for 10 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution:: weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a> weibull_distribution:: weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -233,13 +231,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < a` lub`0.0 < b`
+**Warunek wstępny:** `0.0 < a` lub `0.0 < b`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `a` wartość przechowuje wartość *a* i której przechowywana `b` wartość przechowuje wartość *b*.
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::p aram_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a> weibull_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -268,10 +266,10 @@ Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < a` lub`0.0 < b`
+**Warunek wstępny:** `0.0 < a` lub `0.0 < b`
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

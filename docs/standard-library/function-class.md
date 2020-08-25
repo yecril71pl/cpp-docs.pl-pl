@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182502"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831466"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -91,13 +91,13 @@ Szablon klasy jest otoką wywołania, której sygnatura wywołania to `Ret(T1, T
 
 Niektóre funkcje członkowskie przyjmują operand, który nazywa żądany obiekt docelowy. Możesz określić taki operand na kilka sposobów:
 
-`fn`--Obiekt możliwy do `fn` wywołania; po wywołaniu `function` obiektu posiada kopię`fn`
+`fn` --Obiekt możliwy do `fn` wywołania; po wywołaniu `function` obiektu posiada kopię `fn`
 
-`fnref`--możliwy do wywołania obiekt nazwany przez `fnref.get()` ; po wywołaniu `function` obiektu jest odwołanie do`fnref.get()`
+`fnref` --możliwy do wywołania obiekt nazwany przez `fnref.get()` ; po wywołaniu `function` obiektu jest odwołanie do `fnref.get()`
 
-`right`--Obiekt możliwy do odłożenia (jeśli istnieje), który jest przechowywany przez `function` obiekt`right`
+`right` --Obiekt możliwy do odłożenia (jeśli istnieje), który jest przechowywany przez `function` obiekt `right`
 
-`npc`--pusty wskaźnik; Po wywołaniu `function` obiekt jest pusty
+`npc` --pusty wskaźnik; Po wywołaniu `function` obiekt jest pusty
 
 We wszystkich przypadkach, `INVOKE(f, t1, t2, ..., tN)` gdzie `f` jest obiektem, który jest możliwy do `t1, t2, ..., tN` nalvalues `T1, T2, ..., TN` , musi być poprawnie sformułowany i, jeśli `Ret` nie jest typem void, można przekonwertować na `Ret` .
 
@@ -107,19 +107,19 @@ Pusty obiekt nie posiada możliwego `function` do przeprowadzenia obiektu ani od
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[funkcyjn](#function)|Konstruuje otokę, która jest pusta lub przechowuje możliwy do przechowania obiekt dowolnego typu ze stałą sygnaturą.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[result_type](#result_type)|Zwracany typ przechowywanego obiektu, który jest wywoływany.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[przypisać](#assign)|Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.|
 |[wymiany](#swap)|Zamień dwa obiekty, które są wywoływane.|
@@ -128,13 +128,13 @@ Pusty obiekt nie posiada możliwego `function` do przeprowadzenia obiektu ani od
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[nieokreślony operator](#op_unspecified)|Testuje, czy istnieje przechowywany możliwy do przeprowadzenia obiekt.|
 |[operator ()](#op_call)|Wywołuje możliwy do wywołania obiekt.|
 |[operator =](#op_eq)|Zastępuje przechowywany obiekt, który jest wywoływany.|
 
-## <a name="assign"></a><a name="assign"></a>ponownie
+## <a name="assign"></a><a name="assign"></a> ponownie
 
 Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>nieokreślony operator
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> nieokreślony operator
 
 Testuje, czy istnieje przechowywany możliwy do przeprowadzenia obiekt.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>operator ()
+## <a name="operator"></a><a name="op_call"></a> operator ()
 
 Wywołuje możliwy do wywołania obiekt.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Zastępuje przechowywany obiekt, który jest wywoływany.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Zwracany typ przechowywanego obiektu, który jest wywoływany.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamień dwa obiekty, które są wywoływane.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>obiektów
+## <a name="target"></a><a name="target"></a> obiektów
 
 Testuje, czy przechowywany wywoływany obiekt jest wywoływany jako określony.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 Pobiera informacje o typie dla możliwego do odzyskania obiektu.
 

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-ms.openlocfilehash: d559a68e8fede6e0b6dd40505a041b14da703681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cfc1f933179e043f464a69f3ac5cf4ca25763e0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343085"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830829"
 ---
-# <a name="locking-constants"></a>_locking — Stałe
+# <a name="_locking-constants"></a>_locking — Stałe
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ ms.locfileid: "62343085"
 
 ## <a name="remarks"></a>Uwagi
 
-*Tryb* argumentu w wywołaniu `_locking` funkcja określa blokowania Akcja do wykonania.
+Argument *mode* w wywołaniu `_locking` funkcji określa akcję blokowania, która ma zostać wykonana.
 
-*Tryb* argument musi być jedną z następujących stałych manifestu.
+Argument *mode* musi być jednym z następujących stałych manifestu.
 
-|||
+|Wartość|Opis|
 |-|-|
-| `_LK_LOCK`  | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, funkcja próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, funkcja zwraca błąd.  |
-| `_LK_RLCK`  | Taki sam jak `_LK_LOCK`.  |
-|`_LK_NBLCK`  | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, funkcja zwraca błąd.  |
-| `_LK_NBRLCK`  | Taki sam jak `_LK_NBLCK`.  |
-| `_LK_UNLCK`  | Odblokowuje określonych bajtów. (Bajtów musi mieć wcześniej zablokowane.)  |
+| `_LK_LOCK`  | Blokuje określone bajty. Jeśli bajty nie mogą być zablokowane, funkcja próbuje ponownie po 1 sekundzie. Jeśli po 10 próbach nie będzie można zablokować bajtów, funkcja zwróci błąd.  |
+| `_LK_RLCK`  | Analogicznie jak `_LK_LOCK` .  |
+|`_LK_NBLCK`  | Blokuje określone bajty. Jeśli bajty nie mogą być zablokowane, funkcja zwraca błąd.  |
+| `_LK_NBRLCK`  | Analogicznie jak `_LK_NBLCK` .  |
+| `_LK_UNLCK`  | Odblokowuje określone bajty. (Bajty muszą być wcześniej zablokowane).  |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_locking](../c-runtime-library/reference/locking.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

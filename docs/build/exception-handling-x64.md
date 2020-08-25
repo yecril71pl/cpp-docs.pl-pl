@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835054"
 ---
 # <a name="x64-exception-handling"></a>Obsługa wyjątku x64
 
@@ -24,7 +24,7 @@ Do obsługi wyjątków i obsługi debugowania są wymagane kilka struktur danych
 
 Obsługa wyjątków oparta na tabelach wymaga wpisu tabeli dla wszystkich funkcji, które przydzielą przestrzeń stosu lub wywołują inną funkcję (na przykład funkcje niebędące liśćmi). Wpisy tabeli funkcji mają format:
 
-|||
+|Rozmiar|Wartość|
 |-|-|
 |ULONG|Adres początkowy funkcji|
 |ULONG|Adres końcowy funkcji|
@@ -36,7 +36,7 @@ Struktura RUNTIME_FUNCTION musi być wyrównana do wartości DWORD w pamięci. W
 
 Struktura informacji o danych unwind służy do rejestrowania efektów funkcji na wskaźniku stosu i lokalizacji nietrwałych rejestrów na stosie:
 
-|||
+|Rozmiar|Wartość|
 |-|-|
 |UBYTE: 3|Wersja|
 |UBYTE: 5|Flagi|
@@ -49,14 +49,14 @@ Struktura informacji o danych unwind służy do rejestrowania efektów funkcji n
 
 (1) procedura obsługi wyjątków
 
-|||
+|Rozmiar|Wartość|
 |-|-|
 |ULONG|Adres programu obsługi wyjątków|
 |zmienna|Dane obsługi specyficzne dla języka (opcjonalnie)|
 
 (2) powiązane z łańcuchem informacje o rozwinięcia
 
-|||
+|Rozmiar|Wartość|
 |-|-|
 |ULONG|Adres początkowy funkcji|
 |ULONG|Adres końcowy funkcji|
@@ -114,7 +114,7 @@ Struktura UNWIND_INFO musi być wyrównana do wartości DWORD w pamięci. Oto co
 
 Tablica kodu unwind służy do rejestrowania sekwencji operacji w prologu, która ma wpływ na rejestry nietrwałe i żądanie RSP. Każdy element kodu ma ten format:
 
-|||
+|Rozmiar|Wartość|
 |-|-|
 |UBYTE|Przesunięcie w prologu|
 |UBYTE: 4|Kod operacji unwind|
@@ -136,15 +136,15 @@ W przypadku kodów `UWOP_SAVE_XMM128` i `UWOP_SAVE_XMM128_FAR` przesunięcie jes
 
 Kod operacji unwindy jest jedną z następujących wartości:
 
-- `UWOP_PUSH_NONVOL`(0) 1 węzeł
+- `UWOP_PUSH_NONVOL` (0) 1 węzeł
 
   Wypchnij nietrwały rejestr liczb całkowitych, co zmniejsza żądanie RSP przez 8. Informacje o operacji są numerem rejestru. Ze względu na ograniczenia dotyczące epilogs, `UWOP_PUSH_NONVOL` kody unwind muszą znajdować się najpierw w prologu i odpowiadające mu, ostatnio w tablicy kodu unwind. To względne porządkowanie ma zastosowanie do wszystkich innych kodów operacji unwind z wyjątkiem `UWOP_PUSH_MACHFRAME` .
 
-- `UWOP_ALLOC_LARGE`(1) 2 lub 3 węzły
+- `UWOP_ALLOC_LARGE` (1) 2 lub 3 węzły
 
   Przydziel obszar o dużym rozmiarze na stosie. Istnieją dwa formularze. Jeśli informacje o operacji są równe 0, rozmiar alokacji podzielony przez 8 jest rejestrowany w następnym miejscu, co pozwoli na alokację do 512K-8. Jeśli informacje o operacji są równe 1, wówczas rozmiar nieskalowanego przydziału jest rejestrowany w następnych dwóch gniazdach w formacie little-endian, co pozwala na przydzielanie do 4 GB-8.
 
-- `UWOP_ALLOC_SMALL`(2) 1 węzeł
+- `UWOP_ALLOC_SMALL` (2) 1 węzeł
 
   Przydziel obszar o małym rozmiarze na stosie. Rozmiar alokacji to pole informacji o operacji \* 8 + 8, które umożliwia przydzielanie od 8 do 128 bajtów.
 
@@ -156,31 +156,31 @@ Kod operacji unwindy jest jedną z następujących wartości:
   |136 do 512K – 8 bajtów|`UWOP_ALLOC_LARGE`, informacje o operacji = 0|
   |512K do 4G-8 bajtów|`UWOP_ALLOC_LARGE`, informacje o operacji = 1|
 
-- `UWOP_SET_FPREG`(3) 1 węzeł
+- `UWOP_SET_FPREG` (3) 1 węzeł
 
   Ustanów Rejestr wskaźnika ramki przez ustawienie w rejestrze określonego przesunięcia bieżącej wartości RSP. Przesunięcie jest równe polu Przesunięcie rejestru ramki (skalowane) w UNWIND_INFO \* 16, umożliwiając przesunięcie od 0 do 240. Użycie przesunięcia umożliwia ustanowienie wskaźnika ramki, który wskazuje na środek stałego przydziału stosu, co pomaga w rozwiązaniu kodu przez umożliwienie większej liczbie dostępu do korzystania z krótkich form instrukcji. Pole informacji o operacji jest zarezerwowane i nie powinno być używane.
 
-- `UWOP_SAVE_NONVOL`(4) 2 węzły
+- `UWOP_SAVE_NONVOL` (4) 2 węzły
 
   Zapisz nielotną liczbę całkowitą na stosie przy użyciu usługi MOV zamiast WYPYCHANia. Ten kod jest używany głównie do *zmniejszania liczby operacji zawijania*, w którym rejestr nietrwały jest zapisywany na stosie w pozycji, która została wcześniej przyznana. Informacje o operacji są numerem rejestru. Przesunięcie stosu skalowanego do 8 jest rejestrowane w następnym gnieździe kodu operacji unwind, zgodnie z opisem w powyższej uwadze.
 
-- `UWOP_SAVE_NONVOL_FAR`(5) 3 węzły
+- `UWOP_SAVE_NONVOL_FAR` (5) 3 węzły
 
   Zapisz nielotną liczbę całkowitą na stosie z długim przesunięciem, używając w tym celu funkcji MOV zamiast WYPYCHANia. Ten kod jest używany głównie do *zmniejszania liczby operacji zawijania*, w którym rejestr nietrwały jest zapisywany na stosie w pozycji, która została wcześniej przyznana. Informacje o operacji są numerem rejestru. Przesunięcie stosu nieskalowanego jest rejestrowane w następnych dwóch gniazdach kodu operacji unwind, zgodnie z opisem w powyższej uwadze.
 
-- `UWOP_SAVE_XMM128`(8) 2 węzły
+- `UWOP_SAVE_XMM128` (8) 2 węzły
 
   Zapisz wszystkie 128 bity nietrwałego rejestru XMM na stosie. Informacje o operacji są numerem rejestru. Przesunięcie stosu skalowane przez 16 jest rejestrowane w następnym gnieździe.
 
-- `UWOP_SAVE_XMM128_FAR`(9) 3 węzły
+- `UWOP_SAVE_XMM128_FAR` (9) 3 węzły
 
   Zapisz wszystkie 128 bity nietrwałego rejestru XMM na stosie z długim przesunięciem. Informacje o operacji są numerem rejestru. Przesunięcie stosu nieskalowanego jest rejestrowane w następnych dwóch gniazdach.
 
-- `UWOP_PUSH_MACHFRAME`(10) 1 węzeł
+- `UWOP_PUSH_MACHFRAME` (10) 1 węzeł
 
   Wypchnij ramkę maszyny.  Ten kod unwind służy do rejestrowania efektu przerwania lub wyjątku sprzętowego. Istnieją dwa formularze. Jeśli informacje o operacji są równe 0, jedna z tych ramek została wypchnięcia na stosie:
 
-  |||
+  |Lokalizacja|Wartość|
   |-|-|
   |Żądanie RSP + 32|SS|
   |Żądanie RSP + 24|Stary żądanie RSP|
@@ -190,7 +190,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
 
   Jeśli informacje o operacji są równe 1, jedna z tych ramek została wypchnięte:
 
-  |||
+  |Lokalizacja|Wartość|
   |-|-|
   |Żądanie RSP + 40|SS|
   |Żądanie RSP + 32|Stary żądanie RSP|
@@ -199,7 +199,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
   |Żądanie RSP + 8|RPO|
   |RSP|Kod błędu|
 
-  Ten kod unwind zawsze pojawia się w postaci fikcyjnego prologu, który nigdy nie jest wykonywany, ale zamiast tego występuje przed rzeczywistym punktem wejścia procedury przerwania i istnieje tylko w celu zasymulowania wypychania ramki maszyny. `UWOP_PUSH_MACHFRAME`rejestruje tę symulację, co oznacza, że maszyna ma koncepcyjne działanie:
+  Ten kod unwind zawsze pojawia się w postaci fikcyjnego prologu, który nigdy nie jest wykonywany, ale zamiast tego występuje przed rzeczywistym punktem wejścia procedury przerwania i istnieje tylko w celu zasymulowania wypychania ramki maszyny. `UWOP_PUSH_MACHFRAME` rejestruje tę symulację, co oznacza, że maszyna ma koncepcyjne działanie:
 
   1. Adres zwrotny protokołu RIP z góry stosu do *katalogu Temp*
   
@@ -221,7 +221,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
 
 Znaczenie informacji o operacji BITS zależy od kodu operacji. Aby zakodować rejestr ogólnego przeznaczenia (Integer), to mapowanie jest używane:
 
-|||
+|Bit|Zarejestruj|
 |-|-|
 |0|RAX|
 |1|RCX|
@@ -498,6 +498,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje kodowania x64](../build/x64-software-conventions.md)

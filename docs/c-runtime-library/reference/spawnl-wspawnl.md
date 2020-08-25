@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 3ee169aac300aab6aabeeb05138d63cdbcabb580
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4b51faae4ba6f371f712e4c39374ae9717c90bed
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834378"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl, _wspawnl
 
@@ -81,10 +81,10 @@ Lista wskaźników do argumentów. Argument *arg0* jest zwykle wskaźnikiem do *
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana z synchronicznej **_spawnl** lub **_wspawnl** ( **_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnl** lub **_wspawnl** ( **_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany jawnie wywoła procedurę **Exit** z niezerowym argumentem. Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
+Wartość zwracana z synchronicznej **_spawnl** lub **_wspawnl** (**_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnl** lub **_wspawnl** (**_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany jawnie wywoła procedurę **Exit** z niezerowym argumentem. Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
 
-|||
-|-|-|
+| Wartość | Opis |
+|--|--|
 | **E2BIG** | Lista argumentów przekracza 1024 bajtów. |
 | **EINVAL** | argument *trybu* jest nieprawidłowy. |
 | **ENOENT** | Nie znaleziono pliku lub ścieżki. |
@@ -103,8 +103,8 @@ Każda z tych funkcji tworzy i uruchamia nowy proces, przekazując każdy argume
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnl**|\<Process. h >|
-|**_wspawnl**|\<stdio. h > lub \<WCHAR. h >|
+|**_spawnl**|\<process.h>|
+|**_wspawnl**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,11 +114,11 @@ Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wsp
 
 ## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

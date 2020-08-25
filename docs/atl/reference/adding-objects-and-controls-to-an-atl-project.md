@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075309"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832454"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -25,11 +25,15 @@ ms.locfileid: "80075309"
 
 Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do projektów opartych na ATL lub MFC. Dla każdego obiektu COM lub dodawanej kontrolki Kreator generuje pliki. cpp i. h, a także plik. RGS na potrzeby obsługi rejestru opartego na skrypcie. Następujące kreatory kodu ATL są dostępne w programie Visual Studio:
 
-||||
-|-|-|-|
-|[Prosty obiekt ATL](../../atl/reference/atl-simple-object-wizard.md)|[Okno dialogowe ATL](../../atl/reference/atl-dialog-wizard.md)|[Formant ATL](../../atl/reference/atl-control-wizard.md)|
-|[Strona właściwości ATL](../../atl/reference/atl-property-page-wizard.md)|[Składnik strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Klient ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[Dodawanie obsługi ATL do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Kreator składników ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Dostawca OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
+- [Prosty obiekt ATL](../../atl/reference/atl-simple-object-wizard.md)
+- [Okno dialogowe ATL](../../atl/reference/atl-dialog-wizard.md)
+- [Formant ATL](../../atl/reference/atl-control-wizard.md)
+- [Strona właściwości ATL](../../atl/reference/atl-property-page-wizard.md)
+- [Składnik strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)
+- [Klient ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)
+- [Dodawanie obsługi ATL do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)
+- [Kreator składników ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [Dostawca OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)
 
 > [!NOTE]
 > Przed dodaniem obiektu ATL do projektu, należy przejrzeć szczegóły i wymagania dotyczące obiektu w powiązanych tematach pomocy.
@@ -40,7 +44,7 @@ Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do pr
 
    Pojawi się okno dialogowe [Dodaj klasę](../../ide/add-class-dialog-box.md) .
 
-1. Po wybraniu folderu **ATL** w okienku **Kategorie** wybierz obiekt do wstawienia z okienka **Szablony** . Kliknij przycisk **Open** (Otwórz). Zostanie wyświetlony Kreator kodu dla wybranego obiektu.
+1. Po wybraniu folderu **ATL** w okienku **Kategorie** wybierz obiekt do wstawienia z okienka **Szablony** . Kliknij przycisk **Otwórz**. Zostanie wyświetlony Kreator kodu dla wybranego obiektu.
 
    > [!NOTE]
    > Jeśli chcesz dodać obiekt ATL do projektu MFC, musisz dodać obsługę ATL do istniejącego projektu. Można to zrobić, postępując zgodnie z instrukcjami w temacie [Dodawanie obsługi ATL do projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
@@ -50,7 +54,7 @@ Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do pr
 ## <a name="see-also"></a>Zobacz też
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[C++typy projektów w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Typy projektów C++ w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[Podstawowe informacje o obiektach COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programowanie za pomocą kodu ATL i języka uruchomieniowego C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)

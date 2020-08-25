@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222566"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831480"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any — Klasa
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|Konstruuje `condition_variable_any` obiekt.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable_any` obiekt.|
 |[notify_one](#notify_one)|Odblokowuje jeden z wątków, które oczekują na `condition_variable_any` obiekt.|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.|
 |[wait_until](#wait_until)|Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 Konstruuje `condition_variable_any` obiekt.
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 Jeśli nie jest dostępna wystarczająca ilość pamięci, Konstruktor zgłasza obiekt [system_error](../standard-library/system-error-class.md) , który ma `not_enough_memory` Kod błędu. Jeśli nie można utworzyć obiektu, ponieważ jakiś inny zasób nie jest dostępny, Konstruktor zgłasza `system_error` obiekt, który ma `resource_unavailable_try_again` Kod błędu.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Odblokowuje wszystkie wątki, które oczekują na `condition_variable_any` obiekt.
 
@@ -73,7 +73,7 @@ Odblokowuje wszystkie wątki, które oczekują na `condition_variable_any` obiek
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Odblokowuje jeden z wątków, które oczekują na `condition_variable_any` obiekt.
 
@@ -81,7 +81,7 @@ Odblokowuje jeden z wątków, które oczekują na `condition_variable_any` obiek
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Blokuje wątek.
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.
 

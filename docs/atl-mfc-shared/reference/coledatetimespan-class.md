@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: a3a59971ec57378aee2ec4f65f221b96c46300b5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 746cfdce3265dff7e5b20a5135aa026aca9facdf
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219108"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832103"
 ---
 # <a name="coledatetimespan-class"></a>Klasa COleDateTimeSpan
 
@@ -70,7 +70,7 @@ class COleDateTimeSpan
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator +,-](#operator_add_-)|Dodawanie, odejmowanie i zmiana znaku dla `COleDateTimeSpan` wartości.|
 |[operator + =,-=](#operator_add_eq_-_eq)|Dodaj i Odejmij `COleDateTimeSpan` wartość z tej `COleDateTimeSpan` wartości.|
@@ -87,11 +87,11 @@ class COleDateTimeSpan
 
 ## <a name="remarks"></a>Uwagi
 
-`COleDateTimeSpan`nie ma klasy bazowej.
+`COleDateTimeSpan` nie ma klasy bazowej.
 
 `COleDateTimeSpan`Czas w dniach.
 
-`COleDateTimeSpan`jest używany z klasą pomocnika [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime`hermetyzuje `DATE` Typ danych automatyzacji OLE. `COleDateTime`reprezentuje bezwzględne wartości czasu. Wszystkie `COleDateTime` obliczenia obejmują `COleDateTimeSpan` wartości. Relacja między tymi klasami jest analogiczna do jednego z [CTime](../../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
+`COleDateTimeSpan` jest używany z klasą pomocnika [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` hermetyzuje `DATE` Typ danych automatyzacji OLE. `COleDateTime` reprezentuje bezwzględne wartości czasu. Wszystkie `COleDateTime` obliczenia obejmują `COleDateTimeSpan` wartości. Relacja między tymi klasami jest analogiczna do jednego z [CTime](../../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
 
 Aby uzyskać więcej informacji na `COleDateTime` temat `COleDateTimeSpan` klas i, zobacz artykuł [Data i godzina: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
 
@@ -99,7 +99,7 @@ Aby uzyskać więcej informacji na `COleDateTime` temat `COleDateTimeSpan` klas 
 
 **Nagłówek:** ATLComTime. h
 
-## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>Operatory relacyjne COleDateTimeSpan
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a> Operatory relacyjne COleDateTimeSpan
 
 Operatory porównania.
 
@@ -132,7 +132,7 @@ Te operatory porównują dwie wartości typu Data/godzina i zwracają wartość 
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a> COleDateTimeSpan::COleDateTimeSpan
 
 Konstruuje `COleDateTimeSpan` obiekt.
 
@@ -168,7 +168,7 @@ Aby uzyskać więcej informacji na temat granic dla `COleDateTimeSpan` wartości
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-## <a name="coledatetimespanformat"></a><a name="format"></a>COleDateTimeSpan:: format
+## <a name="coledatetimespanformat"></a><a name="format"></a> COleDateTimeSpan:: format
 
 Generuje sformatowaną reprezentację obiektu w postaci ciągu `COleDateTimeSpan` .
 
@@ -217,7 +217,7 @@ Ten formularz służy do formatowania wartości przy użyciu ciągu formatu, kt�
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-## <a name="coledatetimespangetdays"></a><a name="getdays"></a>COleDateTimeSpan:: GetDays
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a> COleDateTimeSpan:: GetDays
 
 Pobiera część dnia z tej wartości daty/godziny.
 
@@ -253,7 +253,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-## <a name="coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan:: getgodz.
+## <a name="coledatetimespangethours"></a><a name="gethours"></a> COleDateTimeSpan:: getgodz.
 
 Pobiera część godziny z tej wartości daty/godziny.
 
@@ -289,7 +289,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan:: getmin
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a> COleDateTimeSpan:: getmin
 
 Pobiera część minuty tej wartości daty/godziny.
 
@@ -325,7 +325,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>COleDateTimeSpan:: getSeconds
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a> COleDateTimeSpan:: getSeconds
 
 Pobiera drugą część tej wartości daty/zakresu czasu.
 
@@ -361,7 +361,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>COleDateTimeSpan:: GetStatus
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a> COleDateTimeSpan:: GetStatus
 
 Pobiera stan (ważność) tego `COleDateTimeSpan` obiektu.
 
@@ -387,11 +387,11 @@ enum DateTimeSpanStatus{
 
 Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
-- `COleDateTimeSpan::valid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
+- `COleDateTimeSpan::valid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
 
-- `COleDateTimeSpan::invalid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
+- `COleDateTimeSpan::invalid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
 
-- `COleDateTimeSpan::null`Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
+- `COleDateTimeSpan::null` Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
 
 Stan `COleDateTimeSpan` obiektu jest nieprawidłowy w następujących przypadkach:
 
@@ -405,7 +405,7 @@ Aby uzyskać więcej informacji o operacjach, które mogą ustawić stan na niep
 
 Aby uzyskać więcej informacji na temat granic dla `COleDateTimeSpan` wartości, zobacz artykuł [Data i godzina: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a> COleDateTimeSpan::GetTotalDays
 
 Pobiera wartość daty/zakresu czasu wyrażoną w dniach.
 
@@ -441,7 +441,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a> COleDateTimeSpan::GetTotalHours
 
 Pobiera tę wartość daty/zakresu czasu wyrażoną w godzinach.
 
@@ -477,7 +477,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 Zobacz przykład dla [GetTotalDays](#gettotaldays).
 
-## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a> COleDateTimeSpan::GetTotalMinutes
 
 Pobiera wartość daty/zakresu czasu wyrażoną w minutach.
 
@@ -513,7 +513,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 Zobacz przykład dla [GetTotalDays](#gettotaldays).
 
-## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a> COleDateTimeSpan::GetTotalSeconds
 
 Pobiera wartość daty/zakresu czasu wyrażoną w sekundach.
 
@@ -549,7 +549,7 @@ W przypadku innych funkcji, które wysyłają zapytania do wartości `COleDateTi
 
 Zobacz przykład dla [GetTotalDays](#gettotaldays).
 
-## <a name="coledatetimespanm_span"></a><a name="m_span"></a>COleDateTimeSpan:: m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a> COleDateTimeSpan:: m_span
 
 Wartość bazowa **`double`** dla tego `COleDateTime` obiektu.
 
@@ -564,7 +564,7 @@ Ta wartość wyraża zakres daty/godziny w dniach.
 > [!CAUTION]
 > Zmiana wartości w **`double`** elemencie członkowskim danych spowoduje zmianę wartości tego `COleDateTimeSpan` obiektu. Nie powoduje zmiany stanu tego `COleDateTimeSpan` obiektu.
 
-## <a name="coledatetimespanm_status"></a><a name="m_status"></a>COleDateTimeSpan:: m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a> COleDateTimeSpan:: m_status
 
 Typ tego elementu członkowskiego danych jest typem wyliczanym `DateTimeSpanStatus` , który jest zdefiniowany w `COleDateTimeSpan` klasie.
 
@@ -584,11 +584,11 @@ enum DateTimeSpanStatus{
 
 Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
-- `COleDateTimeSpan::valid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
+- `COleDateTimeSpan::valid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
 
-- `COleDateTimeSpan::invalid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
+- `COleDateTimeSpan::invalid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
 
-- `COleDateTimeSpan::null`Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
+- `COleDateTimeSpan::null` Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
 
 Stan `COleDateTimeSpan` obiektu jest nieprawidłowy w następujących przypadkach:
 
@@ -605,7 +605,7 @@ Aby uzyskać więcej informacji o operacjach, które mogą ustawić stan na niep
 
 Aby uzyskać więcej informacji na temat granic dla `COleDateTimeSpan` wartości, zobacz artykuł [Data i godzina: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDateTimeSpan:: operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a> COleDateTimeSpan:: operator =
 
 Kopiuje `COleDateTimeSpan` wartość.
 
@@ -617,7 +617,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 Ten przeciążony operator przypisania kopiuje wartość Data/czas zakresu źródłowego do tego `COleDateTimeSpan` obiektu.
 
-## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan:: operator +,-
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a> COleDateTimeSpan:: operator +,-
 
 Dodawanie, odejmowanie i zmiana znaku dla `COleDateTimeSpan` wartości.
 
@@ -641,7 +641,7 @@ Aby uzyskać więcej informacji na temat prawidłowych i nieprawidłowych warto�
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTimeSpan:: operator + =,-=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a> COleDateTimeSpan:: operator + =,-=
 
 Dodaj i Odejmij `COleDateTimeSpan` wartość z tej `COleDateTimeSpan` wartości.
 
@@ -662,7 +662,7 @@ Aby uzyskać więcej informacji na temat prawidłowych i nieprawidłowych warto�
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDateTimeSpan:: operator Double
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a> COleDateTimeSpan:: operator Double
 
 Konwertuje tę `COleDateTimeSpan` wartość na **`double`** .
 
@@ -674,7 +674,7 @@ operator double() const throw();
 
 Ten operator zwraca wartość tej `COleDateTimeSpan` wartości jako zmiennoprzecinkową liczbę dni.
 
-## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a> COleDateTimeSpan::SetDateTimeSpan
 
 Ustawia wartość tej wartości daty/godziny.
 
@@ -711,7 +711,7 @@ Dla funkcji, które wysyłają zapytania do wartości `COleDateTimeSpan` obiektu
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>COleDateTimeSpan:: SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a> COleDateTimeSpan:: SetStatus
 
 Ustawia stan (ważność) tego `COleDateTimeSpan` obiektu.
 
@@ -738,11 +738,11 @@ enum DateTimeSpanStatus{
 
 Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
-- `COleDateTimeSpan::valid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
+- `COleDateTimeSpan::valid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest prawidłowy.
 
-- `COleDateTimeSpan::invalid`Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
+- `COleDateTimeSpan::invalid` Wskazuje, że ten `COleDateTimeSpan` obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
 
-- `COleDateTimeSpan::null`Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
+- `COleDateTimeSpan::null` Wskazuje, że ten `COleDateTimeSpan` obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez wartości", w przeciwieństwie do języka C++ o wartości NULL).
 
    > [!CAUTION]
    > Ta funkcja jest dla zaawansowanych sytuacji programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. Będzie najczęściej używany do ustawienia stanu na **wartość null** lub **nieprawidłowy**. Należy zauważyć, że operator przypisania ([operator =](#operator_eq)) i [SetDateTimeSpan](#setdatetimespan) ustawia stan obiektu na podstawie wartości źródłowych.
@@ -751,7 +751,7 @@ Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [Klasa CTime](../../atl-mfc-shared/reference/ctime-class.md)<br/>

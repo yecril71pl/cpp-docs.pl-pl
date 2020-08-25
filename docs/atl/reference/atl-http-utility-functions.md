@@ -2,18 +2,18 @@
 title: Funkcje narzędziowe HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168608"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833988"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje narzędziowe HTTP ATL
 
 Te funkcje obsługują manipulowanie adresami URL.
 
-|||
+|Funkcja|Opis|
 |-|-|
 |[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes adres URL, który obejmuje konwertowanie niebezpiecznych znaków i spacji na sekwencje unikowe.|
 |[AtlCombineUrl](#atlcombineurl)|Łączy podstawowy adres URL i względny adres URL w postaci pojedynczego, kanonicznego adresu URL.|
@@ -28,7 +28,7 @@ Te funkcje obsługują manipulowanie adresami URL.
 
 **Nagłówek:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 
 Wywołaj tę funkcję, aby nadać postać kanoniczną adresowi URL, co obejmuje konwersję niebezpiecznych znaków i spacji na sekwencje unikowe.
 
@@ -76,7 +76,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Zachowuje się jak w przypadku bieżącej wersji programu [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , ale nie wymaga zainstalowania interfejsu WinINet ani programu Internet Explorer.
 
-## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a> AtlCombineUrl
 
 Wywołaj tę funkcję, aby połączyć podstawowy adres URL i względny adres URL w jeden kanoniczny adres URL.
 
@@ -114,7 +114,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Zachowuje się jak w przypadku bieżącej wersji programu [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) , ale nie wymaga zainstalowania interfejsu WinINet ani programu Internet Explorer.
 
-## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a> AtlEscapeUrl
 
 Wywołaj tę funkcję, aby skonwertować wszystkie niebezpieczne znaki na sekwencje ucieczki.
 
@@ -155,7 +155,7 @@ Flagi ATL_URL kontrolujące zachowanie tej funkcji. Zobacz [ATLCanonicalizeUrl](
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
 
 Wywołaj tę funkcję, aby uzyskać domyślny numer portu skojarzony z określonym protokołem lub schematem internetowym.
 
@@ -172,7 +172,7 @@ Wartość [ATL_URL_SCHEME](atl-url-scheme-enum.md) identyfikująca schemat, dla 
 
 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzona z określonym schematem lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.
 
-## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
 
 Wywołaj tę funkcję, aby się dowiedzieć, czy użycie danego znaku w adresie URL jest bezpieczne.
 
@@ -193,7 +193,7 @@ Zwraca wartość TRUE, jeśli znak wejściowy jest niebezpieczny, w przeciwnym r
 
 Znaki, które nie powinny być używane w adresach URL, mogą być testowane przy użyciu tej funkcji i konwertowane przy użyciu [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
-## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a> AtlUnescapeUrl
 
 Wywołaj tę funkcję, aby skonwertować znaki przetworzone przez sekwencje ucieczki z powrotem do ich oryginalnych wartości.
 
@@ -233,7 +233,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Odwraca proces konwersji stosowany przez [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a> RGBToHtml
 
 Konwertuje wartość [COLORREF](/windows/win32/gdi/colorref) na tekst HTML odpowiadający tej wartości koloru.
 
@@ -263,7 +263,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Wartość koloru HTML jest znakiem krzyżyka, po którym następuje 6-cyfrowa wartość szesnastkowa, przy użyciu 2 cyfr dla każdego czerwonego, zielonego i niebieskiego składnika koloru (na przykład #FFFFFF jest biały).
 
-## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 
 Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.
 
@@ -279,9 +279,9 @@ inline void SystemTimeToHttpDate(
 Czas systemowy, który ma zostać uzyskany jako ciąg formatu HTTP.
 
 *strTime*<br/>
-Odwołanie do zmiennej ciągu, aby otrzymać datę i godzinę HTTP zgodnie z definicją w dokumencie RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () i RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
+Odwołanie do zmiennej ciągu, aby otrzymać datę i godzinę HTTP zgodnie z definicją w dokumencie RFC 2616 ( [https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt) ) i rfc 1123 ( [https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt) ).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../active-template-library-atl-concepts.md)<br/>
 [Składniki ATL COM pulpitu](../atl-com-desktop-components.md)<br/>

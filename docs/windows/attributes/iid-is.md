@@ -1,17 +1,17 @@
 ---
-title: iid_is (C++ atrybut com)
+title: iid_is (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167995"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832220"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -30,7 +30,7 @@ Wyrażenie języka C, które określa identyfikator IID interfejsu COM wskazywan
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **iid_is** C++ ma taką samą funkcjonalność jak atrybut [iid_is](/windows/win32/Midl/iid-is) MIDL.
+Atrybut **iid_is** C++ ma takie same funkcje jak atrybut [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -53,14 +53,12 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Parametr interfejsu, element członkowski danych|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 

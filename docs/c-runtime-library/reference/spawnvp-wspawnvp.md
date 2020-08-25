@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 3ed6b780fb06db9e5951a943f52a556ad0f0748e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2cd1c0e464fe7efb1cce5ba969b34d040b099efa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916119"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831336"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -80,7 +80,7 @@ Tablica wskaźników do argumentów. Argument *argv*[0] jest zwykle wskaźnikiem
 
 Wartość zwracana z synchronicznej **_spawnvp** lub **_wspawnvp** (**_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnvp** lub **_wspawnvp** (**_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany używa w pełni niezerowego argumentu do wywołania procedury **wyjściowej** . Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości:
 
-|||
+| Wartość | Opis |
 |-|-|
 | **E2BIG** | Lista argumentów przekracza 1024 bajtów. |
 | **EINVAL** | argument *trybu* jest nieprawidłowy. |
@@ -102,8 +102,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnvp**|\<stdio. h> lub \<Process. h>|
-|**_wspawnvp**|\<stdio. h> lub \<WCHAR. h>|
+|**_spawnvp**|\<stdio.h> lub \<process.h>|
+|**_wspawnvp**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,8 +114,8 @@ Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wsp
 ## <a name="see-also"></a>Zobacz też
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[Anuluj](abort.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217834"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830803"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution — Klasa
 
@@ -80,10 +80,8 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Cauchy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 Właściwość działa `a()` i `b()` zwraca odpowiednie wartości dla przechowywanych parametrów dystrybucji `a` i `b` .
 
@@ -240,7 +238,7 @@ Distribution for 10 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:: cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a> cauchy_distribution:: cauchy_distribution
 
 Konstruuje dystrybucję.
 
@@ -268,7 +266,7 @@ Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `a` wartość prz
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a> cauchy_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -301,6 +299,6 @@ Obiekt, który `param_type` ma zostać porównany.
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

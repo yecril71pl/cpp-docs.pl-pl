@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-ms.openlocfilehash: c63676e7bdf5ce1547b4feae16c7899ace545ad2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1708a3f560f60fe3933406a904d95b4d29890a7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203367"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830777"
 ---
 # <a name="error_condition-class"></a>error_condition — Klasa
 
@@ -42,19 +42,19 @@ Obiekt typu `error_condition` przechowuje wartość kodu błędu i wskaźnik do 
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[error_condition](#error_condition)|Konstruuje obiekt typu `error_condition` .|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[value_type](#value_type)|Typ reprezentujący przechowywaną wartość kodu błędu.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[przypisać](#assign)|Przypisuje wartość kodu błędu i kategorię do warunku błędu.|
 |[kategorii](#category)|Zwraca kategorię błędu.|
@@ -63,15 +63,15 @@ Obiekt typu `error_condition` przechowuje wartość kodu błędu i wskaźnik do 
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator = =](#op_eq_eq)|Testuje równość między `error_condition` obiektami.|
 |[operator! =](#op_neq)|Testuje pod kątem nierówności między `error_condition` obiektami.|
-|[<operatora](#op_lt)|Testuje, czy `error_condition` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania.|
+|[<operatora ](#op_lt)|Testuje, czy `error_condition` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania.|
 |[operator =](#op_eq)|Przypisuje nowej wartości wyliczenia do `error_condition` obiektu.|
 |[wartość logiczna operatora](#op_bool)|Rzutuje zmienną typu `error_condition` .|
 
-### <a name="assign"></a><a name="assign"></a>ponownie
+### <a name="assign"></a><a name="assign"></a> ponownie
 
 Przypisuje wartość kodu błędu i kategorię do warunku błędu.
 
@@ -91,7 +91,7 @@ Kategoria błędów do przechowywania w `error_code` .
 
 Funkcja członkowska przechowuje wartości *Val* jako wartość kodu błędu i wskaźnik do *_Cat*.
 
-### <a name="category"></a><a name="category"></a>kategorii
+### <a name="category"></a><a name="category"></a> kategorii
 
 Zwraca kategorię błędu.
 
@@ -105,7 +105,7 @@ Odwołanie do przechowywanej kategorii błędów
 
 #### <a name="remarks"></a>Uwagi
 
-### <a name="clear"></a><a name="clear"></a>Wyczyść
+### <a name="clear"></a><a name="clear"></a> Wyczyść
 
 Czyści wartość kodu błędu i kategorię.
 
@@ -117,7 +117,7 @@ clear();
 
 Funkcja członkowska przechowuje zero wartości kodu błędu i wskaźnik do obiektu [generic_category](../standard-library/system-error-functions.md#generic_category) .
 
-### <a name="error_condition"></a><a name="error_condition"></a>error_condition
+### <a name="error_condition"></a><a name="error_condition"></a> error_condition
 
 Konstruuje obiekt typu `error_condition` .
 
@@ -151,7 +151,7 @@ Drugi Konstruktor przechowuje *Val* jako wartość kodu błędu i wskaźnik do [
 
 Trzeci Konstruktor przechowuje `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik do [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="message"></a><a name="message"></a>Komunikat
+### <a name="message"></a><a name="message"></a> Komunikat
 
 Zwraca nazwę kodu błędu.
 
@@ -167,7 +167,7 @@ string message() const;
 
 Ta funkcja członkowska zwraca `category().message(value())` .
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje równość między `error_condition` obiektami.
 
@@ -188,7 +188,7 @@ Ojbect do przetestowania pod kątem równości.
 
 Operator elementu członkowskiego zwraca `category() == right.category() && value == right.value()` .
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności między `error_condition` obiektami.
 
@@ -209,7 +209,7 @@ Obiekt, który ma być testowany pod kątem nierówności.
 
 Operator elementu członkowskiego zwraca `!(*this == right)` .
 
-### <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy `error_condition` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania.
 
@@ -230,7 +230,7 @@ bool operator<(const error_condition& right) const;
 
 Operator elementu członkowskiego zwraca `category() < right.category() || category() == right.category() && value < right.value()` .
 
-### <a name="operator"></a><a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a> operator =
 
 Przypisuje nowej wartości wyliczenia do `error_condition` obiektu.
 
@@ -255,7 +255,7 @@ Odwołanie do `error_condition` obiektu, do którego jest przypisana nowa warto�
 
 Operator elementu członkowskiego przechowuje `(value_type)error` jako wartość kodu błędu i wskaźnik do [generic_category](../standard-library/system-error-functions.md#generic_category). Zwraca wartość **`*this`** .
 
-### <a name="operator-bool"></a><a name="op_bool"></a>wartość logiczna operatora
+### <a name="operator-bool"></a><a name="op_bool"></a> wartość logiczna operatora
 
 Rzutuje zmienną typu `error_condition` .
 
@@ -271,7 +271,7 @@ Wartość logiczna `error_condition` obiektu.
 
 Operator zwraca wartość, która **`true`** jest możliwa do konwersji tylko wtedy, gdy [wartość](#value) nie jest równa zero. Typ zwracany jest konwertowany tylko na **`bool`** , nie do `void *` lub inne znane typy skalarne.
 
-### <a name="value"></a><a name="value"></a>wartościami
+### <a name="value"></a><a name="value"></a> wartościami
 
 Zwraca przechowywaną wartość kodu błędu.
 
@@ -285,7 +285,7 @@ Wartość przechowywanego kodu błędu typu [value_type](#value_type).
 
 #### <a name="remarks"></a>Uwagi
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ reprezentujący przechowywaną wartość kodu błędu.
 

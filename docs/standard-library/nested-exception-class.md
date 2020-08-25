@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212192"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836442"
 ---
 # <a name="nested_exception-class"></a>Klasa nested_exception
 
@@ -32,24 +32,24 @@ class nested_exception {
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[operator =](#op_as)||
+|[operator =](#op_as)|Operator przypisania.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|Zgłasza wyjątek przechowywany.|
 |[nested_ptr](#nested_ptr)|Zwraca przechowywany wyjątek.|
 
-### <a name="operator"></a><a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a> operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a> nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -59,7 +59,7 @@ exception_ptr nested_ptr() const;
 
 Przechowywany wyjątek przechwytywany przez ten `nested_exception` obiekt.
 
-### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a> rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -75,7 +75,7 @@ Jeśli `nested_ptr()` zwraca wskaźnik o wartości null, wywołuje funkcję `std
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa wyjątku](../standard-library/exception-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

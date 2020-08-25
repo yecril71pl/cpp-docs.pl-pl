@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410177"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831141"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE — Wyliczenie
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE — Wyliczenie
 
-Określa tryb rysowania, którego używasz do modyfikowania obrazu w okno dialogowe edytora obrazu.
+Określa tryb rysowania używany do modyfikowania obrazu w oknie dialogowym Edytor obrazów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,29 +33,28 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>Elementy członkowskie
 
-|||
-|-|-|
 |Nazwa|Opis|
-|IMAGE_EDIT_MODE_PEN|Używany do rysowania poszczególnych pikseli.|
-|IMAGE_EDIT_MODE_FILL|Używany do wypełniania wszystkie sąsiadujące obszary, które zawiera koloru w bieżącej lokalizacji kursora.|
-|IMAGE_EDIT_MODE_LINE|Używane, aby narysować linię.|
-|IMAGE_EDIT_MODE_RECT|Używane, aby narysować prostokąt.|
-|IMAGE_EDIT_MODE_ELLIPSE|Używane, aby narysować elipsę.|
-|IMAGE_EDIT_MODE_COLOR|Używane, aby ustawić bieżący kolor na kolor w bieżącej lokalizacji kursora.|
+|-|-|
+|IMAGE_EDIT_MODE_PEN|Służy do rysowania pojedynczych pikseli.|
+|IMAGE_EDIT_MODE_FILL|Służy do wypełniania wszystkich obszarów sąsiednich, które zawierają kolor w bieżącej lokalizacji kursora.|
+|IMAGE_EDIT_MODE_LINE|Służy do rysowania linii.|
+|IMAGE_EDIT_MODE_RECT|Służy do rysowania prostokąta.|
+|IMAGE_EDIT_MODE_ELLIPSE|Służy do rysowania elipsy.|
+|IMAGE_EDIT_MODE_COLOR|Służy do ustawiania kolor bieżącego koloru na bieżącej lokalizacji kursora.|
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCImagePaintArea` i `CMFCImageEditorDialog` klasy używają tego wyliczenia, aby ustawić bieżący tryb rysowania. Tryb rysowania i bieżący kolor służą do modyfikowania obszar obrazu w okno dialogowe edytora obrazu. Aby uzyskać więcej informacji na temat `CMFCImagePaintArea` i `CMFCImageEditorDialog`, zobacz [klasa CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) i [klasa CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
+`CMFCImagePaintArea`Klasy i `CMFCImageEditorDialog` używają tego wyliczenia do ustawiania bieżącego trybu rysowania. Tryb rysowania i bieżący kolor są używane do modyfikowania obszaru obrazu w oknie dialogowym Edytor obrazów. Aby uzyskać więcej informacji na temat `CMFCImagePaintArea` i `CMFCImageEditorDialog` , zobacz Klasa [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) i [Klasa CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
 
-Po wybraniu koloru z obrazu w trybie rysowania IMAGE_EDIT_MODE_COLOR ramach ustawia bieżący tryb rysowania IMAGE_EDIT_MODE_PEN.
+Po wybraniu koloru z obrazu przy użyciu trybu rysowania IMAGE_EDIT_MODE_COLOR, struktura ustawia bieżący tryb rysowania na IMAGE_EDIT_MODE_PEN.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afximagepaintarea.h
+**Nagłówek:** afximagepaintarea. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)<br/>

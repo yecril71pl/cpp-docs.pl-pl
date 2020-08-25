@@ -37,60 +37,60 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: 83326c13de7585806ab841f728f587f1131b5e8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e040cbb76e851bd323360f4f5ae602f9c73651d1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325994"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834482"
 ---
 # <a name="security-identifier-global-functions"></a>Funkcje globalne identyfikatora zabezpieczeń
 
-Funkcje te zwracają typowe dobrze znane obiekty SID.
+Te funkcje zwracają typowe dobrze znane obiekty SID.
 
 > [!IMPORTANT]
-> Funkcji wymienionych w poniższej tabeli nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows.
+> Funkcje wymienione w poniższej tabeli nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[Sids::AccountOps](#accountops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
-|[Sids::Administratorzy](#admins)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_ADMINS.|
-|[Sids::AnonymousLogon](#anonymouslogon)|Zwraca identyfikator SID SECURITY_ANONYMOUS_LOGON_RID.|
-|[Sids::Uwierzytelnionyużycie](#authenticateduser)|Zwraca identyfikator SID SECURITY_AUTHENTICATED_USER_RID.|
-|[Sids::BackupOps](#backupops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_BACKUP_OPS.|
-|[Sids::Partia](#batch)|Zwraca identyfikator SID SECURITY_BATCH_RID.|
-|[Sids::Grupa twórców](#creatorgroup)|Zwraca identyfikator SID SECURITY_CREATOR_GROUP_RID.|
-|[Sids::CreatorGroupServer](#creatorgroupserver)|Zwraca identyfikator SID SECURITY_CREATOR_GROUP_SERVER_RID.|
-|[Sids::CreatorOwner](#creatorowner)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_RID.|
-|[Sids::CreatorOwnerServer](#creatorownerserver)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.|
-|[Sids::Dialup](#dialup)|Zwraca identyfikator SID SECURITY_DIALUP_RID.|
-|[Sids::Goście](#guests)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_GUESTS.|
-|[Sids::Interaktywne](#interactive)|Zwraca identyfikator SID SECURITY_INTERACTIVE_RID.|
-|[Sids::Lokalny](#local)|Zwraca identyfikator SID SECURITY_LOCAL_RID.|
-|[Sids::Sieć](#network)|Zwraca identyfikator SID SECURITY_NETWORK_RID.|
-|[Sids::Usługa sieciowa](#networkservice)|Zwraca identyfikator SID SECURITY_NETWORK_SERVICE_RID.|
-|[Sids::Null](#null)|Zwraca identyfikator SID SECURITY_NULL_RID.|
-|[Sids::PreW2KAccess](#prew2kaccess)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
-|[Sids::PowerUżytnicy](#powerusers)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_POWER_USERS.|
-|[Sids::PrintOps](#printops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PRINT_OPS.|
-|[Sids::Proxy](#proxy)|Zwraca identyfikator SID SECURITY_PROXY_RID.|
-|[Sids::RasServers](#rasservers)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_RAS_SERVERS.|
-|[Sids::Replikator](#replicator)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_REPLICATOR.|
-|[Sids::RestrictedCode](#restrictedcode)|Zwraca identyfikator SID SECURITY_RESTRICTED_CODE_RID.|
-|[Sids::Self](#self)|Zwraca identyfikator SID SECURITY_PRINCIPAL_SELF_RID.|
-|[Sids::ServerLogon](#serverlogon)|Zwraca identyfikator SID SECURITY_SERVER_LOGON_RID.|
-|[Sids::Usługa](#service)|Zwraca identyfikator SID SECURITY_SERVICE_RID.|
-|[Sids::System](#system)|Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.|
-|[Sids::SystemOps](#systemops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
-|[Sids::TerminalServer](#terminalserver)|Zwraca identyfikator SID SECURITY_TERMINAL_SERVER_RID.|
-|[Sids::Użytkownicy](#users)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_USERS.|
-|[Sids::Świat](#world)|Zwraca identyfikator SID SECURITY_WORLD_RID.|
+|[Identyfikatory SID:: AccountOps](#accountops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
+|[SID:: Administratorzy](#admins)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_ADMINS.|
+|[Identyfikatory SID:: AnonymousLogon](#anonymouslogon)|Zwraca identyfikator SID SECURITY_ANONYMOUS_LOGON_RID.|
+|[Identyfikatory SID:: AuthenticatedUser](#authenticateduser)|Zwraca identyfikator SID SECURITY_AUTHENTICATED_USER_RID.|
+|[Identyfikatory SID:: BackupOps](#backupops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_BACKUP_OPS.|
+|[Identyfikatory SID:: Batch](#batch)|Zwraca identyfikator SID SECURITY_BATCH_RID.|
+|[Identyfikatory SID:: Creator](#creatorgroup)|Zwraca identyfikator SID SECURITY_CREATOR_GROUP_RID.|
+|[Identyfikatory SID:: CreatorGroupServer](#creatorgroupserver)|Zwraca identyfikator SID SECURITY_CREATOR_GROUP_SERVER_RID.|
+|[Identyfikatory SID:: CreatorOwner](#creatorowner)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_RID.|
+|[Identyfikatory SID:: CreatorOwnerServer](#creatorownerserver)|Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.|
+|[Identyfikatory SID::D ialup](#dialup)|Zwraca identyfikator SID SECURITY_DIALUP_RID.|
+|[Identyfikatory SID:: Goście](#guests)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_GUESTS.|
+|[Identyfikatory SID:: Interactive](#interactive)|Zwraca identyfikator SID SECURITY_INTERACTIVE_RID.|
+|[Identyfikatory SID:: local](#local)|Zwraca identyfikator SID SECURITY_LOCAL_RID.|
+|[Identyfikatory SID:: Network](#network)|Zwraca identyfikator SID SECURITY_NETWORK_RID.|
+|[Identyfikatory SID:: NetworkService](#networkservice)|Zwraca identyfikator SID SECURITY_NETWORK_SERVICE_RID.|
+|[Identyfikatory SID:: null](#null)|Zwraca identyfikator SID SECURITY_NULL_RID.|
+|[Identyfikatory SID::P reW2KAccess](#prew2kaccess)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
+|[Identyfikatory SID::P owerUsers](#powerusers)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_POWER_USERS.|
+|[Identyfikatory SID::P rintOps](#printops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_PRINT_OPS.|
+|[Identyfikatory SID::P Roxy](#proxy)|Zwraca identyfikator SID SECURITY_PROXY_RID.|
+|[Identyfikatory SID:: RasServers](#rasservers)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_RAS_SERVERS.|
+|[SID:: Replikator](#replicator)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_REPLICATOR.|
+|[Identyfikatory SID:: RestrictedCode](#restrictedcode)|Zwraca identyfikator SID SECURITY_RESTRICTED_CODE_RID.|
+|[Identyfikatory SID:: własne](#self)|Zwraca identyfikator SID SECURITY_PRINCIPAL_SELF_RID.|
+|[Identyfikatory SID:: ServerLogon](#serverlogon)|Zwraca identyfikator SID SECURITY_SERVER_LOGON_RID.|
+|[SID:: Service](#service)|Zwraca identyfikator SID SECURITY_SERVICE_RID.|
+|[SID:: system](#system)|Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.|
+|[Identyfikatory SID:: SystemOps](#systemops)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
+|[Identyfikatory SID:: TerminalServer](#terminalserver)|Zwraca identyfikator SID SECURITY_TERMINAL_SERVER_RID.|
+|[Identyfikatory SID:: users](#users)|Zwraca identyfikator SID DOMAIN_ALIAS_RID_USERS.|
+|[Identyfikatory SID:: World](#world)|Zwraca identyfikator SID SECURITY_WORLD_RID.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity.h
+**Nagłówek:** atlsecurity. h
 
-## <a name="sidsaccountops"></a><a name="accountops"></a>Sids::AccountOps
+## <a name="sidsaccountops"></a><a name="accountops"></a> Identyfikatory SID:: AccountOps
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.
 
@@ -98,7 +98,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.
 CSid AccountOps() throw(...);
 ```
 
-## <a name="sidsadmins"></a><a name="admins"></a>Sids::Administratorzy
+## <a name="sidsadmins"></a><a name="admins"></a> SID:: Administratorzy
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_ADMINS.
 
@@ -106,7 +106,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_ADMINS.
 CSid Admins() throw(...);
 ```
 
-## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a>Sids::AnonymousLogon
+## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a> Identyfikatory SID:: AnonymousLogon
 
 Zwraca identyfikator SID SECURITY_ANONYMOUS_LOGON_RID.
 
@@ -114,7 +114,7 @@ Zwraca identyfikator SID SECURITY_ANONYMOUS_LOGON_RID.
 CSid AnonymousLogon() throw(...);
 ```
 
-## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a>Sids::Uwierzytelnionyużycie
+## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a> Identyfikatory SID:: AuthenticatedUser
 
 Zwraca identyfikator SID SECURITY_AUTHENTICATED_USER_RID.
 
@@ -122,7 +122,7 @@ Zwraca identyfikator SID SECURITY_AUTHENTICATED_USER_RID.
 CSid AuthenticatedUser() throw(...);
 ```
 
-## <a name="sidsbackupops"></a><a name="backupops"></a>Sids::BackupOps
+## <a name="sidsbackupops"></a><a name="backupops"></a> Identyfikatory SID:: BackupOps
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_BACKUP_OPS.
 
@@ -130,7 +130,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_BACKUP_OPS.
 CSid BackupOps() throw(...);
 ```
 
-## <a name="sidsbatch"></a><a name="batch"></a>Sids::Partia
+## <a name="sidsbatch"></a><a name="batch"></a> Identyfikatory SID:: Batch
 
 Zwraca identyfikator SID SECURITY_BATCH_RID.
 
@@ -138,7 +138,7 @@ Zwraca identyfikator SID SECURITY_BATCH_RID.
 CSid Batch() throw(...);
 ```
 
-## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a>Sids::Grupa twórców
+## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a> Identyfikatory SID:: Creator
 
 Zwraca identyfikator SID SECURITY_CREATOR_GROUP_RID.
 
@@ -146,7 +146,7 @@ Zwraca identyfikator SID SECURITY_CREATOR_GROUP_RID.
 CSid CreatorGroup() throw(...);
 ```
 
-## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a>Sids::CreatorGroupServer
+## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a> Identyfikatory SID:: CreatorGroupServer
 
 Zwraca identyfikator SID SECURITY_CREATOR_GROUP_SERVER_RID.
 
@@ -154,7 +154,7 @@ Zwraca identyfikator SID SECURITY_CREATOR_GROUP_SERVER_RID.
 CSid CreatorGroupServer() throw(...);
 ```
 
-## <a name="sidscreatorowner"></a><a name="creatorowner"></a>Sids::CreatorOwner
+## <a name="sidscreatorowner"></a><a name="creatorowner"></a> Identyfikatory SID:: CreatorOwner
 
 Zwraca identyfikator SID SECURITY_CREATOR_OWNER_RID.
 
@@ -162,7 +162,7 @@ Zwraca identyfikator SID SECURITY_CREATOR_OWNER_RID.
 CSid CreatorOwner() throw(...);
 ```
 
-## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a>Sids::CreatorOwnerServer
+## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a> Identyfikatory SID:: CreatorOwnerServer
 
 Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.
 
@@ -170,7 +170,7 @@ Zwraca identyfikator SID SECURITY_CREATOR_OWNER_SERVER_RID.
 CSid CreatorOwnerServer() throw(...);
 ```
 
-## <a name="sidsdialup"></a><a name="dialup"></a>Sids::Dialup
+## <a name="sidsdialup"></a><a name="dialup"></a> Identyfikatory SID::D ialup
 
 Zwraca identyfikator SID SECURITY_DIALUP_RID.
 
@@ -178,7 +178,7 @@ Zwraca identyfikator SID SECURITY_DIALUP_RID.
 CSid Dialup() throw(...);
 ```
 
-## <a name="sidsguests"></a><a name="guests"></a>Sids::Goście
+## <a name="sidsguests"></a><a name="guests"></a> Identyfikatory SID:: Goście
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_GUESTS.
 
@@ -186,7 +186,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_GUESTS.
 CSid Guests() throw(...);
 ```
 
-## <a name="sidsinteractive"></a><a name="interactive"></a>Sids::Interaktywne
+## <a name="sidsinteractive"></a><a name="interactive"></a> Identyfikatory SID:: Interactive
 
 Zwraca identyfikator SID SECURITY_INTERACTIVE_RID.
 
@@ -194,7 +194,7 @@ Zwraca identyfikator SID SECURITY_INTERACTIVE_RID.
 CSid Interactive() throw(...);
 ```
 
-## <a name="sidslocal"></a><a name="local"></a>Sids::Lokalny
+## <a name="sidslocal"></a><a name="local"></a> Identyfikatory SID:: local
 
 Zwraca identyfikator SID SECURITY_LOCAL_RID.
 
@@ -202,7 +202,7 @@ Zwraca identyfikator SID SECURITY_LOCAL_RID.
 CSid Local() throw(...);
 ```
 
-## <a name="sidsnetwork"></a><a name="network"></a>Sids::Sieć
+## <a name="sidsnetwork"></a><a name="network"></a> Identyfikatory SID:: Network
 
 Zwraca identyfikator SID SECURITY_NETWORK_RID.
 
@@ -210,7 +210,7 @@ Zwraca identyfikator SID SECURITY_NETWORK_RID.
 CSid Network() throw(...);
 ```
 
-## <a name="sidsnetworkservice"></a><a name="networkservice"></a>Sids::Usługa sieciowa
+## <a name="sidsnetworkservice"></a><a name="networkservice"></a> Identyfikatory SID:: NetworkService
 
 Zwraca identyfikator SID SECURITY_NETWORK_SERVICE_RID.
 
@@ -220,11 +220,11 @@ CSid NetworkService() throw(...);
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj usługi NetworkService, aby włączyć użytkownika usługi NT AUTHORITY\NetworkService do odczytu obiektu zabezpieczeń CPerfMon. Usługa NetworkService dodaje atrybut SecurityAttribute do kodu ATLServer, który umożliwia biblioteki DLL zalogowanie się pod kontem NetworkService w systemie Windows XP Home Edition, Windows XP Professional, Windows Server 2003 i większym systemie operacyjnym.
+Użyj sieci NetworkService, aby umożliwić użytkownikowi NT AUTHORITY\NetworkService odczytywanie obiektu zabezpieczeń CPerfMon. Usługa sieciowa dodaje element SecurityAttribute do kodu ATLServer, który umożliwi plikowi DLL logowanie się w ramach konta NetworkService w systemie Windows XP Home Edition, Windows XP Professional, Windows Server 2003 i w większym systemie operacyjnym.
 
-Gdy niestandardowe liczniki dziennika są tworzone za pomocą klasy ATLServer CPerfMon w programie MmC Perfmon, liczniki mogą nie być wyświetlane podczas wyświetlania pliku dziennika, chociaż będą wyświetlane poprawnie w widoku w czasie rzeczywistym. Niestandardowe liczniki wydajności CPerfMon nie mają uprawnień niezbędnych do uruchamiania w ramach usługi "Dzienniki wydajności i alerty" (smlogsvc.exe) w systemach operacyjnych Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (lub nowszych). Ta usługa jest uruchamiana na koncie "NT AUTHORITY\NetworkService".
+Gdy niestandardowe liczniki dzienników są tworzone z klasą ATLServer CPerfMon w programie MMC programu perfmon, liczniki mogą nie być wyświetlane podczas przeglądania pliku dziennika, chociaż będą prawidłowo wyświetlane w widoku czasu rzeczywistego. Niestandardowe liczniki wydajności CPerfMon nie mają wystarczających uprawnień do uruchomienia w ramach usługi "Dzienniki wydajności i alerty" (smlogsvc.exe) w systemach operacyjnych Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (lub nowszych). Ta usługa działa w ramach konta "NT AUTHORITY\NetworkService".
 
-## <a name="sidsnull"></a><a name="null"></a>Sids::Null
+## <a name="sidsnull"></a><a name="null"></a> Identyfikatory SID:: null
 
 Zwraca identyfikator SID SECURITY_NULL_RID.
 
@@ -232,7 +232,7 @@ Zwraca identyfikator SID SECURITY_NULL_RID.
 CSid Null() throw(...);
 ```
 
-## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a>Sids::PreW2KAccess
+## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a> Identyfikatory SID::P reW2KAccess
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 
@@ -240,7 +240,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 CSid PreW2KAccess() throw(...);
 ```
 
-## <a name="sidspowerusers"></a><a name="powerusers"></a>Sids::PowerUżytnicy
+## <a name="sidspowerusers"></a><a name="powerusers"></a> Identyfikatory SID::P owerUsers
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_POWER_USERS.
 
@@ -248,7 +248,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_POWER_USERS.
 CSid PowerUsers() throw(...);
 ```
 
-## <a name="sidsprintops"></a><a name="printops"></a>Sids::PrintOps
+## <a name="sidsprintops"></a><a name="printops"></a> Identyfikatory SID::P rintOps
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_PRINT_OPS.
 
@@ -256,7 +256,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_PRINT_OPS.
 CSid PrintOps() throw(...);
 ```
 
-## <a name="sidsproxy"></a><a name="proxy"></a>Sids::Proxy
+## <a name="sidsproxy"></a><a name="proxy"></a> Identyfikatory SID::P Roxy
 
 Zwraca identyfikator SID SECURITY_PROXY_RID.
 
@@ -264,7 +264,7 @@ Zwraca identyfikator SID SECURITY_PROXY_RID.
 CSid Proxy() throw(...);
 ```
 
-## <a name="sidsrasservers"></a><a name="rasservers"></a>Sids::RasServers
+## <a name="sidsrasservers"></a><a name="rasservers"></a> Identyfikatory SID:: RasServers
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_RAS_SERVERS.
 
@@ -272,7 +272,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_RAS_SERVERS.
 CSid RasServers() throw(...);
 ```
 
-## <a name="sidsreplicator"></a><a name="replicator"></a>Sids::Replikator
+## <a name="sidsreplicator"></a><a name="replicator"></a> SID:: Replikator
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_REPLICATOR.
 
@@ -280,7 +280,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_REPLICATOR.
 CSid Replicator() throw(...);
 ```
 
-## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a>Sids::RestrictedCode
+## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a> Identyfikatory SID:: RestrictedCode
 
 Zwraca identyfikator SID SECURITY_RESTRICTED_CODE_RID.
 
@@ -288,7 +288,7 @@ Zwraca identyfikator SID SECURITY_RESTRICTED_CODE_RID.
 CSid RestrictedCode() throw(...);
 ```
 
-## <a name="sidsself"></a><a name="self"></a>Sids::Self
+## <a name="sidsself"></a><a name="self"></a> Identyfikatory SID:: własne
 
 Zwraca identyfikator SID SECURITY_PRINCIPAL_SELF_RID.
 
@@ -296,7 +296,7 @@ Zwraca identyfikator SID SECURITY_PRINCIPAL_SELF_RID.
 CSid Self() throw(...);
 ```
 
-## <a name="sidsserverlogon"></a><a name="serverlogon"></a>Sids::ServerLogon
+## <a name="sidsserverlogon"></a><a name="serverlogon"></a> Identyfikatory SID:: ServerLogon
 
 Zwraca identyfikator SID SECURITY_SERVER_LOGON_RID.
 
@@ -304,7 +304,7 @@ Zwraca identyfikator SID SECURITY_SERVER_LOGON_RID.
 CSid ServerLogon() throw(...);
 ```
 
-## <a name="sidsservice"></a><a name="service"></a>Sids::Usługa
+## <a name="sidsservice"></a><a name="service"></a> SID:: Service
 
 Zwraca identyfikator SID SECURITY_SERVICE_RID.
 
@@ -312,7 +312,7 @@ Zwraca identyfikator SID SECURITY_SERVICE_RID.
 CSid Service() throw(...);
 ```
 
-## <a name="sidssystem"></a><a name="system"></a>Sids::System
+## <a name="sidssystem"></a><a name="system"></a> SID:: system
 
 Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.
 
@@ -320,7 +320,7 @@ Zwraca identyfikator SID SECURITY_LOCAL_SYSTEM_RID.
 CSid System() throw(...);
 ```
 
-## <a name="sidssystemops"></a><a name="systemops"></a>Sids::SystemOps
+## <a name="sidssystemops"></a><a name="systemops"></a> Identyfikatory SID:: SystemOps
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_SYSTEM_OPS.
 
@@ -328,7 +328,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_SYSTEM_OPS.
 CSid SystemOps() throw(...);
 ```
 
-## <a name="sidsterminalserver"></a><a name="terminalserver"></a>Sids::TerminalServer
+## <a name="sidsterminalserver"></a><a name="terminalserver"></a> Identyfikatory SID:: TerminalServer
 
 Zwraca identyfikator SID SECURITY_TERMINAL_SERVER_RID.
 
@@ -336,7 +336,7 @@ Zwraca identyfikator SID SECURITY_TERMINAL_SERVER_RID.
 CSid TerminalServer() throw(...);
 ```
 
-## <a name="sidsusers"></a><a name="users"></a>Sids::Użytkownicy
+## <a name="sidsusers"></a><a name="users"></a> Identyfikatory SID:: users
 
 Zwraca identyfikator SID DOMAIN_ALIAS_RID_USERS.
 
@@ -344,7 +344,7 @@ Zwraca identyfikator SID DOMAIN_ALIAS_RID_USERS.
 CSid Users() throw(...);
 ```
 
-## <a name="sidsworld"></a><a name="world"></a>Sids::Świat
+## <a name="sidsworld"></a><a name="world"></a> Identyfikatory SID:: World
 
 Zwraca identyfikator SID SECURITY_WORLD_RID.
 

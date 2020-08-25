@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215286"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834196"
 ---
 # <a name="db_table"></a>db_table
 
@@ -32,7 +32,7 @@ Ciąg określający nazwę tabeli bazy danych (na przykład "produkty").
 Obowiązkowe Nazwa dojścia używanego do pracy z tabelą. Należy określić ten parametr, jeśli chcesz zwrócić więcej niż jeden wiersz wyników. **DB_Table** generuje zmienną o określonej *nazwie* , która może służyć do przechodzenia w zestawie wierszy lub wykonywania wielu zapytań akcji.
 
 *source_name*<br/>
-Obowiązkowe `CSession`Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
+Obowiązkowe `CSession` Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
 
 *wynik*<br/>
 Obowiązkowe Identyfikuje zmienną, która będzie otrzymywać wartość HRESULT tego polecenia bazy danych. Jeśli zmienna nie istnieje, zostanie automatycznie wprowadzona przez atrybut.
@@ -64,9 +64,7 @@ Aby zapoznać się z przykładem tego atrybutu używanym w aplikacji, zobacz [Od
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
@@ -75,6 +73,6 @@ Aby zapoznać się z przykładem tego atrybutu używanym w aplikacji, zobacz [Od
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)

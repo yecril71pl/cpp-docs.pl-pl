@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561105"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834280"
 ---
 # <a name="cmfccmdusagecount-class"></a>Klasa CMFCCmdUsageCount
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Konstruktor domyślny.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Zwiększa się o jeden licznik, który jest skojarzony z danym poleceniem.|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|Pobiera liczbę użycia skojarzoną z danym IDENTYFIKATORem polecenia.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Określa, czy ten obiekt zgromadził minimalną ilość danych śledzenia.|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |`m_CmdUsage`|`CMap`Obiekt, który mapuje polecenia na ich liczniki użycia.|
 |`m_nMinUsagePercentage`|Minimalny procent użycia dla polecenia, które ma być często używane.|
 |`m_nStartCount`|Licznik początkowy, który służy do określenia, czy ten obiekt zgromadził minimalną ilość danych śledzenia.|

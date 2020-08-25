@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562054"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834235"
 ---
 # <a name="cmfctabdroptarget-class"></a>Klasa CMFCTabDropTarget
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Konstruktor domyślny.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Wywoływane przez platformę, gdy użytkownik przeciąga obiekt w oknie karty. (Przesłania [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Wywoływane przez platformę, gdy użytkownik przeciągnie obiekt poza oknem karty, które ma fokus. (Przesłania [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Wywoływane przez platformę, gdy użytkownik przeciąga obiekt do okna karty, które ma fokus. (Przesłania [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|

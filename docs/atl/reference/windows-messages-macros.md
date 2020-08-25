@@ -1,31 +1,31 @@
 ---
-title: Makra wiadomości systemu Windows
+title: Makra komunikatów systemu Windows
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329408"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834443"
 ---
-# <a name="windows-messages-macros"></a>Makra wiadomości systemu Windows
+# <a name="windows-messages-macros"></a>Makra komunikatów systemu Windows
 
-To makro przekazuje wiadomości okienne.
+To makro przesyła dalej komunikaty systemu Windows.
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|Służy do przesyłania dalej wiadomości odebranej przez okno do innego okna do przetwarzania.|
+|[WM_FORWARDMSG](#wm_forwardmsg)|Służy do przesyłania dalej wiadomości odebranej przez okno do innego okna do przetworzenia.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a> WM_FORWARDMSG
 
-To makro przekazuje wiadomość odebraną przez okno do innego okna w celu przetworzenia.
+To makro przekazuje komunikat otrzymany przez okno do innego okna do przetworzenia.
 
 ```
 WM_FORWARDMSG
@@ -33,20 +33,20 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli wiadomość została przetworzona, zero, jeśli nie.
+Niezerowe, jeśli wiadomość została przetworzona, zero, jeśli nie.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj WM_FORWARDMSG, aby przesłać dalej wiadomość odebraną przez okno do innego okna do przetworzenia. Parametry LPARAM i WPARAM są używane w następujący sposób:
+Użyj WM_FORWARDMSG, aby przesłać wiadomość odebraną przez okno do innego okna do przetworzenia. Parametry LPARAM i WPARAM są używane w następujący sposób:
 
-|Parametr|Sposób użycia|
+|Parametr|Użycie|
 |---------------|-----------|
-|Wparam|Dane zdefiniowane przez użytkownika|
-|Lparam|Wskaźnik do `MSG` struktury zawierającej informacje o wiadomości|
+|WPARAM|Dane zdefiniowane przez użytkownika|
+|LPARAM|Wskaźnik do struktury zawierającej `MSG` Informacje o wiadomości|
 
 ### <a name="example"></a>Przykład
 
-W poniższym `m_hWndOther` przykładzie reprezentuje inne okno, które odbiera ten komunikat.
+W poniższym przykładzie `m_hWndOther` reprezentuje inne okno, które odbiera ten komunikat.
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 

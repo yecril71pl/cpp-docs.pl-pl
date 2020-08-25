@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561326"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834300"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Klasa CMFCBaseVisualManager
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Konstruuje i inicjuje `CMFCBaseVisualManager` obiekt.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|Rysuje kontrolkę pola wyboru przy użyciu bieżącego motywu systemu Windows.|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|Rysuje obramowanie pola kombi przy użyciu bieżącego motywu systemu Windows.|
 |[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|Rysuje przycisk listy rozwijanej pola kombi przy użyciu bieżącego motywu systemu Windows.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Wywołania `CloseThemeData` wszystkich dojść uzyskanych w `UpdateSystemColors` .|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Wywołania `OpenThemeData` mające na celu uzyskanie uchwytów do rysowania różnych kontrolek: okna, paski narzędzi, przyciski i tak dalej.|
 

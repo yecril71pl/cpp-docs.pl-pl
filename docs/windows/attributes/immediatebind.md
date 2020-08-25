@@ -1,17 +1,17 @@
 ---
-title: immediatebind (C++ atrybut com)
+title: immediatebind (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5241a6972ea0444a980e3e868c44e7e0c15dc64
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833052"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -33,14 +33,12 @@ Zobacz [powiązanie](bindable.md) z przykładem, jak używać **immediatebind**.
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 

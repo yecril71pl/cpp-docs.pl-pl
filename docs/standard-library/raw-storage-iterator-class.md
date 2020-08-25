@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217639"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831427"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator — Klasa
 
@@ -46,26 +46,26 @@ Ta klasa adaptacji jest używana, gdy konieczne jest oddzielenie alokacji pamię
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Tworzy iterator nieprzetworzonego magazynu z określonym podstawowym iteratorem wyjściowym.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[element_type](#element_type)|Zapewnia typ, który opisuje element, który ma być przechowywany iterator magazynu RAW.|
 |[iter_type](#iter_type)|Zapewnia typ, który opisuje iterator, który jest niezależnym iteratorem magazynu.|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zakład](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x` .|
 |[operator =](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora nieprzetworzonego magazynu \* `i`  =  `x` na potrzeby przechowywania w pamięci.|
 |[operator + +](#op_add_add)|Operatory przedrastające i postinkrementacji dla iteratorów nieprzetworzonych magazynów.|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Zapewnia typ, który opisuje element, który ma być przechowywany iterator magazynu RAW.
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 Typ jest synonimem dla parametru szablonu klasy raw_storage_iterator `Type` .
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 Zapewnia typ, który opisuje iterator, który jest niezależnym iteratorem magazynu.
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu `ForwardIterator` .
 
-### <a name="operator"></a><a name="op_star"></a>zakład\*
+### <a name="operator"></a><a name="op_star"></a> zakład\*
 
 Operator dereferencji używany do implementowania wyrażenia iteratora nieprzetworzonego magazynu o wielkości \* *II*  =  *x*.
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a> operator =
 
 Operator przypisania używany do implementowania wyrażenia iteratora nieprzetworzonego magazynu \* *i*  =  *x* do przechowywania w pamięci.
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>operator + +
+### <a name="operator"></a><a name="op_add_add"></a> operator + +
 
 Operatory przedrastające i postinkrementacji dla iteratorów nieprzetworzonych magazynów.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Tworzy iterator nieprzetworzonego magazynu z określonym podstawowym iteratorem wyjściowym.
 

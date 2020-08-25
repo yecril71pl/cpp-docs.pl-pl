@@ -1,5 +1,5 @@
 ---
-title: Funkcje globalne map com map
+title: Globalne funkcje mapowania modelu COM
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: c4ce7c7a68c0744ad65ef4914088fa12d3340628
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adf4e06eb46aed74d08071dccce1db549ca31226
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833598"
 ---
-# <a name="com-map-global-functions"></a>Funkcje globalne map com map
+# <a name="com-map-global-functions"></a>Globalne funkcje mapowania modelu COM
 
-Te funkcje zapewniają `IUnknown` obsługę implementacji mapy COM.
+Te funkcje zapewniają obsługę implementacji mapowań COM `IUnknown` .
 
-|||
+|Funkcja|Opis|
 |-|-|
-|[AtlInternalQueryInterface (AtlInternalQueryInterface)](#atlinternalqueryinterface)|Delegaci `IUnknown` do obiektu nieagregowanego.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generuje wydajny kod do porównywania interfejsów z . `IUnknown`|
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Deleguje do `IUnknown` obiektu niezagregowanego.|
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generuje wydajny kod służący do porównywania interfejsów z `IUnknown` .|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-## <a name="atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface (AtlInternalQueryInterface)
+## <a name="atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a> AtlInternalQueryInterface
 
 Pobiera wskaźnik do żądanego interfejsu.
 
@@ -42,16 +42,16 @@ HRESULT AtlInternalQueryInterface(
 ### <a name="parameters"></a>Parametry
 
 *pThis*<br/>
-[w] Wskaźnik do obiektu zawierającego mapę COM interfejsów narażonych na `QueryInterface`działanie .
+podczas Wskaźnik do obiektu, który zawiera mapę COM interfejsów dostępnych dla `QueryInterface` .
 
-*pEntries (PEntries)*<br/>
-[w] Tablica `_ATL_INTMAP_ENTRY` struktur, które uzyskują dostęp do mapy dostępnych interfejsów.
+*pEntries*<br/>
+podczas Tablica `_ATL_INTMAP_ENTRY` struktur, które uzyskują dostęp do mapy dostępnych interfejsów.
 
-*Iid*<br/>
-[w] Identyfikator GUID żądanego interfejsu.
+*IID*<br/>
+podczas Identyfikator GUID żądanego interfejsu.
 
-*ppvObiekt*<br/>
-[na zewnątrz] Wskaźnik do wskaźnika interfejsu określonego w *iid*lub NULL, jeśli nie zostanie znaleziony interfejs.
+*ppvObject*<br/>
+określoną Wskaźnik do wskaźnika interfejsu określonego w *identyfikatorze IID*lub wartość null, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -59,15 +59,15 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlInternalQueryInterface`obsługuje tylko interfejsy w tabeli mapy COM. Jeśli obiekt jest agregowany, `AtlInternalQueryInterface` nie przekazuje do zewnętrznej nieznanej. Interfejsy można wprowadzić w tabeli mapy COM z [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) makra lub jednym z jego wariantów.
+`AtlInternalQueryInterface` obsługuje tylko interfejsy w tabeli mapy COM. Jeśli obiekt jest zagregowany, `AtlInternalQueryInterface` nie jest delegowany do nieznanego obiektu zewnętrznego. Możesz wprowadzić interfejsy w tabeli mapy modelu COM z makrem [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) lub jednym z jego wariantów.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
 
-## <a name="inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown
+## <a name="inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a> InlineIsEqualIUnknown
 
-Wywołanie tej funkcji, dla specjalnego `IUnknown`przypadku badania dla .
+Wywołaj tę funkcję, w przypadku specjalnego przypadku testowania dla `IUnknown` .
 
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -76,9 +76,9 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 ### <a name="parameters"></a>Parametry
 
 *rguid1*<br/>
-[w] Identyfikator GUID do `IID_IUnknown`porównania z programem .
+podczas Identyfikator GUID, do którego ma zostać wykonane porównanie `IID_IUnknown` .
 
 ## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
-[Makra map COM](../../atl/reference/com-map-macros.md)
+[Makra mapy modelu COM](../../atl/reference/com-map-macros.md)

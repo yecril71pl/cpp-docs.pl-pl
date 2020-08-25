@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623462"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831687"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
@@ -148,7 +148,7 @@ W oknie dialogowym Wybierz kontrolkę, a następnie naciśnij klawisz **delete**
 
 ### <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Po dodaniu kontrolki formant wspólny lub edycji wzbogaconej do okna dialogowego nie będzie on wyświetlany podczas testowania okna dialogowego. Lub samo okno dialogowe nie zostanie wyświetlone. Przykład:
+Po dodaniu kontrolki formant wspólny lub edycji wzbogaconej do okna dialogowego nie będzie on wyświetlany podczas testowania okna dialogowego. Lub samo okno dialogowe nie zostanie wyświetlone. Na przykład:
 
 1. Utwórz projekt Win32, modyfikując ustawienia aplikacji, aby utworzyć aplikację systemu Windows (nie aplikację konsolową).
 
@@ -166,20 +166,38 @@ Po dodaniu kontrolki formant wspólny lub edycji wzbogaconej do okna dialogowego
 
 Obecnie **Edytor okien dialogowych** nie dodaje automatycznie kodu do projektu podczas przeciągania i upuszczania następujących formantów standardowych lub kontrolek edycji wzbogaconej do okna dialogowego. Program Visual Studio nie udostępnia błędu ani Ostrzeżenia w przypadku wystąpienia tego problemu. Aby rozwiązać ten problem, należy ręcznie dodać kod dla kontrolki.
 
-||||
-|-|-|-|
-|Kontrolka suwaka|Kontrolka drzewa|Wybór daty i godziny|
-|Kontrolka pokrętła|Kontrolka karta|Kalendarz miesięczny|
-|Kontrolka postępu|Kontrolka animacji|Kontrola adresów IP|
-|Klawisz dostępu|Kontrolka edycji wzbogaconej|Rozszerzone pole kombi|
-|Kontrolka listy|Kontrolka edycji wzbogaconej 2,0|Kontrolka niestandardowa|
+:::row:::
+   :::column span="":::
+      Kontrolka animacji \
+      Kontrolka niestandardowa \
+      Wybór daty i godziny \
+      Rozszerzone pole kombi
+   :::column-end:::
+   :::column span="":::
+      Klawisz dostępu \
+      Kontrola adresów IP \
+      Kontrolka listy \
+      Kalendarz miesięczny
+   :::column-end:::
+   :::column span="":::
+      Kontrolka postępu \
+      Kontrolka edycji rozszerzonej 2,0
+      Kontrolka edycji wzbogaconej \
+      Kontrolka suwaka
+   :::column-end:::
+   :::column span="":::
+      Pokrętło \
+      Kontrolka karta \
+      Kontrolka drzewa
+   :::column-end:::
+:::row-end:::
 
 Aby użyć formantów wspólnych w oknie dialogowym, należy wywołać [Funkcja InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) lub przed utworzeniem okna `AFXInitCommonControls` dialogowego.
 
 Aby użyć formantów RichEdit, należy wywołać `LoadLibrary` . Aby uzyskać więcej informacji, zobacz [Informacje o kontrolkach edycji wzbogaconej](/windows/win32/Controls/about-rich-edit-controls) w Windows SDK i [Omówienie kontrolki edycji wzbogaconej](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
-> Aby użyć formantu RichEdit z MFC, należy najpierw wywołać [Funkcja afxinitrichedit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) , aby załadować formant RichEdit 2,0 (biblioteki riched20. DLL) lub Call [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) w celu załadowania starszej kontrolki RichEdit 1,0 (Riched32. DLL).
+> Aby użyć formantu RichEdit z MFC, należy najpierw wywołać [Funkcja afxinitrichedit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) , aby załadować formant RichEdit 2,0 (RICHED20.DLL) lub wywołać [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) w celu załadowania starszej kontrolki RichEdit 1,0 (RICHED32.DLL).
 >
 > Można użyć bieżącej klasy [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) z starszą kontrolką RichEdit 1,0, ale `CRichEditCtrl` jest ona przeznaczona tylko do obsługi formantu RichEdit 2,0. Ponieważ RichEdit 1,0 i RichEdit 2,0 są podobne, większość metod będzie działała. Istnieją jednak pewne różnice między kontrolkami 1,0 i 2,0, dlatego niektóre metody mogą funkcjonować nieprawidłowo lub nie działały wcale.
 

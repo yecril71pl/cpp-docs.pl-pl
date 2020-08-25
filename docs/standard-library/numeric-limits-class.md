@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830686"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits — Klasa
 
@@ -101,7 +101,7 @@ W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczącyc
 
 ## <a name="static-functions-and-constants"></a>Statyczne funkcje i stałe
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[denorm_min](#denorm_min)|Zwraca najmniejszą niezerową wartość nieznormalizowaną.|
 |[cyfry](#digits)|Zwraca liczbę podstawy cyfr, które typ może reprezentować bez utraty dokładności.|
@@ -121,11 +121,11 @@ W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczącyc
 |[is_signed](#is_signed)|Testuje, czy typ ma podpisaną reprezentację.|
 |[is_specialized](#is_specialized)|Testuje, czy typ ma jawną specjalizację zdefiniowaną w szablonie klasy `numeric_limits` .|
 |[okreolon](#lowest)|Zwraca najbardziej ujemną wartość skończoną.|
-|[Maksymalny](#max)|Zwraca maksymalną skończoną wartość dla typu.|
+|[max](#max)|Zwraca maksymalną skończoną wartość dla typu.|
 |[max_digits10](#max_digits10)|Zwraca liczbę cyfr dziesiętnych wymaganych do zapewnienia, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.|
 |[max_exponent](#max_exponent)|Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy podstawa podstawy jest podnoszona do tej potęgi.|
 |[max_exponent10](#max_exponent10)|Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy baza danych jest podnoszona do tej potęgi.|
-|[długości](#min)|Zwraca minimalną znormalizowaną wartość dla typu.|
+|[min](#min)|Zwraca minimalną znormalizowaną wartość dla typu.|
 |[min_exponent](#min_exponent)|Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza podstawy jest podniesiona do tej potęgi.|
 |[min_exponent10](#min_exponent10)|Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza danych jest podnoszona do tej potęgi.|
 |[quiet_NaN](#quiet_nan)|Zwraca reprezentację wartości typu quiet nie jest liczbą (NAN) dla tego elementu.|
@@ -136,7 +136,7 @@ W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczącyc
 |[tinyness_before](#tinyness_before)|Testuje, czy typ może określić, że wartość jest zbyt mała, aby reprezentować jako znormalizowaną wartość przed jej zaokrągleniem.|
 |[pułapek](#traps)|Testuje, czy zalewkowanie raportów na wyjątkach arytmetycznych jest implementowane dla typu.|
 
-### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a> denorm_min
 
 Zwraca najmniejszą niezerową wartość nieznormalizowaną.
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a><a name="digits"></a>cyfr
+### <a name="digits"></a><a name="digits"></a> cyfr
 
 Zwraca liczbę podstawy cyfr, które typ może reprezentować bez utraty dokładności.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a><a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a> digits10
 
 Zwraca liczbę cyfr dziesiętnych, które typ może reprezentować bez utraty dokładności.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a><a name="epsilon"></a>Epsilon
+### <a name="epsilon"></a><a name="epsilon"></a> Epsilon
 
 Funkcja zwraca różnicę z zakresu od 1 do najmniejszej wartości większej niż 1, która jest zaprezentowana dla typu danych.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a> has_denorm
 
 Testuje, czy typ zezwala na nieznormalizowane wartości.
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a> has_denorm_loss
 
 Testuje, czy ubytek dokładności został wykryty jako ubytek denormalizacji, a nie jako wynik niedokładny.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a> has_infinity
 
 Testuje, czy typ ma reprezentację dla nieskończoności dodatniej.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a> has_quiet_NaN
 
 Testuje, czy typ ma reprezentację dla cichej nie liczby (NAN), która nie jest sygnalizująca.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a> has_signaling_NaN
 
 Testuje, czy typ ma reprezentację do sygnalizowania nie liczbą (NAN).
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a><a name="infinity"></a>nieskończoność
+### <a name="infinity"></a><a name="infinity"></a> nieskończoność
 
 Reprezentacja dodatniej nieskończoności dla typu, jeśli jest dostępna.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a> is_bounded
 
 Testuje, czy zestaw wartości, które może reprezentować, jest ograniczony.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a><a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a> is_exact
 
 Testuje, czy obliczenia wykonywane na typie są wolne od błędów zaokrąglania.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a> is_iec559
 
 Testuje, czy typ jest zgodny ze standardami IEC 559.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a><a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a> is_integer
 
 Testuje, czy typ ma reprezentację liczb całkowitych.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
 Testuje, czy **Typ** ma reprezentację modulo.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a><a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a> is_signed
 
 Testuje, czy typ ma podpisaną reprezentację.
 
@@ -927,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a> is_specialized
 
 Testuje, czy typ ma jawną specjalizację zdefiniowaną w szablonie klasy `numeric_limits` .
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a><a name="lowest"></a>okreolon
+### <a name="lowest"></a><a name="lowest"></a> okreolon
 
 Zwraca najbardziej ujemną wartość skończoną.
 
@@ -997,7 +997,7 @@ Zwraca najbardziej ujemną wartość skończoną.
 
 Zwraca najbardziej ujemną wartość skończoną dla typu (zazwyczaj `min()` dla typów całkowitych i `-max()` dla typów zmiennoprzecinkowych). Wartość zwracana ma znaczenie, jeśli `is_bounded` jest **`true`** .
 
-### <a name="max"></a><a name="max"></a>Maksymalny
+### <a name="max"></a><a name="max"></a> Maksymalny
 
 Zwraca maksymalną skończoną wartość dla typu.
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a> max_digits10
 
 Zwraca liczbę cyfr dziesiętnych wymaganych do upewnienia się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
@@ -1055,7 +1055,7 @@ Zwraca liczbę cyfr dziesiętnych, które są wymagane, aby upewnić się, że d
 
 Składowa przechowuje liczbę cyfr dziesiętnych wymaganych do upewnienia się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
-### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a> max_exponent
 
 Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy podstawa podstawy jest podnoszona do tej potęgi.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a> max_exponent10
 
 Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy baza danych jest podnoszona do tej potęgi.
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a> min_exponent
 
 Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza podstawy jest podniesiona do tej potęgi.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a> min_exponent10
 
 Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza danych jest podnoszona do tej potęgi.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a> quiet_NaN
 
 Zwraca reprezentację wartości typu quiet nie jest liczbą (NAN) dla tego elementu.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a><a name="radix"></a>podstawy
+### <a name="radix"></a><a name="radix"></a> podstawy
 
 Zwraca część całkowitą, która jest określana jako podstawy, używana do reprezentowania typu.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a><a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a> round_error
 
 Zwraca maksymalny błąd zaokrąglenia typu.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a><a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a> round_style
 
 Zwraca wartość opisującą różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a> signaling_NaN
 
 Zwraca reprezentację sygnalizującego nie jest liczbą (NAN) dla tego typu.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a> tinyness_before
 
 Testuje, czy typ może określić, że wartość jest zbyt mała, aby reprezentować jako znormalizowaną wartość przed jej zaokrągleniem.
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a><a name="traps"></a>pułapek
+### <a name="traps"></a><a name="traps"></a> pułapek
 
 Testuje, czy zalewkowanie raportów na wyjątkach arytmetycznych jest implementowane dla typu.
 

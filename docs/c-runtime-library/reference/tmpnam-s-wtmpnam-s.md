@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917485"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831583"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -82,11 +82,10 @@ Obie te funkcje zwracają wartość 0, jeśli powodzenie lub wystąpił błąd w
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|||||
-|-|-|-|-|
-|*str*|*sizeInChars*|**Wartość zwracana**|**Zawartość**  *str*|
-|**NULL**|ile|**EINVAL**|nie zmodyfikowano|
-|nie **ma wartości null** (wskazuje na prawidłową pamięć)|zbyt krótki|**ERANGE**|nie zmodyfikowano|
+| *str* | *sizeInChars* | **Wartość zwracana** | **Zawartość** *str* |
+|--|--|--|--|
+| **NULL** | dowolny | **EINVAL** | nie zmodyfikowano |
+| nie **ma wartości null** (wskazuje na prawidłową pamięć) | zbyt krótki | **ERANGE** | nie zmodyfikowano |
 
 Jeśli *str* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
@@ -112,8 +111,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**tmpnam_s**|\<stdio. h>|
-|**_wtmpnam_s**|\<stdio. h> lub \<WCHAR. h>|
+|**tmpnam_s**|\<stdio.h>|
+|**_wtmpnam_s**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

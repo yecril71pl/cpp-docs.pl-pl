@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c35e693624676cf588c6b85334fadc7c7915b2a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831323"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -85,7 +85,7 @@ Tablica wskaźników do ustawień środowiska
 
 Wartość zwracana z synchronicznej **_spawnvpe** lub **_wspawnvpe** (**_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnvpe** lub **_wspawnvpe** (**_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany jawnie wywoła procedurę **Exit** z niezerowym argumentem. Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości:
 
-|||
+| Wartość | Opis |
 |-|-|
 | **E2BIG** | Lista argumentów przekracza 1024 bajtów. |
 | **EINVAL** | argument *trybu* jest nieprawidłowy. |
@@ -107,8 +107,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnvpe**|\<stdio. h> lub \<Process. h>|
-|**_wspawnvpe**|\<stdio. h> lub \<WCHAR. h>|
+|**_spawnvpe**|\<stdio.h> lub \<process.h>|
+|**_wspawnvpe**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -118,7 +118,7 @@ Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wsp
 
 ## <a name="see-also"></a>Zobacz też
 
-[Anuluj](abort.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

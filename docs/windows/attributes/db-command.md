@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232784"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831375"
 ---
 # <a name="db_command"></a>db_command
 
@@ -90,7 +90,7 @@ TCHAR m_state[3] = 'CA';
 Obowiązkowe Nazwa dojścia używanego do pracy z zestawem wierszy. Jeśli określisz *nazwę*, **db_command** generuje klasę o określonej *nazwie*, która może być używana do przechodzenia zestawu wierszy lub wykonywania wielu zapytań akcji. Jeśli *Nazwa*nie zostanie określona, nie będzie możliwe zwrócenie więcej niż jednego wiersza wyników do użytkownika.
 
 *source_name*<br/>
-Obowiązkowe `CSession`Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
+Obowiązkowe `CSession` Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
 
 **db_command** sprawdza, czy zmienna użyta dla *source_name* jest prawidłowa, więc określona zmienna powinna być w funkcji lub globalnym zakresie.
 
@@ -238,9 +238,7 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
 |**Powtarzalne**|Nie|
@@ -249,7 +247,7 @@ int main() {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)<br/>
 [Atrybuty autonomiczne](stand-alone-attributes.md)
