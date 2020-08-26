@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913392"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845175"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -80,13 +80,12 @@ Jeśli do funkcji są przesyłane nieprawidłowe parametry, wywołuje procedurę
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|||||||
+|*głównych*|*base*|*porównaniu*|*Liczba*|*Szerokość*|**`errno`**|
 |-|-|-|-|-|-|
-|*głównych*|*base*|*porównaniu*|*Liczba*|*Szerokość*|**errno**|
-|**NULL**|ile|ile|ile|ile|**EINVAL**|
-|ile|**NULL**|ile|! = 0|ile|**EINVAL**|
-|ile|ile|ile|ile|= 0|**EINVAL**|
-|ile|ile|**NULL**|an|ile|**EINVAL**|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|**EINVAL**|
+|dowolny|**NULL**|dowolny|! = 0|dowolny|**EINVAL**|
+|dowolny|dowolny|dowolny|dowolny|= 0|**EINVAL**|
+|dowolny|dowolny|**NULL**|an|dowolny|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -94,7 +93,7 @@ Funkcja **bsearch_s** wykonuje binarne wyszukiwanie posortowanej tablicy element
 
 |Wartość zwrócona przez procedurę *porównania*|Opis|
 |-----------------------------------------|-----------------|
-|\<2,0|Klucz jest mniejszy niż element tablicy.|
+|\< 2,0|Klucz jest mniejszy niż element tablicy.|
 |0|Klucz jest równy elementowi tablicy.|
 |> 0|Klucz jest większy niż element tablicy.|
 
@@ -106,7 +105,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**bsearch_s**|\<STDLIB. h> i \<Search. h>|
+|**bsearch_s**|\<stdlib.h> i \<search.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

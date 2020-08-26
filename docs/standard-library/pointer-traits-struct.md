@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832701"
 ---
 # <a name="pointer_traits-struct"></a>pointer_traits — struktura
 
-Dostarcza informacje, które są konieczne przez obiekt typu `allocator_traits` do opisania alokatora z typem wskaźnika `Ptr`.
+Dostarcza informacje, które są konieczne przez obiekt typu `allocator_traits` do opisania alokatora z typem wskaźnika `Ptr` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,15 +52,15 @@ struct Ptr
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
-|`typedef T2 difference_type`|Typ `T2` jest `Ptr::difference_type`, jeśli ten typ istnieje, w przeciwnym razie `ptrdiff_t`. Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typ jest `ptrdiff_t`.|
-|`typedef T1 element_type`|Typ `T1` jest `Ptr::element_type`, jeśli ten typ istnieje, w przeciwnym razie `Ty`. Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typ jest `Ty`.|
-|`typedef Ptr pointer`|Typ jest `Ptr`.|
+|`typedef T2 difference_type`|Typ `T2` to `Ptr::difference_type` , czy ten typ istnieje, w przeciwnym razie `ptrdiff_t` . Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typem jest `ptrdiff_t` .|
+|`typedef T1 element_type`|Typ `T1` to `Ptr::element_type` , czy ten typ istnieje, w przeciwnym razie `Ty` . Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typem jest `Ty` .|
+|`typedef Ptr pointer`|Typ to `Ptr` .|
 
 ### <a name="structs"></a>Struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |`rebind`|Próbuje skonwertować podstawowy typ wskaźnika do określonego typu.|
 
@@ -68,11 +68,11 @@ struct Ptr
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[pointer_to](#pointer_to)|Konwertuje arbitralne odwołanie do obiektu klasy `Ptr`.|
+|[pointer_to](#pointer_to)|Konwertuje arbitralne odwołanie do obiektu klasy `Ptr` .|
 
-### <a name="pointer_to"></a>pointer_to
+### <a name="pointer_to"></a><a name="pointer_to"></a> pointer_to
 
-Metoda statyczna zwracająca `Ptr::pointer_to(obj)`, jeśli ta funkcja istnieje. W przeciwnym razie nie jest możliwe przekonwertowanie dowolnego odwołania do obiektu klasy `Ptr`. Jeśli `Ptr` jest wskaźnikiem surowym, ta metoda zwraca `addressof(obj)`.
+Metoda statyczna, która zwraca `Ptr::pointer_to(obj)` , jeśli ta funkcja istnieje. W przeciwnym razie nie jest możliwe przekonwertowanie dowolnego odwołania do obiektu klasy `Ptr` . Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, ta metoda zwraca `addressof(obj)` .
 
 ```cpp
 static pointer pointer_to(element_type& obj);

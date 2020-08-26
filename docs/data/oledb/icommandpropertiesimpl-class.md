@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210811"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845578"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Klasa pochodna
 
 *PropClass*<br/>
@@ -45,11 +45,11 @@ Klasa właściwości.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetProperties](#getproperties)|Zwraca listę właściwości w grupie Właściwości zestawu wierszy, która aktualnie żąda zestawu wierszy.|
 |[SetProperties](#setproperties)|Ustawia właściwości w grupie Właściwości zestawu wierszy.|
@@ -58,7 +58,7 @@ Klasa właściwości.
 
 Jest to obowiązkowe dla poleceń. Implementacja jest dostarczana przez funkcję statyczną zdefiniowaną przez makro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
 Zwraca wszystkie żądane zestawy właściwości przy użyciu mapy właściwości polecenia.
 
@@ -79,7 +79,7 @@ Zobacz [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/m
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: SetProperties
 
 Ustawia właściwości dla obiektu polecenia.
 

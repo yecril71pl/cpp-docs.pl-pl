@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216001"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845136"
 ---
 # <a name="add-a-member-variable"></a>Dodawanie zmiennej składowej
 
@@ -70,7 +70,7 @@ Ten Kreator dodaje deklarację zmiennej składowej do pliku nagłówkowego. W za
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [użytek](../cpp/private-cpp.md)
+  - [private](../cpp/private-cpp.md)
 
 - **Typ zmiennej**
 
@@ -80,13 +80,15 @@ Ten Kreator dodaje deklarację zmiennej składowej do pliku nagłówkowego. W za
 
     Aby uzyskać informacje o typach, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - Jeśli dodajesz zmienną członkowską dla kontrolki okna dialogowego, to pole jest wypełnione typem obiektu, który jest zwracany dla kontrolki lub wartości. W przypadku wybrania opcji **sterowanie**, a następnie **Typ zmiennej** określa klasę bazową kontrolki wybranej w polu **Identyfikator kontrolki** . Jeśli formant okna dialogowego może przechowywać wartość i w przypadku wybrania **wartości**, **Typ zmiennej** określa odpowiedni typ dla wartości, która może być przechowywana przez kontrolę. Aby uzyskać więcej informacji, zobacz [kontrolki okna dialogowego i typy zmiennych](#dialog-box-controls-and-variable-types).
 
@@ -149,21 +151,21 @@ W poniższej tabeli opisano wszystkie typy formantów okna dialogowego, które s
 
 |Kontrola|Typ kontrolki|Typ zmiennej kontrolki|Typ zmiennej wartości|Wartości minimalne/maksymalne (tylko typ wartości)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
-|Kontrolka animacji|SysAnimate32|[Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Dawaj tylko kontrolka|Brak|
-|Przycisk|PRZYCISK|[CButton](../mfc/reference/cbutton-class.md)|Dawaj tylko kontrolka|Brak|
+|Kontrolka animacji|SysAnimate32|[Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
+|Przycisk|PRZYCISK|[CButton](../mfc/reference/cbutton-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
 |Pole wyboru|NIEZAZNACZONE|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|Wartość minimalna/maksymalna|
 |Pole kombi|SKŁADNIK|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Maksymalna liczba znaków|
 |Kontrolka selektora daty i godziny|SysDateTimePick32|[Korzystanie CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Wartość minimalna/maksymalna|
-|Pole edycji|EDYTUJ|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, Long, DWORD, float, Double, BYTE, Short, BOOL, `COleDateTime` lub`COleCurrency`|Wartość minimalna/maksymalna wartość; Maksymalna liczba znaków w obsłudze|
-|Klawisz skrótu|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Dawaj tylko kontrolka|Brak|
+|Pole edycji|EDYTUJ|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, Long, DWORD, float, Double, BYTE, Short, BOOL, `COleDateTime` lub `COleCurrency`|Wartość minimalna/maksymalna wartość; Maksymalna liczba znaków w obsłudze|
+|Klawisz skrótu|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
 |Pole listy|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Maksymalna liczba znaków|
-|Kontrolka listy|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|Dawaj tylko kontrolka|Brak|
+|Kontrolka listy|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
 |Formant kalendarza miesięcznego|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|Wartość minimalna/maksymalna|
-|Kontrolka postępu|msctls_progress32|[Korzystanie CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Dawaj tylko kontrolka|Brak|
+|Kontrolka postępu|msctls_progress32|[Korzystanie CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
 |Kontrolka edycji wzbogaconej 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Maksymalna liczba znaków|
 |Kontrolka edycji wzbogaconej|RICHEDIT|`CRichEditCtrl`|`CString`|Maksymalna liczba znaków|
 |Pasek przewijania (w pionie lub w poziomie)|PASKI|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|Wartość minimalna/maksymalna|
 |suwak|msctls_trackbar32|[Korzystanie CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|Wartość minimalna/maksymalna|
-|Kontrolka pokrętła|msctls_updown32|[Korzystanie CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Dawaj tylko kontrolka|Brak|
-|Kontrolka karta|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Dawaj tylko kontrolka|Brak|
-|Kontrolka drzewa|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Dawaj tylko kontrolka|Brak|
+|Kontrolka pokrętła|msctls_updown32|[Korzystanie CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
+|Kontrolka karta|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|
+|Kontrolka drzewa|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Dawaj tylko kontrolka|Nie dotyczy|

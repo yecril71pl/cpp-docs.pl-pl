@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222826"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837362"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 
@@ -31,7 +31,7 @@ W tym temacie wymieniono funkcje DDX_OC używane do wymiany danych między wła�
 
 ### <a name="ddx_oc-functions"></a>Funkcje DDX_OC
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DDX_OCBool](#ddx_ocbool)|Zarządza transferem danych **bool** między właściwością kontrolki OLE a elementem członkowskim danych **bool** .|
 |[DDX_OCBoolRO](#ddx_ocboolro)|Zarządza transferem danych **bool** między właściwością tylko do odczytu formantu OLE a elementem członkowskim danych **bool** .|
@@ -46,7 +46,7 @@ W tym temacie wymieniono funkcje DDX_OC używane do wymiany danych między wła�
 |[DDX_OCText](#ddx_octext)|Zarządza transferem danych **CString** między właściwościami kontrolki OLE i elementu członkowskiego danych **CString** .|
 |[DDX_OCTextRO](#ddx_octextro)|Zarządza transferem danych **CString** między właściwością tylko do odczytu formantu OLE i składową danych **CString** .|
 
-## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
+## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a> DDX_OCBool
 
 `DDX_OCBool`Funkcja zarządza transferem danych **bool** między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku formantu oraz elementem członkowskim danych **bool** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek:** AFXDISP. h
 
-## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
+## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a> DDX_OCBoolRO
 
 `DDX_OCBoolRO`Funkcja zarządza transferem danych **bool** między właściwością tylko do odczytu kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku formantu oraz elementem członkowskim danych **bool** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -114,7 +114,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
+## <a name="ddx_occolor"></a><a name="ddx_occolor"></a> DDX_OCColor
 
 `DDX_OCColor`Funkcja zarządza transferem danych OLE_COLOR między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i OLE_COLOR członkiem danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -148,7 +148,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
+## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a> DDX_OCColorRO
 
 `DDX_OCColorRO`Funkcja zarządza transferem danych OLE_COLOR między właściwością tylko do odczytu kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki OLE_COLOR i elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -182,7 +182,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
+## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a> DDX_OCFloat
 
 `DDX_OCFloat`Funkcja zarządza transferem **`float`** (lub **`double`** ) danych między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i **`float`** (lub **`double`** ) elementem członkowskim danych w oknie dialogowym, widoku formularza lub w obiekcie widoku formantu.
 
@@ -222,7 +222,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
+## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a> DDX_OCFloatRO
 
 `DDX_OCFloatRO`Funkcja zarządza transferem **`float`** (lub **`double`** ) danych między właściwością tylko do odczytu kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i **`float`** (lub **`double`** ) elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -262,7 +262,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
+## <a name="ddx_ocint"></a><a name="ddx_ocint"></a> DDX_OCInt
 
 `DDX_OCInt`Funkcja zarządza transferem **`int`** (lub **`long`** ) danych między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i **`int`** (lub **`long`** ) elementem członkowskim danych w oknie dialogowym, widoku formularza lub w obiekcie widoku formantu.
 
@@ -302,7 +302,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
+## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a> DDX_OCIntRO
 
 `DDX_OCIntRO`Funkcja zarządza transferem **`int`** (lub **`long`** ) danych między właściwością tylko do odczytu kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i **`int`** (lub **`long`** ) elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -342,7 +342,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
+## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a> DDX_OCShort
 
 `DDX_OCShort`Funkcja zarządza transferem krótkich danych między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i krótkim elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -376,7 +376,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
+## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a> DDX_OCShortRO
 
 `DDX_OCShortRO`Funkcja zarządza transferem krótkich danych między właściwością tylko do odczytu kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i krótkim elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -410,7 +410,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
+## <a name="ddx_octext"></a><a name="ddx_octext"></a> DDX_OCText
 
 Funkcja **DDX_OCText** zarządza transferem danych **CString** między właściwością kontrolki OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki **i elementem członkowskim danych w** oknie dialogowym, widoku formularza lub w obiekcie widoku formantu.
 
@@ -444,7 +444,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
+## <a name="ddx_octextro"></a><a name="ddx_octextro"></a> DDX_OCTextRO
 
 `DDX_OCTextRO`Funkcja zarządza transferem `CString` danych między właściwością tylko do odczytu formantu OLE w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i `CString` elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
@@ -478,6 +478,6 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389821"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845162"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
 
@@ -33,7 +33,7 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
    - Wybierz zestaw reguł, który chcesz dostosować.
 
-     \-oraz
+     \- oraz
 
    - Wybierz **\<Browse...>** , aby określić istniejący zestaw reguł, którego nie ma na liście.
 
@@ -50,7 +50,7 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
    - Wybierz zestaw reguł, który chcesz dostosować.
 
-     \-oraz
+     \- oraz
 
    - Wybierz **\<Browse...>** , aby określić istniejący zestaw reguł, którego nie ma na liście.
 
@@ -114,7 +114,7 @@ Poniższy przykład przedstawia podstawowy plik zestawu reguł, którego można 
 
 ## <a name="ruleset-schema"></a>Schemat zestawu reguł
 
-Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł. Schemat zestawu reguł jest przechowywany w *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Można jej użyć do programistycznego tworzenia własnych zestawów reguł lub do sprawdzenia, czy niestandardowe zestaw reguł jest zgodny z prawidłowym formatem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie dokumentu XML na podstawie schematu XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł. Schemat zestawu reguł jest przechowywany w *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Można jej użyć do programistycznego tworzenia własnych zestawów reguł lub do sprawdzenia, czy niestandardowe zestaw reguł jest zgodny z prawidłowym formatem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie dokumentu XML na podstawie schematu XSD](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

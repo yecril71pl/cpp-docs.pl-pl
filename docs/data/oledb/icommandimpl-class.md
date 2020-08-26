@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232160"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845591"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
@@ -85,7 +85,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Anuluj](#cancel)|Anuluje bieżące wykonanie polecenia.|
 |[CancelExecution](#cancelexecution)|Anuluje bieżące wykonanie polecenia.|
@@ -96,7 +96,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[m_bCancel](#bcancel)|Wskazuje, czy polecenie ma być anulowane.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Wskazuje, czy polecenie ma zostać anulowane podczas wykonywania.|
@@ -106,7 +106,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 Obowiązkowy interfejs w obiekcie Command.
 
-## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a> ICommandImpl:: Cancel
 
 Anuluje bieżące wykonanie polecenia.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 Zobacz [Interfejs ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a> ICommandImpl:: CancelExecution
 
 Anuluje bieżące wykonanie polecenia.
 
@@ -130,7 +130,7 @@ Anuluje bieżące wykonanie polecenia.
 HRESULT CancelExecution();
 ```
 
-## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: isrowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: isrowset
 
 Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) , aby utworzyć pojedynczy zestaw wierszy.
 
@@ -179,7 +179,7 @@ Aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworz
 
 Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
-## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a> ICommandImpl:: Execute
 
 Wykonuje polecenie.
 
@@ -201,9 +201,9 @@ Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms71809
 
 Żądany interfejs wychodzący będzie interfejsem uzyskanym z obiektu zestawu wierszy, który tworzy ta funkcja.
 
-`Execute`wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
+`Execute` wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
 
-## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: GetDBSession
 
 Zwraca wskaźnik interfejsu do sesji, która utworzyła polecenie.
 
@@ -222,7 +222,7 @@ Zobacz [Interfejs ICommand:: GetDBSession](/previous-versions/windows/desktop/ms
 
 Przydatne do pobierania właściwości z sesji.
 
-## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a> ICommandImpl:: ICommandImpl
 
 Konstruktor.
 
@@ -232,7 +232,7 @@ Konstruktor.
 ICommandImpl();
 ```
 
-## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a> ICommandImpl:: m_bCancel
 
 Wskazuje, czy polecenie zostało anulowane.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 Tę zmienną można pobrać w `Execute` metodzie klasy Command i anulować zgodnie z potrzebami.
 
-## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a> ICommandImpl:: m_bCancelWhenExecuting
 
 Wskazuje, czy polecenie może zostać anulowane podczas wykonywania.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Wartość domyślna **`true`** (może być anulowana).
 
-## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a> ICommandImpl:: m_bIsExecuting
 
 Wskazuje, czy polecenie jest aktualnie wykonywane.
 
@@ -274,7 +274,7 @@ unsigned m_bIsExecuting:1;
 
 `Execute`Metoda klasy Command może ustawić tę zmienną na **`true`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

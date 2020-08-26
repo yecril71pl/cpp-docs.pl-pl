@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845305"
 ---
 # <a name="event_source"></a>event_source
 
@@ -33,9 +33,9 @@ Tworzy Źródło zdarzenia.
 *Wprowadź*<br/>
 Wyliczenie jednej z następujących wartości:
 
-- `native`dla niezarządzanego kodu C/C++ (domyślnie dla klas niezarządzanych).
+- `native` dla niezarządzanego kodu C/C++ (domyślnie dla klas niezarządzanych).
 
-- `com`dla kodu COM. Musisz użyć `coclass` `type` = `com` . Ta wartość wymaga uwzględnienia następujących plików nagłówkowych:
+- `com` dla kodu COM. Musisz użyć `coclass` `type` = `com` . Ta wartość wymaga uwzględnienia następujących plików nagłówkowych:
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -60,18 +60,16 @@ Atrybut **event_source** C++ określa, że Klasa lub struktura, do której ma za
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**Klasa coclass** , gdy`type`=`com`|
+|**Wymagane atrybuty**|**Klasa coclass** , gdy `type`=`com`|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210720"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845552"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl — Klasa
 
@@ -32,8 +32,8 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Obiekt sesji pochodzący z `IDBCreateCommandImpl`.
+*T*<br/>
+Obiekt sesji pochodzący od `IDBCreateCommandImpl` .
 
 *CommandClass*<br/>
 Klasa poleceń.
@@ -42,11 +42,11 @@ Klasa poleceń.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[CreateCommand](#createcommand)|Tworzy nowe polecenie.|
 
@@ -54,7 +54,7 @@ Klasa poleceń.
 
 Opcjonalny interfejs w obiekcie sesji, aby uzyskać nowe polecenie.
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl —:: SetCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl —:: SetCommand
 
 Tworzy nowe polecenie i zwraca żądany interfejs.
 
@@ -70,7 +70,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 Zobacz [IDBCreateCommand:: SetCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* różnymi nazwami, które są opisane w `IDBCreateCommand::CreateCommand`:
+Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* różnymi nazwami, które są opisane w `IDBCreateCommand::CreateCommand` :
 
 |OLE DB parametry szablonu|*OLE DB parametry odwołania programisty*|
 |--------------------------------|------------------------------------------------|

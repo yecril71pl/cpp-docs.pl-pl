@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 03afb777dc3926284cf0dc625e94a716ecdf5413
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5805d441b4fc2fc2927b57f4d94ba8b8ccecb22a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375346"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845474"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-Deklaruje obiekty, które kontrolują odczyt i zapis do standardowych strumieni. Obejmuje to często jest tylko nagłówek, który należy wykonać dane wejściowe i wyjściowe z programu C++.
+Deklaruje obiekty kontrolujące odczyt i zapis w standardowym strumieniu. Jest to często jedyny nagłówek, który jest potrzebny do wprowadzania danych wejściowych i wyjściowych z programu C++.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,38 +32,38 @@ Deklaruje obiekty, które kontrolują odczyt i zapis do standardowych strumieni.
 ```
 
 > [!NOTE]
-> Biblioteka \<> iostream `#include <ios>`używa , `#include <streambuf>`, `#include <istream>`i `#include <ostream>` instrukcji.
+> \<iostream>Biblioteka używa `#include <ios>` `#include <streambuf>` instrukcji,, `#include <istream>` , i `#include <ostream>` .
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty dzielą się na dwie grupy:
+Obiekty mieszczą się w dwóch grupach:
 
-- [cin](#cin), [cout](#cout), [cerr](#cerr), i [zatykać](#clog) są zorientowane bajt, wykonując konwencjonalne transfery bajtów na czas.
+- [CIN](#cin), [cout](#cout), [cerr](#cerr)i [CLOG](#clog) są zorientowane na bajty, co umożliwia transfer konwencjonalnych bajtów w czasie.
 
-- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr)i [wclog](#wclog) są szeroko zorientowane, tłumacząc na szerokie znaki, którymi program manipuluje wewnętrznie.
+- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr)i [wclog](#wclog) są zorientowane na szerokie, tłumaczenie na i od znaków dwubajtowych, które program operuje wewnętrznie.
 
-Po wykonania niektórych operacji w strumieniu, takich jak standardowe dane wejściowe, nie można wykonać operacje o innej orientacji na tym samym strumieniu. Dlatego program nie może działać zamiennie zarówno na [cin](#cin) i [wcin](#wcin), na przykład.
+Po wykonaniu pewnych operacji na strumieniu, takich jak standardowe dane wejściowe, nie można wykonać operacji o innej orientacji w tym samym strumieniu. W związku z tym program nie może działać zamiennie zarówno na [CIN](#cin) , jak i [wcin](#wcin), na przykład.
 
-Wszystkie obiekty zadeklarowane w tym nagłówku współużytkują właściwość — można założyć, że są \<one skonstruowane przed zdefiniowanymi obiektami statycznymi w jednostce tłumaczenia, która zawiera> iostream. Podobnie można założyć, że te obiekty nie są niszczone przed destruktorów dla takich obiektów statycznych, które można zdefiniować. (Strumienie wyjściowe są jednak opróżniane podczas zakończenia programu). W związku z tym można bezpiecznie odczytać lub zapisać do standardowych strumieni przed uruchomieniem programu i po zakończeniu programu.
+Wszystkie obiekty zadeklarowane w tym nagłówku współdzielą Właściwość szczególną — można założyć, że są one konstruowane przed zdefiniowanymi statycznymi obiektami w jednostce translacji, która zawiera \<iostream> . Równiej można założyć, że te obiekty nie są niszczone przed destruktorami dla wszystkich zdefiniowanych obiektów statycznych. (Strumienie wyjściowe są jednak opróżniane podczas kończenia działania programu). W związku z tym można bezpiecznie odczytywać i zapisywać strumienie standardowe przed uruchomieniem programu i po zakończeniu działania programu.
 
-Gwarancja ta nie jest jednak uniwersalna. Konstruktor statyczny może wywołać funkcję w innej jednostce tłumaczenia. Wywołana funkcja nie może zakładać, że obiekty zadeklarowane w tym nagłówku zostały skonstruowane, biorąc pod uwagę niepewną kolejność, w jakiej jednostki translacji uczestniczą w konstrukcji statycznej. Aby użyć tych obiektów w takim kontekście, należy najpierw skonstruować obiekt klasy [ios_base::Init](../standard-library/ios-base-class.md#init).
+Ta gwarancja nie jest jednak uniwersalna. Konstruktor statyczny może wywołać funkcję w innej jednostce translacji. Wywołana funkcja nie może przyjąć, że obiekty zadeklarowane w tym nagłówku zostały skonstruowane, z uwzględnieniem niepewnej kolejności, w której jednostki translacji uczestniczą w konstrukcji statycznej. Aby użyć tych obiektów w tym kontekście, należy najpierw skonstruować obiekt klasy [ios_base:: init](../standard-library/ios-base-class.md#init).
 
 ### <a name="global-stream-objects"></a>Obiekty strumienia globalnego
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[cerr](#cerr)|Określa strumień `cerr` globalny.|
-|[Cin](#cin)|Określa strumień `cin` globalny.|
-|[Zatyka](#clog)|Określa strumień `clog` globalny.|
-|[Cout](#cout)|Określa strumień `cout` globalny.|
-|[wcerr](#wcerr)|Określa strumień `wcerr` globalny.|
-|[wcin (wcin)](#wcin)|Określa strumień `wcin` globalny.|
-|[wclog](#wclog)|Określa strumień `wclog` globalny.|
-|[wcout](#wcout)|Określa strumień `wcout` globalny.|
+|[cerr](#cerr)|Określa `cerr` strumień globalny.|
+|[cin](#cin)|Określa `cin` strumień globalny.|
+|[clog](#clog)|Określa `clog` strumień globalny.|
+|[cout](#cout)|Określa `cout` strumień globalny.|
+|[wcerr](#wcerr)|Określa `wcerr` strumień globalny.|
+|[wcin](#wcin)|Określa `wcin` strumień globalny.|
+|[wclog](#wclog)|Określa `wclog` strumień globalny.|
+|[wcout](#wcout)|Określa `wcout` strumień globalny.|
 
-### <a name="cerr"></a><a name="cerr"></a>cerr
+### <a name="cerr"></a><a name="cerr"></a> cerr
 
-Obiekt `cerr` steruje wyjściem do buforu `stderr`strumienia \<skojarzonego z obiektem , zadeklarowanym w cstdio>.
+Obiekt `cerr` kontroluje wyjście do bufora strumienia skojarzonego z obiektem `stderr` zadeklarowanym w \<cstdio> .
 
 ```cpp
 extern ostream cerr;
@@ -71,11 +71,11 @@ extern ostream cerr;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [ostream.](../standard-library/ostream-typedefs.md#ostream)
+Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje niebuforowanymi wstawieniami do standardowego wyjścia błędu jako strumienia bajtów. Po skonstruowaniu `cerr.`obiektu wyrażenie [flaguje](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) jest niezerowy i `cerr.tie() == &cout`.
+Obiekt kontroluje niebuforowane wstawienia do standardowego wyjścia błędu jako strumień bajtów. Po skonstruowaniu obiektu wyrażenie `cerr.` [flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) ma wartość różną od zera i `cerr.tie() == &cout` .
 
 #### <a name="example"></a>Przykład
 
@@ -107,9 +107,9 @@ int main( )
 }
 ```
 
-### <a name="cin"></a><a name="cin"></a>Cin
+### <a name="cin"></a><a name="cin"></a> cin
 
-Określa strumień `cin` globalny.
+Określa `cin` strumień globalny.
 
 ```cpp
 extern istream cin;
@@ -117,15 +117,15 @@ extern istream cin;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [istream.](../standard-library/istream-typedefs.md#istream)
+Obiekt [IStream](../standard-library/istream-typedefs.md#istream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje wyodrębnianiami ze standardowego wejścia jako strumień bajtów. Po skonstruowaniu `cin.` [obiektu, wywołanie](../standard-library/basic-ios-class.md#tie) `&`krawat zwraca [cout](#cout).
+Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień bajtów. Gdy obiekt zostanie skonstruowany, wywołanie Call `cin.` [tie](../standard-library/basic-ios-class.md#tie) zwraca `&` [cout](#cout).
 
 #### <a name="example"></a>Przykład
 
-W tym `cin` przykładzie ustawia bit fail na strumieniu, gdy występuje między znakami nienukrajowymi. Program czyści bit niepowodzenia i usuwa nieprawidłowy znak ze strumienia, aby kontynuować.
+W tym przykładzie `cin` ustawia bit niepowodzenia w strumieniu, gdy zawiera on znaki niebędące cyframi. Program czyści bit błędu i przyłączy nieprawidłowy znak ze strumienia, aby kontynuować.
 
 ```cpp
 // iostream_cin.cpp
@@ -158,9 +158,9 @@ int main()
 2
 ```
 
-### <a name="clog"></a><a name="clog"></a>Zatyka
+### <a name="clog"></a><a name="clog"></a> clog
 
-Określa strumień `clog` globalny.
+Określa `clog` strumień globalny.
 
 ```cpp
 extern ostream clog;
@@ -168,19 +168,19 @@ extern ostream clog;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [ostream.](../standard-library/ostream-typedefs.md#ostream)
+Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje buforowanymi wstawieniami do standardowego wyjścia błędu jako strumienia bajtów.
+Obiekt steruje buforowanymi wstawieniami do standardowego wyjścia błędu jako strumień bajtów.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `clog`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `clog` .
 
-### <a name="cout"></a><a name="cout"></a>Cout
+### <a name="cout"></a><a name="cout"></a> cout
 
-Określa strumień `cout` globalny.
+Określa `cout` strumień globalny.
 
 ```cpp
 extern ostream cout;
@@ -188,19 +188,19 @@ extern ostream cout;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [ostream.](../standard-library/ostream-typedefs.md#ostream)
+Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje wstawieniami do standardowego wyjścia jako strumień bajtów.
+Obiekt kontroluje wstawienia do wyjścia standardowego jako strumień bajtów.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `cout`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `cout` .
 
-### <a name="wcerr"></a><a name="wcerr"></a>wcerr
+### <a name="wcerr"></a><a name="wcerr"></a> wcerr
 
-Określa strumień `wcerr` globalny.
+Określa `wcerr` strumień globalny.
 
 ```cpp
 extern wostream wcerr;
@@ -208,19 +208,19 @@ extern wostream wcerr;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [wostream.](../standard-library/ostream-typedefs.md#wostream)
+Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje niebuforowanymi wstawieniami do standardowego wyjścia błędu jako szeroki strumień. Po zbudowaniu obiektu wyrażenie `wcerr.` [flaguje](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) jest niezerowy.
+Obiekt kontroluje niebuforowane wstawienia do standardowego wyjścia błędu jako strumień szeroki. Po skonstruowaniu obiektu wyrażenie `wcerr.` [flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) ma wartość różną od zera.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `wcerr`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `wcerr` .
 
-### <a name="wcin"></a><a name="wcin"></a>wcin (wcin)
+### <a name="wcin"></a><a name="wcin"></a> wcin
 
-Określa strumień `wcin` globalny.
+Określa `wcin` strumień globalny.
 
 ```cpp
 extern wistream wcin;
@@ -228,19 +228,19 @@ extern wistream wcin;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [wistream.](../standard-library/istream-typedefs.md#wistream)
+Obiekt [wistream](../standard-library/istream-typedefs.md#wistream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje ekstrakcjami ze standardowego wejścia jako szeroki strumień. Po skonstruowaniu `wcin.` [obiektu, połączenie](../standard-library/basic-ios-class.md#tie) wywołania zwraca `&` [wcout](#wcout).
+Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień szeroki. Gdy obiekt zostanie skonstruowany, wywołanie Call `wcin.` [tie](../standard-library/basic-ios-class.md#tie) zwraca `&` [wcout](#wcout).
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `wcin`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `wcin` .
 
-### <a name="wclog"></a><a name="wclog"></a>wclog
+### <a name="wclog"></a><a name="wclog"></a> wclog
 
-Określa strumień `wclog` globalny.
+Określa `wclog` strumień globalny.
 
 ```cpp
 extern wostream wclog;
@@ -248,19 +248,19 @@ extern wostream wclog;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [wostream.](../standard-library/ostream-typedefs.md#wostream)
+Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje buforowanymi wstawieniami do standardowego wyjścia błędu jako szeroki strumień.
+Obiekt steruje buforowanymi wstawieniami do standardowego wyjścia błędu jako strumień szeroki.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `wclog`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `wclog` .
 
-### <a name="wcout"></a><a name="wcout"></a>wcout
+### <a name="wcout"></a><a name="wcout"></a> wcout
 
-Określa strumień `wcout` globalny.
+Określa `wcout` strumień globalny.
 
 ```cpp
 extern wostream wcout;
@@ -268,17 +268,17 @@ extern wostream wcout;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [wostream.](../standard-library/ostream-typedefs.md#wostream)
+Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt steruje wstawieniami do standardowego wyjścia jako szeroki strumień.
+Obiekt kontroluje wstawienia do wyjścia standardowego jako strumień szeroki.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [cerr](#cerr) na przykład `wcout`za pomocą .
+Zobacz [cerr](#cerr) , aby poznać przykład użycia `wcout` .
 
-`CString`instancje `wcout` w instrukcji muszą `const wchar_t*`być rzutowe do , jak pokazano w poniższym przykładzie.
+`CString` wystąpienia w `wcout` instrukcji muszą być rzutowane do `const wchar_t*` , jak pokazano w poniższym przykładzie.
 
 ```cpp
 CString cs("meow");
@@ -286,11 +286,11 @@ CString cs("meow");
 wcout <<(const wchar_t*) cs <<endl;
 ```
 
-Aby uzyskać więcej informacji, zobacz [Podstawowe operacje cstring](../atl-mfc-shared/basic-cstring-operations.md).
+Aby uzyskać więcej informacji, zobacz [podstawowe operacje CString](../atl-mfc-shared/basic-cstring-operations.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo gwintów w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

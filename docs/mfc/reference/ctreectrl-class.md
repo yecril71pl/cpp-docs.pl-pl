@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561820"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837622"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 
@@ -1364,9 +1364,8 @@ Uchwyt elementu widoku drzewa, który zajmuje określony punkt lub wartość NUL
 
 Gdy ta funkcja jest wywoływana, parametr *pt* określa współrzędne punktu do przetestowania. Funkcja zwraca uchwyt elementu w określonym punkcie lub wartość NULL, jeśli żaden element nie zajmuje punktu. Ponadto parametr *pFlags* zawiera wartość wskazującą lokalizację określonego punktu. Możliwe wartości:
 
-|||
+|Wartość|Opis|
 |-|-|
-|Wartość|Znaczenie|
 |TVHT_ABOVE|Powyżej obszaru klienckiego.|
 |TVHT_BELOW|Poniżej obszaru klienckiego.|
 |TVHT_NOWHERE|W obszarze klienta, ale poniżej ostatniego elementu.|
@@ -1379,7 +1378,6 @@ Gdy ta funkcja jest wywoływana, parametr *pt* określa współrzędne punktu do
 |TVHT_ONITEMSTATEICON|Na ikonie stanu dla elementu widoku drzewa, który znajduje się w stanie zdefiniowanym przez użytkownika.|
 |TVHT_TOLEFT|Z lewej strony obszaru klienckiego.|
 |TVHT_TORIGHT|Z prawej strony obszaru klienckiego.|
-|||
 
 ### <a name="example"></a>Przykład
 

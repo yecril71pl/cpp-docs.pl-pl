@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610702"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837763"
 ---
 # <a name="platformarray-class"></a>Platform:: Array, Klasa
 
@@ -44,9 +44,9 @@ Zobacz [Klasa platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.
 
 ### <a name="properties"></a>Właściwości
 
-|||
-|-|-|
-|[Array:: value](#value)|Pobiera dojście do bieżącej tablicy.|
+| Nazwa | Opis |
+|--|--|
+| [Array:: value](#value) | Pobiera dojście do bieżącej tablicy. |
 
 ### <a name="remarks"></a>Uwagi
 
@@ -100,7 +100,7 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Indeks oparty na zero, który identyfikuje element w tablicy. Minimalny indeks to 0, a maksymalny indeks to wartość określona przez `size` parametr w [konstruktorze Array](#ctor).
 
 ### <a name="return-value"></a>Wartość zwracana

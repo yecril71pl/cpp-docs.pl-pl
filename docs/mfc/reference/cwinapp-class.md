@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837609"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 Aby włączyć Menedżera ponownego uruchamiania, ustaw odpowiednie `m_dwRestartManagerSupportFlags` zachowanie. W poniższej tabeli przedstawiono dostępne flagi.
 
-|||
-|-|-|
 |Flaga|Opis|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Aplikacja jest zarejestrowana przy użyciu [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager). Menedżer ponownego uruchamiania jest odpowiedzialny za ponowne uruchomienie aplikacji, jeśli zakończył się nieoczekiwanie.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Aplikacja jest zarejestrowana za pomocą Menedżera ponownego uruchamiania, a Menedżer ponownego uruchamiania wywołuje funkcję wywołania zwrotnego odzyskiwania po ponownym uruchomieniu aplikacji. Domyślna funkcja wywołania zwrotnego odzyskiwania to [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Funkcja automatycznego zapisywania jest włączona, a Menedżer ponownego uruchamiania automatycznie zapisuje wszystkie otwarte dokumenty po ponownym uruchomieniu aplikacji.|

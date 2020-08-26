@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224828"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833260"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -159,7 +159,7 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 ### <a name="static-functions"></a>Funkcje statyczne
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[wdrożenie klasyczne](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
 |[globalne](#global)|Resetuje domyślne ustawienia lokalne dla programu.|
@@ -186,7 +186,7 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 **Przestrzeń nazw:** std
 
-## <a name="localecategory"></a><a name="category"></a>locale:: Category
+## <a name="localecategory"></a><a name="category"></a> locale:: Category
 
 Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.
 
@@ -226,7 +226,7 @@ Dwie bardziej przydatne wartości to:
 
 Można reprezentować dowolną grupę kategorii za pomocą `OR` tych stałych, jak w `monetary` &#124; `time` .
 
-## <a name="localeclassic"></a><a name="classic"></a>locale:: klasyczny
+## <a name="localeclassic"></a><a name="classic"></a> locale:: klasyczny
 
 Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>locale:: łączenie
+## <a name="localecombine"></a><a name="combine"></a> locale:: łączenie
 
 Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet-class"></a><a name="facet_class"></a>facet — Klasa
+## <a name="facet-class"></a><a name="facet_class"></a> facet — Klasa
 
 Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.
 
@@ -346,11 +346,11 @@ private:
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można skopiować ani przypisać obiektu klasy `facet` . Można tworzyć i niszczyć obiekty pochodne od klasy `locale::facet` , ale nie obiekty klasy podstawowej właściwej. Zazwyczaj konstruowa się obiekt `_Myfac` pochodny `facet` podczas konstruowania `locale` , jak w`locale loc(locale::classic(), new _Myfac);`
+Nie można skopiować ani przypisać obiektu klasy `facet` . Można tworzyć i niszczyć obiekty pochodne od klasy `locale::facet` , ale nie obiekty klasy podstawowej właściwej. Zazwyczaj konstruowa się obiekt `_Myfac` pochodny `facet` podczas konstruowania `locale` , jak w `locale loc(locale::classic(), new _Myfac);`
 
 W takich przypadkach Konstruktor klasy bazowej `facet` powinien mieć argument *odwołania* zerowe. Gdy obiekt nie jest już wymagany, jest usuwany, więc podajesz argument *odwołań* niezerowych tylko w tych rzadkich przypadkach, gdy ponosisz odpowiedzialność za okres istnienia obiektu.
 
-## <a name="localeglobal"></a><a name="global"></a>locale:: Global
+## <a name="localeglobal"></a><a name="global"></a> locale:: Global
 
 Resetuje domyślne ustawienia regionalne dla programu. To wywołanie ma wpływ na globalne ustawienia regionalne dla języków C i C++.
 
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id-class"></a><a name="id_class"></a>ID — Klasa
+## <a name="id-class"></a><a name="id_class"></a> ID — Klasa
 
 Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.
 
@@ -416,7 +416,7 @@ class id
 
 Klasa członkowska opisuje statyczny Obiekt członkowski wymagany przez każdy unikatowy zestaw reguł ustawień regionalnych. Nie można skopiować ani przypisać obiektu klasy `id` .
 
-## <a name="localelocale"></a><a name="locale"></a>locale:: locale
+## <a name="localelocale"></a><a name="locale"></a> locale:: locale
 
 Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych. Zawiera również destruktor.
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>locale:: Name
+## <a name="localename"></a><a name="name"></a> locale:: Name
 
 Zwraca przechowywaną nazwę ustawień regionalnych.
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>locale:: operator =
+## <a name="localeoperator"></a><a name="op_eq"></a> locale:: operator =
 
 Przypisuje ustawienia regionalne.
 
@@ -559,7 +559,7 @@ Przypisuje ustawienia regionalne.
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>locale:: operator! =
+## <a name="localeoperator"></a><a name="op_neq"></a> locale:: operator! =
 
 Testuje dwa ustawienia lokalne pod kątem nierówności.
 
@@ -620,7 +620,7 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>locale:: operator ()
+## <a name="localeoperator"></a><a name="op_call"></a> locale:: operator ()
 
 Porównuje dwa `basic_string` obiekty zgodnie z regułami porównania leksykograficznych zdefiniowanymi przez ten aspekt std:: COLLATE <charT> .
 
@@ -686,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>locale:: operator = =
+## <a name="localeoperator"></a><a name="op_eq_eq"></a> locale:: operator = =
 
 Testuje dwa ustawienia lokalne pod kątem równości.
 
@@ -751,7 +751,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<locale>](../standard-library/locale.md)\
 [Strony kodowe](../c-runtime-library/code-pages.md)\

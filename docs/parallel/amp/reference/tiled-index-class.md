@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 46a6b3548526f0917c4e022a12bf859242e70b20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9d295093031eaee0a2d4dd83aa931060e6eebc07
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375479"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832273"
 ---
 # <a name="tiled_index-class"></a>tiled_index — Klasa
 
-Udostępnia indeks do [obiektu tiled_extent.](tiled-extent-class.md) Ta klasa ma właściwości dostępu do elementów względem lokalnego początku kafelków i względem pochodzenia globalnego. Aby uzyskać więcej informacji o przestrzeniach sąsiadujących, zobacz [Korzystanie z kafelków](../../../parallel/amp/using-tiles.md).
+Zapewnia indeks w obiekcie [tiled_extent](tiled-extent-class.md) . Ta klasa ma właściwości umożliwiające dostęp do elementów względem lokalnego źródła kafelka i względem pierwotnego źródła. Aby uzyskać więcej informacji o sąsiadujących miejscach, zobacz [Używanie kafelków](../../../parallel/amp/using-tiles.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,13 +55,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ### <a name="parameters"></a>Parametry
 
 *_Dim0*<br/>
-Długość najważniejszego wymiaru.
+Długość najbardziej znaczącego wymiaru.
 
 *_Dim1*<br/>
-Długość wymiaru następnego do najbardziej znaczącego.
+Długość następnego do najbardziej znaczącego wymiaru.
 
 *_Dim2*<br/>
-Długość najmniej istotnego wymiaru.
+Długość najmniej znaczącego wymiaru.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -69,34 +69,33 @@ Długość najmniej istotnego wymiaru.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[konstruktor tiled_index](#ctor)|Inicjuje nowe wystąpienie klasy `tile_index`.|
+|[Konstruktor tiled_index](#ctor)|Inicjuje nowe wystąpienie klasy `tile_index`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[get_tile_extent](#tiled_index__get_tile_extent)|Zwraca obiekt [extent,](extent-class.md) który ma `tiled_index` wartości `_Dim0` `_Dim1`argumentów `_Dim2`szablonu , i .|
+|[get_tile_extent](#tiled_index__get_tile_extent)|Zwraca obiekt [zakresu](extent-class.md) , który ma wartości `tiled_index` argumentów szablonu `_Dim0` , `_Dim1` i `_Dim2` .|
 
 ### <a name="public-constants"></a>Stałe publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[stała bariera](#tiled_index__barrier)|Przechowuje [obiekt tile_barrier,](tile-barrier-class.md) który reprezentuje barierę w bieżącym kafelku wątków.|
-|||
-|[stała globalna](#tiled_index__global)|Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje indeks globalny w obiekcie siatki.|
-|[lokalna stała](#tiled_index__local)|Przechowuje `index` obiekt rangi 1, 2 lub 3, który reprezentuje indeks względny w bieżącym kafelku [obiektu tiled_extent.](tiled-extent-class.md)|
-|[Stała ranga](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|
-|[Stała kafelka](#tiled_index__tile)|Przechowuje `index` obiekt rangi 1, 2 lub 3, który reprezentuje współrzędne bieżącego kafelka `tiled_extent` obiektu.|
-|[Stała tile_dim0](#tiled_index__tile_dim0)|Przechowuje długość najważniejszego wymiaru.|
-|[Stała tile_dim1](#tiled_index__tile_dim1)|Przechowuje długość wymiaru następnego do najbardziej znaczącego.|
-|[Stała tile_dim2](#tiled_index__tile_dim2)|Przechowuje długość najmniej istotnego wymiaru.|
-|[Stała tile_origin](#tiled_index__tile_origin)|Przechowuje `index` obiekt rangi 1, 2 lub 3, który reprezentuje globalne współrzędne początku bieżącego kafelka w `tiled_extent` obiekcie.|
+|[Stała bariery](#tiled_index__barrier)|Przechowuje [tile_barrier](tile-barrier-class.md) obiektu, który reprezentuje barierę w bieżącym kafelku wątków.|
+|[Stała globalna](#tiled_index__global)|Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje indeks globalny w obiekcie siatki.|
+|[Stała lokalna](#tiled_index__local)|Przechowuje `index` obiekt rangi 1, 2 lub 3, który reprezentuje indeks względny w bieżącym kafelku obiektu [tiled_extent](tiled-extent-class.md) .|
+|[Stała rangi](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|
+|[Stała kafelka](#tiled_index__tile)|Przechowuje `index` obiekt o rangi 1, 2 lub 3, który reprezentuje współrzędne bieżącego kafelka `tiled_extent` obiektu.|
+|[tile_dim0 stała](#tiled_index__tile_dim0)|Przechowuje długość najbardziej znaczącego wymiaru.|
+|[tile_dim1 stała](#tiled_index__tile_dim1)|Przechowuje Długość następnego do najbardziej znaczącego wymiaru.|
+|[tile_dim2 stała](#tiled_index__tile_dim2)|Przechowuje długość najmniej znaczącego wymiaru.|
+|[tile_origin stała](#tiled_index__tile_origin)|Przechowuje `index` obiekt rangi 1, 2 lub 3, który reprezentuje globalne współrzędne pochodzenia bieżącego kafelka w `tiled_extent` obiekcie.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|Pobiera obiekt [extent,](extent-class.md) który ma `tiled_index` wartości `tiled_index` argumentów szablonu argumentów `_Dim0`szablonu , `_Dim1`i `_Dim2`.|
+|[tile_extent](#tile_extent)|Pobiera obiekt [zakresu](extent-class.md) , który ma wartości `tiled_index` `tiled_index` argumentów szablonu argumentów szablonu `_Dim0` , `_Dim1` i `_Dim2` .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -106,11 +105,11 @@ Długość najmniej istotnego wymiaru.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp.h
+**Nagłówek:** amp. h
 
-**Obszar nazw:** Współbieżności
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="tiled_index-constructor"></a><a name="ctor"></a>konstruktor tiled_index
+## <a name="tiled_index-constructor"></a><a name="ctor"></a> Konstruktor tiled_index
 
 Inicjuje nowe wystąpienie klasy `tiled_index`.
 
@@ -131,34 +130,33 @@ tiled_index(
 ### <a name="parameters"></a>Parametry
 
 *_Global*<br/>
-Globalny [indeks](index-class.md) skonstruowanego `tiled_index`.
+Globalny [indeks](index-class.md) skonstruowany `tiled_index` .
 
 *_Local*<br/>
-Lokalny [indeks](index-class.md) skonstruowanego`tiled_index`
+Lokalny [indeks](index-class.md) skonstruowanego `tiled_index`
 
 *_Tile*<br/>
 [Indeks](index-class.md) kafelków skonstruowanego`tiled_index`
 
 *_Tile_origin*<br/>
-[Indeks](index-class.md) pochodzenia kafelków skonstruowanego`tiled_index`
+[Indeks](index-class.md) początku kafelka skonstruowanego`tiled_index`
 
 *_Barrier*<br/>
-Obiekt [tile_barrier](tile-barrier-class.md) skonstruowanego `tiled_index`.
+Obiekt [tile_barrier](tile-barrier-class.md) skonstruowany `tiled_index` .
 
 *_Other*<br/>
-Obiekt, `tile_index` który ma zostać skopiowany do skonstruowanego `tiled_index`pliku .
+`tile_index`Obiekt, który ma zostać skopiowany do skonstruowanego obiektu `tiled_index` .
 
-### <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Przeciążenia
 
-|||
-|-|-|
 |Nazwa|Opis|
-|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicjuje nowe wystąpienie `tile_index` klasy z indeksu kafelka we współrzędnych globalnych i względnej pozycji na kafelku we współrzędnych lokalnych. Parametry `_Global` `_Tile_origin` i są obliczane.|
-|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicjuje nowe wystąpienie klasy, `tile_index` kopiując określony `tiled_index` obiekt.|
+|-|-|
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicjuje nowe wystąpienie `tile_index` klasy z indeksu kafelka w globalnych współrzędnych i względne położenie na kafelku we współrzędnych lokalnych. `_Global`Parametry i `_Tile_origin` są obliczane.|
+|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicjuje nowe wystąpienie `tile_index` klasy przez skopiowanie określonego `tiled_index` obiektu.|
 
-## <a name="get_tile_extent"></a><a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="get_tile_extent"></a><a name="tiled_index__get_tile_extent"></a> get_tile_extent
 
-Zwraca obiekt [extent,](extent-class.md) który ma `tiled_index` wartości `_Dim0` `_Dim1`argumentów `_Dim2`szablonu , i .
+Zwraca obiekt [zakresu](extent-class.md) , który ma wartości `tiled_index` argumentów szablonu `_Dim0` , `_Dim1` i `_Dim2` .
 
 ### <a name="syntax"></a>Składnia
 
@@ -168,11 +166,11 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`extent` Obiekt, który ma wartości `tiled_index` `_Dim0`argumentów `_Dim1`szablonu , i `_Dim2`.
+`extent`Obiekt, który ma wartości `tiled_index` argumentów szablonu `_Dim0` , `_Dim1` i `_Dim2` .
 
-## <a name="barrier"></a><a name="tiled_index__barrier"></a>Barierę
+## <a name="barrier"></a><a name="tiled_index__barrier"></a> barier
 
-Przechowuje [obiekt tile_barrier,](tile-barrier-class.md) który reprezentuje barierę w bieżącym kafelku wątków.
+Przechowuje [tile_barrier](tile-barrier-class.md) obiektu, który reprezentuje barierę w bieżącym kafelku wątków.
 
 ### <a name="syntax"></a>Składnia
 
@@ -180,7 +178,7 @@ Przechowuje [obiekt tile_barrier,](tile-barrier-class.md) który reprezentuje ba
 const tile_barrier barrier;
 ```
 
-## <a name="global"></a><a name="tiled_index__global"></a>Globalne
+## <a name="global"></a><a name="tiled_index__global"></a> globalne
 
 Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje globalny indeks obiektu.
 
@@ -190,9 +188,9 @@ Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentu
 const index<rank> global;
 ```
 
-## <a name="local"></a><a name="tiled_index__local"></a>Lokalnych
+## <a name="local"></a><a name="tiled_index__local"></a> LAN
 
-Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje indeks względny w bieżącym kafelku [obiektu tiled_extent.](tiled-extent-class.md)
+Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje indeks względny w bieżącym kafelku obiektu [tiled_extent](tiled-extent-class.md) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -200,7 +198,7 @@ Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentu
 const index<rank> local;
 ```
 
-## <a name="rank"></a><a name="tiled_index__rank"></a>Rank
+## <a name="rank"></a><a name="tiled_index__rank"></a> stopni
 
 Przechowuje rangę `tiled_index` obiektu.
 
@@ -210,9 +208,9 @@ Przechowuje rangę `tiled_index` obiektu.
 static const int rank = _Rank;
 ```
 
-## <a name="tile"></a><a name="tiled_index__tile"></a>Płytki
+## <a name="tile"></a><a name="tiled_index__tile"></a> tabliczek
 
-Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje współrzędne bieżącego kafelka [obiektu tiled_extent.](tiled-extent-class.md)
+Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje współrzędne bieżącego kafelka obiektu [tiled_extent](tiled-extent-class.md) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -220,9 +218,9 @@ Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentu
 const index<rank> tile;
 ```
 
-## <a name="tile_dim0"></a><a name="tiled_index__tile_dim0"></a>tile_dim0
+## <a name="tile_dim0"></a><a name="tiled_index__tile_dim0"></a> tile_dim0
 
-Przechowuje długość najważniejszego wymiaru.
+Przechowuje długość najbardziej znaczącego wymiaru.
 
 ### <a name="syntax"></a>Składnia
 
@@ -230,9 +228,9 @@ Przechowuje długość najważniejszego wymiaru.
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"></a><a name="tiled_index__tile_dim1"></a>tile_dim1
+## <a name="tile_dim1"></a><a name="tiled_index__tile_dim1"></a> tile_dim1
 
-Przechowuje długość wymiaru następnego do najbardziej znaczącego.
+Przechowuje Długość następnego do najbardziej znaczącego wymiaru.
 
 ### <a name="syntax"></a>Składnia
 
@@ -240,9 +238,9 @@ Przechowuje długość wymiaru następnego do najbardziej znaczącego.
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"></a><a name="tiled_index__tile_dim2"></a>tile_dim2
+## <a name="tile_dim2"></a><a name="tiled_index__tile_dim2"></a> tile_dim2
 
-Przechowuje długość najmniej istotnego wymiaru.
+Przechowuje długość najmniej znaczącego wymiaru.
 
 ### <a name="syntax"></a>Składnia
 
@@ -250,9 +248,9 @@ Przechowuje długość najmniej istotnego wymiaru.
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_origin"></a><a name="tiled_index__tile_origin"></a>tile_origin
+## <a name="tile_origin"></a><a name="tiled_index__tile_origin"></a> tile_origin
 
-Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje globalne współrzędne początku bieżącego kafelka w [tiled_extent](tiled-extent-class.md) obiektu.
+Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentuje globalne współrzędne pochodzenia bieżącego kafelka w obiekcie [tiled_extent](tiled-extent-class.md) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -260,9 +258,9 @@ Przechowuje obiekt [indeksu](index-class.md) rangi 1, 2 lub 3, który reprezentu
 const index<rank> tile_origin
 ```
 
-## <a name="tile_extent"></a><a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a><a name="tile_extent"></a> tile_extent
 
-Pobiera obiekt [extent,](extent-class.md) który ma `tiled_index` wartości `tiled_index` argumentów szablonu argumentów `_Dim0`szablonu , `_Dim1`i `_Dim2`.
+Pobiera obiekt [zakresu](extent-class.md) , który ma wartości `tiled_index` `tiled_index` argumentów szablonu argumentów szablonu `_Dim0` , `_Dim1` i `_Dim2` .
 
 ### <a name="syntax"></a>Składnia
 
@@ -272,4 +270,4 @@ __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obszar nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

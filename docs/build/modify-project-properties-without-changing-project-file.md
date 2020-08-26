@@ -3,16 +3,16 @@ title: 'Instrukcje: modyfikowanie właściwości projektu C++ i elementów docel
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1ba5647542f69cfc7748986e512e74401bfc404
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833364"
 ---
 # <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Instrukcje: modyfikowanie właściwości projektu C++ i elementów docelowych bez zmiany pliku projektu
 
-Właściwości projektu i obiekty docelowe można przesłonić z poziomu wiersza polecenia programu MSBuild bez zmiany pliku projektu. Jest to przydatne, gdy chcesz tymczasowo lub sporadycznie zastosować pewne właściwości. Założono pewne informacje dotyczące programu MSBuild. Aby uzyskać więcej informacji, zobacz [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
+Właściwości projektu i obiekty docelowe można przesłonić z poziomu wiersza polecenia programu MSBuild bez zmiany pliku projektu. Jest to przydatne, gdy chcesz tymczasowo lub sporadycznie zastosować pewne właściwości. Założono pewne informacje dotyczące programu MSBuild. Aby uzyskać więcej informacji, zobacz [MSBuild](/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Aby utworzyć plik. props lub. targets, można użyć edytora XML w programie Visual Studio lub dowolnego edytora tekstu. Nie używaj **Menedżer właściwości** w tym scenariuszu, ponieważ dodaje właściwości do pliku projektu.

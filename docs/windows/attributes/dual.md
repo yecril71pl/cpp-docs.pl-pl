@@ -1,17 +1,17 @@
 ---
-title: Podwójny (C++ atrybut com)
+title: Podwójny (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168216"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845409"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ Umieszcza interfejs w pliku. idl jako podwójny interfejs.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **podwójny** C++ atrybut poprzedza interfejs, powoduje, że interfejs należy umieścić wewnątrz bloku biblioteki w wygenerowanym pliku IDL.
+Gdy **podwójny** atrybut C++ poprzedza interfejs, powoduje, że interfejs należy umieścić wewnątrz bloku biblioteki w wygenerowanym pliku IDL.
 
 ## <a name="example"></a>Przykład
 
@@ -55,13 +55,11 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|**interface**|
+|**Dotyczy**|**interfejsu**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
@@ -69,8 +67,8 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty w zależności od zastosowania](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[Atrybuty według użycia](attributes-by-usage.md)<br/>
+[celnej](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

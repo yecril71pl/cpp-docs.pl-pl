@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404063"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837089"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>Outp, outpw, _outp, _outpw _outpd
 
@@ -91,7 +91,7 @@ Funkcje zwracają dane wyjściowe. Nie ma żadnego powrotu błędu.
 
 Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie systemu Windows w trybie użytkownika.
 
-Informacje o korzystaniu z portów we/wy w systemie operacyjnym Windows znajdują się w temacie [komunikacja szeregowa](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Informacje o korzystaniu z portów we/wy w systemie operacyjnym Windows znajdują się w temacie [komunikacja szeregowa](/previous-versions/ff802693(v=msdn.10)).
 
 `outp`Nazwy i `outpw` są starsze, przestarzałe nazwy dla `_outp` `_outpw` funkcji i. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 

@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ atrybut com)
+title: idl_module (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845227"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -47,7 +47,7 @@ Obowiązkowe Identyfikator pomocy dla tej biblioteki typów.
 *hidden*<br/>
 Obowiązkowe Parametr, który uniemożliwia wyświetlenie biblioteki. Aby uzyskać więcej informacji, zobacz [ukryty](/windows/win32/Midl/hidden) atrybut MIDL.
 
-*restricted*<br/>
+*podlega*<br/>
 Obowiązkowe Nie można arbitralnie wywołać elementów członkowskich biblioteki. Aby uzyskać więcej informacji, zobacz atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 *Deklaracja funkcji*<br/>
@@ -78,19 +78,17 @@ void FuncName(int i);
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|Dowolnym miejscu|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[Atrybuty autonomiczne](stand-alone-attributes.md)<br/>
+[Autotekstu](entry.md)

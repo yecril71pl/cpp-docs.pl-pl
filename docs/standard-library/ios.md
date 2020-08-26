@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845487"
 ---
 # <a name="ltiosgt"></a>&lt;wykonane&gt;
 
@@ -20,7 +20,7 @@ Definiuje kilka typów i funkcji podstawowych dla operacji iostreams. Ten nagł�
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<ios>
+**Nagłówek**: \<ios>
 
 **Przestrzeń nazw:** std
 
@@ -43,7 +43,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[wykonane](../standard-library/ios-typedefs.md#ios)|Obsługuje klasę systemu iOS ze starej biblioteki iostream.|
 |[streamoff —](../standard-library/ios-typedefs.md#streamoff)|Obsługuje operacje wewnętrzne.|
@@ -54,7 +54,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 ### <a name="manipulators"></a>Manipulatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **`true`** lub **`false`** w strumieniu.|
 |[dec](../standard-library/ios-functions.md#dec)|Określa, że zmienne całkowite pojawiają się w notacji Base 10.|
@@ -83,7 +83,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 ### <a name="error-reporting"></a>Raportowanie błędów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Szablon klasy zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni danych wejściowych (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych ( [basic_ostream](../standard-library/basic-ostream-class.md)szablonu klasy), które są zależne od parametrów szablonu.|
 |[FPOS](../standard-library/fpos-class.md)|Szablon klasy opisuje obiekt, który może przechowywać wszystkie informacje potrzebne do przywrócenia dowolnego wskaźnika położenia pliku w ramach dowolnego strumienia.|

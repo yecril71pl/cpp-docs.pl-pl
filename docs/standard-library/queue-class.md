@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232940"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832610"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -68,21 +68,21 @@ Istnieją trzy typy adapterów kontenerów zdefiniowane przez standardową bibli
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[niej](#queue)|Tworzy element a `queue` , który jest pusty lub jest kopią podstawowego obiektu kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[container_type](#container_type)|Typ, który dostarcza kontener podstawowy, który ma zostać dostosowany przez `queue` .|
 |[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w `queue` .|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `queue` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Wstecz](#back)|Zwraca odwołanie do ostatniego i ostatnio dodanego elementu z tyłu `queue` .|
 |[puste](#empty)|Testuje, czy `queue` jest pusty.|
@@ -91,7 +91,7 @@ Istnieją trzy typy adapterów kontenerów zdefiniowane przez standardową bibli
 |[push](#push)|Dodaje element do tyłu `queue` .|
 |[zmienia](#size)|Zwraca liczbę elementów w `queue` .|
 
-## <a name="back"></a><a name="back"></a>Wstecz
+## <a name="back"></a><a name="back"></a> Wstecz
 
 Zwraca odwołanie do ostatniego i ostatnio dodanego elementu z tyłu kolejki.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Typ, który dostarcza kontener bazowy, który ma zostać dostosowany.
 
@@ -155,7 +155,7 @@ Aby uzyskać więcej informacji na temat `Container` , zobacz sekcję Uwagi w te
 
 Zapoznaj się z przykładem dla [kolejki](#queue) , aby zapoznać się z przykładem sposobu deklarowania i używania `container_type` .
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 Testuje, czy kolejka jest pusta.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>FSB
+## <a name="front"></a><a name="front"></a> FSB
 
 Zwraca odwołanie do pierwszego elementu na początku kolejki.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>skakując
+## <a name="pop"></a><a name="pop"></a> skakując
 
 Usuwa element z przodu kolejki.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>wydajności
+## <a name="push"></a><a name="push"></a> wydajności
 
 Dodaje element do tyłu kolejki.
 
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a><a name="queue"></a>niej
+## <a name="queue"></a><a name="queue"></a> niej
 
 Tworzy kolejkę, która jest pusta lub jest kopią podstawowego obiektu kontenera.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 Zwraca liczbę elementów w kolejce.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w kolejce.
 
@@ -482,7 +482,7 @@ Typ jest synonimem dla `size_type` kontenera podstawowego dostosowany przez kole
 
 Zapoznaj się z przykładem dla [kolejki:: front](#front) , aby zapoznać się z przykładem sposobu deklarowania i używania `size_type` .
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w kolejce.
 
@@ -524,7 +524,7 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

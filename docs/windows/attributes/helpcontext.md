@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 77c085f96e778b19886c4e6e3c8f07b43fbe8f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60e6bf66e088872a357751e4a7b7e043cd9b4dfc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211986"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845253"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -38,9 +38,7 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać si
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejs**, **`typedef`** , **`class`** , metoda, właściwość|
 |**Powtarzalne**|Nie|
@@ -49,7 +47,7 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać si
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

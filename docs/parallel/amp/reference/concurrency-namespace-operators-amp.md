@@ -2,22 +2,34 @@
 title: Operatory przestrzeni nazw współbieżności (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228482"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845344"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeni nazw współbieżności (AMP)
 
-||||
-|-|-|-|
-|[operator! =](#operator_neq)|[zakład](#operator_mod)|[zakład](#operator_star)|
-|[operator +](#operator_add)|[zakład](#operator-)|[zakład](#operator_div)|
-|[operator = =](#operator_eq_eq)|
+:::row:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator+`](#operator_add)\
+      [`operator-`](#operator-)
+   :::column-end:::
+   :::column span="":::
+      [`operator*`](#operator_star)\
+      [`operator/`](#operator_div)
+   :::column-end:::
+   :::column span="":::
+      [`operator%`](#operator_mod)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 Określa, czy określone argumenty są równe.
 
@@ -46,7 +58,7 @@ Jedna z krotek do porównania.
 
 **`true`** Jeśli krotki są równe; w przeciwnym razie **`false`** .
 
-## <a name="operator"></a><a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 Określa, czy określone argumenty nie są równe.
 
@@ -75,7 +87,7 @@ Jedna z krotek do porównania.
 
 **`true`** Jeśli krotki nie są równe; w przeciwnym razie **`false`** .
 
-## <a name="operator"></a><a name="operator_add"></a>operator +
+## <a name="operator"></a><a name="operator_add"></a> operator +
 
 Oblicza sumę elementów dla określonych argumentów.
 
@@ -120,7 +132,7 @@ Jeden z argumentów do dodania.
 
 Suma składnika dla określonych argumentów.
 
-## <a name="operator-"></a><a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a> zakład
 
 Oblicza różnicę składnika między określonymi argumentami.
 
@@ -165,7 +177,7 @@ Argument odejmowania.
 
 Różnica składnika między określonymi argumentami.
 
-## <a name="operator"></a><a name="operator_star"></a>zakład
+## <a name="operator"></a><a name="operator_star"></a> zakład
 
 Oblicza produkt ze składnikami dla określonych argumentów.
 
@@ -202,7 +214,7 @@ Jedna z krotek do pomnożenia.
 
 Iloczyn dotyczący składnika określonych argumentów.
 
-## <a name="operator"></a><a name="operator_div"></a>zakład
+## <a name="operator"></a><a name="operator_div"></a> zakład
 
 Oblicza iloraz składnika dla określonych argumentów.
 
@@ -239,7 +251,7 @@ Krotka, według której ma zostać podzielona wartość.
 
 Iloraz składnika dla określonych argumentów.
 
-## <a name="operator"></a><a name="operator_mod"></a>zakład
+## <a name="operator"></a><a name="operator_mod"></a> zakład
 
 Oblicza moduł pierwszego określonego argumentu przez drugi określony argument.
 
@@ -276,6 +288,6 @@ Krotka do modulo przez.
 
 Wynik pierwszego określonego argumentu, który został określony dla drugiego określonego argumentu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace-cpp-amp.md)

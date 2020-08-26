@@ -1,5 +1,5 @@
 ---
-title: Interfejs IAxWinHostWindow
+title: IAxWinHostWindow, interfejs
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 44681b94e0bd1dfd757ebfa19f83074785dd95f5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329997"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833377"
 ---
-# <a name="iaxwinhostwindow-interface"></a>Interfejs IAxWinHostWindow
+# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow, interfejs
 
-Ten interfejs zawiera metody manipulowania formantem i jego obiektem hosta.
+Ten interfejs zapewnia metody manipulowania kontrolką i jego obiektem hosta.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,18 +37,18 @@ interface IAxWinHostWindow : IUnknown
 
 ### <a name="methods"></a>Metody
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[Załączkontrolę](#attachcontrol)|Dołącza istniejący formant do obiektu hosta.|
-|[CreateControl (Kontrola tworzenia)](#createcontrol)|Tworzy formant i dołącza go do obiektu hosta.|
-|[UtwórzControlEx](#createcontrolex)|Tworzy formant, dołącza go do obiektu hosta i opcjonalnie konfiguruje program obsługi zdarzeń.|
-|[Kontrola zapytania](#querycontrol)|Zwraca wskaźnik interfejsu do hostowanego formantu.|
-|[SetExternalDispatch (Niewyrównanie)](#setexternaldispatch)|Ustawia interfejs `IDispatch` zewnętrzny.|
-|[ZestawExternalUiHandler](#setexternaluihandler)|Ustawia interfejs `IDocHostUIHandlerDispatch` zewnętrzny.|
+|[AttachControl](#attachcontrol)|Dołącza istniejący formant do obiektu hosta.|
+|[Formant kontrolny](#createcontrol)|Tworzy formant i dołącza go do obiektu hosta.|
+|[CreateControlEx](#createcontrolex)|Tworzy kontrolkę, dołącza ją do obiektu hosta i opcjonalnie konfiguruje procedurę obsługi zdarzeń.|
+|[QueryControl](#querycontrol)|Zwraca wskaźnik interfejsu do kontrolki hostowanej.|
+|[SetExternalDispatch](#setexternaldispatch)|Ustawia interfejs zewnętrzny `IDispatch` .|
+|[SetExternalUIHandler](#setexternaluihandler)|Ustawia interfejs zewnętrzny `IDocHostUIHandlerDispatch` .|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest narażony przez obiekty hostingowe activex formantu ATL. Wywołanie metod w tym interfejsie, aby utworzyć i/lub dołączyć formant do obiektu hosta, aby uzyskać interfejs z hosta formantu lub ustawić zewnętrzny dispinterface lub obsługi interfejsu użytkownika do użycia podczas hostowania przeglądarki sieci Web.
+Ten interfejs jest udostępniany przez obiekty obsługujące kontrolki ActiveX ATL. Wywołaj metody z tego interfejsu, aby utworzyć i/lub dołączyć kontrolkę do obiektu hosta, uzyskać interfejs z hostowanej kontrolki lub ustawić zewnętrzny dispinterface lub procedurę obsługi interfejsu użytkownika do użycia podczas hostowania przeglądarki sieci Web.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -56,12 +56,12 @@ Definicja tego interfejsu jest dostępna jako IDL lub C++, jak pokazano poniżej
 
 |Typ definicji|Plik|
 |---------------------|----------|
-|Idl|ATLIFace.idl|
-|C++|ATLIFace.h (również w ATLBase.h)|
+|IDL|ATLIFace. idl|
+|C++|ATLIFace. h (również zawarte w ATLBase. h)|
 
-## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a> IAxWinHostWindow::AttachControl
 
-Dołącza istniejący (i wcześniej zainicjowany) formant do obiektu hosta przy użyciu okna identyfikowanego przez *hWnd*.
+Dołącza istniejący (i wcześniej zainicjowany) formant do obiektu hosta przy użyciu okna identyfikowanego przez *Właściwość HWND*.
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -69,19 +69,19 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkControl (Kontrola nie)*<br/>
-[w] Wskaźnik do `IUnknown` interfejsu formantu, który ma być dołączony do obiektu hosta.
+*pUnkControl*<br/>
+podczas Wskaźnik do `IUnknown` interfejsu formantu, który ma zostać dołączony do obiektu hosta.
 
-*Hwnd*<br/>
-[w] Dojście do okna, które ma być używane do hostingu.
+*Właściwość*<br/>
+podczas Dojście do okna, które ma być używane na potrzeby hostingu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a> IAxWinHostWindow:: IsControl
 
-Tworzy formant, inicjuje go i hostuje go w oknie identyfikowanym przez *hWnd*.
+Tworzy kontrolkę, inicjuje ją i hostuje w oknie identyfikowanym przez *Właściwość HWND*.
 
 ```
 STDMETHOD(CreateControl)(
@@ -93,13 +93,13 @@ STDMETHOD(CreateControl)(
 ### <a name="parameters"></a>Parametry
 
 *lpTricsData*<br/>
-[w] Ciąg identyfikujący formant do utworzenia. Może to być identyfikator CLSID (musi zawierać nawiasy klamrowe), progid, adres URL lub nieprzetworzony kod HTML (poprzedzony **mshtml:**).
+podczas Ciąg identyfikujący formant do utworzenia. Może to być identyfikator CLSID (musi zawierać nawiasy klamrowe), ProgID, URL lub nieprzetworzony kod HTML (poprzedzony przez **MSHTML:**).
 
-*Hwnd*<br/>
-[w] Dojście do okna, które ma być używane do hostingu.
+*Właściwość*<br/>
+podczas Dojście do okna, które ma być używane na potrzeby hostingu.
 
-*pStream (Strumień)*<br/>
-[w] Wskaźnik interfejsu dla strumienia zawierającego dane inicjowania dla formantu. Może mieć wartość NULL.
+*pStream*<br/>
+podczas Wskaźnik interfejsu dla strumienia zawierającego dane inicjujące dla kontrolki. Może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -107,15 +107,15 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-To okno będzie podklasyfikowane przez obiekt hosta ujawniający ten interfejs, dzięki czemu wiadomości mogą być odzwierciedlane do formantu i inne funkcje kontenera będą działać.
+To okno zostanie poddana podklasie obiektu hosta, który uwidacznia ten interfejs, tak aby komunikaty mogły być odzwierciedlone na kontrolce, a inne funkcje kontenera będą działać.
 
-Wywołanie tej metody jest równoznaczne z [wywołaniem IAxWinHostWindow::CreateControlEx](#createcontrolex).
+Wywołanie tej metody jest równoważne wywołaniu [IAxWinHostWindow:: CreateControlEx](#createcontrolex).
 
-Aby utworzyć licencjonowany formant ActiveX, zobacz [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Aby utworzyć licencjonowany formant ActiveX, zobacz [IAxWinHostWindowLic::](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)iscontroling.
 
-## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a> IAxWinHostWindow::CreateControlEx
 
-Tworzy formant ActiveX, inicjuje go i obsługuje w określonym oknie, podobnie jak [IAxWinHostWindow::CreateControl](#createcontrol).
+Tworzy formant ActiveX, inicjuje go i hostuje w określonym oknie, podobnie jak [IAxWinHostWindow:: IsControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -130,22 +130,22 @@ STDMETHOD(CreateControlEx)(
 ### <a name="parameters"></a>Parametry
 
 *lpTricsData*<br/>
-[w] Ciąg identyfikujący formant do utworzenia. Może to być identyfikator CLSID (musi zawierać nawiasy klamrowe), progid, adres URL lub nieprzetworzony kod HTML (poprzedzony **mshtml:**).
+podczas Ciąg identyfikujący formant do utworzenia. Może to być identyfikator CLSID (musi zawierać nawiasy klamrowe), ProgID, URL lub nieprzetworzony kod HTML (poprzedzony prefiksem **MSHTML:**).
 
-*Hwnd*<br/>
-[w] Dojście do okna, które ma być używane do hostingu.
+*Właściwość*<br/>
+podczas Dojście do okna, które ma być używane na potrzeby hostingu.
 
-*pStream (Strumień)*<br/>
-[w] Wskaźnik interfejsu dla strumienia zawierającego dane inicjowania dla formantu. Może mieć wartość NULL.
+*pStream*<br/>
+podczas Wskaźnik interfejsu dla strumienia zawierającego dane inicjujące dla kontrolki. Może mieć wartość NULL.
 
-*ppUnk (polski)*<br/>
-[na zewnątrz] Adres wskaźnika, który otrzyma `IUnknown` interfejs utworzonego formantu. Może mieć wartość NULL.
+*ppUnk*<br/>
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` interfejs utworzonej kontrolki. Może mieć wartość NULL.
 
 *riidAdvise*<br/>
-[w] Identyfikator interfejsu wychodzącego interfejsu w contained object. Można IID_NULL.
+podczas Identyfikator interfejsu interfejsu wychodzącego na zawartym obiekcie. Może być IID_NULL.
 
 *punkAdvise*<br/>
-[w] Wskaźnik do `IUnknown` interfejsu obiektu ujścia, który ma być połączony z punktem połączenia na zawartym obiekcie określonym przez `iidSink`program .
+podczas Wskaźnik do `IUnknown` interfejsu obiektu ujścia, który ma być połączony z punktem połączenia na zawartym obiekcie określonym przez `iidSink` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -153,13 +153,13 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-W `CreateControl` przeciwieństwie `CreateControlEx` do metody, umożliwia również odbieranie wskaźnik interfejsu do nowo utworzonego formantu i skonfigurować ujście zdarzeń, aby odbierać zdarzenia uruchamiane przez formant.
+W przeciwieństwie do `CreateControl` metody, `CreateControlEx` umożliwia również otrzymywanie wskaźnika interfejsu do nowo utworzonej kontrolki i Konfigurowanie ujścia zdarzeń do odbierania zdarzeń wyzwalanych przez formant.
 
-Aby utworzyć licencjonowany formant ActiveX, zobacz [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Aby utworzyć licencjonowany formant ActiveX, zobacz [IAxWinHostWindowLic:: CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
 
-## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a> IAxWinHostWindow::QueryControl
 
-Zwraca określony wskaźnik interfejsu dostarczony przez kontrolę hosta.
+Zwraca określony wskaźnik interfejsu dostarczony przez obsługiwaną kontrolę.
 
 ```
 STDMETHOD(QueryControl)(
@@ -169,19 +169,19 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*Riid*<br/>
-[w] Identyfikator interfejsu na formancie, o który się prosi.
+*riid*<br/>
+podczas Identyfikator interfejsu na żądanym formancie.
 
-*ppvObiekt*<br/>
-[na zewnątrz] Adres wskaźnika, który otrzyma określony interfejs utworzonego formantu.
+*ppvObject*<br/>
+określoną Adres wskaźnika, który będzie otrzymywał określony interfejs utworzonej kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a> IAxWinHostWindow::SetExternalDispatch
 
-Ustawia zewnętrzny dispinterface, który jest dostępny do zawartych formantów za pośrednictwem [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) metody.
+Ustawia zewnętrzny dispinterface, który jest dostępny dla zawartych kontrolek za pomocą metody [IDocHostUIHandlerDispatch:: getexternal](../../atl/reference/idochostuihandlerdispatch-interface.md) .
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -189,16 +189,16 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp (Niem.*<br/>
-[w] Wskaźnik do `IDispatch` interfejsu.
+*pDisp*<br/>
+podczas Wskaźnik do `IDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUiHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a> IAxWinHostWindow::SetExternalUIHandler
 
-Wywołanie tej funkcji, aby ustawić zewnętrzny interfejs [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) dla `CAxWindow` obiektu.
+Wywołaj tę funkcję, aby ustawić zewnętrzny interfejs [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) dla `CAxWindow` obiektu.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -206,8 +206,8 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp (Niem.*<br/>
-[w] Wskaźnik do `IDocHostUIHandlerDispatch` interfejsu.
+*pDisp*<br/>
+podczas Wskaźnik do `IDocHostUIHandlerDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -215,10 +215,10 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest używana przez formanty (takie jak formant przeglądarki `IDocHostUIHandlerDispatch` sieci Web), które przeszukują witrynę hosta dla interfejsu.
+Ta funkcja jest używana przez kontrolki (takie jak kontrolka przeglądarki sieci Web), które wysyła zapytanie do lokacji hosta dla `IDocHostUIHandlerDispatch` interfejsu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Interfejs IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[IAxWinAmbientDispatch, interfejs](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
-[AtlAxGetHost (AtlAxGetHost)](composite-control-global-functions.md#atlaxgethost)
+[AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

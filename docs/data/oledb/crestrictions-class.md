@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220447"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844967"
 ---
 # <a name="crestrictions-class"></a>Klasa CRestrictions
 
@@ -51,11 +51,11 @@ Wskaźnik do identyfikatora GUID schematu.
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Otwórz](#open)|Zwraca zestaw wyników zgodnie z ograniczeniami wprowadzonymi przez użytkownika.|
 
-## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a> CRestrictions:: Open
 
 Zwraca zestaw wyników zgodnie z ograniczeniami wprowadzonymi przez użytkownika.
 
@@ -94,7 +94,7 @@ W zestawie wierszy schematu można określić maksymalnie siedem ograniczeń.
 
 Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , aby uzyskać informacje o zdefiniowanych ograniczeniach dla każdego zestawu wierszy schematu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

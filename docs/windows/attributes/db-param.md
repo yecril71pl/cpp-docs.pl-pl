@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215312"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833078"
 ---
 # <a name="db_param"></a>db_param
 
@@ -104,9 +104,7 @@ struct CSalesbyYear {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
 |**Powtarzalne**|Nie|
@@ -115,6 +113,6 @@ struct CSalesbyYear {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)

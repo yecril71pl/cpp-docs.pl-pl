@@ -2,12 +2,12 @@
 title: System typów (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221552"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845149"
 ---
 # <a name="type-system-ccx"></a>System typów (C++/CX)
 
@@ -35,12 +35,11 @@ Metadane w pliku winmd przedstawiają opublikowaną powierzchnię kodu. Opubliko
 
 Określa, czy typ lub metoda jest widoczna w metadanych, zależy od tego, jakie Modyfikatory dostępności są do niego stosowane. Aby były widoczne, typ musi być zadeklarowany w przestrzeni nazw i musi być zadeklarowany jako publiczny. Niepubliczna Klasa ref jest dozwolona jako wewnętrzny typ pomocnika w kodzie; nie jest on widoczny w metadanych. Nawet w publicznej klasie ref nie wszystkie składowe są zawsze widoczne. W poniższej tabeli wymieniono relacje między specyfikatorami dostępu C++ w publicznej klasie referencyjnej i środowisko wykonawcze systemu Windows widoczność metadanych:
 
-|||
-|-|-|
-|**Opublikowano w metadanych**|**Nie opublikowano w metadanych**|
-|public|private|
-|protected|internal|
-|chroniona publiczna|private protected|
+| Opublikowano w metadanych | Nie opublikowano w metadanych |
+|--|--|
+| public | private |
+| protected | internal |
+| chroniona publiczna | private protected |
 
 Możesz użyć **Przeglądarka obiektów** , aby wyświetlić zawartość plików WinMD. Składniki środowisko wykonawcze systemu Windows dołączone do systemu Windows znajdują się w pliku winmd systemu Windows. Domyślny plik. winmd zawiera podstawowe typy, które są używane w języku C++/CX, a platforma. winmd zawiera dodatkowe typy z przestrzeni nazw platformy. Domyślnie te trzy pliki winmd są zawarte w każdym projekcie C++ dla aplikacji platforma uniwersalna systemu Windows.
 
@@ -51,7 +50,7 @@ Możesz użyć **Przeglądarka obiektów** , aby wyświetlić zawartość plikó
 
 W poniższych sekcjach opisano główne funkcje systemu typu środowisko wykonawcze systemu Windows i sposób ich obsługi w języku C++/CX.
 
-### <a name="namespaces"></a>Namespaces
+### <a name="namespaces"></a>Przestrzenie nazw
 
 Wszystkie typy środowisko wykonawcze systemu Windows muszą być zadeklarowane w przestrzeni nazw; sam interfejs API systemu Windows jest zorganizowany według przestrzeni nazw. Plik. winmd musi mieć taką samą nazwę, która ma główną przestrzeń nazw. Na przykład Klasa o nazwie A. B. C. MyClass można utworzyć wystąpienie tylko wtedy, gdy jest zdefiniowana w pliku metadanych o nazwie A. winmd lub A. B. winmd lub A. B. winmd. Nazwa biblioteki DLL nie jest wymagana, aby odpowiadała nazwie pliku winmd.
 
@@ -75,7 +74,7 @@ Ciąg środowisko wykonawcze systemu Windows jest niezmiennym sekwencją 16-bito
 
 Aby uzyskać więcej informacji, zobacz [ciągi](../cppcx/strings-c-cx.md).
 
-### <a name="arrays"></a>Macierze
+### <a name="arrays"></a>Tablice
 
 Środowisko wykonawcze systemu Windows obsługuje tablice jednowymiarowe dowolnego typu. Tablice tablic nie są obsługiwane.  W języku C++/CX tablice środowisko wykonawcze systemu Windows są rzutowane jako [Klasa platform:: Array](../cppcx/platform-array-class.md).
 
@@ -179,6 +178,6 @@ Opisuje sposób oznaczania publicznych interfejsów API jako przestarzałych prz
 
 Aby uzyskać więcej informacji, zobacz [przestarzałe typy i składowe](../cppcx/deprecating-types-and-members-c-cx.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

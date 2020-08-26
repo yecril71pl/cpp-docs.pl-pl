@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f61eaf535102c8885e828176434acf221dfe2457
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232758"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836884"
 ---
 # <a name="rdx"></a>rdx
 
@@ -42,9 +42,7 @@ Ten atrybut może być używany w połączeniu z atrybutami [coclass](coclass.md
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`** lub **`struct`** członek|
 |**Powtarzalne**|Nie|
@@ -76,7 +74,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

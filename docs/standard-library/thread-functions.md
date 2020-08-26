@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232862"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845045"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;&gt;funkcje wątku
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[wymiany](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[wymiany](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 Jednoznacznie identyfikuje bieżący wątek wykonania.
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 Obiekt typu [thread:: ID](../standard-library/thread-class.md) , który jednoznacznie identyfikuje bieżący wątek wykonywania.
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 Blokuje wątek wywołujący.
 
@@ -59,7 +60,7 @@ Obiekt [czasu trwania](../standard-library/duration-class.md) , który określa 
 
 Funkcja blokuje wątek wywołujący przez co najmniej godzinę określoną przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 Blokuje wątek wywołujący co najmniej do określonego czasu.
 
@@ -79,7 +80,7 @@ Reprezentuje punkt w czasie.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia Stany dwóch `thread` obiektów.
 
@@ -99,7 +100,7 @@ Prawidłowy `thread` obiekt.
 
 Wywołania funkcji `Left.swap(Right)` .
 
-## <a name="yield"></a><a name="yield"></a>zbiór
+## <a name="yield"></a><a name="yield"></a> zbiór
 
 Sygnalizuje systemowi operacyjnemu Uruchamianie innych wątków, nawet jeśli bieżący wątek będzie normalnie nadal działać.
 
@@ -107,6 +108,6 @@ Sygnalizuje systemowi operacyjnemu Uruchamianie innych wątków, nawet jeśli bi
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<thread>](../standard-library/thread.md)

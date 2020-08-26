@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833351"
 ---
 # <a name="optimization-best-practices"></a>Najlepsze rozwiązania dotyczące optymalizacji
 
@@ -40,7 +40,7 @@ Zdecydowanie zaleca się również generowanie symboli debugowania, nawet w przy
 
 **`/Op`** Opcja kompilatora została usunięta i dodano następujące cztery opcje kompilatora dotyczące optymalizacji zmiennoprzecinkowej:
 
-|||
+|Opcja|Opis|
 |-|-|
 |**`/fp:precise`**|Jest to domyślne zalecenie i powinno być używane w większości przypadków.|
 |**`/fp:fast`**|Zalecane, jeśli wydajność ma najwyższą ważność, na przykład w grach. Spowoduje to najszybszą wydajność.|
@@ -87,7 +87,7 @@ Aby uzyskać więcej informacji, zobacz [`optimize`](../preprocessor/optimize.md
 
 Funkcja tworzenia konspektu jest jednym z najważniejszych optymalizacji, które wykonuje kompilator, i tutaj porozmawiamy o kilku pragmach, które pomagają zmodyfikować to zachowanie.
 
-`#pragma inline_recursion`jest przydatne do określania, czy aplikacja ma mieć możliwość wbudowania wywołania cyklicznego. Domyślnie jest on wyłączony. W przypadku płytkiej rekursji małych funkcji można ją włączyć. Aby uzyskać więcej informacji, zobacz [`inline_recursion`](../preprocessor/inline-recursion.md).
+`#pragma inline_recursion` jest przydatne do określania, czy aplikacja ma mieć możliwość wbudowania wywołania cyklicznego. Domyślnie jest on wyłączony. W przypadku płytkiej rekursji małych funkcji można ją włączyć. Aby uzyskać więcej informacji, zobacz [`inline_recursion`](../preprocessor/inline-recursion.md).
 
 Kolejną przydatną pragmą ograniczającą głębokość wykreślania jest `#pragma inline_depth` . Jest to zazwyczaj przydatne w sytuacjach, w których próbujesz ograniczyć rozmiar programu lub funkcji. Aby uzyskać więcej informacji, zobacz [`inline_depth`](../preprocessor/inline-depth.md).
 
@@ -131,6 +131,6 @@ Dlatego zaleca się unikanie wprowadzania bloków try/catch do kodu, który nie 
 
 Na koniec Zgłoś wyjątki tylko w przypadku wyjątkowych przypadków. Użycie wyjątków dla ogólnego przepływu sterowania prawdopodobnie spowoduje pogorszenie wydajności.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Optymalizowanie kodu](optimizing-your-code.md)

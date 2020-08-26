@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222800"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837349"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -29,7 +29,7 @@ Aby można było obsługiwać mapy zdarzeń, MFC udostępnia następujące makra
 
 ### <a name="event-map-declaration-and-demarcation"></a>Deklaracja i rozgraniczanie mapy zdarzeń
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Deklaruje, że mapa zdarzeń zostanie użyta w klasie do mapowania zdarzeń do funkcji uruchamiania zdarzeń (musi być używana w deklaracji klasy).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Rozpoczyna definicję mapy zdarzeń (należy ją użyć w implementacji klasy).|
@@ -37,19 +37,19 @@ Aby można było obsługiwać mapy zdarzeń, MFC udostępnia następujące makra
 
 ### <a name="event-mapping-macros"></a>Makra mapowania zdarzeń
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Wskazuje, która funkcja uruchamiania zdarzeń uruchamia określone zdarzenie.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Wskazuje, która funkcja uruchamiania zdarzeń uruchamia określone zdarzenie z wyznaczonym IDENTYFIKATORem wysyłania.|
 
 ### <a name="message-mapping-macros"></a>Makra mapowania komunikatów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Wskazuje niestandardowe zlecenie obsługiwane przez kontrolkę OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Zastępuje standardowe mapowanie czasownika kontrolki OLE.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Każda `COleControl` Klasa pochodna w programie może zapewnić mapę zdarzeń, aby określić zdarzenia, które będą uruchamiane przez formant.
 
@@ -67,7 +67,7 @@ Aby uzyskać więcej informacji na temat map zdarzeń, zobacz artykuł [formanty
 
 **Nagłówek** 'afxctl. h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Rozpoczyna definicję mapy zdarzeń.
 
@@ -93,7 +93,7 @@ Aby uzyskać więcej informacji na temat map zdarzeń i makra BEGIN_EVENT_MAP, z
 
 **Nagłówek** 'afxctl. h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 Użyj makra END_EVENT_MAP, aby zakończyć definicję mapy zdarzeń.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **Nagłówek** 'afxctl. h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 Definiuje wpis mapy zdarzeń dla zdarzenia niestandardowego.
 
@@ -171,7 +171,7 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wa
 
 **Nagłówek** 'afxctl. h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Definiuje funkcję do uruchamiania zdarzeń dla zdarzenia niestandardowego należącego do identyfikatora wysyłania określonego przez *DISPID*.
 
@@ -211,7 +211,7 @@ Aby zapoznać się z listą `VTS_` stałych, zobacz [EVENT_CUSTOM](#event_custom
 
 **Nagłówek** 'afxctl. h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 To makro definiuje wpis mapy komunikatów, który mapuje czasownik niestandardowy na określoną funkcję elementu członkowskiego formantu.
 
@@ -246,7 +246,7 @@ Wartości parametrów *lpMsg*, *hWndParent*i *lpRect* są pobierane z odpowiedni
 
 **Nagłówek** Afxole. h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 To makro służy do przesłonięcia domyślnego zachowania standardowego czasownika.
 
@@ -272,6 +272,6 @@ Zobacz [ON_OLEVERB](#on_oleverb) , aby uzyskać opis prototypu funkcji, który m
 
 **Nagłówek** Afxole. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

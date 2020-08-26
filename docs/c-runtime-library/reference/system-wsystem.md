@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912394"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844980"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -69,7 +69,7 @@ Polecenie, które ma zostać wykonane.
 
 Jeśli *polecenie* ma wartość **null** i zostanie znaleziony interpreter poleceń, funkcja zwraca wartość różną od zera. Jeśli interpreter poleceń nie zostanie znaleziony, zwraca wartość 0 i ustawia **errno** na **ENOENT**. Jeśli *polecenie* nie ma **wartości null**, **system** zwraca wartość, która jest zwracana przez interpreter poleceń. Zwraca wartość 0 tylko wtedy, gdy interpreter poleceń zwróci wartość 0. Zwracana wartość-1 wskazuje błąd, a **errno** jest ustawiona na jedną z następujących wartości:
 
-|||
+| Wartość | Opis |
 |-|-|
 | **E2BIG** | Lista argumentów (która jest zależna od systemu) jest zbyt duża. |
 | **ENOENT** | Nie można znaleźć interpretera poleceń. |
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [_doserrno, e
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **system** przekazuje *polecenie* do interpretera poleceń, który wykonuje ciąg jako polecenie systemu operacyjnego. **system** używa zmiennych środowiskowych **wywołana** i **Path** do lokalizowania pliku interpretera poleceń Cmd. exe. Jeśli *polecenie* ma **wartość null**, funkcja po prostu sprawdza, czy istnieje interpreter poleceń.
+Funkcja **system** przekazuje *polecenie* do interpretera poleceń, który wykonuje ciąg jako polecenie systemu operacyjnego. **system** używa zmiennych środowiskowych **wywołana** i **Path** do lokalizowania pliku interpretera poleceń CMD.exe. Jeśli *polecenie* ma **wartość null**, funkcja po prostu sprawdza, czy istnieje interpreter poleceń.
 
 Należy jawnie opróżniać przy użyciu [fflush](fflush.md) lub [_flushall](flushall.md)lub zamknąć wszystkie strumienie przed wywołaniem **system**.
 
@@ -98,8 +98,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**system**|\<Process. h> lub \<STDLIB. h>|
-|**_wsystem**|\<Process. h> lub \<STDLIB. h> lub \<WCHAR. h>|
+|**system**|\<process.h> lub \<stdlib.h>|
+|**_wsystem**|\<process.h> lub \<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -118,7 +118,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_systemtxt"></a>Dane wejściowe: crt_system. txt
+### <a name="input-crt_systemtxt"></a>Dane wejściowe: crt_system.txt
 
 ```Input
 Line one.
@@ -138,4 +138,4 @@ Line two.
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

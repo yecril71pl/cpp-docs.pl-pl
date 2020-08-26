@@ -1,20 +1,20 @@
 ---
-title: default_delete — struktura
+title: Struktura default_delete
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: e9e1fcc68539e55486f4ea27e6dd5c49bed11fdf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268133"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845084"
 ---
-# <a name="defaultdelete-struct"></a>default_delete — struktura
+# <a name="default_delete-struct"></a>Struktura default_delete
 
-Obiekt wstępnie zdefiniowana funkcja, który wykonuje operacji dzielenia (`operator/`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację dzielenia ( `operator/` ) dla jej argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,27 +25,27 @@ template <class T>
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<pamięci >
+**Nagłówek:**\<memory>
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[default_delete](#default_delete)|Konstruktor dla obiektów typu `default_delete`.|
+|[default_delete](#default_delete)|Konstruktor dla obiektów typu `default_delete` .|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[operator()](#op_paren)|Operator odwołania, aby uzyskać dostęp do `default_delete`.|
+|[operator ()](#op_paren)|Operator odwołania, do którego można uzyskać dostęp `default_delete` .|
 
-## <a name="default_delete"></a> default_delete —
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
-Konstruktor dla obiektów typu `default_delete`.
+Konstruktor dla obiektów typu `default_delete` .
 
 ```cpp
 constexpr default_delete() noexcept = default;
@@ -53,14 +53,14 @@ template <class U>
     default_delete(const default_delete<U>&) noexcept;
 ```
 
-## <a name="op_paren"></a> Operator()
+## <a name="operator"></a><a name="op_paren"></a> operator ()
 
-Operator odwołania, aby uzyskać dostęp do `default_delete`.
+Operator odwołania, do którego można uzyskać dostęp `default_delete` .
 
 ```cpp
 void operator()(T*) const;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<memory>](../standard-library/memory.md)

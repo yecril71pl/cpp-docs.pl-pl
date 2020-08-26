@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 08be9bd03b20c4bc6fc8f7b0ea63d628b34d033e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222787"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837192"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -36,7 +36,7 @@ Aby zapoznać się z przykładami i więcej szczegółów, zobacz [wyjątki](../
 
 ### <a name="exception-macros"></a>Makra wyjątków
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[SPRÓBOWAŁ](#try)|Określa blok kodu do przetwarzania wyjątków.|
 |[EFEKTYWN](#catch)|Określa blok kodu do przechwytywania wyjątku z poprzedniego bloku **try** .|
@@ -50,7 +50,7 @@ Aby zapoznać się z przykładami i więcej szczegółów, zobacz [wyjątki](../
 
 ### <a name="exception-throwing-functions"></a>Funkcje zgłaszania wyjątków
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|Zgłasza wyjątek archiwum.|
 |[AfxThrowFileException](#afxthrowfileexception)|Zgłasza wyjątek pliku.|
@@ -64,7 +64,7 @@ MFC oferuje dwie funkcje zgłaszania wyjątków dla wyjątków OLE:
 
 ### <a name="ole-exception-functions"></a>Funkcje wyjątków OLE
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Zgłasza wyjątek w funkcji automatyzacji OLE.|
 |[AfxThrowOleException](#afxthrowoleexception)|Zgłasza wyjątek OLE.|
@@ -73,7 +73,7 @@ W celu zapewnienia obsługi wyjątków bazy danych klasy baz danych udostępniaj
 
 ### <a name="dao-exception-functions"></a>Funkcje wyjątków DAO
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AfxThrowDAOException](#afxthrowdaoexception)|Zgłasza [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.|
 |[AfxThrowDBException](#afxthrowdbexception)|Zgłasza [CDBException](../../mfc/reference/cdbexception-class.md) z własnego kodu.|
@@ -82,11 +82,11 @@ MFC zapewnia następującą funkcję zakończenia:
 
 ### <a name="termination-functions"></a>Funkcje zakończenia
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AfxAbort](#afxabort)|Wywołuje się, by przerwać aplikację w przypadku wystąpienia błędu krytycznego.|
 
-## <a name="try"></a><a name="try"></a>SPRÓBOWAŁ
+## <a name="try"></a><a name="try"></a> SPRÓBOWAŁ
 
 Konfiguruje blok **try** .
 
@@ -108,7 +108,7 @@ Zobacz przykład [przechwytywania](#catch).
 
 Nagłówek: AFX. h
 
-## <a name="catch"></a><a name="catch"></a>EFEKTYWN
+## <a name="catch"></a><a name="catch"></a> EFEKTYWN
 
 Definiuje blok kodu, który przechwytuje pierwszy typ wyjątku zgłoszony w poprzednim bloku **try** .
 
@@ -141,7 +141,7 @@ Aby uzyskać więcej informacji o wyjątkach i makro CATCH, zobacz [wyjątki](..
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
-## <a name="catch_all"></a><a name="catch_all"></a>CATCH_ALL
+## <a name="catch_all"></a><a name="catch_all"></a> CATCH_ALL
 
 Definiuje blok kodu, który przechwytuje wszystkie typy wyjątków zgłoszone w poprzednim bloku **try** .
 
@@ -171,7 +171,7 @@ Zobacz przykład dla [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
   **Nagłówek** AFX. h
 
-## <a name="and_catch"></a><a name="and_catch"></a>AND_CATCH
+## <a name="and_catch"></a><a name="and_catch"></a> AND_CATCH
 
 Definiuje blok kodu do przechwytywania dodatkowych typów wyjątków zgłoszonych w poprzednim bloku **try** .
 
@@ -204,7 +204,7 @@ Zobacz przykład [przechwytywania](#catch).
 
   **Nagłówek** AFX. h
 
-## <a name="and_catch_all"></a><a name="and_catch_all"></a>AND_CATCH_ALL
+## <a name="and_catch_all"></a><a name="and_catch_all"></a> AND_CATCH_ALL
 
 Definiuje blok kodu do przechwytywania dodatkowych typów wyjątków zgłoszonych w poprzednim bloku **try** .
 
@@ -230,7 +230,7 @@ Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to ko
 
   **Nagłówek** AFX. h
 
-## <a name="end_catch"></a><a name="end_catch"></a>END_CATCH
+## <a name="end_catch"></a><a name="end_catch"></a> END_CATCH
 
 Oznacza koniec ostatniego bloku **catch** lub **AND_CATCH** .
 
@@ -246,7 +246,7 @@ Aby uzyskać więcej informacji na temat makra END_CATCH, zobacz [wyjątki](../.
 
   **Nagłówek** AFX. h
 
-## <a name="end_catch_all"></a><a name="end_catch_all"></a>END_CATCH_ALL
+## <a name="end_catch_all"></a><a name="end_catch_all"></a> END_CATCH_ALL
 
 Oznacza koniec ostatniego bloku **CATCH_ALL88** lub **AND_CATCH_ALL** .
 
@@ -258,7 +258,7 @@ END_CATCH_ALL
 
   **Nagłówek** AFX. h
 
-## <a name="throw-mfc"></a><a name="throw"></a>THROW (MFC)
+## <a name="throw-mfc"></a><a name="throw"></a> THROW (MFC)
 
 Zgłasza określony wyjątek.
 
@@ -281,7 +281,7 @@ Aby uzyskać więcej informacji, zobacz [wyjątki](../../mfc/exception-handling-
 
   **Nagłówek** AFX. h
 
-## <a name="throw_last"></a><a name="throw_last"></a>THROW_LAST
+## <a name="throw_last"></a><a name="throw_last"></a> THROW_LAST
 
 Zgłasza wyjątek z powrotem do następnego zewnętrznego bloku **catch** .
 
@@ -303,7 +303,7 @@ Zobacz przykład dla [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>AfxThrowArchiveException
+## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a> AfxThrowArchiveException
 
 Zgłasza wyjątek archiwum.
 
@@ -323,7 +323,7 @@ Wskazuje ciąg zawierający nazwę `CArchive` obiektu, który spowodował wyjąt
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a>AfxThrowFileException
+## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a> AfxThrowFileException
 
 Zgłasza wyjątek pliku.
 
@@ -353,7 +353,7 @@ Użytkownik jest odpowiedzialny za określenie przyczyny na podstawie kodu błę
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a> AfxThrowInvalidArgException
 
 Zgłasza wyjątek nieprawidłowego argumentu.
 
@@ -371,7 +371,7 @@ Ta funkcja jest wywoływana, gdy są używane nieprawidłowe argumenty.
 
 **Nagłówek:** AFX. h
 
-## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>AfxThrowMemoryException
+## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a> AfxThrowMemoryException
 
 Zgłasza wyjątek pamięci.
 
@@ -387,7 +387,7 @@ Wywołaj tę funkcję, jeśli wywołania alokacji podstawowych pamięci systemow
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException
+## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a> AfxThrowNotSupportedException
 
 Zgłasza wyjątek, który jest wynikiem żądania nieobsługiwanej funkcji.
 
@@ -399,7 +399,7 @@ void AfxThrowNotSupportedException();
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>AfxThrowResourceException
+## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a> AfxThrowResourceException
 
 Zgłasza wyjątek zasobu.
 
@@ -415,7 +415,7 @@ Ta funkcja jest zwykle wywoływana, gdy nie można załadować zasobu systemu Wi
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a>AfxThrowUserException
+## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a> AfxThrowUserException
 
 Zgłasza wyjątek, aby zatrzymać operację użytkownika końcowego.
 
@@ -431,7 +431,7 @@ Ta funkcja jest zwykle wywoływana natychmiast po `AfxMessageBox` zgłoszeniu b�
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException
+## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a> AfxThrowOleDispatchException
 
 Użyj tej funkcji, aby zgłosić wyjątek w funkcji automatyzacji OLE.
 
@@ -473,7 +473,7 @@ Informacje dostępne dla tej funkcji mogą być wyświetlane przez aplikację do
 
   **Nagłówek** AFX. h
 
-## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a>AfxThrowOleException
+## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a> AfxThrowOleException
 
 Tworzy obiekt typu `COleException` i zgłasza wyjątek.
 
@@ -498,7 +498,7 @@ Wersja, która przyjmuje wynik HRESULT jako argument konwertuje ten kod wyniku n
 
   **Nagłówek** afxdao. h
 
-## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>AfxThrowDaoException
+## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a> AfxThrowDaoException
 
 Wywołaj tę funkcję, aby zgłosić wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.
 
@@ -526,7 +526,7 @@ Aby uzyskać informacje dotyczące wyjątków związanych z klasami MFC DAO, zob
 
   **Nagłówek** AFXDB. h
 
-## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a>AfxThrowDBException
+## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a> AfxThrowDBException
 
 Wywołaj tę funkcję, aby zgłosić wyjątek typu `CDBException` z własnego kodu.
 
@@ -558,7 +558,7 @@ Aby uzyskać informacje o wartościach RETCODE zdefiniowanych przez ODBC, zobacz
 
   **Nagłówek** AFX. h
 
-## <a name="afxabort"></a><a name="afxabort"></a>AfxAbort
+## <a name="afxabort"></a><a name="afxabort"></a> AfxAbort
 
 Domyślna funkcja zakończenia dostarczana przez MFC.
 
@@ -568,7 +568,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>Uwagi
 
-`AfxAbort`jest wywoływana wewnętrznie przez funkcje składowe MFC w przypadku wystąpienia błędu krytycznego, takiego jak nieprzechwycony wyjątek, którego nie można obsłużyć. Można wywołać `AfxAbort` w rzadkim przypadku, gdy wystąpi błąd krytyczny, z którego nie można przeprowadzić odzyskiwania.
+`AfxAbort` jest wywoływana wewnętrznie przez funkcje składowe MFC w przypadku wystąpienia błędu krytycznego, takiego jak nieprzechwycony wyjątek, którego nie można obsłużyć. Można wywołać `AfxAbort` w rzadkim przypadku, gdy wystąpi błąd krytyczny, z którego nie można przeprowadzić odzyskiwania.
 
 ### <a name="example"></a>Przykład
 
@@ -578,7 +578,7 @@ Zobacz przykład [przechwytywania](#catch).
 
   **Nagłówek** AFX. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
 [Klasa CException](cexception-class.md)<br/>

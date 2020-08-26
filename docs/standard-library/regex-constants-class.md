@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845058"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants, przestrzeń nazw
 
@@ -105,23 +105,23 @@ namespace regex_constants {
 
 ## <a name="remarks"></a>Uwagi
 
-Obszar nazw `regex_constants` hermetyzuje kilka typów flag i skojarzone z nimi wartości flag.
+Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flag i skojarzonych z nimi wartości flag.
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[error_type](#error_type)|Flagi do raportowania błędów składni wyrażenia regularnego.|
-|[match_flag_type](#match_flag_type)|Flagi dla opcji dopasowywania wyrażeń regularnych.|
-|[syntax_option_type](#syntax_option_type)|Flagi dotyczące wybierania opcji składni.|
+|[error_type](#error_type)|Flagi dotyczące raportowania błędów składni wyrażeń regularnych.|
+|[match_flag_type](#match_flag_type)|Flagi dla opcji dopasowania wyrażenia regularnego.|
+|[syntax_option_type](#syntax_option_type)|Flagi do wybierania opcji składni.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> regex
+**Nagłówek:**\<regex>
 
 **Przestrzeń nazw:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants:: error_type
 
-Flagi do raportowania błędów składni wyrażenia regularnego.
+Flagi dotyczące raportowania błędów składni wyrażeń regularnych.
 
 ```cpp
 enum error_type
@@ -146,43 +146,43 @@ enum error_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem wyliczonym, który opisuje obiekt, który może zawierać flagi błędów. Odrębne wartości flagi to:
+Typ to typ wyliczeniowy, który opisuje obiekt, który może zawierać flagi błędów. Wartości flag DISTINCT są następujące:
 
-`error_backref`-- wyrażenie zawierało nieprawidłowe odwołanie wsteczne
+`error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
 
-`error_badbrace`-- wyrażenie zawierało nieprawidłową liczbę w wyrażeniu { }
+`error_badbrace` --wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}
 
-`error_badrepeat`-- wyrażenie powtarzające (jedno z '*', '', '+', '{' w większości kontekstów) nie było poprzedzone wyrażeniem
+`error_badrepeat` --wyrażenie Repeat (jedno z "*", "", "+", "{" w większości kontekstów) nie było poprzedzone wyrażeniem
 
-`error_brace`-- wyrażenie zawierało niezrównane "{" lub "}"
+`error_brace` --wyrażenie zawiera niedopasowany element "{" lub "}"
 
-`error_brack`-- wyrażenie zawierało niezrównane '[' lub ']'
+`error_brack` --wyrażenie zawiera niedopasowany element "[" lub "]"
 
-`error_collate`-- wyrażenie zawierało nieprawidłową nazwę elementu sortującego
+`error_collate` --wyrażenie zawiera nieprawidłową nazwę elementu sortowania
 
-`error_complexity`-- próba meczu nie powiodła się, ponieważ była zbyt skomplikowana
+`error_complexity` --próba dopasowania nie powiodła się, ponieważ była zbyt złożona
 
-`error_ctype`-- wyrażenie zawierało nieprawidłową nazwę klasy znaków
+`error_ctype` --wyrażenie zawiera nieprawidłową nazwę klasy znaku
 
-`error_escape`-- wyrażenie zawierało nieprawidłową sekwencję unikową
+`error_escape` --wyrażenie zawiera nieprawidłową sekwencję ucieczki
 
-`error_paren`-- wyrażenie zawierało niezrównane "(" lub ")"
+`error_paren` --wyrażenie zawiera niedopasowany element "(" lub ")"
 
-`error_parse`-- wyrażenie nie może przeanalizować
+`error_parse` --nie można przeanalizować wyrażenia
 
-`error_range`-- wyrażenie zawierało nieprawidłowy specyfikator zakresu znaków
+`error_range` --wyrażenie zawiera nieprawidłowy specyfikator zakresu znaków
 
-`error_space`-- analizowanie wyrażenia regularnego nie powiodło się, ponieważ nie było wystarczającej ilości dostępnych zasobów
+`error_space` --analizowanie wyrażenia regularnego nie powiodło się, ponieważ nie ma wystarczającej ilości dostępnych zasobów
 
-`error_stack`-- próba dopasowania nie powiodła się, ponieważ nie było wystarczającej ilości pamięci
+`error_stack` --próba dopasowania nie powiodła się z powodu braku wystarczającej ilości dostępnej pamięci
 
-`error_syntax`-- analizowanie nie powiodło się w sprawie błędu składni
+`error_syntax` --analizowanie nie powiodło się z powodu błędu składniowego
 
-`error_backref`-- wyrażenie zawierało nieprawidłowe odwołanie wsteczne
+`error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants:: match_flag_type
 
-Flagi dla opcji dopasowywania wyrażeń regularnych.
+Flagi dla opcji dopasowania wyrażenia regularnego.
 
 ```cpp
 enum match_flag_type
@@ -206,41 +206,41 @@ enum match_flag_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem maski bitowej, który opisuje opcje, które mają być używane podczas dopasowywania sekwencji tekstu do wyrażenia regularnego i formatowania flag, które mają być używane podczas zastępowania tekstu. Opcje można łączyć z . `|`
+Typ jest typem maski bitowej opisującym opcje, które mają być używane podczas dopasowywania sekwencji tekstu względem wyrażenia regularnego i flag formatowania do użycia podczas zamiany tekstu. Opcje można łączyć z `|` .
 
-Opcje dopasowania to:
+Opcje dopasowania są następujące:
 
 `match_default`
 
-`match_not_bol`-- nie traktuj pierwszej pozycji w sekwencji docelowej jako początku wiersza
+`match_not_bol` --nie Traktuj pierwszej pozycji w sekwencji docelowej jako początku wiersza
 
-`match_not_eol`-- nie należy traktować pozycji przeszłej w sekwencji docelowej jako końca wiersza
+`match_not_eol` --nie należy traktować pozostałej wartości w sekwencji docelowej jako końca wiersza
 
-`match_not_bow`-- nie traktuj pierwszej pozycji w sekwencji docelowej jako początku słowa
+`match_not_bow` --nie Traktuj pierwszej pozycji w sekwencji docelowej jako początku wyrazu
 
-`match_not_eow`-- nie traktuj pozycji przeszłej w sekwencji docelowej jako końca wyrazu
+`match_not_eow` --nie należy traktować poprzedniej-końcowego położenia w sekwencji docelowej jako końca wyrazu
 
-`match_any`-- jeśli więcej niż jeden mecz jest możliwy, każde dopasowanie jest dopuszczalne
+`match_any` --Jeśli możliwe jest spełnienie więcej niż jednego dopasowania
 
-`match_not_null`-- nie traktuj pustej podsekwencji jako dopasowania
+`match_not_null` --nie Traktuj pustej sekwencji jako dopasowania
 
-`match_continuous`-- nie wyszukuj dopasowań innych niż na początku sekwencji docelowej
+`match_continuous` --Nie wyszukuj dopasowań innych niż na początku sekwencji docelowej
 
-`match_prev_avail` -- `--first`jest prawidłowym iteratorem; ignoruj `match_not_bol` i `match_not_bow` jeśli jest ustawiona
+`match_prev_avail` -- `--first` jest prawidłowym iteratorem; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawione
 
-Flagi formatu to:
+Flagi formatu są następujące:
 
-`format_default`-- użyj reguł formatu ECMAScript
+`format_default` --Użyj reguł formatu ECMAScript
 
-`format_sed`-- użyj reguł formatu sed
+`format_sed` --Użyj reguł formatu SED
 
-`format_no_copy`-- nie kopiuj tekstu, który nie pasuje do wyrażenia regularnego
+`format_no_copy` --nie Kopiuj tekstu, który nie jest zgodny z wyrażeniem regularnym
 
-`format_first_only`-- nie szukaj meczów po pierwszym
+`format_first_only` --Nie wyszukuj pasujących elementów po pierwszej
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants:: syntax_option_type
 
-Flagi dotyczące wybierania opcji składni.
+Flagi do wybierania opcji składni.
 
 ```cpp
 enum syntax_option_type
@@ -262,39 +262,39 @@ enum syntax_option_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem maski bitowej, który opisuje specyfikatory języka i modyfikatory składni, które mają być używane podczas kompilowania wyrażenia regularnego. Opcje można łączyć z . `|` W ciągu jednego czasu należy używać więcej niż jednego specyfikatora języka.
+Typ jest typem maski bitowej opisującym specyfikatory języka i Modyfikatory składni, które mają być używane podczas kompilowania wyrażenia regularnego. Opcje można łączyć z `|` . W danym momencie nie można użyć więcej niż jednego specyfikatora języka.
 
-Specyfikatory języka to:
+Specyfikatory języka są następujące:
 
-`ECMAScript`-- skompiluj jako ECMAScript
+`ECMAScript` --Kompiluj jako ECMAScript
 
-`basic`-- skompiluj jako BRE
+`basic` --Kompiluj jako BRE
 
-`extended`-- skompiluj jako ERE
+`extended` --Kompiluj jako ERE
 
-`awk`-- skompiluj jak awk
+`awk` --Kompiluj jako AWK
 
-`grep`-- skompiluj jako grep
+`grep` --Kompiluj jako grep
 
-`egrep`-- skompiluj jak egrep
+`egrep` --Kompiluj jako egrep
 
-Modyfikatory składni to:
+Modyfikatory składni są następujące:
 
-`icase`-- sprawiają, że mecze niewrażliwe
+`icase` --nie dopasowuje wielkości liter
 
-`nosubs`-- implementaton nie musi śledzić zawartości grup przechwytywania
+`nosubs` --implementaton nie musi śledzić zawartości grup przechwytywania
 
-`optimize`-- implementacja powinna podkreślać szybkość dopasowywania, a nie szybkość kompilacji wyrażeń regularnych
+`optimize` --Implementacja powinna wyróżnić szybkość dopasowywania, a nie szybkość kompilowania wyrażenia regularnego
 
-`collate`-- spraw, aby mecze były zależne od ustawień regionalnych
+`collate` --dopasowuje się do ustawień regionalnych
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<>regex](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<funkcje> regex](../standard-library/regex-functions.md)\
+[\<regex> obowiązki](../standard-library/regex-functions.md)\
 [Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operatorzy> regex](../standard-library/regex-operators.md)\
+[\<regex> zainteresowanych](../standard-library/regex-operators.md)\
 [Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<regex> definicje typów](../standard-library/regex-typedefs.md)

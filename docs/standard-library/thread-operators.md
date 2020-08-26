@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215572"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845032"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;&gt;Operatory wątku
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator = =](#op_eq_eq)|
+[operator! =](#op_neq)\
+[zakład&gt;](#op_gt)\
+[zakład&gt;=](#op_gt_eq)\
+[zakład&lt;](#op_lt)\
+[zakład&lt;&lt;](#op_lt_lt)\
+[zakład&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Określa, czy jeden `thread::id` obiekt jest większy lub równy drugiemu.
 
@@ -59,7 +61,7 @@ Prawidłowy `thread::id` obiekt.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Określa, czy jeden `thread::id` obiekt jest większy niż inny.
 
@@ -85,7 +87,7 @@ Prawidłowy `thread::id` obiekt.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Określa, czy jeden `thread::id` obiekt jest mniejszy lub równy drugiemu.
 
@@ -111,7 +113,7 @@ Prawidłowy `thread::id` obiekt.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Określa, czy jeden `thread::id` obiekt jest mniejszy niż inny.
 
@@ -139,7 +141,7 @@ Operator definiuje całkowitą kolejność dla wszystkich `thread::id` obiektów
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Porównuje dwa `thread::id` obiekty pod kątem nierówności.
 
@@ -165,7 +167,7 @@ Prawidłowy `thread::id` obiekt.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Porównuje dwa `thread::id` obiekty pod kątem równości.
 
@@ -191,7 +193,7 @@ Prawidłowy `thread::id` obiekt.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> zakład&lt;&lt;
 
 Wstawia tekstową reprezentację `thread::id` obiektu do strumienia.
 
@@ -219,6 +221,6 @@ Ta funkcja wstawia *Identyfikator* do *ostr*.
 
 Jeśli dwa `thread::id` obiekty są porównywane jako równe, wstawiona tekstowa reprezentacja tych obiektów jest taka sama.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<thread>](../standard-library/thread.md)

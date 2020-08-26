@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562456"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845422"
 ---
 # <a name="vectorltboolgt-class"></a>Vector &lt; — &gt; Klasa logiczna
 
@@ -56,7 +56,7 @@ Operacje związane z **`bool`** typem odpowiadają wartościom w magazynie konte
 
 ### <a name="proxy-class"></a>Klasa proxy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Vector — \<bool> Klasa referencyjna](#reference_class)|Klasa, która działa jako serwer proxy w celu symulowania `bool&` zachowania i którego obiekty mogą udostępniać odwołania do elementów (pojedynczych bitów) w obrębie `vector<bool>` obiektu.|
 

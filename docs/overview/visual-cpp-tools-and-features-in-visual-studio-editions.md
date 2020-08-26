@@ -4,277 +4,277 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366798"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845357"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Narzędzia i funkcje języka C++ w wersjach programu Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Następujące funkcje języka C++ są dostępne w programie Visual Studio 2019. O ile nie określono inaczej, wszystkie funkcje są dostępne we wszystkich wersjach: Visual Studio Community, Visual Studio Professional i Visual Studio Enterprise. Niektóre funkcje wymagają określonych obciążeń lub składników opcjonalnych, które można zainstalować za pomocą Instalatora programu Visual Studio.
+W programie Visual Studio 2019 dostępne są następujące funkcje języka C++. O ile nie określono inaczej, wszystkie funkcje są dostępne we wszystkich wersjach: Visual Studio Community, Visual Studio Professional i Visual Studio Enterprise. Niektóre funkcje wymagają określonych obciążeń lub składników opcjonalnych, które można zainstalować za pomocą Instalator programu Visual Studio.
 
 ## <a name="platforms"></a>Platformy
 
 - Pulpit systemu Windows
-- Uniwersalna platforma Systemu Windows ((tablet, PC, Xbox, IoT i HoloLens))
+- Platforma uniwersalna systemu Windows ((tablet, komputery, Xbox, IoT i HoloLens))
 - Linux
 - Android
 - iOS
 
 ## <a name="compilers"></a>Kompilatory
 
-- Kompilator 32-bitowy MSVC dla x86, x64, ARM i ARM64
-- Kompilator 64-bitowy MSVC dla x86, x64, ARM i ARM64
-- Kompilator krzyżowy GCC dla ARM
+- MSVC 32 — bitowy kompilator dla procesorów x86, x64, ARM i ARM64
+- MSVC 64 — bitowy kompilator dla procesorów x86, x64, ARM i ARM64
+- Kompilator międzybranżowy dla usługi ARM
 - Clang/LLVM
-  - W systemie Windows, Clang/LLVM 7.0, kierowanie x86 lub x64 (CMake tylko wsparcie). Inne wersje Clang mogą działać, ale nie są oficjalnie obsługiwane.
-  - W systemie Linux każda instalacja Clang/LLVM obsługiwana przez dystrybucję.
+  - W systemie Windows, Clang/LLVM 7,0, przeznaczony dla architektury x86 lub x64 (tylko obsługa CMake). Inne wersje Clang mogą funkcjonować, ale nie są oficjalnie obsługiwane.
+  - W systemie Linux wszystkie instalacje Clang/LLVM obsługiwane przez dystrybucji.
 
 ## <a name="c-workloads"></a>Obciążenia języka C++
 
-Visual Studio zawiera następujące obciążenia dla rozwoju języka C++. Można zainstalować dowolne lub wszystkie z nich, wraz z innymi obciążeniami, takimi jak .NET Desktop Development, Rozwój języka Python, program azure development, program visual studio extension development i inne.
+Program Visual Studio zawiera następujące obciążenia do programowania w języku C++. Można zainstalować dowolne lub wszystkie z nich wraz z innymi obciążeniami, takimi jak programowanie aplikacji klasycznych platformy .NET, programowanie w języku Python, programowanie na platformie Azure, programowanie rozszerzeń Visual Studio i inne.
 
 ### <a name="desktop-development-with-c"></a>Programowanie aplikacji klasycznych w języku C++
 
-Zawarte:
+Uwzględnione
 
-- Funkcje pulpitu w języku C++
+- Podstawowe funkcje pulpitu języka C++
 
-Opcjonalne komponenty:
+Składniki opcjonalne:
 
-- MSVC v142 - VS 2019 C++ x64/x86 narzędzia kompilacji (wersja 14.21)
-- Windows 10 SDK (10.0.17763.0)
-- Debuger just-in-time
+- MSVC v142-VS 2019 C++ x64/x86 Build Tools (v 14.21)
+- Zestaw SDK systemu Windows 10 (10.0.17763.0)
+- Debuger just in Time
 - Narzędzia profilowania języka C++
-- C++ CMake narzędzia dla systemu Windows
-- C++ ATL dla v142 build tools (x86 & x64)
-- Adapter testowy do boost.test
-- Adapter testowy do testu Google
+- C++ CMake Tools dla systemu Windows
+- C++ ATL dla narzędzi kompilacji v142 (x86 & x64)
+- Adapter testowy do zwiększenia. test
+- Test Adapter for Google Test
 - Live Share
 - IntelliCode
-- IntelliTrace (tylko dla przedsiębiorstw)
-- C++ MFC dla v142 build tools (x86 & x64)
-- Obsługa C++/CLI dla narzędzi kompilacji w wersji 142 (14.21)
-- Moduły C++ dla narzędzi do budowania wersji 142 (x64/x86 – eksperymentalne)
-- Kompilator clang dla systemu Windows
-- IncrediBuild - Przyspieszenie kompilacji
-- Windows 10 SDK (10.0.17134.0)
-- Windows 10 SDK (10.0.16299.0)
-- MSVC v141 - VS 2017 C++ x64/x86 narzędzia kompilacji (wersja 14.16)
-- MSVC v140 — VS 2015 C++ narzędzia kompilacji (wersja 14.00)
+- IntelliTrace (tylko w przedsiębiorstwie)
+- C++ MFC for v142 Build Tools (x86 & x64)
+- Obsługa języka C++/CLI dla narzędzi kompilacji v142 (14,21)
+- Moduły C++ dla narzędzi do kompilacji v142 (x64/x86 — eksperymentalne)
+- Kompilator Clang dla systemu Windows
+- IncrediBuild — przyspieszanie kompilacji
+- Zestaw SDK systemu Windows 10 (10.0.17134.0)
+- Zestaw SDK systemu Windows 10 (10.0.16299.0)
+- MSVC najnowsze 141-VS 2017 C++ x64/x86 Build Tools (v 14.16)
+- MSVC wersji 140-VS 2015 C++ build Tools (v 14.00)
 
 ### <a name="linux-development-with-c"></a>Programowanie dla systemu Linux w języku C++
 
-Zawarte:
+Uwzględnione
 
 - Podstawowe funkcje języka C++
-- Uniwersalny czas pracy systemu Windows C
-- C++ dla rozwoju Linuksa
+- Uniwersalne środowisko uruchomieniowe języka C systemu Windows
+- Programowanie w języku C++ dla systemu Linux
 
-Opcjonalne komponenty:
+Składniki opcjonalne:
 
-- C++ CMake narzędzia dla Linuksa
-- Wbudowane i IoT narzędzia programistyczne
+- C++ CMake Tools dla systemu Linux
+- Narzędzia programistyczne Embedded i IoT
 
-### <a name="universal-windows-platform-development"></a>Tworzenie uniwersalnej platformy systemu Windows
+### <a name="universal-windows-platform-development"></a>Opracowywanie platforma uniwersalna systemu Windows
 
-Zawarte:
+Uwzględnione
 
 - Blend for Visual Studio
-- Natywny i .NET Standard platformy .NET
+- .NET Native i .NET Standard
 - Menedżer pakietów NuGet
-- Narzędzia platformy uniwersalnej systemu Windows
-- Windows 10 SDK (10.0.17763.0)
+- Narzędzia platforma uniwersalna systemu Windows
+- Zestaw SDK systemu Windows 10 (10.0.17763.0)
 
-Opcjonalne komponenty:
+Składniki opcjonalne:
 
 - IntelliCode
-- IntelliTrace (tylko dla przedsiębiorstw)
-- Łączność z urządzeniem USB
-- Narzędzia uniwersalnej platformy systemu Windows w języku C++ (v142)
-- Narzędzia uniwersalnej platformy systemu Windows w języku C++ (v141)
-- Debuger grafiki i profiler GPU dla DirectX
-- Windows 10 SDK (10.0.18362.0)
-- Windows 10 SDK (10.0.17134.0)
-- Windows 10 SDK (10.0.16299.0)
-- Architektura i narzędzia analityczne
+- IntelliTrace (tylko w przedsiębiorstwie)
+- Łączność urządzeń USB
+- C++ (v142) — narzędzia platforma uniwersalna systemu Windows
+- C++ (najnowsze 141) — narzędzia platforma uniwersalna systemu Windows
+- Debuger grafiki i Profiler procesora GPU dla programu DirectX
+- Zestaw SDK systemu Windows 10 (10.0.18362.0)
+- Zestaw SDK systemu Windows 10 (10.0.17134.0)
+- Zestaw SDK systemu Windows 10 (10.0.16299.0)
+- Narzędzia architektury i analizy
 
-### <a name="c-game-development"></a>Rozwój gier w języku C++
+### <a name="c-game-development"></a>Programowanie gier w języku C++
 
-Zawarte:
+Uwzględnione
 
 - Podstawowe funkcje języka C++
-- Uniwersalny czas pracy systemu Windows C
-- Aktualizacja redystrybucjowa C++ 2019
-- MSVC v142 - VS 2019 C++ x64/x86 narzędzia kompilacji (wersja 14.21)
+- Uniwersalne środowisko uruchomieniowe języka C systemu Windows
+- Aktualizacja pakietu redystrybucyjnego języka C++ 2019
+- MSVC v142-VS 2019 C++ x64/x86 Build Tools (v 14.21)
 
-Opcjonalne komponenty:
+Składniki opcjonalne:
 
 - Narzędzia profilowania języka C++
-- Windows 10 SDK (10.0.17763.0)
+- Zestaw SDK systemu Windows 10 (10.0.17763.0)
 - IntelliCode
-- IntelliTrace (tylko dla przedsiębiorstw)
-- Windows 10 SDK (10.0.17134.0)
-- Windows 10 SDK (10.0.16299.0)
-- IncrediBuild - Przyspieszenie kompilacji
+- IntelliTrace (tylko w przedsiębiorstwie)
+- Zestaw SDK systemu Windows 10 (10.0.17134.0)
+- Zestaw SDK systemu Windows 10 (10.0.16299.0)
+- IncrediBuild — przyspieszanie kompilacji
 - Cocos
-- Instalator Unreal Engine
-- Obsługa środowiska Android IDE dla silnika Unreal
+- Instalator aparatu Unreal
+- Obsługa środowiska IDE systemu Android dla aparatu Unreal
 
 ### <a name="mobile-development-with-c"></a>Tworzenie aplikacji mobilnych w języku C++
 
-Zawarte:
+Uwzględnione
 
 - Podstawowe funkcje języka C++
-- Konfiguracja SDK systemu Android (poziom INTERFEJSU API 25) (instalacja lokalna dla rozwoju urządzeń przenośnych z C++)
+- Konfiguracja Android SDK (poziom interfejsu API 25) (lokalna instalacja na potrzeby opracowywania aplikacji mobilnych za pomocą języka C++)
 
-Opcjonalne komponenty:
+Składniki opcjonalne:
 
 - Android NDK (R16B)
-- Mrówka Apache (1.9.3)
-- Narzędzia programistyczne dla systemu Android w języku C++
+- Apache Ant (1.9.3)
+- Narzędzia programistyczne w języku C++ dla systemu Android
 - IntelliCode
-- Google Android Emulator (API Poziom 25) (instalacja lokalna)
-- Intel Hardware Accelerated Execution Manager (HAXM) (instalacja lokalna)
-- Android NDK (R16B) (32-bitowy)
-- Narzędzia programistyczne systemu iOS w języku C++
-- IncrediBuild - Przyspieszenie kompilacji
+- Google Emulator systemu Android (poziom interfejsu API 25) (Instalacja lokalna)
+- Intel Hardware Accelerated Execution Manager (HAXM) (Instalacja lokalna)
+- Android NDK (R16B) (32-bitowe)
+- Narzędzia programistyczne w języku C++ dla systemu iOS
+- IncrediBuild — przyspieszanie kompilacji
 
-## <a name="individual-components"></a>Poszczególne komponenty
+## <a name="individual-components"></a>Poszczególne składniki
 
-Składniki te można zainstalować niezależnie od obciążenia.
+Te składniki można zainstalować niezależnie od dowolnego obciążenia.
 
 - Diagnostyka JavaScript
 - Live Share
-- Uniwersalny czas pracy platformy systemu Windows W języku C++ dla narzędzi kompilacji w wersji 142
-- Kliknij publikowanieonce
-- Projekty instalatora programu Microsoft Visual Studio
+- Środowisko uruchomieniowe języka C++ platforma uniwersalna systemu Windows dla narzędzi kompilacji v142
+- Publikowanie ClickOnce
+- Projekty Instalatora Microsoft Visual Studio
 
 ## <a name="libraries-and-headers"></a>Biblioteki i nagłówki
 
 - Nagłówki i biblioteki systemu Windows
-- Uniwersalny czas pracy systemu Windows C (CRT)
+- Uniwersalne środowisko uruchomieniowe języka C systemu Windows (CRT)
 - Standardowa biblioteka C++
 - ATL
 - MFC
 - Biblioteka klas programu .NET Framework
-- Biblioteka pomocy technicznej języka C++ dla platformy .NET
-- OpenMP 2.0
-- Ponad 900 bibliotek open source za pośrednictwem katalogu vcpkg
+- Biblioteka obsługi języka C++ dla platformy .NET
+- OpenMP 2,0
+- Ponad 900 bibliotek Open Source za pośrednictwem wykazu vcpkg
 
-## <a name="build-and-project-systems"></a>Systemy kompilacji i projektów
+## <a name="build-and-project-systems"></a>Systemy kompilacji i projektu
 
 - CMake
-- Dowolny system kompilacji za pośrednictwem folderu Open
-- Kompilacje wiersza polecenia (msbuild.exe)
-- Natywne kierowanie wielokrotne
-- Zarządzane kierowanie zbiorcze
+- Dowolny system kompilacji za pośrednictwem otwartego folderu
+- Kompilacje w wierszu polecenia (msbuild.exe)
+- Natywne wiele elementów docelowych
+- Zarządzane wiele elementów docelowych
 - Kompilacje równoległe
-- Konstruuj dostosowania
+- Dostosowywanie kompilacji
 - Rozszerzalność stron właściwości
 
 ## <a name="project-templates"></a>Szablony projektów
 
-Następujące szablony projektów są dostępne w zależności od tego, które obciążenia zostały zainstalowane.
+Następujące szablony projektów są dostępne w zależności od zainstalowanych obciążeń.
 
 Pulpit systemu Windows:
 
 - Pusty projekt
-- Aplikacja konsoli
+- Aplikacja konsolowa
 - Kreator pulpitu systemu Windows
 - Aplikacja klasyczna systemu Windows
 - Projekt elementów udostępnionych
 - Aplikacja MFC
-- Biblioteka łączy dynamicznych
+- Biblioteka dołączana dynamicznie
 - Pusty projekt CLR
-- Aplikacja konsoli CLR
+- Aplikacja konsolowa CLR
 - Biblioteka statyczna
 - Projekt CMake
 - Projekt ATL
-- Biblioteka łączy dynamicznych MFC
+- Biblioteka dołączana dynamicznie MFC
 - Biblioteka klas CLR
-- Projekt Makefile (Windows)
+- Projekt pliku reguł programu make (Windows)
 - MFC ActiveXControl
-- Natywny projekt testu jednostkowego
+- Natywny projekt testów jednostkowych
 - Google Test
 
-Uniwersalna platforma Windows (C++/CX):
+Platforma uniwersalna systemu Windows (C++/CX):
 
 - Pusta aplikacja
 - Aplikacja DirectX 11 i XAML
 - Aplikacja DirectX 11
 - Aplikacja DirectX 12
-- Aplikacja testowa jednostki
+- Aplikacja testów jednostkowych
 - DLL
 - Składnik środowiska wykonawczego systemu Windows
 - Biblioteka statyczna
-- Projekt pakietu aplikacji systemu Windows
+-  Projekt pakietu aplikacji systemu Windows
 
 W systemie Linux:
 
-- Aplikacja konsoli (Linux)
+- Aplikacja konsolowa (Linux)
 - Pusty projekt (Linux)
-- Raspberry Pi Miga
-- Projekt Makefile (Linux)
+- Raspberry Pi
+- Projekt pliku reguł programu make (Linux)
 
-## <a name="tools"></a>Narzędzia
+## <a name="tools"></a>narzędzia
 
-- Łącznik przyrostowy (Link.exe)
-- Narzędzie Microsoft Makefile (Nmake.exe)
-- Lib Generator (Lib.exe)
-- Kompilator zasobów systemu Windows (rc.exe)
-- Konwerter zasobów systemu Windows do obiektów (cvtRes.exe)
-- Przeglądaj narzędzie do konserwacji informacji (BscMake.exe)
-- C++ Nazwa Undecorator (Undname.exe)
-- Wywrotka COFF/PE (Dumpbin.exe)
+- Łączenie przyrostowe (Link.exe)
+- Narzędzie Microsoft Make (Nmake.exe)
+- Generator lib (Lib.exe)
+- Kompilator zasobów systemu Windows (Rc.exe)
+- Konwerter zasobów systemu Windows do obiektów (CvtRes.exe)
+- Narzędzie do konserwacji przeglądanych informacji (BscMake.exe)
+- Nazwa C++ Undecorator (Undname.exe)
+- Zrzutu COFF/PE (Dumpbin.exe)
 - Edytor COFF/PE (Editbin.exe)
-- MASM (ml.exe)
+- MASM (Ml.exe)
 - Spy++
-- Errlook
-- AtlTrace (AtlTrace)
+- ErrLook
+- AtlTrace
 - Zasady wnioskowania
-- Optymalizacje z przewodnikiem w profilu
+- Profilowana Optymalizacja
 
 ## <a name="debugging-features"></a>Funkcje debugowania
 
 - Debugowanie natywne
-- natvis (wizualizacja typu macierzystego)
+- Natvis (wizualizacja typu natywnego)
 - Debugowanie grafiki
 - Debugowanie zarządzane
-- Użycie gpu
+- Użycie procesora GPU
 - Użycie pamięci
 - Debugowanie zdalne
 - Debugowanie SQL
 - Statyczna analiza kodu
 
-## <a name="designers-and-editors"></a>Projektanci i redaktorzy
+## <a name="designers-and-editors"></a>Projektanci i edytory
 
 - XAML Designer
-- Projektant/edytor stylu CSS
-- Projektant/edytor HTML
+- Projektant stylów CSS/Edytor
+- Projektant/Edytor HTML
 - Edytor XML
 -  Edytor kodu źródłowego
-- Funkcje produktywności: Refaktoryzowanie, silnik EDG IntelliSense, formatowanie kodu C++
+- Funkcje produktywności: Refaktoryzacja, EDG aparat IntelliSense, formatowanie kodu C++
 - Projektant Windows Forms
 - Projektant danych
-- Edytor zasobów natywnych (pliki rc)
+- Natywny Edytor zasobów (pliki. RC)
 - Edytory zasobów
 - Edytor modelu
 - Projektant cieniowania
-- Sprawdzanie poprawności zależności na żywo (tylko w przedsiębiorstwie)
-- Diagramy warstw architektonicznych (tylko w przedsiębiorstwie)
-- Sprawdzanie poprawności architektury (tylko w przedsiębiorstwie)
-- Klonowanie kodu (tylko w przedsiębiorstwie)
+- Weryfikacja zależności na żywo (tylko dla przedsiębiorstw)
+- Diagramy warstw architektonicznych (tylko dla przedsiębiorstw)
+- Sprawdzanie poprawności architektury (tylko dla przedsiębiorstw)
+- Klonowanie kodu (tylko dla przedsiębiorstw)
 
 ## <a name="data-features"></a>Funkcje danych
 
 - Projektant danych
 - Obiekty danych
-- Usługi internetowe
+- Usługi sieci Web
 - Eksplorator serwera
 
 ## <a name="automation-and-extensibility"></a>Automatyzacja i rozszerzalność
@@ -282,197 +282,195 @@ W systemie Linux:
 - Modele obiektów rozszerzalności
 - Model kodu
 - Model projektu
-- Model Edytora zasobów
-- Model kreatora
-- Model obiektu debugera
+- Model edytora zasobów
+- Model Kreatora
+- Model obiektów debugera
 
 ## <a name="application-lifecycle-management-tools"></a>Narzędzia do zarządzania cyklem życia aplikacji
 
-- Testowanie jednostkowe (Microsoft Native C++, Boost.Test, Test Google, CTest)
-- Wykresy mapy kodu i zależności (profesjonalne i korporacyjne)
+- Testowanie jednostkowe (Microsoft Native C++, zwiększanie. Testowanie, Google Test, narzędzia ctest)
+- Mapa kodu i wykresy zależności (wersje Professional i Enterprise)
 - Pokrycie kodu (tylko w przedsiębiorstwie)
-- Testowanie ręczne (tylko w przedsiębiorstwie)
-- Badania rozpoznawcze (tylko w przedsiębiorstwie)
-- Zarządzanie przyzdbywami testowymi (tylko w przedsiębiorstwie)
-- Integracja debugera mapy kodu (tylko enterprise)
-- Testowanie jednostek na żywo (tylko dla przedsiębiorstw)
-- IntelliTrace (tylko dla przedsiębiorstw)
-- IntelliTest (tylko dla przedsiębiorstw)
-- Microsoft Fakes (izolacja testu jednostkowego) (tylko w przedsiębiorstwie)
-- Pokrycie kodu (tylko enterprise)
+- Testowanie ręczne (tylko dla przedsiębiorstw)
+- Testowanie poznawcze (tylko dla przedsiębiorstw)
+- Zarządzanie przypadkami testowymi (tylko dla przedsiębiorstw)
+- Integracja z debugerem mapy kodu (tylko w przedsiębiorstwie)
+- Live Unit Testing (tylko w przedsiębiorstwie)
+- IntelliTrace (tylko w przedsiębiorstwie)
+- IntelliTest (tylko w przedsiębiorstwie)
+- Sztuczne firmy Microsoft (izolacja testu jednostkowego) (tylko dla przedsiębiorstw)
+- Pokrycie kodu (tylko w przedsiębiorstwie)
 
 ## <a name="see-also"></a>Zobacz też
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Typy projektów języka C++ w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Typy projektów C++ w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-W poniższych tabelach przedstawiono funkcje programu Visual C++, które są dostępne w programie Visual Studio 2017. Znak X w komórce wskazuje, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja nie jest dostępna. Notatki w nawiasach wskazują, że funkcja jest dostępna, ale ograniczona.
+W poniższych tabelach przedstawiono funkcje Visual C++, które są dostępne w programie Visual Studio 2017. X w komórce wskazuje, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja jest niedostępna. Uwagi w nawiasach wskazują, że funkcja jest dostępna, ale jest ograniczona.
 
 ## <a name="platforms"></a>Platformy
 
-||||||
+|Platforma|Visual Studio Express dla systemu Windows 10|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Platforma|Visual Studio Express dla systemu Windows 10|Visual Studio Express dla pulpitu systemu Windows|Społeczność programu Visual Studio/Profesjonaliści|Visual Studio Enterprise|
 |Pulpit systemu Windows||X|X|X|
-|Uniwersalna platforma Windows ((telefon, tablet, komputer, Xbox, IoT i HoloLens))|X||X|X|
+|Platforma uniwersalna systemu Windows (telefony, tablety, komputery, Xbox, IoT i HoloLens))|X||X|X|
 |Linux|X|X|
-|Sklep Microsoft Store 8.1|||X|X|
+|Microsoft Store 8,1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
 
 ## <a name="compilers"></a>Kompilatory
 
-|Kompilator|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Compiler|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|32-bitowy kompilator X86 MSVC|X|X|X|X|
-|X86_arm kompilator krzyżowy|X||X|X|
-|Kompilator 64-bitowy x64 MSVC|||X|X|
-|X86_ kompilatora krzyżowego x64|X|X|X|X|
+|MSVC 32-bit x86 — kompilator|X|X|X|X|
+|X86_arm kompilatora krzyżowe|X||X|X|
+|MSVC 64-bit x64 — kompilator|||X|X|
+|Kompilator X86_ x64|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Biblioteki i nagłówki
 
-|Biblioteka lub nagłówek|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Biblioteka lub nagłówek|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Nagłówki i biblioteki systemu Windows oraz biblioteka CRT|(X)|X|X|X|
+|Nagłówki i biblioteki systemu Windows oraz Biblioteka CRT|Y|X|X|X|
 |Standardowa biblioteka C++|X|X|X|X|
 |ATL|||X|X|
 |MFC|||X|X|
 |Biblioteka klas programu .NET Framework||X|X|X|
-|Biblioteka pomocy technicznej języka C++ dla platformy .NET||X|X|X|
-|OpenMP 2.0|X|X|X|X|
+|Biblioteka obsługi języka C++ dla platformy .NET||X|X|X|
+|OpenMP 2,0|X|X|X|X|
 
 ## <a name="project-templates"></a>Szablony projektów
 
-|Szablon|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Szablon|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Szablony XAML dla platformy uniwersalnej systemu Windows, Windows 8.1, Windows Phone 8.0|X||X|X|
+|Szablony XAML dla platformy UWP, Windows 8.1, Windows Phone 8,0|X||X|X|
 |Aplikacja Direct3D|X||X|X|
-|Biblioteka DLL (uniwersalny system Windows)|X||X|X|
-|Biblioteka statyczna (uniwersalny system Windows)|X||X|X|
+|Biblioteka DLL (uniwersalna systemu Windows)|X||X|X|
+|Biblioteka statyczna (platforma uniwersalna systemu Windows)|X||X|X|
 |Składnik środowiska wykonawczego systemu Windows|X||X|X|
-|Aplikacja testowa jednostek (uniwersalny system Windows)|X||X|X|
+|Aplikacja testów jednostkowych (platforma uniwersalna systemu Windows)|X||X|X|
 |Projekt ATL|||X|X|
 |Biblioteka klas (CLR)||X|X|X|
-|Aplikacja konsoli CLR||X|X|X|
+|Aplikacja konsolowa CLR||X|X|X|
 |Pusty projekt CLR||X|X|X|
 |Kreator niestandardowy|||X|X|
 |Pusty projekt||X|X|X|
-|Projekt Makefile||X|X|X|
-|Sterowanie MFC ActiveX|||X|X|
+|Projekt pliku reguł programu make||X|X|X|
+|Kontrolka ActiveX MFC|||X|X|
 |Aplikacja MFC|||X|X|
-|MFC DLL|||X|X|
+|BIBLIOTEKA DLL MFC|||X|X|
 |Projekt testowy|X|X|X|X|
-|Aplikacja konsoli Win32||X|X|X|
+|Aplikacja konsolowa Win32||X|X|X|
 |Projekt Win32||X|X|X|
 
-## <a name="tools"></a>Narzędzia
+## <a name="tools"></a>narzędzia
 
-|Narzędzie|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Narzędzie|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Łącznik przyrostowy (Link.exe)|X|X|X|X|
+|Łączenie przyrostowe (Link.exe)|X|X|X|X|
 |Narzędzie do konserwacji programu (Nmake.exe)||X|X|X|
-|Lib Generator (Lib.exe)|X|X|X|X|
-|Kompilator zasobów systemu Windows (rc.exe)|X|X|X|X|
-|Konwerter zasobów systemu Windows do obiektów (cvtRes.exe)||X|X|X|
-|Przeglądaj narzędzie do konserwacji informacji (BscMake.exe)|X|X|X|X|
-|C++ Nazwa Undecorator (Undname.exe)|X|X|X|X|
-|Wywrotka COFF/PE (Dumpbin.exe)|X|X|X|X|
+|Generator lib (Lib.exe)|X|X|X|X|
+|Kompilator zasobów systemu Windows (Rc.exe)|X|X|X|X|
+|Konwerter zasobów systemu Windows do obiektów (CvtRes.exe)||X|X|X|
+|Narzędzie do konserwacji przeglądanych informacji (BscMake.exe)|X|X|X|X|
+|Nazwa C++ Undecorator (Undname.exe)|X|X|X|X|
+|Zrzutu COFF/PE (Dumpbin.exe)|X|X|X|X|
 |Edytor COFF/PE (Editbin.exe)|X|X|X|X|
-|MASM (ml.exe)|||X|X|
+|MASM (Ml.exe)|||X|X|
 |Spy++|||X|X|
-|Errlook|||X|X|
-|AtlTrace (AtlTrace)|||X|X|
+|ErrLook|||X|X|
+|AtlTrace|||X|X|
 |Devenv.com|||X|X|
 |Zasady wnioskowania|||X|X|
-|Uaktualnianie projektów VCBuild .vcproj do msbuild (VCUpgrade.exe)|X|X|X|X|
-|Optymalizacje z przewodnikiem w profilu|||X|X|
+|Uaktualnij projekty VCBuild. vcproj do programu MSBuild (VCUpgrade.exe)|X|X|X|X|
+|Profilowana Optymalizacja|||X|X|
 
 ## <a name="debugging-features"></a>Funkcje debugowania
 
-|Funkcja debugowania|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Funkcja debugowania|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Debugowanie natywne|X|X|X|X|
-|natvis (wizualizacja typu macierzystego)|X|X|X|X|
+|Natvis (wizualizacja typu natywnego)|X|X|X|X|
 |Debugowanie grafiki|X||X|X|
 |Debugowanie zarządzane||X|X|X|
-|Użycie gpu|X||X|X|
+|Użycie procesora GPU|X||X|X|
 |Użycie pamięci|X||X|X|
 |Debugowanie zdalne|X|X|X|X|
 |Debugowanie SQL|||X|X|
 |Statyczna analiza kodu|Ograniczone|Ograniczone|X|X|
 
-## <a name="designers-and-editors"></a>Projektanci i redaktorzy
+## <a name="designers-and-editors"></a>Projektanci i edytory
 
-|Projektant lub edytor|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Projektant lub Edytor|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |XAML Designer|X||X|X|
-|Projektant/edytor stylu CSS|X|X|X|X|
-|Projektant/edytor HTML|X|X|X|X|
+|Projektant stylów CSS/Edytor|X|X|X|X|
+|Projektant/Edytor HTML|X|X|X|X|
 |Edytor XML|X|X|X|X|
 | Edytor kodu źródłowego|X|X|X|X|
-|Funkcje produktywności: Refaktoryzowanie, IntelliSense, Formatowanie kodu W++|X|X|X|X|
+|Funkcje produktywności: Refaktoryzacja, IntelliSense, formatowanie kodu C++|X|X|X|X|
 |Projektant Windows Forms||X|X|X|
 |Projektant danych|||X|X|
-|Edytor zasobów natywnych (pliki rc)|||X|X|
+|Natywny Edytor zasobów (pliki. RC)|||X|X|
 |Edytory zasobów|X|X|X|X|
 |Edytor modelu|X||X|X|
 |Projektant cieniowania|X||X|X|
 
 ## <a name="data-features"></a>Funkcje danych
 
-|Funkcja danych|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Funkcja danych|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Projektant danych|||X|X|
 |Obiekty danych|||X|X|
-|Usługi internetowe|||X|X|
+|Usługi sieci Web|||X|X|
 |Eksplorator serwera|||X|X|
 
-## <a name="build-and-project-systems"></a>Systemy kompilacji i projektów
+## <a name="build-and-project-systems"></a>Systemy kompilacji i projektu
 
-|Funkcja kompilacji lub projektu|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Kompilacja lub funkcja projektu|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Kompilacje wiersza polecenia (msbuild.exe)|X|X|X|X|
-|Natywne kierowanie wielokrotne||X|X|X|
-|Zarządzane kierowanie zbiorcze||X|X|X|
+|Kompilacje w wierszu polecenia (msbuild.exe)|X|X|X|X|
+|Natywne wiele elementów docelowych||X|X|X|
+|Zarządzane wiele elementów docelowych||X|X|X|
 |Kompilacje równoległe|X|X|X|X|
-|Konstruuj dostosowania|X|X|X|X|
+|Dostosowywanie kompilacji|X|X|X|X|
 |Rozszerzalność stron właściwości|X|X|X|X|
 
 ## <a name="automation-and-extensibility"></a>Automatyzacja i rozszerzalność
 
-|Automatyzacja i rozszerzalność|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
+|Automatyzacja i rozszerzalność|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Modele obiektów rozszerzalności|||X|X|
 |Model kodu|||X|X|
 |Model projektu|||X|X|
-|Model Edytora zasobów|||X|X|
-|Model kreatora|||X|X|
-|Model obiektu debugera|||X|X|
+|Model edytora zasobów|||X|X|
+|Model Kreatora|||X|X|
+|Model obiektów debugera|||X|X|
 
 ## <a name="application-lifecycle-management-tools"></a>Narzędzia do zarządzania cyklem życia aplikacji
 
-||||||
+|Narzędzie|Visual Studio Express dla systemu Windows|Visual Studio Express dla komputerów z systemem Windows|Visual Studio Professional/społeczność|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Narzędzie|Visual Studio Express dla systemu Windows|Visual Studio Express dla pulpitu systemu Windows|Visual Studio Professional / Społeczność|Visual Studio Enterprise|
-|Testowanie jednostkowe (struktura macierzysta)|X|X|X|X|
-|Testowanie jednostkowe (struktura zarządzana)||X|X|X|
+|Testy jednostkowe (natywna platforma)|X|X|X|X|
+|Testy jednostkowe (struktura zarządzana)||X|X|X|
 |Pokrycie kodu||||X|
 |Testowanie ręczne||||X|
 |Testowanie eksploracyjne||||X|
 |Zarządzanie przypadkami testowymi||||X|
-|Wykresy mapy kodu i zależności|||tylko do odczytu|X|
+|Mapa kodu i wykresy zależności|||tylko do odczytu|X|
 |Debugowanie mapy kodu||||X|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Typy projektów języka C++ w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Typy projektów C++ w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

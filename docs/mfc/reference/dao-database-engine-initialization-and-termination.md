@@ -5,25 +5,25 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: 62460e8e55f70b8cb0743f1d044636d25121050d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a70dd396a87315a96224edccf13250a2927cd99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365891"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837596"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicjowanie i kończenie działania aparatu bazy danych DAO
 
-DAO jest używany z bazami danych programu Access i jest obsługiwany przez pakiet Office 2013. DAO 3.6 jest ostateczną wersją i jest uważana za przestarzałą. Podczas korzystania z obiektów DAO MFC aparat bazy danych DAO musi najpierw zostać zainicjowany, a następnie zakończony przed zamknięciem aplikacji lub biblioteki DLL. Dwie `AfxDaoInit` funkcje `AfxDaoTerm`i , wykonaj te zadania.
+Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. W przypadku korzystania z obiektów MFC DAO aparat bazy danych DAO musi zostać najpierw zainicjowany, a następnie przerwany przed zakończeniem działania aplikacji lub biblioteki DLL. Dwie funkcje `AfxDaoInit` i `AfxDaoTerm` , wykonaj te zadania.
 
 ### <a name="dao-database-engine-initialization-and-termination"></a>Inicjowanie i kończenie działania aparatu bazy danych DAO
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[AfxDaoInit ( AfxDaoInit )](#afxdaoinit)|Inicjuje aparat bazy danych DAO.|
-|[AfxDaoTerm (AfxDaoTerm)](#afxdaoterm)|Kończy aparat bazy danych DAO.|
+|[AfxDaoInit](#afxdaoinit)|Inicjuje aparat bazy danych DAO.|
+|[AfxDaoTerm](#afxdaoterm)|Kończy działanie aparatu bazy danych DAO.|
 
-## <a name="afxdaoinit"></a><a name="afxdaoinit"></a>AfxDaoInit ( AfxDaoInit )
+## <a name="afxdaoinit"></a><a name="afxdaoinit"></a> AfxDaoInit
 
 Ta funkcja inicjuje aparat bazy danych DAO.
 
@@ -36,17 +36,17 @@ throw(CDaoException*);
 
 ### <a name="remarks"></a>Uwagi
 
-W większości przypadków nie trzeba dzwonić, `AfxDaoInit` ponieważ aplikacja automatycznie wywołuje go, gdy jest to potrzebne.
+W większości przypadków nie trzeba wywoływać, `AfxDaoInit` ponieważ aplikacja automatycznie wywołuje ją, gdy jest potrzebna.
 
-Informacje pokrewne oraz przykład `AfxDaoInit`połączenia telefonicznego można znaleźć [w notatce technicznej 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+Aby uzyskać informacje pokrewne, a na przykład wywoływanie `AfxDaoInit` , zobacz [uwagi techniczne 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
-## <a name="afxdaoterm"></a><a name="afxdaoterm"></a>AfxDaoTerm (AfxDaoTerm)
+## <a name="afxdaoterm"></a><a name="afxdaoterm"></a> AfxDaoTerm
 
-Ta funkcja powoduje zakończenie aparatu bazy danych DAO.
+Ta funkcja przerywa aparat bazy danych DAO.
 
 ```
 
@@ -55,16 +55,16 @@ void AfxDaoTerm();
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj wystarczy wywołać tę funkcję tylko w zwykłej biblioteki DLL MFC; aplikacja automatycznie zadzwoni, `AfxDaoTerm` gdy będzie potrzebna.
+Zazwyczaj należy wywołać tę funkcję tylko w zwykłej bibliotece MFC DLL; Aplikacja zostanie automatycznie wywołana w `AfxDaoTerm` razie konieczności.
 
-W zwykłych bibliotekach DLL MFC wywołaj `AfxDaoTerm` przed funkcją, `ExitInstance` ale po zniszczeniu wszystkich obiektów DAO MFC.
+W zwykłych bibliotekach DLL MFC Wywołaj `AfxDaoTerm` przed `ExitInstance` funkcją, ale po zniszczeniu wszystkich obiektów MFC DAO.
 
-Aby uzyskać powiązane informacje, zobacz [uwaga techniczna 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+Aby uzyskać powiązane informacje, zobacz [Uwagi techniczne 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

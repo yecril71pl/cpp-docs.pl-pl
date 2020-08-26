@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: aaeee501ef9c05fb19ac7561f7ff7567bae18793
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562561"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837648"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -5680,7 +5680,7 @@ Użyj funkcji globalnej [AfxMessageBox](../../mfc/reference/cstring-formatting-a
 
 Poniżej przedstawiono różne ikony systemowe, które mogą być używane w oknie komunikatu:
 
-|||
+|Ikona|Makro|
 |-|-|
 |![Ikona zatrzymania &#40;x&#41;](../../mfc/reference/media/vc364f1.gif "Ikona zatrzymania &#40;x&#41;")|MB_ICONHAND, MB_ICONSTOP i MB_ICONERROR|
 |![&#40; pomocy? &#41; ikona](../../mfc/reference/media/vc364f2.gif "&#40; pomocy? &#41; ikona")|MB_ICONQUESTION|

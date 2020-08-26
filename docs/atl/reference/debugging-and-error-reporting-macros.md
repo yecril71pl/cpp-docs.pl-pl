@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224230"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833481"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
 Te makra zapewniają przydatne funkcje debugowania i śledzenia.
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Zapisuje do okna danych wyjściowych wszystkie wycieki interfejsów, które są wykrywane, gdy `_Module.Term` jest wywoływana.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Zapisuje wszystkie wywołania do `QueryInterface` okna danych wyjściowych.|
@@ -32,7 +32,7 @@ Te makra zapewniają przydatne funkcje debugowania i śledzenia.
 |[ATLTRACE](#atltrace)|Raportuje ostrzeżenia do urządzenia wyjściowego, takie jak okno debugera, zgodnie ze wskazanymi flagami i poziomami. Uwzględnione w celu zapewnienia zgodności z poprzednimi wersjami.|
 |[ATLTRACE2](#atltrace2)|Raportuje ostrzeżenia do urządzenia wyjściowego, takie jak okno debugera, zgodnie ze wskazanymi flagami i poziomami.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Zdefiniuj to makro przed dołączeniem plików nagłówkowych ATL do śledzenia wszystkich `AddRef` i `Release` wywołań interfejsów składników do okna danych wyjściowych.
 
@@ -63,7 +63,7 @@ Informacje podane w tym miejscu są mapowane bezpośrednio do informacji podanyc
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES można używać w kompilacjach detalicznych.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Zapisuje wszystkie wywołania do `QueryInterface` okna danych wyjściowych.
 
@@ -77,7 +77,7 @@ Jeśli wywołanie `QueryInterface` zakończyło się niepowodzeniem, zostanie wy
 
 *nazwa interfejsu* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
+## <a name="atlassert"></a><a name="atlassert"></a> ATLASSERT
 
 Makro ATLASSERT wykonuje te same funkcje jak makro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) Znalezione w bibliotece wykonawczej C.
 
@@ -98,7 +98,7 @@ W kompilacjach debugowania ATLASSERT oblicza *booleanExpression* i generuje rapo
 
 **Nagłówek:** atldef. h
 
-## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
+## <a name="atlensure"></a><a name="atlensure"></a> ATLENSURE
 
 To makro służy do sprawdzania poprawności parametrów przesyłanych do funkcji.
 
@@ -135,7 +135,7 @@ Różnica między ATLENSURE i ATLASSERT polega na tym, że ATLENSURE zgłasza wy
 
 **Nagłówek:** AFX. h
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 W przypadku kompilacji debugowania ATL program wysyła ciąg " *FuncName* nie jest zaimplementowany" do urządzenia zrzutu i zwraca E_NOTIMPL.
 
@@ -160,7 +160,7 @@ W kompilacjach wydań po prostu zwraca E_NOTIMPL.
 
 **Nagłówek:** ATLTRACE. h
 
-## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a> ATLTRACE
 
 Raportuje ostrzeżenia do urządzenia wyjściowego, takie jak okno debugera, zgodnie ze wskazanymi flagami i poziomami. Uwzględnione w celu zapewnienia zgodności z poprzednimi wersjami.
 
@@ -191,7 +191,7 @@ podczas Sformatowany ciąg, który ma zostać wysłany do urządzenia zrzutu.
 
 Zobacz [ATLTRACE2](#atltrace2) , aby uzyskać opis ATLTRACE. ATLTRACE i ATLTRACE2 mają takie samo zachowanie, ATLTRACE jest uwzględniana w celu zapewnienia zgodności z poprzednimi wersjami.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 Raportuje ostrzeżenia do urządzenia wyjściowego, takie jak okno debugera, zgodnie ze wskazanymi flagami i poziomami.
 
@@ -283,7 +283,7 @@ ATLTRACE i ATLTRACE2 mają takie samo zachowanie, ATLTRACE jest uwzględniana w 
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)

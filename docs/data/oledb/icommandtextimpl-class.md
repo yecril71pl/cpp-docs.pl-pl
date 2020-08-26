@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210733"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845123"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl — Klasa
 
@@ -43,25 +43,25 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa polecenia pochodna od `ICommandTextImpl`.
+*T*<br/>
+Klasa polecenia pochodna `ICommandTextImpl` .
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** altdb. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetCommandText](#getcommandtext)|Zwraca polecenie tekstowe ustawione przez ostatnie wywołanie metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
 |[SetCommandText](#setcommandtext)|Ustawia tekst polecenia, zastępując istniejący tekst polecenia.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[m_strCommandText](#strcommandtext)|Przechowuje tekst polecenia.|
 
@@ -69,7 +69,7 @@ Klasa polecenia pochodna od `ICommandTextImpl`.
 
 Obowiązkowy interfejs dla poleceń.
 
-## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
 Zwraca polecenie tekstowe ustawione przez ostatnie wywołanie metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
@@ -84,7 +84,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 Zobacz [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) w *dokumentacji programisty OLE DB*. Parametr *pguidDialect* jest domyślnie ignorowany.
 
-## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
 Ustawia tekst polecenia, zastępując istniejący tekst polecenia.
 
@@ -99,7 +99,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 Zobacz [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl:: m_strCommandText
 
 Zapisuje ciąg tekstowy polecenia.
 

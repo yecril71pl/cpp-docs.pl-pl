@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218328"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845539"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
@@ -69,20 +69,20 @@ Klasa, która pochodzi od `IDBInitializeImpl` .
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|Konstruktor.|
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Initialize](#initialize)|Uruchamia dostawcę.|
 |[Uninitialize](#uninitialize)|Powoduje zatrzymanie dostawcy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[m_dwStatus](#dwstatus)|Flagi źródła danych.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Wskaźnik do implementacji informacji o właściwościach bazy danych.|
@@ -91,7 +91,7 @@ Klasa, która pochodzi od `IDBInitializeImpl` .
 
 Obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs w modułach wyliczających.
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> IDBInitializeImpl:: IDBInitializeImpl
 
 Konstruktor.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inicjuje wszystkie elementy członkowskie danych.
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> IDBInitializeImpl:: Initialize
 
 Inicjuje obiekt źródła danych przez przygotowanie jego obsługi właściwości.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Zobacz [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl:: Uninitialize
 
 Umieszcza obiekt źródła danych w stanie niezainicjowanym przez zwolnienie zasobów wewnętrznych, takich jak obsługa właściwości.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Zobacz [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl:: m_dwStatus
 
 Flagi źródła danych.
 
@@ -155,13 +155,13 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| Wartość | Opis |
 |-|-|
 |`DSF_MASK_INIT`|Maska umożliwiająca przywrócenie niezainicjowanego stanu.|
 |`DSF_PERSIST_DIRTY`|Ustaw, jeśli obiekt źródła danych wymaga trwałości (oznacza to, że zmiany zostały wprowadzone).|
 |`DSF_INITIALIZED`|Ustaw, jeśli źródło danych zostało zainicjowane.|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> IDBInitializeImpl:: m_pCUtlPropInfo
 
 Wskaźnik do obiektu implementacji dla informacji o właściwościach bazy danych.
 
@@ -171,7 +171,7 @@ Wskaźnik do obiektu implementacji dla informacji o właściwościach bazy danyc
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

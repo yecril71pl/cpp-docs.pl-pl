@@ -9,38 +9,38 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751474"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837206"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkcje szarych i symulowanych map bitowych
 
-**Funkcje szarej mapy bitowej**
+**Szare funkcje mapy bitowej**
 
-MFC udostępnia dwie funkcje dając bitmapy wygląd formantu wyłączone.
+MFC udostępnia dwie funkcje do nadawania mapy bitowej wyglądu wyłączonej kontrolki.
 
-![Porównanie wersji szarych i oryginalnych ikon](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji szarych i oryginalnych ikon")
+![Porównanie wersji ikon szarych i oryginalnych](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikon szarych i oryginalnych")
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[AfxDrawGrayBitmapa](#afxdrawgraybitmap)|Rysuje szarą wersję mapy bitowej.|
-|[AfxGetGrayBitmap (Mapa AfxGetGrayBitmap)](#afxgetgraybitmap)|Kopiuje szarą wersję mapy bitowej.|
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Rysuje szarą wersję mapy bitowej.|
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Kopiuje szarą wersję mapy bitowej.|
 
-**Funkcje roztrząsanych bitmap**
+**Funkcje mapy bitowej**
 
-MFC udostępnia również dwie funkcje zastępowania tła mapy bitowej wzorem roztrząsanym.
+MFC udostępnia również dwie funkcje do zastępowania tła mapy bitowej ze wzorcem.
 
-![Porównanie wersji z roztrząsanym i oryginalnymi ikonami](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji z roztrząsanym i oryginalnymi ikonami")
+![Porównanie wersji ikon z podaną i wersją](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji ikon z podaną i wersją")
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Rysuje mapę bitową z roztrząsanym tłem.|
-|[AfxGetDitheredBitmapa](#afxgetditheredbitmap)|Kopiuje mapę bitową z roztrząsanym tłem.|
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Rysuje mapę bitową z tłem w tle.|
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Kopiuje mapę bitową z tłem w tle.|
 
-## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmapa
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a> AfxDrawGrayBitmap
 
 Rysuje szarą wersję mapy bitowej.
 
@@ -55,26 +55,26 @@ void AFXAPI AfxDrawGrayBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
+*Domeny*<br/>
 Wskazuje docelowy kontroler domeny.
 
-*X*<br/>
-Docelowa współrzędna x.
+*x*<br/>
+Docelowa Współrzędna x.
 
-*Y*<br/>
-Cel y-współrzędne.
+*t*<br/>
+Współrzędna y docelowej.
 
-*Rsrc*<br/>
-Źródłowa mapa bitowa.
+*rSrc*<br/>
+Źródłowa Mapa bitowa.
 
-*crBackground (na terenie zgieł*<br/>
-Nowy kolor tła (zazwyczaj szary, na przykład COLOR_MENU).
+*crBackground*<br/>
+Nowy kolor tła (zwykle szary, taki jak COLOR_MENU).
 
 ### <a name="remarks"></a>Uwagi
 
-Mapa bitowa `AfxDrawGrayBitmap` narysowana z będzie miała wygląd wyłączonego formantu.
+Mapa bitowa narysowana przy użyciu `AfxDrawGrayBitmap` będzie mieć wygląd wyłączonej kontrolki.
 
-![Porównanie wersji szarych i oryginalnych ikon](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji szarych i oryginalnych ikon")
+![Porównanie wersji ikon szarych i oryginalnych](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikon szarych i oryginalnych")
 
 ### <a name="example"></a>Przykład
 
@@ -82,9 +82,9 @@ Mapa bitowa `AfxDrawGrayBitmap` narysowana z będzie miała wygląd wyłączoneg
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap (Mapa AfxGetGrayBitmap)
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a> AfxGetGrayBitmap
 
 Kopiuje szarą wersję mapy bitowej.
 
@@ -97,20 +97,20 @@ void AFXAPI AfxGetGrayBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Rsrc*<br/>
-Źródłowa mapa bitowa.
+*rSrc*<br/>
+Źródłowa Mapa bitowa.
 
-*pDest (właśc.*<br/>
-Docelowa mapa bitowa.
+*pDest*<br/>
+Docelowa Mapa bitowa.
 
-*crBackground (na terenie zgieł*<br/>
-Nowy kolor tła (zazwyczaj szary, na przykład COLOR_MENU).
+*crBackground*<br/>
+Nowy kolor tła (zwykle szary, taki jak COLOR_MENU).
 
 ### <a name="remarks"></a>Uwagi
 
-Mapa bitowa skopiowana z `AfxGetGrayBitmap` będzie miała wygląd wyłączonego formantu.
+Mapa bitowa skopiowana z `AfxGetGrayBitmap` będzie mieć wygląd wyłączonej kontrolki.
 
-![Porównanie wersji szarych i oryginalnych ikon](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji szarych i oryginalnych ikon")
+![Porównanie wersji ikon szarych i oryginalnych](../../mfc/reference/media/vcgraybitmap.gif "Porównanie wersji ikon szarych i oryginalnych")
 
 ### <a name="example"></a>Przykład
 
@@ -118,11 +118,11 @@ Mapa bitowa skopiowana z `AfxGetGrayBitmap` będzie miała wygląd wyłączonego
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a> AfxDrawDitheredBitmap
 
-Rysuje mapę bitową, zastępując jej tło wzorem roztrząsanym (kontrolerem).
+Rysuje mapę bitową, zastępując jej tło wzorcem (pionem).
 
 ```cpp
 void AFXAPI AfxDrawDitheredBitmap(
@@ -136,29 +136,29 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
+*Domeny*<br/>
 Wskazuje docelowy kontroler domeny.
 
-*X*<br/>
-Docelowa współrzędna x.
+*x*<br/>
+Docelowa Współrzędna x.
 
-*Y*<br/>
-Cel y-współrzędne.
+*t*<br/>
+Współrzędna y docelowej.
 
-*Rsrc*<br/>
-Źródłowa mapa bitowa.
+*rSrc*<br/>
+Źródłowa Mapa bitowa.
 
 *cr1*<br/>
-Jeden z dwóch kolorów roztrząsać, zazwyczaj biały.
+Jeden z dwóch kolorów symulowania, zazwyczaj biały.
 
 *cr2*<br/>
-Drugi kolor roztrząsać, zazwyczaj jasnoszary (COLOR_MENU).
+Inny kolor symulowania, zazwyczaj jasnoszary (COLOR_MENU).
 
 ### <a name="remarks"></a>Uwagi
 
-Źródłowna mapa bitowa jest rysowana na docelowym kontrolerze domeny z dwukolorowym wzorem w kratkę *(cr1* i *cr2),* zastępującym tło mapy bitowej. Tło źródłowej mapy bitowej jest definiowane jako jej białe piksele i wszystkie piksele pasujące do koloru piksela w lewym górnym rogu mapy bitowej.
+Źródłowa Mapa bitowa jest rysowana na docelowym kontrolerze domeny przy użyciu wzorca z dwoma kolorami (*cr1* i *CR2*), zastępując tło mapy bitowej. Tło źródłowej mapy bitowej jest definiowane jako białe piksele i wszystkie piksele pasujące do koloru piksela w lewym górnym rogu mapy bitowej.
 
-![Porównanie wersji z roztrząsanym i oryginalnymi ikonami](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji z roztrząsanym i oryginalnymi ikonami")
+![Porównanie wersji ikon z podaną i wersją](../../mfc/reference/media/vcditheredbitmap.gif "Porównanie wersji ikon z podaną i wersją")
 
 ### <a name="example"></a>Przykład
 
@@ -166,11 +166,11 @@ Drugi kolor roztrząsać, zazwyczaj jasnoszary (COLOR_MENU).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmapa
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a> AfxGetDitheredBitmap
 
-Kopiuje mapę bitową, zastępując jej tło wzorem roztrząsanym (kontrolerem).
+Kopiuje mapę bitową, zastępując jej tło wzorcem (pionem).
 
 ```cpp
 void AFXAPI AfxGetDitheredBitmap(
@@ -182,23 +182,23 @@ void AFXAPI AfxGetDitheredBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Rsrc*<br/>
-Źródłowa mapa bitowa.
+*rSrc*<br/>
+Źródłowa Mapa bitowa.
 
-*pDest (właśc.*<br/>
-Docelowa mapa bitowa.
+*pDest*<br/>
+Docelowa Mapa bitowa.
 
 *cr1*<br/>
-Jeden z dwóch kolorów roztrząsać, zazwyczaj biały.
+Jeden z dwóch kolorów symulowania, zazwyczaj biały.
 
 *cr2*<br/>
-Drugi kolor roztrząsać, zazwyczaj jasnoszary (COLOR_MENU).
+Inny kolor symulowania, zazwyczaj jasnoszary (COLOR_MENU).
 
 ### <a name="remarks"></a>Uwagi
 
-Źródłowna mapa bitowa jest kopiowana do docelowej mapy bitowej z dwukolorowym wzorem w kratkę *(cr1* i *cr2),* zastępującym tło źródłowej mapy bitowej. Tło źródłowej mapy bitowej jest definiowane jako jej białe piksele i wszystkie piksele pasujące do koloru piksela w lewym górnym rogu mapy bitowej.
+Źródłowa Mapa bitowa jest kopiowana do docelowej mapy bitowej przy użyciu wzorca z dwoma kolorami (*cr1* i *CR2*), zastępując tło źródłowej mapy bitowej. Tło źródłowej mapy bitowej jest definiowane jako białe piksele i wszystkie piksele pasujące do koloru piksela w lewym górnym rogu mapy bitowej.
 
-![Porównanie wersji z roztrząsanym i oryginalnymi ikonami](../../mfc/reference/media/vcditheredbitmap.gif "mapa vcditheredbitmap")
+![Porównanie wersji ikon z podaną i wersją](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 
 ### <a name="example"></a>Przykład
 
@@ -206,8 +206,8 @@ Drugi kolor roztrząsać, zazwyczaj jasnoszary (COLOR_MENU).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)
