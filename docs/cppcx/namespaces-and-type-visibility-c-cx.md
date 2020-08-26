@@ -2,12 +2,12 @@
 title: Przestrzenie nazw i widoczność typów (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837804"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Przestrzenie nazw i widoczność typów (C++/CX)
 
@@ -28,15 +28,14 @@ W prywatnej klasie ref, interfejsie lub delegatze żadne elementy członkowskie 
 
 Poniższe Modyfikatory dostępu umożliwiają kontrolowanie zarówno widoczności metadanych, jak i ułatwień dostępu do kodu źródłowego.
 
-||||
-|-|-|-|
-|Modyfikator|Znaczenie|Emituje do metadanych?|
-|private|Domyślny dostęp. Takie samo znaczenie jak w przypadku standardowego języka C++.|Nie|
-|protected|Takie samo, jak w przypadku standardowego języka C++, zarówno w ramach aplikacji, jak i składnika, jak i w metadanych.|Tak|
-|public|Takie samo znaczenie jak w przypadku standardowego języka C++.|Tak|
-|`public protected`oraz`protected public`|Chroniona dostępność w metadanych, publiczna w aplikacji lub składniku.|Tak|
-|`protected private` lub `private protected`|Niewidoczne w metadanych; chroniona dostępność w aplikacji lub składniku.||
-|`internal` lub `private public`|Element członkowski jest publiczny w aplikacji lub składniku, ale nie jest widoczny w metadanych.|Nie|
+| Modyfikator | Znaczenie | Emituje do metadanych? |
+|--|--|--|
+| **`private`** | Domyślny dostęp. Takie samo znaczenie jak w przypadku standardowego języka C++. | Nie |
+| **`protected`** | Takie samo, jak w przypadku standardowego języka C++, zarówno w ramach aplikacji, jak i składnika, jak i w metadanych. | Tak |
+| **`public`** | Takie samo znaczenie jak w przypadku standardowego języka C++. | Tak |
+| **`public protected`** oraz **`protected public`** | Chroniona dostępność w metadanych, publiczna w aplikacji lub składniku. | Tak |
+| **`protected private`** oraz **`private protected`** | Niewidoczne w metadanych; chroniona dostępność w aplikacji lub składniku. |  |
+| **`internal`** oraz **`private public`** | Element członkowski jest publiczny w aplikacji lub składniku, ale nie jest widoczny w metadanych. | Nie |
 
 ## <a name="windows-runtime-namespaces"></a>środowisko wykonawcze systemu Windows przestrzenie nazw
 
@@ -46,14 +45,13 @@ Interfejs API systemu Windows składa się z typów, które są zadeklarowane w 
 
 C++/CX definiują niektóre typy w tych przestrzeniach nazw jako część projekcji systemu typu środowisko wykonawcze systemu Windows.
 
-|||
-|-|-|
-|**Przestrzeń nazw**|**Opis**|
-|default|Zawiera wbudowane typy liczbowe i char16. Te typy są w zakresie w każdej przestrzeni nazw, a **`using`** instrukcja nie jest nigdy wymagana.|
-|Platforma|Zawiera głównie typy publiczne, które odpowiadają typom środowisko wykonawcze systemu Windows `Array<T>` , takich jak,, `String` `Guid` i `Boolean` . Zawiera również wyspecjalizowane typy pomocnika, takie jak `Platform::Agile<T>` i `Platform::Box<T>` .|
-|Platform:: Collections|Zawiera klasy konkretnych kolekcji, które implementują interfejsy kolekcji środowisko wykonawcze systemu Windows `IVector` , `IMap` i tak dalej. Te typy są zdefiniowane w pliku nagłówkowym, Collection. h, a nie na platformie. winmd.|
-|Platforma::D etails|Zawiera typy, które są używane przez kompilator i nie są przeznaczone do użycia publicznego.|
+| Przestrzeń nazw | Opis |
+|--|--|
+| default | Zawiera wbudowane typy liczbowe i char16. Te typy są w zakresie w każdej przestrzeni nazw, a **`using`** instrukcja nie jest nigdy wymagana. |
+| `Platform` | Zawiera głównie typy publiczne, które odpowiadają typom środowisko wykonawcze systemu Windows `Array<T>` , takich jak,, `String` `Guid` i `Boolean` . Zawiera również wyspecjalizowane typy pomocnika, takie jak `Platform::Agile<T>` i `Platform::Box<T>` . |
+| `Platform::Collections` | Zawiera klasy konkretnych kolekcji, które implementują interfejsy kolekcji środowisko wykonawcze systemu Windows `IVector` , `IMap` i tak dalej. Te typy są zdefiniowane w pliku nagłówkowym, Collection. h, a nie na platformie. winmd. |
+| `Platform::Details` | Zawiera typy, które są używane przez kompilator i nie są przeznaczone do użycia publicznego. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)

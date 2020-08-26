@@ -5,12 +5,12 @@ f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232823"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835665"
 ---
 # <a name="ltvariantgt"></a>&lt;typu&gt;
 
@@ -26,18 +26,18 @@ Obiekt Variant utrzymuje wartość i zarządza nią. Jeśli wariant utrzymuje wa
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator = =](../standard-library/forward-list-operators.md#op_eq_eq)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest równy obiektowi Variant po prawej stronie.|
 |[operator! =](../standard-library/forward-list-operators.md#op_neq)|Testuje, czy obiekt VARIANT po lewej stronie operatora nie jest równy obiektowi Variant po prawej stronie.|
-|[<operatora](../standard-library/forward-list-operators.md#op_lt)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest mniejszy niż obiekt VARIANT po prawej stronie.|
+|[<operatora ](../standard-library/forward-list-operators.md#op_lt)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest mniejszy niż obiekt VARIANT po prawej stronie.|
 |[<operatora =](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest mniejszy niż lub równy obiektowi Variant po prawej stronie.|
-|[>operatora](../standard-library/forward-list-operators.md#op_gt)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest większy niż obiekt VARIANT po prawej stronie.|
+|[>operatora ](../standard-library/forward-list-operators.md#op_gt)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest większy niż obiekt VARIANT po prawej stronie.|
 |[>operatora =](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest większy niż lub równy obiektowi Variant po prawej stronie.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Pobierz](../standard-library/variant-functions.md#get)|Pobiera wariant obiektu.|
 |[get_if](../standard-library/variant-functions.md#get_if)|Pobiera wariant obiektu, jeśli istnieje.|
@@ -47,14 +47,14 @@ Obiekt Variant utrzymuje wartość i zarządza nią. Jeśli wariant utrzymuje wa
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|Obiekty zgłoszone w celu zgłaszania nieprawidłowych dostępu do wartości obiektu Variant.|
 |[typu](../standard-library/variant.md)|Obiekt do przechowywania wartości jednego z jej typów alternatywnych lub nie ma wartości.|
 
 ### <a name="structs"></a>Struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[skrótu](../standard-library/hash-structure.md)||
 |[stan](../standard-library/monostate-structure.md)|Typ alternatywny dla wariantu, który ma być wartością domyślną konstrukcyjną.|
@@ -64,10 +64,10 @@ Obiekt Variant utrzymuje wartość i zarządza nią. Jeśli wariant utrzymuje wa
 
 ### <a name="objects"></a>Obiekty
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

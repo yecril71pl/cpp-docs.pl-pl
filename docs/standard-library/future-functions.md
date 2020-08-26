@@ -1,5 +1,5 @@
 ---
-title: '&lt;przyszłe&gt; funkcje'
+title: '&lt;funkcje w przyszłości &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - future/std::async
@@ -14,23 +14,24 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 16c26212cac13602e981f42d8333518da90615fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d419984243d3970533f30814fe0ff451199afb34
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370663"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837973"
 ---
-# <a name="ltfuturegt-functions"></a>&lt;przyszłe&gt; funkcje
+# <a name="ltfuturegt-functions"></a>&lt;funkcje w przyszłości &gt;
 
-||||
-|-|-|-|
-|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
-|[make_error_condition](#make_error_condition)|[Wymiany](#swap)|
+[asynchroniczne](#async)\
+[future_category](#future_category)\
+[make_error_code](#make_error_code)\
+[make_error_condition](#make_error_condition)\
+[wymiany](#swap)|
 
-## <a name="async"></a><a name="async"></a>Async
+## <a name="async"></a><a name="async"></a> asynchroniczne
 
-Reprezentuje *asynchroniiowego dostawcy*.
+Reprezentuje *dostawcę asynchronicznego*.
 
 ```cpp
 template <class Fn, class... ArgTypes>
@@ -44,47 +45,47 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametry
 
-*Zasad*\
-Wartość [uruchomienia.](../standard-library/future-enums.md#launch)
+*zasad*\
+Wartość [uruchomienia](../standard-library/future-enums.md#launch) .
 
 ### <a name="remarks"></a>Uwagi
 
 Definicje skrótów:
 
-|||
+|Skrót|Opis|
 |-|-|
-|*Dfn*|Wynik wywołania `decay_copy(forward<Fn>(fn))`.|
-|*dargs (dargs)*|Wyniki rozmów `decay_copy(forward<ArgsTypes>(args...))`.|
-|*Ty (ty)*|Typ `result_of<Fn(ArgTypes...)>::type`.|
+|*dfn*|Wynik wywołania `decay_copy(forward<Fn>(fn))` .|
+|*dargs*|Wyniki wywołań `decay_copy(forward<ArgsTypes>(args...))` .|
+|*Br*|Typ `result_of<Fn(ArgTypes...)>::type` .|
 
-Zwraca pierwszą `async(launch::any, fn, args...)`funkcję szablonu .
+Funkcja pierwszego szablonu zwraca wartość `async(launch::any, fn, args...)` .
 
-Druga funkcja zwraca `future<Ty>` obiekt, którego *skojarzony stan asynchroniczne* przechowuje wynik wraz z wartościami *dfn* i *dargs* oraz obiekt wątku do zarządzania oddzielnym wątkiem wykonania.
+Druga funkcja zwraca obiekt, `future<Ty>` którego *skojarzony stan asynchroniczny* przechowuje wynik wraz z wartościami *DFN* i *dargs* oraz obiektem wątku do zarządzania osobnym wątkiem wykonywania.
 
-O `decay<Fn>::type` ile nie jest to typ inny niż uruchomienie, druga funkcja nie uczestniczy w rozpoznawaniu przeciążenia.
+Chyba że `decay<Fn>::type` jest typem innym niż uruchamianie, druga funkcja nie uczestniczy w rozpoznawaniu przeciążenia.
 
-Standard C++ stwierdza, że jeśli zasada jest uruchomiona::async, funkcja tworzy nowy wątek. Jednak implementacja firmy Microsoft jest obecnie niezgodna. Uzyskuje swoje wątki z usługi Windows ThreadPool, która w niektórych przypadkach może zapewnić wątek z recyklingu, a nie nowy. Oznacza to, `launch::async` że polityka jest `launch::async|launch::deferred`rzeczywiście wdrażana jako .  Innym implikacją implementacji opartej na wątkupool jest, że nie ma żadnej gwarancji, że zmienne lokalne wątku zostaną zniszczone po zakończeniu wątku. Jeśli wątek zostanie poddany recyklingowi `async`i dostarczony do nowego wywołania, stare zmienne nadal będą istnieć. Dlatego zaleca się, aby nie używać zmiennych `async`lokalnych wątków z .
+Standardowe Stany języka C++, które w przypadku uruchamiania zasad:: async, funkcja tworzy nowy wątek. Jednakże implementacja firmy Microsoft jest obecnie niezgodna. Uzyskuje ona wątki z puli wątków systemu Windows, co w niektórych przypadkach może dostarczyć wątek odtwarzany zamiast nowego. Oznacza to, że `launch::async` zasady są faktycznie implementowane jako `launch::async|launch::deferred` .  Inną implikacją implementacji opartą na puli wątków jest to, że nie ma gwarancji, że zmienne lokalne wątku zostaną zniszczone po zakończeniu wątku. Jeśli wątek zostanie odtworzony i udostępniony do nowego wywołania `async` , stare zmienne nadal będą istnieć. Dlatego zalecamy, aby nie używać zmiennych lokalnych wątków w programie `async` .
 
-Jeśli *policy* zasada `launch::deferred`jest , funkcja oznacza jego skojarzony stan asynchroniczne jako gospodarstwa *odroczonej funkcji* i zwraca. Pierwsze wywołanie dowolnej funkcji nieczasowej, która czeka na skojarzony stan asynchroniczne, aby być `INVOKE(dfn, dargs..., Ty)`gotowym w efekcie wywołuje funkcję odroczoną przez ocenę .
+Jeśli *zasady* są `launch::deferred` , funkcja oznacza swój skojarzony stan asynchroniczny jako zawierający *odroczoną funkcję* i zwraca wartość. Pierwsze wywołanie funkcji niebędącej czasem, która czeka na gotowość skojarzonego stanu asynchronicznego, jest gotowe do wywołania funkcji odroczonej przez ocenę `INVOKE(dfn, dargs..., Ty)` .
 
-We wszystkich przypadkach skojarzony stan asynchroniczne `future` obiektu nie jest ustawiona na *gotowy,* dopóki ocena `INVOKE(dfn, dargs..., Ty)` zakończy, albo przez zgłaszanie wyjątku lub przez powrót normalnie. Wynik skojarzonego stanu asynchronicznej jest wyjątkiem, jeśli został zgłoszony lub dowolną wartość, która jest zwracana przez ocenę.
+We wszystkich przypadkach, skojarzony stan asynchroniczny `future` obiektu nie jest ustawiony na *gotowe* do momentu zakończenia oceny `INVOKE(dfn, dargs..., Ty)` , przez wyrzucanie wyjątku lub przez zwrócenie normalne. Wynikiem skojarzonego stanu asynchronicznego jest wyjątek, jeśli został zgłoszony lub wartość zwracana przez ocenę.
 
 > [!NOTE]
-> W `future`przypadku (lub ostatniego [shared_future](../standard-library/shared-future-class.md)— dołączonego do zadania `std::async`rozpoczętego z blokiem destruktora, jeśli zadanie nie zostało ukończone; oznacza to, że blokuje, jeśli `.get()` ten `.wait()` wątek nie został jeszcze wywołany lub i zadanie jest nadal uruchomione. Jeśli `future` uzyskane `std::async` z jest przenoszony poza zakres lokalny, inny kod, który używa go należy pamiętać, że jego destruktor może zablokować dla stanu udostępnionego, aby stać się gotowy.
+> Dla elementu `future` — lub ostatniej [shared_future](../standard-library/shared-future-class.md)— który jest dołączony do zadania uruchomionego z `std::async` , destruktor blokuje się, jeśli zadanie nie zostało ukończone; oznacza to, że jest blokowane, jeśli ten wątek nie został jeszcze wywołany, `.get()` `.wait()` a zadanie jest nadal uruchomione. Jeśli `future` uzyskana z programu `std::async` jest przenoszona poza zakres lokalny, inny kod, który używa tego, musi mieć świadomość, że jego destruktor może zablokować, aby współużytkowany stan stał się gotowy.
 
-Pseudo-funkcja `INVOKE` jest zdefiniowana w [ \<>funkcjonalnym ](../standard-library/functional.md).
+Pseudo funkcja `INVOKE` jest zdefiniowana w [\<functional>](../standard-library/functional.md) .
 
-## <a name="future_category"></a><a name="future_category"></a>future_category
+## <a name="future_category"></a><a name="future_category"></a> future_category
 
-Zwraca odwołanie do [obiektu error_category,](../standard-library/error-category-class.md) który charakteryzuje błędy skojarzone `future` z obiektami.
+Zwraca odwołanie do obiektu [error_category](../standard-library/error-category-class.md) , który charakteryzuje błędy, które są skojarzone z `future` obiektami.
 
 ```cpp
 const error_category& future_category() noexcept;
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
-Tworzy [error_code](../standard-library/error-code-class.md) wraz z [error_category](../standard-library/error-category-class.md) obiektem, który charakteryzuje [przyszłe](../standard-library/future-class.md) błędy.
+Tworzy [error_code](../standard-library/error-code-class.md) wraz z obiektem [error_category](../standard-library/error-category-class.md) , który charakteryzuje [przyszłe](../standard-library/future-class.md) błędy.
 
 ```cpp
 inline error_code make_error_code(future_errc Errno) noexcept;
@@ -93,15 +94,15 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 ### <a name="parameters"></a>Parametry
 
 *Errno*\
-Wartość [future_errc](../standard-library/future-enums.md#future_errc) identyfikującą zgłoszony błąd.
+Wartość [future_errc](../standard-library/future-enums.md#future_errc) , która identyfikuje zgłoszony błąd.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 `error_code(static_cast<int>(Errno), future_category());`
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
-Tworzy [error_condition](../standard-library/error-condition-class.md) wraz z [error_category](../standard-library/error-category-class.md) obiektem, który charakteryzuje [przyszłe](../standard-library/future-class.md) błędy.
+Tworzy [error_condition](../standard-library/error-condition-class.md) wraz z obiektem [error_category](../standard-library/error-category-class.md) , który charakteryzuje [przyszłe](../standard-library/future-class.md) błędy.
 
 ```cpp
 inline error_condition make_error_condition(future_errc Errno) noexcept;
@@ -110,15 +111,15 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 ### <a name="parameters"></a>Parametry
 
 *Errno*\
-Wartość [future_errc](../standard-library/future-enums.md#future_errc) identyfikującą zgłoszony błąd.
+Wartość [future_errc](../standard-library/future-enums.md#future_errc) , która identyfikuje zgłoszony błąd.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
-## <a name="swap"></a><a name="swap"></a>Wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
-Wymienia *skojarzony stan asynchroniczne* jednego `promise` obiektu z stanem innego.
+Wymienia *skojarzony stan asynchroniczny* jednego `promise` obiektu z innym.
 
 ```cpp
 template <class Ty>
@@ -130,12 +131,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametry
 
-*Lewej*\
+*Lewym*\
 Lewy `promise` obiekt.
 
-*Prawo*\
-Właściwy `promise` obiekt.
+*Kliknij*\
+Prawidłowy `promise` obiekt.
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<przyszłych>](../standard-library/future.md)
+[\<future>](../standard-library/future.md)

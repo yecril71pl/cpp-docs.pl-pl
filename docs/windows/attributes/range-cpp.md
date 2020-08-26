@@ -1,17 +1,17 @@
 ---
-title: Range (C++ atrybut com)
+title: Range (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214620"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839481"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -33,7 +33,7 @@ Wartość wysokiego zakresu.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **Range** C++ ma taką samą funkcjonalność jak atrybut [Range](/windows/win32/Midl/range) MIDL.
+Atrybut **Range** języka C++ ma takie same funkcje jak atrybut [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -53,14 +53,12 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda, parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
@@ -69,4 +67,4 @@ Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteks
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)
+[Atrybuty elementu członkowskiego danych](data-member-attributes.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405029"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846319"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC — podstawy programowania Internetu
 
@@ -38,9 +38,9 @@ MFC zawiera klasy, które obsługują programowanie Internetu. Można użyć [CO
 
 - [Klasy MFC związane z Internetem](internet-related-mfc-classes.md)
 
-- [Informacje internetowe według tematów](internet-information-by-topic.md)
+- [Informacje internetowe według tematu](internet-information-by-topic.md)
 
-- [Informacje internetowe według zadań](internet-information-by-task.md)
+- [Informacje internetowe według zadania](internet-information-by-task.md)
 
 - [Technologia Active w Internecie](active-technology-on-the-internet.md)
 
@@ -56,9 +56,9 @@ MFC zawiera klasy, które obsługują programowanie Internetu. Można użyć [CO
 
 - [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)
 
-- [MFC — zadania związane z programowaniem Internetu](mfc-internet-programming-tasks.md)
+- [Zadania programistyczne internetowe MFC](mfc-internet-programming-tasks.md)
 
-- [Opcje do wyboru przy projektowaniu aplikacji](application-design-choices.md)
+- [Wybór projektu aplikacji](application-design-choices.md)
 
 - [Pisanie aplikacji MFC](writing-mfc-applications.md)
 
@@ -66,14 +66,14 @@ MFC zawiera klasy, które obsługują programowanie Internetu. Można użyć [CO
 
 - [Zabezpieczenia internetowe](internet-security-cpp.md)
 
-- [Obsługa ALT dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)
+- [Obsługa biblioteki ATL dla formantów DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Witryny sieci Web, aby uzyskać więcej informacji
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> Witryny sieci Web, aby uzyskać więcej informacji
 
-Aby uzyskać więcej informacji na temat technologii Microsoft Internet, zobacz [Microsoft docs](https://docs.microsoft.com/).
+Aby uzyskać więcej informacji na temat technologii Microsoft Internet, zobacz [sieci i Internet](/windows/win32/networking).
 
 [Organizacja World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specyfikacje dla języka HTML, http, CGI i innych technologii World Wide Web.
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Więcej pomocy internetowej
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> Więcej pomocy internetowej
 
 Sekcja OLE Windows SDK zawiera dodatkowe informacje na temat programowania OLE. Informacje te zawierają szczegółowe informacje o używaniu funkcji Win32 WinInet bezpośrednio, a nie za pośrednictwem klas MFC. Zawiera również przegląd informacji o technologiach internetowych.

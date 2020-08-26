@@ -4,18 +4,18 @@ description: Podsumowanie opisów przykładów dostępnych w zarchiwizowanym rep
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846371"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ — przykłady
 
 Przykłady dla programu Visual Studio C++ są dostępne w sieci Web. Firma Microsoft wygenerowała wiele przykładów języka C++, które przedstawiają różne funkcje w wielu technologiach. Poniżej przedstawiono kilka miejsc, w których można znaleźć dodatkowe przykłady:
 
-- [Przykłady Microsoft Docs — C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Przykłady Microsoft Docs — C++](/samples/browse/?term=c%2B%2B)
 
 - [Przykłady systemu Windows w witrynie GitHub](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ Przykłady dla programu Visual Studio C++ są dostępne w sieci Web. Firma Micro
 
 - [Przykłady kodu ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Przykłady tworzenia sprzętu dla systemu Windows](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Przykłady tworzenia sprzętu dla systemu Windows](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>Zarchiwizowane przykłady języka C++ w witrynie GitHub
 
@@ -217,7 +217,7 @@ W poprzednich wersjach programu Visual Studio uwzględniono przykładowy kod ję
 | [Zlokalizować](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Kontrolka z zlokalizowanym interfejsem użytkownika, który demonstruje użycie oddzielnych bibliotek typów i bibliotek dołączanych dynamicznie (dll) dla lokalizacji. |
 | [Adres z](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Demonstruje użycie kontrolki "kontroler adresów sieciowych systemu Windows Vista". |
 | [Sygnał](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Kontrolka wyświetlająca kolory palety. Pokazuje właściwości tylko do odczytu, trwałe właściwości pobierania/ustawiania, trwałe właściwości sparametryzowane i właściwości obrazu. |
-| [Wypychanie](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Kontrolka została poddana kontroli z poziomu kontrolki przycisku rysowanego przez właściciela systemu Windows. Pokazuje właściwości giełdowe, zdarzenia niestandardowe i posiadaczy obrazu. |
+| [Wydajności](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Kontrolka została poddana kontroli z poziomu kontrolki przycisku rysowanego przez właściciela systemu Windows. Pokazuje właściwości giełdowe, zdarzenia niestandardowe i posiadaczy obrazu. |
 | [RegSvr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Pokazuje wywołanie kodu samorejestracji. |
 | [SpinDial](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Kontrolka z wyglądem elementu pokrętła, który pokazuje sprawdzanie poprawności danych strony właściwości. |
 | [TestHelp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Formant ActiveX, który ma własny plik pomocy i etykietek narzędzi. |
@@ -321,7 +321,7 @@ W poprzednich wersjach programu Visual Studio uwzględniono przykładowy kod ję
 | [RibbonMDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje użycie kontrolki wstążki z interfejsem wiele dokumentów. |
 | [RollupPane](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje przestawne okienko "informacje", które jest automatycznie zestawiane. Aby włączyć i wyłączyć funkcję wycofywania, możesz nacisnąć przycisk pinezki na podpisie okienka zmiennoprzecinkowego. |
 | [SetPaneSize](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje, jak programowo ustawić rozmiar okienka dokowania. |
-| [Slider](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje, jak zaimplementować przycisk paska narzędzi, który obsługuje zewnętrzny formant. |
+| [Suwak](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje, jak zaimplementować przycisk paska narzędzi, który obsługuje zewnętrzny formant. |
 | [Statecollection](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Demonstruje sposób implementacji aplikacji, która zapisuje i ładuje różne stany na pasku menu, paskach narzędzi i oknach dokowania. |
 | [StatusBarDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje, jak dodać różne kontrolki zaawansowane do paska stanu. |
 | [TabbedView](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Pokazuje, jak utworzyć widok, który zawiera wiele widoków z kartami, takich jak karty w skoroszycie programu Excel. |

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211149"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845643"
 ---
 # <a name="ctable-class"></a>Klasa CTable
 
@@ -45,11 +45,11 @@ Klasa zestawu wierszy.
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Otwórz](#open)|Otwiera tabelę.|
 
@@ -57,7 +57,7 @@ Klasa zestawu wierszy.
 
 Zobacz [CCommand](../../data/oledb/ccommand-class.md) , aby uzyskać informacje na temat wykonywania polecenia w celu uzyskania dostępu do zestawu wierszy.
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable:: Open
 
 Otwiera tabelę.
 
@@ -92,7 +92,7 @@ podczas Nazwa tabeli, która ma zostać otwarta, przeniesiona jako ciąg Unicode
 podczas Nazwa tabeli do otwarcia, która została przeniesiona jako ciąg ANSI.
 
 *DBID*<br/>
-podczas `DBID` tabeli do otwarcia.
+podczas `DBID` Tabela, która ma zostać otwarta.
 
 *pPropSet*<br/>
 podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK. Wartość domyślna NULL określa brak właściwości.
@@ -111,4 +111,4 @@ Aby uzyskać więcej informacji, zobacz [IOpenRowset:: OPENROWSET](/previous-ver
 ## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

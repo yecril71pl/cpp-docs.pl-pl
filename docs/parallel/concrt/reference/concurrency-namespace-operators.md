@@ -5,22 +5,35 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836014"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
-||||
-|-|-|-|
-|[operator! =](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
-|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
-|[operator = =](#operator_eq_eq)|[&#124;&#124;operatora](#operator_lor)| |
+:::row:::
+   :::column span="":::
+      [`operator||`](#operator_lor)\
+      [`operator&&`](#operator_amp_amp)
+   :::column-end:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator<`](#operator_lt)\
+      [`operator<=`](#operator_lt_eq)
+   :::column-end:::
+   :::column span="":::
+      [`operator>`](#operator_gt)\
+      [`operator>=`](#operator_gt_eq)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>operator&#124;&#124; operatora
+## <a name="operator124124-operator"></a><a name="operator_lor"></a> operator&#124;&#124; operatora
 
 Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.
 
@@ -113,7 +126,7 @@ Zadanie, które zakończy się pomyślnie, gdy oba zadania wejściowe zostały w
 
 Jeśli jedno z zadań zostanie anulowane lub zgłosi wyjątek, zwrócone zadanie zakończy się wcześnie, w stanie anulowanym, a wyjątek, jeśli wystąpi, zostanie wygenerowany w przypadku wywołania `get()` lub `wait()` wykonania tego zadania.
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operator = = — operator
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a> operator = = — operator
 
 Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest równy `concurrent_vector` obiektowi po prawej stronie.
 
@@ -151,7 +164,7 @@ Dwa współbieżne wektory są równe, jeśli mają taką samą liczbę element�
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>operator! = — operator
+## <a name="operator-operator"></a><a name="operator_neq"></a> operator! = — operator
 
 Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora nie jest równy `concurrent_vector` obiektowi po prawej stronie.
 
@@ -227,7 +240,7 @@ Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` kla
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operator &lt; = — operator
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a> operator &lt; = — operator
 
 Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od lub równy `concurrent_vector` obiektowi po prawej stronie.
 
@@ -303,7 +316,7 @@ Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` kla
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operator &gt; = — operator
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a> operator &gt; = — operator
 
 Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż lub równy `concurrent_vector` obiektowi po prawej stronie.
 
@@ -341,6 +354,6 @@ Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` kla
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

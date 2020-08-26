@@ -6,18 +6,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835652"
 ---
 # <a name="win32-predefined-symbols"></a>Wstępnie zdefiniowane symbole Win32
 
 Te symbole są zdefiniowane w plikach nagłówkowych Win32 i obsługują standardowe funkcje aplikacji i akcje systemu Windows. Te symbole są głównie używane w przypadku typowych elementów interfejsu użytkownika. Podczas pracy z kontrolkami w edytorach zasobów te symbole będą widoczne w [okno właściwości](/visualstudio/ide/reference/properties-window) skojarzonych ze wspólnymi kontrolkami. Na przykład jeśli na pasku narzędzi powinna zostać wyświetlona ikona aplikacji, ikona zostanie skojarzona z symbolem IDI_SMALL w oknie **Właściwości** .
 
-|||
+|Nazwa|Opis|
 |-|-|
 |IDABORT|kontroli Przycisk przerywania|
 |IDC_STATIC|kontroli Tekst statyczny w oknie dialogowym|

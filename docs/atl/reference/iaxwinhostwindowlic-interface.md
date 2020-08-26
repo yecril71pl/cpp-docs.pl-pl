@@ -1,5 +1,5 @@
 ---
-title: Interfejs IAxWinHostWindowlic
+title: IAxWinHostWindowLic, interfejs
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindowLic
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: 561a65702f1d4f57b4db1afc75769ce4cc523c1c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a96e27e58d844ec6fabec689dc2aedf536a9a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329921"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835457"
 ---
-# <a name="iaxwinhostwindowlic-interface"></a>Interfejs IAxWinHostWindowlic
+# <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic, interfejs
 
-Ten interfejs zawiera metody manipulowania licencjonowanym formantem i jego obiektem hosta.
+Ten interfejs zapewnia metody manipulowania licencjonowaną kontrolką i jego obiektem hosta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,16 +30,16 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 ### <a name="methods"></a>Metody
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[CreateControlLic (Twór niesie ze strony](#createcontrollic)|Tworzy licencjonowany formant i dołącza go do obiektu hosta.|
-|[CreateControlLicEx](#createcontrollicex)|Tworzy licencjonowany formant, dołącza go do obiektu hosta i opcjonalnie konfiguruje program obsługi zdarzeń.|
+|[Moje kontrolowane](#createcontrollic)|Tworzy licencjonowaną kontrolę i dołącza ją do obiektu hosta.|
+|[CreateControlLicEx](#createcontrollicex)|Tworzy licencjonowaną kontrolę, dołącza ją do obiektu hosta i opcjonalnie konfiguruje procedurę obsługi zdarzeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IAxWinHostWindowLic`dziedziczy z [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) i dodaje metody, które obsługują tworzenie licencjonowanych formantów.
+`IAxWinHostWindowLic` dziedziczy z [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) i dodaje metody, które obsługują tworzenie licencjonowanych kontrolek.
 
-Zobacz [Hosting ActiveX Formanty przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu, który używa członków tego interfejsu.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z elementów członkowskich tego interfejsu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -47,12 +47,12 @@ Definicja tego interfejsu jest dostępna jako IDL lub C++, jak pokazano poniżej
 
 |Typ definicji|Plik|
 |---------------------|----------|
-|Idl|ATLIFace.idl|
-|C++|ATLIFace.h (również w ATLBase.h)|
+|IDL|ATLIFace. idl|
+|C++|ATLIFace. h (również zawarte w ATLBase. h)|
 
-## <a name="iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
+## <a name="iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a> IAxWinHostWindowLic:: issterowane
 
-Tworzy licencjonowany formant, inicjuje go i hostuje `hWnd`w oknie identyfikowanym przez program .
+Tworzy licencjonowaną kontrolę, inicjuje ją i hostuje w oknie identyfikowanym przez `hWnd` .
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -64,22 +64,22 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Parametry
 
-*bstrLic (bstrlic)*<br/>
-[w] BSTR, który zawiera klucz licencyjny formantu.
+*bstrLic*<br/>
+podczas BSTR, który zawiera klucz licencji dla kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) opis pozostałych parametrów i zwracanej wartości.
+Aby uzyskać opis pozostałych parametrów i wartości zwracanej, zobacz [IAxWinHostWindow:: IsControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) .
 
-Wywołanie tej metody jest równoznaczne z [wywołaniem IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+Wywołanie tej metody jest równoważne wywołaniu [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)
 
 ### <a name="example"></a>Przykład
 
-Zobacz [Hosting ActiveX Formanty przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla próbki, która używa `IAxWinHostWindowLic::CreateControlLic`.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLic` .
 
-## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
+## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic::CreateControlLicEx
 
-Tworzy licencjonowany formant ActiveX, inicjuje go i obsługuje w określonym oknie, podobnie jak [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
+Tworzy licencjonowany formant ActiveX, inicjuje go i hostuje w określonym oknie, podobnie jak [IAxWinHostWindow:: IsControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -94,13 +94,13 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Parametry
 
-*bstrLic (bstrlic)*<br/>
-[w] BSTR, który zawiera klucz licencyjny formantu.
+*bstrLic*<br/>
+podczas BSTR, który zawiera klucz licencji dla kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) opis pozostałych parametrów i zwracanej wartości.
+Aby uzyskać opis pozostałych parametrów i wartości zwracanej, zobacz [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) .
 
 ### <a name="example"></a>Przykład
 
-Zobacz [Hosting ActiveX Formanty przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla próbki, która używa `IAxWinHostWindowLic::CreateControlLicEx`.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLicEx` .

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216495"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838260"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[AddProperty](#addproperty)|Dodaje właściwość do zestawu właściwości.|
 |[CDBPropSet](#cdbpropset)|Konstruktor.|
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>Operatory
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[operator =](#op_equal)|Przypisuje zawartość jednego zestawu właściwości do innej.|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Dostawcy OLE DB i konsumenci używają `DBPROPSET` struktur do przekazywania tablic `DBPROP` struktur. Każda `DBPROP` Struktura reprezentuje pojedynczą właściwość, którą można ustawić.
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: Add— Właściwość
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet:: Add— Właściwość
 
 Dodaje właściwość do zestawu właściwości.
 
@@ -106,7 +106,7 @@ podczas Wariant używany do zainicjowania wartości właściwości dla `DBPROP` 
 podczas Ciąg używany do inicjowania wartości właściwości dla `DBPROP` struktury dodanej do zestawu właściwości.
 
 *bValue*<br/>
-podczas `BYTE`Wartość logiczna lub użyta do zainicjowania wartości właściwości dla `DBPROP` struktury dodanej do zestawu właściwości.
+podczas `BYTE` Wartość logiczna lub użyta do zainicjowania wartości właściwości dla `DBPROP` struktury dodanej do zestawu właściwości.
 
 *nWartość*<br/>
 podczas Wartość całkowita służąca do zainicjowania wartości właściwości dla `DBPROP` struktury dodanej do zestawu właściwości.
@@ -124,7 +124,7 @@ podczas Wartość waluty CY użyta do zainicjowania wartości właściwości dla
 
 **`true`** Jeśli właściwość została pomyślnie dodana. W przeciwnym razie **`false`** .
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
 Konstruktor. Inicjuje `rgProperties` , `cProperties` i `guidPropertySet` pola struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -140,13 +140,13 @@ CDBPropSet();
 
 #### <a name="parameters"></a>Parametry
 
-*ident*<br/>
+*guid*<br/>
 podczas Identyfikator GUID służący do inicjowania `guidPropertySet` pola.
 
 *propset*<br/>
 podczas Inny `CDBPropSet` obiekt dla konstruowania kopii.
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGuid
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet:: SetGuid
 
 Ustawia `guidPropertySet` pole w `DBPROPSET` strukturze.
 
@@ -158,14 +158,14 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*ident*<br/>
+*guid*<br/>
 podczas Identyfikator GUID służący do ustawiania `guidPropertySet` pola struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="remarks"></a>Uwagi
 
 To pole można również ustawić przez [konstruktora](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: operator =
 
 Przypisuje zawartość jednego zestawu właściwości do innego zestawu właściwości.
 
@@ -175,7 +175,7 @@ Przypisuje zawartość jednego zestawu właściwości do innego zestawu właści
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

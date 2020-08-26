@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838155"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[Wyświetlić](#find)|Wyszukuje dostępne dostawcy (źródła danych) szukające jednego z określoną nazwą.|
 |[GetMoniker](#getmoniker)|Pobiera `IMoniker` interfejs dla bieżącego rekordu.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 Dane można pobrać `ISourcesRowset` pośrednio z tej klasy.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: find
 
 Wyszukuje określoną nazwę wśród dostępnych dostawców.
 
@@ -81,7 +81,7 @@ podczas Nazwa do wyszukania.
 
 Ta nazwa jest mapowana na `SOURCES_NAME` element członkowski interfejsu [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: GetMoniker
 
 Analizuje nazwę wyświetlaną, aby wyodrębnić składnik ciągu, który można przekonwertować na moniker.
 
@@ -106,7 +106,7 @@ podczas Nazwa wyświetlana do przeanalizowania.
 
 Standardowa wartość HRESULT.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: Open
 
 Tworzy powiązanie monikera dla modułu wyliczającego, jeśli został on określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego przez wywołanie [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
@@ -135,7 +135,7 @@ podczas Odwołanie do modułu wyliczającego.
 
 Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

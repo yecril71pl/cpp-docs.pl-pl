@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217808"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846280"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution — Klasa
 
@@ -81,10 +81,8 @@ Ta dystrybucja próbkowania ma jednolite interwały ze jednorodnym prawdopodobie
 
 Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków:
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 Funkcja Property `vector<double> probabilities()` zwraca poszczególne prawdopodobieństwa dla każdej wygenerowanej liczby całkowitej.
 
@@ -175,7 +173,7 @@ Distribution for 100 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::d iscrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a> discrete_distribution::d iscrete_distribution
 
 Konstruuje dystrybucję.
 
@@ -239,7 +237,7 @@ Konstruktor, który ma parametry *Count*, *Low*, *High*i *weightfunc* , konstruu
 
 Konstruktor, który ma `param_type` parametr *parametr* konstruuje obiekt dystrybucji przy użyciu *parametr* jako struktury przechowywanego parametru.
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::p aram_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a> discrete_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -296,6 +294,6 @@ Obiekt, który `param_type` ma zostać porównany.
 
 Ten pakiet parametrów może zostać przesłany do `operator()` programu w celu wygenerowania wartości zwracanej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 9a19567b5878853d1fdfa86948ff1eeb37794089
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215507"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839520"
 ---
 # <a name="unordered_set-class"></a>unordered_set — Klasa
 
@@ -174,7 +174,7 @@ Klasa alokatora.
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocator_type](#allocator_type)|Typ alokatora do zarządzania pamięcią.|
 |[const_iterator](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|
@@ -192,9 +192,9 @@ Klasa alokatora.
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ elementu.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zaczną](#begin)|Określa początek kontrolowanej sekwencji.|
 |[porcj](#bucket)|Pobiera numer przedziału dla wartości klucza.|
@@ -203,7 +203,7 @@ Klasa alokatora.
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy.|
-|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[count](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[puste](#empty)|Sprawdza, czy nie ma żadnych elementów.|
@@ -226,7 +226,7 @@ Klasa alokatora.
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|Kopiuje tabelę mieszania.|
 
@@ -240,7 +240,7 @@ Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji 
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_set:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt typu `allocator` . Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
 
-## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:: allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
 Typ alokatora do zarządzania pamięcią.
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Określa początek kontrolowanej sekwencji lub przedziału.
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a><a name="bucket"></a>porcj
+## <a name="bucket"></a><a name="bucket"></a> porcj
 
 Pobiera numer przedziału dla wartości klucza.
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a><a name="bucket_count"></a>bucket_count
+## <a name="bucket_count"></a><a name="bucket_count"></a> bucket_count
 
 Pobiera liczbę przedziałów.
 
@@ -497,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a><a name="bucket_size"></a>bucket_size
+## <a name="bucket_size"></a><a name="bucket_size"></a> bucket_size
 
 Pobiera rozmiar zasobnika
 
@@ -552,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Zwraca **`const`** iterator, który odnosi się do pierwszego elementu w zakresie.
 
@@ -578,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Zwraca **`const`** iterator, który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
@@ -592,7 +592,7 @@ const_iterator cend() const;
 
 ### <a name="remarks"></a>Uwagi
 
-`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
 Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcji składowej, aby zagwarantować, że wartość zwracana to `const_iterator` . Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, `Container` że jest to modyfikowalny **`const`** kontener dowolnego rodzaju, który obsługuje `end()` i `cend()` .
 
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 Nie można usunąć odwołania do wartości zwracanej przez `cend` .
 
-## <a name="clear"></a><a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a> Wyczyść
 
 Usuwa wszystkie elementy.
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a><a name="const_local_iterator"></a>const_local_iterator
+## <a name="const_local_iterator"></a><a name="const_local_iterator"></a> const_local_iterator
 
 Typ iteratora stałego przedziału dla kontrolowanej sekwencji.
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a><a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a> liczbą
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia).
 
@@ -989,7 +989,7 @@ Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcj
 
 Aby zapoznać się z przykładem kodu, zobacz [set:: emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) z wskazówką dotyczącą położenia.
 
@@ -1022,7 +1022,7 @@ Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcj
 
 Aby zapoznać się z przykładem kodu, zobacz [set:: emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a><a name="end"></a>punktów
+## <a name="end"></a><a name="end"></a> punktów
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a><a name="erase"></a>Wyłączanie
+## <a name="erase"></a><a name="erase"></a> Wyłączanie
 
 Usuwa element lub zakres elementów w unordered_set z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.
 
@@ -1258,7 +1258,7 @@ Dla trzeciej funkcji składowej zwraca liczbę elementów usuniętych z unordere
 
 Aby zapoznać się z przykładem kodu, zobacz [set:: Erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a><a name="find"></a>wyświetlić
+## <a name="find"></a><a name="find"></a> wyświetlić
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Pobiera przechowywany obiekt alokatora.
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash_function"></a><a name="hash"></a>hash_function
+## <a name="hash_function"></a><a name="hash"></a> hash_function
 
 Pobiera przechowywany obiekt funkcji mieszania.
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a><a name="hasher"></a>programu tworzącego skróty
+## <a name="hasher"></a><a name="hasher"></a> programu tworzącego skróty
 
 Typ funkcji mieszania.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a><a name="insert"></a>wstawienia
+## <a name="insert"></a><a name="insert"></a> wstawienia
 
 Wstawia element lub zakres elementów do unordered_set.
 
@@ -1505,7 +1505,7 @@ Do wstawienia elementu skonstruowanego w miejscu — to znaczy, że nie są wyko
 
 Aby zapoznać się z przykładem kodu, zobacz [set:: INSERT](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a><a name="iterator"></a>Iterator
+## <a name="iterator"></a><a name="iterator"></a> Iterator
 
 Typ, który zapewnia ciągły [iterator do przodu](../standard-library/forward-iterator-tag-struct.md) , który może odczytywać elementy w unordered_set.
 
@@ -1517,7 +1517,7 @@ typedef implementation-defined iterator;
 
 Zapoznaj się z przykładem początku, aby zapoznać [się](../standard-library/set-class.md#begin) z przykładem sposobu deklarowania**iteratora**i korzystania z niego.
 
-## <a name="key_eq"></a><a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a> key_eq
 
 Pobiera przechowywany obiekt funkcji porównywania.
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a><a name="key_equal"></a>key_equal
+## <a name="key_equal"></a><a name="key_equal"></a> key_equal
 
 Typ funkcji porównywania.
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Typ klucza sortowania.
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a><a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a> load_factor
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1734,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a><a name="local_iterator"></a>local_iterator
+## <a name="local_iterator"></a><a name="local_iterator"></a> local_iterator
 
 Typ iteratora zasobnika.
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a><a name="max_bucket_count"></a>max_bucket_count
+## <a name="max_bucket_count"></a><a name="max_bucket_count"></a> max_bucket_count
 
 Pobiera maksymalną liczbę przedziałów.
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a> max_load_factor
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Pobiera maksymalny rozmiar kontrolowanej sekwencji.
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Kopiuje tabelę mieszania.
 
@@ -2049,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a><a name="pointer"></a>przytrzymaj
+## <a name="pointer"></a><a name="pointer"></a> przytrzymaj
 
 Typ wskaźnika do elementu.
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a><a name="reference"></a>odwoła
+## <a name="reference"></a><a name="reference"></a> odwoła
 
 Typ odwołania do elementu.
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a><a name="rehash"></a>rehash —
+## <a name="rehash"></a><a name="rehash"></a> rehash —
 
 Przebudowuje tabelę mieszania.
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 Liczy liczbę elementów.
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Typ odległości bez znaku między dwoma elementami.
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a><a name="unordered_set"></a>unordered_set
+## <a name="unordered_set"></a><a name="unordered_set"></a> unordered_set
 
 Konstruuje obiekt kontenera.
 
@@ -2472,7 +2472,7 @@ Obiekt funkcji porównywania jest argumentem *COMP*, jeśli jest obecny; w przec
 
 Obiekt alokatora jest argumentem *Al*, jeśli jest obecny; w przeciwnym razie jest to `Alloc()` .
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ elementu.
 

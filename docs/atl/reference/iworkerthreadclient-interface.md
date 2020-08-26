@@ -1,5 +1,5 @@
 ---
-title: Interfejs IWorkerThreadClient
+title: IWorkerThreadClient, interfejs
 ms.date: 11/04/2016
 f1_keywords:
 - IWorkerThreadClient
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326297"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835353"
 ---
-# <a name="iworkerthreadclient-interface"></a>Interfejs IWorkerThreadClient
+# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient, interfejs
 
-`IWorkerThreadClient`jest interfejsem zaimplementowanym przez klientów klasy [CWorkerThread.](../../atl/reference/cworkerthread-class.md)
+`IWorkerThreadClient` jest interfejsem implementowanym przez klientów klasy [CWorkerThread](../../atl/reference/cworkerthread-class.md) .
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,20 +33,20 @@ __interface IWorkerThreadClient
 
 ### <a name="methods"></a>Metody
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[Closehandle](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|
-|[Realizacja](#execute)|Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem staje się sygnalizowane.|
+|[Funkcja](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|
+|[Realizacja](#execute)|Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem zostanie zasygnalizowane.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zaimplementuj ten interfejs, gdy masz kod, który musi wykonać w wątku procesu roboczego w odpowiedzi na dojście staje się sygnalizowane.
+Zaimplementuj ten interfejs, jeśli masz kod, który musi zostać wykonany w wątku roboczym w odpowiedzi na dojście zostanie zasygnalizowane.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
-## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::Zamknijhandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a> IWorkerThreadClient:: CloseHandle
 
 Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.
 
@@ -56,26 +56,26 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hRejsz*<br/>
-Uchwyt do zamknięcia.
+*hHandle*<br/>
+Uchwyt, który ma zostać zamknięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Powrót S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwróć S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście przekazane do tej metody zostało wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Dojście przesłane do tej metody zostało wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod przedstawia prostą implementację programu `IWorkerThreadClient::CloseHandle`.
+Poniższy kod pokazuje prostą implementację programu `IWorkerThreadClient::CloseHandle` .
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Wykonaj
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a> IWorkerThreadClient:: Execute
 
-Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem staje się sygnalizowane.
+Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem zostanie zasygnalizowane.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -83,23 +83,23 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam (polski)*<br/>
+*dwParam*<br/>
 Parametr użytkownika.
 
-*hObiekt*<br/>
-Uchwyt, który stał się sygnalizowany.
+*hObject*<br/>
+Uchwyt, który został zasygnalizowani.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Powrót S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwróć S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście i DWORD/pointer przekazane do tej metody były wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Dojście i wskaźnik DWORD przekazano do tej metody, które zostały wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod przedstawia prostą implementację programu `IWorkerThreadClient::Execute`.
+Poniższy kod pokazuje prostą implementację programu `IWorkerThreadClient::Execute` .
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838103"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor — Klasa
 
@@ -51,11 +51,11 @@ class CManualAccessor : public CAccessorBase
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[AddBindEntry](#addbindentry)|Dodaje wpis powiązania do kolumn danych wyjściowych.|
 |[AddParameterEntry](#addparameterentry)|Dodaje wpis parametru do metody dostępu do parametru.|
@@ -64,9 +64,9 @@ class CManualAccessor : public CAccessorBase
 
 ## <a name="remarks"></a>Uwagi
 
-Za pomocą `CManualAccessor`można określić parametry i powiązania kolumn wyjściowych przez wywołania funkcji czasu wykonywania.
+Za pomocą `CManualAccessor` można określić parametry i powiązania kolumn wyjściowych przez wywołania funkcji czasu wykonywania.
 
-## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a> CManualAccessor:: AddBindEntry
 
 Dodaje wpis powiązania do kolumn danych wyjściowych.
 
@@ -104,9 +104,9 @@ podczas Wskaźnik do zmiennej, która ma zostać powiązana ze stanem kolumny, j
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć tej funkcji, należy najpierw wywołać metodę [dostępu](../../data/oledb/cmanualaccessor-createaccessor.md). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor`.
+Aby użyć tej funkcji, należy najpierw wywołać metodę [dostępu](../../data/oledb/cmanualaccessor-createaccessor.md). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor` .
 
-## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
 Dodaje wpis parametru do struktur wpisów parametrów.
 
@@ -150,7 +150,7 @@ podczas Określa, czy parametr, z którym jest skojarzone powiązanie, jest para
 
 Aby użyć tej funkcji, należy najpierw wywołać [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: isdostępu
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: isdostępu
 
 Przydziela pamięć dla struktur powiązań kolumn i inicjuje elementy członkowskie danych kolumny.
 
@@ -179,9 +179,9 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję przed wywołaniem funkcji `CManualAccessor::AddBindEntry`.
+Wywołaj tę funkcję przed wywołaniem `CManualAccessor::AddBindEntry` funkcji.
 
-## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a> CManualAccessor:: CreateParameterAccessor
 
 Przydziela pamięć dla struktur powiązań parametrów i inicjuje elementy członkowskie danych parametru.
 
@@ -216,7 +216,7 @@ Przed wywołaniem [AddParameterEntry](../../data/oledb/cmanualaccessor-addparame
 
 [DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Klasa CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Klasa CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

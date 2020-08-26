@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846267"
 ---
 # <a name="sample-container-members"></a>Elementy członkowskie przykładowego kontenera
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228118"
 
 ## <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|Opisuje obiekt, który może być używany jako iterator stały dla kontrolowanej sekwencji.|
 |[const_reference](../standard-library/container-class-const-reference.md)|Opisuje obiekt, który może stanowić stałe odwołanie do elementu kontrolowanej sekwencji.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228118"
 
 ## <a name="member-functions"></a>Funkcje elementów członkowskich
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zaczną](../standard-library/container-class-begin.md)|Zwraca iterator, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji).|
 |[Wyczyść](../standard-library/container-class-clear.md)|Wywołania [wymazywania](../standard-library/container-class-erase.md)( [BEGIN](../standard-library/container-class-begin.md), [End](../standard-library/container-class-end.md)).|

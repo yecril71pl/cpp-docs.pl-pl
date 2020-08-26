@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: 067a3a183820b09112217647e20d12b592540613
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd9a4de8834bc22368393e9ea4639884785af0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224425"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846124"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -53,18 +53,16 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Tak|
-|**Wymagane atrybuty**|Jeden z następujących: `coclass` , `progid` , lub`vi_progid`|
+|**Wymagane atrybuty**|Jeden z następujących: `coclass` , `progid` , lub `vi_progid`|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835808"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution — Klasa
 
@@ -79,10 +79,8 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem F-Distribution. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 Funkcje właściwości `m()` i `n()` zwracają wartości dla przechowywanych parametrów dystrybucji `m` oraz `n` odpowiednio.
 
@@ -237,7 +235,7 @@ Distribution for 10 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution:: fisher_f_distribution
 
 Konstruuje dystrybucję.
 
@@ -259,13 +257,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < m` lub`0.0 < n`
+**Warunek wstępny:** `0.0 < m` lub `0.0 < n`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `m` wartość przechowuje wartość *m* i której przechowywana `n` wartość przechowuje wartość *n*.
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -294,10 +292,10 @@ Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < m` lub`0.0 < n`
+**Warunek wstępny:** `0.0 < m` lub `0.0 < n`
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

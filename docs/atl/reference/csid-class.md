@@ -1,5 +1,5 @@
 ---
-title: Klasa CSid
+title: CSid, Klasa
 ms.date: 03/27/2019
 f1_keywords:
 - CSid
@@ -21,19 +21,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 414cf428cebe8105d90b3add93cc7f1e76927c2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b6787c0e3f075935f19d51aa73bbd66da9cc0fcb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330921"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835600"
 ---
-# <a name="csid-class"></a>Klasa CSid
+# <a name="csid-class"></a>CSid, Klasa
 
-Ta klasa jest otoką `SID` dla struktury (identyfikator zabezpieczeń).
+Ta klasa jest otoką dla `SID` struktury (identyfikator zabezpieczeń).
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,67 +43,67 @@ class CSid
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSid::CSidArray](#csidarray)|Tablica `CSid` obiektów.|
+|[CSid:: CSidArray](#csidarray)|Tablica `CSid` obiektów.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSid::CSid](#csid)|Konstruktor.|
-|[CSid::~CSid](#dtor)|Destruktor.|
+|[CSid:: CSid](#csid)|Konstruktor.|
+|[CSid:: ~ CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSid::Nazwa konta](#accountname)|Zwraca nazwę konta skojarzonego z `CSid` obiektem.|
-|[CSid::Domain](#domain)|Zwraca nazwę domeny skojarzonej z `CSid` obiektem.|
-|[CSid::EqualPrefix](#equalprefix)|Testy `SID` (identyfikator zabezpieczeń) prefiksy równości.|
-|[CSid::GetLength](#getlength)|Zwraca długość `CSid` obiektu.|
-|[CSid::GetPSID](#getpsid)|Zwraca wskaźnik do `SID` struktury.|
-|[CSid::GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|Zwraca wskaźnik do `SID_IDENTIFIER_AUTHORITY` struktury.|
-|[CSid::GetSubAuthority](#getsubauthority)|Zwraca określony podautory w `SID` strukturze.|
-|[CSid::GetSubAuthorityCount](#getsubauthoritycount)|Zwraca liczbę podrzędnych.|
-|[CSid::IsValid](#isvalid)|Testuje `CSid` obiekt pod kątem ważności.|
-|[CSid::LoadAccount](#loadaccount)|Aktualizuje `CSid` obiekt, podany nazwie konta `SID` i domeny lub istniejącej strukturze.|
-|[CSid::Sid](#sid)|Zwraca ciąg identyfikatora.|
-|[CSid::SidNameUżywko](#sidnameuse)|Zwraca opis stanu `CSid` obiektu.|
+|[CSid:: AccountName](#accountname)|Zwraca nazwę konta skojarzonego z `CSid` obiektem.|
+|[CSid::D omain](#domain)|Zwraca nazwę domeny skojarzonej z `CSid` obiektem.|
+|[CSid:: EqualPrefix](#equalprefix)|Sprawdzenia `SID` (identyfikator zabezpieczeń) prefiksy dla równości.|
+|[CSid:: GetLength](#getlength)|Zwraca długość `CSid` obiektu.|
+|[CSid:: GetPSID](#getpsid)|Zwraca wskaźnik do `SID` struktury.|
+|[CSid:: GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|Zwraca wskaźnik do `SID_IDENTIFIER_AUTHORITY` struktury.|
+|[CSid:: GetSubAuthority](#getsubauthority)|Zwraca określony podurząd w `SID` strukturze.|
+|[CSid:: GetSubAuthorityCount](#getsubauthoritycount)|Zwraca liczbę podurzędów.|
+|[CSid:: IsValid](#isvalid)|Testuje `CSid` obiekt pod kątem ważności.|
+|[CSid:: LoadAccount](#loadaccount)|Aktualizuje `CSid` obiekt z nazwą konta i domeną lub istniejącą `SID` strukturą.|
+|[CSid:: SID](#sid)|Zwraca ciąg identyfikatora.|
+|[CSid:: SidNameUse](#sidnameuse)|Zwraca opis stanu `CSid` obiektu.|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator =](#operator_eq)|Operator przypisania.|
-|[operator const SID *](#operator_const_sid__star)|Rzutuje `CSid` obiekt na wskaźnik `SID` do struktury.|
+|[Identyfikator SID const operatora *](#operator_const_sid__star)|Rzutuje `CSid` obiekt na wskaźnik do `SID` struktury.|
 
-### <a name="global-operators"></a>Operatorzy globalni
+### <a name="global-operators"></a>Operatory globalne
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[operator ==](#operator_eq_eq)|Testy dwóch obiektów deskryptora zabezpieczeń pod kątem równości|
-|[operator !=](#operator_neq)|Testy dwóch obiektów deskryptora zabezpieczeń pod kątem nierówności|
-|[Operator\<](#operator_lt)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
-|[>operatora](#operator_gt)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
-|[Operator\<=](#operator_lt__eq)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
+|[operator = =](#operator_eq_eq)|Testuje dwa obiekty deskryptora zabezpieczeń pod kątem równości|
+|[operator! =](#operator_neq)|Testuje dwa obiekty deskryptora zabezpieczeń pod kątem nierówności|
+|[zakład \<](#operator_lt)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
+|[>operatora ](#operator_gt)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
+|[zakład \<=](#operator_lt__eq)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
 |[>operatora =](#operator_gt__eq)|Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura `SID` jest strukturą o zmiennej długości, używaną do jednoznacznej identyfikacji użytkowników lub grup.
+`SID`Struktura jest strukturą o zmiennej długości służącej do jednoznacznego identyfikowania użytkowników lub grup.
 
-Aplikacje nie `SID` należy modyfikować struktury bezpośrednio, ale zamiast tego należy użyć metod podanych w tej klasie otoki. Zobacz [też: AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), oraz [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
+Aplikacje nie powinny bezpośrednio modyfikować `SID` struktury, ale zamiast tego używają metod dostarczonych w tej klasie otoki. Zobacz również [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)i [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
 
-Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Kontrola dostępu](/windows/win32/SecAuthZ/access-control) w zestaw Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity.h
+**Nagłówek:** atlsecurity. h
 
-## <a name="csidaccountname"></a><a name="accountname"></a>CSid::Nazwa konta
+## <a name="csidaccountname"></a><a name="accountname"></a> CSid:: AccountName
 
 Zwraca nazwę konta skojarzonego z `CSid` obiektem.
 
@@ -113,15 +113,15 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca LPCTSTR wskazując nazwę konta.
+Zwraca LPCTSTR wskazujący nazwę konta.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda próbuje znaleźć nazwę `SID` dla określonego (identyfikator zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
+Ta metoda próbuje znaleźć nazwę określonego `SID` (identyfikatora zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
-Jeśli nie `SID` można znaleźć nazwy `AccountName` konta dla, zwraca pusty ciąg. Taka możliwość może wystąpić, jeśli limit czasu sieci uniemożliwia tej metody znalezienie nazwy. Występuje również dla identyfikatorów zabezpieczeń bez odpowiedniej nazwy `SID` konta, takich jak identyfikujące sesji logowania.
+Jeśli nazwa konta nie `SID` może zostać znaleziona, `AccountName` zwraca pusty ciąg. Taka sytuacja może wystąpić, jeśli limit czasu sieci uniemożliwia tej metodzie znalezienie nazwy. Występuje również w przypadku identyfikatorów zabezpieczeń bez odpowiadającej nazwy konta, na przykład `SID` identyfikującej sesję logowania.
 
-## <a name="csidcsid"></a><a name="csid"></a>CSid::CSid
+## <a name="csidcsid"></a><a name="csid"></a> CSid:: CSid
 
 Konstruktor.
 
@@ -146,31 +146,31 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parametry
 
-*Rhs*<br/>
-Istniejący `CSid` obiekt `SID` lub (identyfikator zabezpieczeń) struktura.
+*RHS*<br/>
+Istniejąca `CSid` Struktura obiektu lub `SID` (identyfikator zabezpieczeń).
 
-*IdentyfikatorAutorytet*<br/>
-Władza.
+*IdentifierAuthority*<br/>
+Urząd.
 
 *nSubAuthorityCount*<br/>
-Liczba podautorysów.
+Liczba podurzędów.
 
 *pszAccountName*<br/>
 Nazwa konta.
 
 *pszSystem*<br/>
-Nazwa systemu. Ten ciąg może być nazwą komputera zdalnego. Jeśli ten ciąg ma wartość NULL, zamiast tego jest używany system lokalny.
+Nazwa systemu. Ten ciąg może być nazwą komputera zdalnego. Jeśli ten ciąg ma wartość NULL, zamiast niego zostanie użyty system lokalny.
 
-*pSid*<br/>
+*Pusty PSID*<br/>
 Wskaźnik do `SID` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor `CSid` inicjuje obiekt, ustawia wewnętrzny element członkowski danych na *SidTypeInvalid*lub kopiując ustawienia z istniejącego `CSid`lub `SID`istniejącego konta.
+Konstruktor inicjuje `CSid` obiekt, ustawia wewnętrzny element członkowski danych na *SidTypeInvalid*lub kopiując ustawienia z istniejącego `CSid` , `SID` lub istniejącego konta.
 
-Jeśli inicjowanie nie powiedzie się, konstruktor zrzuci [klasę CAtlException](../../atl/reference/catlexception-class.md).
+Jeśli inicjalizacja nie powiedzie się, Konstruktor zgłosi [klasę CAtlException](../../atl/reference/catlexception-class.md).
 
-## <a name="csidcsid"></a><a name="dtor"></a>CSid::~CSid
+## <a name="csidcsid"></a><a name="dtor"></a> CSid:: ~ CSid
 
 Destruktor.
 
@@ -180,11 +180,11 @@ virtual ~CSid() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor zwalnia wszelkie zasoby nabyte przez obiekt.
+Destruktor zwalnia wszystkie zasoby uzyskane przez obiekt.
 
-## <a name="csidcsidarray"></a><a name="csidarray"></a>CSid::CSidArray
+## <a name="csidcsidarray"></a><a name="csidarray"></a> CSid:: CSidArray
 
-Tablica obiektów [CSid.](../../atl/reference/csid-class.md)
+Tablica obiektów [CSid](../../atl/reference/csid-class.md) .
 
 ```
 typedef CAtlArray<CSid> CSidArray;
@@ -192,9 +192,9 @@ typedef CAtlArray<CSid> CSidArray;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta typedef określa typ tablicy, który może służyć do pobierania identyfikatorów zabezpieczeń z listy ACL (listy kontroli dostępu). Zobacz [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).
+Ten element typedef określa typ tablicy, za pomocą której można pobrać identyfikatory zabezpieczeń z listy ACL (lista kontroli dostępu). Zobacz [cacls:: GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).
 
-## <a name="csiddomain"></a><a name="domain"></a>CSid::Domain
+## <a name="csiddomain"></a><a name="domain"></a> CSid::D omain
 
 Zwraca nazwę domeny skojarzonej z `CSid` obiektem.
 
@@ -204,17 +204,17 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `LPCTSTR` wskazywanie do domeny.
+Zwraca `LPCTSTR` wskazanie wskazującego na domenę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda próbuje znaleźć nazwę `SID` dla określonego (identyfikator zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
+Ta metoda próbuje znaleźć nazwę określonego `SID` (identyfikatora zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
-Jeśli nie `SID` można znaleźć nazwy `Domain` konta dla, zwraca domenę jako pusty ciąg. Taka możliwość może wystąpić, jeśli limit czasu sieci uniemożliwia tej metody znalezienie nazwy. Występuje również dla identyfikatorów zabezpieczeń bez odpowiedniej nazwy `SID` konta, takich jak identyfikujące sesji logowania.
+Jeśli nazwa konta nie `SID` może zostać znaleziona, program `Domain` zwraca domenę jako pusty ciąg. Taka sytuacja może wystąpić, jeśli limit czasu sieci uniemożliwia tej metodzie znalezienie nazwy. Występuje również w przypadku identyfikatorów zabezpieczeń bez odpowiadającej nazwy konta, na przykład `SID` identyfikującej sesję logowania.
 
-## <a name="csidequalprefix"></a><a name="equalprefix"></a>CSid::EqualPrefix
+## <a name="csidequalprefix"></a><a name="equalprefix"></a> CSid:: EqualPrefix
 
-Testy `SID` (identyfikator zabezpieczeń) prefiksy równości.
+Sprawdzenia `SID` (identyfikator zabezpieczeń) prefiksy dla równości.
 
 ```
 bool EqualPrefix(const SID& rhs) const throw();
@@ -223,18 +223,18 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Rhs*<br/>
-`SID` Struktura (identyfikator zabezpieczeń) `CSid` do porównania.
+*RHS*<br/>
+`SID`Struktura lub obiekt (identyfikator zabezpieczeń) `CSid` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) w programie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) w Windows SDK.
 
-## <a name="csidgetlength"></a><a name="getlength"></a>CSid::GetLength
+## <a name="csidgetlength"></a><a name="getlength"></a> CSid:: GetLength
 
 Zwraca długość `CSid` obiektu.
 
@@ -248,14 +248,14 @@ Zwraca długość w bajtach `CSid` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CSid` struktura jest nieprawidłowa, zwracana wartość jest niezdefiniowana. Przed `GetLength`wywołaniem użyj funkcji [CSid::IsValid,](#isvalid) aby sprawdzić, czy `CSid` jest prawidłowa.
+Jeśli `CSid` Struktura jest nieprawidłowa, wartość zwracana jest niezdefiniowana. Przed wywołaniem `GetLength` Użyj funkcji członkowskiej [CSid:: IsValid](#isvalid) , aby sprawdzić, czy `CSid` jest ona prawidłowa.
 
 > [!NOTE]
-> W debugowanie tworzy funkcję spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.
+> W obszarze kompilacje debugowania funkcja spowoduje wystąpienie potwierdzenia, jeśli `CSid` obiekt jest nieprawidłowy.
 
-## <a name="csidgetpsid"></a><a name="getpsid"></a>CSid::GetPSID
+## <a name="csidgetpsid"></a><a name="getpsid"></a> CSid:: GetPSID
 
-Zwraca wskaźnik do `SID` struktury (identyfikator zabezpieczeń).
+Zwraca wskaźnik do `SID` struktury (identyfikatora zabezpieczeń).
 
 ```
 const SID* GetPSID() const throw(...);
@@ -263,9 +263,9 @@ const SID* GetPSID() const throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca adres podstawowej `CSid` `SID` struktury obiektu.
+Zwraca adres `CSid` źródłowej `SID` struktury obiektu.
 
-## <a name="csidgetpsid_identifier_authority"></a><a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY
+## <a name="csidgetpsid_identifier_authority"></a><a name="getpsid_identifier_authority"></a> CSid:: GetPSID_IDENTIFIER_AUTHORITY
 
 Zwraca wskaźnik do `SID_IDENTIFIER_AUTHORITY` struktury.
 
@@ -275,14 +275,14 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca `SID_IDENTIFIER_AUTHORITY` adres struktury. Jeśli nie powiedzie się, zwracana wartość jest niezdefiniowana. Błąd może wystąpić, `CSid` jeśli obiekt jest nieprawidłowy, w którym to przypadku [CSid::IsValid](#isvalid) metoda zwraca FAŁSZ. Funkcję `GetLastError` można wywołać w przypadku rozszerzonych informacji o błędzie.
+Jeśli metoda powiedzie się, zwraca adres `SID_IDENTIFIER_AUTHORITY` struktury. Jeśli to się nie powiedzie, wartość zwracana jest niezdefiniowana. Błąd może wystąpić, jeśli `CSid` obiekt jest nieprawidłowy. w takim przypadku Metoda [CSid:: IsValid](#isvalid) zwraca wartość false. Funkcja `GetLastError` może zostać wywołana dla rozszerzonych informacji o błędzie.
 
 > [!NOTE]
-> W debugowanie tworzy funkcję spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.
+> W obszarze kompilacje debugowania funkcja spowoduje wystąpienie potwierdzenia, jeśli `CSid` obiekt jest nieprawidłowy.
 
-## <a name="csidgetsubauthority"></a><a name="getsubauthority"></a>CSid::GetSubAuthority
+## <a name="csidgetsubauthority"></a><a name="getsubauthority"></a> CSid:: GetSubAuthority
 
-Zwraca określony podautory w `SID` strukturze (identyfikator zabezpieczeń).
+Zwraca określony podurząd w `SID` strukturze (identyfikator zabezpieczeń).
 
 ```
 DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
@@ -291,22 +291,22 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ### <a name="parameters"></a>Parametry
 
 *nSubAuthority*<br/>
-Podautory.
+Podurząd.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca podautorystyki, do których odwołuje się *nSubAuthority.* Wartość podrzędności jest identyfikatorem względnym (RID).
+Zwraca podurząd, do którego odwołuje się *NSubAuthority.* Wartość subauthority jest identyfikatorem względnym (RID).
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *nSubAuthority* określa wartość indeksu identyfikującą element tablicy podrzędnej, który zostanie zwracany przez metodę. Metoda wykonuje żadnych testów sprawdzania poprawności dla tej wartości. Aplikacja może wywołać [CSid::GetSubAuthorityCount,](#getsubauthoritycount) aby odkryć zakres dopuszczalnych wartości.
+Parametr *NSubAuthority* określa wartość indeksu określającą element tablicy podurzędu, która zostanie zwrócona przez metodę. Metoda nie wykonuje testów weryfikacyjnych dla tej wartości. Aplikacja może wywołać metodę [CSid:: GetSubAuthorityCount](#getsubauthoritycount) , aby odnaleźć zakres dopuszczalnych wartości.
 
 > [!NOTE]
-> W debugowanie tworzy funkcję spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.
+> W obszarze kompilacje debugowania funkcja spowoduje wystąpienie potwierdzenia, jeśli `CSid` obiekt jest nieprawidłowy.
 
-## <a name="csidgetsubauthoritycount"></a><a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount
+## <a name="csidgetsubauthoritycount"></a><a name="getsubauthoritycount"></a> CSid:: GetSubAuthorityCount
 
-Zwraca liczbę podrzędnych.
+Zwraca liczbę podurzędów.
 
 ```
 UCHAR GetSubAuthorityCount() const throw();
@@ -314,14 +314,14 @@ UCHAR GetSubAuthorityCount() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwracana wartość jest liczbą podrzędnych.
+Jeśli metoda się powiedzie, wartość zwracana jest liczbą podurzędów.
 
-Jeśli metoda nie powiedzie się, zwracana wartość jest niezdefiniowana. Metoda kończy się `CSid` niepowodzeniem, jeśli obiekt jest nieprawidłowy. Aby uzyskać rozszerzone informacje `GetLastError`o błędzie, zadzwoń do pliku .
+Jeśli metoda zakończy się niepowodzeniem, wartość zwracana jest niezdefiniowana. Metoda kończy się niepowodzeniem, jeśli `CSid` obiekt jest nieprawidłowy. Aby uzyskać rozszerzone informacje o błędzie, wywołaj polecenie `GetLastError` .
 
 > [!NOTE]
-> W debugowanie tworzy funkcję spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.
+> W obszarze kompilacje debugowania funkcja spowoduje wystąpienie potwierdzenia, jeśli `CSid` obiekt jest nieprawidłowy.
 
-## <a name="csidisvalid"></a><a name="isvalid"></a>CSid::IsValid
+## <a name="csidisvalid"></a><a name="isvalid"></a> CSid:: IsValid
 
 Testuje `CSid` obiekt pod kątem ważności.
 
@@ -331,15 +331,15 @@ bool IsValid() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość `CSid` PRAWDA, jeśli obiekt jest prawidłowy, WARTOŚĆ FAŁSZ, jeśli nie. Nie ma żadnych rozszerzonych informacji o błędzie dla tej metody; nie dzwonić `GetLastError`.
+Zwraca wartość TRUE `CSid` , jeśli obiekt jest prawidłowy, FAŁSZ, jeśli nie. Nie ma rozszerzonych informacji o błędzie dla tej metody; Nie wywołuj `GetLastError` .
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda `IsValid` sprawdza poprawność `CSid` obiektu, sprawdzając, czy numer poprawki mieści się w znanym zakresie i czy liczba podautorów jest mniejsza niż maksymalna.
+`IsValid`Metoda sprawdza poprawność `CSid` obiektu przez sprawdzenie, czy numer poprawki znajduje się w znanym zakresie i czy liczba podurzędów jest mniejsza niż wartość maksymalna.
 
-## <a name="csidloadaccount"></a><a name="loadaccount"></a>CSid::LoadAccount
+## <a name="csidloadaccount"></a><a name="loadaccount"></a> CSid:: LoadAccount
 
-Aktualizuje `CSid` obiekt, podany nazwie konta i domenie lub istniejącej strukturze identyfikatora SID (identyfikatora zabezpieczeń).
+Aktualizuje `CSid` obiekt z nazwą konta i domeną lub istniejącą strukturą SID (identyfikator zabezpieczeń).
 
 ```
 bool LoadAccount(
@@ -357,20 +357,20 @@ bool LoadAccount(
 Nazwa konta.
 
 *pszSystem*<br/>
-Nazwa systemu. Ten ciąg może być nazwą komputera zdalnego. Jeśli ten ciąg ma wartość NULL, zamiast tego jest używany system lokalny.
+Nazwa systemu. Ten ciąg może być nazwą komputera zdalnego. Jeśli ten ciąg ma wartość NULL, zamiast niego zostanie użyty system lokalny.
 
-*pSid*<br/>
-Wskaźnik do struktury [SID.](/windows/win32/api/winnt/ns-winnt-sid)
+*Pusty PSID*<br/>
+Wskaźnik do struktury [identyfikatora SID](/windows/win32/api/winnt/ns-winnt-sid) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie. Aby uzyskać rozszerzone informacje `GetLastError`o błędzie, zadzwoń do pliku .
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu. Aby uzyskać rozszerzone informacje o błędzie, wywołaj polecenie `GetLastError` .
 
 ### <a name="remarks"></a>Uwagi
 
-`LoadAccount`próbuje znaleźć identyfikator zabezpieczeń dla określonej nazwy. Aby uzyskać więcej informacji, zobacz [WyszukiwanieKonsyduj.](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)
+`LoadAccount` próbuje znaleźć identyfikator zabezpieczeń dla określonej nazwy. Aby uzyskać więcej informacji, zobacz [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) .
 
-## <a name="csidoperator-"></a><a name="operator_eq"></a>CSid::operator =
+## <a name="csidoperator-"></a><a name="operator_eq"></a> CSid:: operator =
 
 Operator przypisania.
 
@@ -381,16 +381,16 @@ CSid& operator= (const SID& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` przypisać do `CSid` obiektu.
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` do przypisania do `CSid` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do `CSid` zaktualizowanego obiektu.
+Zwraca odwołanie do zaktualizowanego `CSid` obiektu.
 
-## <a name="csidoperator-"></a><a name="operator_eq_eq"></a>CSid::operator ==
+## <a name="csidoperator-"></a><a name="operator_eq_eq"></a> CSid:: operator = =
 
-Testy dwóch obiektów deskryptora zabezpieczeń pod kątem równości.
+Testuje dwa obiekty deskryptora zabezpieczeń pod kątem równości.
 
 ```
 bool operator==(
@@ -400,17 +400,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora == .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora = =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora == .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora = =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli deskryptory zabezpieczeń są równe, w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli deskryptory zabezpieczeń są równe, w przeciwnym razie FALSE.
 
-## <a name="csidoperator-"></a><a name="operator_neq"></a>CSid::operator !=
+## <a name="csidoperator-"></a><a name="operator_neq"></a> CSid:: operator! =
 
 Testuje dwa obiekty deskryptora zabezpieczeń pod kątem nierówności.
 
@@ -422,17 +422,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora != .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora! =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora != .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora! =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli deskryptory zabezpieczeń nie są równe, w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli deskryptory zabezpieczeń nie są równe, w przeciwnym razie FALSE.
 
-## <a name="csidoperator-lt"></a><a name="operator_lt"></a>CSid::operator&lt;
+## <a name="csidoperator-lt"></a><a name="operator_lt"></a> CSid:: operator &lt;
 
 Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.
 
@@ -444,17 +444,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora != .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora! =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora != .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora! =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli *lhs* jest mniejsza niż *rhs*, w przeciwnym razie FALSE.
+PRAWDA, jeśli *LHS* jest mniejszy niż *RHS*, w przeciwnym razie false.
 
-## <a name="csidoperator-lt"></a><a name="operator_lt__eq"></a>CSid::operator&lt;=
+## <a name="csidoperator-lt"></a><a name="operator_lt__eq"></a> CSid:: operator &lt;=
 
 Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.
 
@@ -466,17 +466,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora != .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora! =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora != .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora! =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli *lhs* jest mniejsza lub równa *rhs*, w przeciwnym razie FALSE.
+Prawda, jeśli wartość *LHS* jest mniejsza niż lub równa *RHS*, w przeciwnym razie false.
 
-## <a name="csidoperator-gt"></a><a name="operator_gt"></a>CSid::operator&gt;
+## <a name="csidoperator-gt"></a><a name="operator_gt"></a> CSid:: operator &gt;
 
 Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.
 
@@ -488,17 +488,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora != .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora! =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora != .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora! =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli *lhs* jest większa niż *rhs*, w przeciwnym razie FALSE.
+PRAWDA, jeśli *LHS* jest większy niż *RHS*, w przeciwnym razie false.
 
-## <a name="csidoperator-gt"></a><a name="operator_gt__eq"></a>CSid::operator&gt;=
+## <a name="csidoperator-gt"></a><a name="operator_gt__eq"></a> CSid:: operator &gt;=
 
 Porównuje względną wartość dwóch obiektów deskryptora zabezpieczeń.
 
@@ -510,19 +510,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora != .
+*LHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po lewej stronie operatora! =.
 
-*Rhs*<br/>
-(identyfikator `SID` zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora != .
+*RHS*<br/>
+`SID`(Identyfikator zabezpieczeń) lub `CSid` który pojawia się po prawej stronie operatora! =.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli *lhs* jest większa lub równa *rhs*, w przeciwnym razie FALSE.
+Prawda, jeśli wartość *LHS* jest większa lub równa *RHS*, w przeciwnym razie false.
 
-## <a name="csidoperator-const-sid-"></a><a name="operator_const_sid__star"></a>CSid::operator const SID\*
+## <a name="csidoperator-const-sid-"></a><a name="operator_const_sid__star"></a> CSid:: operator const — SID \*
 
-Rzutuje `CSid` obiekt na wskaźnik `SID` do struktury (identyfikator zabezpieczeń).
+Rzutuje `CSid` obiekt na wskaźnik na `SID` strukturę (identyfikator zabezpieczeń).
 
 ```
 operator const SID *() const throw(...);
@@ -532,7 +532,7 @@ operator const SID *() const throw(...);
 
 Zwraca adres `SID` struktury.
 
-## <a name="csidsid"></a><a name="sid"></a>CSid::Sid
+## <a name="csidsid"></a><a name="sid"></a> CSid:: SID
 
 Zwraca `SID` strukturę (identyfikator zabezpieczeń) jako ciąg.
 
@@ -542,9 +542,9 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `SID` strukturę jako ciąg w formacie odpowiednim do wyświetlania, przechowywania lub transmisji. Odpowiednik [ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw).
+Zwraca `SID` strukturę jako ciąg w formacie odpowiednim do wyświetlania, przechowywania lub przesyłania. Równoważne [podczas operacji ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw).
 
-## <a name="csidsidnameuse"></a><a name="sidnameuse"></a>CSid::SidNameUżywko
+## <a name="csidsidnameuse"></a><a name="sidnameuse"></a> CSid:: SidNameUse
 
 Zwraca opis stanu `CSid` obiektu.
 
@@ -554,27 +554,27 @@ SID_NAME_USE SidNameUse() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość elementu członkowskiego danych, który przechowuje wartość `CSid` opisującą stan obiektu.
+Zwraca wartość elementu członkowskiego danych, który przechowuje wartość opisującą stan `CSid` obiektu.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|SidTypeUżydnik|Wskazuje użytkownika `SID` (identyfikator zabezpieczeń).|
-|Grupa SidTypeGroup|Wskazuje grupę `SID`.|
-|Domena SidType|Wskazuje domenę `SID`.|
-|Identyfikator SidTypeAlias|Wskazuje alias `SID`.|
-|Grupa SidTypeWellKnown|Wskazuje a `SID` dla dobrze znanej grupy.|
-|Konto SidTypeDeletedAccount|Wskazuje `SID` dla usuniętego konta.|
-|Identyfikator SidTypeInvalid|Wskazuje nieprawidłowy `SID`.|
-|SidTypeUnknown (SidTypeUnknown)|Wskazuje nieznany `SID` typ.|
-|Sypialnykomputer|Wskazuje a `SID` dla komputera.|
+|SidTypeUser|Wskazuje użytkownika `SID` (identyfikator zabezpieczeń).|
+|SidTypeGroup|Wskazuje grupę `SID` .|
+|SidTypeDomain|Wskazuje domenę `SID` .|
+|SidTypeAlias|Wskazuje alias `SID` .|
+|SidTypeWellKnownGroup|Wskazuje `SID` dla dobrze znanej grupy.|
+|SidTypeDeletedAccount|Wskazuje `SID` dla usuniętego konta.|
+|SidTypeInvalid|Wskazuje nieprawidłowy `SID` .|
+|SidTypeUnknown|Wskazuje nieznany `SID` Typ.|
+|SidTypeComputer|Wskazuje `SID` dla komputera.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie [CSid::LoadAccount,](#loadaccount) aby zaktualizować `CSid` obiekt przed wywołaniem, `SidNameUse` aby przywrócić jego stan. `SidNameUse`nie zmienia stanu obiektu (przez `LookupAccountName` wywołanie `LookupAccountSid`lub ), ale zwraca tylko bieżący stan.
+Wywołaj metodę [CSid:: LoadAccount](#loadaccount) , aby zaktualizować `CSid` obiekt przed wywołaniem `SidNameUse` go w celu zwrócenia jego stanu. `SidNameUse` nie zmienia stanu obiektu (przez wywołanie do `LookupAccountName` lub `LookupAccountSid` ), ale tylko zwraca bieżący stan.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Przykład zabezpieczeń](../../overview/visual-cpp-samples.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
-[Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
+[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
 [Operatory](../../atl/reference/atl-operators.md)

@@ -3,12 +3,12 @@ title: CppProperties.jsna temat odwołania
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837908"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsna temat odwołania
 
@@ -18,7 +18,7 @@ Otwarte projekty folderów, które nie używają CMake, mogą przechowywać usta
 
 Konfiguracja może mieć jedną z następujących właściwości:
 
-|||
+|Nazwa|Opis|
 |-|-|
 |`inheritEnvironments`| Określa, które środowiska mają zastosowanie do tej konfiguracji.|
 |`name`|Nazwa konfiguracji, która zostanie wyświetlona na liście rozwijanej konfiguracji C++|
@@ -83,7 +83,7 @@ Po zainstalowaniu obciążenia systemu Linux następujące środowiska są dost�
 |linux_x64|Element docelowy x64 systemu Linux zdalnie|
 |linux_arm|Zdalne docelowa ARM Linux|
 
-## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>Środowiska zdefiniowane przez użytkownika
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> Środowiska zdefiniowane przez użytkownika
 
 Opcjonalnie można użyć właściwości, `environments` Aby zdefiniować zestawy zmiennych w *CppProperties.jsna* globalnie lub dla konfiguracji. Te zmienne zachowują się jak zmienne środowiskowe w kontekście projektu otwartego folderu i można uzyskać do nich dostęp przy użyciu $ {ENV. \<VARIABLE> } Po zdefiniowaniu w tym miejscu składni *tasks.vs.js* i *launch.vs.js* . Jednak nie są one niekoniecznie ustawiane jako rzeczywiste zmienne środowiskowe w dowolnym wierszu polecenia, który program Visual Studio używa wewnętrznie.
 
@@ -125,7 +125,7 @@ Gdy definiujesz Właściwość **environments** Environments wewnątrz konfigura
 
 Masz dostęp do następujących wbudowanych makr wewnątrz *CppProperties.jsna*:
 
-|||
+|Makro|Opis|
 |-|-|
 |`${workspaceRoot}`| Pełna ścieżka do folderu obszaru roboczego|
 |`${projectRoot}`| Pełna ścieżka do folderu, w którym znajduje się *CppProperties.js*|
@@ -156,7 +156,7 @@ Jeśli projekt zawiera folder dołączania, a także zawiera *Windows. h* i inne
 ```
 
 > [!Note]
-> `%WindowsSdkDir%`i `%VCToolsInstallDir%` nie są ustawiane jako globalne zmienne środowiskowe, dlatego należy się upewnić, że devenv.exe od wiersz polecenia dla deweloperów, który definiuje te zmienne. (Wpisz "Developer" w menu Start systemu Windows).
+> `%WindowsSdkDir%` i `%VCToolsInstallDir%` nie są ustawiane jako globalne zmienne środowiskowe, dlatego należy się upewnić, że devenv.exe od wiersz polecenia dla deweloperów, który definiuje te zmienne. (Wpisz "Developer" w menu Start systemu Windows).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów z błędami IntelliSense
 

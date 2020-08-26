@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4ddf71c385414a28c2b616b359a93a637abc24aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222137"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846332"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Jedna z tych możliwych wartości: **`true`** , **`false`** ,,, `forced` `restri
 
 - Jeśli `forced` , zastępuje następny `restricted` atrybut, który wymaga, aby plik miał atrybut, `module` Jeśli w pliku istnieją atrybuty IDL.
 
-- `push`umożliwia zapisanie bieżących ustawień **emitidl** w wewnętrznym stosie **emitidl** i `pop` pozwala ustawić **emitidl** dla każdej wartości w górnej części wewnętrznego stosu **emitidl** .
+- `push` umożliwia zapisanie bieżących ustawień **emitidl** w wewnętrznym stosie **emitidl** i `pop` pozwala ustawić **emitidl** dla każdej wartości w górnej części wewnętrznego stosu **emitidl** .
 
 `defaultimports=`*wartość logiczna* \( obowiązkowe
 
@@ -54,9 +54,7 @@ Za każdym razem, gdy kompilator napotyka nowy plik, **emitidl** jest niejawnie 
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
@@ -65,7 +63,7 @@ Za każdym razem, gdy kompilator napotyka nowy plik, **emitidl** jest niejawnie 
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty autonomiczne](stand-alone-attributes.md)

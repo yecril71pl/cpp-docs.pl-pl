@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217470"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846215"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr, klasa
 
@@ -107,17 +107,17 @@ Niektóre funkcje przyjmują listę argumentów, która definiuje właściwości
 
 brak argumentów — obiekt otrzymany jest pustym `shared_ptr` obiektem lub pustym `weak_ptr` obiektem.
 
-`ptr`--wskaźnika typu `Other*` do zasobu, który ma być zarządzany. `T`musi być kompletnym typem. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), oblicza wyrażenie `delete ptr` .
+`ptr` --wskaźnika typu `Other*` do zasobu, który ma być zarządzany. `T` musi być kompletnym typem. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), oblicza wyrażenie `delete ptr` .
 
-`ptr, deleter`--wskaźnika typu `Other*` do zasobu, który ma być zarządzany, oraz do usuwania dla tego zasobu. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje `deleter(ptr)` , które musi być dobrze zdefiniowane.
+`ptr, deleter` --wskaźnika typu `Other*` do zasobu, który ma być zarządzany, oraz do usuwania dla tego zasobu. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje `deleter(ptr)` , które musi być dobrze zdefiniowane.
 
-`ptr, deleter, alloc`--wskaźnik typu `Other*` do zasobu, który ma być zarządzany, obiekt do usuwania dla tego zasobu oraz Alokator do zarządzania dowolnym magazynem, który musi zostać przydzielony i zwolniony. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje `deleter(ptr)` , które musi być dobrze zdefiniowane.
+`ptr, deleter, alloc` --wskaźnik typu `Other*` do zasobu, który ma być zarządzany, obiekt do usuwania dla tego zasobu oraz Alokator do zarządzania dowolnym magazynem, który musi zostać przydzielony i zwolniony. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje `deleter(ptr)` , które musi być dobrze zdefiniowane.
 
-`sp`-- `shared_ptr<Other>` obiekt, który jest właścicielem zasobu, który ma być zarządzany.
+`sp` -- `shared_ptr<Other>` obiekt, który jest właścicielem zasobu, który ma być zarządzany.
 
-`wp`--Obiekt wskazujący zasób, który `weak_ptr<Other>` ma być zarządzany.
+`wp` --Obiekt wskazujący zasób, który `weak_ptr<Other>` ma być zarządzany.
 
-`ap`-- `auto_ptr<Other>` obiekt, który przechowuje wskaźnik do zasobu, który ma być zarządzany. Jeśli funkcja się powiedzie, wywołuje `ap.release()` ; w przeciwnym razie pozostawia nie `ap` zmieniony.
+`ap` -- `auto_ptr<Other>` obiekt, który przechowuje wskaźnik do zasobu, który ma być zarządzany. Jeśli funkcja się powiedzie, wywołuje `ap.release()` ; w przeciwnym razie pozostawia nie `ap` zmieniony.
 
 We wszystkich przypadkach typ wskaźnika `Other*` musi być konwertowany na `T*` .
 
@@ -127,7 +127,7 @@ Wiele wątków może odczytywać i zapisywać różne `shared_ptr` obiekty w tym
 
 ## <a name="members"></a>Elementy członkowskie
 
-|||
+|Nazwa|Opis|
 |-|-|
 | **Konstruktory** | |
 |[shared_ptr](#shared_ptr)|Konstruuje a `shared_ptr` .|
@@ -136,7 +136,7 @@ Wiele wątków może odczytywać i zapisywać różne `shared_ptr` obiekty w tym
 |[element_type](#element_type)|Typ elementu.|
 |[weak_type](#weak_type)|Typ słabego wskaźnika do elementu.|
 | **Funkcje członkowskie** | |
-|[Pobierz](#get)|Pobiera adres należącego zasobu.|
+|[get](#get)|Pobiera adres należącego zasobu.|
 |[owner_before](#owner_before)|Zwraca wartość PRAWDA `shared_ptr` , jeśli jest ona uporządkowana przed (lub mniej niż) dostarczonym wskaźnikiem.|
 |[zresetować](#reset)|Zamień własność zasobu.|
 |[wymiany](#swap)|Zamienia dwa `shared_ptr` obiekty.|
@@ -148,7 +148,7 @@ Wiele wątków może odczytywać i zapisywać różne `shared_ptr` obiekty w tym
 |[operator =](#op_eq)|Zamienia posiadane zasoby.|
 |[zakład&gt;](#op_arrow)|Pobiera wskaźnik do wyoznaczonej wartości.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 Typ elementu.
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a> Pobierz
 
 Pobiera adres należącego zasobu.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>wartość logiczna operatora
+## <a name="operator-bool"></a><a name="op_bool"></a> wartość logiczna operatora
 
 Testuje, czy właścicielem istnieje zasób.
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>zakład
+## <a name="operator"></a><a name="op_star"></a> zakład
 
 Pobiera wydaną wartość.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Zamienia posiadane zasoby.
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>operator — >
+## <a name="operator-"></a><a name="op_arrow"></a> operator — >
 
 Pobiera wskaźnik do wyoznaczonej wartości.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 Zwraca wartość PRAWDA `shared_ptr` , jeśli jest ona uporządkowana przed (lub mniej niż) dostarczonym wskaźnikiem.
 
@@ -425,7 +425,7 @@ Odwołanie lvalue do `shared_ptr` lub `weak_ptr` .
 
 Funkcja członkowska szablonu zwraca wartość true, jeśli **`*this`** jest uporządkowana przed `ptr` .
 
-## <a name="reset"></a><a name="reset"></a>zresetować
+## <a name="reset"></a><a name="reset"></a> zresetować
 
 Zamień własność zasobu.
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 Konstruuje a `shared_ptr` .
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Niszczy `shared_ptr` .
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia dwa `shared_ptr` obiekty.
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>unikatowy
+## <a name="unique"></a><a name="unique"></a> unikatowy
 
 Testuje, czy posiadany zasób jest unikatowy. Ta funkcja była przestarzała w języku C++ 17 i została usunięta w języku C++ 20.
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 Zlicza liczby właścicieli zasobów.
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 Typ słabego wskaźnika do elementu.
 
@@ -873,7 +873,7 @@ using weak_type = weak_ptr<T>; // C++17
 
 `weak_type`Definicja została dodana w języku c++ 17.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\

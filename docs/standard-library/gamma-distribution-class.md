@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837927"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution — Klasa
 
@@ -80,10 +80,8 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem gamma. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 Funkcja właściwości `alpha()` i `beta()` zwracają odpowiednie wartości dla przechowywanych parametrów dystrybucji *Alpha* i *beta*.
 
@@ -188,7 +186,7 @@ Distribution for 10 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution:: gamma_distribution
 
 Konstruuje dystrybucję.
 
@@ -210,13 +208,13 @@ Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < alpha` lub`0.0 < beta`
+**Warunek wstępny:** `0.0 < alpha` lub `0.0 < beta`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `alpha` wartość przechowuje wartość *Alpha* i której przechowywana `beta` wartość przechowuje wartość *beta*.
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -245,10 +243,10 @@ struct param_type {
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < alpha` lub`0.0 < beta`
+**Warunek wstępny:** `0.0 < alpha` lub `0.0 < beta`
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

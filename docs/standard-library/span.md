@@ -5,12 +5,12 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813538"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846189"
 ---
 # <a name="ltspangt"></a>&lt;span&gt;
 
@@ -56,30 +56,30 @@ int main()
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|:-|
 |[span](span-class.md)| Zapewnia widok nad ciągłą sekwencją obiektów. |
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|:-|
 |[operator =](span-class.md#op_eq)| Przypisanie zakresu |
 |[zakład\[\]](span-class.md#op_at)| Dostęp do elementu |
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Pobierz bazowe bajty tylko do odczytu z zakresu. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Pobierz bazowe bajty zakresu. |
 
 ### <a name="constants"></a>Stałe
 
-|||
+|Nazwa|Opis|
 |-|:-|
 | **dynamic_extent** | Wskazuje, że rozmiar zakresu jest określany w czasie wykonywania, a nie w czasie kompilacji. Gdy liczba elementów w zakresie jest znana w czasie kompilacji, zostanie określona jako `Extent` parametr szablonu. Gdy liczba nie jest znana do czasu wykonania, należy `dynamic_extent` zamiast tego określić. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

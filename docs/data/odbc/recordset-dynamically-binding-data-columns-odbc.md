@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403871"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837791"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)
 
@@ -28,7 +28,7 @@ Zestawy rekordów umożliwiają zarządzanie kolumnami tabeli powiązań określ
 > [!NOTE]
 > Ten temat dotyczy obiektów pochodnych `CRecordset` , w których nie zaimplementowano pobierania wierszy zbiorczych. Opisane techniki zwykle nie są zalecane, jeśli używasz pobierania wierszy zbiorczych. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a>Gdy można dynamicznie powiązać kolumny
+## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> Gdy można dynamicznie powiązać kolumny
 
 > [!NOTE]
 > Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
@@ -47,13 +47,13 @@ Zestaw rekordów nadal zawiera elementy członkowskie danych dla kolumn, które 
 
 Ten temat nie obejmuje innych przypadków powiązań dynamicznych, takich jak usunięte tabele lub kolumny. W takich przypadkach należy bezpośrednio używać wywołań interfejsu API ODBC. Aby uzyskać więcej informacji, zobacz informacje o programie [ODBC Programmer's Reference](/sql/odbc/reference/odbc-programmer-s-reference).
 
-## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a>Jak dynamicznie powiązać kolumny
+## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> Jak dynamicznie powiązać kolumny
 
 Aby dynamicznie powiązać kolumny, należy znać (lub można określić) nazw dodatkowych kolumn. Należy również przydzielić magazyn dla dodatkowych elementów członkowskich danych pól, określić ich nazwy i ich typy oraz określić liczbę dodawanych kolumn.
 
 W poniższej dyskusji przedstawiono dwa różne zestawy rekordów. Pierwszy jest głównym zestawem rekordów, który wybiera rekordy z tabeli docelowej. Drugi to specjalny zestaw rekordów kolumn używany do uzyskiwania informacji o kolumnach w tabeli docelowej.
 
-### <a name="general-process"></a><a name="_core_the_general_process"></a>Proces ogólny
+### <a name="general-process"></a><a name="_core_the_general_process"></a> Proces ogólny
 
 Na najbardziej ogólnym poziomie należy wykonać następujące czynności:
 
@@ -69,7 +69,7 @@ Na najbardziej ogólnym poziomie należy wykonać następujące czynności:
 
    Zestaw rekordów wybiera rekordy i używa wymiany pól rekordów (RFX), aby powiązać kolumny statyczne (te, które są zamapowane na elementy członkowskie danych pola zestawu rekordów) i kolumny dynamiczne (mapowane na dodatkowe miejsce do alokacji).
 
-### <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a>Dodawanie kolumn
+### <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a> Dodawanie kolumn
 
 Dynamiczne powiązanie dodanych kolumn w czasie wykonywania wymaga wykonania następujących czynności:
 
@@ -88,18 +88,18 @@ Dynamiczne powiązanie dodanych kolumn w czasie wykonywania wymaga wykonania nas
 
    Jednym z metod jest dodanie pętli do funkcji głównego zestawu rekordów `DoFieldExchange` , która powoduje pętlę przez listę nowych kolumn, wywołując odpowiednią funkcję RFX dla każdej kolumny na liście. Dla każdego wywołania RFX przekaż nazwę kolumny z listy Nazwa kolumny i lokalizację magazynu w odpowiadającym członku listy wartości wynik.
 
-### <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a>Listy kolumn
+### <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a> Listy kolumn
 
 Cztery listy, z którymi należy się skontaktować, przedstawiono w poniższej tabeli.
 
-|||
-|-|-|
-|**Bieżąca tabela — kolumny**| (Lista 1 na ilustracji) Lista kolumn znajdujących się obecnie w tabeli w źródle danych. Ta lista może być zgodna z listą kolumn, które są obecnie powiązane z zestawem rekordów.|
-|**Powiązane-zestaw rekordów — kolumny**| (Lista 2 na ilustracji) Lista kolumn powiązanych z zestawem rekordów. Te kolumny zawierają już instrukcje RFX w `DoFieldExchange` funkcji.|
-|**Kolumny do powiązania — dynamicznie**| (Lista 3 na ilustracji) Lista kolumn w tabeli, ale nie w zestawie rekordów. Oto kolumny, które chcesz powiązać dynamicznie.|
-|**Dynamiczne wartości kolumn**| (Lista 4 na ilustracji) Lista zawierająca magazyn dla wartości pobranych z kolumn, które są powiązane dynamicznie. Elementy tej listy odnoszą się do tych w kolumnach do powiązania — dynamicznie, jeden-do-jednego.|
+| Lista | Opis |
+|--|--|
+| **Bieżąca tabela — kolumny** | (Lista 1 na ilustracji) Lista kolumn znajdujących się obecnie w tabeli w źródle danych. Ta lista może być zgodna z listą kolumn, które są obecnie powiązane z zestawem rekordów. |
+| **Powiązane-zestaw rekordów — kolumny** | (Lista 2 na ilustracji) Lista kolumn powiązanych z zestawem rekordów. Te kolumny zawierają już instrukcje RFX w `DoFieldExchange` funkcji. |
+| **Kolumny do powiązania — dynamicznie** | (Lista 3 na ilustracji) Lista kolumn w tabeli, ale nie w zestawie rekordów. Oto kolumny, które chcesz powiązać dynamicznie. |
+| **Dynamiczne wartości kolumn** | (Lista 4 na ilustracji) Lista zawierająca magazyn dla wartości pobranych z kolumn, które są powiązane dynamicznie. Elementy tej listy odnoszą się do tych w kolumnach do powiązania — dynamicznie, jeden-do-jednego. |
 
-### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a>Kompilowanie list
+### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Kompilowanie list
 
 Z myślą o ogólnej strategii można włączyć szczegóły. Procedury w pozostałej części tego tematu pokazują, jak tworzyć listy wyświetlane na [listach kolumn](#_core_lists_of_columns). Procedury te przeprowadzą Cię przez:
 
@@ -109,7 +109,7 @@ Z myślą o ogólnej strategii można włączyć szczegóły. Procedury w pozost
 
 - [Dynamiczne dodawanie wywołań RFX dla nowych kolumn](#_core_adding_rfx_calls_to_bind_the_columns).
 
-### <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a>Określanie, które kolumny tabeli nie znajdują się w zestawie rekordów
+### <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Określanie, które kolumny tabeli nie znajdują się w zestawie rekordów
 
 Utwórz listę (powiązane-zestaw rekordów-kolumn, jak w liście 2 na ilustracji) zawierającej listę kolumn, które są już powiązane z głównym zestawem rekordów. Następnie utwórz listę (kolumny do powiązania — dynamicznie), pochodzącą z kolumn bieżąca tabela i powiązane z zestawem rekordów kolumn), które zawierają nazwy kolumn, które znajdują się w tabeli w źródle danych, ale nie w głównym zestawie rekordów.
 
@@ -131,7 +131,7 @@ Utwórz listę (powiązane-zestaw rekordów-kolumn, jak w liście 2 na ilustracj
 
    Elementy tej listy odgrywają rolę nowych elementów członkowskich danych pola zestawu rekordów. Są to lokalizacje przechowywania, do których są powiązane kolumny dynamiczne. Opisy list znajdują się w temacie [listy kolumn](#_core_lists_of_columns).
 
-### <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a>Dostarczanie magazynu dla nowych kolumn
+### <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a> Dostarczanie magazynu dla nowych kolumn
 
 Następnie skonfiguruj lokalizacje magazynu dla kolumn, które mają być powiązane dynamicznie. Pomysłem jest udostępnienie elementu listy, w którym będą przechowywane wartości każdej kolumny. Te lokalizacje magazynu są równoległe do zmiennych składowych zestawu rekordów, które przechowują zwykle powiązane kolumny.
 
@@ -148,7 +148,7 @@ Wynikiem powyższych procedur jest dwie główne listy: kolumny do powiązania �
 > [!TIP]
 > Jeśli nowe kolumny nie są tego samego typu danych, można chcieć utworzyć dodatkową równoległą listę zawierającą elementy, które w jakiś sposób definiują typ każdego odpowiadającego elementu na liście kolumn. (W razie potrzeby można użyć wartości AFX_RFX_BOOL, AFX_RFX_BYTE i tak dalej. Te stałe są zdefiniowane w AFXDB. H.) wybierz typ listy na podstawie sposobu reprezentowania typów danych kolumny.
 
-### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a>Dodawanie wywołań RFX w celu powiązania kolumn
+### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Dodawanie wywołań RFX w celu powiązania kolumn
 
 Na koniec należy rozmieścić dynamiczne powiązanie, umieszczając wywołania RFX dla nowych kolumn w `DoFieldExchange` funkcji.
 

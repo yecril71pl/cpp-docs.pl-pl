@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838311"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo — Klasa
 
@@ -59,16 +59,16 @@ class CDBErrorInfo
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|Zwraca wszystkie informacje o błędzie zawarte w rekordzie błędu.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Wywołuje [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) , aby zwrócić podstawowe informacje o określonym błędzie.|
 |[GetCustomErrorObject](#getcustomerrorobject)|Wywołuje [IErrorRecords:: Getcustomerrorobject](/previous-versions/windows/desktop/ms725417(v=vs.85)) , aby zwrócić wskaźnik do interfejsu w obiekcie błędu niestandardowego.|
-|[GetErrorInfo](#geterrorinfo)|Wywołuje [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) , aby zwrócić wskaźnik interfejsu `IErrorInfo` do określonego rekordu.|
+|[GetErrorInfo](#geterrorinfo)|Wywołuje [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) , aby zwrócić `IErrorInfo` wskaźnik interfejsu do określonego rekordu.|
 |[GetErrorParameters](#geterrorparameters)|Wywołuje [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) w celu zwrócenia parametrów błędu.|
 |[GetErrorRecords](#geterrorrecords)|Pobiera rekordy błędów dla określonego obiektu.|
 
@@ -76,7 +76,7 @@ class CDBErrorInfo
 
 Ten interfejs zwraca jeden lub więcej rekordów błędów do użytkownika. Najpierw Wywołaj [CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) , aby uzyskać liczbę rekordów błędów. Następnie Wywołaj jedną z funkcji dostępu, na przykład [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), aby pobrać informacje o błędzie dla każdego rekordu.
 
-## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo:: GetAllErrorInfo
 
 Zwraca wszystkie typy informacji o błędzie zawartych w rekordzie błędu.
 
@@ -120,13 +120,13 @@ S_OK, jeśli się to powiedzie. Zobacz [IErrorRecords:: GetErrorInfo](/previous-
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość wyjściowa *pbstrDescription* jest uzyskiwana wewnętrznie przez wywołanie `IErrorInfo::GetDescription`, która ustawia wartość null, jeśli ustawienia regionalne nie są obsługiwane lub jeśli są spełnione oba poniższe warunki:
+Wartość wyjściowa *pbstrDescription* jest uzyskiwana wewnętrznie przez wywołanie `IErrorInfo::GetDescription` , która ustawia wartość null, jeśli ustawienia regionalne nie są obsługiwane lub jeśli są spełnione oba poniższe warunki:
 
 1. wartość *LCID* nie jest angielski (Stany Zjednoczone) i
 
 1. wartość *LCID* nie jest równa wartości zwracanej przez GetUserDefaultLCID.
 
-## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> CDBErrorInfo:: GetBasicErrorInfo
 
 Wywołuje [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) , aby zwrócić podstawowe informacje o błędzie, takie jak kod powrotu i numer błędu specyficzny dla dostawcy.
 
@@ -145,7 +145,7 @@ Zobacz [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms
 
 Standardowa wartość HRESULT.
 
-## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo:: getcustomerrorobject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a> CDBErrorInfo:: getcustomerrorobject
 
 Wywołuje [IErrorRecords:: Getcustomerrorobject](/previous-versions/windows/desktop/ms725417(v=vs.85)) , aby zwrócić wskaźnik do interfejsu w obiekcie błędu niestandardowego.
 
@@ -164,7 +164,7 @@ Zobacz [IErrorRecords:: Getcustomerrorobject](/previous-versions/windows/desktop
 
 Standardowa wartość HRESULT.
 
-## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a> CDBErrorInfo:: GetErrorInfo
 
 Wywołuje [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) , aby zwrócić wskaźnik interfejsu [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) do określonego rekordu.
 
@@ -183,7 +183,7 @@ Zobacz [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms71123
 
 Standardowa wartość HRESULT.
 
-## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a> CDBErrorInfo:: GetErrorParameters
 
 Wywołuje [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) w celu zwrócenia parametrów błędu.
 
@@ -202,7 +202,7 @@ Zobacz [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/m
 
 Standardowa wartość HRESULT.
 
-## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a> CDBErrorInfo:: GetErrorRecords
 
 Pobiera rekordy błędów dla określonego obiektu.
 
@@ -239,4 +239,4 @@ Użyj pierwszej formy funkcji, jeśli chcesz sprawdzić, z którego interfejsu p
 
 [DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

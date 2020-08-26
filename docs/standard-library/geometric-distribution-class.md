@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233187"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837882"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution — Klasa
 
@@ -76,10 +76,8 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 Szablon klasy zawiera opis dystrybucji, która produkuje wartości typu całkowitego określonego przez użytkownika z rozkładem geometrycznym. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 Funkcja Property `p()` zwraca wartość dla przechowywanego parametru dystrybucji `p` .
 
@@ -209,7 +207,7 @@ Distribution for 100 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution:: geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a> geometric_distribution:: geometric_distribution
 
 Konstruuje dystrybucję.
 
@@ -234,7 +232,7 @@ Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `p` wartość prz
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a> geometric_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -263,6 +261,6 @@ struct param_type {
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

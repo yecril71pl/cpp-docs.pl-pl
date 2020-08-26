@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560532"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846241"
 ---
 # <a name="set-class"></a>set — Klasa
 
@@ -145,13 +145,13 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zbiór](#set)|Konstruuje zestaw, który jest pusty lub jest kopią całości lub części innego zestawu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocator_type](#allocator_type)|Typ, który reprezentuje `allocator` klasę dla obiektu zestawu.|
 |[const_iterator](#const_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać **`const`** element w zestawie.|
@@ -169,15 +169,15 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 |[value_compare](#value_compare)|Typ, który dostarcza obiekt funkcji, która może porównać dwa elementy jako klucze sortowania, aby określić ich względną kolejność w zestawie.|
 |[value_type](#value_type)|Typ opisuje obiekt zapisany jako element zestawu w charakterze wartości.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zaczną](#begin)|Zwraca iterator, który dotyczy pierwszego elementu w zestawie.|
 |[cbegin](#cbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w zestawie.|
 |[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w zestawie.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy zestawu.|
-|[liczbą](#count)|Zwraca liczbę elementów w zestawie, których klucz pasuje do klucza określonego jako parametr.|
+|[count](#count)|Zwraca liczbę elementów w zestawie, których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin —](#rbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie.|
 |[crend](#rend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do zestawu.|
@@ -201,7 +201,7 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator =](#op_eq)|Zastępuje elementy zestawu kopią innego zestawu.|
 
