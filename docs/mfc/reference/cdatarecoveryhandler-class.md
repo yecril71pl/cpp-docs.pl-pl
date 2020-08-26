@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561976"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842926"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Klasa CDataRecoveryHandler
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|Konstruuje `CDataRecoveryHandler` obiekt.|
 
 ### <a name="methods"></a>Metody
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Automatycznie zapisuje każdy plik zarejestrowany w `CDataRecoveryHandler` klasie.|
 |[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|Automatycznie zapisuje określony dokument.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+|Nazwa|Opis|
 |-|-|
 |m_bRestoringPreviousOpenDocs|Wskazuje, czy program obsługi odzyskiwania danych otwiera wcześniej otwarte dokumenty.|
 |m_bSaveDocumentInfoOnIdle|Wskazuje, czy program obsługi odzyskiwania danych automatycznie zapisuje dokumenty w następnej pętli bezczynności.|

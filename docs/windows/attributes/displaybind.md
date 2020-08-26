@@ -1,17 +1,17 @@
 ---
-title: displaybind (C++ atrybut com)
+title: displaybind (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841665"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -33,14 +33,12 @@ Zapoznaj się z przykładem dla [powiązania](bindable.md) z przykładem użycia
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
@@ -48,7 +46,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)<br/>
+[Atrybuty elementu członkowskiego danych](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
 [requestedit](requestedit.md)

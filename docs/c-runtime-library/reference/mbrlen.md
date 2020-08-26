@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920302"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842120"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -52,7 +52,7 @@ size_t mbrlen(
 *str*<br/>
 Wskaźnik do następnego bajtu do sprawdzenia w ciągu znaków wielobajtowych.
 
-*liczbą*<br/>
+*count*<br/>
 Maksymalna liczba bajtów do sprawdzenia.
 
 *mbstate*<br/>
@@ -62,16 +62,16 @@ Wskaźnik do bieżącego stanu przesunięcia początkowego bajtu *str*.
 
 Jedna z następujących wartości:
 
-|||
-|-|-|
-0|Kolejna *Liczba* lub mniejsza liczba bajtów Ukończ znak wielobajtowy, który reprezentuje szeroki znak null.
-1 do *zliczenia*włącznie|Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym.
-(size_t) (-2)|Kolejna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *licznika* zostały przetworzone.
-(size_t) (-1)|Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ i stan konwersji w *mbstate* jest nieokreślony.
+| Wartość | Opis |
+|--|--|
+| 0 | Kolejna *Liczba* lub mniejsza liczba bajtów Ukończ znak wielobajtowy, który reprezentuje szeroki znak null. |
+| 1 do *zliczenia*włącznie | Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym. |
+| (size_t) (-2) | Kolejna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *licznika* zostały przetworzone. |
+| (size_t) (-1) | Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ i stan konwersji w *mbstate* jest nieokreślony. |
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **mbrlen** sprawdza z największą liczbą bajtów rozpoczynającą się od bajtu wskazywanym przez *str* , aby określić *liczbę bajtów,* które są wymagane do ukończenia następnego znaku wielobajtowego, w tym wszystkie sekwencje przesunięcia. Jest równoważne wywołaniu `mbrtowc(NULL, str, count, &mbstate)` , gdzie *mbstate* jest obiektem **mbstate_t** udostępnionym przez użytkownika, lub statycznym obiektem wewnętrznym dostarczonym przez bibliotekę.
+Funkcja **mbrlen** sprawdza z największą liczbą bajtów rozpoczynającą się od bajtu wskazywanym przez *str* , aby określić *liczbę bajtów,* które są wymagane do ukończenia następnego znaku wielobajtowego, w tym wszystkie sekwencje przesunięcia. Jest równoważne wywołaniu, `mbrtowc(NULL, str, count, &mbstate)` gdzie *mbstate* jest obiektem **mbstate_t** udostępnionym przez użytkownika, lub statycznym obiektem wewnętrznym dostarczonym przez bibliotekę.
 
 Funkcja **mbrlen** zapisuje i używa stanu przesunięcia niekompletnego znaku wielobajtowego w parametrze *mbstate* . Dzięki temu **mbrlen** możliwość ponownego uruchomienia w środku znaku wielobajtowego, jeśli jest to konieczne, badanie z największą *liczbą* bajtów. Jeśli *mbstate* jest wskaźnikiem typu null, **mbrlen** używa wewnętrznego, statycznego obiektu **mbstate_t** do przechowywania stanu przesunięcia. Ponieważ wewnętrzny obiekt **mbstate_t** nie jest bezpieczny wątkowo, zalecamy, aby zawsze przydzielić i przekazać własny parametr *mbstate* .
 
@@ -89,7 +89,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbrlen**|\<WCHAR. h>|
+|**mbrlen**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -158,4 +158,4 @@ Character count: 25
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>

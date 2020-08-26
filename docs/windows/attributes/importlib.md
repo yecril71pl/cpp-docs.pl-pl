@@ -1,17 +1,17 @@
 ---
-title: importlib (C++ atrybut com)
+title: importlib (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 004533282ca089a076df6b110d52701abc16f71d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166812"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842224"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ Nazwa pliku. tlb, w cudzysłowie, która ma zostać zaimportowana do biblioteki 
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **importlib** C++ powoduje umieszczenie instrukcji `importlib` w bloku biblioteki wygenerowanego pliku IDL. Atrybut **importlib** ma takie same funkcje jak atrybut [importlib](/windows/win32/Midl/importlib) MIDL.
+Atrybut **importlib** C++ powoduje, że `importlib` instrukcja zostanie umieszczona w bloku biblioteki wygenerowanego pliku IDL. Atrybut **importlib** ma takie same funkcje jak atrybut [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -45,22 +45,20 @@ Poniższy kod przedstawia przykład użycia **importlib**:
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|Dowolnym miejscu|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)<br/>
-[import](import.md)<br/>
+[Atrybuty autonomiczne](stand-alone-attributes.md)<br/>
+[zaimportować](import.md)<br/>
 [importidl](importidl.md)<br/>
-[include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)
+[być](include-cpp.md)<br/>
+[includelib —](includelib-cpp.md)

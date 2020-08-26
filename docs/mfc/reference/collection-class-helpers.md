@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231796"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841431"
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 
@@ -23,7 +23,7 @@ Biblioteka MFC udostępnia następujące funkcje globalne w afxtempl. h, które 
 
 ### <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[CompareElements](#compareelements)|Wskazuje, czy elementy są takie same.|
 |[CopyElements](#copyelements)|Kopiuje elementy z jednej tablicy do innej.|
@@ -31,7 +31,7 @@ Biblioteka MFC udostępnia następujące funkcje globalne w afxtempl. h, które 
 |[HashKey](#hashkey)|Oblicza klucz skrótu.|
 |[SerializeElements](#serializeelements)|Przechowuje lub Pobiera elementy do archiwum lub z niego.|
 
-## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a> CompareElements
 
 Wywoływana bezpośrednio przez [CList:: find] (CList-Class. MD # not_found. MD # clist__find i pośrednio przez [cmap__lookup](cmap-class.md#lookup) i [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
 
@@ -73,7 +73,7 @@ Język C++ definiuje operator porównania ( `==` ) dla typów prostych ( **`char
 
    **Nagłówek:** afxtempl. h
 
-## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a> CopyElements
 
 Ta funkcja jest wywoływana bezpośrednio przez [CArray:: Append](carray-class.md#append) i [CArray:: Copy](carray-class.md#copy).
 
@@ -109,7 +109,7 @@ Aby uzyskać informacje na temat wdrażania tej i innych funkcji pomocnika, zoba
 
   **Nagłówek** afxtempl. h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements
+## <a name="dumpelements"></a><a name="dumpelements"></a> DumpElements
 
 Zapewnia zorientowane na strumień dane wyjściowe diagnostyki w postaci tekstowej dla elementów kolekcji, gdy jest zastępowany.
 
@@ -145,7 +145,7 @@ Domyślna implementacja nie robi nic. Jeśli elementy kolekcji pochodzą z `CObj
 
   **Nagłówek** afxtempl. h
 
-## <a name="hashkey"></a><a name="hashkey"></a>HashKey
+## <a name="hashkey"></a><a name="hashkey"></a> HashKey
 
 Oblicza wartość skrótu dla danego klucza.
 
@@ -187,7 +187,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **Nagłówek** afxtempl. h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a> SerializeElements
 
 [CArray](carray-class.md), [CList](clist-class.md)i [CMAP](cmap-class.md) Wywołaj tę funkcję, aby serializować elementy.
 
@@ -224,7 +224,7 @@ Zapoznaj się z przykładem w artykule [kolekcje artykułów: jak utworzyć bezp
 
   **Nagłówek** afxtempl. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
 [Klasa CMap](cmap-class.md)<br/>

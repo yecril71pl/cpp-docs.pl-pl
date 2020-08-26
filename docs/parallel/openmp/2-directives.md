@@ -2,12 +2,12 @@
 title: 2. Dyrektyw
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228404"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841977"
 ---
 # <a name="2-directives"></a>2. Dyrektywy
 
@@ -21,7 +21,7 @@ Składnia dyrektywy OpenMP jest formalnie określona przez gramatykę w [dodatku
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Każda dyrektywa zaczyna się od `#pragma omp` , aby zmniejszyć prawdopodobieństwo konfliktu z innymi (rozszerzeniami non-OpenMP lub Vendor do OpenMP) dyrektywy pragma o tych samych nazwach. Pozostała część dyrektywy jest zgodna z konwencjami standardu C i C++ dla dyrektyw kompilatora. W szczególności można użyć białego znaku przed i po `#` , i czasami do oddzielenia wyrazów w dyrektywie należy użyć białych znaków. Wstępne przetwarzanie tokenów po stronie `#pragma omp` podlega wymianie makr.
+Każda dyrektywa zaczyna się od  `#pragma omp` , aby zmniejszyć prawdopodobieństwo konfliktu z innymi (rozszerzeniami non-OpenMP lub Vendor do OpenMP) dyrektywy pragma o tych samych nazwach. Pozostała część dyrektywy jest zgodna z konwencjami standardu C i C++ dla dyrektyw kompilatora. W szczególności można użyć białego znaku przed i po `#` , i czasami do oddzielenia wyrazów w dyrektywie należy użyć białych znaków. Wstępne przetwarzanie tokenów po stronie `#pragma omp` podlega wymianie makr.
 
 W dyrektywach jest rozróżniana wielkość liter. Kolejność, w której klauzule pojawiają się w dyrektywach, nie jest istotna. Klauzule dotyczące dyrektyw mogą być powtarzane w razie potrzeby, zgodnie z ograniczeniami wymienionymi w opisie każdej klauzuli. Jeśli w klauzuli występuje *zmienna list* , musi ona określać tylko zmienne. Dla każdej dyrektywy można określić tylko jedną *nazwę dyrektywy* .  Na przykład następująca dyrektywa nie jest dozwolona:
 
@@ -191,12 +191,12 @@ Forma kanoniczna umożliwia obliczenia liczby iteracji pętli we wpisie do pętl
 
 Tabela 2-1: `schedule` wartości *typu* klauzuli
 
-|||
+|Wartość|Opis|
 |-|-|
 |static|Gdy `schedule(static,` *chunk_size* `)` jest określony, iteracje są dzielone na fragmenty rozmiaru określonego przez *chunk_size*. Fragmenty są statycznie przypisywane do wątków w zespole w sposób okrężny w kolejności numer wątku. Gdy nie określono *chunk_size* , przestrzeń iteracji jest dzielona na fragmenty, które są w przybliżeniu równym rozmiarze, z jednym fragmentem przypisanym do każdego wątku.|
-|dynamic|Gdy `schedule(dynamic,` *chunk_size* `)` jest określony, iteracje są dzielone na serie fragmentów, z których każda zawiera *chunk_size* iteracji. Każdy fragment jest przypisywany do wątku, który oczekuje na przypisanie. Wątek wykonuje fragment iteracji, a następnie czeka na następne przypisanie, dopóki nie zostaną przypisane żadne fragmenty. Ostatni fragment, który ma zostać przypisany, może mieć mniejszą liczbę iteracji. Gdy nie jest określony żaden *chunk_size* , wartość domyślna to 1.|
+|dynamiczna|Gdy `schedule(dynamic,` *chunk_size* `)` jest określony, iteracje są dzielone na serie fragmentów, z których każda zawiera *chunk_size* iteracji. Każdy fragment jest przypisywany do wątku, który oczekuje na przypisanie. Wątek wykonuje fragment iteracji, a następnie czeka na następne przypisanie, dopóki nie zostaną przypisane żadne fragmenty. Ostatni fragment, który ma zostać przypisany, może mieć mniejszą liczbę iteracji. Gdy nie jest określony żaden *chunk_size* , wartość domyślna to 1.|
 |z przewodnikiem|Gdy `schedule(guided,` *chunk_size* `)` jest określony, iteracje są przypisywane do wątków w fragmentach o zmniejszeniu rozmiarów. Gdy wątek kończy przypisane fragmenty iteracji, zostaje dynamicznie przypisany kolejny fragment, dopóki nie pozostanie pozostawiony. W przypadku *chunk_size* 1 rozmiar każdego fragmentu jest w przybliżeniu liczbą nieprzypisanych iteracji podzieloną przez liczbę wątków. Rozmiary te zmniejszają się niemal wykładniczo do 1. Dla *chunk_size* o wartości *k* większej niż 1, rozmiary zmniejszają się niemal wykładniczo do *k*, z tą różnicą, że ostatni fragment może mieć mniej niż *k* iteracji. Gdy nie jest określony żaden *chunk_size* , wartość domyślna to 1.|
-|środowisko uruchomieniowe|Gdy `schedule(runtime)` jest określony, decyzja dotycząca planowania jest odroczona do czasu wykonania. *Typ* harmonogramu i rozmiar fragmentów mogą być wybierane w czasie wykonywania przez ustawienie zmiennej środowiskowej `OMP_SCHEDULE` . Jeśli ta zmienna środowiskowa nie jest ustawiona, wynikający z nich harmonogram jest zdefiniowany przez implementację. Gdy `schedule(runtime)` jest określony, *chunk_size* nie może być określony.|
+|środowisko uruchomieniowe|Gdy `schedule(runtime)` jest określony, decyzja dotycząca planowania jest odroczona do czasu wykonania. *Typ* harmonogramu i rozmiar fragmentów mogą być wybierane w czasie wykonywania przez ustawienie zmiennej środowiskowej `OMP_SCHEDULE` . Jeśli ta zmienna środowiskowa nie jest ustawiona, wynikający z nich harmonogram jest zdefiniowany przez implementację. Gdy  `schedule(runtime)` jest określony, *chunk_size* nie może być określony.|
 
 W przypadku braku jawnie zdefiniowanej `schedule` klauzuli, wartością domyślną `schedule` jest zdefiniowana implementacja.
 
@@ -459,24 +459,24 @@ Składnia `flush` dyrektywy jest następująca:
 
 Jeśli wszystkie obiekty, które wymagają synchronizacji, można wyznaczyć przez zmienne, wówczas te zmienne można określić na opcjonalnej *liście zmiennych*. Jeśli wskaźnik znajduje się na *liście zmiennych*, wskaźnik jest opróżniany, a nie obiekt, do którego odwołuje się wskaźnik.
 
-`flush`Dyrektywa bez *listy zmiennych* synchronizuje wszystkie obiekty udostępnione z wyjątkiem niedostępnych obiektów z automatycznym okresem przechowywania. (Prawdopodobnie ma więcej nakładów niż `flush` z *listą zmiennych*). `flush`Dyrektywa bez *listy zmiennych* jest implikowana dla następujących dyrektyw:
+`flush`Dyrektywa bez *listy zmiennych* synchronizuje wszystkie obiekty udostępnione z wyjątkiem niedostępnych obiektów z automatycznym okresem przechowywania. (Prawdopodobnie ma więcej nakładów niż `flush` z *listą zmiennych*). `flush` Dyrektywa bez *listy zmiennych* jest implikowana dla następujących dyrektyw:
 
 - `barrier`
-- W momencie wejścia i wyjścia z`critical`
-- W momencie wejścia i wyjścia z`ordered`
-- W momencie wejścia i wyjścia z`parallel`
-- Przy wyjściu z`for`
-- Przy wyjściu z`sections`
-- Przy wyjściu z`single`
-- W momencie wejścia i wyjścia z`parallel for`
-- W momencie wejścia i wyjścia z`parallel sections`
+- W momencie wejścia i wyjścia z `critical`
+- W momencie wejścia i wyjścia z `ordered`
+- W momencie wejścia i wyjścia z `parallel`
+- Przy wyjściu z `for`
+- Przy wyjściu z `sections`
+- Przy wyjściu z `single`
+- W momencie wejścia i wyjścia z `parallel for`
+- W momencie wejścia i wyjścia z `parallel sections`
 
 Dyrektywa nie jest implikowana, jeśli `nowait` jest obecna klauzula. Należy zauważyć, że `flush` dyrektywy nie są implikowane dla żadnego z następujących elementów:
 
-- W pozycji do`for`
-- W momencie wejścia lub wyjścia z`master`
-- W pozycji do`sections`
-- W pozycji do`single`
+- W pozycji do `for`
+- W momencie wejścia lub wyjścia z `master`
+- W pozycji do `sections`
+- W pozycji do `single`
 
 Odwołanie, które uzyskuje dostęp do wartości obiektu z typem kwalifikowanym nietrwałym, zachowuje się tak, jakby istniała `flush` dyrektywa określająca ten obiekt w poprzednim punkcie sekwencji. Odwołanie, które modyfikuje wartość obiektu z typem kwalifikowanym nietrwałym, zachowuje się tak, jakby istniała `flush` dyrektywa określająca ten obiekt w kolejnym punkcie sekwencji.
 
@@ -597,11 +597,11 @@ Wszystkie zmienne, które pojawiają się w klauzulach dyrektywy, muszą być wi
 
 W poniższych sekcjach opisano klauzule atrybutu udostępniania danych:
 
-- [użytek](#2721-private)
+- [private](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
 - [udostępniać](#2724-shared)
-- [default](#2725-default)
+- [wartooć](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
@@ -717,7 +717,7 @@ Obniżka jest zwykle określona dla instrukcji z jedną z następujących form:
 
 - wyrażenie *x* `=` *x* *op* *expr*
 - *x* *binop* `=` *wyrażenie* binop x
-- *x* `=` *wyrażenie* *op* *x* (z wyjątkiem odejmowania)
+- *x* `=` *wyrażenie* *op* *x*  (z wyjątkiem odejmowania)
 - *x*`++`
 - `++` *x*
 - *x*`--`
@@ -860,14 +860,14 @@ Dynamiczne zagnieżdżanie dyrektyw musi przestrzegać następujących zasad:
 
 - `for`, `sections` i `single` dyrektywy, które wiążą się z tym samym, `parallel` nie mogą być zagnieżdżone wewnątrz siebie.
 
-- `critical`dyrektywy o tej samej nazwie nie mogą być zagnieżdżone wewnątrz siebie. Należy zauważyć, że to ograniczenie nie jest wystarczające, aby zapobiec zakleszczeniu.
+- `critical` dyrektywy o tej samej nazwie nie mogą być zagnieżdżone wewnątrz siebie. Należy zauważyć, że to ograniczenie nie jest wystarczające, aby zapobiec zakleszczeniu.
 
 - `for`, `sections` , i `single` dyrektywy nie są dozwolone w dynamicznym zakresie `critical` , `ordered` i `master` regiony, jeśli dyrektywy są powiązane z tymi samymi `parallel` regionami.
 
-- `barrier`dyrektywy nie są dozwolone w zakresie dynamicznym,,,, `for` `ordered` `sections` `single` `master` i `critical` regionach, jeśli dyrektywy są powiązane z tymi samymi, `parallel` co regiony.
+- `barrier` dyrektywy nie są dozwolone w zakresie dynamicznym,,,, `for` `ordered` `sections` `single` `master` i `critical` regionach, jeśli dyrektywy są powiązane z tymi samymi, `parallel` co regiony.
 
-- `master`dyrektywy nie są dozwolone w zakresie dynamicznym `for` , `sections` i dyrektywy, jeśli dyrektywy są powiązane z takimi `single` `master` samymi `parallel` jak dyrektywy dotyczące udostępniania pracy.
+- `master` dyrektywy nie są dozwolone w zakresie dynamicznym `for` , `sections` i dyrektywy, jeśli dyrektywy są powiązane z takimi `single` `master` samymi `parallel` jak dyrektywy dotyczące udostępniania pracy.
 
-- `ordered`dyrektywy nie są dozwolone w dynamicznym zakresie `critical` regionów, jeśli dyrektywy są powiązane z tymi samymi, `parallel` co regiony.
+- `ordered` dyrektywy nie są dozwolone w dynamicznym zakresie `critical` regionów, jeśli dyrektywy są powiązane z tymi samymi, `parallel` co regiony.
 
 - Każda dyrektywa, która jest dozwolona, gdy jest wykonywana dynamicznie w regionie równoległym, jest również dozwolona, gdy jest wykonywana poza równoległym regionem. W przypadku wykonywania dynamicznego na zewnątrz regionu równoległego określonego przez użytkownika, dyrektywa jest wykonywana przez zespół składający się z tylko wątku głównego.

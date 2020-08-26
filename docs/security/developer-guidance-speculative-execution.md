@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219329"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842458"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów języka C++ dotyczące spekulacyjnych kanałów po stronie wykonywania
 
@@ -21,7 +21,7 @@ Ten artykuł zawiera wskazówki dla deweloperów, które ułatwiają identyfikac
 
 Wskazówki zawarte w tym artykule dotyczą klas luk w zabezpieczeniach reprezentowanej przez:
 
-1. CVE-2017-5753, znany również jako Spectre Variant 1. Ta klasa luk w zabezpieczeniach sprzętowych jest związana z kanałami ubocznymi, które mogą powstać z powodu spekulacyjnego wykonania, które występuje w wyniku nieprawidłowych prognoz gałęzi warunkowej. Kompilator języka Microsoft C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) zawiera obsługę `/Qspectre` przełącznika, który zapewnia ograniczenie czasu kompilacji dla ograniczonego zestawu potencjalnie narażonych wzorców kodowania związanych z CVE-2017-5753. `/Qspectre`Przełącznik jest również dostępny w programie Visual Studio 2015 Update 3 do [KB 4338871](https://support.microsoft.com/help/4338871). Dokumentacja flagi [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) zawiera więcej informacji na temat ich skutków i użycia.
+1. CVE-2017-5753, znany również jako Spectre Variant 1. Ta klasa luk w zabezpieczeniach sprzętowych jest związana z kanałami ubocznymi, które mogą powstać z powodu spekulacyjnego wykonania, które występuje w wyniku nieprawidłowych prognoz gałęzi warunkowej. Kompilator języka Microsoft C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) zawiera obsługę `/Qspectre` przełącznika, który zapewnia ograniczenie czasu kompilacji dla ograniczonego zestawu potencjalnie narażonych wzorców kodowania związanych z CVE-2017-5753. `/Qspectre`Przełącznik jest również dostępny w programie Visual Studio 2015 Update 3 do [KB 4338871](https://support.microsoft.com/help/4338871). Dokumentacja [`/Qspectre`](../build/reference/qspectre.md) flagi zawiera więcej informacji na temat ich skutków i użycia.
 
 2. CVE-2018-3639, znane także jako " [spekulacyjne" Obejście magazynu (SSB)](https://aka.ms/sescsrdssb). Ta klasa luk w zabezpieczeniach sprzętowych jest związana z kanałami ubocznymi, które mogą powstać z powodu spekulacyjnego wykonywania obciążenia przed magazynem zależnym w wyniku nieprawidłowych prognozowania dostępu do pamięci.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Należy zauważyć, że oba te przykłady obejmują spekulacyjne modyfikacje wskaźników rozgałęzień pośrednich przypisywanych ze stosu. Możliwe jest również, aby można było modyfikować spekulacyjne w przypadku zmiennych globalnych, pamięci przydzieloną sterty, a nawet pamięci tylko do odczytu na niektórych procesorach. W przypadku pamięci przydzielonej przez stos kompilator języka Microsoft C++ wykonuje już kroki, aby utrudnić speculatively modyfikowanie rozgałęzień pośrednich przyznanych przez stosy, na przykład przez zmianę kolejności zmiennych lokalnych w taki sposób, że bufory znajdują się obok pliku cookie zabezpieczeń w ramach funkcji zabezpieczenia kompilatora [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) .
+Należy zauważyć, że oba te przykłady obejmują spekulacyjne modyfikacje wskaźników rozgałęzień pośrednich przypisywanych ze stosu. Możliwe jest również, aby można było modyfikować spekulacyjne w przypadku zmiennych globalnych, pamięci przydzieloną sterty, a nawet pamięci tylko do odczytu na niektórych procesorach. W przypadku pamięci przydzielonej przez stos kompilator języka Microsoft C++ wykonuje już kroki, aby trudniejsze speculativelye do modyfikacji oddziałów pośrednich przyznanych przez stosy, na przykład przez zmianę kolejności zmiennych lokalnych w taki sposób, że bufory znajdują się obok pliku cookie zabezpieczeń w ramach [`/GS`](../build/reference/gs-buffer-security-check.md) funkcji zabezpieczenia kompilatora.
 
 ## <a name="speculative-type-confusion"></a>Pomyłka typu spekulacyjnego
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Bariera spekulacyjny przez instrumentację czasu kompilatora
 
-Kompilator języka Microsoft C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) zawiera obsługę `/Qspectre` przełącznika, który automatycznie wstawia barierę spekulacyjnyą dla ograniczonego zestawu potencjalnie narażonych wzorców kodowania związanych z CVE-2017-5753. Dokumentacja flagi [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) zawiera więcej informacji na temat ich skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie narażonych wzorców kodowania i ponieważ tacy deweloperzy nie muszą polegać na tym, jak kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
+Kompilator języka Microsoft C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) zawiera obsługę `/Qspectre` przełącznika, który automatycznie wstawia barierę spekulacyjnyą dla ograniczonego zestawu potencjalnie narażonych wzorców kodowania związanych z CVE-2017-5753. Dokumentacja [`/Qspectre`](../build/reference/qspectre.md) flagi zawiera więcej informacji na temat ich skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie narażonych wzorców kodowania i ponieważ tacy deweloperzy nie muszą polegać na tym, jak kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
 
 ### <a name="masking-array-indices"></a>Maskowanie indeksów tablicy
 
@@ -356,7 +356,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Inną techniką, która może służyć do łagodzenia luk w zabezpieczeniach kanału po stronie wykonywania, jest usunięcie poufnych informacji z pamięci. Deweloperzy oprogramowania mogą szukać możliwości refaktoryzacji aplikacji w taki sposób, że informacje poufne nie są dostępne podczas wykonywania spekulacyjnego. Można to osiągnąć przez refaktoryzację projektu aplikacji w celu odizolowania poufnych informacji w oddzielnych procesach. Na przykład aplikacja przeglądarki sieci Web może próbować izolować dane skojarzone z poszczególnymi źródłami sieci Web w osobnych procesach, co uniemożliwia jednemu procesowi dostęp do danych między źródłami za pośrednictwem wykonywania spekulacyjnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wskazówki dotyczące eliminowania luk w zabezpieczeniach w kanale po stronie wykonywania](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Łagodzenie luk w zabezpieczeniach sprzętu kanału po stronie wykonywania](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

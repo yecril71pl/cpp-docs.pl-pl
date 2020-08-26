@@ -13,24 +13,31 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215533"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841782"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;&gt;funkcje type_traits
 
-||||
-|-|-|-|
-|[is_assignable](#is_assignable)|[is_copy_assignable](#is_copy_assignable)|[is_copy_constructible](#is_copy_constructible)|
-|[is_default_constructible](#is_default_constructible)|[is_move_assignable](#is_move_assignable)|[is_move_constructible](#is_move_constructible)|
-|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_nothrow_swappable](#is_nothrow_swappable)|[is_nothrow_swappable_with](#is_nothrow_swappable_with)|
-|[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
-|[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
+[is_assignable](#is_assignable)\
+[is_copy_assignable](#is_copy_assignable)\
+[is_copy_constructible](#is_copy_constructible)\
+[is_default_constructible](#is_default_constructible)\
+[is_move_assignable](#is_move_assignable)\
+[is_move_constructible](#is_move_constructible)\
+[is_nothrow_move_assignable](#is_nothrow_move_assignable)\
+[is_nothrow_swappable](#is_nothrow_swappable)\
+[is_nothrow_swappable_with](#is_nothrow_swappable_with)\
+[is_swappable](#is_swappable)\
+[is_swappable_with](#is_swappable_with)\
+[is_trivially_copy_assignable](#is_trivially_copy_assignable)\
+[is_trivially_move_assignable](#is_trivially_move_assignable)\
+[is_trivially_move_constructible](#is_trivially_move_constructible)
 
-## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
+## <a name="is_assignable"></a><a name="is_assignable"></a> is_assignable
 
 Testuje, czy wartość typu *from* może być przypisana do typu *do* .
 
@@ -51,7 +58,7 @@ Typ obiektu, który zawiera wartość.
 
 Wyrażenie nieoceniane `declval<To>() = declval<From>()` musi być poprawnie sformułowane. Oba elementy *od* i *do* muszą być pełnymi typami **`void`** lub tablicami nieznanego powiązania.
 
-## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
+## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
 Testuje, czy typ ma być kopiowany podczas przypisywania.
 
@@ -69,7 +76,7 @@ Typ do zapytania.
 
 Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma operator przypisania kopii, w przeciwnym razie ma wartość false. Równoważne is_assignable \<Ty&, const Ty&> .
 
-## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
+## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a> is_copy_constructible
 
 Testuje, czy typ ma Konstruktor kopiujący.
 
@@ -121,7 +128,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a><a name="is_default_constructible"></a>is_default_constructible
+## <a name="is_default_constructible"></a><a name="is_default_constructible"></a> is_default_constructible
 
 Testuje, czy typ ma konstruktora domyślnego.
 
@@ -173,7 +180,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a><a name="is_move_assignable"></a>is_move_assignable
+## <a name="is_move_assignable"></a><a name="is_move_assignable"></a> is_move_assignable
 
 Testuje, czy można przenieść typ.
 
@@ -191,7 +198,7 @@ Typ do zapytania.
 
 Typ jest przesuwany do przypisania, jeśli odwołanie rvalue do typu może zostać przypisane do odwołania do typu. Predykat typu jest równoważny z `is_assignable<T&, T&&>` . Przenieś typy z możliwością przypisania zawierają typy skalarne i typy klas, które mają zdefiniowane przez użytkownika operatory przypisania przenoszenia.
 
-## <a name="is_move_constructible"></a><a name="is_move_constructible"></a>is_move_constructible
+## <a name="is_move_constructible"></a><a name="is_move_constructible"></a> is_move_constructible
 
 Testuje, czy typ ma Konstruktor przenoszenia.
 
@@ -209,7 +216,7 @@ Typ, który ma zostać obliczony
 
 Predykat typu, którego wynikiem jest wartość true, jeśli typ *T* może być skonstruowany przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>` .
 
-## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
+## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
 Testuje, czy typ ma **`nothrow`** operator przypisania przenoszenia.
 
@@ -227,31 +234,31 @@ Typ do zapytania.
 
 Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma operator przypisania operacji przenoszenia nothrow, w przeciwnym razie ma wartość false.
 
-## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a> is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a> is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a><a name="is_swappable"></a>is_swappable
+## <a name="is_swappable"></a><a name="is_swappable"></a> is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a><a name="is_swappable_with"></a>is_swappable_with
+## <a name="is_swappable_with"></a><a name="is_swappable_with"></a> is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
+## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable
 
 Testuje, czy typ ma operator przypisania prostego kopiowania.
 
@@ -271,7 +278,7 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest klasą, któr
 
 Konstruktor przypisania dla klasy *t* jest uproszczony, jeśli jest niejawnie określony, Klasa *t* nie ma żadnych funkcji wirtualnych, Klasa *t* nie ma żadnych wirtualnych podstaw, klasy wszystkich niestatycznych elementów członkowskich danych typu klasy mają proste operatory przypisania, a klasy wszystkich niestatycznych elementów członkowskich danych typu Array klasy mają proste operatory przypisania.
 
-## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
+## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
 Testuje, czy typ ma operator przypisania prostego przenoszenia.
 
@@ -301,7 +308,7 @@ klasy wszystkich niestatycznych elementów członkowskich danych typu klasy maj�
 
 klasy wszystkich niestatycznych składowych danych typu Array klasy mają operatory przypisania prostego przenoszenia
 
-## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
+## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible
 
 Testuje, czy typ ma Konstruktor prostego przenoszenia.
 
@@ -337,6 +344,6 @@ klasy wszystkich niestatycznych składowych danych typu klasy mają konstruktor�
 
 klasy wszystkich niestatycznych składowych danych typu Array klasy mają konstruktorów prostego przenoszenia
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

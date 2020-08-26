@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841886"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Dołącz nagłówek \<system_error >, aby zdefiniować klasę wyjątku `system_error` i powiązane szablony służące do przetwarzania błędów systemu niskiego poziomu.
+Dołącz nagłówek, \<system_error> Aby zdefiniować klasę wyjątku `system_error` i powiązane szablony służące do przetwarzania błędów systemu niskiego poziomu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<system_error >
+**Nagłówek:**\<system_error>
 
 **Przestrzeń nazw:** std
 
@@ -28,38 +28,38 @@ Dołącz nagłówek \<system_error >, aby zdefiniować klasę wyjątku `system_e
 
 ### <a name="objects"></a>Obiekty
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Przedstawia kategorię błędów ogólnych.|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
 |[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|Reprezentuje kategorię błędów spowodowanych przepełnieniem systemu niskiego poziomu.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Tworzy `error_code` obiektu.|
-|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Tworzy `error_condition` obiektu.|
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Tworzy obiekt `error_code`.|
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Tworzy obiekt `error_condition`.|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.|
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.|
-|[< operatora](../standard-library/system-error-operators.md#op_lt)|Sprawdza, czy obiekt jest mniejszy niż obiekt przekazany do porównania.|
-|[< operatora <](../standard-library/system-error-operators.md#op_ostream)||
+|[operator = =](../standard-library/system-error-operators.md#op_eq_eq)|Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.|
+|[operator! =](../standard-library/system-error-operators.md#op_neq)|Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.|
+|[<operatora ](../standard-library/system-error-operators.md#op_lt)|Sprawdza, czy obiekt jest mniejszy niż obiekt przekazany do porównania.|
+|[<<operatora ](../standard-library/system-error-operators.md#op_ostream)||
 
 ### <a name="enums"></a>Wyliczenia
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[ERRC —](../standard-library/system-error-enums.md#errc)|Zawiera nazwy symboliczne dla wszystkich makr kodu błędu zdefiniowanych przez POSIX w `<errno.h>`.|
+|[ERRC —](../standard-library/system-error-enums.md#errc)|Zawiera nazwy symboliczne dla wszystkich makr kodu błędu zdefiniowanych przez POSIX w `<errno.h>` .|
 
 ### <a name="classes-and-structs"></a>Klasy i struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|Reprezentuje abstrakcyjną, popularną bazę dla obiektów, która opisuje kategorię kodów błędów.|
 |[error_code](../standard-library/error-code-class.md)|Reprezentuje błędy systemu niskiego poziomu, które są specyficzne dla implementacji.|
@@ -69,6 +69,6 @@ Dołącz nagłówek \<system_error >, aby zdefiniować klasę wyjątku `system_e
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Reprezentuje predykat typu, który testuje [error_condition Wyliczenie klas](../standard-library/error-condition-class.md) .|
 |[system_error](../standard-library/system-error-class.md)|Reprezentuje klasę bazową dla wszystkich wyjątków zgłoszonych w celu zgłaszania przepełnienia systemu niskiego poziomu.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1527672bd51682bf32c82601ff54a94ea4154a0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217691"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841912"
 ---
 # <a name="ltlimitsgt"></a>&lt;ograniczeń&gt;
 
@@ -32,18 +32,18 @@ Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów 
 
 ### <a name="enumerations"></a>Wyliczenia
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Wyliczenie opisuje różne metody, które można wybrać do reprezentowania nieznormalizowanej wartości zmiennoprzecinkowej — jeden za mały, aby reprezentować jako znormalizowaną wartość:|
 |[float_round_style](../standard-library/limits-enums.md#float_round_style)|Wyliczenie opisuje różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Klasa numeric_limits](../standard-library/numeric-limits-class.md)|Szablon klasy opisuje arytmetyczne właściwości wbudowanych typów liczbowych.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

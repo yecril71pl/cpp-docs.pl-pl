@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; ostream'
+title: '&lt;&gt;funkcje ostream'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::swap
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842640"
 ---
-# <a name="ltostreamgt-functions"></a>&lt;funkcje&gt; ostream
+# <a name="ltostreamgt-functions"></a>&lt;&gt;funkcje ostream
 
-Są to funkcje szablonu globalnego zdefiniowane w &lt;ostream&gt;. W przypadku funkcji Członkowskich zapoznaj się z dokumentacją [klasy basic_ostream](basic-ostream-class.md) .
+Są to funkcje szablonu globalnego zdefiniowane w &lt; ostream &gt; . W przypadku funkcji Członkowskich zapoznaj się z dokumentacją [klasy basic_ostream](basic-ostream-class.md) .
 
-||||
-|-|-|-|
-|[endl](#endl)|[celów](#ends)|[płukan](#flush)|
-|[wymiany](#swap)|
+[endl](#endl)\
+[celów](#ends)\
+[płukan](#flush)\
+[wymiany](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -46,10 +46,10 @@ Typ elementu.
 *Ostr*\
 Obiekt typu **basic_ostream**.
 
-\ *TR*
+*Zdawczy*\
 Cechy znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt typu **basic_ostream**.
 
@@ -93,10 +93,10 @@ Typ elementu.
 *Ostr*\
 Obiekt typu `basic_ostream`.
 
-\ *TR*
+*Zdawczy*\
 Cechy znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt typu `basic_ostream`.
 
@@ -142,10 +142,10 @@ Typ elementu.
 *Ostr*\
 Obiekt typu `basic_ostream`.
 
-\ *TR*
+*Zdawczy*\
 Cechy znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt typu `basic_ostream`.
 
@@ -187,19 +187,19 @@ void swap(
 *Elem*\
 Typ elementu.
 
-\ *TR*
+*Zdawczy*\
 Cechy znaków.
 
-\ *lewo*
-Odwołanie lvalue do obiektu `basic_ostream`.
+*lewym*\
+Odwołanie lvalue do `basic_ostream` obiektu.
 
-*prawa*\
-Odwołanie lvalue do obiektu `basic_ostream`.
+*Kliknij*\
+Odwołanie lvalue do `basic_ostream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `swap` wykonuje `left.swap(right)`.
+Funkcja szablonu jest `swap` wykonywana `left.swap(right)` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<ostream >](../standard-library/ostream.md)
+[\<ostream>](../standard-library/ostream.md)

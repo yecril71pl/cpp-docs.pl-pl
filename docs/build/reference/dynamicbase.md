@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: 54644d9df546299be3b688f9745a121592938df6
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 5451e3d16883eef225aebc3c420e6c0700947ad6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373622"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842588"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
@@ -32,4 +32,4 @@ Domyślnie **/DYNAMICBASE** jest włączona. Aby wyłączyć tę opcję, użyj *
 ## <a name="see-also"></a>Zobacz też
 
 - [Opcje polecenia EDITBIN](editbin-options.md)
-- [Ochrona przed oprogramowaniem ISV systemu Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
+- [Ochrona przed oprogramowaniem ISV systemu Windows](/previous-versions/bb430720(v=msdn.10))

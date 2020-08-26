@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213830"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842770"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -70,18 +70,16 @@ class NN : public b
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , **interfejs**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|`coclass`(w przypadku zastosowania do klasy lub struktury)|
+|**Wymagane atrybuty**|`coclass` (w przypadku zastosowania do klasy lub struktury)|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

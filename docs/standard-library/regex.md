@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 9d7f84ac47979cf398ae1f94e4d01ba0915da299
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217535"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841483"
 ---
 # <a name="ltregexgt"></a>&lt;wyrażeń&gt;
 
@@ -52,7 +52,7 @@ Aby zmodyfikować szczegóły dotyczące gramatyki wyrażeń regularnych, należ
 
 ### <a name="type-definitions"></a>Definicje typu
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[cmatch —](../standard-library/regex-typedefs.md#cmatch)|Definicja typu dla **`char`** `match_results` .|
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definicja typu dla **`char`** `regex_iterator` .|
@@ -73,7 +73,7 @@ Aby zmodyfikować szczegóły dotyczące gramatyki wyrażeń regularnych, należ
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Definicja typu dla `wstring` `regex_token_iterator` .|
 |[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Definicja typu dla `wstring` `sub_match` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
 |Funkcja|Opis|
 |-|-|
@@ -88,20 +88,20 @@ Aby zmodyfikować szczegóły dotyczące gramatyki wyrażeń regularnych, należ
 |-|-|
 |[operator = =](../standard-library/regex-operators.md#op_eq_eq)|Porównanie różnych obiektów, równe.|
 |[operator! =](../standard-library/regex-operators.md#op_neq)|Porównanie różnych obiektów, a nie równa się.|
-|[<operatora](../standard-library/regex-operators.md#op_lt)|Porównanie różnych obiektów, mniejsze niż.|
-|[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, mniejszej lub równej.|
-|[>operatora](../standard-library/regex-operators.md#op_gt)|Porównanie różnych obiektów, większe niż.|
+|[<operatora ](../standard-library/regex-operators.md#op_lt)|Porównanie różnych obiektów, mniejsze niż.|
+|[zakład\<=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, mniejszej lub równej.|
+|[>operatora ](../standard-library/regex-operators.md#op_gt)|Porównanie różnych obiektów, większe niż.|
 |[>operatora =](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, większe niż lub równe.|
-|[<<operatora](../standard-library/regex-operators.md#op_lt_lt)|Wstawia `sub_match` w strumieniu.|
+|[<<operatora ](../standard-library/regex-operators.md#op_lt_lt)|Wstawia `sub_match` w strumieniu.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)\
 [Klasa regex_constants](../standard-library/regex-constants-class.md)\
 [Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<regex>obowiązki](../standard-library/regex-functions.md)\
+[\<regex> obowiązki](../standard-library/regex-functions.md)\
 [Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex>zainteresowanych](../standard-library/regex-operators.md)\
+[\<regex> zainteresowanych](../standard-library/regex-operators.md)\
 [Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex>definicje typów](../standard-library/regex-typedefs.md)
+[\<regex> definicje typów](../standard-library/regex-typedefs.md)

@@ -1,19 +1,19 @@
 ---
-title: Deklarator odwołania rvalue:&amp;&amp;
+title: 'Deklarator odwołania rvalue: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842042"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania rvalue: &amp;&amp;
 
 Przechowuje odwołanie do wyrażenia rvalue.
 
@@ -391,13 +391,12 @@ Ta wersja `print_type_and_value` funkcji następnie przekazuje jej parametr do o
 
 Poniższa tabela podsumowuje reguły zwijania odwołań dla typu argumentu szablonu:
 
-|||
-|-|-|
-|Typ rozwinięty|Typ zwinięty|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| Typ rozwinięty | Typ zwinięty |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 Potrącenie argumentu szablonu jest ważnym elementem implementującym doskonałe przekazywanie. Sekcja doskonałe przekazywanie, która jest przedstawiona wcześniej w tym temacie, opisuje doskonałe przekazywanie bardziej szczegółowo.
 
@@ -405,7 +404,7 @@ Potrącenie argumentu szablonu jest ważnym elementem implementującym doskonał
 
 Rvalue odwołuje się do odróżnia lvalues od rvalues. Mogą one pomóc zwiększyć wydajność aplikacji, eliminując konieczność niepotrzebnych alokacji pamięci i operacji kopiowania. Umożliwiają one także pisanie jednej wersji funkcji, która akceptuje dowolne argumenty i przekazuje je do innej funkcji, tak jakby inna funkcja została wywołana bezpośrednio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Deklarator odwołania do wartości L: &](../cpp/lvalue-reference-declarator-amp.md)<br/>

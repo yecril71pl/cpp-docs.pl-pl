@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222553"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842432"
 ---
 # <a name="condition_variable-class"></a>condition_variable — Klasa
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiekt.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[native_handle](#native_handle)|Zwraca typ specyficzny dla implementacji reprezentujący dojście condition_variable.|
 |[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiekt.|
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.|
 |[wait_until](#wait_until)|Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 Konstruuje `condition_variable` obiekt.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Jeśli nie jest dostępna wystarczająca ilość pamięci, Konstruktor zgłasza obiekt [system_error](../standard-library/system-error-class.md) , który ma `not_enough_memory` Kod błędu. Jeśli nie można utworzyć obiektu, ponieważ jakiś inny zasób nie jest dostępny, Konstruktor zgłasza `system_error` obiekt, który ma `resource_unavailable_try_again` Kod błędu.
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Zwraca typ specyficzny dla implementacji, który reprezentuje dojście condition_variable.
 
@@ -78,9 +78,9 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type`jest definiowana jako wskaźnik do środowisko uruchomieniowe współbieżności wewnętrznych struktur danych.
+`native_handle_type` jest definiowana jako wskaźnik do środowisko uruchomieniowe współbieżności wewnętrznych struktur danych.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiekt.
 
@@ -88,7 +88,7 @@ Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiekt.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiekt.
 
@@ -96,7 +96,7 @@ Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiekt.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Blokuje wątek.
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.
 
@@ -234,7 +234,7 @@ return true;
 
 Trzecia i czwarta Metoda używa wskaźnika do obiektu typu `xtime` , aby zastąpić `chrono::time_point` obiekt. `xtime`Obiekt Określa maksymalną ilość czasu oczekiwania na sygnał.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

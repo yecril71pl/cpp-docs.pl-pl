@@ -13,12 +13,12 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: 3b8baca48b7b7a32b88079a1668aecdd1c9aca88
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841938"
 ---
 # <a name="optional-class"></a>Klasa opcjonalna
 
@@ -26,7 +26,7 @@ Szablon klasy `optional<T>` opisuje obiekt, który może lub nie może zawierać
 
 Gdy wystąpienie `optional<T>` zawiera wartość, zawartej wartości jest przypisywany w ramach magazynu `optional` obiektu, w regionie odpowiednio wyrównanym do typu `T` . Gdy `optional<T>` jest konwertowany na **`bool`** , wynikiem jest **`true`** Jeśli obiekt zawiera wartość; w przeciwnym razie jest to **`false`** .
 
-Typ zawartego obiektu `T` nie może być [in_place_t](in-place-t-struct.md) ani [nullopt_t](nullopt-t-structure.md). `T`musi być *zniszczalnych*, czyli destruktor musi odwoływać wszystkie posiadane zasoby i może zgłosić brak wyjątków.
+Typ zawartego obiektu `T` nie może być [in_place_t](in-place-t-struct.md) ani [nullopt_t](nullopt-t-structure.md). `T` musi być *zniszczalnych*, czyli destruktor musi odwoływać wszystkie posiadane zasoby i może zgłosić brak wyjątków.
 
 `optional`Klasa jest nowa w języku c++ 17.
 
@@ -46,7 +46,7 @@ template<class T> optional(T) -> optional<T>;
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 | **Konstruktory i destruktor** | |
 |[obowiązkowe](#optional) | Konstruuje obiekt typu `optional` . |
@@ -66,13 +66,13 @@ template<class T> optional(T) -> optional<T>;
 | **Modyfikatory** | |
 | [zresetować](#reset) | Resetuje `optional` przez zniszczenie dowolnej zawartej wartości. |
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 ```cpp
 constexpr bool has_value() const noexcept;
 ```
 
-## <a name="optional-constructor"></a><a name="optional"></a>Konstruktor opcjonalny
+## <a name="optional-constructor"></a><a name="optional"></a> Konstruktor opcjonalny
 
 Konstruuje obiekt typu `optional` .
 
@@ -112,23 +112,23 @@ Lista argumentów do konstruowania zawartej wartości z.
 ### <a name="remarks"></a>Uwagi
 
 `constexpr optional() noexcept;`
-`constexpr optional(nullopt_t nullopt) noexcept;`Konstruktory te konstruują `optional` , która nie zawiera wartości.
+`constexpr optional(nullopt_t nullopt) noexcept;` Konstruktory te konstruują `optional` , która nie zawiera wartości.
 
-`constexpr optional(const optional& rhs);`Konstruktor kopiujący inicjuje zawartej wartości z wartości zawartej w argumencie. Jest ono zdefiniowane jako **usunięte** , chyba że `is_copy_constructible_v<T>` ma wartość true i jest proste, jeśli `is_trivially_copy_constructible_v<T>` ma wartość true.
+`constexpr optional(const optional& rhs);` Konstruktor kopiujący inicjuje zawartej wartości z wartości zawartej w argumencie. Jest ono zdefiniowane jako **usunięte** , chyba że `is_copy_constructible_v<T>` ma wartość true i jest proste, jeśli `is_trivially_copy_constructible_v<T>` ma wartość true.
 
-`constexpr optional(optional&& rhs) noexcept;`Konstruktor przenoszący inicjuje zawartą wartość poprzez przechodzenie z zawartej wartości argumentu. Nie uczestniczy w rozpoznawaniu przeciążenia `is_move_constructible_v<T>` , chyba że ma wartość true i jest proste, jeśli `is_trivially_move_constructible_v<T>` ma wartość true.
+`constexpr optional(optional&& rhs) noexcept;` Konstruktor przenoszący inicjuje zawartą wartość poprzez przechodzenie z zawartej wartości argumentu. Nie uczestniczy w rozpoznawaniu przeciążenia `is_move_constructible_v<T>` , chyba że ma wartość true i jest proste, jeśli `is_trivially_move_constructible_v<T>` ma wartość true.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);`Bezpośrednie inicjowanie zawartej wartości tak, jakby przy użyciu argumentów `std::forward<Args>(args)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia, chyba że `is_constructible_v<T, Args...>` ma wartość true.
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Bezpośrednie inicjowanie zawartej wartości tak, jakby przy użyciu argumentów `std::forward<Args>(args)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia, chyba że `is_constructible_v<T, Args...>` ma wartość true.
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);`Bezpośrednie inicjowanie zawartej wartości tak, jakby przy użyciu argumentów `i_list, std::forward<Args>(args)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia, chyba że `is_constructible_v<T, initializer_list<U>&, Args&&...>` ma wartość true.
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Bezpośrednie inicjowanie zawartej wartości tak, jakby przy użyciu argumentów `i_list, std::forward<Args>(args)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia, chyba że `is_constructible_v<T, initializer_list<U>&, Args&&...>` ma wartość true.
 
-`template <class U = T> explicit constexpr optional(U&& rhs);`Bezpośrednie inicjowanie zawartej wartości w przypadku użycia `std::forward<U>(v)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, U&&>` , chyba że jest spełniony i `is_same_v<remove_cvref_t<U>, in_place_t>` i `is_same_v<remove_cvref_t<U>, optional>` ma wartość false.
+`template <class U = T> explicit constexpr optional(U&& rhs);` Bezpośrednie inicjowanie zawartej wartości w przypadku użycia `std::forward<U>(v)` . Ten konstruktor jest **`constexpr`** , jeśli `T` używany jest Konstruktor **`constexpr`** . Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, U&&>` , chyba że jest spełniony i `is_same_v<remove_cvref_t<U>, in_place_t>` i `is_same_v<remove_cvref_t<U>, optional>` ma wartość false.
 
-`template <class U> explicit optional(const optional<U>& rhs);`Jeśli *RHS* zawiera wartość, bezpośrednie inicjuje zawartej wartości z zawartej wartości argumentu. Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, const U&>` , chyba że ma wartość true, i,,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` i `is_convertible_v<const optional<U>&&, T>` to wszystkie wartości false.
+`template <class U> explicit optional(const optional<U>& rhs);` Jeśli *RHS* zawiera wartość, bezpośrednie inicjuje zawartej wartości z zawartej wartości argumentu. Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, const U&>` , chyba że ma wartość true, i,,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` i `is_convertible_v<const optional<U>&&, T>` to wszystkie wartości false.
 
-`template <class U> explicit optional(optional<U>&& rhs);`Jeśli *RHS* zawiera wartość, bezpośrednie inicjuje wartość zawartej w, jeśli jest używana `std::move(*rhs)` . Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, U&&>` , chyba że ma wartość true, i,,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` i `is_convertible_v<const optional<U>&&, T>` to wszystkie wartości false.
+`template <class U> explicit optional(optional<U>&& rhs);` Jeśli *RHS* zawiera wartość, bezpośrednie inicjuje wartość zawartej w, jeśli jest używana `std::move(*rhs)` . Nie uczestniczy w rozpoznawaniu przeciążenia `is_constructible_v<T, U&&>` , chyba że ma wartość true, i,,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` i `is_convertible_v<const optional<U>&&, T>` to wszystkie wartości false.
 
-## <a name="optional-destructor"></a><a name="optional-destructor"></a>~ opcjonalny destruktor
+## <a name="optional-destructor"></a><a name="optional-destructor"></a> ~ opcjonalny destruktor
 
 Niszczy jakąkolwiek niezniszczalnychą wartość, jeśli jest obecna, przez wywołanie jej destruktora.
 
@@ -140,7 +140,7 @@ Niszczy jakąkolwiek niezniszczalnychą wartość, jeśli jest obecna, przez wyw
 
 Jeśli `T` jest bardzo zniszczalnych, `optional<T>` to również zniszczalnych.
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Zamienia zawartej wartości elementu `optional` z kopią lub przenosi z innej `optional` zawartej wartości.
 
@@ -165,7 +165,7 @@ template <class U, class... Args>
 T& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="operator-"></a><a name="op_as"></a>operator — >
+## <a name="operator-"></a><a name="op_as"></a> operator — >
 
 Odwołuje się do zawartej wartości `optional` obiektu.
 
@@ -174,7 +174,7 @@ constexpr const T* operator->() const;
 constexpr T* operator->();
 ```
 
-## <a name="operator"></a><a name="op_mem"></a>zakład
+## <a name="operator"></a><a name="op_mem"></a> zakład
 
 Odwołuje się do zawartej wartości `optional` obiektu.
 
@@ -185,7 +185,7 @@ constexpr T&& operator*() &&;
 constexpr const T&& operator*() const&&;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>wartość logiczna operatora
+## <a name="operator-bool"></a><a name="op_bool"></a> wartość logiczna operatora
 
 Informuje, czy `optional` obiekt ma zawartą wartość.
 
@@ -193,7 +193,7 @@ Informuje, czy `optional` obiekt ma zawartą wartość.
 constexpr explicit operator bool() const noexcept;
 ```
 
-## <a name="reset"></a><a name="reset"></a>zresetować
+## <a name="reset"></a><a name="reset"></a> zresetować
 
 Efektywnie wywołuje destruktor zawartego obiektu, jeśli istnieje, i ustawia go na stanie niezainicjowanym.
 
@@ -201,14 +201,14 @@ Efektywnie wywołuje destruktor zawartego obiektu, jeśli istnieje, i ustawia go
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 ```cpp
 template<class T>
 void swap(optional<T>&, optional<T>&) noexcept;
 ```
 
-## <a name="value"></a><a name="value"></a>wartościami
+## <a name="value"></a><a name="value"></a> wartościami
 
 ```cpp
 constexpr const T& value() const&;
@@ -217,7 +217,7 @@ constexpr T&& value() &&;
 constexpr const T&& value() const&&;
 ```
 
-## <a name="value_or"></a><a name="value_or"></a>value_or
+## <a name="value_or"></a><a name="value_or"></a> value_or
 
 ```cpp
 template <class U>
@@ -226,6 +226,6 @@ template <class U>
     constexpr T value_or(U&&) &&;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<optional>](optional.md)

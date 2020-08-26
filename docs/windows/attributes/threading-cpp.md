@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193071"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840820"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,15 +28,15 @@ Określa model wątkowości dla obiektu COM.
 *wzorów*<br/>
 Obowiązkowe Jeden z następujących modeli wątkowości:
 
-- `apartment`(wątkowość apartamentu)
+- `apartment` (wątkowość apartamentu)
 
-- `neutral`(Składniki .NET Framework bez interfejsu użytkownika)
+- `neutral` (Składniki .NET Framework bez interfejsu użytkownika)
 
-- `single`(prosta wątkowość)
+- `single` (prosta wątkowość)
 
-- `free`(bezpłatna wątkowość)
+- `free` (bezpłatna wątkowość)
 
-- `both`(Apartment i Free Threading)
+- `both` (Apartment i Free Threading)
 
 Wartość domyślna to `apartment`.
 
@@ -54,9 +54,7 @@ Zapoznaj się z [licencjonowanym](licensed.md) przykładem użycia **wątku**.
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
@@ -65,7 +63,7 @@ Zapoznaj się z [licencjonowanym](licensed.md) przykładem użycia **wątku**.
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>

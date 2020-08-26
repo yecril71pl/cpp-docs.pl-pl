@@ -1,17 +1,17 @@
 ---
-title: defaultbind (C++ atrybut com)
+title: defaultbind (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: 72d1f5a5720466bf7abf08aaad4acdbab05c408f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36225dae3dffbd57d291989c56ac2995278a1bee
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167163"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842406"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -33,14 +33,12 @@ Zapoznaj się z przykładem dla [powiązania](bindable.md) z przykładem użycia
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
@@ -48,7 +46,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)<br/>
+[Atrybuty elementu członkowskiego danych](data-member-attributes.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
 [requestedit](requestedit.md)

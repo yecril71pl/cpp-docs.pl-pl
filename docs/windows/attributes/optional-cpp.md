@@ -1,17 +1,17 @@
 ---
-title: Optional (C++ atrybut com)
+title: Optional (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214680"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842172"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,7 +25,7 @@ Określa opcjonalny parametr funkcji składowej.
 
 ## <a name="remarks"></a>Uwagi
 
-**Opcjonalny** C++ atrybut ma takie same funkcje jak [opcjonalny](/windows/win32/Midl/optional) atrybut MIDL.
+**Opcjonalny** atrybut C++ ma taką samą funkcjonalność jak [opcjonalny](/windows/win32/Midl/optional) atrybut MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -46,14 +46,12 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 

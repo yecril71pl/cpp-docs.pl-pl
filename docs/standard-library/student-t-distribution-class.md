@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202015"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840963"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution — Klasa
 
@@ -71,10 +71,8 @@ Typ wyniku zmiennoprzecinkowego, wartość domyślna to **`double`** . Aby zapoz
 
 Szablon klasy opisuje dystrybucję, która tworzy wartości typu całkowitego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem *t*-studenta. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 Funkcja Property `n()` zwraca wartość dla przechowywanego parametru dystrybucji `n` .
 
@@ -163,7 +161,7 @@ Distribution for 10 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a> student_t_distribution:: student_t_distribution
 
 Konstruuje dystrybucję.
 
@@ -188,7 +186,7 @@ Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `n` wartość prz
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a> student_t_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -217,6 +215,6 @@ Obiekt, który `param_type` ma zostać porównany.
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

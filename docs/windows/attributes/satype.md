@@ -1,21 +1,21 @@
 ---
-title: satype (C++ atrybut com)
+title: satype (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166279"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842783"
 ---
 # <a name="satype"></a>satype
 
-Określa typ danych struktury `SAFEARRAY`.
+Określa typ danych `SAFEARRAY` struktury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,25 +26,23 @@ Określa typ danych struktury `SAFEARRAY`.
 ### <a name="parameters"></a>Parametry
 
 *data_type*<br/>
-Typ danych dla `SAFEARRAY`ej struktury danych, która jest przesyłana jako parametr do metody interfejsu.
+Typ danych dla `SAFEARRAY` struktury danych, która jest przesyłana jako parametr do metody interfejsu.
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **satype** C++ określa typ danych `SAFEARRAY`.
+Atrybut **satype** C++ określa typ danych `SAFEARRAY` .
 
 > [!NOTE]
-> Poziom pośredni został porzucony ze wskaźnika `SAFEARRAY` w wygenerowanym pliku. idl, z poziomu tego, jak jest zadeklarowany w pliku. cpp.
+> Poziom pośredni został porzucony ze `SAFEARRAY` wskaźnika w wygenerowanym pliku. idl od sposobu zadeklarowania w pliku. cpp.
 
 ## <a name="example"></a>Przykład
 

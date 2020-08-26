@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268005"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841145"
 ---
 # <a name="signal-constants"></a>sygnał — Stałe
 
@@ -34,21 +34,21 @@ ms.locfileid: "62268005"
 
 ## <a name="remarks"></a>Uwagi
 
-`sig` Argument musi być w jednej ze stałych manifestu, wymienionych poniżej (zdefiniowana na sygnał. GODZ.).
+`sig`Argument musi być jednym z stałych manifestu wymienionych poniżej (zdefiniowane w sygnale). H).
 
-|||
+|Stała|Opis|
 |-|-|
-|SIGABRT|Nienormalne zakończenie. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
-|SIGABRT_COMPAT|Taka sama jak SIGABRT. Zgodność z innymi platformami.  |
-|SIGFPE|Błąd zmiennoprzecinkowy, takich jak przepełnienia, dzielenie przez zero lub nieprawidłowa operacja. Domyślna akcja kończy program wywołujący.  |
-|SIGILL|Niedozwolona instrukcja. Domyślna akcja kończy program wywołujący.  |
-|SIGINT|CTRL + C przerywa. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
-|SIGSEGV|Niedozwolony dostęp do magazynu. Domyślna akcja kończy program wywołujący.  |
-|SIGTERM|Zakończenie żądania wysłanego do programu. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
-|SIG_ERR|Typem zwracanym od sygnałów, co wskazuje na błąd wystąpił.  |
+|SIGABRT|Nietypowe zakończenie. Akcja domyślna kończy program wywołujący z kodem zakończenia 3.  |
+|SIGABRT_COMPAT|Analogicznie jak SIGABRT. W celu zapewnienia zgodności z innymi platformami.  |
+|SIGFPE|Błąd zmiennoprzecinkowy, taki jak Overflow, dzielenie przez zero lub Nieprawidłowa operacja. Akcja domyślna kończy program wywołujący.  |
+|SIGILL|Niedozwolona instrukcja. Akcja domyślna kończy program wywołujący.  |
+|SIGINT|CTRL + C przerwanie. Akcja domyślna kończy program wywołujący z kodem zakończenia 3.  |
+|SIGSEGV|Niedozwolony dostęp do magazynu. Akcja domyślna kończy program wywołujący.  |
+|SIGTERM|Żądanie zakończenia zostało wysłane do programu. Akcja domyślna kończy program wywołujący z kodem zakończenia 3.  |
+|SIG_ERR|Wystąpił zwracany typ z sygnału wskazującego na błąd.  |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[sygnał](../c-runtime-library/reference/signal.md)<br/>
+[nosić](../c-runtime-library/reference/raise.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

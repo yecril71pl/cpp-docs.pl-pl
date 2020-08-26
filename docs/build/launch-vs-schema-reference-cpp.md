@@ -3,12 +3,12 @@ title: launch.vs.jsodwołanie do schematu (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223957"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841990"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsodwołanie do schematu (C++)
 
@@ -16,9 +16,8 @@ Użyj *launch.vs.jsna* pliku, aby skonfigurować parametry debugowania. , Aby ut
 
 ## <a name="default-properties"></a>Właściwości domyślne
 
-||||
+|Właściwość|Typ|Opis|
 |-|-|-|
-|**Właściwość**|**Typ**|**Opis**|
 |`name`|ciąg|Określa nazwę wpisu na liście rozwijanej elementu docelowego debugowania.|
 |`type`|ciąg|Określa, czy projekt jest biblioteką DLL, czy exe (wartość domyślna to. exe)|
 |`project`|ciąg|Określa ścieżkę względną do pliku projektu.|
@@ -36,9 +35,8 @@ Użyj *launch.vs.jsna* pliku, aby skonfigurować parametry debugowania. , Aby ut
 
 ## <a name="c-linux-properties"></a>Właściwości języka C++ dla systemu Linux
 
-||||
+|Właściwość|Typ|Opis|
 |-|-|-|
-|**Właściwość**|**Typ**|**Opis**|
 |`program`|ciąg|Pełna ścieżka do pliku wykonywalnego programu na maszynie zdalnej. W przypadku korzystania z CMake, makro `${debugInfo.fullTargetPath}` może być używane jako wartość tego pola.|
 |`processId`|liczba całkowita|Opcjonalny identyfikator procesu, do którego ma zostać dołączony debuger.|
 |`sourceFileMap`|object|Opcjonalne mapowania plików źródłowych przenoszone do aparatu debugowania. Format: `{ "\<Compiler source location>": "\<Editor source location>" }` lub `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` . Przykład: `{ "/home/user/foo": "C:\\foo" }` lub `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Zobacz [Opcje mapy plików źródłowych](#source_file_map_options).|
@@ -63,21 +61,21 @@ Użyj *launch.vs.jsna* pliku, aby skonfigurować parametry debugowania. , Aby ut
 externalConsole|boolean|W przypadku wartości true konsola jest uruchamiana dla debugowanego obiektu. Jeśli **`false`** konsola nie zostanie uruchomiona. Wartość domyślna to **`false`** . Uwaga: Ta opcja jest ignorowana w niektórych przypadkach ze względów technicznych.|
 |`pipeTransport`|ciąg|Jeśli jest obecny, oznacza to, że debuger nawiązuje połączenie z komputerem zdalnym przy użyciu innego pliku wykonywalnego jako potoku przekazującego standardowe dane wejściowe/wyjściowe między programem Visual Studio i debugerem z włączoną funkcją MI (na przykład GDB). Dozwolone wartości: co najmniej jedna [Opcja transportu potoku](#pipe_transport_options).|
 
-## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Uruchom polecenia Instalatora
+## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a> Uruchom polecenia Instalatora
 
 Używane z `setupCommands` właściwością:
 
-||||
+|Właściwość|Typ|Opis|
 |-|-|-|
 |`text`|ciąg|Polecenie debugera do wykonania.|
 |`description`|ciąg|Opcjonalny opis polecenia.|
 |`ignoreFailures`|boolean|W przypadku wartości true błędy polecenia powinny być ignorowane. Wartość domyślna to **`false`** .|
 
-## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Opcje transportu potoku
+## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a> Opcje transportu potoku
 
 Używane z `pipeTransport` właściwością:
 
-||||
+|Właściwość|Typ|Opis|
 |-|-|-|
 |`pipeCwd`|ciąg|W pełni kwalifikowana ścieżka do katalogu roboczego dla programu potoku.|
 |`pipeProgram`|ciąg|W pełni kwalifikowana potoku polecenie do wykonania.|
@@ -86,11 +84,11 @@ Używane z `pipeTransport` właściwością:
 |`pipeEnv`|object|Zmienne środowiskowe przechodzą do programu potoku.|
 |`quoteArgs`|boolean|Jeśli poszczególne argumenty zawierają znaki (takie jak spacje lub tabulatory), powinny być ujęte w cudzysłów? Jeśli **`false`** polecenie debugera nie zostanie już automatycznie ujęte w cudzysłów. Wartość domyślna to **`true`** .|
 
-## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Opcje mapy plików źródłowych
+## <a name="source-file-map-options"></a><a name="source_file_map_options"></a> Opcje mapy plików źródłowych
 
 Użyj z `sourceFileMap` właściwością:
 
-||||
+|Właściwość|Typ|Opis|
 |-|-|-|
 |`editorPath`|ciąg|Lokalizacja kodu źródłowego dla edytora, który ma zostać zlokalizowany.|
 |`useForBreakpoints`|boolean|Podczas ustawiania punktów przerwania należy użyć tego mapowania źródła. Jeśli **`false`** do ustawiania punktów przerwania jest używana tylko nazwa pliku i numer wiersza. Jeśli **`true`** , punkty przerwania zostaną ustawione z pełną ścieżką do pliku i numerem wiersza tylko wtedy, gdy używane jest mapowanie źródłowe. W przeciwnym razie tylko nazwa pliku i numer wiersza będą używane podczas ustawiania punktów przerwania. Wartość domyślna to **`true`** .|

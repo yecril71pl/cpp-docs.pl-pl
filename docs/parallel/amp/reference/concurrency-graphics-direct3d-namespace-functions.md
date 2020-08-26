@@ -6,23 +6,34 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 330c1aa94b1d122901fc23576686032400249d31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66db1d348c6c58a9226322b51662ef7a4ef75b3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376391"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841301"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d, funkcje przestrzeni nazw
 
-||||
-|-|-|-|
-|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
-|[make_texture](#make_texture)|[msad4](#msad4)|
+:::row:::
+   :::column span="":::
+      [`get_sampler`](#get_sampler)\
+      [`get_texture`](#get_texture)
+   :::column-end:::
+   :::column span="":::
+      [`make_sampler`](#make_sampler)
+   :::column-end:::
+   :::column span="":::
+      [`make_texture`](#make_texture)
+   :::column-end:::
+   :::column span="":::
+      [`msad4`](#msad4)
+   :::column-end:::
+:::row-end:::
 
-## <a name="get_sampler"></a><a name="get_sampler"></a>get_sampler
+## <a name="get_sampler"></a><a name="get_sampler"></a> get_sampler
 
-Pobierz interfejs stanu próbnika D3D w danym widoku akceleratora, który reprezentuje określony obiekt próbnika.
+Pobierz interfejs stanu próbkowania D3D w danym widoku akceleratora, który reprezentuje określony obiekt próbnika.
 
 ```cpp
 IUnknown* get_sampler(
@@ -40,11 +51,11 @@ Obiekt próbnika, dla którego tworzony jest podstawowy interfejs stanu próbnik
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik interfejsu IUnknown odpowiadający stanowi próbnika D3D reprezentującego danego próbnika.
+Wskaźnik interfejsu IUnknown odpowiadający stanowi próbnika D3D, który reprezentuje dany próbnik.
 
-## <a name="get_texture"></a><a name="get_texture"></a>get_texture
+## <a name="get_texture"></a><a name="get_texture"></a> get_texture
 
-Pobiera interfejs tekstury Direct3D leżący u podstaw określonego obiektu [tekstury.](texture-class.md)
+Pobiera interfejs tekstury Direct3D stanowiący podstawę określonego obiektu [tekstury](texture-class.md) .
 
 ```cpp
 template<
@@ -78,15 +89,15 @@ Typ elementu tekstury.
 Ranga tekstury.
 
 *_Texture*<br/>
-Widok tekstury lub tekstury skojarzony z accelerator_view dla którego zwracany jest podstawowy interfejs tekstury Direct3D.
+Widok tekstury lub tekstury skojarzony z accelerator_view, dla którego zwracany jest źródłowy interfejs tekstury Direct3D.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik interfejsu IUnknown odpowiadający teksturze Direct3D leżącej u podstaw tekstury.
+Wskaźnik interfejsu IUnknown odpowiadający teksturze Direct3D bazowej tekstury.
 
-## <a name="make_sampler"></a><a name="make_sampler"></a>make_sampler
+## <a name="make_sampler"></a><a name="make_sampler"></a> make_sampler
 
-Utwórz próbnik ze wskaźnika stanu próbnika D3D.
+Utwórz próbkę ze wskaźnika interfejsu stanu elementu próbkowania D3D.
 
 ```cpp
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
@@ -95,13 +106,13 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="parameters"></a>Parametry
 
 *_D3D_sampler*<br/>
-IUnknown wskaźnik interfejsu stanu próbnika D3D, aby utworzyć próbnik z.
+Wskaźnik interfejsu IUnknown stanu próbnika D3D, z którego ma zostać utworzony próbnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Próbnik reprezentuje podany stan próbnika D3D.
 
-## <a name="make_texture"></a><a name="make_texture"></a>make_texture
+## <a name="make_texture"></a><a name="make_texture"></a> make_texture
 
 Tworzy obiekt [tekstury](texture-class.md) przy użyciu określonych parametrów.
 
@@ -119,7 +130,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="parameters"></a>Parametry
 
 *value_type*<br/>
-Typ elementów w teksturze.
+Typ elementów w tekstury.
 
 *_Rank*<br/>
 Ranga tekstury.
@@ -128,18 +139,18 @@ Ranga tekstury.
 Widok akceleratora D3D, na którym ma zostać utworzona tekstura.
 
 *_D3D_texture*<br/>
-IUnknown wskaźnik interfejsu tekstury D3D do tworzenia tekstury z.
+Wskaźnik interfejsu IUnknown tekstury D3D, z którego ma zostać utworzona tekstura.
 
 *_View_format*<br/>
-Format DXGI używany do widoków utworzonych z tej tekstury. Przekaż DXGI_FORMAT_UNKNOWN (domyślnie), aby wyprowadzić format z podstawowego formatu _D3D_texture i value_type tego szablonu. Podany format musi być zgodny z podstawowym formatem _D3D_texture.
+Format DXGI, który ma być używany dla widoków utworzonych na podstawie tej tekstury. Przekaż DXGI_FORMAT_UNKNOWN (wartość domyślna), aby utworzyć format z bazowego formatu _D3D_texture i value_type tego szablonu. Podany format musi być zgodny z źródłowym formatem _D3D_texture.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tekstura przy użyciu dostarczonej tekstury D3D.
+Tekstura przy użyciu podanej tekstury D3D.
 
-## <a name="msad4"></a><a name="msad4"></a>msad4
+## <a name="msad4"></a><a name="msad4"></a> msad4
 
-Porównuje 4-bajtową wartość referencyjną i 8-bajtową wartość źródłową i gromadzi wektor 4 sum. Każda suma odpowiada zamaskowanej sumie bezwzględnych różnic różnych linii trasowania bajtów między wartością odniesienia a wartością źródłową.
+Porównuje 4-bajtową wartość odniesienia i 8-bajtową wartość źródła i gromadzi wektor 4 sum. Każda suma odnosi się do zamaskowanej sumy bezwzględnych różnic różnych bajtów między wartością referencyjną a wartością źródłową.
 
 ```cpp
 inline uint4 msad4(
@@ -154,21 +165,21 @@ inline uint4 msad4(
 Tablica odwołań 4 bajtów w jednej wartości uint
 
 *_Source*<br/>
-Tablica źródłowsza 8 bajtów w wektorze dwóch wartości uint.
+Tablica źródłowa 8 bajtów w wektorze dwóch wartości uint.
 
 *_Accum*<br/>
-Wektor 4 wartości, które mają zostać dodane do zamaskowanych sum różnic bezwzględnych różnych linii trasowania bajtów między wartością odniesienia a wartością źródłową.
+Wektor 4 wartości, który ma zostać dodany do maskowanej sumy bezwzględnych różnic różnych bajtów między wartością referencyjną a wartością źródłową.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wektor 4 sum. Każda suma odpowiada zamaskowanej sumie bezwzględnych różnic różnych linii trasowania bajtów między wartością odniesienia a wartością źródłową.
+Zwraca wektor 4 sum. Każda suma odnosi się do zamaskowanej sumy bezwzględnych różnic różnych bajtów między wartością referencyjną a wartością źródłową.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_graphics.h
+**Nagłówek:** amp_graphics. h
 
-**Obszar nazw:** Współbieżność::grafika::direct3d
+**Przestrzeń nazw:** Concurrency:: Graphics::d irect3d
 
 ## <a name="see-also"></a>Zobacz też
 
-[Współbieżność::grafika::drektodowy obszar nazw](concurrency-graphics-direct3d-namespace.md)
+[Concurrency:: Graphics::d irect3d przestrzeń nazw](concurrency-graphics-direct3d-namespace.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212491"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841561"
 ---
 # <a name="cexception-class"></a>Klasa CException
 
@@ -50,7 +50,7 @@ Ponieważ `CException` jest abstrakcyjną klasą bazową, nie można `CException
 
 Poniżej wymieniono klasy pochodne i ich opisy:
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Klasa bazowa dla wyjątków MFC o krytycznym poziomie zasobów|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Nieprawidłowy warunek wyjątku argumentu|
@@ -84,7 +84,7 @@ Jeśli wyjątek jest przechwytywany przez jeden z makr, `CException` obiekt zost
 
 **Nagłówek:** AFX. h
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException:: CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a> CException:: CException
 
 Ta funkcja członkowska konstruuje `CException` obiekt.
 
@@ -101,7 +101,7 @@ Określ wartość TRUE, jeśli pamięć dla `CException` obiektu została przypi
 
 Zwykle nigdy nie trzeba wywoływać tego konstruktora bezpośrednio. Funkcja, która zgłasza wyjątek, powinna utworzyć wystąpienie `CException` klasy pochodnej i wywołać jej konstruktora lub użyć jednej z funkcji Throw MFC, takich jak [AfxThrowFileException](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowany typ. Ta dokumentacja jest dostępna tylko w celu zapewnienia kompletności.
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException::D Usuń
+## <a name="cexceptiondelete"></a><a name="delete"></a> CException::D Usuń
 
 Ta funkcja sprawdza, czy `CException` obiekt został utworzony na stercie i jeśli tak, wywołuje **`delete`** operator dla obiektu.
 
@@ -168,7 +168,7 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException:: ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a> CException:: ReportError
 
 Wywołaj tę funkcję elementu członkowskiego, aby zgłosić tekst błędu w oknie komunikatu do użytkownika.
 
@@ -226,7 +226,7 @@ else
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](cobject-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)<br/>

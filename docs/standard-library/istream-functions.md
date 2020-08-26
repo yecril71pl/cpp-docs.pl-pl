@@ -1,24 +1,23 @@
 ---
-title: '&lt;funkcje&gt; istream'
+title: '&lt;&gt;funkcje IStream'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363081"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840976"
 ---
-# <a name="ltistreamgt-functions"></a>&lt;funkcje&gt; istream
+# <a name="ltistreamgt-functions"></a>&lt;&gt;funkcje IStream
 
-|||
-|-|-|
-|[Wymiany](#istream_swap)|[ws](#ws)|
+[wymiany](#istream_swap)\
+[ws](#ws)
 
-## <a name="swap"></a><a name="istream_swap"></a>Wymiany
+## <a name="swap"></a><a name="istream_swap"></a> wymiany
 
 Wymienia elementy dwóch obiektów strumienia.
 
@@ -36,15 +35,15 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewej*\
+*lewym*\
 Strumień.
 
-*Prawo*\
+*Kliknij*\
 Strumień.
 
-## <a name="ws"></a><a name="ws"></a>Ws
+## <a name="ws"></a><a name="ws"></a> WS
 
-Pomija odstęp w strumieniu.
+Pomija biały znak w strumieniu.
 
 ```cpp
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
@@ -61,14 +60,14 @@ Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator wyodrębnia i odrzuca `ch` wszelkie elementy, dla których [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **jest**( **ctype** \< **Elem**>:: **space**, **ch**) jest prawdą.
+Manipulator wyodrębnia i odrzuca wszystkie elementy, `ch` dla których [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **CType** \< **Elem**> :: **Space**, **ch**) ma wartość true.
 
-Funkcja wywołuje [setstate](../standard-library/basic-ios-class.md#setstate) **(eofbit),** jeśli napotka koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
+Funkcja wywołuje metodę [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), jeśli napotka koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [>>operatora,](../standard-library/istream-operators.md#op_gt_gt) aby uzyskać `ws`przykład użycia pliku .
+Zobacz [>>operatora ](../standard-library/istream-operators.md#op_gt_gt) , aby zapoznać się z przykładem użycia `ws` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<>istream](../standard-library/istream.md)
+[\<istream>](../standard-library/istream.md)

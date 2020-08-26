@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562015"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841639"
 ---
 # <a name="cautohidedocksite-class"></a>Klasa CAutoHideDockSite
 
@@ -43,7 +43,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
+| Nazwa | Opis |
 |-|-|
 |Nazwa|Opis|
 |`CAutoHideDockSite::CAutoHideDockSite`|Konstruuje `CAutoHideDockSite` obiekt.|
@@ -51,7 +51,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
+| Nazwa | Opis |
 |-|-|
 |Nazwa|Opis|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Wskazuje, czy `CAutoHideDockSite` jest wyświetlany w menu okienka.|
@@ -65,7 +65,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |Nazwa|Opis|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|Określa rozmiar przestrzeni między paskami narzędzi i krawędzią paska dokowania. To miejsce jest mierzone od lewej krawędzi lub górnej krawędzi, w zależności od wyrównania dla obszaru dokowania.|

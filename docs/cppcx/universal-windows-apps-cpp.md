@@ -3,12 +3,12 @@ title: Aplikacje uniwersalne systemu Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 25b89d2d9cb99e05145e60f9c9b1a6324fbbeb39
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 45d02a5ab923ee46da97d78a1e5ceb2f4313352a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404603"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841677"
 ---
 # <a name="universal-windows-apps-c"></a>Aplikacje uniwersalne systemu Windows (C++)
 
@@ -22,13 +22,20 @@ Możesz użyć konwertera aplikacji mostka programu Desktop do spakowania istnie
 
 ## <a name="uwp-apps-that-use-ccx"></a>PLATFORMY UWP aplikacje korzystające z języka C++/CX
 
-|||
-|-|-|
-|[Dokumentacja języka C++/CX](visual-c-language-reference-c-cx.md)|Opisuje zestaw rozszerzeń, które upraszczają użycie języka C++ środowisko wykonawcze systemu Windows interfejsów API i umożliwiają obsługę błędów, która jest oparta na wyjątkach.|
-|[Tworzenie aplikacji i bibliotek (C++/CX)](building-apps-and-libraries-c-cx.md)|Opisuje sposób tworzenia bibliotek DLL i bibliotek statycznych, do których można uzyskać dostęp za pomocą aplikacji lub składnika C++/CX.|
-|[Samouczek: Tworzenie aplikacji platformy UWP "Hello, World" w języku C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Przewodnik przedstawiający podstawowe koncepcje opracowywania aplikacji platformy UWP w języku C++/CX. |
-|[Tworzenie składników środowisko wykonawcze systemu Windows w języku C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Opisuje sposób tworzenia bibliotek DLL, które mogą być używane przez inne aplikacje i składniki platformy UWP.|
-|[PLATFORMY UWP Programowanie gier](/windows/uwp/gaming/)|Opisuje sposób używania programu DirectX i C++/CX do tworzenia gier.|
+[Dokumentacja języka C++/CX](visual-c-language-reference-c-cx.md)\
+Opisuje zestaw rozszerzeń, które upraszczają użycie języka C++ środowisko wykonawcze systemu Windows interfejsów API i umożliwiają obsługę błędów, która jest oparta na wyjątkach.
+
+[Tworzenie aplikacji i bibliotek (C++/CX)](building-apps-and-libraries-c-cx.md)\
+Opisuje sposób tworzenia bibliotek DLL i bibliotek statycznych, do których można uzyskać dostęp za pomocą aplikacji lub składnika C++/CX.
+
+[Samouczek: Tworzenie aplikacji platformy UWP "Hello, World" w języku C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)\
+Przewodnik przedstawiający podstawowe koncepcje opracowywania aplikacji platformy UWP w języku C++/CX.
+
+[Tworzenie składników środowisko wykonawcze systemu Windows w języku C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)\
+Opisuje sposób tworzenia bibliotek DLL, które mogą być używane przez inne aplikacje i składniki platformy UWP.
+
+[PLATFORMY UWP Programowanie gier](/windows/uwp/gaming/)\
+Opisuje sposób używania programu DirectX i C++/CX do tworzenia gier.
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>PLATFORMY UWP aplikacje korzystające środowisko wykonawcze systemu Windows z biblioteki szablonów języka C++ (WRL)
 

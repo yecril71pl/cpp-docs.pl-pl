@@ -1,17 +1,17 @@
 ---
-title: OleAutomation (C++ atrybut com)
+title: OleAutomation (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.oleautomation
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47842454ce52c65cf71a317f39a7649b0f9dd27d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214694"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842185"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -33,13 +33,11 @@ Zobacz przykłady dla elementów [DefaultValue](defaultvalue.md) i [unextensible
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|**interface**|
+|**Dotyczy**|**interfejsu**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|**dispinterface**|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201963"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841704"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -43,22 +43,44 @@ using add_const_t = typename add_const<T>::type;
 
 Są to podane aliasy dla `type` członków:
 
-||||
-|-|-|-|
-| add_const_t | add_cv_t | add_lvalue_reference_t |
-| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
-| aligned_storage_t | aligned_union_t | common_type_t |
-| conditional_t | decay_t | enable_if_t |
-| invoke_result_t | make_signed_t | make_unsigned_t |
-| remove_all_extents_t | remove_const_t | remove_cv_t |
-| remove_extent_t | remove_pointer_t | remove_reference_t |
-| remove_volatile_t | result_of_t | underlying_type_t |
+:::row:::
+   :::column:::
+      `add_const_t`\
+      `add_cv_t`\
+      `add_lvalue_reference_t`\
+      `add_pointer_t`\
+      `add_rvalue_reference_t`\
+      `add_volatile_t`\
+      `aligned_storage_t`\
+      `aligned_union_t`\
+   :::column-end:::
+   :::column:::
+      `common_type_t`\
+      `conditional_t`\
+      `decay_t`\
+      `enable_if_t`\
+      `invoke_result_t`\
+      `make_signed_t`\
+      `make_unsigned_t`\
+      `remove_all_extents_t`\
+   :::column-end:::
+   :::column:::
+      `remove_const_t`\
+      `remove_cv_t`\
+      `remove_extent_t`\
+      `remove_pointer_t`\
+      `remove_reference_t`\
+      `remove_volatile_t`\
+      `result_of_t`\
+      `underlying_type_t`\
+   :::column-end:::
+:::row-end:::
 
 ### <a name="classes"></a>Klasy
 
 Klasa pomocnika i definicje typów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Tworzy stałą całkowitą z typu i wartości.|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|Zawiera stałą całkowitą o wartości true.|
@@ -66,7 +88,7 @@ Klasa pomocnika i definicje typów
 
 Kategorie typów podstawowych
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|Testuje, czy typ to **`void`** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testuje, czy typ to `std::nullptr_t` .|
@@ -85,7 +107,7 @@ Kategorie typów podstawowych
 
 Kategorie typów złożonych
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Testuje, czy typ jest odwołaniem.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Testuje, czy typ jest arytmetyczny.|
@@ -97,7 +119,7 @@ Kategorie typów złożonych
 
 Właściwości typu
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|Testuje, czy typ to **`const`** .|
 |[is_volatile](../standard-library/is-volatile-class.md)|Testuje, czy typ to **`volatile`** .|
@@ -150,7 +172,7 @@ Właściwości typu
 
 Zapytania właściwości typu
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Pobiera wyrównanie typu.|
 |[stopni](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
@@ -158,7 +180,7 @@ Zapytania właściwości typu
 
 Relacje typu
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|Testuje, czy dwa typy są takie same.|
 |[is_base_of](../standard-library/is-base-of-class.md)|Testuje, czy jeden typ jest podstawą innego.|
@@ -166,7 +188,7 @@ Relacje typu
 
 Nietrwałe modyfikacje
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|Tworzy **`const`** Typ z typu.|
 |[add_volatile](../standard-library/add-volatile-class.md)|Tworzy **`volatile`** Typ z typu.|
@@ -177,7 +199,7 @@ Nietrwałe modyfikacje
 
 Modyfikacje odwołań
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Tworzy odwołanie do typu z typu.|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Tworzy odwołanie rvalue do typu z typu|
@@ -185,28 +207,28 @@ Modyfikacje odwołań
 
 Modyfikacje podpisywania
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|Tworzy typ, jeśli jest podpisany, lub najmniejszy typ ze znakiem większym niż lub równy rozmiarowi do typu.|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|Tworzy typ, jeśli nie jest podpisany, lub najmniejszy typ bez znaku, który jest większy niż lub równy rozmiarowi do typu.|
 
 Modyfikacje tablicy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|Tworzy typ niebędący tablicą z typu tablicy.|
 |[remove_extent](../standard-library/remove-extent-class.md)|Tworzy typ elementu z typu tablicy.|
 
 Modyfikacje wskaźnika
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|Tworzy wskaźnik do typu z typu.|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|Tworzy typ ze wskaźnika do typu.|
 
 Inne przekształcenia
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Przydziela niezainicjowaną pamięć dla typu wyrównanego.|
 |[aligned_union](../standard-library/aligned-union-class.md)|Przydziela niezainicjowaną pamięć dla Unii wyrównanej z nieprostym konstruktorem lub destruktorem.|
@@ -220,12 +242,12 @@ Inne przekształcenia
 
 Cechy operatora logicznego
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[działa](../standard-library/conjunction-class.md)||
 |[rozłączenia](../standard-library/disjunction-class.md)||
 |[negacji](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<functional>](../standard-library/functional.md)
