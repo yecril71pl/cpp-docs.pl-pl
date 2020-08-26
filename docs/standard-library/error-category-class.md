@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224880"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840170"
 ---
 # <a name="error_category-class"></a>error_category — Klasa
 
@@ -45,13 +45,13 @@ Dwa wstępnie zdefiniowane obiekty implementują `error_category` : [generic_cat
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[value_type](#value_type)|Typ reprezentujący przechowywaną wartość kodu błędu.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[default_error_condition](#default_error_condition)|Przechowuje wartość kodu błędu dla obiektu warunku błędu.|
 |[samą](#equivalent)|Zwraca wartość określającą, czy obiekty błędów są równoważne.|
@@ -62,14 +62,14 @@ Dwa wstępnie zdefiniowane obiekty implementują `error_category` : [generic_cat
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[operator =](#op_as)||
+|[operator =](#op_as)|Operator przypisania.|
 |[operator = =](#op_eq_eq)|Testuje równość między `error_category` obiektami.|
 |[operator! =](#op_neq)|Testuje pod kątem nierówności między `error_category` obiektami.|
-|[<operatora](#op_lt)|Testuje, czy obiekt [error_category](../standard-library/error-category-class.md) jest mniejszy niż `error_category` obiekt przeszedł do porównania.|
+|[<operatora ](#op_lt)|Testuje, czy obiekt [error_category](../standard-library/error-category-class.md) jest mniejszy niż `error_category` obiekt przeszedł do porównania.|
 
-## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 Przechowuje wartość kodu błędu dla obiektu warunku błędu.
 
@@ -88,7 +88,7 @@ Zwraca wartość `error_condition(_Errval, *this)`.
 
 ### <a name="remarks"></a>Uwagi
 
-### <a name="equivalent"></a><a name="equivalent"></a>samą
+### <a name="equivalent"></a><a name="equivalent"></a> samą
 
 Zwraca wartość określającą, czy obiekty błędów są równoważne.
 
@@ -121,13 +121,13 @@ Pierwsza funkcja elementu członkowskiego zwraca `*this == _Cond.category() && _
 
 Druga funkcja członkowska zwraca wartość `*this == _Code.category() && _Code.value() == _Errval` .
 
-### <a name="generic_category"></a><a name="generic"></a>generic_category
+### <a name="generic_category"></a><a name="generic"></a> generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a><a name="message"></a>Komunikat
+### <a name="message"></a><a name="message"></a> Komunikat
 
 Zwraca nazwę określonego kodu błędu.
 
@@ -146,7 +146,7 @@ Zwraca opisową nazwę kodu błędu *Val* dla kategorii. Jeśli kod błędu nie 
 
 #### <a name="remarks"></a>Uwagi
 
-### <a name="name"></a><a name="name"></a>Nazwij
+### <a name="name"></a><a name="name"></a> Nazwij
 
 Zwraca nazwę kategorii.
 
@@ -158,13 +158,13 @@ virtual const char *name() const = 0;
 
 Zwraca nazwę kategorii jako ciąg bajtowy zakończony wartością null.
 
-### <a name="operator"></a><a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a> operator =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje równość między `error_category` obiektami.
 
@@ -185,7 +185,7 @@ Obiekt, który ma być testowany pod kątem równości.
 
 Ten operator elementu członkowskiego zwraca `this == &right` .
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności między `error_category` obiektami.
 
@@ -206,7 +206,7 @@ Obiekt, który ma być testowany pod kątem nierówności.
 
 Operator elementu członkowskiego zwraca `(!*this == right)` .
 
-### <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt [error_category](../standard-library/error-category-class.md) jest mniejszy niż `error_category` obiekt przeszedł do porównania.
 
@@ -227,13 +227,13 @@ bool operator<(const error_category& right) const;
 
 Operator elementu członkowskiego zwraca `this < &right` .
 
-### <a name="system_category"></a><a name="system"></a>system_category
+### <a name="system_category"></a><a name="system"></a> system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ reprezentujący przechowywaną wartość kodu błędu.
 

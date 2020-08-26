@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215403"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840027"
 ---
 # <a name="variant-class"></a>Klasa Variant
 
@@ -33,26 +33,26 @@ template <class... Types>
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[typu](#variant)|Konstruuje obiekt typu `variant` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[emplace](#emplace)|Tworzy nową wartość zawartej.|
-|[indeks](#index)|Zwraca indeks zawartej wartości.|
+|[index](#index)|Zwraca indeks zawartej wartości.|
 |[wymiany](#swap)||
 |[valueless_by_exception](#emplace)|Zwraca **`false`** czy wariant ma wartość.|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator =](#op_eq)|Zastępuje wariant z kopią innego wariantu.|
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Tworzy nową wartość zawartej.
 
@@ -67,7 +67,7 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a><a name="index"></a>indeks
+## <a name="index"></a><a name="index"></a> indeks
 
 Zwraca indeks zawartej wartości.
 
@@ -75,7 +75,7 @@ Zwraca indeks zawartej wartości.
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a><a name="variant"></a>typu
+## <a name="variant"></a><a name="variant"></a> typu
 
 Konstruuje obiekt typu `variant` . Zawiera również destruktor.
 
@@ -119,7 +119,7 @@ template <class Alloc, size_t I, class U, class... Args>
 *Wsp*\
 Klasa alokatora do wykorzystania z tym obiektem.
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Zastępuje wariant z kopią innego wariantu.
 
@@ -130,13 +130,13 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a> valueless_by_exception
 
 Zwraca **`false`** czy wariant ma wartość.
 

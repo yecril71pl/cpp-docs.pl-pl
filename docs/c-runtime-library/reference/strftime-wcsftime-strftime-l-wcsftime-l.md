@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846579"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -127,9 +127,8 @@ Argument *formatu* składa się z co najmniej jednego kodu; Podobnie jak w **pri
 
 Funkcje **strftime** obsługują następujące kody formatowania:
 
-|||
-|-|-|
 |Kod|Ciąg zamienny|
+|-|-|
 |**% a**|Skrócona nazwa dnia tygodnia w ustawieniach regionalnych|
 |**% A**|Pełna nazwa dnia tygodnia w ustawieniach regionalnych|
 |**% b**|Skrócona nazwa miesiąca w ustawieniach regionalnych|
@@ -197,7 +196,7 @@ Tydzień w formacie ISO 8601 i rok oparty na tygodniu wyprodukowanym przez **% V
 
 Zobacz przykład [czasu](time-time32-time64.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Regionalne](../../c-runtime-library/locale.md) <br/>
 [Zarządzanie czasem](../../c-runtime-library/time-management.md) <br/>

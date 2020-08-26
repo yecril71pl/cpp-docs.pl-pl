@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 5b18a15f8bfd98396acae0558d121b32bc4127c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d296966001dcbc2279a298bdd1d9c21195d61fd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367624"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840782"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Klasa CMFCDesktopAlertWndButton
 
-Umożliwia dodawanie przycisków do okna dialogowego alertów na pulpicie.
+Zezwala na dodawanie przycisków do okna dialogowego alertu pulpitu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,60 +31,57 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
-|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Domyślny konstruktor.|
-|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destruktora.|
+|-|-|
+|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Konstruktor domyślny.|
+|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Określa, czy przycisk jest wyświetlany w obszarze podpisu okna dialogowego alertu.|
-|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Określa, czy przycisk zamyka okno dialogowe alertu.|
+|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Określa, czy przycisk powoduje zamknięcie okna dialogowego alertu.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
-|-|-|
 |Nazwa|Opis|
+|-|-|
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Wartość logiczna określająca, czy przycisk jest wyświetlany w obszarze podpisu okna dialogowego alertu.|
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Wartość logiczna określająca, czy przycisk zamyka okno dialogowe alertu.|
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Wartość logiczna określająca, czy przycisk powoduje zamknięcie okna dialogowego alertu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie konstruktor ustawia `m_bIsCaptionButton` `m_bIsCloseButton` elementy członkowskie i danych na FALSE. Obiekt `CMFCDesktopAlertDialog` nadrzędny `m_bIsCaptionButton` ustawia wartość PRAWDA, jeśli przycisk znajduje się w obszarze podpisu okna dialogowego alertu. Klasa `CMFCDesktopAlertDialog` tworzy `CMFCDesktopAlertWndButton` obiekt, który służy jako przycisk, który zamyka `m_bIsCloseButton` okno dialogowe alertu i ustawia wartość TRUE.
+Domyślnie Konstruktor ustawia `m_bIsCaptionButton` i `m_bIsCloseButton` składowe danych na wartość false. Obiekt nadrzędny `CMFCDesktopAlertDialog` `m_bIsCaptionButton` ma wartość true, jeśli przycisk jest umieszczony w obszarze podpisu okna dialogowego alertu. `CMFCDesktopAlertDialog`Klasa tworzy `CMFCDesktopAlertWndButton` obiekt, który służy jako przycisk, który zamyka okno dialogowe alertu i ustawia `m_bIsCloseButton` wartość true.
 
-Dodaj `CMFCDesktopAlertWndButton` obiekty `CMFCDesktopAlertDialog` do obiektu w taki sposób, aby dodać dowolny przycisk. Aby uzyskać `CMFCDesktopAlertDialog`więcej informacji na temat , zobacz [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).
+Dodaj `CMFCDesktopAlertWndButton` obiekty do `CMFCDesktopAlertDialog` obiektu, tak jak dodasz dowolny przycisk. Aby uzyskać więcej informacji na temat `CMFCDesktopAlertDialog` , zobacz [Klasa CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać `SetImage` metody w `CMFCDesktopAlertWndButton` klasie. Ten fragment kodu jest częścią [przykładu demo alertów pulpitu](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `SetImage` metody w `CMFCDesktopAlertWndButton` klasie. Ten fragment kodu jest częścią [przykładu pokazu alertu na pulpicie](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbutton](../../mfc/reference/cbutton-class.md)
+[CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[CMFCDesktopAlertWbutton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
+[CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdesktopalertwnd.h
+**Nagłówek:** afxdesktopalertwnd. h
 
-## <a name="cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton
+## <a name="cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a> CMFCDesktopAlertWndButton::IsCaptionButton
 
 Określa, czy przycisk jest wyświetlany w obszarze podpisu okna dialogowego alertu.
 
@@ -96,9 +93,9 @@ BOOL IsCaptionButton() const;
 
 Niezerowe, jeśli przycisk jest wyświetlany w obszarze podpisu okna dialogowego alertu; w przeciwnym razie 0.
 
-## <a name="cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton
+## <a name="cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a> CMFCDesktopAlertWndButton::IsCloseButton
 
-Określa, czy przycisk zamyka okno dialogowe alertu.
+Określa, czy przycisk powoduje zamknięcie okna dialogowego alertu.
 
 ```
 BOOL IsCloseButton() const;
@@ -106,7 +103,7 @@ BOOL IsCloseButton() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli przycisk zamyka okno dialogowe alertu; w przeciwnym razie 0.
+Różne od zera, jeśli przycisk powoduje zamknięcie okna dialogowego alertu; w przeciwnym razie 0.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -6,21 +6,21 @@ f1_keywords:
 - xstring/std::u16string_view
 - xstring/std::u32string_view
 - xstring/std::wstring_view
-ms.openlocfilehash: 6aadd4ad3ff08a0b020fd8e683e60063fe516c63
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2afaaea466cc3b1ca46d2acdf0ceb5a42c597743
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215598"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836133"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;string_view &gt; Typedefs
 
-||||
-|-|-|-|
-|[string_view](#string_view)|[u16string_view](#u16string_view)|[u32string_view](#u32string_view)|
-|[wstring_view](#wstring_view)|
+[string_view](#string_view)\
+[u16string_view](#u16string_view)\
+[u32string_view](#u32string_view)\
+[wstring_view](#wstring_view)
 
-## <a name="string_view"></a><a name="string_view"></a>string_view
+## <a name="string_view"></a><a name="string_view"></a> string_view
 
 Typ, który opisuje specjalizację szablonu klasy [basic_string_view](../standard-library/basic-string-view-class.md) z elementami typu **`char`** .
 
@@ -40,7 +40,7 @@ basic_string_view<char> str("Hello");
 
 Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u16string_view"></a><a name="u16string_view"></a>u16string_view
+## <a name="u16string_view"></a><a name="u16string_view"></a> u16string_view
 
 Typ, który opisuje specjalizację szablonu klasy [basic_string_view](../standard-library/basic-string-view-class.md) z elementami typu **`char16_t`** .
 
@@ -52,7 +52,7 @@ typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 
 Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u32string_view"></a><a name="u32string_view"></a>u32string_view
+## <a name="u32string_view"></a><a name="u32string_view"></a> u32string_view
 
 Typ, który opisuje specjalizację szablonu klasy [basic_string_view](../standard-library/basic-string-view-class.md) z elementami typu **`char32_t`** .
 
@@ -64,7 +64,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring_view"></a><a name="wstring_view"></a>wstring_view
+## <a name="wstring_view"></a><a name="wstring_view"></a> wstring_view
 
 Typ, który opisuje specjalizację szablonu klasy [basic_string_view](../standard-library/basic-string-view-class.md) z elementami typu **`wchar_t`** .
 
@@ -87,6 +87,6 @@ Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basi
 > [!NOTE]
 > Rozmiar **`wchar_t`** wynosi dwa bajty w systemie Windows, ale nie jest to konieczne w przypadku wszystkich platform. Jeśli potrzebujesz string_view typu dwubajtowego o szerokości, która ma być taka sama na wszystkich platformach, użyj [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) lub [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view>](../standard-library/string-view.md)

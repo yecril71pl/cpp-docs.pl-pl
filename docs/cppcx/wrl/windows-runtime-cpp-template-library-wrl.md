@@ -3,12 +3,12 @@ title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Window
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: b03dc98212bbc822ddc44871632fda73d1be8740
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840542"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -17,7 +17,7 @@ ms.locfileid: "86404915"
 > [!NOTE]
 > WRL jest teraz zastępowany przez C++/WinRT, czyli standardową projekcją języka C++ 17 dla środowisko wykonawcze systemu Windows interfejsów API. C++/WinRT jest dostępna w zestawie SDK systemu Windows 10 w wersji 1803. Język C++/WinRT jest implementowany całkowicie w plikach nagłówkowych i zaprojektowany w celu zapewnienia pierwszej klasy dostępu do nowoczesnego interfejsu API systemu Windows.
 >
-> Za pomocą języka C++/WinRT można zarówno używać interfejsów API, jak i tworzyć ich środowisko wykonawcze systemu Windows za pomocą dowolnych zgodnych ze standardami kompilatorów języka C++ 17. C++/WinRT zazwyczaj wykonuje lepsze i tworzy mniejsze pliki binarne niż każda inna opcja języka dla środowisko wykonawcze systemu Windows. Będziemy nadal obsługiwać C++/CX i WRL, ale zdecydowanie zaleca się, aby nowe aplikacje korzystały z języka C++/WinRT. Aby uzyskać więcej informacji, zobacz [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Za pomocą języka C++/WinRT można zarówno używać interfejsów API, jak i tworzyć ich środowisko wykonawcze systemu Windows za pomocą dowolnych zgodnych ze standardami kompilatorów języka C++ 17. C++/WinRT zazwyczaj wykonuje lepsze i tworzy mniejsze pliki binarne niż każda inna opcja języka dla środowisko wykonawcze systemu Windows. Będziemy nadal obsługiwać C++/CX i WRL, ale zdecydowanie zaleca się, aby nowe aplikacje korzystały z języka C++/WinRT. Aby uzyskać więcej informacji, zobacz [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Korzyści
 
@@ -36,7 +36,7 @@ Biblioteka szablonów C++ środowisko wykonawcze systemu Windows i C++/CX zapewn
 
 - Cel i projekt biblioteki szablonów w języku środowisko wykonawcze systemu Windows C++ są inspirowane Active Template Library (ATL), czyli zestawem klas C++ opartych na szablonach, które upraszczają programowanie obiektów COM. Ponieważ Biblioteka szablonów C++ środowisko wykonawcze systemu Windows używa standardowego języka C++ do zawijania środowisko wykonawcze systemu Windows, można łatwiej portować i korzystać z wielu istniejących składników COM, które są zapisywane w ATL, do środowisko wykonawcze systemu Windows. Jeśli znasz już ATL, może się okazać, że programowanie biblioteki szablonów w języku C++ środowisko wykonawcze systemu Windows jest łatwiejsze.
 
-## <a name="getting-started"></a>Getting Started
+## <a name="getting-started"></a>Wprowadzenie
 
 Poniżej przedstawiono niektóre zasoby, które mogą pomóc w rozpoczęciu pracy z biblioteką szablonów języka C++ środowisko wykonawcze systemu Windows.
 
@@ -73,7 +73,7 @@ Używa `HttpRequest` klasy, która jest zdefiniowana w [instruktażu: łączenie
 [Tworzenie składnika DLL środowisko wykonawcze systemu Windows za pomocą przykładu C++](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples)<br/>
 Pokazuje, jak używać biblioteki szablonów języka C++ środowisko wykonawcze systemu Windows do tworzenia składnika biblioteki DLL w procesie i korzystania z niego z C++/CX, JavaScript i C#.
 
-[Przykładowa gra DirectX marmur labiryntu](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
+[Przykładowa gra DirectX marmur labiryntu](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Pokazuje, jak używać biblioteki szablonów języka C++ środowisko wykonawcze systemu Windows do zarządzania okresem istnienia składników COM, takich jak DirectX i platforma Media Foundation, w kontekście kompletnej gry trójwymiarowej.
 
 [Wyskakujące powiadomienia z aplikacji klasycznych](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
@@ -109,7 +109,7 @@ Biblioteka szablonów języka C++ środowisko wykonawcze systemu Windows obsług
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) to *inteligentny typ wskaźnika* , który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr` , aby zadeklarować zmienną, która może uzyskać dostęp do elementów członkowskich obiektu, który pochodzi z interfejsu. `ComPtr`automatycznie utrzymuje liczbę odwołań dla wskaźnika źródłowego i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
+[ComPtr](comptr-class.md) to *inteligentny typ wskaźnika* , który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr` , aby zadeklarować zmienną, która może uzyskać dostęp do elementów członkowskich obiektu, który pochodzi z interfejsu. `ComPtr` automatycznie utrzymuje liczbę odwołań dla wskaźnika źródłowego i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
@@ -133,7 +133,7 @@ Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zd
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) reprezentuje obiekt marshaler o dowolnym wątku. `FtmBase`tworzy globalną tabelę interfejsów (GIT) i pomaga zarządzać kierowaniem obiektów i obiektami proxy.
+[FtmBase](ftmbase-class.md) reprezentuje obiekt marshaler o dowolnym wątku. `FtmBase` tworzy globalną tabelę interfejsów (GIT) i pomaga zarządzać kierowaniem obiektów i obiektami proxy.
 
 ### <a name="weakref"></a>WeakRef
 
@@ -143,9 +143,14 @@ Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zd
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-|||
-|-|-|
-|[Najważniejsze interfejsy API według kategorii](key-wrl-apis-by-category.md)|Podświetla podstawowe typy bibliotek szablonów języka C++, funkcje i makra środowisko wykonawcze systemu Windows.|
-|[Tematy pomocy](wrl-reference.md)|Zawiera informacje referencyjne dla biblioteki szablonów środowisko wykonawcze systemu Windows C++.|
-|[Krótki przewodnik (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje języka C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
-|[Używanie składników środowisko wykonawcze systemu Windows w Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Pokazuje, jak utworzyć podstawowy składnik środowisko wykonawcze systemu Windows przy użyciu języka C++/CX.|
+[Najważniejsze interfejsy API według kategorii](key-wrl-apis-by-category.md)\
+Podświetla podstawowe typy bibliotek szablonów języka C++, funkcje i makra środowisko wykonawcze systemu Windows.
+
+[Odwoła](wrl-reference.md)\
+Zawiera informacje referencyjne dla biblioteki szablonów środowisko wykonawcze systemu Windows C++.
+
+[Krótki przewodnik (C++/CX)](../../cppcx/quick-reference-c-cx.md)\
+Zwięźle opisuje funkcje języka C++/CX, które obsługują środowisko wykonawcze systemu Windows.
+
+[Używanie składników środowisko wykonawcze systemu Windows w Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)\
+Pokazuje, jak utworzyć podstawowy składnik środowisko wykonawcze systemu Windows przy użyciu języka C++/CX.

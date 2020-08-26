@@ -48,36 +48,44 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840417"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn — Funkcje
 
-Każda z `_spawn` funkcji tworzy i wykonuje nowy proces:
+Każda z tych `_spawn` funkcji tworzy i uruchamia nowy proces:
 
-|||
-|-|-|
-|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 Litery na końcu nazwy funkcji określają odmianę.
 
 |Litera|Wariant|
 |-|-|
-| `e`  | `envp`, tablica wskaźników do ustawień środowiska, jest przekazywana do nowego procesu.  |
-| `l`  | Argumenty wiersza polecenia są `_spawn` przekazywane indywidualnie do funkcji. Ten sufiks jest zwykle używany, gdy wiele parametrów do nowego procesu jest znany z wyprzedzeniem.  |
-| `p`  | `PATH`zmienna środowiskowa służy do znajdowania pliku do wykonania.  |
-| `v`  | `argv`, tablica wskaźników do argumentów wiersza `_spawn` polecenia jest przekazywana do funkcji. Ten sufiks jest zwykle używany, gdy liczba parametrów do nowego procesu jest zmienna.  |
+| `e`  | `envp`Tablica wskaźników do ustawień środowiska jest przenoszona do nowego procesu.  |
+| `l`  | Argumenty wiersza polecenia są przesyłane pojedynczo do `_spawn` funkcji. Ten sufiks jest zwykle używany, gdy kilka parametrów nowego procesu jest znany z wyprzedzeniem.  |
+| `p`  | `PATH` Zmienna środowiskowa służy do znajdowania pliku do wykonania.  |
+| `v`  | `argv`Tablica wskaźników do argumentów wiersza polecenia jest przenoszona do `_spawn` funkcji. Ten sufiks jest zazwyczaj używany, gdy liczba parametrów nowego procesu jest zmienna.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje, `_spawn` które każdy utworzyć i wykonać nowy proces. Automatycznie obsługują argumenty ciągów wielobajtowych, rozpoznając sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtową. Funkcje `_wspawn` są szerokoznakowymi `_spawn` wersjami funkcji; nie obsługują ciągów wielobajtowych znaków. W przeciwnym `_wspawn` razie funkcje `_spawn` zachowują się identycznie jak ich odpowiedniki.
+Każdy z tych `_spawn` funkcji tworzy i uruchamia nowy proces. W razie potrzeby automatycznie obsługują argumenty ciągu znaków wielobajtowych, co pozwala rozpoznać sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową. `_wspawn`Funkcje są wersjami znaków dwubajtowych `_spawn` funkcji; nie obsługują ciągów znaków wieloznacznych. W przeciwnym razie `_wspawn` funkcje zachowują się identycznie, jak ich `_spawn` odpowiedniki.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -92,59 +100,59 @@ Funkcje, `_spawn` które każdy utworzyć i wykonać nowy proces. Automatycznie 
 |`_tspawnvp`|`_spawnvp`|`_spawnvp`|`_wspawnvp`|
 |`_tspawnvpe`|`_spawnvpe`|`_spawnvpe`|`_wspawnvpe`|
 
-Wystarczająca ilość pamięci musi być dostępna do ładowania i wykonywania nowego procesu. Argument `mode` określa działanie podjęte przez proces wywołujący `_spawn`przed i w trakcie . W pliku `mode` Process.h zdefiniowano następujące wartości:
+Do załadowania i wykonania nowego procesu musi być dostępna wystarczająca ilość pamięci. `mode`Argument określa akcję wykonywaną przez proces wywołujący przed i w czasie `_spawn` . Następujące wartości dla `mode` są zdefiniowane w procesie. h:
 
-|||
+|Wartość|Opis|
 |-|-|
-| `_P_OVERLAY`  | Nakłada proces wywołujący z nowym procesem, niszcząc proces wywołujący `_exec` (taki sam efekt jak wywołania).  |
-| `_P_WAIT`  | Zawiesza wątek wywołujący do czasu zakończenia wykonywania nowego `_spawn`procesu (synchronicznego).  |
-| `_P_NOWAIT` lub `_P_NOWAITO`  | Kontynuuje wykonywanie procesu wywoływania równocześnie z nowym procesem (asynchronicznego). `_spawn`  |
-| `_P_DETACH`  | Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiany w tle bez dostępu do konsoli lub klawiatury. Wywołania `_cwait` przeciwko nowemu procesowi nie `_spawn`powiodą się (asynchroniczne).  |
+| `_P_OVERLAY`  | Nakłada proces wywołujący z nowym procesem, niszczy proces wywołujący (ten sam efekt jak `_exec` wywołania).  |
+| `_P_WAIT`  | Wstrzymuje wątek wywołujący do momentu zakończenia wykonywania nowego procesu (synchronicznego `_spawn` ).  |
+| `_P_NOWAIT` lub `_P_NOWAITO`  | Kontynuuje wykonywanie procesu wywołującego współbieżnie z nowym procesem (asynchronicznym `_spawn` ).  |
+| `_P_DETACH`  | Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiany w tle bez dostępu do konsoli lub klawiatury. Wywołania do `_cwait` nowego procesu kończą się niepowodzeniem (asynchronicznie `_spawn` ).  |
 
-Argument `cmdname` określa plik, który jest wykonywany jako nowy proces i może określić pełną ścieżkę (z katalogu głównego), ścieżkę częściową (z bieżącego katalogu roboczego) lub po prostu nazwę pliku. Jeśli `cmdname` nie ma rozszerzenia nazwy pliku lub nie kończy się `_spawn` kropką (.), funkcja najpierw próbuje rozszerzenia nazwy pliku .com, a następnie rozszerzenia nazwy pliku .exe, rozszerzenia nazwy pliku .bat, a na końcu rozszerzenia nazwy pliku cmd.
+`cmdname`Argument określa plik, który jest wykonywany jako nowy proces i może określać pełną ścieżkę (z katalogu głównego), ścieżkę częściową (z bieżącego katalogu roboczego) lub tylko nazwę pliku. Jeśli nie `cmdname` ma rozszerzenia nazwy pliku lub nie kończy się kropką (.), `_spawn` Funkcja najpierw próbuje rozszerzenie nazwy pliku. com, a następnie rozszerzenie nazwy pliku. exe, rozszerzenie nazwy pliku. bat, a wreszcie rozszerzenie nazwy pliku. cmd.
 
-Jeśli `cmdname` ma rozszerzenie nazwy pliku, używane jest tylko to rozszerzenie. Jeśli `cmdname` kończy się kropka, `cmdname` wywołanie wyszukuje `_spawn` bez rozszerzenia nazwy pliku. Funkcja `_spawnlp` `_spawnlpe`, `_spawnvp`i `_spawnvpe` funkcje `cmdname` wyszukują (przy użyciu tych `PATH` samych procedur) w katalogach określonych przez zmienną środowiskową.
+Jeśli `cmdname` ma rozszerzenie nazwy pliku, używane jest tylko to rozszerzenie. Jeśli `cmdname` zostanie zakończona kropką, `_spawn` wywołanie wyszukuje `cmdname` nie tylko rozszerzenie nazwy pliku. `_spawnlp`Funkcje, `_spawnlpe` , `_spawnvp` i `_spawnvpe` szukają `cmdname` (przy użyciu tych samych procedur) w katalogach określonych przez `PATH` zmienną środowiskową.
 
-Jeśli `cmdname` zawiera specyfikator dysku lub żadnych ukośników (to jest, jeśli jest to ścieżka względna), `_spawn` wywołanie wyszukuje tylko określony plik; wyszukiwanie ścieżek nie jest wykonywane.
+Jeśli `cmdname` zawiera specyfikator dysku lub dowolne ukośniki (to oznacza, że jeśli jest ścieżką względną), `_spawn` wywołanie przeszukuje tylko określony plik; nie jest wykonywane Wyszukiwanie ścieżek.
 
-W przeszłości niektóre z tych `errno` funkcji ustawiono na zero na sukces; bieżące zachowanie jest `errno` pozostawienie nietknięte na sukces, zgodnie z normą C. Jeśli musisz emulować stare zachowanie, `errno` ustaw na zero tuż przed wywołaniem tych funkcji.
-
-> [!NOTE]
-> Aby zapewnić prawidłowe inicjowanie i `setjmp` zakończenie `longjmp` nakładki, nie należy używać funkcji do wprowadzania lub pozostawiania procedury nakładania.
-
-## <a name="arguments-for-the-spawned-process"></a>Argumenty dla procesu zrodzenia
-
-Aby przekazać argumenty do nowego procesu, należy podać jeden lub więcej `_spawn` wskaźników do ciągów znaków jako argumenty w wywołaniu. Te ciągi znaków tworzą listę argumentów dla procesu zduplikowanego. Łączna długość ciągów tworzących listę argumentów dla nowego procesu nie może przekraczać 1024 bajtów. Kończący się znak null ("\0") dla każdego ciągu nie jest uwzględniony w liczbie, ale znaki spacji (automatycznie wstawiane do oddzielnych argumentów) są uwzględniane.
+W przeszłości niektóre z tych funkcji miały ustawioną `errno` wartość zero po pomyślnym uruchomieniu. bieżące zachowanie ma na celu pozostawienie `errno` niezmienionego sukcesu, zgodnie z normą języka C. Jeśli musisz emulować stare zachowanie, ustaw `errno` wartość zero tuż przed wywołaniem tych funkcji.
 
 > [!NOTE]
-> Spacje osadzone w ciągach mogą powodować nieoczekiwane zachowanie; na przykład `_spawn` przekazanie `"hi there"` ciągu spowoduje, że nowy proces `"hi"` `"there"`otrzyma dwa argumenty i . Jeśli intencją było, aby nowy proces otworzył plik o nazwie "hi there", proces zakończy się niepowodzeniem. Można tego uniknąć, cytując ciąg: `"\"hi there\""`.
+> Aby zapewnić prawidłowe Inicjowanie i zakończenie nakładki, nie należy używać `setjmp` `longjmp` funkcji or do wprowadzania ani opuszczania procedury nakładki.
+
+## <a name="arguments-for-the-spawned-process"></a>Argumenty dla procesu, który został zduplikowany
+
+Aby przekazać argumenty do nowego procesu, nadaj jeden lub więcej wskaźników do ciągów znaków jako argumenty w `_spawn` wywołaniu. Te ciągi znaków tworzą listę argumentów dla procesu, który został zduplikowany. Łączna długość ciągów tworzących listę argumentów dla nowego procesu nie może przekraczać 1024 bajtów. Kończący znak null (' \ 0 ') dla każdego ciągu nie jest uwzględniony w liczbie, ale są uwzględniane znaki spacji (automatycznie wstawione do oddzielnych argumentów).
+
+> [!NOTE]
+> Spacje osadzone w ciągach mogą spowodować nieoczekiwane zachowanie; na przykład przekazanie `_spawn` ciągu `"hi there"` spowoduje powstanie nowego procesu pobierającego dwa argumenty `"hi"` i `"there"` . Jeśli chcesz, aby nowy proces otworzył plik o nazwie "Witaj tam", proces zakończy się niepowodzeniem. Można to uniknąć przez wyrażenie Quote ciągu: `"\"hi there\""` .
 
 > [!IMPORTANT]
-> Nie należy przekazywać `_spawn` danych wejściowych użytkownika bez jawnego sprawdzania jego zawartości. `_spawn`spowoduje wywołanie [CreateProcess,](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) więc należy pamiętać, że nazwy ścieżek bez zastrzeżeń może prowadzić do potencjalnych luk w zabezpieczeniach.
+> Nie przekazuj danych wejściowych użytkownika do `_spawn` bez jawnego sprawdzania jego zawartości. `_spawn` spowoduje wywołanie metody [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) , dlatego należy pamiętać, że niekwalifikowane nazwy ścieżek mogą prowadzić do potencjalnych luk w zabezpieczeniach.
 
-Wskaźniki argumentów można przekazać jako `_spawnl`oddzielne `_spawnle` `_spawnlp`argumenty `_spawnlpe`(w , , , i `_spawnv` `_spawnve`) `_spawnvp`lub `_spawnvpe`jako tablica wskaźników (w , , , i ). Musisz przekazać co najmniej `arg0` jeden `argv`argument lub [0] do procesu zrodzenia. Zgodnie z konwencją ten argument jest nazwą programu, jak należy wpisać go w wierszu polecenia. Inna wartość nie powoduje wystąpienia błędu.
+Wskaźniki argumentów można przekazać jako oddzielne argumenty (w `_spawnl` ,, `_spawnle` `_spawnlp` i `_spawnlpe` ) lub jako tablicę wskaźników (w,, i `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` ). Należy przekazać co najmniej jeden argument `arg0` lub `argv` [0] do procesu, który został zduplikowany. Zgodnie z Konwencją, ten argument jest nazwą programu w miarę wpisywania go w wierszu polecenia. Inna wartość nie powoduje błędu.
 
-, `_spawnl` `_spawnle`, `_spawnlp`i `_spawnlpe` wywołania są zwykle używane w przypadkach, gdy liczba argumentów jest znana z wyprzedzeniem. Argument `arg0` jest zwykle wskaźnikiem do `cmdname`. Argumenty `arg1` za `argn` pośrednictwem są wskaźniki do ciągów znaków tworzących nową listę argumentów. Po `argn`, musi istnieć wskaźnik **NULL,** aby oznaczyć koniec listy argumentów.
+`_spawnl`Wywołania, `_spawnle` , `_spawnlp` i `_spawnlpe` są zwykle używane w przypadkach, gdy liczba argumentów jest znana z góry. `arg0`Argument jest zwykle wskaźnikiem do `cmdname` . Argumenty `arg1` przez `argn` są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Poniżej `argn` , aby oznaczyć koniec listy argumentów, musi istnieć **pusty** wskaźnik.
 
-, `_spawnv` `_spawnve`, `_spawnvp`i `_spawnvpe` wywołania są przydatne, gdy istnieje zmienna liczba argumentów do nowego procesu. Wskaźniki do argumentów są przekazywane `argv`jako tablica, *.* Argument `argv`[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub `argv`do nazwy programu `argv``n`w trybie chronionym, a [1] przez [ ] są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Argument `argv`[`n` +1] musi być wskaźnikiem **NULL,** aby oznaczyć koniec listy argumentów.
+`_spawnv`Wywołania, `_spawnve` , `_spawnvp` i `_spawnvpe` są przydatne, gdy istnieje zmienna liczba argumentów dla nowego procesu. Wskaźniki do argumentów są przekazane jako tablica, `argv` *.* Argument `argv` [0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a `argv` [1] do `argv` [ `n` ] są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Argument `argv` [ `n` + 1] musi być **pustym** wskaźnikiem, aby zaznaczyć koniec listy argumentów.
 
-## <a name="environment-of-the-spawned-process"></a>Środowisko procesu zrodzenia
+## <a name="environment-of-the-spawned-process"></a>Środowisko procesu, który został zduplikowany
 
-Pliki, które są `_spawn` otwarte po wywołaniu pozostają otwarte w nowym procesie. W `_spawnl`, `_spawnlp` `_spawnv`, `_spawnvp` i wywołania, nowy proces dziedziczy środowisko procesu wywołującego. Można użyć `_spawnle`, `_spawnlpe` `_spawnve`, `_spawnvpe` i wywołania, aby zmienić środowisko dla nowego procesu, przekazując listę ustawień środowiska za pośrednictwem argumentu. `envp` Argument `envp` jest tablicą wskaźników znaków, każdy element (z wyjątkiem elementu końcowego), z których wskazuje ciąg zakończony zerem definiujący zmienną środowiskową. Taki ciąg zwykle ma `NAME` = `value` `NAME` formularz, w którym jest `value` nazwa zmiennej środowiskowej i jest wartością ciągu, do której ustawiona jest ta zmienna. (Uwaga, `value` która nie jest ujęta w cudzysłów podwójnych). Ostatnim elementem `envp` tablicy powinien być **NULL**. Gdy `envp` sam jest **NULL**, zduplikowany proces dziedziczy ustawienia środowiska procesu nadrzędnego.
+Pliki, które są otwarte, gdy `_spawn` połączenie zostanie otwarte w nowym procesie. W `_spawnl` , `_spawnlp` , `_spawnv` , i `_spawnvp` wywołania, nowy proces dziedziczy środowisko procesu wywołującego. Można użyć,, `_spawnle` `_spawnlpe` `_spawnve` , i, `_spawnvpe` Aby zmienić środowisko dla nowego procesu przez przekazanie listy ustawień środowiska za pomocą `envp` argumentu. Argument `envp` jest tablicą wskaźników znaków, każdy element (oprócz elementu końcowego), który wskazuje na ciąg zakończony znakiem null definiujący zmienną środowiskową. Taki ciąg ma zwykle postać, `NAME` = `value` gdzie `NAME` jest nazwą zmiennej środowiskowej i `value` jest wartością ciągu, do której ta zmienna jest ustawiona. (Należy zauważyć, że `value` nie jest ujęty w znaki podwójnego cudzysłowu). Końcowy element `envp` tablicy powinien mieć **wartość null**. Gdy `envp` sama ma **wartość null**, proces duplikowany dziedziczy ustawienia środowiska procesu nadrzędnego.
 
-Funkcje `_spawn` mogą przekazywać wszystkie informacje o otwartych plikach, w tym tryb tłumaczenia, do nowego procesu. Te informacje są przekazywane w `C_FILE_INFO` trybie rzeczywistym za pośrednictwem wpisu w środowisku. Kod startowy zwykle przetwarza ten wpis, a następnie usuwa go ze środowiska. Jednak jeśli `_spawn` funkcja powoduje pojawienie się procesu non-C, ten wpis pozostaje w środowisku. Drukowanie środowiska pokazuje znaki graficzne w ciągu definicji dla tego wpisu, ponieważ informacje o środowisku są przekazywane w postaci binarnej w trybie rzeczywistym. Nie powinno mieć żadnego innego wpływu na normalne operacje. W trybie chronionym informacje o środowisku są przekazywane w formie tekstowej i dlatego nie zawierają znaków graficznych.
+`_spawn`Funkcje mogą przekazać wszystkie informacje dotyczące otwartych plików, w tym tryb tłumaczenia, do nowego procesu. Te informacje są przesyłane w trybie rzeczywistym za pomocą `C_FILE_INFO` wpisu w środowisku. Kod uruchamiania zwykle przetwarza ten wpis, a następnie usuwa go ze środowiska. Jeśli jednak `_spawn` Funkcja duplikuje proces inny niż C, ten wpis pozostaje w środowisku. Drukowanie środowiska pokazuje znaki graficzne w ciągu definicji dla tego wpisu, ponieważ informacje o środowisku są przesyłane w postaci binarnej w trybie rzeczywistym. Nie powinien mieć żadnego innego wpływu na normalne operacje. W trybie chronionym informacje o środowisku są przesyłane w postaci tekstowej i w związku z tym nie zawierają znaków graficznych.
 
-Przed wywołaniem `fflush` `_flushall` `_spawn` funkcji należy jawnie opróżnić (używając lub) lub zamknąć dowolny strumień.
+Przed wywołaniem funkcji należy jawnie opróżnić (używając `fflush` lub `_flushall` ) lub zamknąć dowolny strumień `_spawn` .
 
-Nowe procesy utworzone `_spawn` przez wywołania procedur nie zachowują ustawień sygnału. Zamiast tego zduplikowany proces resetuje ustawienia sygnału do ustawień domyślnych.
+Nowe procesy utworzone przez wywołania `_spawn` procedur nie zachowują ustawień sygnału. Zamiast tego proces duplikowany resetuje ustawienia sygnału do domyślnego.
 
-## <a name="redirecting-output"></a>Przekierowanie danych wyjściowych
+## <a name="redirecting-output"></a>Przekierowywanie danych wyjściowych
 
-Jeśli dzwonisz `_spawn` z biblioteki DLL lub aplikacji GUI i chcesz przekierować dane wyjściowe do potoku, masz dwie opcje:
+Jeśli wywołujesz `_spawn` z biblioteki DLL lub aplikacji graficznego interfejsu użytkownika i chcesz przekierować dane wyjściowe do potoku, masz dwie opcje:
 
-- Użyj interfejsu API Win32, aby utworzyć potok, a następnie wywołać [AllocConsole](/windows/console/allocconsole), ustawić wartości uchwytu w strukturze uruchamiania i [wywołać CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
+- Użyj Win32 API, aby utworzyć potok, następnie Wywołaj [AllocConsole](/windows/console/allocconsole), ustaw wartości dojścia w strukturze uruchamiania i Wywołaj metodę [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
 
-- Wywołaj [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) który utworzy potok i wywoła aplikację za pomocą **cmd.exe /c** (lub **command.exe /c**).
+- [_Popen wywołań, _wpopen,](../c-runtime-library/reference/popen-wpopen.md) który utworzy potok i wywołaje aplikację przy użyciu **cmd.exe/c** (lub **command.exe/c**).
 
 ## <a name="example"></a>Przykład
 
@@ -231,8 +239,8 @@ from SPAWN!
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola procesu i środowiska](../c-runtime-library/process-and-environment-control.md)<br/>
-[Przerwać](../c-runtime-library/reference/abort.md)<br/>
+[Proces i kontrola środowiska](../c-runtime-library/process-and-environment-control.md)<br/>
+[przerwij](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [_exec, funkcje _wexec](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

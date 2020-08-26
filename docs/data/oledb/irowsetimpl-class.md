@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: f440bb891c30033962208c3e89648bd05ba3f81b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 470755744783272245ca3aa8e4b57e2943db5fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840404"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 
@@ -134,7 +134,7 @@ Jednostka magazynowa dla wszystkich dojść do wierszy przechowywanych przez dos
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[AddRefRows](#addrefrows)|Dodaje liczbę odwołań do istniejącego dojścia do wiersza.|
 |[CreateRow](#createrow)|Wywoływane przez [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) w celu przydzielenia nowego elementu `HROW` . Nie wywołano bezpośrednio przez użytkownika.|
@@ -149,7 +149,7 @@ Jednostka magazynowa dla wszystkich dojść do wierszy przechowywanych przez dos
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|Wskazuje, czy dostawca obsługuje pobieranie wsteczne.|
 |[m_bCanScrollBack](#bcanscrollback)|Wskazuje, czy dostawca może przewijać kursor wstecz.|
@@ -161,7 +161,7 @@ Jednostka magazynowa dla wszystkich dojść do wierszy przechowywanych przez dos
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) jest podstawowym interfejsem zestawu wierszy.
 
-## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl:: AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a> IRowsetImpl:: AddRefRows
 
 Dodaje liczbę odwołań do istniejącego dojścia do wiersza.
 
@@ -178,7 +178,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 Zobacz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl:: CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a> IRowsetImpl:: CreateRow
 
 Metoda pomocnika wywołana przez [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) do przydzielenia nowego elementu `HROW` .
 
@@ -205,7 +205,7 @@ Tablica `HROW` s zwrócona do obiektu wywołującego z nowo utworzonym wierszem.
 
 Jeśli wiersz istnieje, ta metoda wywołuje [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) i zwraca. W przeciwnym razie przydziela nowe wystąpienie zmiennej szablonu RowClass i dodaje ją do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
 
-## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl:: GetData
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a> IRowsetImpl:: GetData
 
 Pobiera dane z kopii wiersza zestawu wierszy.
 
@@ -231,7 +231,7 @@ Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* r
 
 Obsługuje również konwersję danych przy użyciu biblioteki DLL konwersji danych OLE DB.
 
-## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl:: GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a> IRowsetImpl:: GetDBStatus
 
 Zwraca flagi stanu DBSTATUS dla określonego pola.
 
@@ -254,7 +254,7 @@ podczas Kolumna, dla której jest żądany stan.
 
 Flagi [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) dla kolumny.
 
-## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl:: GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
 Pobiera wiersze sekwencyjnie, zapamiętając poprzednią pozycję.
 
@@ -272,7 +272,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 Zobacz [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
 
 Konstruktor.
 
@@ -286,7 +286,7 @@ IRowsetImpl();
 
 Zazwyczaj nie trzeba wywoływać tej metody bezpośrednio.
 
-## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl:: RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a> IRowsetImpl:: RefRows
 
 Wywoływane przez [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) i [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) w celu zwiększenia lub zwolnienia liczby odwołań do istniejącego uchwytu wiersza.
 
@@ -308,7 +308,7 @@ Zobacz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.8
 
 Standardowa wartość HRESULT.
 
-## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl:: ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a> IRowsetImpl:: ReleaseRows
 
 Zwalnia wiersze.
 
@@ -326,7 +326,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 Zobacz [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl:: operacja RestartPosition wykonywana
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a> IRowsetImpl:: operacja RestartPosition wykonywana
 
 Zmienia położenie następnego pobrania do jego pozycji początkowej; oznacza to, że jego położenie podczas pierwszego utworzenia zestawu wierszy.
 
@@ -344,7 +344,7 @@ Zobacz [IRowset:: operacja RestartPosition wykonywana](/previous-versions/window
 
 Pozycja zestawu wierszy jest niezdefiniowana, dopóki nie `GetNextRow` zostanie wywołana. Można przenieść do tyłu w rowet przez wywołanie `RestartPosition` , a następnie pobranie lub przewinięcie do tyłu.
 
-## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl:: SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a> IRowsetImpl:: SetDBStatus
 
 Ustawia flagi stanu DBSTATUS dla określonego pola.
 
@@ -375,7 +375,7 @@ Standardowa wartość HRESULT.
 
 Dostawca zastępuje tę funkcję, aby zapewnić specjalne przetwarzanie DBSTATUS_S_ISNULL i DBSTATUS_S_DEFAULT.
 
-## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a> IRowsetImpl:: m_bCanFetchBack
 
 Wskazuje, czy dostawca obsługuje pobieranie wsteczne.
 
@@ -389,7 +389,7 @@ unsigned m_bCanFetchBack:1;
 
 Połączono z `DBPROP_CANFETCHBACKWARDS` właściwością w `DBPROPSET_ROWSET` grupie. Dostawca musi obsługiwać `DBPROP_CANFETCHBACKWARDS` `m_bCanFetchBackwards` do **`true`** .
 
-## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a> IRowsetImpl:: m_bCanScrollBack
 
 Wskazuje, czy dostawca może przewijać kursor wstecz.
 
@@ -403,7 +403,7 @@ unsigned  m_bCanScrollBack:1;
 
 Połączono z `DBPROP_CANSCROLLBACKWARDS` właściwością w `DBPROPSET_ROWSET` grupie. Dostawca musi obsługiwać `DBPROP_CANSCROLLBACKWARDS` `m_bCanFetchBackwards` do **`true`** .
 
-## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl:: m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a> IRowsetImpl:: m_bReset
 
 Flaga bitowa użyta do określenia, czy pozycja kursora jest zdefiniowana w zestawie wierszy.
 
@@ -417,7 +417,7 @@ unsigned m_bReset:1;
 
 Jeśli odbiorca wywołuje [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) z wartością ujemną `lOffset` lub *łapki* i `m_bReset` ma wartość true, `GetNextRows` przenosi się na koniec zestawu wierszy. Jeśli `m_bReset` ma wartość false, odbiorca otrzymuje kod błędu w zgodności ze specyfikacją OLE DB. `m_bReset`Flaga jest ustawiana na **`true`** czas pierwszego utworzenia zestawu wierszy i gdy odbiorca wywołuje [IRowsetImpl:: operacja RestartPosition wykonywana](../../data/oledb/irowsetimpl-restartposition.md). Jest on ustawiany **`false`** podczas wywoływania `GetNextRows` .
 
-## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl:: m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a> IRowsetImpl:: m_iRowset
 
 Indeks zestawu wierszy reprezentujący kursor.
 
@@ -427,7 +427,7 @@ Indeks zestawu wierszy reprezentujący kursor.
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a> IRowsetImpl:: m_rgRowHandles
 
 Mapa uchwytów wiersza aktualnie zawartych przez dostawcę w odpowiedzi na `GetNextRows` .
 
@@ -441,7 +441,7 @@ MapClass m_rgRowHandles;
 
 Uchwyty wierszy są usuwane przez wywołanie `ReleaseRows` . Zobacz [IRowsetImpl Omówienie](../../data/oledb/irowsetimpl-class.md) definicji *MapClass*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

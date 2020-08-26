@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: 06e860425215d9fde268b780c001301b14a1caa1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a45b7ef1a31c3ecf34b15ee35bce48559465a905
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210434"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840313"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl — Klasa
 
@@ -63,20 +63,20 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa pochodna `IRowsetLocateImpl`.
+*T*<br/>
+Klasa pochodna `IRowsetLocateImpl` .
 
 *RowsetInterface*<br/>
-Klasa pochodna `IRowsetImpl`.
+Klasa pochodna `IRowsetImpl` .
 
 *RowClass*<br/>
-Jednostka magazynowa dla `HROW`.
+Jednostka magazynowa dla `HROW` .
 
 *MapClass*<br/>
 Jednostka magazynowa dla wszystkich dojść wiersza przechowywanych przez dostawcę.
 
 *BookmarkKeyType*<br/>
-Typ zakładki, na przykład LONG lub String. Zwykłe zakładki muszą mieć długość co najmniej dwóch bajtów. (Długość jednobajtowa jest zastrzeżona dla OLE DB [zakładki standardowe](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`i `DBBMK_INVALID`).
+Typ zakładki, na przykład LONG lub String. Zwykłe zakładki muszą mieć długość co najmniej dwóch bajtów. (Długość jednobajtowa jest zastrzeżona dla [zakładek standardowych](/previous-versions/windows/desktop/ms712954(v=vs.85))OLE DB `DBBMK_FIRST` , `DBBMK_LAST` i `DBBMK_INVALID` .)
 
 *Zakładka*<br/>
 Mechanizm mapowania do obsługi relacji między zakładkami a danymi.
@@ -88,34 +88,34 @@ Jednostka magazynowa dla wszystkich dojść wiersza przechowywanych przez zakła
 
 **Nagłówek**: ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
-|[Compare](#compare)|Porównuje dwie zakładki.|
+|[Porównaj](#compare)|Porównuje dwie zakładki.|
 |[GetRowsAt](#getrowsat)|Pobiera wiersze zaczynające się od wiersza określonego przez przesunięcie od zakładki.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Pobiera wiersze zgodne z określonymi zakładkami.|
-|[Skrótu](#hash)|Zwraca wartości skrótu dla określonych zakładek.|
+|[Skrót](#hash)|Zwraca wartości skrótu dla określonych zakładek.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[m_rgBookmarks](#rgbookmarks)|Tablica zakładek.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IRowsetLocateImpl` jest implementacją szablonów OLE DB interfejsu [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` służy do pobierania dowolnych wierszy z zestawu wierszy. Zestaw wierszy, który nie implementuje tego interfejsu, jest zestawem wierszy `sequential`. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumna 0 jest zakładką wierszy; odczytanie tej kolumny spowoduje uzyskanie wartości zakładki, której można użyć do zmiany położenia do tego samego wiersza.
+`IRowsetLocateImpl` jest implementacją OLE DB szablonów interfejsu [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` służy do pobierania dowolnych wierszy z zestawu wierszy. Zestaw wierszy, który nie implementuje tego interfejsu, jest `sequential` zestawem wierszy. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumna 0 jest zakładką wierszy. odczyt tej kolumny spowoduje uzyskanie wartości zakładki, która może być używana do zmiany położenia do tego samego wiersza.
 
-`IRowsetLocateImpl` służy do implementowania obsługi zakładki w dostawcach. Zakładki są symbolami zastępczymi (indeksami w zestawie wierszy), które umożliwiają konsumentom szybkie zwracanie do wiersza, co pozwala na szybki dostęp do danych. Dostawca określa, jakie zakładki mogą jednoznacznie identyfikować wiersz. Przy użyciu metod `IRowsetLocateImpl` można porównać zakładki, pobierać wiersze według przesunięcia, pobierać wiersze według zakładki i zwracać wartości skrótów dla zakładek.
+`IRowsetLocateImpl` służy do implementowania obsługi zakładki w dostawcach. Zakładki są symbolami zastępczymi (indeksami w zestawie wierszy), które umożliwiają konsumentom szybkie zwracanie do wiersza, co pozwala na szybki dostęp do danych. Dostawca określa, jakie zakładki mogą jednoznacznie identyfikować wiersz. Przy użyciu `IRowsetLocateImpl` metod można porównać zakładki, pobierać wiersze według przesunięcia, pobierać wiersze według zakładki i zwracać wartości skrótów dla zakładek.
 
 Aby można było obsługiwać zakładki OLE DB w zestawie wierszy, należy uczynić zestaw wierszy Dziedziczony z tej klasy.
 
-Aby uzyskać informacje na temat implementowania obsługi zakładek, zobacz [Obsługa dostawcy dla zakładek](../../data/oledb/provider-support-for-bookmarks.md) w przewodniku i [zakładkach](/previous-versions/windows/desktop/ms709728(v=vs.85)) programu  *C++ Visual programisty* w zestawie SDK platformy *OLE DB programisty* .
+Aby uzyskać informacje na temat implementowania obsługi zakładek, zobacz temat [obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md) w *podręczniku Visual C++ programisty* i [zakładki](/previous-versions/windows/desktop/ms709728(v=vs.85)) w *Kompendium OLE DB programisty* w zestawie SDK platformy.
 
-## <a name="irowsetlocateimplcompare"></a><a name="compare"></a>IRowsetLocateImpl:: Compare
+## <a name="irowsetlocateimplcompare"></a><a name="compare"></a> IRowsetLocateImpl:: Compare
 
 Porównuje dwie zakładki.
 
@@ -136,19 +136,19 @@ Zobacz [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=v
 
 ### <a name="remarks"></a>Uwagi
 
-Każda z tych zakładek może być standardową [zakładką w standardowej](/previous-versions/windows/desktop/ms712954(v=vs.85)) OLE DB (`DBBMK_FIRST`, `DBBMK_LAST`lub `DBBMK_INVALID`). Wartość zwracana w `pComparison` określa relację między dwiema zakładkami:
+Każda z tych zakładek może być standardową [zakładką w standardowej](/previous-versions/windows/desktop/ms712954(v=vs.85)) OLE DB ( `DBBMK_FIRST` , `DBBMK_LAST` lub `DBBMK_INVALID` ). Wartość zwracana w polu `pComparison` wskazuje relację między dwiema zakładkami:
 
-- DBCOMPARE_LT (`cbBookmark1` przed `cbBookmark2`.)
+- DBCOMPARE_LT ( `cbBookmark1` jest przed `cbBookmark2` .)
 
-- DBCOMPARE_EQ (`cbBookmark1` jest równa `cbBookmark2`.)
+- DBCOMPARE_EQ ( `cbBookmark1` jest równa `cbBookmark2` .)
 
-- DBCOMPARE_GT (`cbBookmark1` jest po `cbBookmark2`.)
+- DBCOMPARE_GT ( `cbBookmark1` jest po `cbBookmark2` .)
 
 - DBCOMPARE_NE (zakładki są równe i nie są uporządkowane).
 
 - DBCOMPARE_NOTCOMPARABLE (nie można porównać zakładek).
 
-## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a>IRowsetLocateImpl:: GetRowsAt
+## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a> IRowsetLocateImpl:: GetRowsAt
 
 Pobiera wiersze zaczynające się od wiersza określonego przez przesunięcie od zakładki.
 
@@ -175,7 +175,7 @@ Aby zamiast tego pobrać z pozycji kursora, użyj [IRowset:: GetRowsAt](/previou
 
 `IRowsetLocateImpl::GetRowsAt` nie zmienia położenia kursora.
 
-## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a>IRowsetLocateImpl:: GetRowsByBookmark
+## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a> IRowsetLocateImpl:: GetRowsByBookmark
 
 Pobiera jeden lub więcej wierszy, które pasują do określonych zakładek.
 
@@ -199,9 +199,9 @@ W przypadku innych parametrów, zobacz [IRowsetLocate:: GetRowsByBookmark](/prev
 
 ### <a name="remarks"></a>Uwagi
 
-Zakładka może być zdefiniowaną wartością lub OLE DB [zakładkami standardowymi](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` lub `DBBMK_LAST`). Nie zmienia położenia kursora.
+Zakładka może być zdefiniowaną wartością lub OLE DB [zakładkami standardowymi](/previous-versions/windows/desktop/ms712954(v=vs.85)) ( `DBBMK_FIRST` lub `DBBMK_LAST` ). Nie zmienia położenia kursora.
 
-## <a name="irowsetlocateimplhash"></a><a name="hash"></a>IRowsetLocateImpl:: hash
+## <a name="irowsetlocateimplhash"></a><a name="hash"></a> IRowsetLocateImpl:: hash
 
 Zwraca wartości skrótu dla określonych zakładek.
 
@@ -223,7 +223,7 @@ podczas Odpowiada parametrowi *hChapter* do [IRowsetLocate:: hash](/previous-ver
 
 Aby poznać inne parametry, zobacz [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a>IRowsetLocateImpl:: m_rgBookmarks
+## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a> IRowsetLocateImpl:: m_rgBookmarks
 
 Tablica zakładek.
 
@@ -237,6 +237,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:](/previous-versions/windows/desktop/ms721190(v=vs.85))
-IRowset [obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md)<br/>
+[IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) 
+ [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [Zakładki](/previous-versions/windows/desktop/ms709728(v=vs.85))

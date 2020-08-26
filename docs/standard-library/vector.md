@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224529"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840014"
 ---
 # <a name="ltvectorgt"></a>&lt;niemożliwe&gt;
 
@@ -93,24 +93,24 @@ Drugi (prawy) wektor w operacji porównania.
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zakład! =](../standard-library/vector-operators.md#op_neq)|Testuje, czy obiekt Vector po lewej stronie operatora nie jest równy obiektowi wektora po prawej stronie.|
-|[<operatora](../standard-library/vector-operators.md#op_lt)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż obiekt wektora po prawej stronie.|
-|[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż lub równy obiektowi wektora po prawej stronie.|
+|[<operatora ](../standard-library/vector-operators.md#op_lt)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż obiekt wektora po prawej stronie.|
+|[zakład\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż lub równy obiektowi wektora po prawej stronie.|
 |[operator = =](../standard-library/vector-operators.md#op_eq_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest równy obiektowi wektora po prawej stronie.|
-|[>operatora](../standard-library/vector-operators.md#op_gt)|Testuje, czy obiekt Vector po lewej stronie operatora jest większy niż obiekt wektora po prawej stronie.|
+|[>operatora ](../standard-library/vector-operators.md#op_gt)|Testuje, czy obiekt Vector po lewej stronie operatora jest większy niż obiekt wektora po prawej stronie.|
 |[>operatora =](../standard-library/vector-operators.md#op_gt_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest większy niż lub równy obiektowi wektora po prawej stronie.|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Vector — Klasa](../standard-library/vector-class.md)|Szablon klasy kontenerów sekwencji, który rozmieszcza elementy danego typu w rozmieszczeniu liniowym i umożliwia szybki dostęp losowy do dowolnego elementu.|
 
 ### <a name="specializations"></a>Specjalizacje
 
-|||
+|Nazwa|Opis|
 |-|-|
 |hash|Zwraca wartość skrótu wektora.|
 |[Vector — \<bool> Klasa](../standard-library/vector-bool-class.md)|Pełna specjalizacja wektora szablonu klasy dla elementów typu **`bool`** z alokatorem dla typu podstawowego używanego przez specjalizację.|
@@ -121,7 +121,7 @@ Drugi (prawy) wektor w operacji porównania.
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

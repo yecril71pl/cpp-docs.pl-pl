@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: e0980a5c00459b9f166296b7436d013bb8a42319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 33b5d2eaefa11f9ccf6459aa05b4e24138731e80
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840274"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -41,7 +41,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 
 ### <a name="message-map-declaration-and-demarcation-macros"></a>Makra deklaracji i rozgraniczania mapy komunikatów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklaruje, że mapa komunikatów zostanie użyta w klasie w celu mapowania komunikatów do funkcji (musi być używana w deklaracji klasy).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Rozpoczyna definicję mapy komunikatów (należy ją użyć w implementacji klasy).|
@@ -50,7 +50,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 
 ### <a name="message-mapping-macros"></a>Makra mapowania komunikatów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ON_COMMAND](#on_command)|Wskazuje, która funkcja będzie obsługiwać określony komunikat polecenia.|
 |[ON_COMMAND_EX](#on_command_ex)|Wskazuje, która funkcja będzie obsługiwać określony komunikat polecenia.|
@@ -64,7 +64,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 
 ### <a name="message-map-range-macros"></a>Makra zakresu mapy komunikatów
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Wskazuje, która funkcja będzie obsługiwać zakres identyfikatorów poleceń określonych w pierwszych dwóch parametrach makra.|
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Wskazuje, która procedura obsługi aktualizacji będzie obsługiwać zakres identyfikatorów poleceń określonych w pierwszych dwóch parametrach makra.|
@@ -72,7 +72,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 
 Aby uzyskać więcej informacji na temat map komunikatów, deklaracji i makr rozgraniczania mapy komunikatów oraz makr mapowania komunikatów, zobacz [mapy komunikatów](../../mfc/reference/message-maps-mfc.md) i [Obsługa komunikatów oraz mapowanie](../../mfc/message-handling-and-mapping.md). Aby uzyskać więcej informacji na temat zakresów map wiadomości, zobacz [programy obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
 
-## <a name="begin_message_map"></a><a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a><a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
 Rozpoczyna definicję mapy komunikatów.
 
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Nagłówek:** afxwin. h
 
-## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
 
 Rozpoczyna definicję mapy komunikatów dla typu klasy zawierającej jeden argument szablonu.
 
@@ -141,7 +141,7 @@ Aby uzyskać więcej informacji na temat implementowania map komunikatów dla kl
 
 **Nagłówek:** afxwin. h
 
-## <a name="declare_message_map"></a><a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a><a name="declare_message_map"></a> DECLARE_MESSAGE_MAP
 
 Deklaruje, że klasa definiuje mapę komunikatów. Każda `CCmdTarget` Klasa pochodna w programie musi udostępniać mapę komunikatów do obsługi komunikatów.
 
@@ -174,7 +174,7 @@ class CMainFrame : public CMDIFrameWnd
 
 **Nagłówek:** afxwin. h
 
-## <a name="end_message_map"></a><a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a><a name="end_message_map"></a> END_MESSAGE_MAP
 
 Zamyka definicję mapy komunikatów.
 
@@ -192,7 +192,7 @@ Aby uzyskać więcej informacji na temat map komunikatów i makra END_MESSAGE_MA
 
 **Nagłówek:** afxwin. h
 
-## <a name="on_command"></a><a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a><a name="on_command"></a> ON_COMMAND
 
 To makro mapuje komunikat polecenia na funkcję członkowską.
 
@@ -230,7 +230,7 @@ END_MESSAGE_MAP()
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_command_ex"></a><a name="on_command_ex"></a>ON_COMMAND_EX
+## <a name="on_command_ex"></a><a name="on_command_ex"></a> ON_COMMAND_EX
 
 Rozszerzona funkcja członkowska obsługi poleceń.
 
@@ -258,7 +258,7 @@ Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: Message Maps] t
 
 Plik nagłówkowy: afxmsg_. h
 
-## <a name="on_control"></a><a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a><a name="on_control"></a> ON_CONTROL
 
 Wskazuje, która funkcja będzie obsługiwać komunikat z powiadomieniem o kontrolce niestandardowej.
 
@@ -291,7 +291,7 @@ Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikat
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_message"></a><a name="on_message"></a>ON_MESSAGE
+## <a name="on_message"></a><a name="on_message"></a> ON_MESSAGE
 
 Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika.
 
@@ -349,7 +349,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_olecmd"></a><a name="on_olecmd"></a>ON_OLECMD
+## <a name="on_olecmd"></a><a name="on_olecmd"></a> ON_OLECMD
 
 Kieruje polecenia za pomocą interfejsu wysyłania poleceń `IOleCommandTarget` .
 
@@ -372,9 +372,9 @@ Identyfikator menu, identyfikator paska narzędzi, identyfikator przycisku lub i
 
 ### <a name="remarks"></a>Uwagi
 
-`IOleCommandTarget`umożliwia kontenerowi otrzymywanie poleceń, które pochodzą z interfejsu użytkownika DocObject, i umożliwia kontenerowi wysyłanie tych samych poleceń (takich jak New, Open, SaveAs i Print w menu plik, a następnie kopiowanie, wklejanie, cofanie i tak dalej w menu Edycja) do DocObject.
+`IOleCommandTarget` umożliwia kontenerowi otrzymywanie poleceń, które pochodzą z interfejsu użytkownika DocObject, i umożliwia kontenerowi wysyłanie tych samych poleceń (takich jak New, Open, SaveAs i Print w menu plik, a następnie kopiowanie, wklejanie, cofanie i tak dalej w menu Edycja) do DocObject.
 
-`IOleCommandTarget`jest prostsze niż Automatyzacja OLE `IDispatch` . `IOleCommandTarget`opiera się wyłącznie na standardowym zestawie poleceń, które rzadko mają argumenty, i nie ma żadnych informacji o typie (bezpieczeństwo typu jest również zmniejszane dla argumentów polecenia). Jeśli konieczne jest wysłanie poleceń z argumentami, użyj [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
+`IOleCommandTarget` jest prostsze niż Automatyzacja OLE `IDispatch` . `IOleCommandTarget` opiera się wyłącznie na standardowym zestawie poleceń, które rzadko mają argumenty, i nie ma żadnych informacji o typie (bezpieczeństwo typu jest również zmniejszane dla argumentów polecenia). Jeśli konieczne jest wysłanie poleceń z argumentami, użyj [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
 
 `IOleCommandTarget`Standardowe polecenia menu zostały zaimplementowane przez MFC w następujących makrach:
 
@@ -478,7 +478,7 @@ Wysyła polecenie Edit Undo. Zaimplementowane jako:
 
 **Nagłówek:** afxdocob. h
 
-## <a name="on_registered_message"></a><a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a><a name="on_registered_message"></a> ON_REGISTERED_MESSAGE
 
 Funkcja systemu Windows `RegisterWindowMessage` służy do definiowania nowego komunikatu okna, który ma być unikatowy w całym systemie.
 
@@ -516,7 +516,7 @@ END_MESSAGE_MAP()
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE
+## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a> ON_REGISTERED_THREAD_MESSAGE
 
 Wskazuje, która funkcja będzie obsługiwać komunikat zarejestrowany przez funkcję RegisterWindowMessage systemu Windows.
 
@@ -542,7 +542,7 @@ RegisterWindowMessage służy do definiowania nowego komunikatu okna, który ma 
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_thread_message"></a><a name="on_thread_message"></a>ON_THREAD_MESSAGE
+## <a name="on_thread_message"></a><a name="on_thread_message"></a> ON_THREAD_MESSAGE
 
 Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika.
 
@@ -568,7 +568,7 @@ ON_THREAD_MESSAGE należy używać zamiast ON_MESSAGE, gdy posiadasz `CWinThread
 
 **Nagłówek:** Afxole. h
 
-## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI
+## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a> ON_UPDATE_COMMAND_UI
 
 To makro wskazuje, która funkcja będzie obsługiwać komunikat polecenia aktualizacji interfejsu użytkownika.
 
@@ -596,7 +596,7 @@ Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikat
 
 **Nagłówek:** Afxole. h
 
-## <a name="on_command_range"></a><a name="on_command_range"></a>ON_COMMAND_RANGE
+## <a name="on_command_range"></a><a name="on_command_range"></a> ON_COMMAND_RANGE
 
 To makro służy do mapowania ciągłego zakresu identyfikatorów poleceń do jednej funkcji obsługi komunikatów.
 
@@ -651,7 +651,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a> ON_UPDATE_COMMAND_UI_RANGE
 
 Mapuje ciągły zakres identyfikatorów poleceń na pojedynczą funkcję obsługi komunikatów aktualizacji.
 
@@ -682,7 +682,7 @@ Nie ma automatycznej obsługi dla zakresów map wiadomości, dlatego należy sam
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_control_range"></a><a name="on_control_range"></a>ON_CONTROL_RANGE
+## <a name="on_control_range"></a><a name="on_control_range"></a> ON_CONTROL_RANGE
 
 To makro służy do mapowania ciągłego zakresu identyfikatorów sterujących na pojedynczą funkcję obsługi komunikatów dla określonego komunikatu powiadomienia systemu Windows, na przykład BN_CLICKED.
 
@@ -718,7 +718,7 @@ Aby uzyskać więcej informacji na temat implementowania funkcji obsługi dla za
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
 [TN006: mapy komunikatów](../tn006-message-maps.md)<br/>

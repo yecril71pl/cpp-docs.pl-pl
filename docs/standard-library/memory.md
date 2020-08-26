@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202964"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836468"
 ---
 # <a name="ltmemorygt"></a>&lt;rozmiar&gt;
 
@@ -26,12 +26,12 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Pobiera prawdziwy adres obiektu.|
-|[dostosowania](../standard-library/memory-functions.md#align)|Zwraca wskaźnik do zakresu o podanej wielkości, na podstawie podanego wyrównania i adresu początkowego.|
+|[align](../standard-library/memory-functions.md#align)|Zwraca wskaźnik do zakresu o podanej wielkości, na podstawie podanego wyrównania i adresu początkowego.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Tworzy `shared_ptr` do obiektów, które są przydzielane i skonstruowane dla danego typu z określonym alokatorem.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -77,19 +77,19 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator! =](../standard-library/memory-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|
 |[operator = =](../standard-library/memory-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.|
 |[>operatora =](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt alokatora jest większy niż lub równy drugiemu obiektowi alokatora określonej klasy.|
-|[<operatora](../standard-library/memory-operators.md#op_lt)|Testuje, czy jeden obiekt jest mniejszy niż drugi obiekt określonej klasy.|
-|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt jest mniejszy niż lub równy drugiemu obiektowi określonej klasy.|
-|[>operatora](../standard-library/memory-operators.md#op_gt)|Testuje, czy jeden obiekt jest większy niż drugi obiekt określonej klasy.|
-|[<<operatora](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr`Inserter.|
+|[<operatora ](../standard-library/memory-operators.md#op_lt)|Testuje, czy jeden obiekt jest mniejszy niż drugi obiekt określonej klasy.|
+|[zakład\<=](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt jest mniejszy niż lub równy drugiemu obiektowi określonej klasy.|
+|[>operatora ](../standard-library/memory-operators.md#op_gt)|Testuje, czy jeden obiekt jest większy niż drugi obiekt określonej klasy.|
+|[<<operatora ](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` Inserter.|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Szablon klasy opisuje obiekt, który zarządza alokacją magazynu i zwalnia dla tablic **obiektów typu typ.**|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Opisuje obiekt określający wszystkie informacje, które są wymagane przez kontener z obsługą alokatora.|
@@ -104,7 +104,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 ### <a name="structures"></a>Struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,11 +114,11 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 ### <a name="specializations"></a>Specjalizacje
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Specjalizacja alokatora szablonu klasy do wpisywania **`void`** , definiująca tylko typy elementów członkowskich, które mają sens w tym wyspecjalizowanym kontekście.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

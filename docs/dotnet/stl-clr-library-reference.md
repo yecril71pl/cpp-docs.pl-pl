@@ -7,60 +7,74 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: b3c25a40fdb5bade02e112b13d16420b248a177f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6804dab814eca4ecc5fd23c74cbbb21eac3be77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384637"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839702"
 ---
 # <a name="stlclr-library-reference"></a>Odwołanie do biblioteki STL/CLR
 
-Biblioteki STL/CLR udostępnia interfejs, podobnie jak kontenery standardowej biblioteki języka C++ do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). STL/CLR jest całkowicie niezależna od implementacji Microsoft standardowej biblioteki języka C++. STL/CLR jest zachowywana na potrzeby obsługi starszej wersji, ale nie był cały czas aktualny ze standardem C++. Zdecydowanie zalecamy używanie natywnych [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md) kontenery zamiast STL/CLR, jeśli to możliwe.
+Biblioteka STL/CLR udostępnia interfejs podobny do kontenerów standardowej biblioteki języka C++ do użycia z C++ i .NET Framework środowiska uruchomieniowego języka wspólnego (CLR). Język STL/CLR jest całkowicie oddzielony od implementacji standardowej biblioteki języka C++ przez firmę Microsoft. Język STL/CLR jest obsługiwany w przypadku starszej obsługi, ale nie jest on aktualizowany przy użyciu standardu C++. Zdecydowanie zalecamy korzystanie z natywnych kontenerów [standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md) zamiast STL/CLR wszędzie tam, gdzie to możliwe.
 
 Aby użyć STL/CLR:
 
-- Zawierają nagłówki z **cliext —** dołączanego podkatalogu zamiast zwykle odpowiedników standardowej biblioteki języka C++.
+- Uwzględnij nagłówki z **cliext** w podkatalogu zamiast zwykłych odpowiedników standardowej biblioteki języka C++.
 
-- Kwalifikacja nazw biblioteki z `cliext::` zamiast `std::`.
+- Kwalifikuj nazwy bibliotek `cliext::` zamiast `std::` .
 
-Biblioteki STL/CLR interfejs STL podobne do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). Ta biblioteka jest zachowywana na potrzeby obsługi starszej wersji, ale nie był cały czas aktualny ze standardem C++. Zdecydowanie zalecamy używanie natywnych [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md) kontenery zamiast STL/CLR.
+Biblioteka STL/CLR udostępnia interfejs przypominający STL do użycia z językiem C++ i .NET Framework środowiska uruchomieniowego języka wspólnego (CLR). Ta biblioteka jest utrzymywana dla starszej obsługi, ale nie jest aktualizowana przy użyciu standardu C++. Zdecydowanie zalecamy użycie natywnych kontenerów [standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md) zamiast STL/CLR.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Przestrzeń nazw cliext](../dotnet/cliext-namespace.md)<br/>
-W tym artykule omówiono przestrzeni nazw, który zawiera wszystkie rodzaje biblioteki STL/CLR.
+[cliext przestrzeń nazw](../dotnet/cliext-namespace.md)<br/>
+Omawia przestrzeń nazw, która zawiera wszystkie typy biblioteki STL/CLR.
 
 [Kontenery STL/CLR](../dotnet/stl-clr-containers.md)<br/>
-Zawiera omówienie kontenerów, które znajdują się w standardowej biblioteki C++, włącznie z wymaganiami dotyczącymi elementów kontenera, typów elementów, które mogą być wstawiane i kwestie własnościowe.
+Zawiera omówienie kontenerów, które znajdują się w standardowej bibliotece języka C++, w tym wymagania dotyczące elementów kontenera, typów elementów, które mogą być wstawiane, i problemów z własnością.
 
 [Wymagania dotyczące elementów kontenera STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md)<br/>
-Opisuje minimalne wymagania dla wszystkich typów odniesienia, które są wstawiane do kontenerów standardowej biblioteki języka C++.
+Opisuje minimalne wymagania dla wszystkich typów referencyjnych, które są wstawiane do kontenerów standardowej biblioteki języka C++.
 
 [Instrukcje: konwertowanie kolekcji .NET na kontener STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-W tym artykule opisano sposób konwertowania kolekcji .NET na kontener STL/CLR.
+Opisuje sposób konwersji kolekcji .NET na kontener STL/CLR.
 
 [Instrukcje: konwertowanie kontenera STL/CLR na kolekcję .NET](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)<br/>
-W tym artykule opisano sposób konwertowania kontenera STL/CLR na kolekcję .NET.
+Opisuje sposób konwersji kontenera STL/CLR na kolekcję .NET.
 
-[Instrukcje: uwidacznianie kontenera STL/CLR z zestawu](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)<br/>
-W tym temacie przedstawiono sposób wyświetlać elementy kilku kontenerów STL/CLR napisane w zestawie C++.
+[Instrukcje: Uwidacznianie kontenera STL/CLR z zestawu](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)<br/>
+Pokazuje, jak wyświetlić elementy kilku kontenerów STL/CLR, które są zapisywane w zestawie języka C++.
 
-Ponadto w tej sekcji opisano również następujące składniki STL/CLR:
+Ponadto w tej sekcji opisano również następujące składniki biblioteki STL/CLR:
 
-|||
-|-|-|
-|[adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)|[algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)|
-|[deque (STL/CLR)](../dotnet/deque-stl-clr.md)|[for each, in](../dotnet/for-each-in.md)|
-|[functional (STL/CLR)](../dotnet/functional-stl-clr.md)|[hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)|
-|[hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)|[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)|
-|[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)|[list (STL/CLR)](../dotnet/list-stl-clr.md)|
-|[map (STL/CLR)](../dotnet/map-stl-clr.md)|[multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)|
-|[multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)|[numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)|
-|[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)|[queue (STL/CLR)](../dotnet/queue-stl-clr.md)|
-|[set (STL/CLR)](../dotnet/set-stl-clr.md)|[stack (STL/CLR)](../dotnet/stack-stl-clr.md)|
-|[utility (STL/CLR)](../dotnet/utility-stl-clr.md)|[vector (STL/CLR)](../dotnet/vector-stl-clr.md)|
+:::row:::
+   :::column span="":::
+      [`adapter` (STL/CLR)](../dotnet/adapter-stl-clr.md)\
+      [`algorithm` (STL/CLR)](../dotnet/algorithm-stl-clr.md)\
+      [`deque` (STL/CLR)](../dotnet/deque-stl-clr.md)\
+      [`for each`, `in`](../dotnet/for-each-in.md)\
+      [`functional` (STL/CLR)](../dotnet/functional-stl-clr.md)\
+      [`hash_map` (STL/CLR)](../dotnet/hash-map-stl-clr.md)\
+      [`hash_multimap` (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)\
+      [`hash_multiset` (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)\
+      [`hash_set` (STL/CLR)](../dotnet/hash-set-stl-clr.md)\
+      [`list` (STL/CLR)](../dotnet/list-stl-clr.md)\
+   :::column-end:::
+   :::column span="":::
+      [`map` (STL/CLR)](../dotnet/map-stl-clr.md)\
+      [`multimap` (STL/CLR)](../dotnet/multimap-stl-clr.md)\
+      [`multiset` (STL/CLR)](../dotnet/multiset-stl-clr.md)\
+      [`numeric` (STL/CLR)](../dotnet/numeric-stl-clr.md)\
+      [`priority_queue` (STL/CLR)](../dotnet/priority-queue-stl-clr.md)\
+      [`queue` (STL/CLR)](../dotnet/queue-stl-clr.md)\
+      [`set` (STL/CLR)](../dotnet/set-stl-clr.md)\
+      [`stack` (STL/CLR)](../dotnet/stack-stl-clr.md)\
+      [`utility` (STL/CLR)](../dotnet/utility-stl-clr.md)\
+      [`vector` (STL/CLR)](../dotnet/vector-stl-clr.md)\
+   :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
+[Standardowa biblioteka języka C++](../standard-library/cpp-standard-library-reference.md)

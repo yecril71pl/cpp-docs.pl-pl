@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210447"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840391"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 
@@ -47,8 +47,8 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa, która pochodzi od `IRowsetInfoImpl`.
+*T*<br/>
+Klasa, która pochodzi od `IRowsetInfoImpl` .
 
 *PropClass*<br/>
 Klasa właściwości, która jest określana przez użytkownika, która domyślnie ma wartość *T*.
@@ -57,11 +57,11 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 **Nagłówek:** altdb. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetProperties](#getproperties)|Zwraca bieżące ustawienia wszystkich właściwości obsługiwanych przez zestaw wierszy.|
 |[GetReferencedRowset](#getreferencedrowset)|Zwraca wskaźnik interfejsu do zestawu wierszy, do którego zostanie zastosowana Zakładka.|
@@ -71,9 +71,9 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 Obowiązkowy interfejs dla zestawów wierszy. Ta klasa implementuje właściwości zestawu wierszy przy użyciu [mapy zestawu właściwości](../../data/oledb/begin-propset-map.md) zdefiniowanej w klasie poleceń. Chociaż Klasa zestawu wierszy wydaje się używać klas poleceń klasy, zestaw wierszy jest dostarczany z własną kopią właściwości czasu wykonywania, gdy jest tworzony przez polecenie lub obiekt sesji.
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl:: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 
-Zwraca bieżące ustawienia dla właściwości w grupie `DBPROPSET_ROWSET`.
+Zwraca bieżące ustawienia dla właściwości w `DBPROPSET_ROWSET` grupie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 Zobacz [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) w *Kompendium OLE DB programisty*.
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl:: GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl:: GetReferencedRowset
 
 Zwraca wskaźnik interfejsu do zestawu wierszy, do którego zostanie zastosowana Zakładka.
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 Zobacz [IRowsetInfo:: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) w *dokumentacji programisty OLE DB*. Parametr *iOrdinal* musi być kolumną zakładki.
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl:: getswoisty
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl:: getswoisty
 
 Zwraca wskaźnik interfejsu dla obiektu (polecenia lub sesji), który utworzył ten zestaw wierszy.
 

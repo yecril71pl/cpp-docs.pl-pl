@@ -1,17 +1,17 @@
 ---
-title: propget (C++ atrybut com)
+title: propget (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propget
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: d2c0ebab1630634ddd4fc81e7c9c8364f7fad46f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2627213d1d1dc74edb33d70ac45f3b7bbd38ba6b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166462"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839975"
 ---
 # <a name="propget"></a>propget
 
@@ -33,13 +33,11 @@ Zobacz przykład dla [powiązania](bindable.md) z przykładowym wykorzystaniem *
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`propput`, `propputref`|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).

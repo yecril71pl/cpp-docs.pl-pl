@@ -2,19 +2,19 @@
 title: 'Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 8dcd27ca8fff826f33ee8bd752cd32f2d44d3691
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373687"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836715"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
 
 > [!NOTE]
 > W przypadku nowych aplikacji i składników platformy UWP zaleca się używanie języka [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/), czyli standardowego wyrzutowania języka c++ 17 dla środowisko wykonawcze systemu Windows interfejsów API. C++/WinRT jest dostępna w zestawie SDK systemu Windows 10 w wersji 1803. Język C++/WinRT jest implementowany całkowicie w plikach nagłówkowych i został zaprojektowany w celu zapewnienia pierwszej klasy dostępu do nowoczesnego interfejsu API systemu Windows.
 
-Kompilator języka Microsoft C++ (MSVC) obsługuje rozszerzenia składników C++ (C++/CX), które mają dodatkowe typy i operatory przeznaczone dla modelu programowania środowisko wykonawcze systemu Windows. Za pomocą języka C++/CX można tworzyć aplikacje dla platforma uniwersalna systemu Windows (platformy UWP) i pulpitu systemu Windows. Aby uzyskać więcej informacji, zobacz [Przewodnik po C++/CX](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) i [rozszerzenia składników dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
+Kompilator języka Microsoft C++ (MSVC) obsługuje rozszerzenia składników C++ (C++/CX), które mają dodatkowe typy i operatory przeznaczone dla modelu programowania środowisko wykonawcze systemu Windows. Za pomocą języka C++/CX można tworzyć aplikacje dla platforma uniwersalna systemu Windows (platformy UWP) i pulpitu systemu Windows. Aby uzyskać więcej informacji, zobacz [Przewodnik po C++/CX](/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) i [rozszerzenia składników dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
 
 W tym instruktażu należy użyć edytora tekstów do utworzenia podstawowego programu C++/CX, a następnie skompilowania go w wierszu polecenia. (Możesz użyć własnego programu C++/CX zamiast wpisywać ten, który jest wyświetlany, lub możesz użyć przykładowego kodu C++/CX z innego artykułu pomocy. Ta technika jest przydatna do kompilowania i testowania małych modułów, które nie mają elementów interfejsu użytkownika.
 

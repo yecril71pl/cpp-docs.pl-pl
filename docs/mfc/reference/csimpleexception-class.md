@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: eb94ba9e3d26b3cd910f23c3d4abb29d3b8b1cd1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: afd83c1ddd6f68b10c5cc8c47c0e939bbd01b6c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318363"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840716"
 ---
 # <a name="csimpleexception-class"></a>Klasa CSimpleException
 
-Ta klasa jest klasą podstawową dla wyjątków MFC o krytycznym znaczeniu dla zasobów.
+Ta klasa jest klasą bazową dla wyjątków MFC o kluczowym znaczeniu dla zasobów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,37 +39,37 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleException::GetErrorMessage](#geterrormessage)|Zawiera tekst o błędzie, który wystąpił.|
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Zawiera tekst dotyczący błędu, który wystąpił.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CSimpleException`jest klasą podstawową dla wyjątków MFC o krytycznym znaczeniu dla zasobów i obsługuje własność i inicjowanie komunikatu o błędzie. Następujące klasy `CSimpleException` używają jako ich klasy podstawowej:
+`CSimpleException` jest klasą bazową dla wyjątków MFC o krytycznym znaczeniu dla zasobów i obsługuje własność i inicjalizację komunikatu o błędzie. Następujące klasy są używane `CSimpleException` jako klasa podstawowa:
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Klasa CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Wyjątek braku pamięci|
-|[Klasa CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Żądania nieobsługiwały operacji|
-|[Klasa CResourceException](../../mfc/reference/cresourceexception-class.md)|Nie znaleziono lub nie można utworzyć zasobu systemu Windows|
-|[Klasa CUserException](../../mfc/reference/cuserexception-class.md)|Nie można odnaleźć wyjątku wskazującego, że nie można odnaleźć zasobu|
+|[Klasa CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Żądania nieobsługiwanej operacji|
+|[Klasa CResourceException](../../mfc/reference/cresourceexception-class.md)|Nie znaleziono zasobu systemu Windows lub nie można go uzyskać|
+|[Klasa CUserException](../../mfc/reference/cuserexception-class.md)|Wyjątek wskazujący, że nie można znaleźć zasobu|
 |[Klasa CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Wyjątek wskazujący nieprawidłowy argument|
 
-Ponieważ `CSimpleException` jest abstrakcyjną klasą podstawową, nie można zadeklarować `CSimpleException` obiektu bezpośrednio. Zamiast tego należy zadeklarować pochodne obiekty, takie jak te w poprzedniej tabeli. Jeśli deklarujesz własną klasę pochodną, użyj poprzednich klas jako modelu.
+Ponieważ `CSimpleException` jest abstrakcyjną klasą bazową, nie można zadeklarować `CSimpleException` obiektu bezpośrednio. Zamiast tego należy zadeklarować obiekty pochodne, takie jak te w poprzedniej tabeli. Jeśli deklarujesz własną klasę pochodną, użyj powyższych klas jako modelu.
 
-Aby uzyskać więcej informacji, zobacz [temat klasy CException](../../mfc/reference/cexception-class.md) i [obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
+Aby uzyskać więcej informacji, zobacz temat [Klasa CException](../../mfc/reference/cexception-class.md) i [Obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `CSimpleException`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afx.h
+**Nagłówek:** AFX. h
 
-## <a name="csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException
+## <a name="csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a> CSimpleException::CSimpleException
 
 Konstruktor.
 
@@ -81,15 +81,15 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Parametry
 
 *bAutoDelete*<br/>
-Określ wartość PRAWDA, `CSimpleException` jeśli pamięć dla obiektu została przydzielona na stercie. Spowoduje to, `CSimpleException` że obiekt zostanie `Delete` usunięty, gdy funkcja elementu członkowskiego jest wywoływana, aby usunąć wyjątek. Określ wartość `CSimpleException` FAŁSZ, jeśli obiekt znajduje się na stosie lub jest obiektem globalnym. W takim przypadku `CSimpleException` obiekt nie zostanie `Delete` usunięty, gdy wywoływana jest funkcja elementu członkowskiego.
+Określ wartość TRUE, jeśli pamięć dla `CSimpleException` obiektu została przypisana na stercie. Spowoduje to `CSimpleException` usunięcie obiektu, gdy `Delete` wywoływana jest funkcja członkowska, aby usunąć wyjątek. Określ wartość FAŁSZ, jeśli `CSimpleException` obiekt znajduje się na stosie lub jest obiektem globalnym. W takim przypadku `CSimpleException` obiekt nie zostanie usunięty, gdy `Delete` wywoływana jest funkcja członkowska.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle nigdy nie trzeba wywołać tego konstruktora bezpośrednio. Funkcja, która zgłasza wyjątek należy utworzyć `CException`wystąpienie klasy pochodnej i wywołać jego konstruktora lub należy użyć jednej z funkcji MFC throw, takich jak [AfxThrowFileException](exception-processing.md#afxthrowfileexception), aby rzucić wstępnie zdefiniowany typ.
+Zwykle nigdy nie trzeba wywoływać tego konstruktora bezpośrednio. Funkcja, która zgłasza wyjątek, powinna utworzyć wystąpienie `CException` klasy pochodnej i wywołać jej konstruktora lub użyć jednej z funkcji Throw MFC, takich jak [AfxThrowFileException](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowany typ.
 
-## <a name="csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage
+## <a name="csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a> CSimpleException::GetErrorMessage
 
-Wywołanie tej funkcji elementu członkowskiego, aby zapewnić tekst o wystąpił błąd.
+Wywołaj tę funkcję elementu członkowskiego, aby podać tekst dotyczący błędu, który wystąpił.
 
 ```
 virtual BOOL GetErrorMessage(
@@ -101,21 +101,21 @@ virtual BOOL GetErrorMessage(
 ### <a name="parameters"></a>Parametry
 
 *lpszError*<br/>
-Wskaźnik do buforu, który otrzyma komunikat o błędzie.
+Wskaźnik do buforu, który zostanie wyświetlony komunikat o błędzie.
 
 *nMaxError*<br/>
-Maksymalna liczba znaków, które bufor może pomieścić, łącznie z terminatorem NULL.
+Maksymalna liczba znaków, jaką może zawierać bufor, łącznie z terminatorem o wartości NULL.
 
 *pnHelpContext*<br/>
-Adres UINT, który otrzyma identyfikator kontekstu pomocy. Jeśli null, identyfikator nie zostaną zwrócone.
+Adres klasy UINT, która będzie odbierać identyfikator kontekstu pomocy. Jeśli wartość jest równa NULL, żaden identyfikator nie zostanie zwrócony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie 0, jeśli nie jest dostępny tekst komunikatu o błędzie.
+Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie, jeśli tekst komunikatu o błędzie nie jest dostępny.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
+Aby uzyskać więcej informacji, zobacz [CException:: GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
 
 ## <a name="see-also"></a>Zobacz też
 

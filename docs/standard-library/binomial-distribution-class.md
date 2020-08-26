@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230249"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846514"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution — Klasa
 
@@ -81,10 +81,8 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **`int`** , jeśli nie jest podany, dystrybuowany zgodnie z dyskretną funkcją skumulowanego prawdopodobieństwa rozkładu dwumianowego. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 Elementy członkowskie właściwości `t()` i `p()` zwracają odpowiednio przechowywane wartości parametrów dystrybucji *t* i *p* .
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution:: binomial_distribution
 
 Konstruuje dystrybucję.
 
@@ -253,13 +251,13 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0 ≤ t` lub`0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:** `0 ≤ t` lub `0.0 ≤ p ≤ 1.0`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywana wartość *p* utrzymuje wartość *p* i której przechowywana wartość *t* przechowuje wartość *t*.
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -288,10 +286,10 @@ Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0 ≤ t` lub`0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:** `0 ≤ t` lub `0.0 ≤ p ≤ 1.0`
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

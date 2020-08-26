@@ -1,17 +1,17 @@
 ---
-title: propputref (C++ atrybut com)
+title: propputref (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dbb5d5966fc82f69be0ed7d2fa0a66ad558a7915
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839910"
 ---
 # <a name="propputref"></a>propputref
 
@@ -33,13 +33,11 @@ Zobacz przykład dla [powiązania](bindable.md) z przykładowym wykorzystaniem *
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`propget`, `propput`|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).

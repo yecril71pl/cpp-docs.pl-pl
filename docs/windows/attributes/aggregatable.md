@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224490"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836377"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ Wskazuje, że Klasa obsługuje agregację.
 *wartościami*<br/>
 Obowiązkowe Parametr wskazujący, kiedy można agregować obiekt COM:
 
-- `never`Nie można agregować obiektu COM.
+- `never` Nie można agregować obiektu COM.
 
-- `allowed`Obiekt COM można utworzyć bezpośrednio lub może być zagregowany. Jest to opcja domyślna.
+- `allowed` Obiekt COM można utworzyć bezpośrednio lub może być zagregowany. Jest to opcja domyślna.
 
-- `always`Obiektu COM nie można utworzyć bezpośrednio i można go agregować tylko. Po wywołaniu `CoCreateInstance` dla tego obiektu należy określić interfejs obiektu agregowania `IUnknown` (kontrolka `IUnknown` ).
+- `always` Obiektu COM nie można utworzyć bezpośrednio i można go agregować tylko. Po wywołaniu `CoCreateInstance` dla tego obiektu należy określić interfejs obiektu agregowania `IUnknown` (kontrolka `IUnknown` ).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
@@ -79,7 +77,7 @@ class CMyClass {};
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

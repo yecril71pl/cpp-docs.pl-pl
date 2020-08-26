@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846592"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -71,13 +71,13 @@ Atrybut odczytu/zapisu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca wartość-1, jeśli nazwany plik nie istnieje lub nie ma podanego trybu; w tym przypadku jest `errno` ustawiony tak, jak pokazano w poniższej tabeli.
+Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca wartość-1, jeśli nazwany plik nie istnieje lub nie ma podanego trybu; w tym przypadku `errno` jest ustawiony tak, jak pokazano w poniższej tabeli.
 
-|||
-|-|-|
-`EACCES`|Odmowa dostępu: ustawienie uprawnienia pliku nie zezwala na określony dostęp.
-`ENOENT`|Nie odnaleziono nazwy pliku lub ścieżki.
-`EINVAL`|Nieprawidłowy parametr.
+| Wartość | Opis |
+|--|--|
+| `EACCES` | Odmowa dostępu: ustawienie uprawnienia pliku nie zezwala na określony dostęp. |
+| `ENOENT` | Nie odnaleziono nazwy pliku lub ścieżki. |
+| `EINVAL` | Nieprawidłowy parametr. |
 
 Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -110,8 +110,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_access**|\<IO. h>|\<errno. h>|
-|**_waccess**|\<WCHAR. h> lub \<IO. h>|\<errno. h>|
+|**_access**|\<io.h>|\<errno.h>|
+|**_waccess**|\<wchar.h> lub \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>Przykład
 

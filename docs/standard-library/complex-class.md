@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230094"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836547"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -46,26 +46,26 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[złożonych](#complex)|Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistych i urojonych części liczby zespolonej.|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[imag](#imag)|Wyodrębnia część urojoną liczby zespolonej.|
-|[real](#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
+|[liczba rzeczywista](#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator * =](#op_star_eq)|Mnoży docelowy liczbę zespoloną przez współczynnik, który może być złożony lub być tego samego typu, co są częścią rzeczywistą i urojoną liczby zespolonej.|
 |[operator + =](#op_add_eq)|Dodaje liczbę do docelowej liczby zespolonej, w której dodana liczba może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.|
@@ -73,7 +73,7 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 |[operator/=](#op_div_eq)|Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.|
 |[operator =](#op_eq)|Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.|
 
-## <a name="complex"></a><a name="complex"></a>złożonych
+## <a name="complex"></a><a name="complex"></a> złożonych
 
 Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a><a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a> imag
 
 Wyodrębnia część urojoną liczby zespolonej.
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a> operator * =
 
 Mnoży docelowy liczbę zespoloną przez współczynnik, który może być złożony lub być tego samego typu, co są częścią rzeczywistą i urojoną liczby zespolonej.
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>operator + =
+## <a name="operator"></a><a name="op_add_eq"></a> operator + =
 
 Dodaje liczbę do docelowej liczby zespolonej, w której dodana liczba może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a> operator-=
 
 Odejmuje liczbę od docelowej liczby zespolonej, w której liczba odejmowanych może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a> operator/=
 
 Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a><a name="real"></a>czasie rzeczywistym
+## <a name="real"></a><a name="real"></a> czasie rzeczywistym
 
 Pobiera lub ustawia prawdziwy składnik liczby zespolonej.
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistych i urojonych części liczby zespolonej.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type`jest synonimem dla parametru szablonu złożonego klasy `Type` .
+`value_type` jest synonimem dla parametru szablonu złożonego klasy `Type` .
 
 ### <a name="example"></a>Przykład
 
@@ -780,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

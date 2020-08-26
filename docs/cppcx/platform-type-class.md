@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846566"
 ---
 # <a name="platformtype-class"></a>Platform:: Type — Klasa
 
@@ -33,23 +33,23 @@ public ref class Platform::Type :
 
 ## <a name="public-methods"></a>Metody publiczne
 
-|||
-|-|-|
-|[Type:: GetTypeCode — Metoda](#gettypecode)|Zwraca wartość [wyliczenia platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) dla obiektu.|
-|[Type:: ToString — Metoda](#tostring)|Zwraca nazwę typu, jak określono w jego metadanych.|
+| Nazwa | Opis |
+|--|--|
+| [Type:: GetTypeCode — Metoda](#gettypecode) | Zwraca wartość [wyliczenia platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) dla obiektu. |
+| [Type:: ToString — Metoda](#tostring) | Zwraca nazwę typu, jak określono w jego metadanych. |
 
 ## <a name="public-properties"></a>Właściwości publiczne
 
-|||
-|-|-|
-|[Typ:: FullName](#fullname)|Zwraca [klasę platform:: String](../cppcx/platform-string-class.md)^ reprezentującą w pełni kwalifikowaną nazwę typu i używa. (kropka) jako separator, nie:: (dwukropek) — na przykład `MyNamespace.MyClass` .|
+| Nazwa | Opis |
+|--|--|
+| [Typ:: FullName](#fullname) | Zwraca [klasę platform:: String](../cppcx/platform-string-class.md)^ reprezentującą w pełni kwalifikowaną nazwę typu i używa. (kropka) jako separator, nie:: (dwukropek) — na przykład `MyNamespace.MyClass` . |
 
 ## <a name="conversion-operators"></a>Operatory konwersji
 
-|||
-|-|-|
-|[Typ operatora ^](../cppcx/operator-type-hat.md)|Włącza konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type` .|
-|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Włącza konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName` .|
+| Nazwa | Opis |
+|--|--|
+| [Typ operatora ^](../cppcx/operator-type-hat.md) | Włącza konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type` . |
+| [operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Włącza konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName` . |
 
 ### <a name="requirements"></a>Wymagania
 
@@ -61,7 +61,7 @@ public ref class Platform::Type :
 
 **Metadane:** obiekt platform. winmd
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Type:: FullName, właściwość
+## <a name="typefullname-property"></a><a name="fullname"></a> Type:: FullName, właściwość
 
 Pobiera w postaci w pełni kwalifikowaną nazwę bieżącego typu `Namespace.Type` .
 
@@ -88,7 +88,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Type:: GetTypeCode — Metoda
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a> Type:: GetTypeCode — Metoda
 
 Pobiera typy wbudowanej kategorii typu liczbowego.
 
@@ -106,7 +106,7 @@ Jedna z wartości wyliczenia platform:: TypeCode.
 
 Odpowiednikiem metody elementu członkowskiego GetTypeCode () jest **`typeid`** Właściwość.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Type:: ToString — Metoda
+## <a name="typetostring-method"></a><a name="tostring"></a> Type:: ToString — Metoda
 
 Pobiera nazwę typu.
 
@@ -120,6 +120,6 @@ Platform::String^ ToString();
 
 Nazwa typu określonego w metadanych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

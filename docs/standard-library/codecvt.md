@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: e571c1ca8beef684a40bbf643e83aba3f205fc8e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec403bd02df0b937269acc71ddf87e1942bb4c5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836598"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -44,7 +44,7 @@ Dla strumieni bajtów (przechowywanych w pliku, przesyłanych w postaci sekwencj
 
 ### <a name="enumerations"></a>Wyliczenia
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Określa informacje o konfiguracji dla zestawów reguł ustawień regionalnych.|
 
@@ -62,6 +62,6 @@ Dla strumieni bajtów (przechowywanych w pliku, przesyłanych w postaci sekwencj
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

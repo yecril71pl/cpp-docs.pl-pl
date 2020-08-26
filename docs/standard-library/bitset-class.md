@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 9a822e635ea3a1fd035a6a4b1d2b38250c96158a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217847"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846488"
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 
@@ -67,62 +67,62 @@ Bit jest ustawiony, jeśli jego wartość jest równa 1 i zresetowana, jeśli je
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[bitset](#bitset)|Konstruuje obiekt klasy `bitset\<N>` i inicjuje bity do zera, do określonej wartości lub do wartości uzyskanych z znaków w ciągu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[element_type](#element_type)|Typ, który jest synonimem dla typu danych **`bool`** i może służyć do odwoływania się do bitów elementów w `bitset` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[całą](#all)|Testuje wszystkie bity w tym `bitset` celu, aby określić, czy są one ustawione na **`true`** .|
 |[ile](#any)|Funkcja członkowska testuje, czy dowolny bit w sekwencji jest ustawiony na 1.|
-|[liczbą](#count)|Funkcja członkowska zwraca liczbę bitów ustawionych w sekwencji bitowej.|
+|[count](#count)|Funkcja członkowska zwraca liczbę bitów ustawionych w sekwencji bitowej.|
 |[stosowane](#flip)|Odwraca wartość wszystkich bitów w `bitset` lub odwraca pojedynczy bit w określonym położeniu.|
 |[brak](#none)|Testuje, czy żaden bit nie został ustawiony na 1 w `bitset` obiekcie.|
 |[zresetować](#reset)|Resetuje wszystkie bity w a `bitset` do 0 lub resetuje bit w określonym położeniu do 0.|
 |[zbiór](#set)|Ustawia wszystkie bity w a `bitset` do 1 lub ustawia bit w określonym położeniu na 1.|
 |[zmienia](#size)|Zwraca liczbę bitów w `bitset` obiekcie.|
-|[badan](#test)|Testuje, czy bit w określonej pozycji w a `bitset` ma ustawioną wartość 1.|
+|[test](#test)|Testuje, czy bit w określonej pozycji w a `bitset` ma ustawioną wartość 1.|
 |[to_string](#to_string)|Konwertuje `bitset` obiekt na reprezentację ciągu.|
 |[to_ullong](#to_ullong)|Zwraca sumę wartości bitowych w `bitset` jako **`unsigned long long`** .|
 |[to_ulong](#to_ulong)|Konwertuje `bitset` obiekt na **`unsigned long`** , który będzie generował sekwencję bitów zawartych, jeśli jest używana do inicjowania `bitset` .|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[odwoła](#reference)|Klasa proxy, która udostępnia odwołania do bitów zawartych w `bitset` , która jest używana do uzyskiwania dostępu do poszczególnych bitów i manipulowania nimi jako Klasa pomocnika dla `operator[]` klasy `bitset` .|
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator! =](#op_neq)|Testuje element docelowy pod `bitset` kątem nierówności z określonym `bitset` .|
 |[&operatora =](#op_and_eq)|Wykonuje bitową kombinację bitsets z `AND` operacją logiczną.|
-|[<<operatora](#op_lshift)|Przenosi bity w `bitset` kierunku do lewej określoną liczbę pozycji i zwraca wynik do nowego `bitset` .|
+|[<<operatora ](#op_lshift)|Przenosi bity w `bitset` kierunku do lewej określoną liczbę pozycji i zwraca wynik do nowego `bitset` .|
 |[<<operatora =](#op_lshift_eq)|Przenosi bity w `bitset` kierunku do lewej określoną liczbę pozycji i zwraca wynik do obiektu wskazywanego `bitset` .|
 |[operator = =](#op_eq_eq)|Testuje element docelowy pod `bitset` kątem równości z określonym `bitset` .|
-|[>>operatora](#op_rshift)|Przenosi bity w dół `bitset` do prawej określoną liczbę pozycji i zwraca wynik do nowego `bitset` .|
+|[>>operatora ](#op_rshift)|Przenosi bity w dół `bitset` do prawej określoną liczbę pozycji i zwraca wynik do nowego `bitset` .|
 |[>>operatora =](#op_rshift_eq)|Przenosi bity w dół o `bitset` określoną liczbę pozycji i zwraca wynik do obiektu wskazywanego `bitset` .|
-|[&#91;&#93;operatora](#op_at)|Zwraca odwołanie do bitu w określonej pozycji w, `bitset` Jeśli `bitset` jest modyfikowalny; w przeciwnym razie zwraca wartość bitu na tej pozycji.|
+|[&#91;&#93;operatora ](#op_at)|Zwraca odwołanie do bitu w określonej pozycji w, `bitset` Jeśli `bitset` jest modyfikowalny; w przeciwnym razie zwraca wartość bitu na tej pozycji.|
 |[operator ^ =](#op_xor_eq)|Wykonuje bitową kombinację bitsets z `OR` operacją wyłączną.|
 |[&#124;operatora =](#op_or_eq)|Wykonuje bitową kombinację bitsets za pomocą operacji włączania `OR` .|
 |[operator ~](#op_not)|Odwraca wszystkie bity w miejscu docelowym `bitset` i zwraca wynik.|
 
 ### <a name="structures"></a>Struktury
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[skrótu](#hash)||
 
-### <a name="all"></a><a name="all"></a>całą
+### <a name="all"></a><a name="all"></a> całą
 
 Testuje wszystkie bity w tym bitset, aby określić, czy są one ustawione na wartość true.
 
@@ -134,7 +134,7 @@ bool all() const;
 
 Zwraca wartość PRAWDA, jeśli wszystkie bity w tym zestawie są spełnione. Zwraca wartość **`false`** , jeśli co najmniej jeden bity ma wartość false.
 
-### <a name="any"></a><a name="any"></a>ile
+### <a name="any"></a><a name="any"></a> ile
 
 Testuje, czy dowolny bit w sekwencji jest ustawiony na 1.
 
@@ -197,7 +197,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="bitset"></a><a name="bitset"></a>bitset
+### <a name="bitset"></a><a name="bitset"></a> bitset
 
 Konstruuje obiekt klasy `bitset\<N>` i inicjuje bity do zera lub do określonej wartości lub do wartości uzyskanych z znaków w ciągu.
 
@@ -259,7 +259,7 @@ Trzy konstruktory mogą służyć do konstruowania obects klasy `bitset\<N>` :
 
 - Drugi Konstruktor konstruuje obiekt klasy `bitset\<N>` i inicjuje bity przy użyciu jednego **`unsigned long long`** parametru.
 
-- Trzeci Konstruktor konstruuje obiekt klasy `bitset\<N>` , inicjując N bitów na wartości, które odpowiadają znakom podanym w ciągu znakowym w stylu c i. Wywoływany jest Konstruktor bez rzutowania ciągu na typ String:`bitset<5> b5("01011");`
+- Trzeci Konstruktor konstruuje obiekt klasy `bitset\<N>` , inicjując N bitów na wartości, które odpowiadają znakom podanym w ciągu znakowym w stylu c i. Wywoływany jest Konstruktor bez rzutowania ciągu na typ String: `bitset<5> b5("01011");`
 
 Dostępne są również dwa szablony konstruktora:
 
@@ -342,7 +342,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```
 
-### <a name="count"></a><a name="count"></a>liczbą
+### <a name="count"></a><a name="count"></a> liczbą
 
 Zwraca liczbę bitów ustawionych w sekwencji bitowej.
 
@@ -396,7 +396,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Typ, który jest synonimem dla typu danych **`bool`** i może służyć do odwoływania się do bitów elementów w bitset.
 
@@ -452,7 +452,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.
 ```
 
-### <a name="flip"></a><a name="flip"></a>stosowane
+### <a name="flip"></a><a name="flip"></a> stosowane
 
 Odwraca wartość wszystkich bitów w bitset lub odwraca pojedynczy bit na określonej pozycji.
 
@@ -525,14 +525,14 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.
 ```
 
-### <a name="hash"></a><a name="hash"></a>skrótu
+### <a name="hash"></a><a name="hash"></a> skrótu
 
 ```cpp
 template <class T> struct hash;
 template <size_t N> struct hash<bitset<N>>;
 ```
 
-### <a name="none"></a><a name="none"></a>dawaj
+### <a name="none"></a><a name="none"></a> dawaj
 
 Testuje, czy żaden bit nie został ustawiony na 1 w obiekcie bitset.
 
@@ -589,7 +589,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje docelowy bitset dla nierówności z określonym bitset.
 
@@ -651,7 +651,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatoramp"></a><a name="op_and_eq"></a>zakład&amp;=
+### <a name="operatoramp"></a><a name="op_and_eq"></a> zakład&amp;=
 
 Wykonuje bitową kombinację bitsets z `AND` operacją logiczną.
 
@@ -718,7 +718,7 @@ the target bitset b1 becomes:   ( 00011 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_lshift"></a>zakład\<\<
+### <a name="operator"></a><a name="op_lshift"></a> zakład\<\<
 
 Przenosi bity w bitset do lewej określoną liczbę pozycji i zwraca wynik do nowego bitset.
 
@@ -770,7 +770,7 @@ int main( )
 }
 ```
 
-### <a name="operatorltlt"></a><a name="op_lshift_eq"></a>zakład&lt;&lt;=
+### <a name="operatorltlt"></a><a name="op_lshift_eq"></a> zakład&lt;&lt;=
 
 Przenosi bity w bitset do lewej określoną liczbę pozycji i zwraca wynik do obiektu bitset.
 
@@ -817,7 +817,7 @@ After shifting the bits 2 positions to the left,
 the target bitset b1 becomes: ( 11100 ).
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje docelowy bitset dla równości z określonym bitset.
 
@@ -878,7 +878,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift"></a>zakład&gt;&gt;
+### <a name="operatorgtgt"></a><a name="op_rshift"></a> zakład&gt;&gt;
 
 Przenosi bity w bitset do prawej określonej liczby pozycji i zwraca wynik do nowego bitset.
 
@@ -931,7 +931,7 @@ After shifting the bits 1 position to the right,
 the bitset b3 is: ( 01110 ).
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a>zakład&gt;&gt;=
+### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a> zakład&gt;&gt;=
 
 Przenosi bity w bitset do prawej określonej liczby pozycji i zwraca wynik do obiektu bitset.
 
@@ -979,7 +979,7 @@ After shifting the bits 2 positions to the right,
 the target bitset b1 becomes: ( 00111 ).
 ```
 
-### <a name="operator"></a><a name="op_at"></a>operator []
+### <a name="operator"></a><a name="op_at"></a> operator []
 
 Zwraca odwołanie do bitu na określonej pozycji w bitset, jeśli bitset jest modyfikowalna; w przeciwnym razie zwraca wartość bitu w tym położeniu.
 
@@ -1023,7 +1023,7 @@ int main( )
 }
 ```
 
-### <a name="operator"></a><a name="op_xor_eq"></a>operator ^ =
+### <a name="operator"></a><a name="op_xor_eq"></a> operator ^ =
 
 Wykonuje bitową kombinację bitsets z `OR` operacją wyłączną.
 
@@ -1156,7 +1156,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_not"></a>operator ~
+### <a name="operator"></a><a name="op_not"></a> operator ~
 
 Odwraca wszystkie bity w docelowym bitset i zwraca wynik.
 
@@ -1201,7 +1201,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```
 
-### <a name="reference"></a><a name="reference"></a>odwoła
+### <a name="reference"></a><a name="reference"></a> odwoła
 
 Klasa proxy, która udostępnia odwołania do bitów zawartych w bitset, która jest używana do uzyskiwania dostępu do poszczególnych bitów i manipulowania nimi jako Klasa pomocnika dla `operator[]` klasy bitset.
 
@@ -1323,7 +1323,7 @@ it becomes ( 00110 ).
 After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```
 
-### <a name="reset"></a><a name="reset"></a>zresetować
+### <a name="reset"></a><a name="reset"></a> zresetować
 
 Resetuje wszystkie bity w bitset do 0 lub resetuje bit w określonym położeniu do 0.
 
@@ -1383,7 +1383,7 @@ The collecion of bits obtained from resetting all
 the elements of the bitset b1 is: ( 00000 )
 ```
 
-### <a name="set"></a><a name="set"></a>zbiór
+### <a name="set"></a><a name="set"></a> zbiór
 
 Ustawia wszystkie bity w bitset do 1 lub ustawia bit w określonym położeniu na 1.
 
@@ -1449,7 +1449,7 @@ The collecion of bits obtained from setting all the
 elements of the bitset b1 is: ( 11111 )
 ```
 
-### <a name="size"></a><a name="size"></a>zmienia
+### <a name="size"></a><a name="size"></a> zmienia
 
 Zwraca liczbę bitów w obiekcie bitset.
 
@@ -1491,7 +1491,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.
 ```
 
-### <a name="test"></a><a name="test"></a>badan
+### <a name="test"></a><a name="test"></a> badan
 
 Testuje, czy bit na określonej pozycji w bitset jest ustawiony na 1.
 
@@ -1512,7 +1512,7 @@ Pozycja bitu w bitset, który ma być testowany jako wartość.
 
 Funkcja członkowska zgłasza [out_of_range](../standard-library/out-of-range-class.md)
 
-### <a name="to_string"></a><a name="to_string"></a>to_string
+### <a name="to_string"></a><a name="to_string"></a> to_string
 
 Konwertuje obiekt bitset na reprezentację ciągu.
 
@@ -1560,7 +1560,7 @@ The string returned from the bitset b1
   by the member function to_string( ) is: 00111.
 ```
 
-### <a name="to_ullong"></a><a name="to_ullong"></a>to_ullong
+### <a name="to_ullong"></a><a name="to_ullong"></a> to_ullong
 
 Zwraca **`unsigned long long`** wartość, która zawiera te same bity ustawione jako zawartość obiektu bitset.
 
@@ -1580,7 +1580,7 @@ Zgłasza obiekt [overflow_error](overflow-error-class.md) , jeśli dowolny bit w
 
 Zwraca sumę wartości bitowych, które znajdują się w sekwencji bitowej jako **`unsigned long long`** .
 
-### <a name="to_ulong"></a><a name="to_ulong"></a>to_ulong
+### <a name="to_ulong"></a><a name="to_ulong"></a> to_ulong
 
 Konwertuje obiekt bitset na liczbę całkowitą, która spowodowałaby generowanie sekwencji bitów zawartych w przypadku użycia do zainicjowania bitset.
 

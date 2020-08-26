@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 3092111236afe1e1360a2814c3091ab0de4ff6ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840001"
 ---
 # <a name="progid"></a>progid
 
@@ -36,7 +36,7 @@ Identyfikatory ProgID składają się na czytelną dla człowieka wersję identy
 
 Jeśli blok atrybutu, który używa `progid` nie jest również używany `uuid` , kompilator sprawdzi rejestr, aby zobaczyć, czy `uuid` istnieje dla określonego `progid` . Jeśli `progid` nie jest określony, zostanie użyta wersja (i nazwa klasy coclass, jeśli tworzysz klasę coclass) `progid` .
 
-`progid`Określa `coclass` atrybut, który oznacza, że jeśli określisz `progid` , jest to takie samo, jak określenie `coclass` `progid` atrybutów i.
+`progid` Określa `coclass` atrybut, który oznacza, że jeśli określisz `progid` , jest to takie samo, jak określenie `coclass` `progid` atrybutów i.
 
 Ten `progid` atrybut powoduje automatyczne zarejestrowanie klasy pod określoną nazwą. Wygenerowany plik IDL nie będzie wyświetlał `progid` wartości.
 
@@ -48,9 +48,7 @@ Zapoznaj się z przykładem [klasy coclass](coclass.md) dla przykładowego użyc
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|`class`, `struct`|
 |**Powtarzalne**|Nie|
@@ -59,7 +57,7 @@ Zapoznaj się z przykładem [klasy coclass](coclass.md) dla przykładowego użyc
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

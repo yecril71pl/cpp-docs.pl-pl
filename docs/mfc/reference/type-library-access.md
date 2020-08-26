@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 1794e16489ab48d919bbd4116588fba4b74b88d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55d6a56f566416bb25f3ee3ae508c86f17f0df99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372872"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840456"
 ---
 # <a name="type-library-access"></a>Dostęp do biblioteki typów
 
-Biblioteki typów udostępniają interfejsy formantu OLE innym aplikacjom obsługującym ole. Każdy formant OLE musi mieć bibliotekę typów, jeśli jeden lub więcej interfejsów mają być widoczne.
+Biblioteki typów uwidaczniają interfejsy kontrolki OLE innym aplikacjom obsługującym technologię OLE. Każdy formant OLE musi mieć bibliotekę typów, jeśli jeden lub więcej interfejsów ma być narażony.
 
-Następujące makra umożliwiają formancie OLE zapewnienie dostępu do własnej biblioteki typów:
+Następujące makra pozwalają formantowi OLE zapewnić dostęp do własnej biblioteki typów:
 
 ### <a name="type-library-access"></a>Dostęp do biblioteki typów
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Deklaruje funkcję `GetTypeLib` elementu członkowskiego formantu OLE (musi być używany w deklaracji klasy).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementuje `GetTypeLib` funkcję elementu członkowskiego formantu OLE (musi być używany w implementacji klasy).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Deklaruje `GetTypeLib` funkcję członkowską formantu OLE (musi być użyta w deklaracji klasy).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementuje `GetTypeLib` funkcję członkowską formantu OLE (musi być używana w implementacji klasy).|
 
-## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a> DECLARE_OLETYPELIB
 
-Deklaruje funkcję `GetTypeLib` elementu członkowskiego klasy kontrolnej.
+Deklaruje `GetTypeLib` funkcję członkowską klasy kontrolki.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,19 +35,19 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Nazwa klasy formantu związane z biblioteką typów.
+Nazwa klasy kontrolki powiązanej z biblioteką typów.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego makra w pliku nagłówka klasy kontrolnej.
+Użyj tego makra w pliku nagłówkowym klasy kontrolki.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
-## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a> IMPLEMENT_OLETYPELIB
 
-Implementuje funkcję `GetTypeLib` elementu członkowskiego formantu.
+Implementuje `GetTypeLib` funkcję składową formantu.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,25 +56,25 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Nazwa klasy formantu związane z biblioteką typów.
+Nazwa klasy kontrolki powiązanej z biblioteką typów.
 
-*tlid ( tlid )*<br/>
-Numer identyfikatora biblioteki typów.
+*tlid*<br/>
+Numer IDENTYFIKACYJNy biblioteki typów.
 
 *wVerMajor*<br/>
-Numer głównej wersji biblioteki typów.
+Główny numer wersji biblioteki typów.
 
 *wVerMinor*<br/>
 Numer wersji pomocniczej biblioteki typów.
 
 ### <a name="remarks"></a>Uwagi
 
-To makro musi pojawić się w pliku implementacji dla każdej klasy formantu, która używa makra DECLARE_OLETYPELIB.
+To makro musi pojawić się w pliku implementacji dla każdej klasy kontrolki, która używa makra DECLARE_OLETYPELIB.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

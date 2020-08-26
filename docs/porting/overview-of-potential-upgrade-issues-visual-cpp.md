@@ -2,12 +2,12 @@
 title: Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231640"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839676"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 
@@ -98,9 +98,8 @@ Projekty używające tej opcji powodują problem podczas uaktualniania, poniewa�
 
 W poniższej tabeli przedstawiono biblioteki, których zawartość została zmieniona, począwszy od programu Visual Studio 2015. Aby uaktualnić, należy dodać nowe nazwy bibliotek w drugiej kolumnie do bibliotek w pierwszej kolumnie. Niektóre z tych bibliotek są importowane, ale nie powinny mieć znaczenia.
 
-|||
-|-|-|
 |Jeśli używasz:|Musisz użyć następujących bibliotek:|
+|-|-|
 |libcmt. lib|libcmt. lib, libucrt. lib, libvcruntime. lib|
 |libcmtd. lib|libcmtd. lib, libucrtd. lib, libvcruntimed. lib|
 |msvcrt. lib|msvcrt. lib, UCRT. lib, vcruntime. lib|
@@ -180,11 +179,11 @@ Należy również pamiętać o możliwych problemach dotyczących czasu kompilac
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode vs MBCS/ASCII
 
-Przed znormalizowaniem Unicode wiele programów używało zestawu znaków wielobajtowych (MBCS) do reprezentowania znaków, które nie zostały uwzględnione w zestawie znaków ASCII. W starszych projektach MFC MBCS było ustawieniem domyślnym i po uaktualnieniu takiego programu zobaczysz ostrzeżenia, które doradzają zamiast użycia Unicode. Możesz zdecydować się na wyłączenie lub Zignorowanie ostrzeżenia, jeśli zdecydujesz, że konwersja na Unicode nie jest powarta kosztem rozwoju. Aby wyłączyć go dla wszystkich projektów w rozwiązaniu, Otwórz **Widok**  >  **Menedżer właściwości**, zaznacz wszystkie projekty, dla których chcesz wyłączyć ostrzeżenie, a następnie kliknij prawym przyciskiem myszy wybrane elementy i wybierz polecenie **Właściwości**. W oknie dialogowym **strony właściwości** wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >  **Zaawansowane**. W właściwości **Wyłącz określone ostrzeżenia** Otwórz strzałkę listy rozwijanej, a następnie wybierz polecenie **Edytuj**. Wprowadź 4996 w polu tekstowym. (Nie dołączaj prefiksu "C"). Wybierz **przycisk OK** , aby zapisać właściwość, a następnie wybierz przycisk **OK** , aby zapisać zmiany.
+Przed znormalizowaniem Unicode wiele programów używało zestawu znaków wielobajtowych (MBCS) do reprezentowania znaków, które nie zostały uwzględnione w zestawie znaków ASCII. W starszych projektach MFC MBCS było ustawieniem domyślnym i po uaktualnieniu takiego programu zobaczysz ostrzeżenia, które doradzają zamiast użycia Unicode. Możesz zdecydować się na wyłączenie lub Zignorowanie ostrzeżenia, jeśli zdecydujesz, że konwersja na Unicode nie jest powarta kosztem rozwoju. Aby wyłączyć go dla wszystkich projektów w rozwiązaniu, Otwórz **Widok**  >  **Menedżer właściwości**, zaznacz wszystkie projekty, dla których chcesz wyłączyć ostrzeżenie, a następnie kliknij prawym przyciskiem myszy wybrane elementy i wybierz polecenie **Właściwości**. W oknie dialogowym **strony właściwości** wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >  **Zaawansowane**. W właściwości  **Wyłącz określone ostrzeżenia** Otwórz strzałkę listy rozwijanej, a następnie wybierz polecenie **Edytuj**. Wprowadź 4996 w polu tekstowym. (Nie dołączaj prefiksu "C"). Wybierz **przycisk OK** , aby zapisać właściwość, a następnie wybierz przycisk **OK** , aby zapisać zmiany.
 
 Aby uzyskać więcej informacji, zobacz [przenoszenie z MBCS do Unicode](porting-guide-spy-increment.md#porting_to_unicode). Aby uzyskać ogólne informacje na temat MBCS i Unicode, zobacz [tekst i ciągi w Visual C++](../text/text-and-strings-in-visual-cpp.md) i [międzynarodowe](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uaktualnianie projektów z wcześniejszych wersji Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)

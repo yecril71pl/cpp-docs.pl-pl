@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210409"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836146"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl — Klasa
 
@@ -34,25 +34,25 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa pochodna `IRowsetIdentityImpl`.
+*T*<br/>
+Klasa pochodna `IRowsetIdentityImpl` .
 
 *RowClass*<br/>
-Jednostka magazynowa dla `HROW`.
+Jednostka magazynowa dla `HROW` .
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[IsSameRow](#issamerow)|Porównuje dwa uchwyty wierszy, aby zobaczyć, czy odwołują się do tego samego wiersza.|
 
-## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl —:: IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a> IRowsetIdentityImpl —:: IsSameRow
 
 Porównuje dwa uchwyty wierszy, aby zobaczyć, czy odwołują się do tego samego wiersza.
 
@@ -69,7 +69,7 @@ Zobacz [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629
 
 ### <a name="remarks"></a>Uwagi
 
-Aby porównać uchwyty wierszy, ta metoda rzutuje dojść `HROW` do `RowClass` elementów członkowskich i wywołań `memcmp` na wskaźnikach.
+Aby porównać uchwyty wierszy, ta metoda rzutuje `HROW` dojść do `RowClass` elementów członkowskich i wywołań `memcmp` na wskaźnikach.
 
 ## <a name="see-also"></a>Zobacz też
 

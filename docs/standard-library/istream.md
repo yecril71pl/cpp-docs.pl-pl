@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233096"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846462"
 ---
 # <a name="ltistreamgt"></a>&lt;IStream&gt;
 
@@ -36,7 +36,7 @@ Definiuje basic_istream szablonu klasy, który koryguje ekstrakcje dla iostreams
 
 ### <a name="manipulators"></a>Manipulatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ws](../standard-library/istream-functions.md#ws)|Pomija biały znak w strumieniu.|
 |[wymiany](../standard-library/istream-functions.md#istream_swap)|Wymienia dwa obiekty strumienia.|
@@ -45,7 +45,7 @@ Definiuje basic_istream szablonu klasy, który koryguje ekstrakcje dla iostreams
 
 |Operator|Opis|
 |-|-|
-|[>>operatora](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|
+|[>>operatora ](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|
 
 ### <a name="classes"></a>Klasy
 
@@ -54,7 +54,7 @@ Definiuje basic_istream szablonu klasy, który koryguje ekstrakcje dla iostreams
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Klasa strumienia, która może wykonywać zarówno dane wejściowe, jak i wyjściowe.|
 |[basic_istream](../standard-library/basic-istream-class.md)|Szablon klasy opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia z elementami typu `Elem` , znanym również jako [char_type](../standard-library/basic-ios-class.md#char_type), których cechy znaku są określane przez klasę `Tr` , znane także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\

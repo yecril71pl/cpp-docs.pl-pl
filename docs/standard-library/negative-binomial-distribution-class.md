@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212205"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836455"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution — Klasa
 
@@ -78,10 +78,8 @@ Typ wyniku liczby całkowitej, wartość domyślna to **`int`** . Aby zapoznać 
 
 Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **`int`** , jeśli nie jest podany, dystrybuowany zgodnie z ujemną funkcją prawdopodobieństwa rozkład dwumianowy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
-||||
-|-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
+[negative_binomial_distribution](#negative_binomial_distribution)\
+[param_type](#param_type)
 
 Elementy członkowskie właściwości `k()` i `p()` zwracają odpowiednio przechowywane wartości parametrów dystrybucji *k* i *p* .
 
@@ -221,7 +219,7 @@ Histogram for 100 samples:
 
 **Przestrzeń nazw:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a> negative_binomial_distribution:: negative_binomial_distribution
 
 Konstruuje dystrybucję.
 
@@ -243,13 +241,13 @@ Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < k` lub`0.0 < p ≤ 1.0`
+**Warunek wstępny:** `0.0 < k` lub `0.0 < p ≤ 1.0`
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `p` wartość utrzymuje wartość *p* i której przechowywana `k` wartość przechowuje wartość *k*.
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a> negative_binomial_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -270,10 +268,10 @@ Struktura param_type {typedef negative_binomial_distribution `<` result_type> di
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < k` lub`0.0 < p ≤ 1.0`
+**Warunek wstępny:** `0.0 < k` lub `0.0 < p ≤ 1.0`
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

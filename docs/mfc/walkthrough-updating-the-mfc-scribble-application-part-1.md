@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 9fc2903180a055c18c6f3779b1da55ee347d2535
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9eda80fbabf939b9e3a5f8a0ef5b76e46656740
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230431"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840261"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -26,7 +26,7 @@ W tym instruktażu jest modyfikowany przykład klasycznego programu Bazgroły 1,
 
 [Przykład programu Bazgroły dla MFC 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub nowszego, zobacz [Przewodnik dotyczący przenoszenia danych: Bazgroły MFC](../porting/porting-guide-mfc-scribble.md).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ta część przewodnika zawiera następujące sekcje:
 
@@ -42,7 +42,7 @@ Ta część przewodnika zawiera następujące sekcje:
 
 - [Ustawianie wyglądu aplikacji](#setlook)
 
-## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a>Zamienianie klas bazowych
+## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a> Zamienianie klas bazowych
 
 Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsługuje Wstążkę, należy uzyskać pochodną klasy aplikacji, ramki i narzędzi z zaktualizowanych klas bazowych. (Sugerujemy, aby nie modyfikować oryginalnego przykładu bazgrołów. Zamiast tego Wyczyść projekt Bazgroły, skopiuj go do innego katalogu, a następnie zmodyfikuj kopię.
 
@@ -87,11 +87,11 @@ Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsług
 
 1. W pliku mainfrm. cpp:
 
-    1. Zamień `m_wndToolBar.SetBarStyle` na`m_wndToolBar.SetPaneStyle`
+    1. Zamień `m_wndToolBar.SetBarStyle` na `m_wndToolBar.SetPaneStyle`
 
-    1. Zamień `m_wndToolBar.GetBarStyle` na`m_wndToolBar.GetPaneStyle`
+    1. Zamień `m_wndToolBar.GetBarStyle` na `m_wndToolBar.GetPaneStyle`
 
-    1. Zamień `DockControlBar(&m_wndToolBar)` na`DockPane(&m_wndToolBar)`
+    1. Zamień `DockControlBar(&m_wndToolBar)` na `DockPane(&m_wndToolBar)`
 
 1. W pliku ipframe. cpp Skomentuj następujące trzy wiersze kodu.
 
@@ -103,11 +103,11 @@ Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsług
 
 1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację.
 
-## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a>Dodawanie map bitowych do projektu
+## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a> Dodawanie map bitowych do projektu
 
 Kolejne cztery kroki tego instruktażu wymagają zasobów map bitowych. Odpowiednie mapy bitowe można uzyskać na różne sposoby:
 
-- Użyj [edytorów zasobów](../windows/resource-editors.md) , aby wyrównać własne mapy bitowe. Lub użyj edytorów zasobów, aby utworzyć mapy bitowe z obrazów Portable Network Graphics (PNG), które są dołączone do programu Visual Studio i można pobrać z [biblioteki obrazów programu Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Użyj [edytorów zasobów](../windows/resource-editors.md) , aby wyrównać własne mapy bitowe. Lub użyj edytorów zasobów, aby utworzyć mapy bitowe z obrazów Portable Network Graphics (PNG), które są dołączone do programu Visual Studio i można pobrać z [biblioteki obrazów programu Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
     Jednak interfejs użytkownika **wstążki** wymaga, aby niektóre mapy bitowe obsługiwały przezroczyste obrazy. Przezroczyste mapy bitowe używają 32-bitowych pikseli, gdzie 24 bity określają składniki czerwonego, zielonego i niebieskiego koloru, a 8 bitów definiuje *kanał alfa* , który określa przezroczystość koloru. Bieżące edytory zasobów mogą wyświetlać, ale nie modyfikować Bitmap z 32-bitowymi pikselami. W związku z tym Użyj zewnętrznego edytora obrazów zamiast edytorów zasobów, aby manipulować przezroczystymi mapami bitowych.
 
@@ -153,7 +153,7 @@ Ten Instruktaż kopiuje pliki zasobów z przykładu utworzonego w [przewodniku: 
    > [!NOTE]
    > Ponieważ potrzebujemy tylko czterech pierwszych obrazów (16x64), możesz opcjonalnie przyciąć prawą szerokość tej mapy bitowej z 128 do 64.
 
-## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a>Dodawanie zasobu wstążki do projektu
+## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a> Dodawanie zasobu wstążki do projektu
 
 Podczas konwertowania aplikacji, która używa menu do aplikacji, która używa wstążki, nie trzeba usuwać ani wyłączać istniejących menu. Po prostu utwórz zasób wstążki, Dodaj przyciski wstążki, a następnie skojarz nowe przyciski z istniejącymi elementami menu. Mimo że menu nie są już widoczne, komunikaty z paska wstążki są kierowane w menu i skróty do menu nadal działają.
 
@@ -206,7 +206,7 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 
    1. Zmodyfikowano **przyciski**. Kliknij przycisk **Zamknij** , aby wyjść z **edytora elementów**.
 
-## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a>Tworzenie wystąpienia paska wstążki
+## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a> Tworzenie wystąpienia paska wstążki
 
 Poniższe kroki pokazują, jak utworzyć wystąpienie paska wstążki podczas uruchamiania aplikacji. Aby dodać pasek wstążki do aplikacji, zadeklaruj pasek wstążki w pliku mainfrm. h. Następnie w pliku mainfrm. cpp Napisz kod w celu załadowania zasobu wstążki.
 
@@ -230,7 +230,7 @@ Poniższe kroki pokazują, jak utworzyć wystąpienie paska wstążki podczas ur
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a>Dostosowywanie zasobu wstążki
+## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a> Dostosowywanie zasobu wstążki
 
 Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
@@ -247,7 +247,7 @@ Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację. Aplikacja bazgrołów powinna być wyświetlana, a w górnej części okna powinna znajdować się pasek wstążki, a nie pasek menu. Pasek wstążki powinien mieć jedną kategorię, **Home**i **Home** powinien mieć jeden panel, **Edytuj**. Dodane przyciski wstążki powinny być skojarzone z istniejącymi programami obsługi zdarzeń, a przyciski **Otwórz**, **Zamknij**, **Zapisz**, **Drukuj**i **Wyczyść wszystkie** powinny działać zgodnie z oczekiwaniami.
 
-## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a>Ustawianie wyglądu aplikacji
+## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Ustawianie wyglądu aplikacji
 
 *Program Visual Manager* jest obiektem globalnym, który kontroluje cały rysunek dla aplikacji. Ponieważ oryginalna aplikacja bazgrołów używa stylu interfejsu użytkownika (UI) pakietu Office 2000, aplikacja może wyglądać w stary sposób. Możesz zresetować aplikację tak, aby korzystała z programu Microsoft Visual 2007e Manager, tak aby była podobna do aplikacji pakietu Office 2007.
 
@@ -267,7 +267,7 @@ Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 Zmodyfikowano przykład klasycznego bazgrołów 1,0 MFC, aby użyć **projektanta wstążki**. Teraz przejdź do [części 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wskazówki](../mfc/walkthroughs-mfc.md)<br/>
 [Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
