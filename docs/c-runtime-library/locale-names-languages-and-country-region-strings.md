@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087010"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842953"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT nazwy ustawień regionalnych, Języki i ciągi kraj/region
 
@@ -22,11 +22,11 @@ Argument *locale* dla funkcji [setlocals, \_ wsetlocale](../c-runtime-library/re
 > *locale* :: "*locale-Name*"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\|"*Język* \[ **\_** _kraj — region_ \[ __.__ *strona kodowa*]] "<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\|"__.__ *strona kodowa*"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\|S<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| S<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\|NULL
+&nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-Formularz *nazwy ustawień regionalnych* jest krótkim, standardowym ciągiem IETF; na przykład `en-US` dla angielskiej wersji językowej (Stany Zjednoczone) lub `bs-Cyrl-BA` dla języka bośniackiego (cyrylica, Bośnia i Hercegowina). Te formularze są preferowane. Aby uzyskać listę obsługiwanych nazw ustawień regionalnych według wersji systemu operacyjnego Windows, zobacz kolumnę **tag języka** tabeli w [dodatku a: zachowanie produktu](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) w \[ MS-LCID]: dokumentacja identyfikatora kodu języka (LCID) systemu Windows. Ten zasób zawiera listę obsługiwanych części nazw ustawień regionalnych: języka, alfabetu i regionu. Aby uzyskać informacje o obsługiwanych nazwach ustawień regionalnych, które mają inne niż domyślne zamówienia sortowania, zobacz kolumnę **Nazwa ustawień regionalnych** w [identyfikatorach kolejności sortowania](/windows/win32/Intl/sort-order-identifiers). W systemie Windows 10 lub nowszym, nazwy regionalne odpowiadające prawidłowym tagów języka [BCP-47](https://tools.ietf.org/html/bcp47) są dozwolone. Na przykład `jp-US` jest prawidłowym TAGIEM BCP-47, ale efektywnie działa tylko `US` w przypadku funkcji ustawień regionalnych.
+Formularz *nazwy ustawień regionalnych* jest krótkim, standardowym ciągiem IETF; na przykład `en-US` dla angielskiej wersji językowej (Stany Zjednoczone) lub `bs-Cyrl-BA` dla języka bośniackiego (cyrylica, Bośnia i Hercegowina). Te formularze są preferowane. Aby uzyskać listę obsługiwanych nazw ustawień regionalnych według wersji systemu operacyjnego Windows, zobacz kolumnę **tag języka** tabeli w [dodatku a: zachowanie produktu](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) w \[ MS-LCID]: dokumentacja identyfikatora kodu języka (LCID) systemu Windows. Ten zasób zawiera listę obsługiwanych części nazw ustawień regionalnych: języka, alfabetu i regionu. Aby uzyskać informacje o obsługiwanych nazwach ustawień regionalnych, które mają inne niż domyślne zamówienia sortowania, zobacz kolumnę **Nazwa ustawień regionalnych** w [identyfikatorach kolejności sortowania](/windows/win32/Intl/sort-order-identifiers). W systemie Windows 10 lub nowszym, nazwy regionalne odpowiadające prawidłowym tagów języka [BCP-47](https://tools.ietf.org/html/bcp47) są dozwolone. Na przykład `jp-US` jest prawidłowym TAGIEM BCP-47, ale efektywnie działa tylko `US` w przypadku funkcji ustawień regionalnych.
 
 Region *języka* \[ **\_** _country-region_ \[ __.__ *strona kodowa*]] formularz jest przechowywany w ustawieniach regionalnych dla kategorii, gdy ciąg języka lub ciąg języka i ciąg kraju lub regionu są używane do tworzenia ustawień regionalnych. Zestaw obsługiwanych ciągów języka jest opisany w [ciągach języka](../c-runtime-library/language-strings.md), a lista obsługiwanych ciągów krajów i regionów jest wymieniona w [ciągach kraju/regionu](../c-runtime-library/country-region-strings.md). Jeśli określony język nie jest skojarzony z określonym krajem lub regionem, język domyślny dla określonego kraju lub regionu jest przechowywany w ustawieniach regionalnych. Nie zaleca się tej formy dla ciągów ustawień regionalnych osadzonych w kodzie lub szeregowanych w pamięci, ponieważ jest bardziej prawdopodobne, że aktualizacja systemu operacyjnego je zmieni, w przeciwieństwie do formy nazwy ustawień regionalnych.
 
@@ -54,7 +54,7 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 Obsługę UTF-8 można włączyć przy użyciu strony kodowej UTF-8 w ciągu ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [sekcję `setlocale` Obsługa standardu UTF-8](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support) .
 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>

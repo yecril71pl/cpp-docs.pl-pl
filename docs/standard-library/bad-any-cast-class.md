@@ -1,5 +1,5 @@
 ---
-title: bad_any_cast klasy
+title: Klasa bad_any_cast
 ms.date: 04/04/2019
 f1_keywords:
 - any/std::bad_any_cast
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - any/std::bad_any_cast
 - any/std::bad_any_cast::what
-ms.openlocfilehash: 5172281d1918a8b4ac33bcf412bf4be82b04ef56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b47ca4f615c6f317f17ce64e8388ae5d698185ea
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844590"
 ---
-# <a name="badanycast-class"></a>bad_any_cast klasy
+# <a name="bad_any_cast-class"></a>Klasa bad_any_cast
 
-Obiekty zgłoszony, który uległ awarii `any_cast`.
+Obiekty zgłoszone przez nie powiodły się `any_cast` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,13 +24,13 @@ Obiekty zgłoszony, który uległ awarii `any_cast`.
 class bad_any_cast
 ```
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[Co to](#what)|Zwraca typ.|
+|[Whatman](#what)|Zwraca typ.|
 
-## <a name="what"></a> Co to
+## <a name="what"></a><a name="what"></a> Whatman
 
 Zwraca typ.
 

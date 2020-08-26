@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910676"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844070"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -63,18 +63,18 @@ Jeśli to się powiedzie, **_open_osfhandle** zwraca deskryptor pliku C Run-Time
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_open_osfhandle** przydziela deskryptora pliku w czasie wykonywania C. Kojarzy ten deskryptor pliku z dojściem pliku systemu operacyjnego określonym przez *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować argumentu *osfhandle* z **uchwytu** na **intptr_t**. Argument *flags* jest wyrażeniem liczby całkowitej, które zostało utworzone na podstawie co najmniej jednej stałej \<manifestu zdefiniowanej w fcntl. h>. Można użyć operatora bitowego lub ( **&#124;** ), aby połączyć dwie lub więcej stałych manifestu w celu utworzenia argumentu *flags* .
+Funkcja **_open_osfhandle** przydziela deskryptora pliku w czasie wykonywania C. Kojarzy ten deskryptor pliku z dojściem pliku systemu operacyjnego określonym przez *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować argumentu *osfhandle* z **uchwytu** na **intptr_t**. Argument *flags* jest wyrażeniem liczby całkowitej, które zostało utworzone z co najmniej jednej ze stałych manifestu zdefiniowanych w \<fcntl.h> . Można użyć operatora bitowego lub ( **&#124;** ), aby połączyć dwie lub więcej stałych manifestu w celu utworzenia argumentu *flags* .
 
-Te stałe manifestu są zdefiniowane w \<fcntl. h>:
+Te stałe manifestu są zdefiniowane w \<fcntl.h> :
 
-|||
-|-|-|
-| **\_O\_dołączenie** | Umieszcza wskaźnik pliku na końcu pliku przed każdą operacją zapisu. |
-| **\_O\_RDONLY** | Otwiera plik tylko do odczytu. |
-| **\_O\_tekst** | Otwiera plik w trybie tekst (przetłumaczony). |
-| **\_O\_WTEXT** | Otwiera plik w trybie Unicode (tłumaczone w formacie UTF-16). |
+| Stała | Opis |
+|--|--|
+| **\_O \_ dołączenie** | Umieszcza wskaźnik pliku na końcu pliku przed każdą operacją zapisu. |
+| **\_O \_ RDONLY** | Otwiera plik tylko do odczytu. |
+| **\_O \_ tekst** | Otwiera plik w trybie tekst (przetłumaczony). |
+| **\_O \_ WTEXT** | Otwiera plik w trybie Unicode (tłumaczone w formacie UTF-16). |
 
-Wywołanie **_open_osfhandle** przenosi własność dojścia pliku Win32 do deskryptora pliku. Aby zamknąć plik otwarty za pomocą **_open_osfhandle**, wywołaj [ \_polecenie Zamknij](close.md). Dojście do pliku bazowego systemu operacyjnego jest również zamykane przez wywołanie **_close**. Nie wywołuj funkcji **CloseHandle** w systemie Win32 w oryginalnym dojściu. Jeśli deskryptor pliku należy do **pliku &#42;** strumienia, wywołanie [fclose](fclose-fcloseall.md) zamyka zarówno deskryptor pliku, jak i bazowe dojście. W tym przypadku nie należy wywoływać **_close** na deskryptorze pliku ani funkcji **CloseHandle** w oryginalnym dojściu.
+Wywołanie **_open_osfhandle** przenosi własność dojścia pliku Win32 do deskryptora pliku. Aby zamknąć plik otwarty za pomocą **_open_osfhandle**, wywołaj polecenie [ \_ Zamknij](close.md). Dojście do pliku bazowego systemu operacyjnego jest również zamykane przez wywołanie **_close**. Nie wywołuj funkcji **CloseHandle** w systemie Win32 w oryginalnym dojściu. Jeśli deskryptor pliku należy do **pliku &#42;** strumienia, wywołanie [fclose](fclose-fcloseall.md) zamyka zarówno deskryptor pliku, jak i bazowe dojście. W tym przypadku nie należy wywoływać **_close** na deskryptorze pliku ani funkcji **CloseHandle** w oryginalnym dojściu.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -82,7 +82,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_open_osfhandle**|\<IO. h>|
+|**_open_osfhandle**|\<io.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

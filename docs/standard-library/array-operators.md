@@ -1,5 +1,5 @@
 ---
-title: '&lt;operatory macierzy&gt;'
+title: '&lt;&gt;Operatory tablic'
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::operator!=
@@ -9,25 +9,27 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364911"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844668"
 ---
-# <a name="ltarraygt-operators"></a>&lt;operatory macierzy&gt;
+# <a name="ltarraygt-operators"></a>&lt;&gt;Operatory tablic
 
-Nagłówek \<> tablicy zawiera te funkcje szablonu porównania **tablicy** niebędącej członkiem.
+\<array>Nagłówek zawiera te funkcje **array** szablonu porównania, które nie są elementami członkowskimi.
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+[operator! =](#op_neq)\
+[zakład&gt;](#op_gt)\
+[zakład&gt;=](#op_gt_eq)\
+[zakład&lt;](#op_lt)\
+[zakład&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>operator!=
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
-Porównanie tablic, nie równe.
+Porównanie tablicowe nie jest równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -38,21 +40,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(left == right)`zwraca .
+Funkcja szablonu zwraca wartość `!(left == right)` .
 
 ### <a name="example"></a>Przykład
 
@@ -98,9 +100,9 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
-Porównanie tablic, mniej niż.
+Porównanie tablicowe, mniejsze niż.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -111,21 +113,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciąża, `operator<` aby porównać dwa obiekty klasy [tablicy szablonu Klasy](../standard-library/array-class-stl.md). Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciążania, `operator<` Aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca wartość `lexicographical_compare(left.begin(), left.end(), right.begin())` .
 
 ### <a name="example"></a>Przykład
 
@@ -171,9 +173,9 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
-Porównanie tablic, mniej niż lub równe.
+Porównanie tablicowe, mniejsze niż lub równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -184,21 +186,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(right < left)`zwraca .
+Funkcja szablonu zwraca wartość `!(right < left)` .
 
 ### <a name="example"></a>Przykład
 
@@ -244,9 +246,9 @@ true
 false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator==
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
-Porównanie tablic, równe.
+Porównywanie tablicowe, równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -257,21 +259,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciąża, `operator==` aby porównać dwa obiekty klasy [tablicy szablonu Klasy](../standard-library/array-class-stl.md). Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciążania, `operator==` Aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca wartość `equal(left.begin(), left.end(), right.begin())` .
 
 ### <a name="example"></a>Przykład
 
@@ -317,9 +319,9 @@ true
 false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
-Porównanie tablic, większe niż.
+Porównanie tablicowe, większe niż.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -330,21 +332,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `(right < left)`zwraca .
+Funkcja szablonu zwraca wartość `(right < left)` .
 
 ### <a name="example"></a>Przykład
 
@@ -390,9 +392,9 @@ false
 true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
-Porównanie tablic, większe lub równe.
+Porównanie tablicowe, większe niż lub równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -403,21 +405,21 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty (ty)*\
+*Br*\
 Typ elementu.
 
-*N*\
+*Azotan*\
 Rozmiar tablicy.
 
-*Lewej*\
-Lewy pojemnik do porównania.
+*lewym*\
+Lewy kontener do porównania.
 
-*Prawo*\
-Odpowiedni pojemnik do porównania.
+*Kliknij*\
+Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(left < right)`zwraca .
+Funkcja szablonu zwraca wartość `!(left < right)` .
 
 ### <a name="example"></a>Przykład
 
@@ -465,4 +467,4 @@ false
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<>tablicowe](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

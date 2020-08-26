@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4c8af66f41724c5a99dfe271a7dd8babc3a993a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843966"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl — Klasa
 
@@ -34,18 +34,18 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa, która pochodzi od `IGetDataSourceImpl`.
+*T*<br/>
+Klasa, która pochodzi od `IGetDataSourceImpl` .
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetDataSource](#getdatasource)|Zwraca wskaźnik interfejsu w obiekcie źródła danych, który utworzył sesję.|
 
@@ -53,7 +53,7 @@ Klasa, która pochodzi od `IGetDataSourceImpl`.
 
 Jest to obowiązkowy interfejs w sesji w celu uzyskania wskaźnika interfejsu do obiektu źródła danych.
 
-## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl —:: GetDataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a> IGetDataSourceImpl —:: GetDataSource
 
 Zwraca wskaźnik interfejsu w obiekcie źródła danych, który utworzył sesję.
 

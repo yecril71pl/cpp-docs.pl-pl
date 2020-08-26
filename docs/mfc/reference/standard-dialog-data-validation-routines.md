@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 2511e2ec6dbd4e27c0e12e35bdc1cd671bf72eaa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213986"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844486"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardowe procedury walidacji danych okna dialogowego
 
@@ -20,7 +20,7 @@ W tym temacie wymieniono standardowe procedury walidacji danych (DDV) okna dialo
 
 ### <a name="ddv-functions"></a>Funkcje DDV
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|Weryfikuje liczbę znaków w danej wartości kontrolki, która nie przekracza podaną wartość maksymalną.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Sprawdza, czy dana wartość kontrolki nie przekracza danego zakresu **bajtów** .|
@@ -38,7 +38,7 @@ W tym temacie wymieniono standardowe procedury walidacji danych (DDV) okna dialo
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Sprawdza, czy dana wartość kontrolki przypada między dwoma określonymi wartościami.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Sprawdza, czy dana wartość kontrolki nie przekracza danego zakresu **ULONGLONG** .|
 
-## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
 Wywołaj `DDV_MaxChars` , aby sprawdzić, czy ilość znaków w kontrolce skojarzonej z *wartością* nie przekracza wartości *nchar*.
 
@@ -68,7 +68,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
 Wywołaj `DDV_MinMaxByte` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -102,7 +102,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
 Wywołaj `DDV_MinMaxDateTime` , aby sprawdzić, czy wartość daty/godziny w kontrolce selektora daty i godziny ( [Korzystanie CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) skojarzonej z *refValue* przypada między *refMinRange* i *refMaxRange*.
 
@@ -142,7 +142,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
 Wywołaj `DDV_MinMaxDouble` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -176,7 +176,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
 Wywołaj `DDV_MinMaxDWord` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -210,7 +210,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
 Wywołaj `DDV_MinMaxFloat` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -244,7 +244,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
 Wywołaj `DDV_MinMaxInt` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -278,7 +278,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
 Wywołaj `DDV_MinMaxLong` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -312,7 +312,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
 Wywołaj `DDV_MinMaxLongLong` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -346,7 +346,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
 Wywołaj `DDV_MinMaxMonth` , aby sprawdzić, czy wartość daty/godziny w kontrolce Kalendarz miesięczny ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) skojarzona z *refValue* przypada między *refMinRange* i *refMaxRange*.
 
@@ -386,7 +386,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
 Wywołaj `DDV_MinMaxShort` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -420,7 +420,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
 Wywołaj `DDV_MinMaxSlider` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -454,7 +454,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
 Wywołaj `DDV_MinMaxUInt` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -488,7 +488,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
 Wywołaj `DDV_MinMaxULongLong` , aby sprawdzić, czy wartość w kontrolce skojarzonej z *wartością* należy do zakresu od *minVal* do *maxVal*.
 
@@ -558,7 +558,7 @@ Aby uzyskać więcej informacji na temat DDV, zobacz temat [wymiana i walidacja 
 
 **Nagłówek:** afxdd_. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Standardowe procedury wymiany danych w oknie dialogowym](standard-dialog-data-exchange-routines.md)<br/>
 [Makra i Globals](mfc-macros-and-globals.md)<br/>

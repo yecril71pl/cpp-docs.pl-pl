@@ -1,21 +1,21 @@
 ---
-title: idl_quote (C++ atrybut com)
+title: idl_quote (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168032"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844239"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-Umożliwia korzystanie z konstrukcji IDL, które nie są obsługiwane w bieżącej wersji wizualizacji C++ i są przekazywane do wygenerowanego pliku IDL.
+Umożliwia korzystanie z konstrukcji IDL, które nie są obsługiwane w bieżącej wersji Visual C++ i umożliwiają przekazywanie ich do wygenerowanego pliku IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,11 +26,11 @@ Umożliwia korzystanie z konstrukcji IDL, które nie są obsługiwane w bieżąc
 ### <a name="parameters"></a>Parametry
 
 *Opis*<br/>
-Nazwa atrybutu, który ma zostać przekazany przez C++ kompilator firmy Microsoft do wygenerowanego pliku IDL bez zwrócenia błędu kompilatora.
+Nazwa atrybutu, który ma zostać przekazany przez kompilator języka Microsoft C++ do wygenerowanego pliku IDL bez zwrócenia błędu kompilatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli atrybut **idl_quote** C++ jest używany jako atrybut autonomiczny (z średnikiem po nawiasie zamykającym), *tekst* zostanie umieszczony w scalonym pliku. idl zgodnie z oczekiwaniami. Jeśli **idl_quote** jest używany w symbolu, *tekst* jest umieszczany w bloku atrybutu dla tego symbolu.
+Jeśli atrybut **idl_quote** C++ jest używany jako atrybut autonomiczny (średnik po nawiasie zamykającym), *tekst* zostanie umieszczony w scalonym pliku. idl jako. Jeśli **idl_quote** jest używany w symbolu, *tekst* jest umieszczany w bloku atrybutu dla tego symbolu.
 
 ## <a name="example"></a>Przykład
 
@@ -69,22 +69,20 @@ __interface IStatic{
 };
 ```
 
-Ten kod powoduje, że `MYFLOT` i `MYDUB` i wpis *tekstowy* , który ma zostać umieszczony w wygenerowanym pliku IDL. *Nazwa* parametru wymusza umieszczenie *tekstu* przed dowolnymi odwołaniami do *nazwy* w wygenerowanym pliku IDL. Parametr *zależności* wymusza umieszczenie definicji listy zależności przed *tekstem* w wygenerowanym pliku IDL.
+Ten kod powoduje `MYFLOT` i `MYDUB` i wpis *tekstowy* , który ma zostać umieszczony w wygenerowanym pliku IDL. *Nazwa* parametru wymusza umieszczenie *tekstu* przed dowolnymi odwołaniami do *nazwy* w wygenerowanym pliku IDL. Parametr *zależności* wymusza umieszczenie definicji listy zależności przed *tekstem* w wygenerowanym pliku IDL.
 
 ## <a name="requirements"></a>Wymagania
 
-### <a name="attribute-context"></a>Kontekst atrybutu
-
-|||
+| Kontekst atrybutu | Wartość |
 |-|-|
-|**Dotyczy**|Dowolnym miejscu|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)
+[Atrybuty autonomiczne](stand-alone-attributes.md)

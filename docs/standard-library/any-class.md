@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844746"
 ---
 # <a name="any-class"></a>dowolna klasa
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ile](#any)|Konstruuje obiekt typu `any` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[emplace](#emplace)|Ustawia dowolną wartość.|
 |[has_value](#has_value)|Zwraca **`true`** wartość, jeśli jakakolwiek z nich jest wartością.|
@@ -54,11 +54,11 @@ class any
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator =](#op_eq)|Zastępuje wszystkie pozostałe.|
 
-## <a name="any"></a><a name="any"></a>ile
+## <a name="any"></a><a name="any"></a> ile
 
 Konstruuje obiekt typu `any` . Zawiera również destruktor.
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Ustawia dowolną wartość.
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Zwraca **`true`** wartość, jeśli jakakolwiek z nich jest wartością.
 
@@ -95,7 +95,7 @@ Zwraca **`true`** wartość, jeśli jakakolwiek z nich jest wartością.
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Zastępuje wszystkie pozostałe.
 
@@ -111,7 +111,7 @@ template <class T>
 *Kliknij*\
 Wszystkie są kopiowane do dowolnego.
 
-## <a name="reset"></a><a name="reset"></a>zresetować
+## <a name="reset"></a><a name="reset"></a> zresetować
 
 Resetuje dowolny.
 
@@ -119,7 +119,7 @@ Resetuje dowolny.
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia dwa obiekty.
 
@@ -127,7 +127,7 @@ Zamienia dwa obiekty.
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a><a name="type"></a>Wprowadź
+## <a name="type"></a><a name="type"></a> Wprowadź
 
 Zwraca dowolny typ.
 

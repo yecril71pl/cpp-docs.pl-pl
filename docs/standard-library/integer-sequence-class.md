@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031475"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843875"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence — klasa
 
-Reprezentuje sekwencję całkowitą. Może służyć do wywniania i rozwijania pakietów parametrów w typach zmiennoczycznych, takich jak std::krotka\<T...>, które są przekazywane jako argumenty do funkcji.
+Reprezentuje sekwencję całkowitą. Może służyć do wywnioskowania i powiększania pakietów parametrów w typach wariadyczne, takich jak std:: krotka \<T...> , które są przekazane jako argumenty do funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,30 +34,30 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parametry
 
-*T*\
-Typ wartości; musi być typem integralnym: bool, char, char16_t, char32_t, wchar_t lub podpisane lub niepodpisane typy całkowite.
+*&*\
+Typ wartości; musi być typem całkowitym: bool, char, char16_t, char32_t, wchar_t lub typów całkowitych bez znaku.
 
 *Vals*\
-Pakiet parametrów innych niż typ, który reprezentuje sekwencję wartości typu integralnego T.
+Pakiet parametrów bez typu, który reprezentuje sekwencję wartości typu całkowitego T.
 
 ## <a name="members"></a>Elementy członkowskie
 
-|||
+|Nazwa|Opis|
 |-|-|
 |`static size_t size() noexcept`|Liczba elementów w sekwencji.|
-|`typedef T value_type`|Typ każdego elementu w sekwencji. Musi być typem integralnym.|
+|`typedef T value_type`|Typ każdego elementu w sekwencji. Musi być typem całkowitym.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pakiet parametrów, który jest przekazywany bezpośrednio do funkcji można rozpakować bez specjalnych pomocników biblioteki. Gdy pakiet parametrów jest częścią typu, który jest przekazywany do funkcji i potrzebne są indeksy, aby uzyskać `integer_sequence` dostęp do elementów, najprostszym sposobem rozpakowania go jest użycie i powiązane z nim aliasy typu `make_integer_sequence` `index_sequence`, , `make_index_sequence`i `index_sequence_for`.
+Pakiet parametrów, który jest przesyłany bezpośrednio do funkcji można rozpakować bez żadnych specjalnych pomocników biblioteki. Gdy pakiet parametrów jest częścią typu, który jest przesyłany do funkcji i potrzebne są indeksy, aby uzyskać dostęp do elementów, najprostszym sposobem rozpakowania jest użycie `integer_sequence` i powiązane z nim aliasy typu,, `make_integer_sequence` `index_sequence` `make_index_sequence` , i `index_sequence_for` .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład jest oparty na pierwotnej propozycji [N3658](https://wg21.link/n3658). Pokazuje, jak użyć `integer_sequence` do `std::tuple` utworzenia `std::array<T,N>`z programu , `integer_sequence` i jak użyć, aby uzyskać na członków krotki.
+Poniższy przykład jest oparty na oryginalnej propozycji [N3658](https://wg21.link/n3658). Pokazuje, jak użyć elementu `integer_sequence` do utworzenia `std::tuple` z `std::array<T,N>` i, jak używać elementu, `integer_sequence` Aby uzyskać dostęp do kolekcji elementów członkowskich.
 
-W `a2t` funkcji an `index_sequence` jest aliasem `integer_sequence` opartym na typie `size_t` integralnym. `make_index_sequence`jest aliasem, który w czasie kompilacji tworzy zero oparte `index_sequence` na tej samej liczbie elementów, jak tablica, która jest przekazywana przez wywołującego. `a2t`przekazuje `index_sequence` wartość według `a2t_` do , `a[I]...` gdzie `I`wyrażenie rozpakowuje , a `make_tuple` następnie elementy są podawane do których zużywa je jako poszczególne argumenty. Na przykład, jeśli sekwencja zawiera `make_tuple` trzy elementy, a następnie jest wywoływana jako make_tuple(a[0], a[1], a[2]). Elementy tablicy same mogą być oczywiście dowolnego typu.
+W `a2t` funkcji `index_sequence` jest alias `integer_sequence` oparty na `size_t` typie całkowitym. `make_index_sequence` jest aliasem, który w czasie kompilacji tworzy zero na podstawie `index_sequence` tej samej liczby elementów co tablica, która jest przenoszona przez obiekt wywołujący. `a2t` przekazuje `index_sequence` przez wartość do `a2t_` , gdzie wyrażenie `a[I]...` rozpakuje `I` , a następnie elementy, do których są używane, `make_tuple` jako pojedyncze argumenty. Na przykład, jeśli sekwencja zawiera trzy elementy, `make_tuple` to jest wywoływana jako make_tuple (a [0], [1], [2]). Elementy tablicy mogą być oczywiście dowolnego typu.
 
-Funkcja apply akceptuje [std::krotka](../standard-library/tuple-class.md)i tworzy `integer_sequence` za pomocą `tuple_size` klasy pomocnika. Należy zauważyć, że [std::decay_t](../standard-library/decay-class.md) jest [konieczne,](../standard-library/tuple-size-class-tuple.md) ponieważ tuple_size nie działa z typami odwołań. Funkcja `apply_` rozpakowuje elementy krotki i przekazuje je jako oddzielne argumenty do wywołania funkcji. W tym przykładzie funkcja jest prostym wyrażeniem lambda, które drukuje wartości.
+Funkcja Apply akceptuje funkcję [std:: krotkę](../standard-library/tuple-class.md)i tworzy `integer_sequence` przy użyciu `tuple_size` klasy pomocnika. Należy zauważyć, że [ecay_t std::d](../standard-library/decay-class.md) jest konieczne, ponieważ [tuple_size](../standard-library/tuple-size-class-tuple.md) nie działa z typami referencyjnymi. `apply_`Funkcja rozpakuje składowe krotek i przekazuje je jako osobne argumenty do wywołania funkcji. W tym przykładzie funkcja jest prostym wyrażeniem lambda, które drukuje wartości.
 
 ```cpp
 #include <stddef.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Aby zrobić `index_sequence` dla pakietu parametrów, `index_sequence_for` \<należy użyć T...> który `make_index_sequence` \<jest aliasem dla sizeof... (T)>
+Aby utworzyć `index_sequence` pakiet parametrów, użyj `index_sequence_for` \<T...> który jest aliasem dla`make_index_sequence`\<sizeof...(T)>
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: \<type_traits\>
+Nagłówki \<type_traits\>
 
-Namepace: std
+Statements: std
 
 ## <a name="see-also"></a>Zobacz też
 
-[Szablony wielokropek i variadic](../cpp/ellipses-and-variadic-templates.md)
+[Wielokropek i szablony wariadyczne](../cpp/ellipses-and-variadic-templates.md)

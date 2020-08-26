@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: f4f1b12795252b91a2c14877822e221ca86ab39e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214038"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843602"
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 
@@ -70,7 +70,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, które są wyświetlane
 
 ### <a name="rfx-functions-odbc"></a>Funkcje RFX (ODBC)
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[RFX_Binary](#rfx_binary)|Przenosi tablice bajtów typu [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Przesyła dane logiczne.|
@@ -85,7 +85,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, które są wyświetlane
 
 ### <a name="bulk-rfx-functions-odbc"></a>Funkcje Bulk RFX (ODBC)
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|Przesyła tablice danych bajtowych.|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|Przesyła tablice danych logicznych.|
@@ -99,7 +99,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, które są wyświetlane
 
 ### <a name="dfx-functions-dao"></a>Funkcje DFX (DAO)
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DFX_Binary](#dfx_binary)|Przenosi tablice bajtów typu [CByteArray](cbytearray-class.md).|
 |[DFX_Bool](#dfx_bool)|Przesyła dane logiczne.|
@@ -115,7 +115,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, które są wyświetlane
 
 =============================================
 
-## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a><a name="rfx_binary"></a> RFX_Binary
 
 Przenosi tablice bajtów między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_BINARY, SQL_VARBINARY lub SQL_LONGVARBINARY.
 
@@ -155,7 +155,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a><a name="rfx_bool"></a> RFX_Bool
 
 Przesyła dane logiczne między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_BIT.
 
@@ -187,7 +187,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a><a name="rfx_byte"></a> RFX_Byte
 
 Przenosi pojedyncze bajty między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_TINYINT.
 
@@ -219,7 +219,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a><a name="rfx_date"></a> RFX_Date
 
 Przenosi `CTime` lub TIMESTAMP_STRUCT dane między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_DATE, SQL_TIME lub SQL_TIMESTAMP.
 
@@ -269,7 +269,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a><a name="rfx_double"></a> RFX_Double
 
 Przenosi **podwójne dane zmiennoprzecinkowe** między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_DOUBLE.
 
@@ -301,7 +301,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a><a name="rfx_int"></a> RFX_Int
 
 Przenosi dane całkowite między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_SMALLINT.
 
@@ -333,7 +333,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a><a name="rfx_long"></a> RFX_Long
 
 Przesyła dane typu Long-Integer między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych o typie ODBC SQL_INTEGER.
 
@@ -366,7 +366,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a> RFX_LongBinary
 
 Przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy [CLongBinary](clongbinary-class.md) między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARBINARY lub SQL_LONGVARCHAR.
 
@@ -398,7 +398,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a><a name="rfx_single"></a> RFX_Single
 
 Przesyła dane zmiennoprzecinkowe między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordów w źródle danych typu ODBC SQL_REAL.
 
@@ -430,7 +430,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a><a name="rfx_text"></a> RFX_Text
 
 Przesyła `CString` dane między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL lub Sql_Numeric.
 
@@ -496,7 +496,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a> RFX_Binary_Bulk
 
 Przesyła wiele wierszy danych typu Byte z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -547,7 +547,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a> RFX_Bool_Bulk
 
 Przenosi wiele wierszy danych logicznych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -594,7 +594,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a> RFX_Byte_Bulk
 
 Transferuje wiele wierszy z pojedynczej liczby bajtów z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -641,7 +641,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a> RFX_Date_Bulk
 
 Przesyła wiele wierszy danych TIMESTAMP_STRUCT z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -688,7 +688,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a> RFX_Double_Bulk
 
 Transferuje wiele wierszy danych o podwójnej precyzji z kolumny ze źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -735,7 +735,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a> RFX_Int_Bulk
 
 Przenosi dane całkowite między elementami członkowskimi danych pola `CRecordset` a kolumnami rekordu w źródle danych typu ODBC SQL_SMALLINT.
 
@@ -767,7 +767,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a> RFX_Long_Bulk
 
 Przesyła wiele wierszy danych long Integer z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -814,7 +814,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a> RFX_Single_Bulk
 
 Przesyła wiele wierszy danych zmiennoprzecinkowych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -861,7 +861,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Nagłówek:** AFXDB. h
 
-## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a> RFX_Text_Bulk
 
 Przesyła wiele wierszy danych znakowych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset` obiekcie pochodnym.
 
@@ -927,7 +927,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 **Nagłówek:** AFXDB. h
 
-## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a><a name="dfx_binary"></a> DFX_Binary
 
 Przenosi tablice bajtów między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -974,7 +974,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a><a name="dfx_bool"></a> DFX_Bool
 
 Przenosi dane logiczne między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
 
@@ -1017,7 +1017,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a><a name="dfx_byte"></a> DFX_Byte
 
 Przenosi pojedyncze bajty między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -1060,7 +1060,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a><a name="dfx_currency"></a> DFX_Currency
 
 Przenosi dane walutowe między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -1103,7 +1103,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a><a name="dfx_datetime"></a> DFX_DateTime
 
 Przenosi dane dotyczące czasu i daty między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
 
@@ -1139,7 +1139,7 @@ Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w cel
 Dane są mapowane między typu DAO_DATE w DAO i Type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w zestawie rekordów.
 
 > [!NOTE]
-> `COleDateTime`zastępuje [CTime](../../atl-mfc-shared/reference/ctime-class.md) i TIMESTAMP_STRUCT w tym celu w klasach DAO. `CTime`i TIMESTAMP_STRUCT są nadal używane dla klas dostępu do danych opartych na ODBC.
+> `COleDateTime` zastępuje [CTime](../../atl-mfc-shared/reference/ctime-class.md) i TIMESTAMP_STRUCT w tym celu w klasach DAO. `CTime` i TIMESTAMP_STRUCT są nadal używane dla klas dostępu do danych opartych na ODBC.
 
 ### <a name="example"></a>Przykład
 
@@ -1149,7 +1149,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a><a name="dfx_double"></a> DFX_Double
 
 Przenosi **podwójne dane zmiennoprzecinkowe** między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -1192,7 +1192,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a><a name="dfx_long"></a> DFX_Long
 
 Przesyła dane typu Long Integer między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
 
@@ -1235,7 +1235,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a> DFX_LongBinary
 
 **Ważne** Zaleca się używanie [DFX_Binary](#dfx_binary) zamiast tej funkcji.
 
@@ -1272,7 +1272,7 @@ Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w cel
 
 ### <a name="remarks"></a>Uwagi
 
-`DFX_LongBinary`zapewnia zgodność z klasami MFC ODBC. `DFX_LongBinary`Funkcja przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy `CLongBinary` między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordów rekordu w źródle danych. Dane są mapowane między typu DAO_BYTES w DAO i Type [CLongBinary](clongbinary-class.md) w zestawie rekordów.
+`DFX_LongBinary` zapewnia zgodność z klasami MFC ODBC. `DFX_LongBinary`Funkcja przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy `CLongBinary` między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordów rekordu w źródle danych. Dane są mapowane między typu DAO_BYTES w DAO i Type [CLongBinary](clongbinary-class.md) w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1282,7 +1282,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a><a name="dfx_short"></a> DFX_Short
 
 Przenosi krótkie dane całkowite między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -1318,7 +1318,7 @@ Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w cel
 Dane są mapowane między typu DAO_I2 w DAO i Type **`short`** w zestawie rekordów.
 
 > [!NOTE]
-> `DFX_Short`jest równoważne [RFX_Int](#rfx_int) dla klas opartych na ODBC.
+> `DFX_Short` jest równoważne [RFX_Int](#rfx_int) dla klas opartych na ODBC.
 
 ### <a name="example"></a>Przykład
 
@@ -1328,7 +1328,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a><a name="dfx_single"></a> DFX_Single
 
 Przesyła dane zmiennoprzecinkowe między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordu w źródle danych.
 
@@ -1371,7 +1371,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 **Nagłówek:** afxdao. h
 
-## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a><a name="dfx_text"></a> DFX_Text
 
 Przesyła `CString` dane między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
 
@@ -1434,7 +1434,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 **Nagłówek:** afxdao. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
 [CRecordset::D oFieldExchange](crecordset-class.md#dofieldexchange)<br/>

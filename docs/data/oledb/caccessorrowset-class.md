@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233486"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843290"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 
@@ -62,19 +62,19 @@ Klasa zestawu wierszy.
 
 ### <a name="methods"></a>Metody
 
-|||
-|-|-|
-|[Węglowodor](#bind)|Tworzy powiązania (używane `bBind` , gdy jest określony **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Konstruktor.|
-|[Zamknij](#close)|Zamyka zestaw wierszy i wszelkie metody dostępu.|
-|[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.|
-|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+| Nazwa | Opis |
+|--|--|
+| [Węglowodor](#bind) | Tworzy powiązania (używane `bBind` , gdy jest określony **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [CAccessorRowset](#caccessorrowset) | Konstruktor. |
+| [Zamknij](#close) | Zamyka zestaw wierszy i wszelkie metody dostępu. |
+| [FreeRecordMemory](#freerecordmemory) | Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione. |
+| [GetColumnInfo](#getcolumninfo) | Implementuje [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
 ## <a name="remarks"></a>Uwagi
 
 Klasa `TAccessor` zarządza akcesorem. Klasa *TRowset* zarządza zestawem wierszy.
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: bind
 
 Tworzy powiązania, jeśli określono `bBind` **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 Standardowa wartość HRESULT.
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
 
 Inicjuje `CAccessorRowset` obiekt.
 
@@ -98,7 +98,7 @@ Inicjuje `CAccessorRowset` obiekt.
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset:: Close
 
 Zwalnia wszystkie aktywne metody dostępu i zestaw wierszy.
 
@@ -112,7 +112,7 @@ void Close();
 
 Zwalnia wszystkie skojarzone pamięci.
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset:: FreeRecordMemory
 
 Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.
 
@@ -122,7 +122,7 @@ Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnion
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
 
 Pobiera informacje o kolumnie z otwartego zestawu wierszy.
 
@@ -151,7 +151,7 @@ Użytkownik musi zwolnić zwrócone informacje o kolumnie i buforze ciągów. U�
 
 Aby uzyskać więcej informacji, zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

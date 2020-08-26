@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844044"
 ---
 # <a name="ftmbase-class"></a>FtmBase — Klasa
 
@@ -86,7 +86,7 @@ Aby uzyskać więcej informacji, zobacz [Klasa RuntimeClass](runtimeclass-class.
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase:: CreateGlobalInterfaceTable —
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase:: CreateGlobalInterfaceTable —
 
 Tworzy globalną tabelę interfejsów (GIT).
 
@@ -107,9 +107,9 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na bł
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Aby uzyskać więcej informacji, zobacz [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D isconnectobject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase::D isconnectobject
 
 Wymuszanie zwolnienia wszystkich połączeń zewnętrznych do obiektu. Serwer obiektu wywołuje implementację tej metody obiektu przed zamknięciem.
 
@@ -128,7 +128,7 @@ Zarezerwowane do użytku w przyszłości; musi być równa zero.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase:: FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase:: FtmBase
 
 Inicjuje nowe wystąpienie klasy `FtmBase`.
 
@@ -136,7 +136,7 @@ Inicjuje nowe wystąpienie klasy `FtmBase`.
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase:: GetMarshalSizeMax —
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase:: GetMarshalSizeMax —
 
 Pobierz górną granicę dla liczby bajtów wymaganych do skierowania określonego wskaźnika interfejsu do określonego obiektu.
 
@@ -179,7 +179,7 @@ Po zakończeniu tej operacji, wskaźnik do górnej granicy ilości danych, któr
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_FAIL lub E_NOINTERFACE.
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase:: GetUnmarshalClass —
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase:: GetUnmarshalClass —
 
 Pobiera identyfikator CLSID używany przez COM do lokalizowania biblioteki DLL zawierającej kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL w celu utworzenia niezainicjowanego wystąpienia serwera proxy.
 
@@ -221,7 +221,7 @@ Po zakończeniu tej operacji należy wskaźnikiem do identyfikatora CLSID, któr
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie S_FALSE.
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase:: MarshalInterface —
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase:: MarshalInterface —
 
 Zapisuje w strumieniu dane wymagane do zainicjowania obiektu serwera proxy w pewnym procesie klienta.
 
@@ -270,7 +270,7 @@ STG_E_MEDIUMFULL strumień jest zapełniony.
 
 E_FAIL operacji nie powiodła się.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase:: marshaller_
 
 Przechowuje odwołanie do organizatora trybu wolnych wątków.
 
@@ -278,7 +278,7 @@ Przechowuje odwołanie do organizatora trybu wolnych wątków.
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase:: ReleaseMarshalData —
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase:: ReleaseMarshalData —
 
 Niszczy pakiet danych zorganizowanych.
 
@@ -297,7 +297,7 @@ Wskaźnik do strumienia zawierającego pakiet danych, który ma zostać zniszczo
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase:: UnmarshalInterface —
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase:: UnmarshalInterface —
 
 Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.
 

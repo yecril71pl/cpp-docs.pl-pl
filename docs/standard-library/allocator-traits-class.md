@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617412"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844811"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits — klasa
 
@@ -62,7 +62,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |`allocator_type`|Ten typ jest synonimem dla parametru szablonu `Alloc` .|
 |`const_pointer`|Ten typ to `Alloc::const_pointer` , jeśli ten typ jest poprawnie sformułowany; w przeciwnym razie ten typ to `pointer_traits<pointer>::rebind<const value_type>` .|
@@ -80,7 +80,7 @@ template <class Alloc>
 
 Następujące metody statyczne wywołują odpowiednią metodę dla danego parametru alokatora.
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[allocate](#allocate)|Metoda statyczna, która przydziela pamięć przy użyciu danego parametru alokatora.|
 |[Konstruuj](#construct)|Metoda statyczna, która używa określonego alokatora do konstruowania obiektu.|
@@ -89,7 +89,7 @@ Następujące metody statyczne wywołują odpowiednią metodę dla danego parame
 |[max_size](#max_size)|Metoda statyczna, która używa określonego alokatora do określenia maksymalnej liczby obiektów, które można przydzielić.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Metoda statyczna, która wywołuje `select_on_container_copy_construction` dla określonego alokatora.|
 
-### <a name="allocate"></a><a name="allocate"></a>alokacji
+### <a name="allocate"></a><a name="allocate"></a> alokacji
 
 Metoda statyczna, która przydziela pamięć przy użyciu danego parametru alokatora.
 
@@ -119,7 +119,7 @@ Pierwsza metoda statyczna zwraca wartość `al.allocate(count)` .
 
 Druga metoda zwraca `al.allocate(count, hint)` , jeśli to wyrażenie jest poprawnie sformułowane; w przeciwnym razie zwraca `al.allocate(count)` .
 
-### <a name="construct"></a><a name="construct"></a>Konstruuj
+### <a name="construct"></a><a name="construct"></a> Konstruuj
 
 Metoda statyczna, która używa określonego alokatora do konstruowania obiektu.
 
@@ -143,7 +143,7 @@ Lista argumentów, które są przekazane do konstruktora obiektów.
 
 Wywołanie statycznej funkcji składowej `al.construct(ptr, args...)` , jeśli to wyrażenie jest poprawnie sformułowane; w przeciwnym razie jest oceniane `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` .
 
-### <a name="deallocate"></a><a name="deallocate"></a>alokowany
+### <a name="deallocate"></a><a name="deallocate"></a> alokowany
 
 Metoda statyczna, która używa określonego alokatora do cofnięcia alokacji określonej liczby obiektów.
 
@@ -170,7 +170,7 @@ Ta metoda wywołuje metodę `al.deallocate(ptr, count)` .
 
 Ta metoda nie zgłasza żadnych operacji.
 
-### <a name="destroy"></a><a name="destroy"></a>usunięcie
+### <a name="destroy"></a><a name="destroy"></a> usunięcie
 
 Metoda statyczna, która używa określonego alokatora do wywoływania destruktora na obiekcie bez cofania przydziału pamięci.
 
@@ -191,7 +191,7 @@ Wskaźnik do lokalizacji obiektu.
 
 Ta metoda wywołuje `al.destroy(ptr)` , jeśli to wyrażenie jest dobrze sformułowane; w przeciwnym razie jest oceniane `ptr->~Uty()` .
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 Metoda statyczna, która używa określonego alokatora do określenia maksymalnej liczby obiektów, które można przydzielić.
 
@@ -208,7 +208,7 @@ Obiekt alokatora.
 
 Ta metoda zwraca `al.max_size()` , jeśli to wyrażenie jest poprawnie sformułowane; w przeciwnym razie zwraca `numeric_limits<size_type>::max()` .
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 Metoda statyczna, która wywołuje `select_on_container_copy_construction` dla określonego alokatora.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224633"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844304"
 ---
 # <a name="stack-class"></a>stack — Klasa
 
@@ -64,21 +64,21 @@ Obiekty stosu są równe porównywalnie, jeśli i tylko wtedy, gdy elementy klas
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[stosu](#stack)|Tworzy element a `stack` , który jest pusty lub jest kopią podstawowego obiektu kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[container_type](#container_type)|Typ, który dostarcza kontener podstawowy, który ma zostać dostosowany przez `stack` .|
 |[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w `stack` .|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `stack` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[puste](#empty)|Testuje, czy `stack` jest pusty.|
 |[skakując](#pop)|Usuwa element z góry `stack` .|
@@ -86,7 +86,7 @@ Obiekty stosu są równe porównywalnie, jeśli i tylko wtedy, gdy elementy klas
 |[zmienia](#size)|Zwraca liczbę elementów w `stack` .|
 |[top (pierwsze)](#top)|Zwraca odwołanie do elementu w górnej części `stack` .|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Typ, który dostarcza kontener bazowy, który ma zostać dostosowany.
 
@@ -104,7 +104,7 @@ Aby uzyskać więcej informacji na temat `Container` , zobacz sekcję Uwagi w te
 
 Zapoznaj się z przykładem dla [stosu:: Stack](#stack) na przykład sposobu deklarowania i używania `container_type` .
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 Testuje, czy stos jest pusty.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>skakując
+## <a name="pop"></a><a name="pop"></a> skakując
 
 Usuwa element z góry stosu.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>wydajności
+## <a name="push"></a><a name="push"></a> wydajności
 
 Dodaje element na górze stosu.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 Zwraca liczbę elementów w stosie.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w stosie.
 
@@ -311,7 +311,7 @@ Typ jest synonimem dla `size_type` kontenera podstawowego dostosowany przez stos
 
 Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) , aby zapoznać się z przykładem sposobu deklarowania i używania `size_type` .
 
-## <a name="stack"></a><a name="stack"></a>stosu
+## <a name="stack"></a><a name="stack"></a> stosu
 
 Konstruuje stos, który jest pusty lub jest kopią bazowej klasy kontenera.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>Do góry
+## <a name="top"></a><a name="top"></a> Do góry
 
 Zwraca odwołanie do elementu w górnej części stosu.
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w stosie.
 
@@ -457,7 +457,7 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

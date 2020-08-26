@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210304"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844837"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
 
@@ -34,8 +34,8 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa, która pochodzi od `ISessionPropertiesImpl`.
+*T*<br/>
+Klasa, która pochodzi od `ISessionPropertiesImpl` .
 
 *PropClass*<br/>
 Klasa właściwości, która jest określana przez użytkownika, która domyślnie ma wartość *T*.
@@ -44,11 +44,11 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
-|||
+| Nazwa | Opis |
 |-|-|
 |[GetProperties](#getproperties)|Zwraca listę właściwości w grupie właściwości sesji, które są obecnie ustawione w sesji.|
 |[SetProperties](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|
@@ -57,7 +57,7 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 Obowiązkowy interfejs w sesjach. Ta klasa implementuje właściwości sesji przez wywołanie funkcji statycznej zdefiniowanej przez [mapę właściwości](../../data/oledb/begin-propset-map.md). W klasie sesji należy określić mapę zestawu właściwości.
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl:: GetProperties
 
 Zwraca listę właściwości w `DBPROPSET_SESSION` grupie właściwości, które są obecnie ustawione w sesji.
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 Zobacz [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) w *Kompendium OLE DB programisty*.
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl:: SetProperties
 
 Ustawia właściwości w `DBPROPSET_SESSION` grupie właściwości.
 

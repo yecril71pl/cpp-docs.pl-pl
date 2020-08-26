@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214051"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843589"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 
@@ -20,7 +20,7 @@ Mechanizm mapowania danych mapuje kontrolki strony właściwości na poszczegól
 
 ### <a name="property-page-data-transfer"></a>Transfer danych strony właściwości
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|Łączy indeks zaznaczonego ciągu w polu kombi z właściwością kontrolki.|
 |[DDP_CBString](#ddp_cbstring)|Łączy wybrany ciąg w polu kombi z właściwością kontrolki. Wybrany ciąg może rozpoczynać się od tych samych liter co wartość właściwości, ale nie musi być w pełni dopasowany.|
@@ -39,13 +39,13 @@ Poniżej znajduje się lista makr służących do tworzenia stron właściwości
 
 ### <a name="property-pages"></a>Strony właściwości
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|Rozpoczyna listę identyfikatorów stron właściwości.|
 |[END_PROPPAGEIDS](#end_proppageids)|Zamyka listę identyfikatorów stron właściwości.|
 |[PROPPAGEID](#proppageid)|Deklaruje stronę właściwości klasy kontrolki.|
 
-## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a> DDP_CBIndex
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości Integer z indeksem bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
@@ -79,7 +79,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_CBIndex` wywołaniem 
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a> DDP_CBString
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości String z bieżącym wyborem w polu kombi na stronie właściwości.
 
@@ -113,7 +113,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_CBString` wywołaniem
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a> DDP_CBStringExact
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości ciągu, która dokładnie pasuje do bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
@@ -147,7 +147,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_CBStringExact` wywoł
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
+## <a name="ddp_check"></a><a name="ddp_check"></a> DDP_Check
 
 Wywołaj tę funkcję w funkcji strony właściwości, `DoDataExchange` Aby zsynchronizować wartość właściwości ze skojarzoną stroną właściwości formant pola wyboru.
 
@@ -181,7 +181,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_Check` wywołaniem fu
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a> DDP_LBIndex
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości Integer z indeksem bieżącego zaznaczenia w polu listy na stronie właściwości.
 
@@ -215,7 +215,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_LBIndex` wywołaniem 
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a> DDP_LBString
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości String z bieżącym wyborem w polu listy na stronie właściwości.
 
@@ -249,7 +249,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_LBString` wywołaniem
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a> DDP_LBStringExact
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zsynchronizować wartość właściwości ciągu, która dokładnie pasuje do bieżącego zaznaczenia w polu listy na stronie właściwości.
 
@@ -283,7 +283,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_LBStringExact` wywoł
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a> DDP_PostProcessing
 
 Wywołaj tę funkcję w funkcji strony właściwości `DoDataExchange` , aby zakończyć transfer wartości właściwości ze strony właściwości do kontrolki, gdy są zapisywane wartości właściwości.
 
@@ -306,7 +306,7 @@ Ta funkcja powinna być wywoływana po zakończeniu wszystkich funkcji wymiany d
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a> DDP_Radio
 
 Wywołaj tę funkcję w funkcji kontrolki `DoPropExchange` , aby zsynchronizować wartość właściwości ze skojarzoną kontrolką przycisku radiowego strony właściwości.
 
@@ -340,7 +340,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_Radio` wywołaniem fu
 
   **Nagłówek** 'afxctl. h
 
-## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
+## <a name="ddp_text"></a><a name="ddp_text"></a> DDP_Text
 
 Wywołaj tę funkcję w funkcji kontrolki `DoDataExchange` , aby zsynchronizować wartość właściwości ze skojarzoną kontrolką strony właściwości.
 
@@ -416,7 +416,7 @@ Ta funkcja powinna być wywoływana przed odpowiednim `DDX_Text` wywołaniem fun
 
   **Nagłówek** 'afxctl. h
 
-## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a> BEGIN_PROPPAGEIDS
 
 Rozpoczyna definicję listy identyfikatorów stron właściwości formantu.
 
@@ -429,7 +429,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 *class_name*<br/>
 Nazwa klasy kontrolki, dla której są określone strony właściwości.
 
-*liczbą*<br/>
+*count*<br/>
 Liczba stron właściwości używanych przez klasę formantu.
 
 ### <a name="remarks"></a>Uwagi
@@ -442,7 +442,7 @@ Aby uzyskać więcej informacji na temat stron właściwości, zobacz artykuł [
 
   **Nagłówek** 'afxctl. h
 
-## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a> END_PROPPAGEIDS
 
 Zamyka definicję listy identyfikatorów stron właściwości.
 
@@ -459,7 +459,7 @@ Nazwa klasy kontrolki, która jest właścicielem strony właściwości.
 
   **Nagłówek** 'afxctl. h
 
-## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
+## <a name="proppageid"></a><a name="proppageid"></a> PROPPAGEID
 
 Dodaje stronę właściwości do użycia przez formant OLE.
 
@@ -480,6 +480,6 @@ Wszystkie makra PROPPAGEID należy umieścić między makrami BEGIN_PROPPAGEIDS 
 
   **Nagłówek** 'afxctl. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

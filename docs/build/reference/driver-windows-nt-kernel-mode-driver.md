@@ -10,48 +10,48 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293111"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842978"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Sterownik trybu jądra Windows NT)
 
->/DRIVER[:UPONLY |:WDM]
+>/[: TYLKO DO-DO |: WDM]
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj **Driver/Driver** — opcja konsolidatora do tworzenia sterownik trybu jądra Windows NT.
+Aby skompilować sterownik trybu jądra systemu Windows NT, użyj opcji **/konsolidatora** .
 
-**/DRIVER:UPONLY** powoduje, że konsolidator dodaje **IMAGE_FILE_UP_SYSTEM_ONLY** bit do charakterystyki w nagłówku wyjściowym, aby określić, że jest ona jednoprocesorowy (UP) sterownika. System operacyjny będzie odmawiał załadowania sterownika JEDNOPROCESOROWEGO w systemie wieloprocesorowym (MP).
+/Sterownika **: tylko** powoduje, że konsolidator dodaje **IMAGE_FILE_UP_SYSTEM_ONLY** bit do charakterystyki w nagłówku danych wyjściowych, aby określić, że jest to sterownik jednoprocesorowy. System operacyjny odmówi załadowania sterownika w systemie wieloprocesorowym (MP).
 
-**WDM** powoduje, że konsolidator ustawia **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit w dllcharacteristics w opcjonalnym nagłówku.
+/Via **: WDM** powoduje, że konsolidator ustawia **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit w polu DLLCHARACTERISTICS nagłówka opcjonalnego.
 
-Jeśli **Driver/Driver** nie zostanie określony, bity te nie są ustawione przez konsolidator.
+Jeśli **nie** zostanie określony, te bity nie są ustawiane przez konsolidator.
 
-Jeśli **Driver/Driver** określono:
+Jeśli **jest** określony:
 
-- **/ Fixed: No** jest aktywna. Aby uzyskać więcej informacji, zobacz [/Fixed (stały adres podstawowy)](fixed-fixed-base-address.md).
+- **/FIXED: nie** obowiązuje. Aby uzyskać więcej informacji, zobacz [/FIXED (stały adres podstawowy)](fixed-fixed-base-address.md).
 
-- Rozszerzenie nazwy pliku wyjściowego jest równa .sys. Użyj **/OUT** zmienić domyślną nazwę pliku i rozszerzenie. Aby uzyskać więcej informacji, zobacz [/OUT (nazwa pliku wyjściowego)](out-output-file-name.md).
+- Rozszerzenie pliku wyjściowego jest ustawione na. sys. Użyj **/out** , aby zmienić domyślną nazwę pliku i rozszerzenie. Aby uzyskać więcej informacji, zobacz [/out (nazwa pliku wyjściowego)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **systemu** stronę właściwości.
+1. Kliknij stronę właściwości **systemu** .
 
-1. Modyfikowanie **sterownika** właściwości.
+1. Zmodyfikuj właściwość **sterownika** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz [właściwość VCLinkerTool.driver](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Zobacz [Właściwość cvlinkertool. Driver](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

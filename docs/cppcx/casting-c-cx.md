@@ -2,12 +2,12 @@
 title: Rzutowanie (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: a51e02b59b2f7229193987f993edbccfb56b779d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843485"
 ---
 # <a name="casting-ccx"></a>Rzutowanie (C++/CX)
 
@@ -55,7 +55,7 @@ Użyj safe_cast, jeśli kod nie deklaruje relacji, ale masz pewność, że rzuto
 
 ## <a name="dynamic_cast"></a>dynamic_cast
 
-Użyj **`dynamic_cast`** podczas rzutowania obiektu (dokładniej, Hat **^** ) na bardziej pochodny typ, oczekujesz, że obiekt docelowy może być czasami **`nullptr`** lub że rzutowanie może się nie powieść, i chcesz obsłużyć ten warunek jako zwykłej ścieżki kodu zamiast wyjątku. Na przykład w szablonie projektu **pustej aplikacji (uniwersalne systemu Windows)** `OnLaunched` Metoda w aplikacji App. XAMP. cpp używa **`dynamic_cast`** do testowania, czy okno aplikacji ma zawartość. Nie jest to błąd, jeśli nie ma zawartości; jest to oczekiwany warunek. `Windows::Current::Content`to `Windows::UI::XAML::UIElement` a i konwersja to `Windows::UI.XAML::Controls::Frame` , który jest bardziej pochodnym typem w hierarchii dziedziczenia.
+Użyj **`dynamic_cast`** podczas rzutowania obiektu (dokładniej, Hat **^** ) na bardziej pochodny typ, oczekujesz, że obiekt docelowy może być czasami **`nullptr`** lub że rzutowanie może się nie powieść, i chcesz obsłużyć ten warunek jako zwykłej ścieżki kodu zamiast wyjątku. Na przykład w szablonie projektu **pustej aplikacji (uniwersalne systemu Windows)** `OnLaunched` Metoda w aplikacji App. XAMP. cpp używa **`dynamic_cast`** do testowania, czy okno aplikacji ma zawartość. Nie jest to błąd, jeśli nie ma zawartości; jest to oczekiwany warunek. `Windows::Current::Content` to `Windows::UI::XAML::UIElement` a i konwersja to `Windows::UI.XAML::Controls::Frame` , który jest bardziej pochodnym typem w hierarchii dziedziczenia.
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -108,18 +108,18 @@ Jeśli używasz **`reinterpret_cast`** do konwersji z interfejsu środowiska uru
 
 W poniższej tabeli zestawiono przypadki, w których można bezpiecznie używać **`reinterpret_cast`** . W każdym przypadku Rzutowanie jest bezpieczne w obu kierunkach.
 
-|||
-|-|-|
-|`HSTRING`|`String^`|
-|`HSTRING*`|`String^*`|
-|`IInspectable*`|`Object^`|
-|`IInspectable**`|`Object^*`|
-|`IInspectable-derived-type*`|`same-interface-from-winmd^`|
-|`IInspectable-derived-type**`|`same-interface-from-winmd^*`|
-|`IDefault-interface-of-RuntimeClass*`|`same-RefClass-from-winmd^`|
-|`IDefault-interface-of-RuntimeClass**`|`same-RefClass-from-winmd^*`|
+| Rzutowanie z, Rzutowanie na | Rzutowanie do, Rzutowanie z |
+|--|--|
+| `HSTRING` | `String^` |
+| `HSTRING*` | `String^*` |
+| `IInspectable*` | `Object^` |
+| `IInspectable**` | `Object^*` |
+| `IInspectable-derived-type*` | `same-interface-from-winmd^` |
+| `IInspectable-derived-type**` | `same-interface-from-winmd^*` |
+| `IDefault-interface-of-RuntimeClass*` | `same-RefClass-from-winmd^` |
+| `IDefault-interface-of-RuntimeClass**` | `same-RefClass-from-winmd^*` |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [System typów](../cppcx/type-system-c-cx.md)
 - [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)
