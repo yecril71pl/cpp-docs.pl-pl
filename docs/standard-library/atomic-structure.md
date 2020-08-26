@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 8701078f8a034d80dae41eee0d842fb15fd8d3a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 738f79f966b8b0482baf4f78120c0d690425a4bf
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203939"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834794"
 ---
 # <a name="atomic-structure"></a>atomic — Struktura
 
@@ -54,19 +54,32 @@ struct atomic;
 
 Typ *ty* musi być jednocześnie *kopiowany*. Oznacza to, że użycie [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) do kopiowania jego bajtów musi generować prawidłowy obiekt *ty* , który porównuje równy pierwotnemu obiektowi. [Compare_exchange_weak](#compare_exchange_weak) i [compare_exchange_strong](#compare_exchange_strong) funkcje członkowskie używają [funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) do określenia, *czy dwie wartości* są równe. Te funkcje nie będą używały zdefiniowanego przez *ty*elementu `operator==` . Funkcje składowe `atomic` używane `memcpy` do kopiowania wartości typu *ty*.
 
-Dla wszystkich typów wskaźnikowych istnieje Częściowa specjalizacja, **niepodzielna \<Ty \*> **. Specjalizacja umożliwia dodanie przesunięcia do wartości wskaźnika zarządzanego lub odejmowania przesunięcia. Operacje arytmetyczne przyjmują argument typu `ptrdiff_t` i dostosowują ten argument zgodnie z rozmiarem *ty* , aby był spójny ze zwykłym arytmetycznym adresem.
+Częściowa specjalizacja, `atomic<Ty*>` , istnieje dla wszystkich typów wskaźnika. Specjalizacja umożliwia dodanie przesunięcia do wartości wskaźnika zarządzanego lub odejmowania przesunięcia. Operacje arytmetyczne przyjmują argument typu `ptrdiff_t` i dostosowują ten argument zgodnie z rozmiarem *ty* , aby był spójny ze zwykłym arytmetycznym adresem.
 
 Specjalizacja istnieje dla każdego typu całkowitego, z wyjątkiem **`bool`** . Każda specjalizacja oferuje bogaty zestaw metod operacji arytmetycznych i logicznych.
 
-||||
-|-|-|-|
-|**części\<char>**|**części\<signed char>**|**części\<unsigned char>**|
-|**części\<char16_t>**|**części\<char32_t>**|**części\<wchar_t>**|
-|**części\<short>**|**części\<unsigned short>**|**części\<int>**|
-|**części\<unsigned int>**|**części\<long>**|**części\<unsigned long>**|
-|**części\<long long>**|**części\<unsigned long long>**|
+:::row:::
+   :::column:::
+      `atomic<char>`\
+      `atomic<signed char>`\
+      `atomic<unsigned char>`\
+      `atomic<char16_t>`\
+      `atomic<char32_t>`\
+      `atomic<wchar_t>`\
+      `atomic<short>`
+   :::column-end:::
+   :::column:::
+      `atomic<unsigned short>`\
+      `atomic<int>`\
+      `atomic<unsigned int>`\
+      `atomic<long>`\
+      `atomic<unsigned long>`\
+      `atomic<long long>`\
+      `atomic<unsigned long long>`
+   :::column-end:::
+:::row-end:::
 
-Integralne specjalizacje są uzyskiwane z odpowiednich `atomic_integral` typów. Na przykład, **niepodzielny \<unsigned int> ** pochodzi od `atomic_uint` .
+Integralne specjalizacje są uzyskiwane z odpowiednich `atomic_integral` typów. Na przykład, pochodzi `atomic<unsigned int>` od `atomic_uint` .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -74,7 +87,7 @@ Integralne specjalizacje są uzyskiwane z odpowiednich `atomic_integral` typów.
 
 **Przestrzeń nazw:** std
 
-## <a name="atomicatomic"></a><a name="atomic"></a>niepodzielna:: niepodzielna
+## <a name="atomicatomic"></a><a name="atomic"></a> niepodzielna:: niepodzielna
 
 Konstruuje obiekt niepodzielny.
 
@@ -100,7 +113,7 @@ atomic<int> ai0 = ATOMIC_VAR_INIT(0);
 atomic<int> ai1(0);
 ```
 
-## <a name="atomicoperator-ty"></a><a name="op_ty"></a>niepodzielna:: operator *ty*
+## <a name="atomicoperator-ty"></a><a name="op_ty"></a> niepodzielna:: operator *ty*
 
 Operator dla typu określonego dla szablonu, niepodzielny \<*Ty*> . Pobiera wartość przechowywaną w ** \* tym**elemencie.
 
@@ -113,7 +126,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 Ten operator stosuje `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator"></a><a name="op_eq"></a>niepodzielna:: operator =
+## <a name="atomicoperator"></a><a name="op_eq"></a> niepodzielna:: operator =
 
 Przechowuje określoną wartość.
 
@@ -135,7 +148,7 @@ Obiekt *ty* .
 
 Zwraca *wartość*.
 
-## <a name="atomicoperator"></a><a name="op_inc"></a>niepodzielna:: operator + +
+## <a name="atomicoperator"></a><a name="op_inc"></a> niepodzielna:: operator + +
 
 Zwiększa wartość przechowywaną. Używane tylko przez specjalizacje w postaci integralnej i wskaźnika.
 
@@ -150,7 +163,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 Pierwsze dwa operatory zwracają wartość przyrostową; ostatnie dwa operatory zwracają wartość przed przyrostem. Operatory używają `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator"></a><a name="op_add_eq"></a>niepodzielna:: operator + =
+## <a name="atomicoperator"></a><a name="op_add_eq"></a> niepodzielna:: operator + =
 
 Dodaje określoną wartość do przechowywanej wartości. Używane tylko przez specjalizacje w postaci integralnej i wskaźnika.
 
@@ -176,7 +189,7 @@ Obiekt *ty* , który zawiera wynik dodania.
 
 Ten operator używa `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator--"></a><a name="op_dec"></a>niepodzielna:: operator--
+## <a name="atomicoperator--"></a><a name="op_dec"></a> niepodzielna:: operator--
 
 Zmniejsza przechowywaną wartość. Używane tylko przez specjalizacje w postaci integralnej i wskaźnika.
 
@@ -191,7 +204,7 @@ Ty atomic<Ty>::operator--() noexcept;
 
 Pierwsze dwa operatory zwracają wartość, która jest zmniejszana; ostatnie dwa operatory zwracają wartość przed zmniejszeniem. Operatory używają `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator-"></a><a name="op_sub_eq"></a>niepodzielna:: operator-=
+## <a name="atomicoperator-"></a><a name="op_sub_eq"></a> niepodzielna:: operator-=
 
 Odejmuje określoną wartość z przechowywanej wartości. Używane tylko przez specjalizacje w postaci integralnej i wskaźnika.
 
@@ -217,7 +230,7 @@ Obiekt *ty* , który zawiera wynik odejmowania.
 
 Ten operator używa `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator"></a><a name="op_and_eq"></a>niepodzielna:: operator&=
+## <a name="atomicoperator"></a><a name="op_and_eq"></a> niepodzielna:: operator&=
 
 Wykonuje wartości bitowe i w określonej wartości oraz przechowywaną ** \* wartość.** Używane tylko przez całkowitą specjalizację.
 
@@ -243,7 +256,7 @@ Wynik bitowy i.
 
 Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="atomicoperator124"></a><a name="op_or_eq"></a>niepodzielna:: operator&#124;=
+## <a name="atomicoperator124"></a><a name="op_or_eq"></a> niepodzielna:: operator&#124;=
 
 Wykonuje wartość bitową lub dla określonej wartości i wartości przechowywanej. ** \* ** Używane tylko przez całkowitą specjalizację.
 
@@ -269,7 +282,7 @@ Wynik bitowy lub.
 
 Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
 
-## <a name="atomicoperator"></a><a name="op_xor_eq"></a>niepodzielna:: operator ^ =
+## <a name="atomicoperator"></a><a name="op_xor_eq"></a> niepodzielna:: operator ^ =
 
 Wykonuje bitowe wykluczające lub na określoną wartość oraz przechowywaną ** \* wartość.** Używane tylko przez całkowitą specjalizację.
 
@@ -295,7 +308,7 @@ Wynik bitowy wyłącznych lub.
 
 Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową wykluczającą lub *, a bieżącą* wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
 
-## <a name="atomiccompare_exchange_strong"></a><a name="compare_exchange_strong"></a>niepodzielna:: compare_exchange_strong
+## <a name="atomiccompare_exchange_strong"></a><a name="compare_exchange_strong"></a> niepodzielna:: compare_exchange_strong
 
 Wykonuje w ** \* tym**celu niepodzielną operację porównania i wymiany.
 
@@ -350,7 +363,7 @@ Przeciążenia, które nie mają sekundy, `memory_order` używają niejawnego *O
 
 W przypadku przeciążeń przyjmujących dwa `memory_order` parametry wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel` i nie może być silniejszy niż wartość *Order1*.
 
-## <a name="atomiccompare_exchange_weak"></a><a name="compare_exchange_weak"></a>niepodzielna:: compare_exchange_weak
+## <a name="atomiccompare_exchange_weak"></a><a name="compare_exchange_weak"></a> niepodzielna:: compare_exchange_weak
 
 Wykonuje na ** \* tym**samym słabą niepodzielną operację porównania i wymiany.
 
@@ -407,7 +420,7 @@ Przeciążenia, które nie mają sekundy, `memory_order` używają niejawnego *O
 
 W przypadku przeciążeń przyjmujących dwa `memory_order` parametry wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel` i nie może być silniejszy niż wartość *Order1*.
 
-## <a name="atomicexchange"></a><a name="exchange"></a>niepodzielna:: Exchange
+## <a name="atomicexchange"></a><a name="exchange"></a> niepodzielna:: Exchange
 
 Używa określonej wartości w celu zastąpienia przechowywanej wartości ** \* tego**elementu.
 
@@ -438,7 +451,7 @@ Wartość przechowywana ** \* tego** elementu przed wymianą.
 
 Ta operacja wykonuje operację odczytu/modyfikacji i zapisu *, aby zastąpić* wartość przechowywaną w ** \* tym**elemencie w ramach ograniczeń pamięci określonych przez *kolejność*.
 
-## <a name="atomicfetch_add"></a><a name="fetch_add"></a>niepodzielna:: fetch_add
+## <a name="atomicfetch_add"></a><a name="fetch_add"></a> niepodzielna:: fetch_add
 
 Pobiera wartość przechowywaną w ** \* tym**elemencie, a następnie dodaje określoną wartość do przechowywanej wartości.
 
@@ -469,7 +482,7 @@ Obiekt *ty* , który zawiera wartość przechowywaną w ** \* tym** elemencie pr
 
 `fetch_add`Metoda wykonuje operację odczytu i modyfikacji zapisu, aby dodać niepodzielną wartość *Value* do wartości przechowywanej w ** \* tym**miejscu i stosuje ograniczenia pamięci, które są określone przez *kolejność*.
 
-## <a name="atomicfetch_and"></a><a name="fetch_and"></a>niepodzielna:: fetch_and
+## <a name="atomicfetch_and"></a><a name="fetch_and"></a> niepodzielna:: fetch_and
 
 Wykonuje wartości bitowe i na wartość oraz istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
 
@@ -500,7 +513,7 @@ Obiekt *ty* , który zawiera wynik bitowy i.
 
 `fetch_and`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń pamięci określonych przez *kolejność*.
 
-## <a name="atomicfetch_or"></a><a name="fetch_or"></a>niepodzielna:: fetch_or
+## <a name="atomicfetch_or"></a><a name="fetch_or"></a> niepodzielna:: fetch_or
 
 Wykonuje wartość bitową lub wartości i istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
 
@@ -531,7 +544,7 @@ Obiekt *ty* , który zawiera wynik bitowy lub.
 
 `fetch_or`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
-## <a name="atomicfetch_sub"></a><a name="fetch_sub"></a>niepodzielna:: fetch_sub
+## <a name="atomicfetch_sub"></a><a name="fetch_sub"></a> niepodzielna:: fetch_sub
 
 Odejmuje określoną wartość z przechowywanej wartości.
 
@@ -562,7 +575,7 @@ Obiekt *ty* , który zawiera wynik odejmowania.
 
 `fetch_sub`Metoda wykonuje operację odczytu i modyfikacji zapisu w celu odejmowania niepodzielnych *wartości* z wartości przechowywanej w ** \* tym**miejscu w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
-## <a name="atomicfetch_xor"></a><a name="fetch_xor"></a>niepodzielna:: fetch_xor
+## <a name="atomicfetch_xor"></a><a name="fetch_xor"></a> niepodzielna:: fetch_xor
 
 Wykonuje bitowe wartościowe lub na wartość i istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
 
@@ -593,7 +606,7 @@ Obiekt *ty* zawierający wynik bitowe wyłącznych lub.
 
 `fetch_xor`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tego** *elementu wartością* bitową wykluczającą lub i bieżącą wartość, która jest przechowywana w ** \* tym**miejscu, i stosuje ograniczenia pamięci, które są określone w *kolejności*.
 
-## <a name="atomicis_lock_free"></a><a name="is_lock_free"></a>niepodzielna:: is_lock_free
+## <a name="atomicis_lock_free"></a><a name="is_lock_free"></a> niepodzielna:: is_lock_free
 
 Określa, czy operacje niepodzielne w ** \* tej** usłudze są wolne od blokady.
 
@@ -609,7 +622,7 @@ prawda, jeśli operacje niepodzielne na ** \* tym** serwerze są wolne od blokad
 
 Typ niepodzielny jest zablokowany, jeśli żadna niepodzielna operacja nie używa blokad.
 
-## <a name="atomicload"></a><a name="load"></a>niepodzielna:: Load
+## <a name="atomicload"></a><a name="load"></a> niepodzielna:: Load
 
 Pobiera wartość przechowywaną w ** \* ramach**określonych ograniczeń pamięci.
 
@@ -631,7 +644,7 @@ Klasa `memory_order`. *Kolejność* nie może być `memory_order_release` lub `m
 
 Pobrana wartość, która jest przechowywana w ** \* tym**elemencie.
 
-## <a name="atomicstore"></a><a name="store"></a>niepodzielna:: Store
+## <a name="atomicstore"></a><a name="store"></a> niepodzielna:: Store
 
 Przechowuje określoną wartość.
 
@@ -658,7 +671,7 @@ Obiekt *ty* .
 
 Ta funkcja elementu członkowskiego przechowuje niepodzielną *wartość* w **`*this`** , w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<atomic>](../standard-library/atomic.md)\
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

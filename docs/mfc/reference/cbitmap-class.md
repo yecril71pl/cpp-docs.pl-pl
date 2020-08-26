@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 9a33a6e1bea601422e043d7f2a80029c72d97e50
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adb2a461de5e82fa76ce0ed9961d970f46dbe26a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352742"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834989"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 
-Hermetyzuje mapę bitową interfejsu urządzenia graficznego systemu Windows (GDI) i udostępnia funkcje członkowskie do manipulowania bitmapą.
+Hermetyzuje mapę bitową interfejsu urządzenia graficznego (GDI) systemu Windows i udostępnia funkcje elementów członkowskich do manipulowania mapą bitową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,51 +57,51 @@ class CBitmap : public CGdiObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBitmap::CBitmap](#cbitmap)|Konstruuje `CBitmap` obiekt.|
+|[CBitmap:: CBitmap](#cbitmap)|Konstruuje `CBitmap` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBitmap::CreateBitmap](#createbitmap)|Inicjuje obiekt za pomocą mapy bitowej pamięci zależnej od urządzenia, która ma określoną szerokość, wysokość i wzorzec bitowy.|
-|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicjuje obiekt z bitmapą z szerokością, wysokością i wzorcem `BITMAP` bitowym (jeśli jest określony) podanym w strukturze.|
-|[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Inicjuje obiekt za pomocą mapy bitowej, tak aby był zgodny z określonym urządzeniem.|
-|[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Inicjuje obiekt za pomocą odrzucanej mapy bitowej, która jest zgodna z określonym urządzeniem.|
-|[CBitmap::OdRążej](#fromhandle)|Zwraca wskaźnik do `CBitmap` obiektu po podaniu `HBITMAP` dojścia do mapy bitowej systemu Windows.|
-|[CBitmap::GetBitmap](#getbitmap)|Wypełnia strukturę `BITMAP` informacjami o mapie bitowej.|
-|[CBitmap::GetBitmapBits](#getbitmapbits)|Kopiuje bity określonej mapy bitowej do określonego buforu.|
-|[CBitmap::GetBitmapDimension](#getbitmapdimension)|Zwraca szerokość i wysokość mapy bitowej. Zakłada się, że wysokość i szerokość zostały ustawione wcześniej przez funkcję elementu członkowskiego [SetBitmapDimension.](#setbitmapdimension)|
-|[CBitmap::LoadBitmap](#loadbitmap)|Inicjuje obiekt, ładując nazwany zasób mapy bitowej z pliku wykonywalnego aplikacji i dołączając mapę bitową do obiektu.|
-|[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Ładuje mapę bitową i mapuje kolory do bieżących kolorów systemowych.|
-|[CBitmap::LoadOEMBitmap](#loadoembitmap)|Inicjuje obiekt, ładując wstępnie zdefiniowaną mapę bitową systemu Windows i dołączając mapę bitową do obiektu.|
-|[CBitmap::SetBitmapBits](#setbitmapbits)|Ustawia bity mapy bitowej na określone wartości bitowe.|
-|[CBitmap::SetBitmapDimension](#setbitmapdimension)|Przypisuje szerokość i wysokość do mapy bitowej w jednostkach 0,1 milimetra.|
+|[CBitmap:: ismap](#createbitmap)|Inicjuje obiekt z mapą bitową pamięci zależnej od urządzenia, która ma określoną szerokość, Wysokość i wzorzec bitowy.|
+|[CBitmap:: CreateBitmapIndirect](#createbitmapindirect)|Inicjuje obiekt za pomocą mapy bitowej z wzorcem Width, Height i bit (jeśli został określony) podany w `BITMAP` strukturze.|
+|[CBitmap:: CreateCompatibleBitmap](#createcompatiblebitmap)|Inicjuje obiekt z mapą bitową, tak aby był zgodny z określonym urządzeniem.|
+|[CBitmap:: CreateDiscardableBitmap](#creatediscardablebitmap)|Inicjuje obiekt z odciskiem mapy bitowej, która jest zgodna z określonym urządzeniem.|
+|[CBitmap:: FromHandle](#fromhandle)|Zwraca wskaźnik do obiektu, `CBitmap` gdy ma dojść do mapy bitowej systemu Windows `HBITMAP` .|
+|[CBitmap:: getmap](#getbitmap)|Wypełnia `BITMAP` strukturę informacjami o mapie bitowej.|
+|[CBitmap:: GetBitmapBits](#getbitmapbits)|Kopiuje bity określonej mapy bitowej do określonego buforu.|
+|[CBitmap:: GetBitmapDimension](#getbitmapdimension)|Zwraca szerokość i wysokość mapy bitowej. Przyjęto, że wysokość i szerokość są ustawione wcześniej przez funkcję elementu członkowskiego [SetBitmapDimension](#setbitmapdimension) .|
+|[CBitmap:: LoadBitmap](#loadbitmap)|Inicjuje obiekt przez załadowanie nazwanego zasobu mapy bitowej z pliku wykonywalnego aplikacji i dołączenie mapy bitowej do obiektu.|
+|[CBitmap:: LoadMappedBitmap](#loadmappedbitmap)|Ładuje mapę bitową i mapuje kolory na bieżące kolory systemowe.|
+|[CBitmap:: LoadOEMBitmap](#loadoembitmap)|Inicjuje obiekt przez załadowanie wstępnie zdefiniowanej mapy bitowej systemu Windows i dołączenie mapy bitowej do obiektu.|
+|[CBitmap:: SetBitmapBits](#setbitmapbits)|Ustawia bity mapy bitowej na określone wartości bitowe.|
+|[CBitmap:: SetBitmapDimension](#setbitmapdimension)|Przypisuje szerokość i wysokość do mapy bitowej w jednostkach 0,1 milimetrów.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBitmap::operator HBITMAP](#operator_hbitmap)|Zwraca uchwyt systemu Windows `CBitmap` dołączony do obiektu.|
+|[CBitmap:: operator HBITMAP](#operator_hbitmap)|Zwraca dojście systemu Windows dołączone do `CBitmap` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć `CBitmap` obiektu, skonstruuj obiekt, dołącz do niego uchwyt mapy bitowej z jedną z funkcji elementu członkowskiego inicjowania, a następnie wywołaj funkcje członkowskie obiektu.
+Aby użyć `CBitmap` obiektu, konstrukcja obiektu, Dołącz do niego uchwyt mapy bitowej z jedną z funkcji Członkowskich inicjujących, a następnie Wywołaj funkcje składowe obiektu.
 
-Aby uzyskać więcej informacji `CBitmap`na temat używania obiektów graficznych, takich jak , zobacz [Obiekty graficzne](../../mfc/graphic-objects.md).
+Aby uzyskać więcej informacji na temat używania obiektów graficznych, takich jak `CBitmap` , zobacz [obiektów graficznych](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CBitmap`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="cbitmapcbitmap"></a><a name="cbitmap"></a>CBitmap::CBitmap
+## <a name="cbitmapcbitmap"></a><a name="cbitmap"></a> CBitmap:: CBitmap
 
 Konstruuje `CBitmap` obiekt.
 
@@ -111,11 +111,11 @@ CBitmap();
 
 ### <a name="remarks"></a>Uwagi
 
-Wynikowy obiekt musi zostać zainicjowany przy jednej z funkcji elementu członkowskiego inicjowania.
+Obiekt wyników musi być zainicjowany przy użyciu jednej z funkcji inicjujących elementów członkowskich.
 
-## <a name="cbitmapcreatebitmap"></a><a name="createbitmap"></a>CBitmap::CreateBitmap
+## <a name="cbitmapcreatebitmap"></a><a name="createbitmap"></a> CBitmap:: ismap
 
-Inicjuje mapę bitową pamięci zależną od urządzenia, która ma określoną szerokość, wysokość i wzorzec bitowy.
+Inicjuje mapę bitową pamięci zależną od urządzenia, która ma określoną szerokość, Wysokość i wzorzec bitowy.
 
 ```
 BOOL CreateBitmap(
@@ -128,38 +128,38 @@ BOOL CreateBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth (ww.*<br/>
+*nWidth*<br/>
 Określa szerokość (w pikselach) mapy bitowej.
 
-*nFeksja*<br/>
+*nHeight*<br/>
 Określa wysokość (w pikselach) mapy bitowej.
 
-*nPlanes (Samoloty)*<br/>
+*nPlanes*<br/>
 Określa liczbę płaszczyzn kolorów w mapie bitowej.
 
-*nWyliczaj*<br/>
-Określa liczbę bitów kolorów na piksel ekranu.
+*nBitcount*<br/>
+Określa liczbę bitów koloru na piksel wyświetlania.
 
-*lpBits (lpBits)*<br/>
-Wskazuje tablicę bajtów zawierającą początkowe wartości bitowe mapy bitowej. Jeśli jest null, nowa mapa bitowa pozostaje niezainicjowana.
+*lpBits*<br/>
+Wskazuje tablicę bajtów zawierającą początkowe wartości bitowe mapy bitowej. Jeśli ma wartość NULL, Nowa mapa bitowa nie zostanie zainicjowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku kolorowej mapy bitowej parametr *nPlanes* lub *nBitcount* powinien być ustawiony na 1. Jeśli oba te parametry są ustawione `CreateBitmap` na 1, tworzy monochromatycznej mapy bitowej.
+W przypadku mapy bitowej koloru parametr *nPlanes* lub *nBitcount* powinien mieć wartość 1. Jeśli oba te parametry są ustawione na 1, program `CreateBitmap` tworzy czarną mapę bitową.
 
-Chociaż mapy bitowej nie można wybrać bezpośrednio dla urządzenia wyświetlającego, można ją wybrać jako bieżącą mapę bitową dla "kontekstu urządzenia pamięci" przy użyciu [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiować do dowolnego zgodnego kontekstu urządzenia przy użyciu funkcji [CDC::BitBlt.](../../mfc/reference/cdc-class.md#bitblt)
+Mimo że nie można bezpośrednio wybrać mapy bitowej dla urządzenia wyświetlającego, można ją wybrać jako bieżącą mapę bitową dla kontekstu urządzenia pamięci, używając funkcji [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiowanej do dowolnego zgodnego kontekstu urządzenia przy użyciu funkcję [przechwytywania:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) .
 
-Po zakończeniu z `CBitmap` obiektem `CreateBitmap` utworzonym przez funkcję najpierw zaznacz mapę bitową `CBitmap` z kontekstu urządzenia, a następnie usuń obiekt.
+Po zakończeniu pracy z `CBitmap` obiektem utworzonym przez `CreateBitmap` funkcję, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiekt.
 
-Aby uzyskać więcej informacji, `bmBits` zobacz opis `BITMAP` pola w strukturze. Struktura [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) jest opisana w funkcji elementu członkowskiego [CBitmap::CreateBitmapIndirect.](#createbitmapindirect)
+Aby uzyskać więcej informacji, zobacz Opis `bmBits` pola w `BITMAP` strukturze. Struktura [mapy bitowej](/windows/win32/api/wingdi/ns-wingdi-bitmap) jest opisana w funkcji składowej [CBitmap:: CreateBitmapIndirect](#createbitmapindirect) .
 
-## <a name="cbitmapcreatebitmapindirect"></a><a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect
+## <a name="cbitmapcreatebitmapindirect"></a><a name="createbitmapindirect"></a> CBitmap:: CreateBitmapIndirect
 
-Inicjuje mapę bitową, która ma szerokość, wysokość i wzorzec bitowy (jeśli jest określony) podany w strukturze wskazanej przez *lpBitmap*.
+Inicjuje mapę bitową, która ma wzorzec Width, Height i bit (jeśli został określony) podany w strukturze wskazywanej przez *lpBitmap*.
 
 ```
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
@@ -167,24 +167,24 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*lpBitmap (mapa bitowa)*<br/>
-Wskazuje strukturę [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) zawierającą informacje o mapie bitowej.
+*lpBitmap*<br/>
+Wskazuje strukturę [mapy bitowej](/windows/win32/api/wingdi/ns-wingdi-bitmap) , która zawiera informacje o mapie bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Chociaż mapy bitowej nie można wybrać bezpośrednio dla urządzenia wyświetlającego, można ją wybrać jako bieżącą mapę bitową dla kontekstu urządzenia pamięci przy użyciu [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiować do dowolnego zgodnego kontekstu urządzenia za pomocą funkcji [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [CDC::StretchBlt.](../../mfc/reference/cdc-class.md#stretchblt) (Funkcja [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) może skopiować mapę bitową bieżącego pędzla bezpośrednio do kontekstu urządzenia wyświetlającego).
+Mimo że nie można bezpośrednio wybrać mapy bitowej dla urządzenia wyświetlającego, można ją wybrać jako bieżącą mapę bitową kontekstu urządzenia pamięci przy użyciu funkcji [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiować do dowolnego zgodnego kontekstu urządzenia za pomocą polecenia przestaw: [: BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub funkcja [przechwytywania:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) . (Funkcja [przechwytywania::P atblt](../../mfc/reference/cdc-class.md#patblt) może skopiować mapę bitową bieżącego pędzla bezpośrednio do kontekstu wyświetlania urządzenia).
 
-Jeśli `BITMAP` struktura wskazywiona przez parametr *lpBitmap* została wypełniona za pomocą `GetObject` funkcji, bity mapy bitowej nie są określone, a mapa bitowa jest niezainicjowana. Aby zainicjować mapę bitową, aplikacja może użyć funkcji, takiej jak [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits,](/windows/win32/api/wingdi/nf-wingdi-setdibits) aby `CGdiObject::GetObject` skopiować bity `CreateBitmapIndirect`z mapy bitowej identyfikowanej przez pierwszy parametr mapy bitowej utworzonej przez program .
+Jeśli `BITMAP` Struktura wskazywana przez parametr *lpBitmap* został wypełniony przy użyciu `GetObject` funkcji, bity mapy bitowej nie są określone, a Mapa bitowa nie została zainicjowana. Aby zainicjować mapę bitową, aplikacja może użyć funkcji, takiej jak funkcja [przechwytywania:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits) , aby skopiować bity z mapy bitowej identyfikowanej przez pierwszy parametr `CGdiObject::GetObject` do mapy bitowej utworzonej przez `CreateBitmapIndirect` .
 
-Po zakończeniu z `CBitmap` obiektem `CreateBitmapIndirect` utworzonym za pomocą funkcji najpierw zaznacz mapę `CBitmap` bitową z kontekstu urządzenia, a następnie usuń obiekt.
+Po zakończeniu pracy z `CBitmap` obiektem utworzonym za pomocą `CreateBitmapIndirect` funkcji, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiekt.
 
-## <a name="cbitmapcreatecompatiblebitmap"></a><a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap
+## <a name="cbitmapcreatecompatiblebitmap"></a><a name="createcompatiblebitmap"></a> CBitmap:: CreateCompatibleBitmap
 
-Inicjuje mapę bitową, która jest zgodna z urządzeniem określonym przez *pDC*.
+Inicjuje mapę bitową zgodną z urządzeniem określonym przez *kontroler PDC*.
 
 ```
 BOOL CreateCompatibleBitmap(
@@ -195,34 +195,34 @@ BOOL CreateCompatibleBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
+*Domeny*<br/>
 Określa kontekst urządzenia.
 
-*nWidth (ww.*<br/>
+*nWidth*<br/>
 Określa szerokość (w pikselach) mapy bitowej.
 
-*nFeksja*<br/>
+*nHeight*<br/>
 Określa wysokość (w pikselach) mapy bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub format bitów na piksel, jak określony kontekst urządzenia. Można go wybrać jako bieżącą mapę bitową dla dowolnego urządzenia pamięci zgodnego z urządzeniem określonym przez *pDC*.
+Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel co określony kontekst urządzenia. Można ją wybrać jako bieżącą mapę bitową dla każdego urządzenia pamięci, które jest zgodne z określonym przez *kontroler PDC*.
 
-Jeśli *pDC* jest kontekstem urządzenia pamięci, zwrócona mapa bitowa ma ten sam format co aktualnie wybrana mapa bitowa w tym kontekście urządzenia. "Kontekst urządzenia pamięci" jest blokiem pamięci reprezentującym powierzchnię wyświetlania. Może być używany do przygotowania obrazów w pamięci przed skopiowaniem ich do rzeczywistej powierzchni wyświetlacza zgodnego urządzenia.
+Jeśli *kontroler PDC* jest kontekstem urządzenia pamięci, zwracana Mapa bitowa ma taki sam format jak aktualnie wybrana Mapa bitowa w tym kontekście urządzenia. "Kontekst urządzenia pamięci" to blok pamięci reprezentujący powierzchnię wyświetlaną. Można go użyć do przygotowania obrazów w pamięci przed skopiowaniem ich do rzeczywistej powierzchni ekranu zgodnego urządzenia.
 
-Po utworzeniu kontekstu urządzenia pamięci GDI automatycznie wybiera dla niego monochromatyczny bitmapę zapasową.
+Po utworzeniu kontekstu urządzenia pamięci GDI automatycznie wybiera czarną mapę bitową.
 
-Ponieważ kontekst urządzenia pamięci kolorów może mieć zaznaczone kolorowe lub monochromatyczne mapy bitowe, format mapy bitowej zwracanej przez `CreateCompatibleBitmap` funkcję nie zawsze jest taki sam; jednak format zgodnej mapy bitowej dla kontekstu urządzenia niememorowego jest zawsze w formacie urządzenia.
+Ponieważ kontekst urządzenia pamięci kolorowej może mieć wybrane kolory lub mapy bitowe, format mapy bitowej zwracanej przez `CreateCompatibleBitmap` funkcję nie zawsze jest taki sam, ale format zgodnej mapy bitowej dla kontekstu urządzenia niezwiązanego z pamięcią zawsze jest w formacie urządzenia.
 
-Po zakończeniu z `CBitmap` obiektem `CreateCompatibleBitmap` utworzonym za pomocą funkcji najpierw zaznacz mapę `CBitmap` bitową z kontekstu urządzenia, a następnie usuń obiekt.
+Po zakończeniu pracy z `CBitmap` obiektem utworzonym za pomocą `CreateCompatibleBitmap` funkcji, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiekt.
 
-## <a name="cbitmapcreatediscardablebitmap"></a><a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap
+## <a name="cbitmapcreatediscardablebitmap"></a><a name="creatediscardablebitmap"></a> CBitmap:: CreateDiscardableBitmap
 
-Inicjuje odrzucaną mapę bitową, która jest zgodna z kontekstem urządzenia identyfikowanym przez *pDC*.
+Inicjuje mapę bitową, która jest zgodna z kontekstem urządzenia identyfikowanym przez *PDC*.
 
 ```
 BOOL CreateDiscardableBitmap(
@@ -233,30 +233,30 @@ BOOL CreateDiscardableBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
+*Domeny*<br/>
 Określa kontekst urządzenia.
 
-*nWidth (ww.*<br/>
-Określa szerokość (w bitach) mapy bitowej.
+*nWidth*<br/>
+Określa szerokość mapy bitowej (w bitach).
 
-*nFeksja*<br/>
+*nHeight*<br/>
 Określa wysokość (w bitach) mapy bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub format bitów na piksel, jak określony kontekst urządzenia. Aplikacja może wybrać tę mapę bitową jako bieżącą mapę bitową dla urządzenia pamięci zgodnego z urządzeniem określonym przez *pDC*.
+Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel co określony kontekst urządzenia. Aplikacja może wybrać tę mapę bitową jako bieżącą mapę bitową dla urządzenia pamięci, która jest zgodna z określonym przez *PDC*.
 
-System Windows może odrzucić mapę bitową utworzoną przez tę funkcję tylko wtedy, gdy aplikacja nie wybrała jej w kontekście wyświetlania. Jeśli system Windows odrzuci mapę bitową, gdy nie jest zaznaczona, a aplikacja później spróbuje ją zaznaczyć, funkcja [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) zwróci wartość NULL.
+System Windows może odrzucić mapę bitową utworzoną przez tę funkcję tylko wtedy, gdy aplikacja nie została wybrana w kontekście wyświetlania. Jeśli system Windows odrzuci mapę bitową, gdy nie jest zaznaczona, a aplikacja później podejmie próbę jej zaznaczenia, funkcja [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) zwróci wartość null.
 
-Po zakończeniu z `CBitmap` obiektem `CreateDiscardableBitmap` utworzonym za pomocą funkcji najpierw zaznacz mapę `CBitmap` bitową z kontekstu urządzenia, a następnie usuń obiekt.
+Po zakończeniu pracy z `CBitmap` obiektem utworzonym za pomocą `CreateDiscardableBitmap` funkcji, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiekt.
 
-## <a name="cbitmapfromhandle"></a><a name="fromhandle"></a>CBitmap::OdRążej
+## <a name="cbitmapfromhandle"></a><a name="fromhandle"></a> CBitmap:: FromHandle
 
-Zwraca wskaźnik do `CBitmap` obiektu po podaniu dojścia do mapy bitowej interfejsu GDI systemu Windows.
+Zwraca wskaźnik do obiektu, `CBitmap` gdy ma dojść do mapy bitowej interfejsu GDI systemu Windows.
 
 ```
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
@@ -264,20 +264,20 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*hBitmapa*<br/>
+*hBitmap*<br/>
 Określa mapę bitową interfejsu GDI systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CBitmap` obiektu, jeśli zakończy się pomyślnie; w przeciwnym razie NULL.
+Wskaźnik do `CBitmap` obiektu, jeśli się powiedzie; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CBitmap` obiekt nie jest jeszcze dołączony do `CBitmap` uchwytu, tworzony i dołączany jest obiekt tymczasowy. Ten `CBitmap` obiekt tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynny w pętli zdarzeń, w którym to czasie wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem mówienia jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania komunikatu okna.
+Jeśli `CBitmap` obiekt nie jest jeszcze dołączony do dojścia, `CBitmap` tworzony jest obiekt tymczasowy i jest on dołączony. Ten `CBitmap` obiekt tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynności w pętli zdarzeń, podczas gdy wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem wymawiania tego jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
 
-## <a name="cbitmapgetbitmap"></a><a name="getbitmap"></a>CBitmap::GetBitmap
+## <a name="cbitmapgetbitmap"></a><a name="getbitmap"></a> CBitmap:: getmap
 
-Pobiera właściwości obrazu dołączonej mapy bitowej.
+Pobiera właściwości obrazu dla dołączonej mapy bitowej.
 
 ```
 int GetBitmap(BITMAP* pBitMap);
@@ -285,16 +285,16 @@ int GetBitmap(BITMAP* pBitMap);
 
 ### <a name="parameters"></a>Parametry
 
-*pBitMap (mapa bitów)*<br/>
-Wskaźnik do struktury [BITMAP,](/windows/win32/api/wingdi/ns-wingdi-bitmap) która otrzyma właściwości obrazu. Ten parametr nie może być null.
+*pBitMap*<br/>
+Wskaźnik do struktury [mapy bitowej](/windows/win32/api/wingdi/ns-wingdi-bitmap) , która będzie odbierać właściwości obrazu. Ten parametr nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a>CBitmap::GetBitmapBits
+## <a name="cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a> CBitmap:: GetBitmapBits
 
 Kopiuje wzorzec bitowy dołączonej mapy bitowej do określonego buforu.
 
@@ -306,21 +306,21 @@ DWORD GetBitmapBits(
 
 ### <a name="parameters"></a>Parametry
 
-*dwCount (licz)*<br/>
+*dwCount*<br/>
 Liczba bajtów do skopiowania do buforu.
 
-*lpBits (lpBits)*<br/>
+*lpBits*<br/>
 Wskaźnik do buforu, który otrzyma mapę bitową.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba bajtów skopiowanych do buforu, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
+Liczba bajtów skopiowanych do buforu, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CBitmap::GetBitmap,](#getbitmap) aby określić wymagany rozmiar buforu.
+Aby określić wymagany rozmiar buforu, użyj [CBitmap:: Getmap bitowych](#getbitmap) .
 
-## <a name="cbitmapgetbitmapdimension"></a><a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension
+## <a name="cbitmapgetbitmapdimension"></a><a name="getbitmapdimension"></a> CBitmap:: GetBitmapDimension
 
 Zwraca szerokość i wysokość mapy bitowej.
 
@@ -330,15 +330,15 @@ CSize GetBitmapDimension() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szerokość i wysokość mapy bitowej mierzona w jednostkach 0,1 milimetra. Wysokość znajduje się `cy` w `CSize` części członkowskiej obiektu, `cx` a szerokość znajduje się w człowianych. Jeśli szerokość i wysokość mapy bitowej `SetBitmapDimension`nie zostały ustawione przy użyciu , zwracana wartość wynosi 0.
+Szerokość i wysokość mapy bitowej mierzona w jednostkach 0,1 milimetrów. Wysokość znajduje się w `cy` elemencie członkowskim `CSize` obiektu, a szerokość znajduje się w `cx` elemencie członkowskim. Jeśli szerokość i wysokość mapy bitowej nie została ustawiona przy użyciu `SetBitmapDimension` , wartość zwracana wynosi 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zakłada się, że wysokość i szerokość zostały ustawione wcześniej przy użyciu funkcji elementu członkowskiego [SetBitmapDimension.](#setbitmapdimension)
+Przyjęto, że wysokość i szerokość zostały ustawione wcześniej przy użyciu funkcji składowej [SetBitmapDimension](#setbitmapdimension) .
 
-## <a name="cbitmaploadbitmap"></a><a name="loadbitmap"></a>CBitmap::LoadBitmap
+## <a name="cbitmaploadbitmap"></a><a name="loadbitmap"></a> CBitmap:: LoadBitmap
 
-Ładuje zasób mapy bitowej nazwany przez *lpszResourceName* lub identyfikowany przez numer identyfikacyjny w *nIDResource* z pliku wykonywalnego aplikacji.
+Ładuje zasób mapy bitowej o nazwie *lpszResourceName* lub identyfikowany przez numer identyfikacyjny w *nIDResource* pliku wykonywalnego aplikacji.
 
 ```
 BOOL LoadBitmap(LPCTSTR lpszResourceName);
@@ -348,35 +348,35 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="parameters"></a>Parametry
 
 *lpszResourceName*<br/>
-Wskazuje ciąg zakończony z wartością null, który zawiera nazwę zasobu mapy bitowej.
+Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu mapy bitowej.
 
-*nIDSerwród*<br/>
+*nIDResource*<br/>
 Określa numer identyfikatora zasobu mapy bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Załadowana mapa bitowa jest `CBitmap` dołączona do obiektu.
+Załadowana Mapa bitowa jest dołączona do `CBitmap` obiektu.
 
-Jeśli bitmapa zidentyfikowana przez *lpszResourceName* nie istnieje lub jeśli nie ma wystarczającej ilości pamięci do załadowania mapy bitowej, funkcja zwraca wartość 0.
+Jeśli mapa bitowa identyfikowana przez *lpszResourceName* nie istnieje lub w przypadku niewystarczającej ilości pamięci do załadowania mapy bitowej, funkcja zwróci wartość 0.
 
-Za pomocą funkcji [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) można usunąć bitmapę `LoadBitmap` załadowaną przez `CBitmap` tę funkcję lub destruktor usunie obiekt.
+Można użyć funkcji [CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) , aby usunąć mapę bitową załadowana przez `LoadBitmap` funkcję lub `CBitmap` destruktor usunie obiekt.
 
 > [!CAUTION]
 > Przed usunięciem obiektu upewnij się, że nie jest on zaznaczony w kontekście urządzenia.
 
-Następujące mapy bitowe zostały dodane do systemu Windows w wersji 3.1 lub nowszej:
+Następujące mapy bitowe zostały dodane do systemu Windows w wersji 3,1 i nowszych:
 
 OBM_UPARRROWIOBM_DNARROWIOBM_RGARROWIOBM_LFARROWI
 
-Te mapy bitowe nie znajdują się w sterownikach urządzeń dla systemu Windows w wersji 3.0 lub wcześniejszych. Aby uzyskać pełną listę map bitowych i wyświetlanie ich wyglądu, zobacz SDK systemu Windows.
+Te mapy bitowe nie są dostępne w sterownikach urządzeń dla systemu Windows w wersji 3,0 i starszych. Aby uzyskać pełną listę map bitowych i wyświetlić ich wygląd, zobacz Windows SDK.
 
-## <a name="cbitmaploadmappedbitmap"></a><a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap
+## <a name="cbitmaploadmappedbitmap"></a><a name="loadmappedbitmap"></a> CBitmap:: LoadMappedBitmap
 
-Wywołanie tej funkcji elementu członkowskiego, aby załadować mapę bitową i zamapować kolory na bieżące kolory systemowe.
+Wywołaj tę funkcję elementu członkowskiego, aby załadować mapę bitową i zamapować kolory na bieżące kolory systemowe.
 
 ```
 BOOL LoadMappedBitmap(
@@ -388,29 +388,29 @@ BOOL LoadMappedBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDBitmapa*<br/>
+*nIDBitmap*<br/>
 Identyfikator zasobu mapy bitowej.
 
-*nPłgi*<br/>
-Flaga mapy bitowej. Może być zero lub CMB_MASKED.
+*nFlags*<br/>
+Flaga dla mapy bitowej. Może być równa zero lub CMB_MASKED.
 
 *lpColorMap*<br/>
-Wskaźnik do `COLORMAP` struktury zawierającej informacje o kolorze potrzebne do mapowania map bitowych. Jeśli ten parametr ma wartość NULL, funkcja używa domyślnej mapy kolorów.
+Wskaźnik do `COLORMAP` struktury zawierającej informacje o kolorach, które są konieczne do mapowania map bitowych. Jeśli ten parametr ma wartość NULL, funkcja używa domyślnej mapy kolorów.
 
-*rozmiar nMapSize*<br/>
-Liczba kolorowych map wskazanych przez *lpColorMap*.
+*nMapSize*<br/>
+Liczba map kolorów wskazywanych przez *lpColorMap*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `LoadMappedBitmap` będzie mapować kolory często używane w glifach przycisków.
+Domyślnie program `LoadMappedBitmap` będzie mapować kolory często używane w glifach przycisków.
 
-Aby uzyskać informacje dotyczące tworzenia mapowania bitmapy, zobacz funkcję Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) i strukturę [COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap) w zestaw windows SDK.
+Aby uzyskać informacje na temat tworzenia mapowanej mapy bitowej, zobacz funkcję systemu Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) i strukturę [COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap) w Windows SDK.
 
-## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap
+## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a> CBitmap:: LoadOEMBitmap
 
 Ładuje wstępnie zdefiniowaną mapę bitową używaną przez system Windows.
 
@@ -420,42 +420,65 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*nIDBitmapa*<br/>
-Numer identyfikatora wstępnie zdefiniowanej mapy bitowej systemu Windows. Możliwe wartości są wymienione poniżej z systemu WINDOWS. H:
+*nIDBitmap*<br/>
+Numer IDENTYFIKACYJNy wstępnie zdefiniowanej mapy bitowej systemu Windows. Możliwe wartości są wymienione poniżej w systemie WINDOWS. C
 
-|||
-|-|-|
-|OBM_BTNCORNERS|OBM_OLD_RESTORE|
-|OBM_BTSIZE|OBM_OLD_RGARROW|
-|OBM_CHECK|OBM_OLD_UPARROW|
-|OBM_CHECKBOXES|OBM_OLD_ZOOM|
-|OBM_CLOSE|OBM_REDUCE|
-|OBM_COMBO|OBM_REDUCED|
-|OBM_DNARROW|OBM_RESTORE|
-|OBM_DNARROWD|OBM_RESTORED|
-|OBM_DNARROWI|OBM_RGARROW|
-|OBM_LFARROW|OBM_RGARROWD|
-|OBM_LFARROWD|OBM_RGARROWI|
-|OBM_LFARROWI|OBM_SIZE|
-|OBM_MNARROW|OBM_UPARROW|
-|OBM_OLD_CLOSE|OBM_UPARROWD|
-|OBM_OLD_DNARROW|OBM_UPARROW|
-|OBM_OLD_LFARROW|OBM_ZOOM|
-|OBM_OLD_REDUCE|OBM_ZOOMD|
+:::row:::
+   :::column span="":::
+      OBM_BTNCORNERS \
+      OBM_BTSIZE \
+      OBM_CHECK \
+      OBM_CHECKBOXES \
+      OBM_CLOSE \
+      OBM_COMBO \
+      OBM_DNARROW \
+      OBM_DNARROWD \
+      OBM_DNARROWI \
+      OBM_LFARROW \
+      OBM_LFARROWD \
+      OBM_LFARROWI
+   :::column-end:::
+   :::column span="":::
+      OBM_MNARROW \
+      OBM_OLD_CLOSE \
+      OBM_OLD_DNARROW \
+      OBM_OLD_LFARROW \
+      OBM_OLD_REDUCE \
+      OBM_OLD_RESTORE \
+      OBM_OLD_RGARROW \
+      OBM_OLD_UPARROW \
+      OBM_OLD_ZOOM \
+      OBM_REDUCE \
+      OBM_REDUCED
+   :::column-end:::
+   :::column span="":::
+      OBM_RESTORE \
+      OBM_RESTORED \
+      OBM_RGARROW \
+      OBM_RGARROWD \
+      OBM_RGARROWI \
+      OBM_SIZE \
+      OBM_UPARROW \
+      OBM_UPARROW \
+      OBM_UPARROWD \
+      OBM_ZOOM \
+      OBM_ZOOMD
+   :::column-end:::
+:::row-end:::
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Nazwy bitmap, które zaczynają się od OBM_OLD reprezentują mapy bitowe używane przez wersje systemu Windows przed wersją 3.0.
+Nazwy map bitowych zaczynające się od OBM_OLD reprezentują mapy bitowe używane przez wersje systemu Windows przed 3,0.
 
-Należy zauważyć, że stała OEMRESOURCE musi być zdefiniowana przed dołączeniem systemu WINDOWS. H w celu użycia któregokolwiek ze **stałych OBM_.**
+Należy pamiętać, że stała OEMRESOURCE musi być zdefiniowana przed dołączeniem systemu WINDOWS. H, aby użyć dowolnych stałych **OBM_** .
 
-## <a name="cbitmapoperator-hbitmap"></a><a name="operator_hbitmap"></a>CBitmap::operator HBITMAP
+## <a name="cbitmapoperator-hbitmap"></a><a name="operator_hbitmap"></a> CBitmap:: operator HBITMAP
 
-Użyj tego operatora, aby uzyskać dołączony uchwyt `CBitmap` GDI systemu Windows obiektu.
+Użyj tego operatora, aby uzyskać dojście do dołączonego interfejsu GDI systemu Windows `CBitmap` .
 
 ```
 operator HBITMAP() const;
@@ -463,15 +486,15 @@ operator HBITMAP() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, dojście do obiektu `CBitmap` GDI systemu Windows reprezentowanego przez obiekt; w przeciwnym razie NULL.
+Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows reprezentowane przez `CBitmap` obiekt; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator jest operatorem odlewania, `HBITMAP` który obsługuje bezpośrednie użycie obiektu.
+Ten operator jest operatorem rzutowania, który obsługuje bezpośrednie użycie `HBITMAP` obiektu.
 
-Aby uzyskać więcej informacji na temat używania obiektów [graficznych,](/windows/win32/gdi/graphic-objects) zobacz Obiekty graficzne w sdk systemu Windows.
+Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz temat [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
 
-## <a name="cbitmapsetbitmapbits"></a><a name="setbitmapbits"></a>CBitmap::SetBitmapBits
+## <a name="cbitmapsetbitmapbits"></a><a name="setbitmapbits"></a> CBitmap:: SetBitmapBits
 
 Ustawia bity mapy bitowej na wartości bitowe podane przez *lpBits*.
 
@@ -483,19 +506,19 @@ DWORD SetBitmapBits(
 
 ### <a name="parameters"></a>Parametry
 
-*dwCount (licz)*<br/>
-Określa liczbę bajtów wskazywali przez *lpBits*.
+*dwCount*<br/>
+Określa liczbę bajtów wskazywanych przez *lpBits*.
 
-*lpBits (lpBits)*<br/>
-Wskazuje tablicę BYTE zawierającą wartości pikseli, `CBitmap` które mają zostać skopiowane do obiektu. Aby mapa bitowa mogła poprawnie renderować swój obraz, wartości powinny być sformatowane w taki sposób, aby były zgodne z wartościami głębokości wysokości, szerokości i koloru, które zostały określone podczas tworzenia instancji CBitmap. Aby uzyskać więcej informacji, zobacz [CBitmap::CreateBitmap](#createbitmap).
+*lpBits*<br/>
+Wskazuje tablicę bajtów zawierającą wartości pikseli, które mają zostać skopiowane do `CBitmap` obiektu. Aby Mapa bitowa mogła prawidłowo renderować swój obraz, wartości powinny być sformatowane tak, aby były zgodne z wartościami głębokości, szerokości i koloru, które zostały określone podczas tworzenia wystąpienia CBitmap. Aby uzyskać więcej informacji, zobacz [CBitmap:: ismap](#createbitmap).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba bajtów używanych do ustawiania bitów bitmapy; 0, jeśli funkcja nie powiedzie się.
+Liczba bajtów używanych podczas ustawiania bitów mapy bitowej; 0, jeśli funkcja nie powiedzie się.
 
-## <a name="cbitmapsetbitmapdimension"></a><a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension
+## <a name="cbitmapsetbitmapdimension"></a><a name="setbitmapdimension"></a> CBitmap:: SetBitmapDimension
 
-Przypisuje szerokość i wysokość do mapy bitowej w jednostkach 0,1 milimetra.
+Przypisuje szerokość i wysokość do mapy bitowej w jednostkach 0,1 milimetrów.
 
 ```
 CSize SetBitmapDimension(
@@ -505,22 +528,22 @@ CSize SetBitmapDimension(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth (ww.*<br/>
-Określa szerokość mapy bitowej (w jednostkach 0,1 milimetra).
+*nWidth*<br/>
+Określa szerokość mapy bitowej (w jednostkach 0,1 milimetrów).
 
-*nFeksja*<br/>
-Określa wysokość mapy bitowej (w jednostkach 0,1 milimetra).
+*nHeight*<br/>
+Określa wysokość mapy bitowej (w jednostkach 0,1 milimetrów).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzednie wymiary mapy bitowej. Wysokość znajduje `cy` się w `CSize` zmiennej prętowej obiektu, a szerokość w zmiennej prętowej. `cx`
+Poprzednie wymiary mapy bitowej. Wysokość znajduje się w `cy` zmiennej składowej `CSize` obiektu, a szerokość znajduje się w `cx` zmiennej składowej.
 
 ### <a name="remarks"></a>Uwagi
 
-GDI nie używa tych wartości, z wyjątkiem do zwrócenia ich, gdy aplikacja wywołuje [GetBitmapDimension](#getbitmapdimension) funkcji elementu członkowskiego.
+Interfejs GDI nie używa tych wartości z wyjątkiem powrotu, gdy aplikacja wywołuje funkcję członkowską [GetBitmapDimension](#getbitmapdimension) .
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowy MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

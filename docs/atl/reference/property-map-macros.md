@@ -11,31 +11,31 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 56fdb02939a99e396b9000705753e2475b80f6dc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e14c3cb82b9b7527ed8af42e181581097218360
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326090"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834660"
 ---
 # <a name="property-map-macros"></a>Makra mapy właściwości
 
 Te makra definiują mapy właściwości i wpisy.
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[BEGIN_PROP_MAP](#begin_prop_map)|Oznacza początek mapy właściwości ATL.|
-|[PROP_DATA_ENTRY](#prop_data_entry)|Wskazuje zakres lub wymiary formantu ActiveX.|
-|[PROP_ENTRY_TYPE](#prop_entry_type)|Wprowadza opis właściwości, dispid właściwości i strony właściwości CLSID do mapy właściwości.|
-|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Wprowadza opis właściwości, właściwość DISPID, strona właściwości `IDispatch` CLSID i identyfikator IID do mapy właściwości.|
-|[PROP_PAGE](#prop_page)|Wprowadza stronę właściwości CLSID do mapy właściwości.|
+|[PROP_DATA_ENTRY](#prop_data_entry)|Wskazuje zakres lub wymiary kontrolki ActiveX.|
+|[PROP_ENTRY_TYPE](#prop_entry_type)|Wprowadza opis właściwości, DISPID właściwości i identyfikator CLSID strony właściwości do mapy właściwości.|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Wprowadź opis właściwości, DISPID właściwości, identyfikator CLSID strony właściwości i `IDispatch` Identyfikator IID do mapy właściwości.|
+|[PROP_PAGE](#prop_page)|Wprowadza identyfikator CLSID strony właściwości do mapy właściwości.|
 |[END_PROP_MAP](#end_prop_map)|Oznacza koniec mapy właściwości ATL.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-## <a name="begin_prop_map"></a><a name="begin_prop_map"></a>BEGIN_PROP_MAP
+## <a name="begin_prop_map"></a><a name="begin_prop_map"></a> BEGIN_PROP_MAP
 
 Oznacza początek mapy właściwości obiektu.
 
@@ -45,24 +45,24 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
-[w] Określa klasę zawierającą mapę właściwości.
+*theClass*<br/>
+podczas Określa klasę zawierającą mapę właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Mapa właściwości przechowuje opisy właściwości, identyfikatory DISPI, identyfikatory `IDispatch` CLSID strony właściwości i identyfikatory IDENTYFIKATORÓW. Klasy [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)i [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) używają mapy właściwości do pobierania i ustawiania tych informacji.
+Mapa właściwości przechowuje opisy właściwości, identyfikatory SPID właściwości, identyfikatory CLSID strony właściwości i `IDispatch` IID. Klasy [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)i [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) używają mapy właściwości do pobierania i ustawiania tych informacji.
 
-Podczas tworzenia obiektu za pomocą Kreatora projektu ATL kreator utworzy pustą mapę właściwości, określając BEGIN_PROP_MAP a następnie [END_PROP_MAP](#end_prop_map).
+Podczas tworzenia obiektu za pomocą Kreatora projektu ATL Kreator utworzy pustą mapę właściwości, określając BEGIN_PROP_MAP, a następnie [END_PROP_MAP](#end_prop_map).
 
-BEGIN_PROP_MAP nie zapisuje zakresu (czyli wymiarów) mapy właściwości, ponieważ obiekt używający mapy właściwości może nie mieć interfejsu użytkownika, więc nie miałby żadnego zasięgu. Jeśli obiekt jest formantem ActiveX z interfejsem użytkownika, ma on zasięg. W takim przypadku należy określić [PROP_DATA_ENTRY](#prop_data_entry) na mapie właściwości, aby zapewnić zakres.
+BEGIN_PROP_MAP nie zapisuje tego zakresu (czyli wymiarów) mapy właściwości, ponieważ obiekt używający mapy właściwości może nie mieć interfejsu użytkownika, dlatego nie będzie miał żadnego zakresu. Jeśli obiekt jest kontrolką ActiveX z interfejsem użytkownika, ma zakres. W takim przypadku należy określić [PROP_DATA_ENTRY](#prop_data_entry) w mapie właściwości, aby podać zakres.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
 
-## <a name="prop_data_entry"></a><a name="prop_data_entry"></a>PROP_DATA_ENTRY
+## <a name="prop_data_entry"></a><a name="prop_data_entry"></a> PROP_DATA_ENTRY
 
-Wskazuje zakres lub wymiary formantu ActiveX.
+Wskazuje zakres lub wymiary kontrolki ActiveX.
 
 ```
 PROP_DATA_ENTRY( szDesc, member, vt)
@@ -70,32 +70,32 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc (szDesc)*<br/>
-[w] Opis właściwości.
+*szDesc*<br/>
+podczas Opis właściwości.
 
-*Członkowskich*<br/>
-[w] Element członkowski danych zawierający zakres; na przykład `m_sizeExtent`.
+*członkiem*<br/>
+podczas Element członkowski danych zawierający zakres; na przykład `m_sizeExtent` .
 
-*Vt*<br/>
-[w] Określa typ VARIANT właściwości.
+*VT*<br/>
+podczas Określa typ WARIANTu właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-To makro powoduje, że określony element członkowski danych ma być utrwalony.
+To makro powoduje utrwalenie określonego elementu członkowskiego danych.
 
-Podczas tworzenia formantu ActiveX kreator wstawia to makro po [BEGIN_PROP_MAP](#begin_prop_map) makra mapy właściwości i przed [END_PROP_MAP](#end_prop_map)makra mapy właściwości .
+Po utworzeniu kontrolki ActiveX Kreator wstawi to makro po [BEGIN_PROP_MAP](#begin_prop_map) makro mapy właściwości i przed [END_PROP_MAP](#end_prop_map)makro mapy właściwości.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie zakres obiektu`m_sizeExtent`( ) jest zachowywany.
+W poniższym przykładzie zakres obiektu ( `m_sizeExtent` ) jest utrwalany.
 
 [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]
 
 [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
 
-## <a name="prop_entry_type"></a><a name="prop_entry_type"></a>PROP_ENTRY_TYPE
+## <a name="prop_entry_type"></a><a name="prop_entry_type"></a> PROP_ENTRY_TYPE
 
-To makro służy do wprowadzania opisu właściwości, dispid właściwości i strony właściwości CLSID do mapy właściwości obiektu.
+To makro służy do wprowadzania opisu właściwości, DISPID właściwości i identyfikatora CLSID strony właściwości do mapy właściwości obiektu.
 
 ```
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
@@ -103,31 +103,31 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc (szDesc)*<br/>
-[w] Opis właściwości.
+*szDesc*<br/>
+podczas Opis właściwości.
 
-*Dispid*<br/>
-[w] Dispid właściwości.
+*DISPID*<br/>
+podczas Identyfikator DISPID właściwości.
 
-*Clsid*<br/>
-[w] Identyfikator CLSID strony właściwości skojarzonej. Użyj specjalnej wartości CLSID_NULL dla właściwości, która nie ma skojarzonej strony właściwości.
+*Identyfikator*<br/>
+podczas Identyfikator CLSID skojarzonej strony właściwości. Użyj specjalnej wartości CLSID_NULL dla właściwości, która nie ma skojarzonej strony właściwości.
 
-*Vt*<br/>
-[w] Typ obiektu.
+*VT*<br/>
+podczas Typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Makro PROP_ENTRY było niezabezpieczone i przestarzałe. Został on zastąpiony PROP_ENTRY_TYPE.
+Makro PROP_ENTRY było niebezpieczne i przestarzałe. Został on zastąpiony PROP_ENTRY_TYPE.
 
-[Makro BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; [END_PROP_MAP](#end_prop_map) makr oznacza koniec.
+Makro [BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; makro [END_PROP_MAP](#end_prop_map) oznacza koniec.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [BEGIN_PROP_MAP](#begin_prop_map).
+Zapoznaj się z przykładem [BEGIN_PROP_MAP](#begin_prop_map).
 
-## <a name="prop_entry_type_ex"></a><a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX
+## <a name="prop_entry_type_ex"></a><a name="prop_entry_type_ex"></a> PROP_ENTRY_TYPE_EX
 
-Podobnie [jak PROP_ENTRY_TYPE](#prop_entry_type), ale pozwala określić określony identyfikator, jeśli obiekt obsługuje wiele dwóch interfejsów.
+Podobnie jak w przypadku [PROP_ENTRY_TYPE](#prop_entry_type), ale umożliwia określenie określonego identyfikatora IID, jeśli obiekt obsługuje wiele podwójnych interfejsów.
 
 ```
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
@@ -135,36 +135,36 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc (szDesc)*<br/>
-[w] Opis właściwości.
+*szDesc*<br/>
+podczas Opis właściwości.
 
-*Dispid*<br/>
-[w] Dispid właściwości.
+*DISPID*<br/>
+podczas Identyfikator DISPID właściwości.
 
-*Clsid*<br/>
-[w] Identyfikator CLSID strony właściwości skojarzonej. Użyj specjalnej wartości CLSID_NULL dla właściwości, która nie ma skojarzonej strony właściwości.
+*Identyfikator*<br/>
+podczas Identyfikator CLSID skojarzonej strony właściwości. Użyj specjalnej wartości CLSID_NULL dla właściwości, która nie ma skojarzonej strony właściwości.
 
-*iidDispatch (iidDispatch)*<br/>
-[w] Identyfikator podwójnego interfejsu definiującego właściwość.
+*iidDispatch*<br/>
+podczas Identyfikator IID podwójnego interfejsu definiującego właściwość.
 
-*Vt*<br/>
-[w] Typ obiektu.
+*VT*<br/>
+podczas Typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Makro PROP_ENTRY_EX było niezabezpieczone i przestarzałe. Został on zastąpiony PROP_ENTRY_TYPE_EX.
+Makro PROP_ENTRY_EX było niebezpieczne i przestarzałe. Został on zastąpiony PROP_ENTRY_TYPE_EX.
 
-[Makro BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; [END_PROP_MAP](#end_prop_map) makr oznacza koniec.
+Makro [BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; makro [END_PROP_MAP](#end_prop_map) oznacza koniec.
 
 ### <a name="example"></a>Przykład
 
-Poniższe przykładowe grupy `IMyDual1` wpisów, `IMyDual2`po których następuje wpis dla . Grupowanie za pomocą podwójnego interfejsu poprawi wydajność.
+Poniższy przykład grupuje wpisy, `IMyDual1` po których następuje wpis dla `IMyDual2` . Grupowanie według podwójnego interfejsu poprawi wydajność.
 
 [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]
 
-## <a name="prop_page"></a><a name="prop_page"></a>PROP_PAGE
+## <a name="prop_page"></a><a name="prop_page"></a> PROP_PAGE
 
-To makro służy do wprowadzania strony właściwości CLSID do mapy właściwości obiektu.
+To makro służy do wprowadzania identyfikatora CLSID strony właściwości do mapy właściwości obiektu.
 
 ```
 PROP_PAGE(clsid)
@@ -172,23 +172,23 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*Clsid*<br/>
-[w] Identyfikator CLSID strony właściwości.
+*Identyfikator*<br/>
+podczas Identyfikator CLSID strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-PROP_PAGE jest podobny do [PROP_ENTRY_TYPE](#prop_entry_type), ale nie wymaga opisu właściwości lub DISPID.
+PROP_PAGE jest podobna do [PROP_ENTRY_TYPE](#prop_entry_type), ale nie wymaga opisu właściwości ani identyfikatora DISPID.
 
 > [!NOTE]
-> Jeśli wprowadzono już CLSID z PROP_ENTRY_TYPE lub [PROP_ENTRY_TYPE_EX,](#prop_entry_type_ex)nie trzeba wprowadzać dodatkowego wpisu z PROP_PAGE.
+> Jeśli wprowadzono już identyfikator CLSID z PROP_ENTRY_TYPE lub [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), nie musisz wprowadzać dodatkowych wpisów w PROP_PAGE.
 
-[Makro BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; [END_PROP_MAP](#end_prop_map) makr oznacza koniec.
+Makro [BEGIN_PROP_MAP](#begin_prop_map) oznacza początek mapy właściwości; makro [END_PROP_MAP](#end_prop_map) oznacza koniec.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
 
-## <a name="end_prop_map"></a><a name="end_prop_map"></a>END_PROP_MAP
+## <a name="end_prop_map"></a><a name="end_prop_map"></a> END_PROP_MAP
 
 Oznacza koniec mapy właściwości obiektu.
 
@@ -198,11 +198,11 @@ END_PROP_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas tworzenia obiektu za pomocą Kreatora projektu ATL kreator utworzy pustą mapę właściwości, określając [BEGIN_PROP_MAP](#begin_prop_map) a następnie END_PROP_MAP.
+Podczas tworzenia obiektu za pomocą Kreatora projektu ATL Kreator utworzy pustą mapę właściwości, określając [BEGIN_PROP_MAP](#begin_prop_map) , a następnie END_PROP_MAP.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [BEGIN_PROP_MAP](#begin_prop_map).
+Zapoznaj się z przykładem [BEGIN_PROP_MAP](#begin_prop_map).
 
 ## <a name="see-also"></a>Zobacz też
 

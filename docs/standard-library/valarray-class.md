@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: da7a1a8ca4aca88cda4eb3153c169629b76843da
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 177840ffea711395b7cace6e47426d979f8fe329
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840131"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -59,25 +59,25 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[valarray](#valarray)|Tworzy konstrukcje a `valarray` o określonym rozmiarze lub z elementami określonej wartości lub jako kopię innego `valarray` lub podzestawu innego `valarray` .|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[value_type](#value_type)|Typ, który reprezentuje typ elementu przechowywanego w `valarray` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[stosowa](#apply)|Stosuje określoną funkcję do każdego elementu `valarray` .|
 |[cshift](#cshift)|Cyklicznie przesuwa wszystkie elementy w a `valarray` o określoną liczbę pozycji.|
 |[zwolniony](#free)|Zwalnia pamięć używaną przez program `valarray` .|
-|[Maksymalny](#max)|Znajduje największy element w `valarray` .|
-|[długości](#min)|Znajduje najmniejszy element w `valarray` .|
+|[max](#max)|Znajduje największy element w `valarray` .|
+|[min](#min)|Znajduje najmniejszy element w `valarray` .|
 |[Zmień rozmiar](#resize)|Zmienia liczbę elementów w odniesieniu `valarray` do określonej liczby, dodając lub usuwając elementy zgodnie z wymaganiami.|
 |[nocn](#shift)|Przenosi wszystkie elementy w a `valarray` o określoną liczbę pozycji.|
 |[zmienia](#size)|Znajduje liczbę elementów w `valarray` .|
@@ -86,7 +86,7 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[zakład!](#op_not)|Jednoargumentowy operator, który uzyskuje `NOT` wartości logiczne każdego elementu w `valarray` .|
 |[operator% =](#op_mod_eq)|Uzyskuje resztę dzielącą elementy elementu tablicy, przez określoną `valarray` lub wartość typu elementu.|
@@ -100,12 +100,12 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 |[operator-=](#operator-_eq)|Odejmuje elementy określonego `valarray` lub wartości typu elementu, z którego operandem jest element `valarray` .|
 |[operator/=](#op_div_eq)|Dzieli element operandu `valarray` przez elementy określonego `valarray` lub wartości typu elementu.|
 |[operator =](#op_eq)|Przypisuje elementy do `valarray` których wartości są określone bezpośrednio lub jako część innego `valarray` lub przez,, `slice_array` `gslice_array` `mask_array` lub `indirect_array` .|
-|[&#91;&#93;operatora](#op_at)|Zwraca odwołanie do elementu lub jego wartości w określonym indeksie lub określonym podzbiorze.|
+|[&#91;&#93;operatora ](#op_at)|Zwraca odwołanie do elementu lub jego wartości w określonym indeksie lub określonym podzbiorze.|
 |[operator ^ =](#op_xor_eq)|Uzyskuje wyłączny operator logiczny or ( `XOR` ) tablicy z określoną valarray lub wartością typu elementu.|
 |[&#124;operatora =](#op_or_eq)|Uzyskuje bitową `OR` liczbę elementów w tablicy albo z odpowiadającymi im elementami w określonym `valarray` lub z wartością typu elementu.|
 |[operator ~](#op_dtor)|Jednoargumentowy operator, który uzyskuje `NOT` wartości bitowe każdego elementu w `valarray` .|
 
-## <a name="apply"></a><a name="apply"></a>stosowa
+## <a name="apply"></a><a name="apply"></a> stosowa
 
 Stosuje określoną funkcję do każdego elementu valarray.
 
@@ -181,7 +181,7 @@ The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```
 
-## <a name="cshift"></a><a name="cshift"></a>cshift
+## <a name="cshift"></a><a name="cshift"></a> cshift
 
 Cyklicznie przesuwa wszystkie elementy w valarray o określoną liczbę pozycji.
 
@@ -259,7 +259,7 @@ The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```
 
-## <a name="free"></a><a name="free"></a>zwolniony
+## <a name="free"></a><a name="free"></a> zwolniony
 
 Zwalnia pamięć używaną przez valarray.
 
@@ -278,7 +278,7 @@ v = valarray<T>();
 // equivalent to v.free()
 ```
 
-## <a name="max"></a><a name="max"></a>Maksymalny
+## <a name="max"></a><a name="max"></a> Maksymalny
 
 Znajduje największy element w valarray.
 
@@ -383,7 +383,7 @@ The smallest element in the valarray is: -9.
 */
 ```
 
-## <a name="operator"></a><a name="op_not"></a>zakład!
+## <a name="operator"></a><a name="op_not"></a> zakład!
 
 Jednoargumentowy operator, który uzyskuje logiczne **nie** wartości każdego elementu w valarray.
 
@@ -442,7 +442,7 @@ The element-by-element result of the logical NOT operator! is the
 valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="operator"></a><a name="op_mod_eq"></a>operator% =
+## <a name="operator"></a><a name="op_mod_eq"></a> operator% =
 
 Uzyskuje pozostałą część dzielenia elementów tablicy przez określony valarray lub przez wartość typu elementu.
 
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="operatoramp"></a><a name="op_and_eq"></a>zakład&amp;=
+## <a name="operatoramp"></a><a name="op_and_eq"></a> zakład&amp;=
 
 Uzyskuje bitowe **i** elementy w tablicy z odpowiednimi elementami w określonym valarray lub z wartością typu elementu.
 
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt_eq"></a>zakład&gt;&gt;=
+## <a name="operatorgtgt"></a><a name="op_gt_gt_eq"></a> zakład&gt;&gt;=
 
 Prawy przesuwa bity dla każdego elementu operandu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.
 
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt_eq"></a>zakład&lt;&lt;=
+## <a name="operatorltlt"></a><a name="op_lt_lt_eq"></a> zakład&lt;&lt;=
 
 Lewy przesuwa bity dla każdego elementu operandu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.
 
@@ -726,7 +726,7 @@ on the operand array is the valarray:
 ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a> operator * =
 
 Mnoży elementy określonego valarray lub wartości typu elementu z elementem, do operandu valarray.
 
@@ -792,7 +792,7 @@ valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 */
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Jednoargumentowy operator, który stosuje znak plus do każdego elementu w valarray.
 
@@ -845,7 +845,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>operator + =
+## <a name="operator"></a><a name="op_add_eq"></a> operator + =
 
 Dodaje elementy określonego valarray lub wartości typu elementu z elementem, do operandu valarray.
 
@@ -912,7 +912,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a> zakład
 
 Jednoargumentowy operator, który stosuje znak minus do każdego elementu w valarray.
 
@@ -965,7 +965,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a> operator-=
 
 Odejmuje elementy określonego valarray lub wartości typu elementu z elementu z operandem valarray.
 
@@ -1032,7 +1032,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a> operator/=
 
 Dzieli argument operandu valarray przez elementy określonego valarray lub wartość typu elementu.
 
@@ -1099,7 +1099,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Przypisuje elementy do valarray, których wartości są określone bezpośrednio lub jako część innych valarray lub przez slice_array, gslice_array, mask_array lub indirect_array.
 
@@ -1209,7 +1209,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 
 ```
 
-## <a name="operator"></a><a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a> operator []
 
 Zwraca odwołanie do elementu lub jego wartości w określonym indeksie lub określonym podzbiorze.
 
@@ -1266,7 +1266,7 @@ Podczas kompilowania przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/it
 
 Zobacz przykłady [wycinków:: Slice](../standard-library/slice-class.md#slice) i [gslice:: gslice](../standard-library/gslice-class.md#gslice) , aby zapoznać się z przykładem sposobu deklarowania i używania operatora.
 
-## <a name="operator"></a><a name="op_xor_eq"></a>operator ^ =
+## <a name="operator"></a><a name="op_xor_eq"></a> operator ^ =
 
 Uzyskuje wyłączny operator logiczny or ( **XOR**) tablicy z określonym valarray lub wartością typu elementu.
 
@@ -1424,7 +1424,7 @@ operator|= is the valarray:
 ( 1 0 1 3 3 4 7 6 7 9 ).
 ```
 
-## <a name="operator"></a><a name="op_dtor"></a>operator ~
+## <a name="operator"></a><a name="op_dtor"></a> operator ~
 
 Jednoargumentowy operator, który uzyskuje `NOT` wartości bitowe każdego elementu w valarray.
 
@@ -1523,7 +1523,7 @@ is the negative of the original elements the
 valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
 ```
 
-## <a name="resize"></a><a name="resize"></a>Zmień rozmiar
+## <a name="resize"></a><a name="resize"></a> Zmień rozmiar
 
 Zmienia liczbę elementów w valarray na określoną liczbę.
 
@@ -1599,7 +1599,7 @@ The valarray contains ( 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 ).
 The number of elements in the resized valarray is: 15.
 ```
 
-## <a name="shift"></a><a name="shift"></a>nocn
+## <a name="shift"></a><a name="shift"></a> nocn
 
 Przenosi wszystkie elementy w valarray o określoną liczbę miejsc.
 
@@ -1674,7 +1674,7 @@ The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 Znajduje liczbę elementów w valarray.
 
@@ -1751,7 +1751,7 @@ the operand valarray va2(12) is now: ( 0 1 2 3 4 5 6 7 8 9 10 11 ).
 The number of elements in the valarray va2 is still: 12.
 ```
 
-## <a name="sum"></a><a name="sum"></a>należności
+## <a name="sum"></a><a name="sum"></a> należności
 
 Określa sumę wszystkich elementów w valarray o niezerowej długości.
 
@@ -1801,7 +1801,7 @@ The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
 ```
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Wymienia elementy dwóch `valarray` s.
 
@@ -1818,7 +1818,7 @@ void swap(valarray& right);
 
 Funkcja członkowska zamienia kontrolowane sekwencje między **`*this`** i *po prawej*. Robi to w stałym czasie, nie zgłasza żadnych wyjątków i unieważnia odwołania, wskaźniki lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji.
 
-## <a name="valarray"></a><a name="valarray"></a>valarray
+## <a name="valarray"></a><a name="valarray"></a> valarray
 
 Tworzy tablicę valarray, o określonym rozmiarze lub z elementami o określonej wartości lub jako kopię innej tablicy valarray lub podzbioru innej tablicy valarray.
 
@@ -1954,7 +1954,7 @@ va[slice( 2, 4, 3)] = ( 0 0 0 )
 1 2 3 4
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ elementu przechowywanego w valarray.
 
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

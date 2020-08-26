@@ -9,24 +9,25 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fd88bf359cbc3221a8f2a259d031bdbd6b581f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384845"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835015"
 ---
 # <a name="resource-management-classes"></a>Klasy zarządzania zasobami
 
-Te klasy oferują automatyczne zarządzanie klas zarządzanych.
+Te klasy zapewniają automatyczne zarządzanie klasami zarządzanymi.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-|||
-|-|-|
-|[auto_gcroot](../dotnet/auto-gcroot.md)|Osadza uchwyt wirtualnego w polu typu natywnego.|
-|[auto_handle](../dotnet/auto-handle.md)|Osadza wirtualnego dojście w typ zarządzany.|
+[auto_gcroot](../dotnet/auto-gcroot.md)\
+Osadza wirtualne dojście w typie natywnym.
 
-## <a name="see-also"></a>Zobacz także
+[auto_handle](../dotnet/auto-handle.md)\
+Osadza wirtualne dojście w zarządzanym typie.
+
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

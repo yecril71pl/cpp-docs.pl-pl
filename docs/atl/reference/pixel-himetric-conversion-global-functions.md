@@ -1,30 +1,30 @@
 ---
-title: Globalne funkcje konwersji PIXEL-HIMETRIC
+title: Funkcja globalna konwersji HIMETRIC pikseli
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-ms.openlocfilehash: 08c72c0d8f3d061950d6945d9fb412c0a16355da
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e71dccbccbe43ea7df3b6a7005da138a8e31aeb3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326141"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834690"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>Globalne funkcje konwersji pikseli/HIMETRIC
+# <a name="pixelhimetric-conversion-global-functions"></a>Funkcje globalne konwersji pikseli/HIMETRIC
 
-Funkcje te zapewniają obsługę konwersji do i z jednostek pikseli i HIMETRIC.
+Te funkcje zapewniają obsługę konwersji do i z pikseli i HIMETRIC jednostek.
 
 > [!IMPORTANT]
-> Funkcji wymienionych w poniższej tabeli nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows.
+> Funkcje wymienione w poniższej tabeli nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
-|||
+|Nazwa|Opis|
 |-|-|
-|[AtlHiMetricToPixel (AtlHiMetricToPixel)](#atlhimetrictopixel)|Konwertuje jednostki HIMETRIC (każda jednostka ma 0,01 milimetra) na piksele.|
-|[AtlPixelToHiMetric (AtlPixelToHiMetric)](#atlpixeltohimetric)|Konwertuje piksele na jednostki HIMETRIC (każda jednostka ma 0,01 milimetra).|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|Konwertuje jednostki HIMETRIC (każda jednostka to 0,01 milimetr) na piksele.|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Konwertuje piksele na jednostki HIMETRIC (każda jednostka to 0,01 milimetra).|
 
-## <a name="atlhimetrictopixel"></a><a name="atlhimetrictopixel"></a>AtlHiMetricToPixel (AtlHiMetricToPixel)
+## <a name="atlhimetrictopixel"></a><a name="atlhimetrictopixel"></a> AtlHiMetricToPixel
 
 Konwertuje rozmiar obiektu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetra) na rozmiar w pikselach na ekranie urządzenia.
 
@@ -37,10 +37,10 @@ extern void AtlHiMetricToPixel(
 ### <a name="parameters"></a>Parametry
 
 *lpSizeInHiMetric*<br/>
-[w] Wskaźnik do rozmiaru obiektu w jednostkach HIMETRIC.
+podczas Wskaźnik na rozmiar obiektu w jednostkach HIMETRIC.
 
 *lpSizeInPix*<br/>
-[na zewnątrz] Wskaźnik do miejsca, w którym ma zostać zwrócony rozmiar obiektu w pikselach.
+określoną Wskaźnik do miejsca, w którym ma zostać zwrócony rozmiar obiektu w pikselach.
 
 ### <a name="example"></a>Przykład
 
@@ -48,9 +48,9 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h
+**Nagłówek:** atlwin. h
 
-## <a name="atlpixeltohimetric"></a><a name="atlpixeltohimetric"></a>AtlPixelToHiMetric (AtlPixelToHiMetric)
+## <a name="atlpixeltohimetric"></a><a name="atlpixeltohimetric"></a> AtlPixelToHiMetric
 
 Konwertuje rozmiar obiektu w pikselach na ekranie urządzenia na rozmiar w jednostkach HIMETRIC (każda jednostka to 0,01 milimetra).
 
@@ -63,10 +63,10 @@ extern void AtlPixelToHiMetric(
 ### <a name="parameters"></a>Parametry
 
 *lpSizeInPix*<br/>
-[w] Wskaźnik do rozmiaru obiektu w pikselach.
+podczas Wskaźnik na rozmiar obiektu w pikselach.
 
 *lpSizeInHiMetric*<br/>
-[na zewnątrz] Wskaźnik do miejsca, w którym ma zostać zwrócony rozmiar obiektu w jednostkach HIMETRIC.
+określoną Wskaźnik do lokalizacji, w której ma zostać zwrócony rozmiar obiektu w jednostkach HIMETRIC.
 
 ### <a name="example"></a>Przykład
 
@@ -74,7 +74,7 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h
+**Nagłówek:** atlwin. h
 
 ## <a name="see-also"></a>Zobacz też
 

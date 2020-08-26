@@ -1,5 +1,5 @@
 ---
-title: Makra wpisu interfejsu COM
+title: Makra wpisów interfejsu COM
 ms.date: 03/28/2017
 f1_keywords:
 - atlcom/ATL::COM_INTERFACE_ENTRY
@@ -18,40 +18,40 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: bb7498f639f463290a4a6593ef7c0fbac09b539b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326678"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834703"
 ---
-# <a name="com_interface_entry-macros"></a>makra COM_INTERFACE_ENTRY
+# <a name="com_interface_entry-macros"></a>Makra COM_INTERFACE_ENTRY
 
-Te makra wchodzą do interfejsów obiektu na mapie COM, dzięki `QueryInterface`czemu można uzyskać do nich dostęp za pomocą programu . Kolejność wpisów na mapie COM jest interfejsy zamówienia zostaną sprawdzone pod `QueryInterface`kątem pasującego identyfikatora podczas .
+Te makra wprowadzają interfejsy obiektu do mapy modelu COM, aby można było uzyskać do nich dostęp przez `QueryInterface` . Kolejność wpisów w mapie COM jest sprawdzana pod kątem odpowiadającego identyfikatora IID w trakcie `QueryInterface` .
 
-|||
+|Makro|Opis|
 |-|-|
 |[COM_INTERFACE_ENTRY](#com_interface_entry)|Wprowadza interfejsy do mapy interfejsu COM.|
-|[COM_INTERFACE_ENTRY2](#com_interface_entry2)|To makro służy do rozróżniania dwóch gałęzi dziedziczenia.|
-|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|Użyj tego makra, aby wprowadzić interfejs do mapy COM i określić jego identyfikator.|
-|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|Tak samo jak [COM_INTERFACE_ENTRY2](#com_interface_entry2), z tą różnicą, że można określić inny identyfikator.|
-|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Gdy interfejs identyfikowany przez *iid* `COM_INTERFACE_ENTRY_AGGREGATE` jest poszukiwany, przekazuje do . `punk`|
-|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Tak samo jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z tą różnicą, że wykonywanie zapytań dla dowolnego identyfikatora powoduje przekazywanie zapytania do *punk*.|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Tak samo jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), chyba że *punk* ma wartość NULL, automatycznie tworzy agregat opisany przez *clsid*.|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Tak samo jak [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), z tą różnicą, że wykonywanie zapytań dla dowolnego identyfikatora powoduje przekazywanie zapytania do *punka,* a jeśli *punk* ma wartość NULL, automatyczne tworzenie agregacji opisanej przez *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Powoduje, że program do [wywołania DebugBreak,](/windows/win32/api/debugapi/nf-debugapi-debugbreak) gdy określony interfejs jest poszukiwany.|
+|[COM_INTERFACE_ENTRY2](#com_interface_entry2)|Za pomocą tego makra można odróżnić dwa gałęzie dziedziczenia.|
+|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|To makro służy do wprowadzania interfejsu do mapy COM i określania identyfikatora IID.|
+|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|Analogicznie jak [COM_INTERFACE_ENTRY2](#com_interface_entry2), z wyjątkiem sytuacji, w której można określić inny identyfikator IID.|
+|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Kiedy interfejs identyfikowany przez *Identyfikator IID* jest wysyłany do `COM_INTERFACE_ENTRY_AGGREGATE` `punk` .|
+|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Analogicznie jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z tą różnicą, że zapytania dotyczące dowolnego identyfikatora IID w wyniku przesyłania zapytania do elementu *punktowego*.|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Analogicznie jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z wyjątkiem tego, że *punkt* ma wartość null, automatycznie tworzy agregację opisaną przez *CLSID*.|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Analogicznie jak [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), z tą różnicą, że zapytanie dla dowolnego identyfikatora IID powoduje przekazanie zapytania do elementu *punktowego*, a jeśli *punkt* jest pusty, automatyczne tworzenie agregacji opisanej przez *CLSID*.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Powoduje, że program wywoła [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) , gdy zostanie określony interfejs.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Zapisuje dane specyficzne dla interfejsu dla każdego wystąpienia.|
-|[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Udostępnia oderwane interfejsy.|
-|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Przetwarza mapę COM klasy podstawowej, gdy przetwarzanie osiągnie ten wpis na mapie COM.|
-|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Ogólny mechanizm podłączania do `QueryInterface` logiki ATL.|
-|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Tak samo jak [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), z tą różnicą, że wykonywanie zapytań o dowolny identyfikator powoduje wywołanie *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Zwraca E_NOINTERFACE i kończy przetwarzanie map COM, gdy określony interfejs jest poszukiwany.|
+|[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Uwidacznia interfejsy Odrywane.|
+|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Przetwarza mapę COM klasy bazowej, gdy przetwarzanie osiągnie ten wpis w mapie COM.|
+|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Ogólny mechanizm podłączania do `QueryInterface` LOGIKI ATL.|
+|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Analogicznie jak [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), z tą różnicą, że zapytanie dla dowolnego identyfikatora IID spowoduje wywołanie funkcji *Func*.|
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Zwraca E_NOINTERFACE i przerywa przetwarzanie mapowania modelu COM, gdy określony interfejs jest badany.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-## <a name="com_interface_entry"></a><a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
+## <a name="com_interface_entry"></a><a name="com_interface_entry"></a> COM_INTERFACE_ENTRY
 
 Wprowadza interfejsy do mapy interfejsu COM.
 
@@ -63,12 +63,12 @@ COM_INTERFACE_ENTRY( x )
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Nazwa interfejsu obiektu klasy pochodzi bezpośrednio.
+*x*<br/>
+podczas Nazwa interfejsu, bezpośrednio pochodzi od obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj jest to typ wpisu, którego używasz najczęściej.
+Typowo, jest to najczęściej używany typ wpisu.
 
 ### <a name="example"></a>Przykład
 
@@ -82,11 +82,11 @@ END_COM_MAP()
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-## <a name="com_interface_entry2"></a><a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2
+## <a name="com_interface_entry2"></a><a name="com_interface_entry2"></a> COM_INTERFACE_ENTRY2
 
-To makro służy do rozróżniania dwóch gałęzi dziedziczenia.
+Za pomocą tego makra można odróżnić dwa gałęzie dziedziczenia.
 
 ```
 COM_INTERFACE_ENTRY2(x, x2)
@@ -94,23 +94,23 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Nazwa interfejsu, który chcesz udostępnić z obiektu.
+*x*<br/>
+podczas Nazwa interfejsu, który ma być ujawniony dla obiektu.
 
 *x2*<br/>
-[w] Nazwa gałęzi dziedziczenia, z której *x* jest narażony.
+podczas Nazwa gałęzi dziedziczenia, z której jest uwidaczniany *x* .
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład jeśli pochodzisz obiektu klasy z dwóch interfejsów podwójnych, można udostępnić `IDispatch` przy użyciu COM_INTERFACE_ENTRY2 ponieważ `IDispatch` można uzyskać z jednego z interfejsów.
+Na przykład, jeśli pochodny jest obiekt klasy z dwóch podwójnych interfejsów, uwidaczniasz `IDispatch` użycie COM_INTERFACE_ENTRY2, ponieważ `IDispatch` można uzyskać z jednego z tych interfejsów.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]
 
-## <a name="com_interface_entry_iid"></a><a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID
+## <a name="com_interface_entry_iid"></a><a name="com_interface_entry_iid"></a> COM_INTERFACE_ENTRY_IID
 
-Użyj tego makra, aby wprowadzić interfejs do mapy COM i określić jego identyfikator.
+To makro służy do wprowadzania interfejsu do mapy COM i określania identyfikatora IID.
 
 ```
 COM_INTERFACE_ENTRY_IID(iid, x)
@@ -118,19 +118,19 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu narażony.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu uwidocznione.
 
-*X*<br/>
-[w] Nazwa klasy, której vtable będą widoczne jako interfejs identyfikowany przez *iid*.
+*x*<br/>
+podczas Nazwa klasy, której tablicę zawierającą zostanie uwidoczniony jako interfejs identyfikowany przez *Identyfikator IID*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]
 
-## <a name="com_interface_entry2_iid"></a><a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID
+## <a name="com_interface_entry2_iid"></a><a name="com_interface_entry2_iid"></a> COM_INTERFACE_ENTRY2_IID
 
-Tak samo jak [COM_INTERFACE_ENTRY2](#com_interface_entry2), z tą różnicą, że można określić inny identyfikator.
+Analogicznie jak [COM_INTERFACE_ENTRY2](#com_interface_entry2), z wyjątkiem sytuacji, w której można określić inny identyfikator IID.
 
 ```
 COM_INTERFACE_ENTRY2_IID(iid, x, x2)
@@ -138,18 +138,18 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID, który określasz dla interfejsu.
+*IID*<br/>
+podczas Identyfikator GUID, który jest określany dla interfejsu.
 
-*X*<br/>
-[w] Nazwa interfejsu, który obiekt klasy pochodzi bezpośrednio.
+*x*<br/>
+podczas Nazwa interfejsu, bezpośrednio pochodzący od obiektu klasy.
 
 *x2*<br/>
-[w] Nazwa drugiego interfejsu, który obiekt klasy pochodzi bezpośrednio.
+podczas Nazwa drugiego interfejsu, bezpośrednio pochodzący od obiektu klasy.
 
-## <a name="com_interface_entry_aggregate"></a><a name="com_interface_entry_aggregate"></a>COM_INTERFACE_ENTRY_AGGREGATE
+## <a name="com_interface_entry_aggregate"></a><a name="com_interface_entry_aggregate"></a> COM_INTERFACE_ENTRY_AGGREGATE
 
-Gdy interfejs identyfikowany przez *iid* jest poszukiwany, COM_INTERFACE_ENTRY_AGGREGATE przekazuje do *punka.*
+Gdy do interfejsu identyfikowanego za pomocą *identyfikatora IID* jest wysyłana kwerenda, COM_INTERFACE_ENTRY_AGGREGATE dalej do elementu *punktowego*.
 
 ```
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
@@ -157,23 +157,23 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu, do który jest poszukiwany.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu, dla którego wykonano zapytanie.
 
-*Punk*<br/>
-[w] Nazwa wskaźnika. `IUnknown`
+*punkt*<br/>
+podczas Nazwa `IUnknown` wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Przyjmuje się, że parametr *punk* wskazuje wewnętrzną niewiadomą agregacji lub null, w którym to przypadku wpis jest ignorowany. Zazwyczaj agregacja `CoCreate` w `FinalConstruct`.
+Przyjęto, że parametr *punktowy* wskazuje na wewnętrzny nieznany element zagregowany lub wartość null, w takim przypadku wpis jest ignorowany. Zazwyczaj można wykonać `CoCreate` agregację w `FinalConstruct` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]
 
-## <a name="com_interface_entry_aggregate_blind"></a><a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND
+## <a name="com_interface_entry_aggregate_blind"></a><a name="com_interface_entry_aggregate_blind"></a> COM_INTERFACE_ENTRY_AGGREGATE_BLIND
 
-Tak samo jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z tą różnicą, że wykonywanie zapytań dla dowolnego identyfikatora powoduje przekazywanie zapytania do *punk*.
+Analogicznie jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z tą różnicą, że zapytania dotyczące dowolnego identyfikatora IID w wyniku przesyłania zapytania do elementu *punktowego*.
 
 ```
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
@@ -181,20 +181,20 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parametry
 
-*Punk*<br/>
-[w] Nazwa wskaźnika. `IUnknown`
+*punkt*<br/>
+podczas Nazwa `IUnknown` wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kwerenda interfejsu nie powiedzie się, przetwarzanie mapy COM jest kontynuowane.
+Jeśli zapytanie interfejsu zakończy się niepowodzeniem, przetwarzanie mapy COM jest kontynuowane.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]
 
-## <a name="com_interface_entry_autoaggregate"></a><a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE
+## <a name="com_interface_entry_autoaggregate"></a><a name="com_interface_entry_autoaggregate"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE
 
-Tak samo jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), chyba że *punk* ma wartość NULL, automatycznie tworzy agregat opisany przez *clsid*.
+Analogicznie jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z wyjątkiem tego, że *punkt* ma wartość null, automatycznie tworzy agregację opisaną przez *CLSID*.
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
@@ -202,14 +202,14 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu, do który jest poszukiwany.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu, dla którego wykonano zapytanie.
 
-*Punk*<br/>
-[w] Nazwa wskaźnika. `IUnknown` Musi być członkiem klasy zawierającej mapę COM.
+*punkt*<br/>
+podczas Nazwa `IUnknown` wskaźnika. Musi być członkiem klasy zawierającej mapę COM.
 
-*Clsid*<br/>
-[w] Identyfikator agregacji, który zostanie utworzony, jeśli *punk* jest NULL.
+*Identyfikator*<br/>
+podczas Identyfikator agregacji, która zostanie utworzona, jeśli *punkt* wartościowy ma wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -217,9 +217,9 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]
 
-## <a name="com_interface_entry_autoaggregate_blind"></a><a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
+## <a name="com_interface_entry_autoaggregate_blind"></a><a name="com_interface_entry_autoaggregate_blind"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
 
-Tak samo jak [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), z tą różnicą, że wykonywanie zapytań dla dowolnego identyfikatora powoduje przekazywanie zapytania do *punka,* a jeśli *punk* ma wartość NULL, automatyczne tworzenie agregacji opisanej przez *clsid*.
+Analogicznie jak [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), z tą różnicą, że zapytanie dla dowolnego identyfikatora IID powoduje przekazanie zapytania do elementu *punktowego*, a jeśli *punkt* jest pusty, automatyczne tworzenie agregacji opisanej przez *CLSID*.
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -227,23 +227,23 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*Punk*<br/>
-[w] Nazwa wskaźnika. `IUnknown` Musi być członkiem klasy zawierającej mapę COM.
+*punkt*<br/>
+podczas Nazwa `IUnknown` wskaźnika. Musi być członkiem klasy zawierającej mapę COM.
 
-*Clsid*<br/>
-[w] Identyfikator agregacji, który zostanie utworzony, jeśli *punk* jest NULL.
+*Identyfikator*<br/>
+podczas Identyfikator agregacji, która zostanie utworzona, jeśli *punkt* wartościowy ma wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kwerenda interfejsu nie powiedzie się, przetwarzanie mapy COM jest kontynuowane.
+Jeśli zapytanie interfejsu zakończy się niepowodzeniem, przetwarzanie mapy COM jest kontynuowane.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]
 
-## <a name="com_interface_entry_break"></a><a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK
+## <a name="com_interface_entry_break"></a><a name="com_interface_entry_break"></a> COM_INTERFACE_ENTRY_BREAK
 
-Powoduje, że program do [wywołania DebugBreak,](/windows/win32/api/debugapi/nf-debugapi-debugbreak) gdy określony interfejs jest poszukiwany.
+Powoduje, że program wywoła [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) , gdy zostanie określony interfejs.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -251,14 +251,14 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Tekst używany do konstruowania identyfikatora interfejsu.
+*x*<br/>
+podczas Tekst służący do konstruowania identyfikatora interfejsu.
 
 ### <a name="remarks"></a>Uwagi
 
-Identyfikator interfejsu zostanie skonstruowany przez dołączenie `IID_` *x* do . Na przykład, *x* jeśli `IPersistStorage`x jest , `IID_IPersistStorage`identyfikator będzie .
+Identyfikator IID interfejsu zostanie skonstruowany przez dołączenie *x* do `IID_` . Na przykład jeśli *x* jest `IPersistStorage` , identyfikator IID będzie `IID_IPersistStorage` .
 
-## <a name="com_interface_entry_cached_tear_off"></a><a name="com_interface_entry_cached_tear_off"></a>COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
+## <a name="com_interface_entry_cached_tear_off"></a><a name="com_interface_entry_cached_tear_off"></a> COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
 
 Zapisuje dane specyficzne dla interfejsu dla każdego wystąpienia.
 
@@ -268,26 +268,26 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu odrywu.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu odnoszącego się do odrywania.
 
-*X*<br/>
-[w] Nazwa klasy implementującej interfejs.
+*x*<br/>
+podczas Nazwa klasy implementującej interfejs.
 
-*Punk*<br/>
-[w] Nazwa wskaźnika. `IUnknown` Musi być członkiem klasy zawierającej mapę COM. Powinien zostać zainicjowany do wartości NULL w konstruktorze obiektu klasy.
+*punkt*<br/>
+podczas Nazwa `IUnknown` wskaźnika. Musi być członkiem klasy zawierającej mapę COM. Powinien być zainicjowany do wartości NULL w konstruktorze obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli interfejs nie jest używany, zmniejsza ogólny rozmiar wystąpienia obiektu.
+Jeśli interfejs nie jest używany, spowoduje to zmniejszenie ogólnego rozmiaru wystąpienia obiektu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]
 
-## <a name="com_interface_entry_tear_off"></a><a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF
+## <a name="com_interface_entry_tear_off"></a><a name="com_interface_entry_tear_off"></a> COM_INTERFACE_ENTRY_TEAR_OFF
 
-Udostępnia oderwane interfejsy.
+Uwidacznia interfejsy Odrywane.
 
 ```
 COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
@@ -295,23 +295,23 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu odrywu.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu odnoszącego się do odrywania.
 
-*X*<br/>
-[w] Nazwa klasy implementującej interfejs.
+*x*<br/>
+podczas Nazwa klasy implementującej interfejs.
 
 ### <a name="remarks"></a>Uwagi
 
-Interfejs odrywa jest implementowany jako oddzielny obiekt, który jest tworzone za każdym razem, gdy interfejs, który reprezentuje jest poszukiwany. Zazwyczaj tworzenie interfejsu jako oderwania, jeśli interfejs jest rzadko używany, ponieważ zapisuje wskaźnik vtable w każdym wystąpieniu obiektu głównego. Odrywać jest usuwany, gdy jego liczba odwołań staje się zero. Klasa implementująca odryw powinien pochodzić z `CComTearOffObjectBase` i mieć własną mapę COM.
+Interfejs odrywany jest implementowany jako oddzielny obiekt, który jest określany za każdym razem, gdy interfejs, który reprezentuje, jest wysyłany do zapytania. Zazwyczaj można skompilować interfejs jako odrywany, jeśli interfejs jest rzadko używany, ponieważ zapisuje wskaźnik tablic wirtualnych w każdym wystąpieniu obiektu głównego. Odrywanie jest usuwane, gdy jej liczba odwołań zmieni się na zero. Klasa implementująca rozerwanie powinna być pochodną `CComTearOffObjectBase` i mieć własną mapę com.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-## <a name="com_interface_entry_chain"></a><a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN
+## <a name="com_interface_entry_chain"></a><a name="com_interface_entry_chain"></a> COM_INTERFACE_ENTRY_CHAIN
 
-Przetwarza mapę COM klasy podstawowej, gdy przetwarzanie osiągnie ten wpis na mapie COM.
+Przetwarza mapę COM klasy bazowej, gdy przetwarzanie osiągnie ten wpis w mapie COM.
 
 ```
 COM_INTERFACE_ENTRY_CHAIN(classname)
@@ -319,22 +319,22 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*Classname*<br/>
-[w] Klasa podstawowa bieżącego obiektu.
+*nazwą*<br/>
+podczas Klasa bazowa bieżącego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład w poniższym kodzie:
+Na przykład, w poniższym kodzie:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Należy zauważyć, że pierwszy wpis na mapie COM musi być interfejsem na obiekcie zawierającym mapę COM. W związku z tym nie można uruchomić wpisów mapy COM z COM_INTERFACE_ENTRY_CHAIN, co powoduje, że mapa COM innego obiektu ma być przeszukiwana w miejscu, w którym **COM_INTERFACE_ENTRY_CHAIN(**`COtherObject`**)** pojawia się na mapie COM obiektu. Jeśli chcesz najpierw przeszukać mapę COM innego obiektu, `IUnknown` dodaj wpis interfejsu do mapy COM, a następnie posiekaj mapę COM innego obiektu. Przykład:
+Należy zauważyć, że pierwszy wpis w mapie COM musi być interfejsem obiektu zawierającego mapę COM. W tym celu nie można uruchomić wpisów mapy com z COM_INTERFACE_ENTRY_CHAIN, co spowoduje, że mapa com innego obiektu będzie przeszukiwana w punkcie, w którym **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** pojawia się na mapie com obiektu. Aby najpierw przeszukać mapę COM innego obiektu, należy dodać wpis interfejsu do `IUnknown` mapy com, a następnie połączyć mapę com innego obiektu. Na przykład:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 
-## <a name="com_interface_entry_func"></a><a name="com_interface_entry_func"></a>COM_INTERFACE_ENTRY_FUNC
+## <a name="com_interface_entry_func"></a><a name="com_interface_entry_func"></a> COM_INTERFACE_ENTRY_FUNC
 
-Ogólny mechanizm podłączania do `QueryInterface` logiki ATL.
+Ogólny mechanizm podłączania do `QueryInterface` LOGIKI ATL.
 
 ```
 COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
@@ -342,26 +342,26 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*Iid*<br/>
-[w] Identyfikator GUID interfejsu narażony.
+*IID*<br/>
+podczas Identyfikator GUID interfejsu uwidocznione.
 
-*Dw*<br/>
-[w] Parametr przeszedł do *func*.
+*magazynu*<br/>
+podczas Parametr przeszedł do funkcji *Func*.
 
 *func*<br/>
-[w] Wskaźnik funkcji, który zwróci *identyfikator*.
+podczas Wskaźnik funkcji, który zwróci *Identyfikator IID*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *identyfikator* jest zgodny z identyfikatorem interfejsu, dla których jest wyszukiwany, wywoływana jest funkcja określona przez *func.* Deklaracja dla funkcji powinna być:
+Jeśli *Identyfikator IID* jest zgodny z identyfikatorem IID interfejsu, dla którego wykonano zapytanie, funkcja określona przez *Func* jest wywoływana. Deklaracja dla funkcji powinna być:
 
 `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`
 
-Gdy funkcja jest `pv` wywoływana, wskazuje obiekt klasy. Parametr *riid* odnosi się do interfejsu, `ppv` o który pytany jest, jest wskaźnikiem do lokalizacji, w której funkcja powinna przechowywać wskaźnik do interfejsu, a *dw* jest parametrem określonym we wpisie. Funkcja powinna \* `ppv` być ustawiona na NULL i zwrócić E_NOINTERFACE lub S_FALSE, jeśli nie zdecyduje się na zwrócenie interfejsu. Z E_NOINTERFACE przetwarzanie map COM kończy się. Z S_FALSE przetwarzanie mapy COM jest kontynuowane, mimo że nie zwrócono żadnego wskaźnika interfejsu. Jeśli funkcja zwraca wskaźnik interfejsu, należy zwrócić S_OK.
+Gdy funkcja jest wywoływana, `pv` wskazuje obiekt klasy. Parametr *riid* odwołuje się do interfejsu, dla którego jest wykonywana kwerenda, `ppv` jest wskaźnikiem do lokalizacji, w której funkcja powinna przechowywać wskaźnik do interfejsu, a *DW* jest parametrem określonym we wpisie. Funkcja powinna mieć wartość \* `ppv` null i zwracać E_NOINTERFACE lub S_FALSE, jeśli nie zwróci interfejsu. W przypadku E_NOINTERFACE przerywa przetwarzanie mapowania COM. S_FALSE, przetwarzanie mapy COM jest kontynuowane, nawet jeśli nie został zwrócony żaden wskaźnik interfejsu. Jeśli funkcja zwraca wskaźnik interfejsu, powinien zwrócić S_OK.
 
-## <a name="com_interface_entry_func_blind"></a><a name="com_interface_entry_func_blind"></a>COM_INTERFACE_ENTRY_FUNC_BLIND
+## <a name="com_interface_entry_func_blind"></a><a name="com_interface_entry_func_blind"></a> COM_INTERFACE_ENTRY_FUNC_BLIND
 
-Tak samo jak [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), z tą różnicą, że wykonywanie zapytań o dowolny identyfikator powoduje wywołanie *func*.
+Analogicznie jak [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), z tą różnicą, że zapytanie dla dowolnego identyfikatora IID spowoduje wywołanie funkcji *Func*.
 
 ```
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
@@ -369,19 +369,19 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*Dw*<br/>
-[w] Parametr przeszedł do *func*.
+*magazynu*<br/>
+podczas Parametr przeszedł do funkcji *Func*.
 
 *func*<br/>
-[w] Funkcja, która zostanie wywołana podczas przetwarzania tego wpisu na mapie COM.
+podczas Funkcja, która jest wywoływana, gdy ten wpis w mapie COM jest przetwarzany.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda awaria spowoduje kontynuowanie przetwarzania na mapie COM. Jeśli funkcja zwraca wskaźnik interfejsu, należy zwrócić S_OK.
+Wszelkie awarie spowodują, że przetwarzanie będzie kontynuowane na mapie COM. Jeśli funkcja zwraca wskaźnik interfejsu, powinien zwrócić S_OK.
 
-## <a name="com_interface_entry_nointerface"></a><a name="com_interface_entry_nointerface"></a>COM_INTERFACE_ENTRY_NOINTERFACE
+## <a name="com_interface_entry_nointerface"></a><a name="com_interface_entry_nointerface"></a> COM_INTERFACE_ENTRY_NOINTERFACE
 
-Zwraca E_NOINTERFACE i kończy przetwarzanie map COM, gdy określony interfejs jest poszukiwany.
+Zwraca E_NOINTERFACE i przerywa przetwarzanie mapowania modelu COM, gdy określony interfejs jest badany.
 
 ```
 COM_INTERFACE_ENTRY_NOINTERFACE(x)
@@ -389,11 +389,11 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Tekst używany do konstruowania identyfikatora interfejsu.
+*x*<br/>
+podczas Tekst służący do konstruowania identyfikatora interfejsu.
 
 ### <a name="remarks"></a>Uwagi
 
-To makro służy do zapobiegania interfejs jest używany w określonym przypadku. Na przykład można wstawić to makro do mapy COM tuż przed COM_INTERFACE_ENTRY_AGGREGATE_BLIND, aby zapobiec przekazywaniu zapytania interfejsu do wewnętrznej nieznanej agregacji.
+To makro służy do zapobiegania użyciu interfejsu w konkretnym przypadku. Na przykład możesz wstawić to makro do mapy COM bezpośrednio przed COM_INTERFACE_ENTRY_AGGREGATE_BLIND, aby zapobiec przekazywaniu zapytania dotyczącego interfejsu do nieznanego elementu wartości wewnętrznej agregacji.
 
-Identyfikator interfejsu zostanie skonstruowany przez dołączenie `IID_` *x* do . Na przykład, *x* jeśli `IPersistStorage`x jest , `IID_IPersistStorage`identyfikator będzie .
+Identyfikator IID interfejsu zostanie skonstruowany przez dołączenie *x* do `IID_` . Na przykład jeśli *x* jest `IPersistStorage` , identyfikator IID będzie `IID_IPersistStorage` .

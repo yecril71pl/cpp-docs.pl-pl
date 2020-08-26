@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215416"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840144"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -32,9 +32,9 @@ Te szablony i funkcje klasy są dozwolone nietypowej szerokości geograficznej w
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[ABS](../standard-library/valarray-functions.md#abs)|Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe wartości bezwzględnej elementów danych wejściowych valarray.|
 |[Acos](../standard-library/valarray-functions.md#acos)|Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe cosinusowi elementów danych wejściowych valarray.|
@@ -58,30 +58,30 @@ Te szablony i funkcje klasy są dozwolone nietypowej szerokości geograficznej w
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator! =](../standard-library/valarray-operators.md#op_neq)|Testuje, czy odpowiadające elementy o dwóch równych rozmiarach valarrays są nierówne lub czy wszystkie elementy valarray są nierówne określonej wartości typu elementu valarray.|
 |[zakład](../standard-library/valarray-operators.md#op_mod)|Uzyskuje resztę dzielącą odpowiadające elementy o dwóch równych rozmiarach valarrays lub dzielących valarray przez określoną wartość typu elementu valarray lub dzielącą określoną wartość przez valarray.|
-|[&operatora](../standard-library/valarray-operators.md#op_amp)|Uzyskuje wartość bitową `AND` między odpowiednimi elementami o dwóch rozmiarach valarrays lub między valarray a określoną wartością typu elementu.|
-|[&&operatora](../standard-library/valarray-operators.md#op_amp_amp)|Uzyskuje wartość logiczną `AND` między odpowiednimi elementami o dwóch równych rozmiarach valarrays lub między valarray a określoną wartością typu elementu valarray.|
-|[>operatora](../standard-library/valarray-operators.md#op_gt)|Testuje, czy elementy jednego valarray są większe niż elementy o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe lub mniejsze niż określona wartość typu elementu valarray.|
+|[&operatora ](../standard-library/valarray-operators.md#op_amp)|Uzyskuje wartość bitową `AND` między odpowiednimi elementami o dwóch rozmiarach valarrays lub między valarray a określoną wartością typu elementu.|
+|[&&operatora ](../standard-library/valarray-operators.md#op_amp_amp)|Uzyskuje wartość logiczną `AND` między odpowiednimi elementami o dwóch równych rozmiarach valarrays lub między valarray a określoną wartością typu elementu valarray.|
+|[>operatora ](../standard-library/valarray-operators.md#op_gt)|Testuje, czy elementy jednego valarray są większe niż elementy o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe lub mniejsze niż określona wartość typu elementu valarray.|
 |[>operatora =](../standard-library/valarray-operators.md#op_gt_eq)|Testuje, czy elementy jednego valarray są większe niż lub równe elementom o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe niż lub równe określonej wartości.|
-|[>>operatora](../standard-library/valarray-operators.md#op_gt_gt)|Prawy przesuwa bity dla każdego elementu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.|
-|[<operatora](../standard-library/valarray-operators.md#op_lt)|Testuje, czy elementy jednego valarray są mniejsze niż elementy o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe lub mniejsze niż określona wartość.|
+|[>>operatora ](../standard-library/valarray-operators.md#op_gt_gt)|Prawy przesuwa bity dla każdego elementu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.|
+|[<operatora ](../standard-library/valarray-operators.md#op_lt)|Testuje, czy elementy jednego valarray są mniejsze niż elementy o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe lub mniejsze niż określona wartość.|
 |[<operatora =](../standard-library/valarray-operators.md#op_lt_eq)|Testuje, czy elementy jednego valarray są mniejsze niż lub równe elementom o równym rozmiarze valarray lub czy wszystkie elementy valarray są większe lub równe lub mniejsze lub równe określonej wartości.|
-|[<<operatora](../standard-library/valarray-operators.md#op_lt_lt)|Lewy przenosi bity dla każdego elementu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.|
+|[<<operatora ](../standard-library/valarray-operators.md#op_lt_lt)|Lewy przenosi bity dla każdego elementu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.|
 |[zakład](../standard-library/valarray-operators.md#op_star)|Uzyskuje iloczyn elementów rzeczy między odpowiednimi elementami o rozmiarze dwóch valarrays lub między valarray a określoną wartością typu elementu valarray.|
 |[operator +](../standard-library/valarray-operators.md#op_add)|Uzyskuje sumę elementów między odpowiednimi elementami o rozmiarze dwóch valarrays lub między valarray a określoną wartością typu elementu valarray.|
 |[zakład](../standard-library/valarray-operators.md#operator-)|Uzyskuje różnicę elementów między odpowiednimi elementami o rozmiarze dwóch valarrays lub między valarray a określoną wartością typu elementu valarray.|
 |[zakład](../standard-library/valarray-operators.md#op_div)|Uzyskuje iloraz elementów między odpowiednimi elementami o rozmiarze dwóch valarrays lub między valarray a określoną wartością typu elementu valarray.|
 |[operator = =](../standard-library/valarray-operators.md#op_eq_eq)|Testuje, czy odpowiadające elementy dwóch valarrays o równym rozmiarze są równe lub czy wszystkie elementy valarray są równe określonej wartości typu elementu valarray.|
 |[operator ^](../standard-library/valarray-operators.md#op_xor)|Uzyskuje bitowe wykluczające się `OR` między odpowiadające im elementy o rozmiarze dwóch valarrays lub między valarray a określoną wartością typu elementu.|
-|[&#124;operatora](../standard-library/valarray-operators.md#op_or)|Uzyskuje wartość bitową `OR` między odpowiednimi elementami o dwóch rozmiarach valarrays lub między valarray a określoną wartością typu elementu.|
-|[&#124;&#124;operatora](../standard-library/valarray-operators.md#op_lor)|Uzyskuje wartość logiczną `OR` między odpowiednimi elementami o dwóch równych rozmiarach valarrays lub między valarray a określoną wartością typu elementu valarray.|
+|[&#124;operatora ](../standard-library/valarray-operators.md#op_or)|Uzyskuje wartość bitową `OR` między odpowiednimi elementami o dwóch rozmiarach valarrays lub między valarray a określoną wartością typu elementu.|
+|[&#124;&#124;operatora ](../standard-library/valarray-operators.md#op_lor)|Uzyskuje wartość logiczną `OR` między odpowiednimi elementami o dwóch równych rozmiarach valarrays lub między valarray a określoną wartością typu elementu valarray.|
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Klasa gslice](../standard-library/gslice-class.md)|Klasa narzędzi do valarray, która jest używana do definiowania wielowymiarowych wycinków valarray.|
 |[Klasa gslice_array](../standard-library/gslice-array-class.md)|Wewnętrzny, pomocniczy szablon klasy, który obsługuje ogólne obiekty wycinków, dostarczając operacje między tablicami podzestawu zdefiniowanymi przez ogólny wycinek elementu valarray.|
@@ -93,11 +93,11 @@ Te szablony i funkcje klasy są dozwolone nietypowej szerokości geograficznej w
 
 ### <a name="specializations"></a>Specjalizacje
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[\<bool>Klasa valarray](../standard-library/valarray-bool-class.md)|Wyspecjalizowana wersja szablonu klasy valarray \<**Type**> do elementów typu **`bool`** .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

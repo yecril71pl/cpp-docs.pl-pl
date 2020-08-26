@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203879"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834781"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr — Klasa
 
@@ -71,19 +71,19 @@ Można przekazać `auto_ptr<Type>` obiekt według wartości jako argumentu wywo�
 
 ### <a name="constructors"></a>Konstruktory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[auto_ptr](#auto_ptr)|Konstruktor dla obiektów typu `auto_ptr` .|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[element_type](#element_type)|Typ jest synonimem dla parametru szablonu `Type` .|
 
-### <a name="functions"></a>Funkcje
+### <a name="functions"></a>Functions
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[Pobierz](#get)|Funkcja członkowska zwraca przechowywany wskaźnik `myptr` .|
 |[Usuwanie](#release)|Element członkowski zastępuje przechowywany wskaźnik wskaźnikiem o `myptr` wartości null i zwraca poprzednio przechowywany wskaźnik.|
@@ -91,7 +91,7 @@ Można przekazać `auto_ptr<Type>` obiekt według wartości jako argumentu wywo�
 
 ### <a name="operators"></a>Operatory
 
-|||
+|Nazwa|Opis|
 |-|-|
 |[operator =](#op_eq)|Operator przypisania, który przenosi własność z jednego `auto_ptr` obiektu do drugiego.|
 |[zakład](#op_star)|Operator dereferencji dla obiektów typu `auto_ptr` .|
@@ -99,7 +99,7 @@ Można przekazać `auto_ptr<Type>` obiekt według wartości jako argumentu wywo�
 |[auto_ptr operatora\<Other>](#op_auto_ptr_lt_other_gt)|Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju `auto_ptr` .|
 |[auto_ptr_ref operatora\<Other>](#op_auto_ptr_ref_lt_other_gt)|Rzutuje od elementu `auto_ptr` do `auto_ptr_ref` .|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 Konstruktor dla obiektów typu `auto_ptr` .
 
@@ -126,7 +126,7 @@ Wskaźnik do obiektu, który `auto_ptr` hermetyzuje.
 
 Pierwszy Konstruktor przechowuje wartość *PTR* w `myptr` , przechowywany wskaźnik do przydzielony obiekt. Drugi Konstruktor przenosi własność wskaźnika przechowywanego *po prawej stronie*, przechowując *prawo*. [wydanie](#release) w `myptr` .
 
-Trzeci Konstruktor zachowuje się tak samo, jak w drugim, z tą różnicą, że są przechowywane `right` . `ref`. `release`w `myptr` , gdzie `ref` to odwołanie przechowywane w `right` .
+Trzeci Konstruktor zachowuje się tak samo, jak w drugim, z tą różnicą, że są przechowywane `right` . `ref`. `release` w `myptr` , gdzie `ref` to odwołanie przechowywane w `right` .
 
 Konstruktor szablonów działa tak samo jak drugi Konstruktor, pod warunkiem, że wskaźnik `Other` może być niejawnie konwertowany na wskaźnik do `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Typ jest synonimem dla parametru szablonu `Type` .
 
@@ -197,7 +197,7 @@ Typ jest synonimem dla parametru szablonu `Type` .
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>Pobierz
+### <a name="get"></a><a name="get"></a> Pobierz
 
 Funkcja członkowska zwraca przechowywany wskaźnik `myptr` .
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a> operator =
 
 Operator przypisania, który przenosi własność z jednego `auto_ptr` obiektu do drugiego.
 
@@ -284,7 +284,7 @@ Przypisanie oblicza wyrażenie `delete myptr` , ale tylko wtedy, gdy przechowywa
 
 Aby zapoznać się z przykładem użycia operatora elementu członkowskiego, zobacz [auto_ptr](#auto_ptr).
 
-### <a name="operator"></a><a name="op_star"></a>zakład
+### <a name="operator"></a><a name="op_star"></a> zakład
 
 Operator dereferencji dla obiektów typu `auto_ptr` .
 
@@ -304,7 +304,7 @@ Operator pośredni zwraca wartość `*` [Get](#get). W związku z tym, składowa
 
 Aby zapoznać się z przykładem korzystania z funkcji członkowskiej, zobacz [auto_ptr](#auto_ptr).
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>zakład&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> zakład&gt;
 
 Operator zezwalający na dostęp do elementu członkowskiego.
 
@@ -324,7 +324,7 @@ Operator wyboru zwraca wartość [Get](#get) `( )` , dzięki czemu *ap* ->  **el
 
 Aby zapoznać się z przykładem korzystania z funkcji członkowskiej, zobacz [auto_ptr](#auto_ptr).
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>auto_ptr &lt; innych operatorów&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> auto_ptr &lt; innych operatorów&gt;
 
 Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju `auto_ptr` .
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr_ref &lt; innych operatorów&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> auto_ptr_ref &lt; innych operatorów&gt;
 
 Rzutuje od elementu `auto_ptr` do `auto_ptr_ref` .
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>Usuwanie
+### <a name="release"></a><a name="release"></a> Usuwanie
 
 Element członkowski zastępuje przechowywany wskaźnik wskaźnikiem o `myptr` wartości null i zwraca poprzednio przechowywany wskaźnik.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>zresetować
+### <a name="reset"></a><a name="reset"></a> zresetować
 
 Funkcja członkowska oblicza wyrażenie `delete myptr` , ale tylko wtedy, gdy wartość przechowywanego wskaźnika `myptr` zmienia się w wyniku wywołania funkcji. Następnie zastąpi przechowywany wskaźnik `ptr` .
 
@@ -537,6 +537,6 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa unique_ptr](../standard-library/unique-ptr-class.md)
