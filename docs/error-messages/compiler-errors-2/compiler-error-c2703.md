@@ -1,23 +1,28 @@
 ---
 title: Błąd kompilatora C2703
-ms.date: 11/04/2016
+description: Opis błędu kompilatora Microsoft C/C++ C2703.
+ms.date: 08/24/2020
 f1_keywords:
 - C2703
 helpviewer_keywords:
 - C2703
 ms.assetid: 384295c3-643d-47ae-a9a6-865b3036aa84
-ms.openlocfilehash: 62e03d1edc5806a9babc44eaf2dc388e3ed81de9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5b5ccad1cd15c1a107c81423e2372e14165776
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221110"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898611"
 ---
 # <a name="compiler-error-c2703"></a>Błąd kompilatora C2703
 
-Niedozwolona instrukcja __leave
+> niedozwolona `__leave` instrukcja
 
-Blok * * `__leave** statement must be inside a ` __try ".
+## <a name="remarks"></a>Uwagi
+
+**`__leave`** Instrukcja musi znajdować się wewnątrz **`__try`** bloku.
+
+## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C2703:
 
@@ -32,3 +37,9 @@ int main() {
    __finally {}
 }
 ```
+
+## <a name="see-also"></a>Zobacz też
+
+[`__leave`Słowo kluczowe](../../cpp/try-except-statement.md#__leave)\
+[`try-except` Merge](../../cpp/try-except-statement.md)\
+[`try-finally` Merge](../../cpp/try-finally-statement.md)

@@ -1,6 +1,7 @@
 ---
 title: Oczyszczanie zasobów
-ms.date: 11/04/2016
+description: Informacje o zwalnianiu zasobów podczas procedury obsługi wyjątków strukturalnych w obsłudze.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - termination handlers [C++], cleaning up resources
 - exception handling [C++], cleaning up resources
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dae92a515db25b9985a890d7d08cc213f88ecfea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229054"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898436"
 ---
 # <a name="cleaning-up-resources"></a>Oczyszczanie zasobów
 
-Podczas wykonywania procedury obsługi nie można wiedzieć, które zasoby są faktycznie przydzielono przed wywołaniem procedury obsługi zakończenia. Istnieje możliwość przerwania bloku instrukcji **__try** przed przydzieleniem wszystkich zasobów, dzięki czemu nie wszystkie zasoby zostały otwarte.
+Podczas wykonywania procedury obsługi nie można wiedzieć, które zasoby zostały nabyte przed wywołaniem procedury obsługi zakończenia. Istnieje możliwość **`__try`** przerwania bloku instrukcji przed pozyskaniem wszystkich zasobów, dzięki czemu nie wszystkie zasoby zostały otwarte.
 
-W związku z tym należy sprawdzić, które zasoby są rzeczywiście otwarte przed kontynuowaniem oczyszczania do obsługi zakończenia. Zalecaną procedurą jest:
+Aby można było bezpiecznie, należy sprawdzić, które zasoby są otwarte przed kontynuowaniem oczyszczania obsługi zakończenia. Zalecaną procedurą jest:
 
 1. Zainicjuj uchwyty do wartości NULL.
 
-1. W bloku instrukcji **__try** Przydziel zasoby. Dojścia są ustawione na wartości dodatnie w miarę przydzielenia zasobu.
+1. W **`__try`** bloku instrukcji Uzyskaj zasoby. Dojścia są ustawione na wartości dodatnie w miarę nabycia zasobu.
 
 1. W **`__finally`** bloku instrukcji Zwolnij każdy zasób, którego odpowiedni uchwyt lub zmienna flagi jest różna od zera lub nie ma wartości null.
 
 ## <a name="example"></a>Przykład
 
-Na przykład poniższy kod używa procedury obsługi zakończenia, aby zamknąć trzy pliki i blok pamięci, który został przydzielony w bloku instrukcji **__try** . Przed oczyszczeniem zasobu, kod najpierw sprawdza, czy zasób został przydzielony.
+Na przykład poniższy kod używa procedury obsługi zakończenia, aby zamknąć trzy pliki i zwolnić blok pamięci. Te zasoby zostały uzyskane w **`__try`** bloku instrukcji. Przed oczyszczeniem zasobu, kod najpierw sprawdza, czy zasób został pobrany.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -70,7 +71,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

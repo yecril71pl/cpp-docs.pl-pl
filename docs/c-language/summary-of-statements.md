@@ -1,67 +1,71 @@
 ---
-title: Podsumowanie dotyczące instrukcji
-ms.date: 11/04/2016
+title: Podsumowanie instrukcji języka C
+description: Podsumowanie informacji o gramatyce instrukcji w implementacji języka Microsoft C.
+ms.date: 08/24/2020
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: 122c79b53a8af8a384097dec51a14746a090b1cf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 448aa7ccb8c78e20ef09f47f4a3c77f447c76f60
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220798"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898394"
 ---
-# <a name="summary-of-statements"></a>Podsumowanie dotyczące instrukcji
+# <a name="summary-of-c-statements"></a>Podsumowanie instrukcji języka C
 
-*instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Etykieta — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja złożona*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Expression — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SELECT — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteracja — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*skoku — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-Statement*  / \* Specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-Statement*  / \* Specyficzne dla firmy Microsoft\*/
+*`statement`*:<br/>
+&emsp;*`labeled-statement`*<br/>
+&emsp;*`compound-statement`*<br/>
+&emsp;*`expression-statement`*<br/>
+&emsp;*`selection-statement`*<br/>
+&emsp;*`iteration-statement`*<br/>
+&emsp;*`jump-statement`*<br/>
+&emsp;*`try-except-statement`* /\* Specyficzne dla firmy Microsoft \*/<br/>
+&emsp;*`try-finally-statement`* /\* Specyficzne dla firmy Microsoft \*/
 
-*skok-instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`goto`**  *Identyfikator*  **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**utrzymać**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`return`***expression*<sub>wybór</sub> wyrażenia **;**
+*`jump-statement`*:<br/>
+&emsp;**`goto`** *`identifier`* **`;`**<br/>
+&emsp;**`continue ;`**<br/>
+&emsp;**`break ;`**<br/>
+&emsp;**`return`***`expression`* <sub>wybór</sub>**`;`**<br/>
+&emsp;**`__leave ;`** /\*Specyficzne dla firmy Microsoft<sup>1</sup>\*/
 
-*instrukcja złożona*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
+*`compound-statement`*:<br/>
+&emsp;**`{`***`declaration-list`* <sub>opt</sub> *`statement-list`* <sub>opt</sub> opt**`}`**
 
-*Deklaracja-lista*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
+*`declaration-list`*:<br/>
+&emsp;*`declaration`*<br/>
+&emsp;*`declaration-list`* *`declaration`*
 
-*Lista instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja-list —* *instrukcja*
+*`statement-list`*:<br/>
+&emsp;*`statement`*<br/>
+&emsp;*`statement-list`* *`statement`*
 
-*wyrażenie-instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>wybór</sub> wyrażenia **;**
+*`expression-statement`*:<br/>
+&emsp;*`expression`*<sub>wybór</sub>**`;`**
 
-*iteracja — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (***wyrażenie***)**—*instrukcja*      <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`do`**  *instrukcja*  **while (**  *wyrażenie*  **);**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for (**<sub>opt</sub> **;** *expression*<sub>opt</sub> *SELECT* **;** *wyrażenie zgody* *; wyrażenie*<sub>zgody</sub> **)**  
+*`iteration-statement`*:<br/>
+&emsp;**`while (`** *`expression`* **`)`** *`statement`*<br/>
+&emsp;**`do`** *`statement`* **`while (`** *`expression`* **`) ;`**<br/>
+&emsp;**`for (`***`expression`* <sub>opt</sub> **`;`** wybór *`expression`* <sub>wybór</sub> **`;`** *`expression`* <sub>opt</sub> wybór **`)`***`statement`*
 
-*wybór — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (***Expression***)**—*instrukcja*      <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (***wyrażenie***)** instrukcja*instrukcji* **`else`** *statement*          <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Switch (***wyrażenie***)**—*instrukcja*      
+*`selection-statement`*:<br/>
+&emsp;**`if (`** *`expression`* **`)`** *`statement`*<br/>
+&emsp;**`if (`** *`expression`* **`)`** *`statement`* **`else`** *`statement`*<br/>
+&emsp;**`switch (`** *`expression`* **`)`** *`statement`*
 
-*etykieta — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*  **:**  *instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *stała — wyrażenie*  **:**  *instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default:**  *instrukcja*
+*`labeled-statement`*:<br/>
+&emsp;*`identifier`* **`:`** *`statement`*<br/>
+&emsp;**`case`** *`constant-expression`* **`:`** *`statement`*<br/>
+&emsp;**`default :`** *`statement`*
 
-*try-except-Statement*:/ \* specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja złożonej* instrukcji **__try***złożonej* **__except (***Expression***)**        
+*`try-except-statement`*:/ \* Specyficzne dla firmy Microsoft \*/<br/>
+&emsp;**`__try`** *`compound-statement`* **`__except (`** *`expression`* **`)`** *`compound-statement`*
 
-*try-finally-Statement*:/ \* specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **`__finally`** *instrukcja złożonej* instrukcji __try złożonej    
+*`try-finally-statement`*:/ \* Specyficzne dla firmy Microsoft \*/<br/>
+&emsp;**`__try`** *`compound-statement`* **`__finally`** *`compound-statement`*
 
-## <a name="see-also"></a>Zobacz także
+1 **`__leave`** słowo kluczowe jest prawidłowe tylko w **`__try`** bloku *`try-except-statement`* lub *`try-finally-statement`* .
 
-[Gramatyka struktury frazy](../c-language/phrase-structure-grammar.md)
+## <a name="see-also"></a>Zobacz też
+
+[Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)

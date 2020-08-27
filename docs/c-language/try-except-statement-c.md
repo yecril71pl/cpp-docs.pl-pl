@@ -1,6 +1,7 @@
 ---
-title: try-except — instrukcja (C)
-ms.date: 11/04/2016
+title: try-except, instrukcja (C)
+description: Microsoft C/C++ implementuje obsługę wyjątków strukturalnych (SEH) przy użyciu rozszerzenia języka instrukcji try-except.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - try-except keyword [C]
 - structured exception handling, try-except
@@ -10,92 +11,88 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 77b6bea8c7793522f5e1fa47e09a9b4a7e5c0f10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e327150431fef3384f2b98940939444b2e6d96ea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218783"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898722"
 ---
-# <a name="try-except-statement-c"></a>try-except — instrukcja (C)
+# <a name="try-except-statement-c"></a>try-except, instrukcja (C)
 
-**Specyficzne dla firmy Microsoft**
+**specyficzne dla firmy Microsoft**
 
-Instrukcja **try-except** jest rozszerzeniem firmy Microsoft do języka C, który umożliwia aplikacjom uzyskanie kontroli nad programem, gdy wystąpią zdarzenia, które normalnie kończą wykonywanie. Takie zdarzenia nazywane są wyjątkami, a mechanizm, który zajmuje się wyjątkami nazywa się strukturalną obsługą wyjątków.
+`try-except`Instrukcja to rozszerzenie firmy Microsoft do języka C, który umożliwia aplikacjom uzyskanie kontroli nad programem, gdy wystąpią zdarzenia, które normalnie kończą wykonywanie. Takie zdarzenia nazywane są wyjątkami, a mechanizm, który zajmuje się wyjątkami nazywa się strukturalną obsługą wyjątków.
 
-Wyjątki mogą być zależne od sprzętu lub oprogramowania. Nawet wtedy, gdy aplikacje nie mogą całkowicie odzyskać sprawności po wystąpieniu wyjątku sprzętowego lub programowego, strukturalna obsługa wyjątków umożliwia wyświetlenie informacji o błędzie i pozwala na przechwycenie wewnętrznego stanu aplikacji, aby pomóc w zdiagnozowaniu problemu. Jest to szczególnie użyteczne w przypadku sporadycznych problemów, których nie można łatwo odtworzyć.
+Wyjątki mogą być zależne od sprzętu lub oprogramowania. Nawet w przypadku, gdy aplikacje nie mogą całkowicie odzyskać sprawności przed wyjątkami sprzętowymi i programowymi, strukturalna obsługa wyjątków umożliwia rejestrowanie i wyświetlanie informacji o błędach. Warto zastanowić się, że w celu ułatwienia zdiagnozowania problemu jest zalewkowany wewnętrzny stan aplikacji. W szczególności pomocne jest nieprzerwane Rozwiązywanie problemów, które nie są łatwe do odtworzenia.
 
 ## <a name="syntax"></a>Składnia
 
-*try-except-Statement*: **__try**  *złożonej instrukcji*
+> *`try-except-statement`*:\
+> &emsp;**`__try`** *`compound-statement`* **`__except (`**  *`expression`*  **`)`** *`compound-statement`*
 
-*instrukcja złożonej instrukcji* **__except (***Expression***)**      
-
-Instrukcja złożona po `__try` klauzuli jest sekcją chronioną. Instrukcja złożona po **`__except`** klauzuli jest programem obsługi wyjątków. Program obsługi określa zestaw akcji do wykonania, jeśli wyjątek jest wywoływany podczas wykonywania sekcji chronionej. Wykonanie przebiega w następujący sposób:
+Instrukcja złożona po **`__try`** klauzuli jest *sekcją chronioną*. Instrukcja złożona po **`__except`** klauzuli jest *programem obsługi wyjątków*. Procedura obsługi określa zestaw akcji do wykonania, jeśli wyjątek jest wywoływany podczas wykonywania sekcji chronionej. Wykonanie przebiega w następujący sposób:
 
 1. Sekcja chroniona jest wykonywana.
 
 1. Jeśli podczas wykonywania sekcji chronionej nie wystąpi wyjątek, wykonanie kontynuuje się w instrukcji po **`__except`** klauzuli.
 
-1. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w każdej rutynowych wywołaniach sekcji chronionej, **`__except`** wyrażenie jest oceniane i zwracana wartość określa sposób obsługi wyjątku. Istnieją trzy wartości:
+1. Jeśli podczas wykonywania sekcji chronionej wystąpi wyjątek lub w każdej z rutynowych wywołań sekcji chronionej, **`__except`** wyrażenie zostanie obliczone. Zwracana wartość określa sposób obsługi wyjątku. Możliwe są trzy wartości:
 
-   `EXCEPTION_CONTINUE_SEARCH`Wyjątek nie został rozpoznany. Kontynuuj wyszukiwanie stosu dla programu obsługi, najpierw dla zawiera instrukcje **try-except** , a następnie dla programów obsługi przy użyciu następnego najwyższego pierwszeństwa.
+   - `EXCEPTION_CONTINUE_SEARCH`: Wyjątek nie został rozpoznany. Kontynuuj wyszukiwanie stosu dla programu obsługi, najpierw dla zawierających `try-except` instrukcje, a następnie dla programów obsługi przy użyciu następnego najwyższego pierwszeństwa.
 
-   `EXCEPTION_CONTINUE_EXECUTION`Wyjątek jest rozpoznawany, ale odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   - `EXCEPTION_CONTINUE_EXECUTION`: Wyjątek jest rozpoznawany, ale odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-   `EXCEPTION_EXECUTE_HANDLER`Wyjątek jest rozpoznawany. Przetransferuj formant do programu obsługi wyjątków **`__except`** , wykonując instrukcję złożoną, a następnie kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   - `EXCEPTION_EXECUTE_HANDLER` Wyjątek jest rozpoznawany. Przetransferuj formant do programu obsługi wyjątków **`__except`** , wykonując instrukcję złożoną, a następnie kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
 Ponieważ **`__except`** wyrażenie jest oceniane jako wyrażenie C, jest ograniczone do pojedynczej wartości, operatora warunkowego wyrażenia lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
 
 > [!NOTE]
-> Strukturalna obsługa wyjątków współpracuje z plikami źródłowymi C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto mechanizm obsługi wyjątków C++ jest znacznie bardziej elastyczny, dzięki czemu może obsługiwać wyjątki dowolnego typu.
+> Strukturalna obsługa wyjątków współpracuje z plikami źródłowymi C i C++. Nie jest to jednak przeznaczone specjalnie dla języka C++. W przypadku przenośnych programów C++ obsługa wyjątków C++ powinna być używana zamiast strukturalnej obsługi wyjątków. Ponadto mechanizm obsługi wyjątków C++ jest znacznie bardziej elastyczny, dzięki czemu może obsługiwać wyjątki dowolnego typu. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md) w *dokumentacji języka C++*.
 
-> [!NOTE]
-> W przypadku programów C++, obsługa wyjątków C++ powinna być używana zamiast strukturalnej obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md) w *dokumentacji języka C++*.
+Każda procedura w aplikacji może mieć własny program obsługi wyjątków. **`__except`** Wyrażenie jest wykonywane w zakresie **`__try`** treści. Ma dostęp do wszystkich zmiennych lokalnych zadeklarowanych w tym miejscu.
 
-Każda procedura w aplikacji może mieć własny program obsługi wyjątków. **`__except`** Wyrażenie jest wykonywane w zakresie `__try` treści. Oznacza to, że ma dostęp do wszelkich zmiennych lokalnych zadeklarowanych w tym miejscu.
+**`__leave`** Słowo kluczowe jest prawidłowe w `try-except` bloku instrukcji. Efekt **`__leave`** ma przeskoczyć do końca `try-except` bloku. Wykonywanie zostało wznowione po zakończeniu obsługi wyjątków. Mimo że **`goto`** instrukcja może służyć do osiągnięcia tego samego wyniku, **`goto`** instrukcja powoduje odwinięcie stosu. **`__leave`** Instrukcja jest bardziej wydajna, ponieważ nie obejmuje odwinięcia stosu.
 
-** `__leave** keyword is valid within a **try-except** statement block. The effect of **` __Leave** ma przeskoczyć do końca bloku **try-except** . Wykonywanie zostało wznowione po zakończeniu obsługi wyjątków. Mimo że **`goto`** instrukcja może służyć do osiągnięcia tego samego wyniku, **`goto`** instrukcja powoduje odwinięcie stosu. Instrukcja **"__leave"** jest wydajniejsza, ponieważ nie obejmuje odwinięcia stosu.
-
-Opuszczanie instrukcji **try-except** przy użyciu `longjmp` funkcji run-time jest uznawane za nietypowe zakończenie. Przechodzenie do instrukcji nie jest dozwolone `__try` , ale istnieje możliwość wychodzenia z jednego. Procedura obsługi wyjątków nie jest wywoływana, jeśli proces zostanie zamknięty w trakcie wykonywania instrukcji **try-except** .
+Kończenie `try-except` instrukcji przy użyciu `longjmp` funkcji run-time jest uznawane za nietypowe zakończenie. Nie jest to dozwolone, aby przechodzić do **`__try`** instrukcji, ale jest to dozwolone w przypadku przechodzenia z jednego. Procedura obsługi wyjątków nie jest wywoływana, jeśli proces zostanie zamknięty w trakcie wykonywania `try-except` instrukcji.
 
 ## <a name="example"></a>Przykład
 
-Poniżej znajduje się przykład obsługi wyjątków i procedury obsługi zakończenia. Aby uzyskać więcej informacji na temat programów obsługi zakończenia [, zobacz instrukcję try-finally](../c-language/try-finally-statement-c.md) .
+Oto przykład procedury obsługi wyjątków i procedury obsługi zakończenia. Aby uzyskać więcej informacji na temat programów obsługi zakończenia, zobacz [ `try-finally` instrukcja (C)](../c-language/try-finally-statement-c.md).
 
-```
+```C
 .
 .
 .
 puts("hello");
-__try{
+__try {
    puts("in try");
-   __try{
+   __try {
       puts("in try");
       RAISE_AN_EXCEPTION();
-   }__finally{
+   } __finally {
       puts("in finally");
    }
-}__except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ){
+} __except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ) {
    puts("in except");
 }
 puts("world");
 ```
 
-Jest to wynik z przykładu, z dodaniem komentarza po prawej stronie:
+Oto dane wyjściowe z przykładu z komentarzem dodany po prawej stronie:
 
-```
+```Output
 hello
-in try              /* fall into try                     */
-in try              /* fall into nested try                */
+in try              /* fall into try                        */
+in try              /* fall into nested try                 */
 in filter           /* execute filter; returns 1 so accept  */
 in finally          /* unwind nested finally                */
 in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZENIE specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[try-except — instrukcja](../cpp/try-except-statement.md)
+[`try-except` Instrukcja (C++)](../cpp/try-except-statement.md)

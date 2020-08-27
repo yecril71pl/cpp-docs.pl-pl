@@ -1,16 +1,17 @@
 ---
 title: Obsługa wyjątku x64
+description: Omówienie Konwencji obsługi wyjątków platformy Microsoft C++ na platformie x64.
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835054"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898571"
 ---
 # <a name="x64-exception-handling"></a>Obsługa wyjątku x64
 
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** jest wartością protokołu RIP w tej funkcji. Ta wartość to adres wyjątku lub adres, pod którym formant opuścił funkcję ustanawiającą. Protokół RIP służy do określenia, czy formant znajduje się w pewnej chronionej konstrukcji wewnątrz tej funkcji, na przykład `__try` blok dla `__try` / **`__except`** lub `__try` / **`__finally`** .
+**ControlPc** jest wartością protokołu RIP w tej funkcji. Ta wartość to adres wyjątku lub adres, pod którym formant opuścił funkcję ustanawiającą. Protokół RIP służy do określenia, czy formant znajduje się w pewnej chronionej konstrukcji wewnątrz tej funkcji, na przykład **`__try`** blok dla **`__try`** / **`__except`** lub **`__try`** / **`__finally`** .
 
 **ImageBase** to podstawowy obraz (adres ładowania) modułu zawierającego tę funkcję, który ma zostać dodany do 32-bitowych przesunięć użytych we wpisie funkcji i w informacjach o rozwinięcia, aby zarejestrować adresy względne.
 
