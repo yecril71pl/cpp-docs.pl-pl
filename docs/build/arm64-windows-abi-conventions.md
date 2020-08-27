@@ -1,12 +1,12 @@
 ---
 title: Przegląd konwencji ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
+ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303261"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972676"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd konwencji ABI ARM64
 
@@ -157,7 +157,7 @@ Dla każdego argumentu na liście stosowana jest pierwsza reguła dopasowywania 
 
 Dla każdego argumentu na liście są stosowane następujące reguły do momentu przydzielenia tego argumentu. Gdy argument jest przypisany do rejestru, wszystkie nieużywane bity w rejestrze mają nieokreśloną wartość. Jeśli argument jest przypisany do gniazda stosu, wszystkie nieużywane bajty uzupełniania mają nieokreśloną wartość.
 
-1. Jeśli argument jest typu pół-lub o podwójnej precyzji zmiennoprzecinkowej lub krótkiej, a wartość NSRN jest mniejsza niż 8, argument jest przypisywany do najmniej znaczących bitów usługi Register v\[NSRN]. NSRN jest zwiększana o jeden. Argument został przydzielony.
+1. Jeśli argument jest typu pół-lub o podwójnej precyzji zmiennoprzecinkowej lub krótkiej, a wartość NSRN jest mniejsza niż 8, argument jest przypisywany do najmniej znaczących bitów usługi Register v \[ NSRN]. NSRN jest zwiększana o jeden. Argument został przydzielony.
 
 1. Jeśli argument jest HFA lub HVA, a istnieją wystarczające przydzielono rejestrów SIMD i zmiennoprzecinkowych (NSRN + liczba członków ≤ 8), argument jest przypisywany do i rejestrów zmiennoprzecinkowych, jeden rejestr na element członkowski SIMD lub HFA. NSRN jest zwiększana o liczbę używanych rejestrów. Argument został przydzielony.
 
@@ -169,13 +169,13 @@ Dla każdego argumentu na liście są stosowane następujące reguły do momentu
 
 1. Jeśli argument jest HFA, typu zmiennoprzecinkowego, pojedynczej, podwójnej precyzji lub krótkiej klasy wektora, to argument jest kopiowany do pamięci na dostosowaną NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu. Argument został przydzielony.
 
-1. Jeśli argument jest typem całkowitym lub wskaźnikowym, rozmiar argumentu jest mniejszy niż lub równy 8 bajtów, a NGRN jest mniejszy niż 8, argument jest kopiowany do najmniej znaczących bitów w x\[NGRN]. NGRN jest zwiększana o jeden. Argument został przydzielony.
+1. Jeśli argument jest typem całkowitym lub wskaźnikowym, rozmiar argumentu jest mniejszy niż lub równy 8 bajtów, a NGRN jest mniejszy niż 8, argument jest kopiowany do najmniej znaczących bitów w x \[ NGRN]. NGRN jest zwiększana o jeden. Argument został przydzielony.
 
 1. Jeśli argument ma wyrównanie 16, to NGRN jest zaokrąglana do następnej parzystej liczby.
 
-1. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16, a NGRN jest mniejszy niż 7, argument jest kopiowany do x\[NGRN] i x\[NGRN + 1]. x\[NGRN] musi zawierać dolną, rozstawioną dwuwyrazową reprezentację pamięci argumentu. NGRN jest zwiększana o dwa. Argument został przydzielony.
+1. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16, a NGRN jest mniejszy niż 7, argument jest kopiowany do x \[ NGRN] i x \[ NGRN + 1]. x \[ NGRN] musi zawierać dolną, rozstawioną dwuwyrazową reprezentację pamięci argumentu. NGRN jest zwiększana o dwa. Argument został przydzielony.
 
-1. Jeśli argument jest typu złożonego, a rozmiar w podwójnych słowach argumentu nie przekracza 8 minus NGRN, argument jest kopiowany do kolejnych rejestrów ogólnego przeznaczenia, zaczynając od x\[NGRN]. Argument jest przesyłany tak, jakby został załadowany do rejestrów z adresu wyrównanego do podwójnego tekstu, z odpowiednią sekwencją instrukcji LDR, które ładują kolejne rejestry z pamięci. Zawartość wszelkich nieużywanych części rejestrów nie jest określona przez ten standard. NGRN jest zwiększana o liczbę używanych rejestrów. Argument został przydzielony.
+1. Jeśli argument jest typu złożonego, a rozmiar w podwójnych słowach argumentu nie przekracza 8 minus NGRN, argument jest kopiowany do kolejnych rejestrów ogólnego przeznaczenia, zaczynając od x \[ NGRN]. Argument jest przesyłany tak, jakby został załadowany do rejestrów z adresu wyrównanego do podwójnego tekstu, z odpowiednią sekwencją instrukcji LDR, które ładują kolejne rejestry z pamięci. Zawartość wszelkich nieużywanych części rejestrów nie jest określona przez ten standard. NGRN jest zwiększana o liczbę używanych rejestrów. Argument został przydzielony.
 
 1. NGRN jest ustawiona na 8.
 
@@ -197,7 +197,7 @@ Funkcje, które przyjmują zmienną liczbę argumentów, są obsługiwane inacze
 
 Efektywnie jest to taka sama jak następująca reguła C. 12 – C. 15 do przydzielania argumentów do wielobajtowego stosu, gdzie pierwsze 64 bajtów stosu są ładowane do x0-120 i wszystkie pozostałe argumenty stosu są zwykle umieszczane.
 
-## <a name="return-values"></a>Zwracane wartości
+## <a name="return-values"></a>Wartości zwracane
 
 Wartości całkowite są zwracane w x0.
 
@@ -205,13 +205,13 @@ Wartości zmiennoprzecinkowe są zwracane w S0, d0 lub v0, zgodnie z potrzebami.
 
 Wartości HFA i HVA są zwracane w S0-S3, d0-D3 lub v0-v3, zgodnie z potrzebami.
 
-Typy zwracane przez wartość są obsługiwane w różny sposób w zależności od tego, czy mają pewne właściwości. Typy, które mają wszystkie te właściwości,
+Typy zwracane przez wartość są obsługiwane w różny sposób w zależności od tego, czy mają pewne właściwości, oraz czy funkcja jest niestatyczną funkcją składową. Typy, które mają wszystkie te właściwości,
 
 - są one *agregowane* przez standardową definicję języka c++ 14, czyli nie mają konstruktorów dostarczonych przez użytkownika, żadnych prywatnych lub chronionych niestatycznych elementów członkowskich danych, nie klas bazowych ani żadnych funkcji wirtualnych, a także
 - mają operator przypisywania prostej kopii i
 - mają prosty destruktor,
 
-Użyj następującego stylu powrotu:
+i są zwracane przez funkcje nieczłonkowskie lub statyczne funkcje członkowskie, użyj następującego stylu powrotu:
 
 - W x0 nie są zwracane typy mniejsze niż lub równe 8 bajtów.
 - Typy mniejsze niż lub równe 16 bajty są zwracane w x0 i x1 z parametrem x0 zawierającym mniej niż 8 bajtów.
@@ -251,7 +251,7 @@ Dynamicznie generowany kod powinien zostać opisany przy użyciu tabel funkcji d
 
 Wszystkie procesory ARMv8 są wymagane do obsługi rejestru licznika cykl, rejestr 64-bitowy, który system Windows konfiguruje do odczytu na dowolnym poziomie wyjątku, w tym w trybie użytkownika. Dostęp do niego można uzyskać za pośrednictwem specjalnego rejestru PMCCNTR_EL0 przy użyciu kodu w kodzie zestawu lub `_ReadStatusReg` wewnętrznej w kodzie C/C++.
 
-W tym miejscu licznik cyklu jest wartością prawda, a nie zegarem ściany. Częstotliwość zliczania zależy od częstotliwości procesora. Jeśli uważasz, że musisz znać częstotliwość licznika cykl, nie należy używać licznika cykli. Zamiast tego należy mierzyć czas zegara ściany, którego należy użyć `QueryPerformanceCounter`.
+W tym miejscu licznik cyklu jest wartością prawda, a nie zegarem ściany. Częstotliwość zliczania zależy od częstotliwości procesora. Jeśli uważasz, że musisz znać częstotliwość licznika cykl, nie należy używać licznika cykli. Zamiast tego należy mierzyć czas zegara ściany, którego należy użyć `QueryPerformanceCounter` .
 
 ## <a name="see-also"></a>Zobacz też
 
