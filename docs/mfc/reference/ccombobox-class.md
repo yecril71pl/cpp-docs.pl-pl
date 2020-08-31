@@ -1,6 +1,7 @@
 ---
 title: Klasa CComboBox
-ms.date: 11/04/2016
+description: Dokumentacja interfejsu API dla klasy pola kombi systemu Windows MFC CComboBox
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561677"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062188"
 ---
 # <a name="ccombobox-class"></a>Klasa CComboBox
 
@@ -920,7 +921,8 @@ Długość (w bajtach) ciągu, z wyłączeniem kończącego znaku null. Jeśli *
 
 ### <a name="remarks"></a>Uwagi
 
-Druga forma tej funkcji elementu członkowskiego wypełnia `CString` obiekt z tekstem elementu.
+Druga forma tej funkcji elementu członkowskiego wypełnia `CString` obiekt z tekstem elementu. \
+Jeśli *nIndex* jest nieprawidłowy, ta funkcja zgłasza `E_INVALIDARG` wyjątek (kod błędu: `-2147024809` , `0x80070057` ).
 
 ### <a name="example"></a>Przykład
 

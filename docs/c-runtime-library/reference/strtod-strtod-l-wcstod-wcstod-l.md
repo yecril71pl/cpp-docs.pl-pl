@@ -1,6 +1,7 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla strtod, _strtod_l, wcstod, _wcstod_l, która konwertuje ciągi na wartość o podwójnej precyzji.
+ms.date: 08/27/2020
 api_name:
 - wcstod
 - _wcstod_l
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a9c7fd36b28b0a709c2e21a5e23d8a71d5f8a15
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233980"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062175"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -108,7 +109,7 @@ Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja konwertuje ciąg wejściowy *strSource* na **`double`** . Funkcja **strtod** konwertuje *strSource* na wartość o podwójnej precyzji. **strtod** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Ten znak może być końcowym znakiem null. **wcstod** to dwubajtowa wersja **strtod**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
+Każda funkcja konwertuje ciąg wejściowy *strSource* na **`double`** . Funkcja **strtod** konwertuje *strSource* na wartość o podwójnej precyzji. **strtod** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie można rozpoznać jako części liczby. Ten znak może być końcowym znakiem null. **wcstod** to dwubajtowa wersja **strtod**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -125,9 +126,24 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 **strtod** oczekuje, że *strSource* , aby wskazywały ciąg jednej z następujących form:
 
-[*odstęp*] [*Sign*] {*cyfry* [*radix* *cyfry*podstawy] &#124; *podstawy* *cyfr*} [{**e** &#124; **e**} [*Sign*] *cyfry*] [*odstępy*]*[Sign*] {**0x** &#124; **0x**} {*hexdigits* [*podstawy* *hexdigits*] &#124; *podstawy* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*odstęp*] [*Sign*] {**inf** &#124; **nieskończoność**} [*biały*] [*znak*] **NaN** [*Sequence*]
+[*odstęp*] [*Sign*] {*cyfry* [*radix* *cyfry*podstawy] &#124; *podstawy* *cyfr*} [{**e** &#124; **e**} [*Sign*] *cyfry*] [*odstępy*] [*Sign*] {*sequence***0x** &#124; **0x**} {*hexdigits* [*podstawy* *hexdigits*] &#124; *podstawy* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *cyfry*] [*odstęp**] [**Sign* **] {** **inf** &#124; **nieskończoność***whitespace*
 
-Opcjonalne *spacje wiodące* mogą zawierać spacje i znaki tabulacji, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); *cyfry* są jedną lub większą liczbą cyfr dziesiętnych; *hexdigits* to jedna lub więcej cyfr szesnastkowych; *podstawy* jest znakiem punktu podstawy, kropką (.) w domyślnych ustawieniach regionalnych "C" lub wartość specyficzną dla ustawień regionalnych, jeśli bieżące ustawienia regionalne są różne lub jeśli określono *Ustawienia regionalne* ; *sekwencja* jest sekwencją znaków alfanumerycznych lub podkreślenia. W formularzach liczb dziesiętnych i szesnastkowych, jeśli żadne cyfry nie pojawiają się przed znakiem punktu podstawy, co najmniej jeden musi występować po znaku podstawy. W postaci dziesiętnej cyfry dziesiętne mogą następować według wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie podpisanej liczby całkowitej. W postaci szesnastkowej cyfry szesnastkowe mogą następować przy użyciu wykładnika, która składa się z litery wprowadzającej (**p** lub **p**) i opcjonalnie podpisanej szesnastkowej liczby całkowitej, która reprezentuje wykładnik jako potęgę 2. W obu formularzach, jeśli nie ma części wykładnika lub podstawy znaku, przyjmuje się, że znak punktu podstawy jest zgodny z ostatnią cyfrą w ciągu. Wielkość liter jest ignorowana w formularzach **inf** i **NaN** . Pierwszy znak, który nie pasuje do jednego z tych formularzy, uniemożliwia skanowanie.
+Opcjonalne *odstępy* wiodące mogą zawierać spacje i znaki tabulacji, które są ignorowane. \
+*znak* jest znakiem plus (+) lub minus (-). \
+*cyfry* są co najmniej jedną cyfrą dziesiętną. \
+*hexdigits* to jedna lub więcej cyfr szesnastkowych. \
+*podstawy* jest znakiem punktu podstawy, kropką (.) w domyślnych ustawieniach regionalnych "C" lub wartość specyficzną dla ustawień regionalnych, jeśli bieżące ustawienia regionalne są różne lub jeśli określono *Ustawienia regionalne* . \
+ *Sekwencja* jest sekwencją znaków alfanumerycznych lub podkreślenia.
+
+W formularzach liczb dziesiętnych i szesnastkowych, jeśli żadne cyfry nie pojawiają się przed znakiem punktu podstawy, co najmniej jeden musi występować po znaku podstawy. 
+
+W postaci dziesiętnej cyfry dziesiętne mogą następować według wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie podpisanej liczby całkowitej. 
+
+W postaci szesnastkowej cyfry szesnastkowe mogą następować przy użyciu wykładnika, która składa się z litery wprowadzającej (**p** lub **p**) i opcjonalnie podpisanej dziesiętnej liczby całkowitej, która reprezentuje wykładnik jako potęgę 2.
+
+W obu formularzach, jeśli nie ma części wykładnika lub podstawy znaku, przyjmuje się, że znak punktu podstawy jest zgodny z ostatnią cyfrą w ciągu.
+
+Wielkość liter jest ignorowana w formularzach **inf** i **NaN** . Pierwszy znak, który nie pasuje do jednego z tych formularzy, uniemożliwia skanowanie.
 
 Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu. Wersje UCRT obsługują ciągi szesnastkowe i dwukierunkowe wartości plików INF i NAN, które nie były obsługiwane we wcześniejszych wersjach. Może to również spowodować istotne zmiany w kodzie. Na przykład ciąg "0x1A" byłby interpretowany przez **strtod** jako 0,0 w poprzednich wersjach, ale jako 26,0 w wersji UCRT.
 
@@ -205,7 +221,7 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
