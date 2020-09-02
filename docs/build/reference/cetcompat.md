@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (zgodny ze stosem w tle)
-ms.date: 06/30/2020
+ms.date: 09/01/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813566"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281833"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (zgodny ze stosem w tle)
 
@@ -45,7 +45,7 @@ Począwszy od programu Visual Studio 2019 w wersji 16,7:
 
 1. Wybierz właściwość CET, która jest **zgodna ze stosem** .
 
-1. W kontrolce menu rozwijanego wybierz opcję **`Yes (/CETCOMPAT)`** włączenia metadanych kontynuacji EH lub **`No (/CETCOMPAT:NO)`** wyłączania.
+1. W kontrolce menu rozwijanego zaznacz, **`Yes (/CETCOMPAT)`** Aby oznaczyć plik binarny jako zgodny ze stosem w tle i **`No (/CETCOMPAT:NO)`** oznaczyć go jako niezgodny.
 
 W poprzednich wersjach programu Visual Studio 2019:
 
@@ -53,12 +53,12 @@ W poprzednich wersjach programu Visual Studio 2019:
 
 1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
 
-1. W obszarze **Opcje dodatkowe** Edytuj kontrolkę Dodaj, *`/CETCOMPAT`* Aby włączyć metadane kontynuacji EH lub *`/CETCOMPAT:NO`* Aby jawnie ją wyłączyć.
+1. W obszarze **Opcje dodatkowe** Edytuj kontrolkę Dodaj, *`/CETCOMPAT`* Aby oznaczyć plik binarny jako zgodny ze stosem w tle, lub *`/CETCOMPAT:NO`* Aby jawnie oznaczyć go jako niezgodny.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
 Ta opcja nie ma programowego odpowiednika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje konsolidatora](linker-options.md)

@@ -1,7 +1,7 @@
 ---
 title: MSVC Opcje konsolidatora
 description: Lista opcji obsługiwanych przez konsolidator linków firmy Microsoft.
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257549"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281799"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
-LINK. exe łączy pliki i biblioteki obiektów Common Object File Format (COFF), aby utworzyć plik wykonywalny (exe) lub bibliotekę dołączaną dynamicznie (DLL).
+LINK.exe łączy pliki i biblioteki obiektów Common Object Format (COFF), aby utworzyć plik wykonywalny (exe) lub bibliotekę dołączaną dynamicznie (DLL).
 
-W poniższej tabeli wymieniono opcje LINK. exe. Aby uzyskać więcej informacji na temat łącza, zobacz:
+W poniższej tabeli wymieniono opcje LINK.exe. Aby uzyskać więcej informacji na temat łącza, zobacz:
 
-- [Opcje LINK kontrolowane przez kompilator](compiler-controlled-link-options.md)
+- [Opcje łączy sterowane kompilatorem](compiler-controlled-link-options.md)
 
-- [Pliki wejściowe LINK](link-input-files.md)
+- [Połącz pliki wejściowe](link-input-files.md)
 
-- [Dane wyjściowe LINK](link-output.md)
+- [Połącz dane wyjściowe](link-output.md)
 
 - [Słowa zastrzeżone](reserved-words.md)
 
@@ -44,12 +44,13 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/ALLOWBIND](allowbind-prevent-dll-binding.md)|Określa, że nie można powiązać biblioteki DLL.|
 |[/ALLOWISOLATION](allowisolation-manifest-lookup.md)|Określa zachowanie wyszukiwania manifestu.|
 |[/APPCONTAINER](appcontainer-windows-store-app.md)|Określa, czy aplikacja musi działać w środowisku procesu kontenera aplikacji.|
-|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Dodaje <xref:System.Diagnostics.DebuggableAttribute> do zarządzanego obrazu.|
+|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Dodaje <xref:System.Diagnostics.DebuggableAttribute> do obrazu zarządzanego.|
 |[/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)|Tworzy łącze do zarządzanego zasobu.|
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Określa, że moduł języka pośredniego (MSIL) firmy Microsoft powinien zostać zaimportowany do zestawu.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Osadza plik zasobów zarządzanych w zestawie.|
 |[/BASE](base-base-address.md)|Ustawia adres podstawowy dla programu.|
-|[/CGTHREADS](cgthreads-compiler-threads.md)|Ustawia liczbę wątków CL. exe do użycia na potrzeby optymalizacji i generowania kodu, gdy jest określone generowanie kodu w czasie konsolidacji.|
+|[/CETCOMPAT](cetcompat.md)|Oznacza plik binarny jako zgodny ze stosem w tle (CET).|
+|[/CGTHREADS](cgthreads-compiler-threads.md)|Ustawia liczbę cl.exe wątków do użycia na potrzeby optymalizacji i generowania kodu, gdy zostanie określone generowanie kodu w czasie konsolidacji.|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|Ustawia typ (IJW, czysty lub bezpieczny) obrazu CLR.|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Zachowuje kod ostatniego błędu funkcji, które są wywoływane za pomocą mechanizmu P/Invoke.|
 |[/CLRTHREADATTRIBUTE](clrthreadattribute-set-clr-thread-attribute.md)|Określa atrybut wątkowości, który ma zostać zastosowany do punktu wejścia programu CLR.|
@@ -72,13 +73,13 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/FIXED](fixed-fixed-base-address.md)|Tworzy program, który można załadować tylko przy użyciu preferowanego adresu podstawowego.|
 |[/FORCE](force-force-file-output.md)|Wymusza zakończenie łącza nawet z nierozpoznanymi symbolami lub symbolami zdefiniowanymi więcej niż raz.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Tworzy obraz, który można zainstalować na gorąco.|
-|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obie te opcje określają generowanie pliku *`.pgd`* przez konsolidator do obsługi optymalizacji opartej na profilach (PGO). /GENPROFILE i/FASTGENPROFILE używają różnych parametrów domyślnych.|
+|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obie te opcje określają generowanie *`.pgd`* pliku przez konsolidator do obsługi optymalizacji opartej na profilach (PGO). /GENPROFILE i/FASTGENPROFILE używają różnych parametrów domyślnych.|
 |[/GUARD](guard-enable-guard-checks.md)|Włącza ochronę za pomocą ochrony przepływu sterowania.|
 |[/HEAP](heap-set-heap-size.md)|Ustawia rozmiar sterty w bajtach.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Określa obsługę losowego generowania układu przestrzeni adresowej o wysokiej entropii 64 (ASLR).|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Określa nazwę pliku *`.idl`* i innych plików wyjściowych MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Określa nazwę *`.idl`* pliku i inne pliki wyjściowe MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Pomija dane wyjściowe określonych ostrzeżeń konsolidatora.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zapobiega przetwarzaniu informacji o atrybutach do pliku *`.idl`* .|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zapobiega przetwarzaniu informacji o atrybutach do *`.idl`* pliku.|
 |[/IMPLIB](implib-name-import-library.md)|Zastępuje domyślną nazwę biblioteki importu.|
 |[/INCLUDE](include-force-symbol-references.md)|Wymusza odwołania do symboli.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Kontroluje łączenie przyrostowe.|
@@ -92,7 +93,7 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/LTCG](ltcg-link-time-code-generation.md)|Określa generowanie kodu w czasie konsolidacji.|
 |[/MACHINE](machine-specify-target-platform.md)|Określa platformę docelową.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Tworzy plik manifestu Side-by-Side i opcjonalnie osadza go w danych binarnych.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Określa \<dependentAssembly > sekcji w pliku manifestu.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Określa \<dependentAssembly> sekcję w pliku manifestu.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Zmienia domyślną nazwę pliku manifestu.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Określa plik wejściowy manifestu dla konsolidatora do przetworzenia i osadzenia w pliku binarnym. Można użyć tej opcji wiele razy, aby określić więcej niż jeden plik wejściowy manifestu.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Określa, czy informacje kontroli konta użytkownika (UAC) są osadzone w manifeście programu.|
@@ -112,19 +113,19 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/PDB](pdb-use-program-database.md)|Tworzy plik PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Używa alternatywnej lokalizacji do zapisania pliku PDB.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Tworzy plik PDB, który nie ma prywatnych symboli.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Określa plik *`.pgd`* dla optymalizacji z przewodnikiem.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Określa *`.pgd`* plik dla optymalizacji z przewodnikiem.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Przestarzałe** Tworzy bezpieczną wielowątkową kompilację PGO.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności.|
-|[/RELEASE](release-set-the-checksum.md)|Ustawia sumę kontrolną w nagłówku *`.exe`* .|
+|[/RELEASE](release-set-the-checksum.md)|Ustawia sumę kontrolną w *`.exe`* nagłówku.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Określa, czy obraz będzie zawierać tabelę bezpiecznych procedur obsługi wyjątków.|
 |[/SECTION](section-specify-section-attributes.md)|Zastępuje atrybuty sekcji.|
 |[/SOURCELINK](sourcelink.md)|Określa plik SourceLink do dodania do pliku PDB.|
 |[/STACK](stack-stack-allocations.md)|Ustawia rozmiar stosu w bajtach.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Dołącza program zastępczy systemu MS-DOS do programu systemu Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informuje system operacyjny, jak uruchomić plik *`.exe`* .|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informuje system operacyjny, jak uruchomić *`.exe`* plik.|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Informuje system operacyjny, aby skopiował dane wyjściowe konsolidatora do pliku wymiany przed jego uruchomieniem.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Określa identyfikator zasobu biblioteki typów generowanych przez konsolidator.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Określa nazwę pliku *`.tlb`* i innych plików wyjściowych MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Określa nazwę *`.tlb`* pliku i inne pliki wyjściowe MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Tworzy aplikację, która jest przeznaczona specjalnie do uruchamiania na serwerze terminali.|
 |[/USEPROFILE](useprofile.md)|W celu utworzenia zoptymalizowanego obrazu są stosowane dane szkoleniowe dotyczące optymalizacji opartej na profilach.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Drukuje wiadomości dotyczące postępu konsolidatora.|
@@ -141,5 +142,5 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 
 ## <a name="see-also"></a>Zobacz też
 
-\ [odwołaniaC++ w języku C/Building](c-cpp-building-reference.md)
+[Dokumentacja konstrukcyjna języka C/C++](c-cpp-building-reference.md)\
 [Dokumentacja konsolidatora MSVC](linking.md)
