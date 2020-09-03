@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222761"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427728"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -238,7 +238,7 @@ W poniższej tabeli zestawiono podobieństwa i różnice między `array` `array_
 
 Pamięć współdzielona jest pamięcią, do której można uzyskać dostęp zarówno przy użyciu procesora, jak i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowaniem danych między PROCESORem a akceleratorem. Mimo że pamięć jest udostępniona, dostęp do niej nie jest możliwy jednocześnie przez procesor i akcelerator, a tym samym powoduje niezdefiniowane zachowanie.
 
-`array`obiekty mogą służyć do określania precyzyjnej kontroli nad użyciem pamięci współdzielonej, jeśli skojarzony akcelerator obsługuje tę funkcję. Czy akcelerator obsługuje pamięć współużytkowaną jest określany przez właściwość [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) akceleratora, która zwraca wartość, **`true`** gdy obsługiwana jest pamięć współdzielona. Jeśli obsługiwana jest pamięć współdzielona, domyślne [wyliczenie access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla alokacji pamięci w akceleratorze jest określane przez `default_cpu_access_type` Właściwość. Domyślnie `array` obiekty i są `array_view` wykonywane w taki sam `access_type` sposób, jak skojarzona z nim podstawowa `accelerator` .
+`array` obiekty mogą służyć do określania precyzyjnej kontroli nad użyciem pamięci współdzielonej, jeśli skojarzony akcelerator obsługuje tę funkcję. Czy akcelerator obsługuje pamięć współużytkowaną jest określany przez właściwość [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) akceleratora, która zwraca wartość, **`true`** gdy obsługiwana jest pamięć współdzielona. Jeśli obsługiwana jest pamięć współdzielona, domyślne [wyliczenie access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla alokacji pamięci w akceleratorze jest określane przez `default_cpu_access_type` Właściwość. Domyślnie `array` obiekty i są `array_view` wykonywane w taki sam `access_type` sposób, jak skojarzona z nim podstawowa `accelerator` .
 
 Przez ustawienie właściwości [element członkowski danych Array:: cpu_access_type](reference/array-class.md#cpu_access_type) `array` jawnie można wykonać szczegółową kontrolę nad sposobem używania pamięci współużytkowanej, aby zoptymalizować aplikację pod kątem charakterystyki wydajności sprzętu w oparciu o wzorce dostępu do pamięci w jądrach obliczeniowych. `array_view`Odzwierciedla te same dane, `cpu_access_type` które są `array` skojarzone z; lub, jeśli array_view jest konstruowany bez źródła danych, `access_type` odzwierciedla środowisko, które po raz pierwszy powoduje przydzielenie magazynu. Oznacza to, że jeśli dostęp do niego następuje po raz pierwszy przez hosta (procesor CPU), działa on tak, jakby został utworzony za pośrednictwem źródła danych procesora CPU i ma udział w `access_type` `accelerator_view` przechwyceniu. Jeśli jednak dostęp do niego następuje po raz pierwszy `accelerator_view` , jest on traktowany tak, jakby został utworzony `array` w ramach utworzonego elementu `accelerator_view` i `array` udostępnia `access_type` .
 
@@ -503,9 +503,9 @@ Wizualizator współbieżności obejmuje obsługę analizowania wydajności kodu
 
 Modulo i dzielenie liczb całkowitych bez znaku znacznie lepsza wydajność niż moduł i dzielenie liczb całkowitych ze znakiem. Zalecamy używanie niepodpisanych liczb całkowitych, gdy jest to możliwe.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Odwołanie (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Programowanie równoległe w kodzie natywnym blogu](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[Programowanie równoległe w kodzie natywnym blogu](/archive/blogs/nativeconcurrency/)

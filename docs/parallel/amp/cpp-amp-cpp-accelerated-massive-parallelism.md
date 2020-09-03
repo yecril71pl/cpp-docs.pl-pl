@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-ms.openlocfilehash: 516b69a0371ceb9365e79d5465879711289076c0
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 243c476b6536278eb09b26b24becb65276d6e48a
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404863"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427637"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -29,7 +29,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) przyspiesza wykonywanie kodu C++ d
 |[Przewodnik: mnożenie macierzy](../../parallel/amp/walkthrough-matrix-multiplication.md)|Ilustruje mnożenie macierzy przy użyciu kodu C++ AMP i dzielenia.|
 |[Przewodnik: debugowanie aplikacji C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Wyjaśnia, jak utworzyć i debugować aplikację, która korzysta z obniżenia równoległego do sumowania dużych tablic liczb całkowitych.|
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 [Odwołanie (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
 [tile_static — słowo kluczowe](../../cpp/tile-static-keyword.md)<br/>
@@ -37,6 +37,6 @@ C++ AMP (C++ Accelerated Massive Parallelism) przyspiesza wykonywanie kodu C++ d
 
 ## <a name="other-resources"></a>Inne zasoby
 
-[Programowanie równoległe w kodzie natywnym blogu](https://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
-[C++ AMP przykładowe projekty do pobrania](https://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
+[Programowanie równoległe w kodzie natywnym blogu](/archive/blogs/nativeconcurrency/)<br/>
+[C++ AMP przykładowe projekty do pobrania](/archive/blogs/nativeconcurrency/c-amp-sample-projects-for-download)<br/>
 [Analizowanie kodu C++ AMP za pomocą wizualizatora współbieżności](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
