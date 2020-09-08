@@ -1,6 +1,7 @@
 ---
 title: round, roundf, roundl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API Round, roundf — i Round; która zaokrągli wartość zmiennoprzecinkową do najbliższej liczby całkowitej.
+ms.date: 9/1/2020
 api_name:
 - round
 - roundl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226180"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556648"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -63,16 +64,17 @@ float roundf(
 long double roundl(
    long double x
 );
+#define round(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **okrężne** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Brak powrotu błędu.
+Funkcje **okrężne** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -80,7 +82,9 @@ Funkcje **okrężne** zwracają wartość zmiennoprzecinkową, która reprezentu
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **, które** pobierają i zwracają **`float`** **`long double`** wartości. W programie w języku C funkcja **Round** zawsze przyjmuje i zwraca wartość **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **, które** pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, funkcja **zaokr** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `round()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -89,6 +93,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**Round**, **roundf —**, **Udziec**|\<math.h>|
+|**okrągłe** makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -128,7 +133,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

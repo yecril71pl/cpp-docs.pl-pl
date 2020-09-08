@@ -1,6 +1,7 @@
 ---
 title: tan, tanf, tanl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla funkcji Tan, TANF — i tanl; które oblicza tangens wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215130"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556544"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -54,6 +55,7 @@ Oblicza tangens.
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +79,9 @@ Funkcje **Tan** zwracają tangens *x*. Jeśli wartość *x* jest większa lub r�
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać **przeciążenia zwracające** i zwracające **`float`** lub **`long double`** wartości. W programie C funkcja **Tan** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać **przeciążenia zwracające** i zwracające **`float`** lub **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, funkcja **Tan** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `tan()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -86,6 +90,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**Tan**, **TANF —**, **tanl**|\<math.h>|\<cmath> lub \<math.h>|
+|**Tan ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +118,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

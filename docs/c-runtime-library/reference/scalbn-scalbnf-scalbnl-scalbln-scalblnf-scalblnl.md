@@ -1,6 +1,7 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla scalbn —, scalbnf —, scalbnl, scalbln, scalblnf i scalblnl; który mnoży liczbę zmiennoprzecinkową przez integralną moc `FLT_RADIX` .
+ms.date: 9/1/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a01811e5fcfb28c0557e0232d76649c867748b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231380"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556674"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -80,18 +81,14 @@ long double scalbnl(
    long double x,
    int exp
 );
+
+#define scalbn(X, INT) // Requires C11 or higher
+
 double scalbln(
    double x,
    long exp
 );
-float scalbln(
-   float x,
-   long exp
-);  // C++ only
-long double scalbln(
-   long double x,
-   long exp
-);  // C++ only
+
 float scalblnf(
    float x,
    long exp
@@ -100,14 +97,25 @@ long double scalblnl(
    long double x,
    long exp
 );
+
+#define scalbln(X, LONG) // Requires C11 or higher
+
+float scalbln(
+   float x,
+   long exp
+);  // C++ only
+long double scalbln(
+   long double x,
+   long exp
+);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
-*EXP*<br/>
+*EXP*\
 Wykładnik wartości całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -120,7 +128,9 @@ Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych warto
 
 **FLT_RADIX** jest zdefiniowany \<float.h> jako natywny zmiennoprzecinkowy podstawy; w systemach binarnych ma wartość 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **`float`** lub **`long double`** typu. W programie w języku C **scalbn —** zawsze przyjmuje i **`double`** **`int`** i zwraca **`double`** , a funkcja **scalbln** zawsze przyjmuje i **`double`** **`long`** zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **`float`** lub **`long double`** typu. W programie C, chyba że używasz \<tgmath.h> makra do wywołania tej funkcji, **scalbn —** zawsze przyjmuje i i zwraca i **`double`** **`int`** **`double`** , a **scalbln** zawsze przyjmuje a i **`double`** **`long`** zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `scalbn()` `scalbln` makra lub, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -129,6 +139,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn — () lub scalbln** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -156,7 +167,7 @@ int main( void )
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla hypot —, hypotf —, hypotl, _hypot, _hypotf i _hypotl; który obliczy przeciwprostokątnej.
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919842"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556453"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -82,11 +83,12 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*, *y*<br/>
+*x*, *y*\
 Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -97,9 +99,11 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **hypot —** oblicza długość przeciwprostokątneju prawego trójkąta, uwzględniając długość dwóch boków *x* i *y* (innymi słowy, pierwiastek kwadratowy *x*<sup>2</sup> + *y*<sup>2</sup>).
+Funkcja **hypot —** oblicza długość przeciwprostokątneju prawego trójkąta, uwzględniając długość dwóch boków *x* i *y* (innymi słowy, pierwiastek kwadratowy *x*<sup>2</sup>  +  *y*<sup>2</sup>).
 
 Wersje funkcji, które mają wiodące znaki podkreślenia, są zapewniane pod kątem zgodności z wcześniejszymi standardami. Ich zachowanie jest identyczne z wersjami, które nie mają wiodących podkreśleń. Zalecamy używanie wersji bez wiodących podkreśleń dla nowego kodu.
+
+Jeśli używasz \<tgmath.h> `hypot()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -107,7 +111,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**hypot —**, **hypotf —**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<> Math. h|
+|**hypot —**, **hypotf —**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot —** — makro | \<tgmath.h> |
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

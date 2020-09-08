@@ -1,5 +1,6 @@
 ---
 title: setjmp
+description: Dokumentacja interfejsu API dla setjmp; powoduje to zapisanie bieżącego stanu programu.
 ms.date: 08/14/2018
 api_name:
 - setjmp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: beaf56a03c1bd157257d604bfd0ebefb219d0225
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ea08e5379433e313e08870f735322b7d985aa64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555608"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -52,7 +53,7 @@ Zmienna, w której jest przechowywane środowisko.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0 po zapisaniu środowiska stosu. Jeśli **setjmp** zwraca jako wynik `longjmp` wywołania, zwraca argument *wartości* `longjmp` , lub jeśli argument *wartości* `longjmp` jest 0, **setjmp** zwraca 1. Brak powrotu błędu.
+Zwraca wartość 0 po zapisaniu środowiska stosu. Jeśli **setjmp** zwraca jako wynik `longjmp` wywołania, zwraca argument *wartości* `longjmp` , lub jeśli argument *wartości* `longjmp` jest 0, **setjmp** zwraca 1. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -85,7 +86,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zapoznaj się z przykładem [_fpreset](fpreset.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [longjmp](longjmp.md)

@@ -1,6 +1,7 @@
 ---
 title: log2, log2f, log2l
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla log2 —, log2f — i log2l; który określa LOGARYTM binarny (Base-2) określonej wartości.
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911417"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555361"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -59,11 +60,13 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*y*\
 Wartość określająca logarytm dziesiętny.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -76,7 +79,7 @@ W przeciwnym razie może zwracać jedną z następujących wartości:
 |-----------|------------|
 |*x* < 0|NaN|
 |*x* = ± 0|-NIESKOŃCZONość|
-|*x* = 1|+ 0|
+|*x* = 1|+0|
 |+ NIESKOŃCZONość|+ NIESKOŃCZONość|
 |NaN|NaN|
 |błąd domeny|NaN|
@@ -86,7 +89,7 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli x jest liczbą całkowitą, ta funkcja zasadniczo zwraca indeks (liczony od zera) najbardziej znaczącej 1 bit *x*.
+Jeśli *x* jest liczbą całkowitą, ta funkcja zasadniczo zwraca indeks (liczony od zera) najbardziej znaczącej 1 bit *x*.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -94,7 +97,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**log2 —**, **log2f —**, **log2l**|\<> Math. h|\<cmath>|
+|**log2 —**, **log2f —**, **log2l**|\<math.h>|\<cmath>|
+|**log2 —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _itoa, funkcje _itow
+description: Dokumentacja interfejsu API dla _itoa i _itow; który konwertuje liczbę całkowitą na ciąg.
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843498"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555466"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Konwertuje liczbę całkowitą na ciąg. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_itoa_s, _itow_s funkcje](itoa-s-itow-s.md).
+Konwertuje liczbę całkowitą na ciąg. Bardziej bezpieczne wersje tych funkcji są dostępne, zobacz [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -193,7 +194,7 @@ Długość buforu w jednostkach typu znaku. Ten parametr jest wywnioskowany na p
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do *buforu*. Brak powrotu błędu.
+Każda z tych funkcji zwraca wskaźnik do *buforu*. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -231,7 +232,7 @@ Aby ułatwić tworzenie bezpiecznych buforów dla konwersji, CRT obejmuje niekt�
 
 Aby użyć jednego z tych makr w funkcji konwersji ciągów, zadeklaruj bufor konwersji odpowiedniego typu, a następnie użyj wartości makro dla typu integer i podstawowego jako wymiaru bufor. Ta tabela zawiera listę makr, które są odpowiednie dla każdej funkcji dla wymienionych baz danych:
 
-|Functions|podstawy|Makra|
+|Funkcje|podstawy|Makra|
 |-|-|-|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|

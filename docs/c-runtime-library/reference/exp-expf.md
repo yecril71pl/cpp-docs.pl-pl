@@ -1,6 +1,7 @@
 ---
 title: exp, expf, expl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla usługi EXP, expf — i Expl; obliczenia wykładnicze.
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555894"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,11 +65,12 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa do exponentiate logarytmu naturalnego *o podstawie.*
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -86,7 +88,9 @@ Funkcja **EXP** ma implementację, która używa Streaming SIMD Extensions 2 (SS
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** przyjmują **`float`** argument lub **`long double`** . W programie C funkcja **EXP** zawsze przyjmuje i zwraca **`double`** .
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** przyjmują **`float`** argument lub **`long double`** . W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, funkcja **EXP** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `exp()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -95,6 +99,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|---------------------|---|
 |**EXP**, **expf —**, **Expl**|\<math.h>|\<cmath> lub \<math.h>|
+|**EXP** — makro| \<tgmath.h> || 
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: sin, sinf, sinl
-ms.date: 6/5/2020
+description: Dokumentacja interfejsu API dla Sin, SINF — i sinl; które oblicza sinus wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556195"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -54,6 +55,7 @@ Oblicza sinus wartości zmiennoprzecinkowej.
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +81,9 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia elementu **Sin** , które przyjmują i **`float`** zwracają **`long double`** wartości. W programie C, **Sin** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia elementu **Sin** , które przyjmują i **`float`** zwracają **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **Sin** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `sin()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -88,6 +92,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
 |**Sin**, **SINF —**, **sinl**|\<math.h>|\<cmath> lub \<math.h>|
+|**Sin ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

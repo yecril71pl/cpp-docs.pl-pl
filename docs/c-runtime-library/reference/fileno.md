@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: Dokumentacja interfejsu API dla _fileno; który pobiera deskryptor pliku skojarzony ze strumieniem.
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919478"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554854"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -55,7 +56,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fileno** zwraca deskryptor pliku. Brak powrotu błędu. Wynik jest niezdefiniowany, jeśli *strumień* nie określa otwartego pliku. Jeśli strumień ma **wartość null**, **_fileno** wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
+**_fileno** zwraca deskryptor pliku. Nie ma żadnego powrotu błędu. Wynik jest niezdefiniowany, jeśli *strumień* nie określa otwartego pliku. Jeśli strumień ma **wartość null**, **_fileno** wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
 Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -72,7 +73,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fileno**|\<stdio. h>|
+|**_fileno**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

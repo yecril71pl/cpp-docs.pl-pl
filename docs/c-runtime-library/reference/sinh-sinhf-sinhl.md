@@ -1,6 +1,7 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API służąca do obliczania sinusa hiperbolicznego wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229418"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556180"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -54,16 +55,15 @@ Oblicza sinus hiperboliczny.
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +79,9 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **sinh** , które przyjmują i zwracają **`float`** **`long double`** wartości. W programie C, **sinh** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **sinh** , które przyjmują i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, funkcja **sinh** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `sinh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
 |**sinh**, **sinhf —**, **sinh**|\<math.h>|\<cmath> lub \<math.h>|
+|**sinh ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -120,7 +123,7 @@ sinh( 1.570796 ) = 2.301299
 cosh( 1.570796 ) = 2.509178
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -1,5 +1,6 @@
 ---
 title: clog, clogf, clogl
+description: Dokumentacja interfejsu API dla CLOG, clogf i clogl; który pobiera logarytm naturalny liczby zespolonej, z rozgałęzieniem na ujemną oś rzeczywistą.
 ms.date: 11/04/2016
 api_name:
 - clog
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 255f83a93c5c7a0c724fad143f028c2832be3173
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942920"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555075"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -66,7 +67,7 @@ _Lcomplex clogl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*\
 Podstawa logarytmu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -89,13 +90,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **CLO
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**CLOG**,               **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>

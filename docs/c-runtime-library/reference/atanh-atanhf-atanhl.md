@@ -1,6 +1,7 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla atanh —, atanhf — i atanhl; które oblicza odwrotny tangens hiperboliczny wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232602"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555595"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -51,16 +52,15 @@ Oblicza odwrotny tangens hiperboliczny.
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -74,7 +74,9 @@ Funkcje **ATANH —** zwracają arcus tangens hyberbolic (łuk hiperboliczny) *x
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ATANH —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **ATANH —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ATANH —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ATANH —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `atanh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**ATANH —**, **atanhf —**, **atanhl**|\<math.h>|\<cmath> lub \<math.h>|
+|**ATANH — ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +117,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

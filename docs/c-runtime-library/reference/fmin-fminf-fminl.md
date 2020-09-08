@@ -1,6 +1,7 @@
 ---
 title: fmin, fminf, fminl
-ms.date: 04/05/2018
+description: Dokumentacja interfejsu API dla fmin —, fminf — i fminl; który określa mniejszą liczbę dwóch wartości.
+ms.date: 9/1/2020
 api_name:
 - fmin
 - fminf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216989"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556713"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -71,14 +72,16 @@ long double fminl(
    long double x,
    long double y
 );
+
+#define fmin(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Pierwsza wartość do porównania.
 
-*t*<br/>
+*t*\
 Druga wartość do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -95,17 +98,20 @@ Funkcja nie powoduje wywołania [_matherr](matherr.md) , spowodować żadnych wy
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fmin —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **fmin —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fmin —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **fmin —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `fmin()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**fmin —**, **fminf —**, **fminl**|S\<math.h><br />C++: \<math.h> lub\<cmath>|
+|**fmin —**, **fminf —**, **fminl**|S \<math.h><br />C++: \<math.h> lub \<cmath>|
+|**fmin —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

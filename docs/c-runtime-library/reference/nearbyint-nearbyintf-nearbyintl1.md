@@ -1,6 +1,7 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla nearbyint —, nearbyintf — i nearbyintl; który zaokrągla określoną wartość zmiennoprzecinkową do liczby całkowitej i zwraca tę wartość w formacie zmiennoprzecinkowym.
+ms.date: 9/1/2020
 api_name:
 - nearbyint
 - nearbyintf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9717559518032c6f1f2126c7ded7cb90603bce64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216859"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556388"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -54,16 +55,15 @@ Zaokrągla określoną wartość zmiennoprzecinkową do liczby całkowitej i zwr
 double nearbyint( double x );
 float nearbyintf( float x );
 long double nearbyintl( long double x );
-```
+#define nearbyint( X ) // Requires C11 or higher
 
-```cpp
 float nearbyint( float x ); //C++ only
 long double nearbyint( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,7 +84,9 @@ Podstawowa różnica między tą funkcją i [rukuj](rint-rintf-rintl.md) polega 
 
 Ponieważ maksymalne wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nigdy nie przejdzie przez siebie. Zamiast tego dane wyjściowe mogą przekroczyć wartość zwracaną, w zależności od używanej wersji funkcji.
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **nearbyint —** , które pobierają i zwracają **`float`** **`long double`** parametry lub. W programie C **nearbyint —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **nearbyint —** , które pobierają i zwracają **`float`** **`long double`** parametry lub. W programie C, o ile nie używasz \<tgmath.h> makra do wywołania tej funkcji, **nearbyint —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
+
+Jeśli używasz \<tgmath.h> `nearbyint()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -93,10 +95,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**nearbyint —**, **nearbyintf —**, **nearbyintl**|\<math.h>|\<cmath> lub \<math.h>|
+|**nearbyint —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [Obsługa obliczeń matematycznych i zmiennoprzecinkowych](../floating-point-support.md)<br/>

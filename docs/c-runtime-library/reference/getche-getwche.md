@@ -1,5 +1,6 @@
 ---
 title: _getche, _getwche
+description: Dokumentacja interfejsu API dla _getche i _getwche; który pobiera znak z konsoli z echo.
 ms.date: 4/2/2020
 api_name:
 - _getwche
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 228251a34c3f9829f2ef7c39561af4118649e158
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556075"
 ---
 # <a name="_getche-_getwche"></a>_getche, _getwche
 
@@ -58,7 +59,7 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Brak powrotu błędu.
+Zwraca odczyt znaku. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -78,8 +79,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getche**|\<CONIO. h>|
-|**_getwche**|\<CONIO. h> lub \<WCHAR. h>|
+|**_getche**|\<conio.h>|
+|**_getwche**|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -121,7 +122,7 @@ Type 'Y' when finished typing keys: abcdefyY
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

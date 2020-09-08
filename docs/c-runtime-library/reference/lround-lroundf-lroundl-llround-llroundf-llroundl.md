@@ -1,6 +1,7 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla lround, lroundf, lroundl, llround, llroundf i llroundl; który Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej.
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216898"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555322"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -90,16 +91,17 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **lround** i **llround** zwracają najbliższą **`long`** lub **`long long`** całkowitą liczbę do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Brak powrotu błędu.
+Funkcje **lround** i **llround** zwracają najbliższą **`long`** lub **`long long`** całkowitą liczbę do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -107,7 +109,9 @@ Funkcje **lround** i **llround** zwracają najbliższą **`long`** lub **`long l
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lround** lub **llround** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **lround** i **llround** zawsze przyjmują i zwracają **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lround** lub **llround** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **lround** i **llround** zawsze przyjmują i zwracają **`double`** .
+
+Jeśli używasz \<tgmath.h> `lround()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -116,6 +120,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -155,7 +160,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

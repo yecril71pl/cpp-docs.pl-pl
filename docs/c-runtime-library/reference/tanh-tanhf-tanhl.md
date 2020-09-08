@@ -1,6 +1,7 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla TANH, tanhf — i tanhl; które oblicza tangens hiperboliczny wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - tanh
 - tanhf
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215117"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556583"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -52,6 +53,7 @@ Oblicza tangens hiperboliczny.
 double tanh( double x );
 float tanhf( float x );
 long double tanhl( long double x );
+#define tanh(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,12 +63,12 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja **tanh** zwraca tangens hiperboliczny *x*. Brak powrotu błędu.
+Funkcja **tanh** zwraca tangens hiperboliczny *x*. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|**Matherr** Oprócz|
 |-----------|-------------------|-------------------------|
@@ -74,7 +76,9 @@ Funkcja **tanh** zwraca tangens hiperboliczny *x*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tanh** , które przyjmują i zwracają **`float`** **`long double`** wartości. W programie C, **tanh** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tanh** , które przyjmują i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **tanh** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `tanh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -83,6 +87,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C)|
 |-------------|---------------------|-|
 |**tanh**, **tanhf —**, **tanhl**|\<math.h>|\<cmath> lub \<math.h>|
+|**tanh ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +119,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla fabs —, fabsf — i fabsl; który oblicza wartość bezwzględną wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - fabsf
 - fabs
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a819172fc94224ff4c51c8fc342b142ffbe05ae7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234123"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554841"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -66,16 +67,18 @@ float fabsf(
 long double fabsl(
    long double x
 );
+
+#define fabs(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **fabs —** zwracają wartość bezwzględną argumentu *x*. Brak powrotu błędu.
+Funkcje **fabs —** zwracają wartość bezwzględną argumentu *x*. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +86,9 @@ Funkcje **fabs —** zwracają wartość bezwzględną argumentu *x*. Brak powro
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia elementu **fabs —** , jeśli dołączysz \<cmath> nagłówek. W programie C **fabs —** zawsze przyjmuje i zwraca **`double`** .
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia elementu **fabs —** , jeśli dołączysz \<cmath> nagłówek. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **fabs —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `fabs()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,6 +97,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|-----------------------|---------------------------|
 |**fabs —**, **fabsf —**, **fabsl**|\<math.h>|\<cmath> lub \<math.h>|
+|**fabs —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -99,7 +105,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [ABS](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

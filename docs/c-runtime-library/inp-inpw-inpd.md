@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825832"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556479"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>INP, _inp, inpw, _inpw, _inpd
 
-Dane wejściowe, z portu,`inp`bajt (, `_inp`), słowo (`inpw`, `_inpw`) lub podwójne słowo (`_inpd`).
+Dane wejściowe, z portu, bajt ( `inp` , `_inp` ), słowo ( `inpw` , `_inpw` ) lub podwójne słowo ( `_inpd` ).
 
 > [!IMPORTANT]
 > Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. \
@@ -72,23 +72,23 @@ Numer portu we/wy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają bajt, wyraz lub podwójne odczytywanie wyrazów `port`. Brak powrotu błędu.
+Funkcje zwracają bajt, wyraz lub podwójne odczytywanie wyrazów `port` . Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_inp`, `_inpw`, I `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
+`_inp`, `_inpw` , I `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
 
 Ponieważ te funkcje odczytują się bezpośrednio z portu we/wy, nie można ich używać w kodzie użytkownika.
 
-Nazwy `inp` i `inpw` są starsze, przestarzałe nazwy dla funkcji `_inp` i. `_inpw` Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+`inp`Nazwy i `inpw` są starsze, przestarzałe nazwy dla `_inp` `_inpw` funkcji i. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_inp`|\<CONIO. h>|
-|`_inpw`|\<CONIO. h>|
-|`_inpd`|\<CONIO. h>|
+|`_inp`|\<conio.h>|
+|`_inpw`|\<conio.h>|
+|`_inpd`|\<conio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
@@ -96,7 +96,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-l
 
 Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)\
 [Outp, outpw, _outp, _outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)

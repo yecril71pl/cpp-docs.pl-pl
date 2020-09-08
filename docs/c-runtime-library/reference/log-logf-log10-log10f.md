@@ -1,6 +1,7 @@
 ---
 title: log, logf —, logl, log10 —, log10f —, log10l
-ms.date: 6/5/2020
+description: Dokumentacja interfejsu API dla dzienników, logf —, logl, log10 —, log10f — i log10l; który oblicza logarytmy.
+ms.date: 9/1/2020
 api_name:
 - log10f
 - logf
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f308281705170308ec83e4a5efd9c7825ba47591
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218601"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556285"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf —, logl, log10 —, log10f —, log10l
 
@@ -62,24 +63,24 @@ Oblicza logarytmy.
 ## <a name="syntax"></a>Składnia
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość, której LOGARYTM ma zostać znaleziony.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,7 +97,9 @@ Funkcja **log** Zwraca logarytm naturalny (o podstawie *e*) z *x* , jeśli to si
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **dzienników** i **log10 —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie w języku C **log** i **log10 —** zawsze przyjmują i zwracają **`double`** .
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **dzienników** i **log10 —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **log** i **log10 —** zawsze przyjmują i zwracają **`double`** .
+
+Jeśli używasz \<tgmath.h> `log()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -105,6 +108,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**log**, **logf —**, **logl**, **log10 —**, **log10f —**, **log10l**|\<math.h>|
+|**Rejestruj** makro | \<tgmath.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -163,7 +167,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

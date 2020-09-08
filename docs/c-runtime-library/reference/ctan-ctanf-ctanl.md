@@ -1,5 +1,6 @@
 ---
 title: ctan, ctanf, ctanl
+description: Dokumentacja interfejsu API dla CTAN, ctanf i ctanl; który pobiera tangens liczby zespolonej.
 ms.date: 11/04/2016
 api_name:
 - ctan
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74fa33a6bf6b99e8606094aff3845fdfd79d48a2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938442"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555907"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -66,7 +67,7 @@ _Lcomplex ctanl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*\
 Liczba złożona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -76,7 +77,7 @@ Tangens *z.*
 |Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|brak|_DOMAIN|
-|± ∞ (**Tan**, **TANF —** )|NIEPRAWIDŁOWY|_DOMAIN|
+|± ∞ (**Tan**, **TANF —**)|Nieprawidłowy|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,13 +85,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **CTA
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**CTAN**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**CTAN**,  **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: Dokumentacja interfejsu API dla _umask; Ustawia domyślną maskę uprawnień plików.
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913846"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554932"
 ---
 # <a name="_umask"></a>_umask
 
-Ustawia domyślną maskę dostępu do pliku. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_umask_s](umask-s.md).
+Ustawia domyślną maskę dostępu do pliku. Aby uzyskać bardziej bezpieczną wersję tej funkcji, zobacz [_umask_s](umask-s.md) . "
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,7 +56,7 @@ Domyślne ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_umask** zwraca poprzednią wartość *PMODE*. Brak powrotu błędu.
+**_umask** zwraca poprzednią wartość *PMODE*. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,7 +80,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_umask**|\<IO. h>, \<sys/stat. h>, \<sys/Types. h>|
+|**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

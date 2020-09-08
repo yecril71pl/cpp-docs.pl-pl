@@ -1,6 +1,7 @@
 ---
 title: cproj, cprojf, cprojl
-ms.date: 11/04/2016
+description: Dokumentacja interfejsu API dla cproj, cprojf i cprojl; który pobiera rzutowanie liczby zespolonej w sferze Reimann.
+ms.date: 9/2/2020
 api_name:
 - cproj
 - cprojf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fcc3c0a42c8c6392130ad58ed12c4985e7ad4907
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938954"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555946"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -62,11 +63,12 @@ _Fcomplex cprojf(
 _Lcomplex cprojl(
    _Lcomplex z
 );
+#define cproj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*\
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -75,17 +77,20 @@ Rzutowanie z *z na Reimann* sfery.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cproj** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cproj** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cproj** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **cproj** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
+
+Jeśli używasz \<tgmath.h> `cproj()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj** — makro | \<tgmath.h> ||
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

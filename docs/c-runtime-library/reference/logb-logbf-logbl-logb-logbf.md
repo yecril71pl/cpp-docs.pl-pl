@@ -1,6 +1,7 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla logb —, logbf —, logbl, _logb i _logbf; wyodrębnianie wartości wykładnika argumentu zmiennoprzecinkowego.
+ms.date: 9/1/2020
 api_name:
 - logb
 - _logb
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218575"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556217"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -82,11 +83,12 @@ double _logb(
 float _logbf(
    float x
 );
+#define logb(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -97,7 +99,9 @@ Wartość zmiennoprzecinkowa.
 
 Funkcje **logb —** wyodrębniają wartość wykładniczą argumentu *x*zmiennoprzecinkowego, tak jakby *x* były reprezentowane z nieskończonym zakresem. Jeśli argument *x* jest nieznormalizowany, jest traktowany tak, jakby był znormalizowany.
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **logb —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **logb —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **logb —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **logb —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `logb()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -112,6 +116,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb —**, **logbf —**, **logbl**, **_logbf**|\<math.h>|
+|**logb —** — makro | \<tgmath.h> |
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla cosh —, coshf — i coshl; Obliczanie cosinusa hiperbolicznego wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - cosh
 - coshf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ea4a5b77850e196c29519ac49b589a0c2b6c9a7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213609"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555530"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -50,16 +51,15 @@ Oblicza cosinus hiperboliczny.
 double cosh( double x );
 float coshf( float x );
 long double coshl( long double x );
-```
+#define cosh(X) // Requires C11 or higher
 
-```cpp
 float cosh( float x );  // C++ only
 long double cosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -75,7 +75,9 @@ Domyślnie, jeśli wynik jest za duży w wywołaniu **cosh —**, **coshf —** 
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cosh —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **cosh —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cosh —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **cosh —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `cosh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -84,6 +86,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**coshf —**, **COSL**, **coshl**|\<math.h>|\<cmath> lub \<math.h>|
+|**coshf — ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -91,7 +94,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład w [SINH, sinhf —, sinh](sinh-sinhf-sinhl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

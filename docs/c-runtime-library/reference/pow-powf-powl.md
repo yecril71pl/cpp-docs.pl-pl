@@ -1,6 +1,7 @@
 ---
 title: pow, powf, powl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla pow, powf — i POWL; który obliczy wzrost do potęgi.
+ms.date: 08/31/2020
 api_name:
 - powl
 - pow
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232446"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555764"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -56,9 +57,8 @@ Oblicza wartość *x* podniesioną do potęgi *y*.
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-```
+define pow(X, Y) // Requires C11 or higher 
 
-```cpp
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
 float pow( float x, int y );  // C++ only
@@ -68,10 +68,10 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Opiera.
 
-*t*<br/>
+*t*\
 Zapis.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -90,7 +90,9 @@ Zwraca wartość *x*<sup>*y*</sup>. Żaden komunikat o błędzie nie jest drukow
 
 **pow** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Informacje i ograniczenia dotyczące korzystania z implementacji SSE2 można znaleźć w temacie [_set_SSE2_enable](set-sse2-enable.md).
 
-Ponieważ C++ pozwala na Przeciążenie, można wywołać dowolne z różnych przeciążeń **pow**. W programie C, **pow** zawsze przyjmuje dwie **`double`** wartości i zwraca **`double`** wartość.
+Ponieważ C++ pozwala na Przeciążenie, można wywołać dowolne z różnych przeciążeń **pow**. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **pow** zawsze przyjmuje dwie **`double`** wartości i zwraca **`double`** wartość.
+
+Jeśli używasz \<tgmath.h> `pow()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 `pow(int, int)`Przeciążenie nie jest już dostępne. W przypadku użycia tego przeciążenia kompilator może emitować [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Aby uniknąć tego problemu, należy rzutować pierwszy parametr na **`double`** , **`float`** , lub **`long double`** .
 
@@ -101,6 +103,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
 |**pow**, **powf —**, **POWL**|\<math.h>|\<math.h> lub \<cmath>|
+|**pow** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -125,7 +128,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

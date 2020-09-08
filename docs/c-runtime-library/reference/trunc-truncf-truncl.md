@@ -1,6 +1,7 @@
 ---
 title: trunc, truncf, truncl
-ms.date: 04/05/2018
+description: Dokumentacja interfejsu API dla TRUNC —, truncf —, truncl; która określa najbliższą liczbę całkowitą, która jest mniejsza lub równa określonej wartości zmiennoprzecinkowej.
+ms.date: 9/1/2020
 api_name:
 - trunc
 - truncf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1f2fde95bb944aa461bb95a9ad30fac204552b9
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232394"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556635"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -48,18 +49,16 @@ Określa najbliższą liczbę całkowitą, która jest mniejsza lub równa okre�
 
 ```C
 double trunc( double x );
-float trunc( float x ); //C++ only
 long double truncl( long double x );
-```
+#define trunc(X) // Requires C11 or higher
 
-```cpp
 long double trunc( long double x ); //C++ only
 float trunc( float x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość do obcięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -78,7 +77,9 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **TRUNC —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **TRUNC —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **TRUNC —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **TRUNC —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `trunc()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Ponieważ największe wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nie zostanie przepełniony. Jednak może dojść do przepełnienia funkcji przez zwrócenie wartości do typu Integer.
 
@@ -89,10 +90,11 @@ Możesz również zaokrąglić w dół, niejawnie konwertując od zmiennoprzecin
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**TRUNC —**, **truncf —**, **truncl**|\<math.h>|\<cmath>|
+|**TRUNC —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

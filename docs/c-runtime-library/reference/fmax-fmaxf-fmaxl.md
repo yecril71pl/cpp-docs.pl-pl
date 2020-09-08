@@ -1,6 +1,7 @@
 ---
 title: fmax, fmaxf, fmaxl
-ms.date: 04/05/2018
+description: Dokumentacja interfejsu API dla Fmax —, fmaxf — i fmaxl; określające więcej dwóch wartości liczbowych.
+ms.date: 9/1/2020
 api_name:
 - fmax
 - fmaxf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4f38db64b30598e7cfb4eb4d0f57dccf257dabc5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957117"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556687"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
@@ -71,14 +72,16 @@ long double fmaxl(
    long double x,
    long double y
 );
+
+#define fmax(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Pierwsza wartość do porównania.
 
-*y*<br/>
+*t*\
 Druga wartość do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,27 +90,30 @@ Jeśli to się powiedzie, zwraca większą liczbę *x* lub *y*. Zwracana wartoś
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|przesłać|
+|Problem|Przesłać|
 |-----------|------------|
-|*x* = NaN|*y*|
+|*x* = NaN|*t*|
 |*y* = NaN|*x*|
 |*x* i *y* = NaN|NaN|
 
-Ta funkcja nie używa błędów określonych w [_matherr](matherr.md).
+Ta funkcja nie używa błędów określonych w  [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia Fmax —, które pobierają i zwracają zmiennoprzecinkowe i długie podwójne typy. W programie C Fmax — zawsze przyjmuje i zwraca wartość Double.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia Fmax —, które pobierają i zwracają `float` `long double` typy. W programie C, o ile nie jest używane \<tgmath.h> makro do wywołania tej funkcji, `fmax` zawsze przyjmuje i zwraca podwójny.
+
+Jeśli używasz \<tgmath.h> `fmax()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**Fmax —** , **fmaxf —** , **fmaxl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**Fmax —**, **fmaxf —**, **fmaxl**|\<math.h>|\<cmath> lub \<math.h>|
+|**Fmax —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fmin, fminf, fminl](fmin-fminf-fminl.md)<br/>

@@ -1,5 +1,6 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
+description: Dokumentacja interfejsu API dla _rotl, _rotl64, _rotr i _rotr64; co powoduje obrócenie bitów w lewo (_rotl) lub w prawo (_rotr).
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949151"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556596"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Powoduje obrócenie bitów w lewo ( **_rotl**) lub prawo ( **_rotr**).
+Powoduje obrócenie bitów w lewo (**_rotl**) lub w prawo (**_rotr**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,19 +79,19 @@ unsigned __int64 _rotr64(
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
+*wartościami*<br/>
 Wartość, która ma zostać obrócona.
 
-*shift*<br/>
+*nocn*<br/>
 Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obrócona wartość. Brak powrotu błędu.
+Obrócona wartość. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_rotl** i **_rotr** obracają *wartość* unsigned przez bity *SHIFT* . **_rotl** obraca wartość w lewo. **_rotr** obraca wartość w prawo. Obie funkcje zawijają bity, obracają się z jednego końca *wartości* do drugiego.
+Funkcje **_rotl** i **_rotr** obróćą *wartość* bez znaku przez bity *SHIFT* . **_rotl** obraca wartość w lewo. **_rotr** obraca wartość w prawo. Obie funkcje zawijają bity, obracają się z jednego końca *wartości* do drugiego.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -141,7 +142,7 @@ int main( void )
 101010101010101 rotated right four times is 1010101010101010
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [_lrotl, _lrotr](lrotl-lrotr.md)<br/>

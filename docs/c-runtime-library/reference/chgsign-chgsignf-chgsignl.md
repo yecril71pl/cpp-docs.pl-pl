@@ -1,5 +1,6 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
+description: Dokumentacja interfejsu API dla _chgsign, _chgsignf i _chgsignl; powoduje odwrócenie znaku argumentu zmiennoprzecinkowego.
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943124"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555205"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -64,7 +65,7 @@ Wartość zmiennoprzecinkowa do zmiany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **_chgsign** zwracają wartość, która jest równa argumentowi zmiennoprzecinkowemu *x*, ale z odwróconym znakiem. Brak powrotu błędu.
+Funkcje **_chgsign** zwracają wartość, która jest równa argumentowi zmiennoprzecinkowemu *x*, ale z odwróconym znakiem. Nie ma żadnego powrotu błędu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,8 +76,8 @@ Funkcje **_chgsign** zwracają wartość, która jest równa argumentowi zmienno
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)<br/>

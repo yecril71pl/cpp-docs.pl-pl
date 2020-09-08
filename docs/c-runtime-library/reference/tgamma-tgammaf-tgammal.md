@@ -1,6 +1,7 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla tgamma —, tgammaf — i tgammal; który określa funkcję gamma określonej wartości.
+ms.date: 9/1/2020
 api_name:
 - tgamma
 - tgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49020ca0697e920dccf188df4ad024820966571
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555179"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -55,14 +56,6 @@ double tgamma(
    double x
 );
 
-float tgamma(
-   float x
-); //C++ only
-
-long double tgamma(
-   long double x
-); //C++ only
-
 float tgammaf(
    float x
 );
@@ -70,11 +63,21 @@ float tgammaf(
 long double tgammal(
    long double x
 );
+
+#define tgamma(X) // Requires C11 or higher
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość, dla której ma zostać znaleziony współczynnik gamma.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -99,7 +102,9 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tgamma —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **tgamma —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tgamma —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **tgamma —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `tgamma()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Jeśli x jest liczbą naturalną, ta funkcja Zwraca silnię (x-1).
 
@@ -109,11 +114,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**tgamma —**, **tgammaf —**, **tgammal**|\<math.h>|\<cmath>|
+|**tgamma —**, **tgammaf —**,  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

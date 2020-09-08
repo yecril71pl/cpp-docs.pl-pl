@@ -1,6 +1,7 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 6/5/2020
+description: Odwołanie do interfejsu API dla calcuating pułap wartości z ceil — ().
+ms.date: 9/1/2020
 api_name:
 - ceilf
 - ceil
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221955"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555246"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -64,16 +65,17 @@ float ceilf(
 long double ceill(
    long double x
 );
+#define ceil(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ceil —** zwracają wartość zmiennoprzecinkową, która reprezentuje najmniejszą liczbę całkowitą, która jest większa lub równa *x*. Brak powrotu błędu.
+Funkcje **ceil —** zwracają wartość zmiennoprzecinkową, która reprezentuje najmniejszą liczbę całkowitą, która jest większa lub równa *x*. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +85,9 @@ Funkcje **ceil —** zwracają wartość zmiennoprzecinkową, która reprezentuj
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ceil —** przyjmujących **`float`** lub **`long double`** . W programie C **ceil —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ceil —** przyjmujących **`float`** lub **`long double`** . W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ceil —** zawsze przyjmuje i zwraca **`double`** .
+
+f używasz makra <tgmath. h> `ceil()` , typ argumentu określa, która wersja funkcji została wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**ceil —**, **ceilf —**, **ceill**|\<math.h>|
+|**ceil —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -99,7 +104,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [podłogi](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

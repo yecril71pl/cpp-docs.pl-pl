@@ -1,6 +1,7 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla lrint (), lrintf (), lrintl (), llrint (), llrintf () i llrintl (); który zaokrągla określoną wartość zmiennoprzecinkową do najbliższej wartości całkowitej przy użyciu bieżącego trybu zaokrąglania i kierunku.
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216911"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555023"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,12 +106,14 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-wartość do zaokrąglenia.
+*y*\
+Wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -122,7 +125,9 @@ Jeśli to się powiedzie, zwraca zaokrągloną wartość całkowitą z *x*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lrint** i **llrint** , które przyjmują **`float`** i **`long double`** typu. W programie C **lrint** i **llrint** zawsze przyjmują **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lrint** i **llrint** , które przyjmują **`float`** i **`long double`** typu. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **lrint** i **llrint** zawsze przyjmują **`double`** .
+
+Jeśli używasz \<tgmath.h> `llrint()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Jeśli *x* nie reprezentuje równoważnej wartości całkowitej, te funkcje zgłaszają **FE_INEXACT**.
 
@@ -135,9 +140,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**lrint** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)

@@ -1,5 +1,6 @@
 ---
 title: _getch_nolock, _getwch_nolock
+description: Dokumentacja interfejsu API dla _getch_nolock i _getwch_nolock; który pobiera znak z konsoli bez echa i bez blokowania wątku.
 ms.date: 4/2/2020
 api_name:
 - _getwch_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 36a50f215a9250b23d4dc25db2e1f1c764a085ce
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920347"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555036"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
@@ -63,7 +64,7 @@ wint_t _getwch_nolock( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Brak powrotu błędu.
+Zwraca odczyt znaku. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,8 +82,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getch_nolock**|\<CONIO. h>|
-|**_getwch_nolock**|\<CONIO. h> lub \<WCHAR. h>|
+|**_getch_nolock**|\<conio.h>|
+|**_getwch_nolock**|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -124,7 +125,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

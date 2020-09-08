@@ -1,6 +1,7 @@
 ---
 title: acos, acosf, acosl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla `acos` , `acosf` , i `acosl` ;, która oblicza arcus cosinus wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220772"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555101"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -53,16 +54,15 @@ Oblicza arcus cosinus.
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość z przedziału od-1 do 1, dla którego ma zostać obliczony arcus cosinus (arcus cosinus).
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +79,9 @@ Domyślnie, jeśli *x* jest mniejsza niż-1 lub większa niż 1, **Acos** zwraca
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Acos** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **Acos** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Acos** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **Acos** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `acos()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
 |**Acos**, **acosf —**, **acosl**|\<math.h>|\<errno.h>|
+|**Acos ()** — makro | \<tgmath.h> ||
 
 ## <a name="example"></a>Przykład
 
@@ -139,7 +142,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

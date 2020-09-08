@@ -1,5 +1,6 @@
 ---
 title: Biblioteka CRT — Funkcje
+description: Te różne pliki. lib, które składają się z bibliotek środowiska uruchomieniowego języka Microsoft C, a także ich skojarzone opcje kompilatora i dyrektywy preprocesora.
 ms.date: 08/20/2018
 helpviewer_keywords:
 - MSVCR71.dll
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 20261b542f64f565421cc34dfa0bfbe01e8fa53d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438555"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555569"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -29,32 +30,32 @@ W tym temacie omówiono różne pliki. lib, które składają się z bibliotek �
 
 ## <a name="c-run-time-libraries-crt"></a>Biblioteki C-Run-Time (CRT)
 
-Biblioteka uruchomieniowa C (CRT) jest częścią C++ standardowej biblioteki, która obejmuje standardową bibliotekę ISO C99. Biblioteki wizualne C++ , które implementują środowisko CRT, obsługują Programowanie kodu natywnego oraz kod natywny i zarządzany. Wszystkie wersje CRT obsługują programowanie wielowątkowe. Większość bibliotek obsługuje zarówno statyczne konsolidacje, aby połączyć bibliotekę bezpośrednio w kodzie, jak i dynamiczne łączenie, aby kod używał wspólnych plików DLL.
+Biblioteka uruchomieniowa C (CRT) jest częścią standardowej biblioteki języka C++, która obejmuje standardową bibliotekę ISO C99. Biblioteki Visual C++, które implementują środowisko CRT obsługują Programowanie kodu natywnego, oraz kod natywny i zarządzany. Wszystkie wersje CRT obsługują programowanie wielowątkowe. Większość bibliotek obsługuje zarówno statyczne konsolidacje, aby połączyć bibliotekę bezpośrednio w kodzie, jak i dynamiczne łączenie, aby kod używał wspólnych plików DLL.
 
-Począwszy od programu Visual Studio 2015, CRT został przestawiony do nowych plików binarnych. Uniwersalne środowisko CRT (UCRT) zawiera funkcje i Globals eksportowane przez standardową bibliotekę CRT C99. UCRT jest teraz składnikiem systemu Windows i jest dostarczany jako część systemu Windows 10. Biblioteki statycznej, biblioteka DLL importu i pliki nagłówkowe dla UCRT są teraz dostępne w zestawie SDK systemu Windows 10. Podczas instalacji programu C++Visual Studio Instalator instaluje podzestaw zestawu Windows 10 SDK wymaganego do korzystania z UCRT. UCRT można użyć w dowolnej wersji systemu Windows obsługiwanej przez program Visual Studio 2015 i jego nowsze wersje. Można ją rozpowszechniać za pomocą VCRedist dla obsługiwanych wersji systemu Windows innych niż Windows 10. Aby uzyskać więcej informacji, zobacz [Redystrybuowanie plików wizualnych C++ ](../windows/redistributing-visual-cpp-files.md).
+Począwszy od programu Visual Studio 2015, CRT został przestawiony do nowych plików binarnych. Uniwersalne środowisko CRT (UCRT) zawiera funkcje i Globals eksportowane przez standardową bibliotekę CRT C99. UCRT jest teraz składnikiem systemu Windows i jest dostarczany jako część systemu Windows 10. Biblioteki statycznej, biblioteka DLL importu i pliki nagłówkowe dla UCRT są teraz dostępne w zestawie SDK systemu Windows 10. Podczas instalowania Visual C++ Instalator programu Visual Studio instaluje podzestaw zestawu Windows 10 SDK wymaganego do korzystania z UCRT. UCRT można użyć w dowolnej wersji systemu Windows obsługiwanej przez program Visual Studio 2015 i jego nowsze wersje. Można ją rozpowszechniać za pomocą VCRedist dla obsługiwanych wersji systemu Windows innych niż Windows 10. Aby uzyskać więcej informacji, zobacz [Redystrybuowanie plików Visual C++](../windows/redistributing-visual-cpp-files.md).
 
 Poniższa tabela zawiera listę bibliotek, które implementują UCRT.
 
 |Biblioteka|Skojarzona Biblioteka DLL|Właściwości|Opcja|Dyrektywy preprocesora|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libucrt.lib|None|Statycznie łączy UCRT z kodem.|**/MT**|_MT|
-|libucrtd.lib|None|Wersja debugowania UCRT do konsolidacji statycznej. Nie redystrybucyjny.|**/MTd**|_DEBUG, _MT|
-|ucrt.lib|ucrtbase.dll|Biblioteka importowania biblioteki DLL dla UCRT.|**/MD**|_MT, _DLL|
-|ucrtd.lib|ucrtbased.dll|Biblioteka importowania bibliotek DLL dla wersji debugowania UCRT. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
+|libucrt. lib|Brak|Statycznie łączy UCRT z kodem.|**/MT**|_MT|
+|libucrtd. lib|Brak|Wersja debugowania UCRT do konsolidacji statycznej. Nie redystrybucyjny.|**/MTd**|_DEBUG, _MT|
+|UCRT. lib|ucrtbase.dll|Biblioteka importowania biblioteki DLL dla UCRT.|**/MD**|_MT, _DLL|
+|ucrtd. lib|ucrtbased.dll|Biblioteka importowania bibliotek DLL dla wersji debugowania UCRT. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
 
-Biblioteka vcruntime zawiera kod specyficzny dla implementacji języka Visual C++ CRT, taki jak obsługa wyjątków i obsługa debugowania, kontrole środowiska uruchomieniowego i informacje o typie, szczegóły implementacji i niektóre funkcje biblioteki rozszerzonej. Ta biblioteka jest specyficzna dla używanej wersji kompilatora.
+Biblioteka vcruntime Visual C++ zawiera kod specyficzny dla implementacji CRT, taki jak obsługa wyjątków i obsługa debugowania, kontrole środowiska uruchomieniowego i informacje o typie, szczegóły implementacji i niektóre funkcje biblioteki rozszerzonej. Ta biblioteka jest specyficzna dla używanej wersji kompilatora.
 
 Ta tabela zawiera listę bibliotek implementujących bibliotekę vcruntime.
 
 |Biblioteka|Skojarzona Biblioteka DLL|Właściwości|Opcja|Dyrektywy preprocesora|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|None|Statycznie połączone z kodem.|**/MT**|_MT|
-|libvcruntimed.lib|None|Wersja do debugowania dla konsolidacji statycznej. Nie redystrybucyjny.|**/MTd**|_MT, _DEBUG|
-|vcruntime.lib|vcruntime\<wersja >. dll|Biblioteka importowania biblioteki DLL dla vcruntime.|**/MD**|_MT, _DLL|
-|vcruntimed.lib|vcruntime\<wersja > d. dll|Biblioteka importowania bibliotek DLL dla elementu Debug vcruntime. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
+|libvcruntime. lib|Brak|Statycznie połączone z kodem.|**/MT**|_MT|
+|libvcruntimed. lib|Brak|Wersja do debugowania dla konsolidacji statycznej. Nie redystrybucyjny.|**/MTd**|_MT, _DEBUG|
+|vcruntime. lib|vcruntime \<version> . dll|Biblioteka importowania biblioteki DLL dla vcruntime.|**/MD**|_MT, _DLL|
+|vcruntimed. lib|vcruntime \<version>d.dll|Biblioteka importowania bibliotek DLL dla elementu Debug vcruntime. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
 
 > [!NOTE]
-> Po wystąpieniu refaktoryzacji UCRT funkcje środowisko uruchomieniowe współbieżności zostały przeniesione do concrt140. dll, które zostały dodane do C++ pakietu redystrybucyjnego. Ta biblioteka DLL jest wymagana C++ w przypadku kontenerów równoległych i algorytmów, takich jak `concurrency::parallel_for`. Ponadto biblioteka C++ standardowa wymaga, aby ta biblioteka DLL w systemie Windows XP obsługiwała elementy pierwotne synchronizacji, ponieważ system Windows XP nie zawiera zmiennych warunku.
+> Po wystąpieniu refaktoryzacji UCRT funkcje środowisko uruchomieniowe współbieżności zostały przeniesione do concrt140.dll, który został dodany do pakietu redystrybucyjnego C++. Ta biblioteka DLL jest wymagana dla kontenerów równoległych C++ i algorytmów, takich jak `concurrency::parallel_for` . Ponadto standardowa biblioteka języka C++ wymaga, aby ta biblioteka DLL w systemie Windows XP obsługiwała elementy pierwotne synchronizacji, ponieważ system Windows XP nie zawiera zmiennych warunku.
 
 Kod inicjujący CRT znajduje się w jednej z kilku bibliotek, w zależności od tego, czy Biblioteka CRT jest statycznie czy dynamicznie połączona, czy natywny, zarządzany czy mieszany kod. Ten kod obsługuje uruchamianie CRT, wewnętrzne inicjowanie danych dla wątku i zakończenie. Jest on specyficzny dla używanej wersji kompilatora. Ta biblioteka jest zawsze statycznie łączona, nawet w przypadku korzystania z dynamicznie połączonych UCRT.
 
@@ -62,45 +63,45 @@ Ta tabela zawiera listę bibliotek, które implementują inicjalizację i zakoń
 
 |Biblioteka|Właściwości|Opcja|Dyrektywy preprocesora|
 |-------------|---------------------|------------|-----------------------------|
-|libcmt.lib|Statycznie łączy natywne uruchomienie CRT z kodem.|**/MT**|_MT|
-|libcmtd.lib|Statycznie łączy wersję debugową natywnego uruchamiania CRT. Nie redystrybucyjny.|**/MTd**|_DEBUG, _MT|
-|msvcrt.lib|Biblioteka statyczna dla natywnego uruchamiania CRT do użytku z bibliotekami DLL UCRT i vcruntime.|**/MD**|_MT, _DLL|
-|msvcrtd.lib|Biblioteka statyczna dla wersji debugowania natywnego uruchamiania CRT do użytku z bibliotekami DLL UCRT i vcruntime. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
-|msvcmrt.lib|Biblioteka statyczna natywnego i zarządzanego rozruchowego CRT do użycia z biblioteką DLL UCRT i vcruntime.|**/CLR**||
-|msvcmrtd.lib|Biblioteka statyczna dla wersji debugowania natywnego i zarządzanego rozruchowego CRT do użycia z biblioteką DLL UCRT i vcruntime. Nie redystrybucyjny.|**/CLR**||
-|msvcurt.lib|**Przestarzałe** Biblioteka statyczna dla czystej zarządzanej CRT.|**/CLR: Pure**||
-|msvcurtd.lib|**Przestarzałe** Biblioteka statyczna dla wersji debugowania czystego zarządzanego CRT. Nie redystrybucyjny.|**/CLR: Pure**||
+|libcmt. lib|Statycznie łączy natywne uruchomienie CRT z kodem.|**/MT**|_MT|
+|libcmtd. lib|Statycznie łączy wersję debugową natywnego uruchamiania CRT. Nie redystrybucyjny.|**/MTd**|_DEBUG, _MT|
+|msvcrt. lib|Biblioteka statyczna dla natywnego uruchamiania CRT do użytku z bibliotekami DLL UCRT i vcruntime.|**/MD**|_MT, _DLL|
+|msvcrtd. lib|Biblioteka statyczna dla wersji debugowania natywnego uruchamiania CRT do użytku z bibliotekami DLL UCRT i vcruntime. Nie redystrybucyjny.|**/MDd**|_DEBUG, _MT, _DLL|
+|msvcmrt. lib|Biblioteka statyczna natywnego i zarządzanego rozruchowego CRT do użycia z biblioteką DLL UCRT i vcruntime.|**/CLR**||
+|MSVCMRTD. lib|Biblioteka statyczna dla wersji debugowania natywnego i zarządzanego rozruchowego CRT do użycia z biblioteką DLL UCRT i vcruntime. Nie redystrybucyjny.|**/CLR**||
+|msvcurt. lib|**Przestarzałe** Biblioteka statyczna dla czystej zarządzanej CRT.|**/CLR: Pure**||
+|msvcurtd. lib|**Przestarzałe** Biblioteka statyczna dla wersji debugowania czystego zarządzanego CRT. Nie redystrybucyjny.|**/CLR: Pure**||
 
 Jeśli połączysz program z wiersza polecenia bez opcji kompilatora, która określa bibliotekę wykonawczą C, konsolidator będzie używać statycznie połączonych bibliotek CRT: libcmt. lib, libvcruntime. lib i libucrt. lib.
 
-Użycie statycznie połączonej klasy CRT oznacza, że wszelkie informacje o stanie zapisane przez bibliotekę środowiska uruchomieniowego języka C będą lokalne dla tego wystąpienia CRT. Na przykład, jeśli używasz [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) przy użyciu statycznie połączonej CRT, pozycja analizatora `strtok` jest niezwiązana ze stanem `strtok` używanym w kodzie w tym samym procesie (ale w innej bibliotece DLL lub exe), który jest połączony z innym wystąpieniem statycznej CRT. W przeciwieństwie do dynamicznego połączonego elementu CRT stan dla całego kodu w ramach procesu, który jest dynamicznie połączony z CRT. Ten problem nie dotyczy, jeśli są używane nowe, bezpieczniejsze wersje tych funkcji; na przykład `strtok_s` nie ma tego problemu.
+Użycie statycznie połączonej klasy CRT oznacza, że wszelkie informacje o stanie zapisane przez bibliotekę środowiska uruchomieniowego języka C będą lokalne dla tego wystąpienia CRT. Na przykład jeśli używasz [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) przy użyciu statycznie połączonej CRT, pozycja `strtok` parsera nie jest powiązana ze `strtok` stanem używanym w kodzie w tym samym procesie (ale w innej bibliotece DLL lub exe), który jest połączony z innym wystąpieniem statycznej CRT. W przeciwieństwie do dynamicznego połączonego elementu CRT stan dla całego kodu w ramach procesu, który jest dynamicznie połączony z CRT. Ten problem nie dotyczy, jeśli są używane nowe, bezpieczniejsze wersje tych funkcji; na przykład nie `strtok_s` ma tego problemu.
 
 Ponieważ biblioteka DLL utworzona przez połączenie ze statyczną CRT ma swój własny stan CRT, nie zaleca się łączenia statycznie z CRT w bibliotece DLL, chyba że konsekwencje tego działania są odpowiednie i zrozumiałe. Na przykład jeśli wywołasz [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) w pliku wykonywalnym, który ładuje bibliotekę DLL połączonej ze statyczną metodą CRT, wszelkie wyjątki sprzętowe wygenerowane przez kod w bibliotece DLL nie zostaną przechwycone przez translator, ale zostaną przechwycone wyjątki sprzętowe generowane przez kod w głównym pliku wykonywalnym.
 
-Jeśli używasz przełącznika kompilatora **/CLR** , kod zostanie połączony z biblioteką statyczną msvcmrt. lib. Biblioteka statyczna zapewnia serwer proxy między kodem zarządzanym i natywną CRT. Nie można używać statycznie połączonych opcji CRT ( **/MT** lub **/MTD** ) z **/CLR**. Zamiast tego użyj bibliotek z dynamicznie połączonymi ( **/MD** lub **/MDD**). Czyste zarządzane biblioteki CRT są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017.
+Jeśli używasz przełącznika kompilatora **/CLR** , kod zostanie połączony z biblioteką statyczną msvcmrt. lib. Biblioteka statyczna zapewnia serwer proxy między kodem zarządzanym i natywną CRT. Nie można używać statycznie połączonych opcji CRT ( **/MT** lub **/MTD** ) z **/CLR**. Zamiast tego użyj bibliotek z dynamicznie połączonymi (**/MD** lub **/MDD**). Czyste zarządzane biblioteki CRT są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017.
 
 Aby uzyskać więcej informacji na temat korzystania z CRT z **/CLR**, zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md).
 
 Aby skompilować wersję do debugowania aplikacji, należy zdefiniować flagę [_DEBUG](../c-runtime-library/debug.md) , a aplikacja musi być połączona z wersją z jednej z tych bibliotek. Aby uzyskać więcej informacji o korzystaniu z wersji debugowania plików biblioteki, zobacz [techniki debugowania CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-Ta wersja CRT nie jest w pełni zgodna ze standardem C99. W szczególności nie są obsługiwane makra \<tgmath. h > i CX_LIMITED_RANGE/FP_CONTRACT pragma. Niektóre elementy, takie jak znaczenie specyfikatorów parametrów w standardowych funkcjach we/wy, domyślnie używają starszych interpretacji. Można użyć opcji zgodności kompilatora/Zc i określić Opcje konsolidatora do kontrolowania niektórych aspektów zgodności biblioteki,
+Ta wersja CRT nie jest w pełni zgodna ze standardem C99. W szczególności \<tgmath.h> nie są obsługiwane makra nagłówka i CX_LIMITED_RANGE/FP_CONTRACT pragma. Niektóre elementy, takie jak znaczenie specyfikatorów parametrów w standardowych funkcjach we/wy, domyślnie używają starszych interpretacji. Można użyć opcji zgodności kompilatora/Zc i określić Opcje konsolidatora do kontrolowania niektórych aspektów zgodności biblioteki.
 
 ## <a name="c-standard-library"></a>Standardowa biblioteka C++
 
 |Standardowa biblioteka C++|Właściwości|Opcja|Dyrektywy preprocesora|
 |----------------------------|---------------------|------------|-----------------------------|
-|libcpmt.lib|Wielowątkowe, statyczne łącze|**/MT**|_MT|
-|msvcprt.lib|Wielowątkowy, dynamiczny link (Biblioteka importowana dla MSVCP*wersja*. dll)|**/MD**|_MT, _DLL|
-|libcpmtd.lib|Wielowątkowe, statyczne łącze|**/MTd**|_DEBUG, _MT|
-|msvcprtd.lib|Wielowątkowy, dynamiczny link (Biblioteka importowana dla MSVCP*wersja*D. dll)|**/MDd**|_DEBUG, _MT, _DLL|
+|libcpmt. lib|Wielowątkowe, statyczne łącze|**/MT**|_MT|
+|msvcprt. lib|Wielowątkowy, dynamiczny link (Biblioteka importowana dla MSVCP*wersja*. dll)|**/MD**|_MT, _DLL|
+|libcpmtd. lib|Wielowątkowe, statyczne łącze|**/MTd**|_DEBUG, _MT|
+|msvcprtd. lib|Wielowątkowy, dynamiczny link (Biblioteka importowana dla MSVCP*wersja*D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|
 
-Podczas kompilowania wersji wydania projektu, jedna z podstawowych bibliotek środowiska uruchomieniowego C (libcmt. lib, msvcmrt. lib, msvcrt. lib) jest domyślnie łączona, w zależności od wybranej opcji kompilatora (wielowątkowy, DLL,/CLR). Jeśli dołączysz jeden z [ C++ plików nagłówkowych biblioteki standardowej](../standard-library/cpp-standard-library-header-files.md) w kodzie, biblioteka C++ standardowa zostanie automatycznie połączona przez wizualizację C++ w czasie kompilacji. Na przykład:
+Podczas kompilowania wersji wydania projektu, jedna z podstawowych bibliotek środowiska uruchomieniowego C (libcmt. lib, msvcmrt. lib, msvcrt. lib) jest domyślnie łączona, w zależności od wybranej opcji kompilatora (wielowątkowy, DLL,/CLR). Jeśli dołączysz jeden z [plików nagłówkowych standardowej biblioteki języka c++](../standard-library/cpp-standard-library-header-files.md) w kodzie, standardowa biblioteka języka c++ zostanie automatycznie połączona przez Visual C++ w czasie kompilacji. Na przykład:
 
 ```cpp
 #include <ios>
 ```
 
-W przypadku zgodności binarnej można określić więcej niż jeden plik DLL za pomocą pojedynczej biblioteki importu. Aktualizacje wersji mogą wprowadzać *biblioteki mozaikowe*, osobne biblioteki DLL, które wprowadzają nowe funkcje biblioteki. Na przykład program Visual Studio 2017 w wersji 15,6 wprowadził msvcp140_1. dll w celu obsługi dodatkowych funkcji biblioteki standardowej bez przerywania ABI obsługiwanego przez msvcp140. dll. Biblioteka importu msvcprt. lib dołączona do zestawu narzędzi dla programu Visual Studio 2017 w wersji 15,6 obsługuje obie biblioteki DLL, a VCRedist dla tej wersji instaluje obie biblioteki DLL. Po wysłaniu Biblioteka z kropką ma stały ABI i nigdy nie będzie miała zależności od nowszej biblioteki kropek.
+W przypadku zgodności binarnej można określić więcej niż jeden plik DLL za pomocą pojedynczej biblioteki importu. Aktualizacje wersji mogą wprowadzać *biblioteki mozaikowe*, osobne biblioteki DLL, które wprowadzają nowe funkcje biblioteki. Na przykład program Visual Studio 2017 w wersji 15,6 wprowadził msvcp140_1.dll do obsługi dodatkowych funkcji biblioteki standardowej bez przerywania ABI obsługiwanego przez msvcp140.dll. Biblioteka importu msvcprt. lib dołączona do zestawu narzędzi dla programu Visual Studio 2017 w wersji 15,6 obsługuje obie biblioteki DLL, a VCRedist dla tej wersji instaluje obie biblioteki DLL. Po wysłaniu Biblioteka z kropką ma stały ABI i nigdy nie będzie miała zależności od nowszej biblioteki kropek.
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Jakie problemy występują, jeśli aplikacja używa więcej niż jednej wersji CRT?
 

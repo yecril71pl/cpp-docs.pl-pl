@@ -1,6 +1,7 @@
 ---
 title: frexp —, frexpf —, frexpl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla frexp —, frexpf — i frexpl; który pobiera mantysy i wykładnik liczby zmiennoprzecinkowej.
+ms.date: 9/1/2020
 api_name:
 - frexp
 - _o_frexp
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23de4160abcfab2518125bfa0fd35a389901674
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220707"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555751"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp —, frexpf —, frexpl
 
@@ -58,6 +59,10 @@ long double frexpl(
    long double x,
    int * expptr
 );
+#define frexpl(X, INT_PTR) // Requires C11 or higher
+```
+
+```cpp
 float frexp(
    float x,
    int * expptr
@@ -70,10 +75,10 @@ long double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
-*expptr*<br/>
+*expptr*\
 Wskaźnik do przechowywanego wykładniku liczb całkowitych.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,7 +89,9 @@ Wskaźnik do przechowywanego wykładniku liczb całkowitych.
 
 Funkcja **frexp —** dzieli wartość zmiennoprzecinkową (*x*) na mantysy (*m*) i wykładnik (*n*), tak że wartość bezwzględna *m* jest większa lub równa 0,5 i mniejsza niż 1,0 i *x*  =  *m* * 2<sup>*n*</sup>. Wykładnik całkowity *n* jest przechowywany w lokalizacji wskazywanej przez *expptr*.
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze przyjmuje **`double`** wskaźnik i **`int`** zwraca **`double`** .
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **frexp —**. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **frexp —** zawsze przyjmuje **`double`** wskaźnik i **`int`** zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `frexp()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -93,6 +100,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**frexp —**, **frexpf —**, **frexpl**|\<math.h>|
+|**frexp —** — makro | \<tgmath.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -121,7 +129,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

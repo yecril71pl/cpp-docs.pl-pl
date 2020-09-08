@@ -1,6 +1,7 @@
 ---
 title: ilogb, ilogbf, ilogbl2
-ms.date: 04/05/2018
+description: Dokumentacja interfejsu API dla ilogb —, ilogbf — i ilogbl2; który pobiera liczbę całkowitą, która reprezentuje nieobciążone wykładnię bazową (2) określonej wartości.
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232524"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556375"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -66,11 +67,13 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Określona wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -88,7 +91,9 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ilogb —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **ilogb —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ilogb —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ilogb —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `ilogb()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Wywołanie tej funkcji jest podobne do wywołania równoważnej funkcji **logb —** , a następnie rzutowania wartości zwracanej na **`int`** .
 
@@ -97,10 +102,11 @@ Wywołanie tej funkcji jest podobne do wywołania równoważnej funkcji **logb �
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**ilogb —**, **ilogbf —**, **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>

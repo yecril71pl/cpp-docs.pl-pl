@@ -1,6 +1,7 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla pozostałej, remainderf — i reszty; które oblicza resztę ilorazu dwóch wartości zmiennoprzecinkowych, zaokrągloną do najbliższej wartości całkowitej.
+ms.date: 9/1/2020
 api_name:
 - remainderl
 - remainder
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556012"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -51,19 +52,18 @@ Oblicza resztę ilorazu dwóch wartości zmiennoprzecinkowych zaokrągloną do n
 double remainder( double x, double y );
 float remainderf( float x, float y );
 long double remainderl( long double x, long double y );
-```
+#define remainder(X, Y) // Requires C11 or higher
 
-```cpp
 float remainder( float x, float y ); /* C++ only */
 long double remainder( long double x, long double y ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Licznik.
 
-*t*<br/>
+*t*\
 Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -74,7 +74,9 @@ Pozostała liczba zmiennoprzecinkowa *x*  /  *y*. Jeśli wartość *y* to 0,0, *
 
 **Pozostałe** funkcje obliczają liczbę zmiennoprzecinkową *r* z *x*  /  *y* , tak że *x*  =  *n* \* *y*  +  *r*, gdzie *n*jest liczbą całkowitą najbliższą wartości do *x*  /  *y* i *n*, nawet wtedy, gdy &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Gdy *r* = 0, *r* ma ten sam znak jako *x*.
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **reszty** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C **reszta** zawsze przyjmuje dwa **`double`** argumenty i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **reszty** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **reszta** zawsze przyjmuje dwa **`double`** argumenty i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `remainder()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
 |**reszta**, **remainderf —**, **reszta**|\<math.h>|\<cmath> lub \<math.h>|
+|**Pozostałe** makro | \<tgmath.h> ||
 
 Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -108,10 +111,10 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
-[imaxdiv](imaxdiv.md)<br/>
-[fmod, fmodf](fmod-fmodf.md)<br/>
-[remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)\
+[ldiv, lldiv](ldiv-lldiv.md)\
+[imaxdiv](imaxdiv.md)\
+[FMOD —, fmodf —](fmod-fmodf.md)\
+[remquo, remquof, remquol](remquo-remquof-remquol.md)

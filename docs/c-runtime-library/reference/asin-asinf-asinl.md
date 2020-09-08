@@ -1,6 +1,7 @@
 ---
 title: asin, asinf, asinl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla ASIN, asinf — i asinl; Oblicza arcus sinus wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189444"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556661"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -51,16 +52,15 @@ Oblicza arcus sinus.
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość, której sinus ma zostać obliczony.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +77,9 @@ Domyślnie, jeśli *x* jest mniejsza niż-1 lub większa niż 1, **ASIN** zwraca
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ASIN** z **`float`** i **`long double`** wartościami. W programie C **ASIN** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ASIN** z **`float`** i **`long double`** wartościami. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ASIN** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `asin()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -86,12 +88,13 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
 |**ASIN**, **asinf —**, **asinl**|\<math.h>|\<cmath> lub \<math.h>|
+|**ASIN ()** — makro | \<tgmath.h> ||
 
 ## <a name="example"></a>Przykład
 
 Aby uzyskać więcej informacji, zobacz [acos, acosf —, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

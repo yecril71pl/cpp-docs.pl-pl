@@ -1,6 +1,7 @@
 ---
 title: cimag, cimagf, cimagl
-ms.date: 11/04/2016
+description: Dokumentacja interfejsu API dla cimag, cimagf i cimagl; który pobiera część urojoną liczby zespolonej.
+ms.date: 9/2/2020
 api_name:
 - cimag
 - cimagf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 41631a161a47e247b12a39e312a3f40084c8f22f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232550"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555843"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -50,16 +51,15 @@ Pobiera część urojoną liczby zespolonej.
 double cimag( _Dcomplex z );
 float cimagf( _Fcomplex z );
 long double cimagl( _Lcomplex z );
-```
+#define cimag(X) // Requires C11 or higher
 
-```cpp
-float cimag( _Fcomplex z );  // C++
-long double cimag( _Lcomplex z );  // C++
+float cimag( _Fcomplex z );  // C++ only
+long double cimag( _Lcomplex z );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*porządku*<br/>
+*porządku*\
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -68,17 +68,20 @@ Liczba złożona.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cimag** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają **`float`** lub **`long double`** wartości. W programie C **cimag** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cimag** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają **`float`** lub **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **cimag** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
+
+Jeśli używasz \<tgmath.h> `cimag()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**cimag** — makro | \<tgmath.h> ||
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

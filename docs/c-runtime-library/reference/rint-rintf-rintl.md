@@ -1,6 +1,7 @@
 ---
 title: rint, rintf, rintl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla rukuj, rintf i rintl; która zaokrągli wartość zmiennoprzecinkową do najbliższej liczby całkowitej w formacie zmiennoprzecinkowym.
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216768"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555348"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -51,21 +52,20 @@ Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej w fo
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **rukuj** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Wartości w połowie są zaokrąglane zgodnie z bieżącym ustawieniem trybu zaokrąglania zmiennoprzecinkowego, tak samo jak w przypadku funkcji **nearbyint —** . W przeciwieństwie do funkcji **nearbyint —** , funkcje **rukuj** mogą podnieść **FE_INEXACT** wyjątek zmiennoprzecinkowy, jeśli wynik różni się od argumentu. Brak powrotu błędu.
+Funkcje **rukuj** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Wartości w połowie są zaokrąglane zgodnie z bieżącym ustawieniem trybu zaokrąglania zmiennoprzecinkowego, tak samo jak w przypadku funkcji **nearbyint —** . W przeciwieństwie do funkcji **nearbyint —** , funkcje **rukuj** mogą podnieść **FE_INEXACT** wyjątek zmiennoprzecinkowy, jeśli wynik różni się od argumentu. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
@@ -74,7 +74,9 @@ Funkcje **rukuj** zwracają wartość zmiennoprzecinkową, która reprezentuje n
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **rukuj** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **rukuj** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **rukuj** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **rukuj** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `rint()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -83,6 +85,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**rukuj**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rukuj** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -122,7 +125,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

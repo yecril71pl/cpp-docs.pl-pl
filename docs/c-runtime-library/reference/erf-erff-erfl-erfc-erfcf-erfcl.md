@@ -1,6 +1,7 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla funkcji ERF, erff —, erfl, ERFC —, erfcf — i erfcl; który oblicza funkcję Error lub uzupełniającą funkcję błędu wartości.
+ms.date: 9/1/2020
 api_name:
 - erff
 - erfl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef83275515c66341798395bbfc2bb5b088e6cfb7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234188"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555647"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -90,11 +91,13 @@ float erfcf(
 long double erfcl(
    long double x
 );
+#define erf(X) // Requires C11 or higher
+#define erfc(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -107,9 +110,11 @@ Funkcje **ERF** obliczają funkcję błędu Gaussa *x*, która jest definiowana 
 
 ![Funkcja błędu x](media/crt_erf_formula.PNG "Funkcja błędu x")
 
-Funkcja błędu uzupełniającego Gaussa jest definiowana jako 1-ERF (x). Funkcje **ERF** zwracają wartość z zakresu od-1,0 do 1,0. Brak powrotu błędu. Funkcje **ERFC —** zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **ERFC —**, zmienna **errno** jest ustawiona na **ERANGE**.
+Funkcja błędu uzupełniającego Gaussa jest definiowana jako 1-ERF (x). Funkcje **ERF** zwracają wartość z zakresu od-1,0 do 1,0. Nie ma żadnego powrotu błędu. Funkcje **ERFC —** zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **ERFC —**, zmienna **errno** jest ustawiona na **ERANGE**.
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia wartości **ERF** i **ERFC —** , które przyjmują i **`float`** zwracają **`long double`** . W programie C, funkcja **ERF** i **ERFC —** zawsze przyjmują i zwracają **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia wartości **ERF** i **ERFC —** , które przyjmują i **`float`** zwracają **`long double`** . W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, funkcja **ERF** i **ERFC —** zawsze przyjmują i zwracają **`double`** .
+
+Jeśli używasz \<tgmath.h> `erf()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -118,9 +123,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**ERF**, **erff —**, **erfl**, **ERFC —**, **erfcf —**, **erfcl**|\<math.h>|
+|**ERF** — makro | \<tgmath.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

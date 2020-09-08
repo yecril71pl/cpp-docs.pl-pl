@@ -1,6 +1,7 @@
 ---
 title: FMOD —, fmodf —, fmodl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla FMOD —, fmodf — i fmodl; który oblicza resztę zmiennoprzecinkową.
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216976"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556089"
 ---
 # <a name="fmod-fmodf-fmodl"></a>FMOD —, fmodf —, fmodl
 
@@ -68,11 +69,13 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*, *y*<br/>
+*x*, *y*\
 Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -83,7 +86,9 @@ Wartości zmiennoprzecinkowe.
 
 Funkcja **FMOD —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x*  /  *y* , taką jak *x*  =  *i* \* *y*  +  *f*, *gdzie i* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **FMOD —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **FMOD —** zawsze przyjmuje dwa **`double`** argumenty i zwraca **`double`** .
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **FMOD —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **FMOD —** zawsze przyjmuje dwa **`double`** argumenty i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `fmod()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,6 +97,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**FMOD —**, **fmodf —**, **fmodl**|\<math.h>|
+|**FMOD —** — makro | \<tgmath.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +123,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

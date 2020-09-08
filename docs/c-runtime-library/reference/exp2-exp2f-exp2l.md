@@ -1,6 +1,7 @@
 ---
 title: exp2, exp2f, exp2l
-ms.date: 4/2/2020
+description: Odwołania do interfejsu API dla exp2 — (), exp2f — () i exp2l (), które oblicza wartość 2 podniesioną do określonej wartości.
+ms.date: 9/1/2020
 api_name:
 - exp2
 - exp2f
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 518525a38ef575583fde3b7732561f2fa553dd18
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234162"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556622"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -70,11 +71,12 @@ float exp2f(
 long double exp2l(
    long double x
 );
+#define exp2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość wykładnika.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -94,7 +96,9 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **exp2 —** zawsze przyjmuje i zwraca **`double`** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **exp2 —** zawsze przyjmuje i zwraca **`double`** , chyba że używasz makra w <tgmath. h>.
+
+Jeśli używasz \<tgmath.h> `exp2()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -102,11 +106,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf —**, **Expl**|\<math.h>|\<cmath>|
+|**exp2 —**, **expf2**, **expl2**|\<math.h>|\<cmath>|
+|**exp2 —** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
