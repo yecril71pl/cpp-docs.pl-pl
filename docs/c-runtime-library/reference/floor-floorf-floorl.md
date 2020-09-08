@@ -1,6 +1,7 @@
 ---
 title: floor, floorf, floorl
-ms.date: 6/5/2020
+description: Dokumentacja interfejsu API dla podłogi, floorf — i podłogi; który oblicza piętro wartości.
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218688"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556739"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -64,16 +65,17 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*\
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuje największą liczbę całkowitą, która jest mniejsza lub równa *x*. Brak powrotu błędu.
+Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuje największą liczbę całkowitą, która jest mniejsza lub równa *x*. Nie ma żadnego powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +85,9 @@ Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuj
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** pobierają i zwracają **`float`** **`long double`** wartości. W programie C **podłoga** zawsze przyjmuje i zwraca **`double`** .
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** pobierają i zwracają **`float`** **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **podłoga** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `floor()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**piętro**, **floorf —y**, **piętro**|\<math.h>|
+|**Floor** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -130,7 +135,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

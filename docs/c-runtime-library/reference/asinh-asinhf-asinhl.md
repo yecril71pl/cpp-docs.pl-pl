@@ -1,6 +1,7 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 4/2/2020
+description: Dokumentacja interfejsu API dla asinh —, asinhf — i asinhl; które oblicza odwrotny sinus hiperboliczny wartości zmiennoprzecinkowej.
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232654"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556791"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -51,9 +52,8 @@ Oblicza odwrotny sinus hiperboliczny.
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
@@ -73,7 +73,10 @@ Funkcje **ASINH —** zwracają odwrotność hyberbolic sinus (łuk hiperboliczn
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C **ASINH —** zawsze przyjmuje i zwraca **`double`** .
+Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ASINH —** zawsze przyjmuje i zwraca **`double`** .
+
+Jeśli używasz \<tgmath.h> `asinh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
+
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -81,7 +84,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|--------------|------------------|
-|**ASINH —**, **asinhf —**, **asinhl**|\<math.h>|\<cmath>lub \< Math. h<|
+|**ASINH —**, **asinhf —**, **asinhl**|\<math.h>|\<cmath> lub \<math.h>|
+|**ASINH — ()** — makro | \<tgmath.h> ||
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +117,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

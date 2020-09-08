@@ -1,5 +1,6 @@
 ---
 title: abs, labs, llabs, _abs64
+description: Dokumentacja interfejsu API dla funkcji ABS, Labs, llabs i _abs64; który oblicza wartość bezwzględną wartości.
 ms.date: 04/05/2018
 api_name:
 - abs
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4527950e4f5577b9285d12309742accb64b9a24a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221994"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556752"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -69,12 +70,12 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*<br/>
+*Azotan*\
 Wartość numeryczna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ABS**, **Labs**, **llabs** i **_abs64** zwracają wartość bezwzględną parametru *n*. Brak powrotu błędu.
+Funkcje **ABS**, **Labs**, **llabs**i **_abs64** zwracają wartość bezwzględną parametru *n*. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -86,7 +87,7 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia metod
 
 |Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
 |-------------|-----------------------|---------------------------|
-|**ABS**, **Labs**, **llabs**|\<math.h> lub \<stdlib.h>|\<cmath>, \<cstdlib> \<stdlib.h> lub\<math.h>|
+|**ABS**, **Labs**, **llabs**|\<math.h> lub \<stdlib.h>|\<cmath>, \<cstdlib> \<stdlib.h> lub \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> lub \<stdlib.h>|
 
 Aby użyć przeciążonych wersji elementów **ABS** w języku C++, należy dołączyć \<cmath> nagłówek.
@@ -148,7 +149,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
