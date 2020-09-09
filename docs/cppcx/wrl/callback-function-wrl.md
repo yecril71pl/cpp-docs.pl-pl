@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214139"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609097"
 ---
 # <a name="callback-function-wrl"></a>Funkcja wywołania zwrotnego (WRL)
 
@@ -24,7 +24,7 @@ template<
    typename TCallback
 >
 ComPtr<TDelegateInterface> Callback(
-   TCallbackcallback
+   TCallback callback
 );
 template<
    typename TDelegateInterface,
@@ -230,7 +230,7 @@ Parametr szablonu, który określa typ dziewiątego argumentu metody wywołania 
 *wywołania zwrotnego*<br/>
 Obiekt, który reprezentuje obiekt wywołania zwrotnego i jego funkcję członkowską.
 
-*object*<br/>
+*Stream*<br/>
 Obiekt, którego funkcja członkowska jest wywoływana w przypadku wystąpienia zdarzenia.
 
 *Method*<br/>
@@ -242,7 +242,7 @@ Obiekt, którego funkcja członkowska jest określoną metodą wywołania zwrotn
 
 ## <a name="remarks"></a>Uwagi
 
-Podstawą obiektu delegata musi być `IUnknown`, a nie `IInspectable`.
+Podstawą obiektu delegata musi być `IUnknown` , nie `IInspectable` .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -252,4 +252,4 @@ Podstawą obiektu delegata musi być `IUnknown`, a nie `IInspectable`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

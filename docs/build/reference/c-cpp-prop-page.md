@@ -1,15 +1,15 @@
 ---
 title: Właściwości projektu C/C++ (Visual Studio)
 description: Przewodnik referencyjny dotyczący właściwości strony właściwości projektu Microsoft C/C++ programu Visual Studio.
-ms.date: 07/08/2020
+ms.date: 09/03/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a96400e27b48b734d4002d9cef13fd52f9ccc7a5
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229743"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609176"
 ---
 # <a name="cc-property-pages"></a>Strony właściwości C/C++
 
@@ -42,7 +42,7 @@ Dodaje kod pomocniczy umożliwiający włączenie debugowania [tylko mój kod](/
 
 ### <a name="common-language-runtime-support"></a>Obsługa środowiska uruchomieniowego CLR
 
-Użyj usługi środowiska uruchomieniowego platformy .NET.  Ten przełącznik jest niezgodny z innymi przełącznikami; [`/clr`](clr-common-language-runtime-compilation.md)Aby uzyskać szczegółowe informacje, zobacz dokumentację rodziny przełączników.
+Użyj usługi środowiska uruchomieniowego platformy .NET.  Ten przełącznik jest niezgodny z innymi przełącznikami; [`/clr`](clr-common-language-runtime-compilation.md) Aby uzyskać szczegółowe informacje, zobacz dokumentację rodziny przełączników.
 
 #### <a name="choices"></a>Choices
 
@@ -78,7 +78,7 @@ Traktuje ostrzeżenia kompilatora jako błędy. W przypadku nowego projektu najl
 
 ### <a name="warning-version"></a>Wersja ostrzegawcza
 
-Ukryj ostrzeżenia wprowadzone po określonej wersji kompilatora. Zestawy [`/Wv:xx`\[`.yy`\[`.zzzzz`\]\]](wx-treat-linker-warnings-as-errors.md) .
+Ukryj ostrzeżenia wprowadzone po określonej wersji kompilatora. Zestawy [`/Wv:xx[.yy[.zzzzz]]`](wx-treat-linker-warnings-as-errors.md) .
 
 ### <a name="diagnostics-format"></a>Format diagnostyki
 
@@ -102,15 +102,15 @@ Kompilacja wieloprocesorowa.
 
 ### <a name="optimization"></a>Optymalizacja
 
-Wybierz opcję optymalizacji kodu; Wybierz pozycję niestandardowa, aby użyć określonych opcji optymalizacji. Ustawia [/od](od-disable-debug.md), [/O1,/O2](o-options-optimize-code.md).
+Wybierz opcję optymalizacji kodu; Wybierz pozycję niestandardowa, aby użyć określonych opcji optymalizacji. Ustawia [`/Od`](od-disable-debug.md) , [ `/O1` , `/O2` ](o-options-optimize-code.md).
 
 #### <a name="choices"></a>Choices
 
 - Optymalizacja **niestandardowa** .
 - **Wyłączone** — wyłączenie optymalizacji.
-- **Maksymalna Optymalizacja (Preferuj rozmiar)** — odpowiednik**`/Os /Oy /Ob2 /Gs /GF /Gy`**
-- **Maksymalna Optymalizacja (Preferuj szybkość)** — odpowiednik**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
-- **Optymalizacje (Preferuj szybkość)** — równoważne**`/Oi /Ot /Oy /Ob2`**
+- **Maksymalna Optymalizacja (Preferuj rozmiar)** — odpowiednik **`/Os /Oy /Ob2 /Gs /GF /Gy`**
+- **Maksymalna Optymalizacja (Preferuj szybkość)** — odpowiednik **`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
+- **Optymalizacje (Preferuj szybkość)** — równoważne **`/Oi /Ot /Oy /Ob2`**
 
 ### <a name="inline-function-expansion"></a>Rozwinięcie funkcji wbudowanej
 
@@ -133,8 +133,8 @@ Czy preferujesz rozmiar kodu czy szybkość kodu; Musi być włączona opcja "Op
 
 #### <a name="choices"></a>Choices
 
-- **Preferuj mały** kod — Preferuj mały kod. Minimalizuje rozmiar exe i bibliotek DLL, instruując kompilator, aby preferuje rozmiar przekraczający szybkość.
-- **Preferuj szybki** kod szybkiego kodu. Maksymalizuje szybkość exe i bibliotek DLL, instruując kompilator, aby preferuje szybkość. (Jest to wartość domyślna).
+- **Preferuj mały kod** — minimalizuje rozmiar exe i bibliotek DLL, nakazuje kompilatorowi preferowanie rozmiaru.
+- **Preferuj szybki kod** — maksymalizuje szybkość exe i bibliotek DLL, instruując kompilator, aby preferuje szybkość. (Jest to wartość domyślna).
 - **Nie ma** żadnej optymalizacji rozmiaru i szybkości.
 
 ### <a name="omit-frame-pointers"></a>Pomiń wskaźniki ramki
@@ -147,7 +147,7 @@ Włącza optymalizację przestrzeni pamięci podczas korzystania z włókien i l
 
 ### <a name="whole-program-optimization"></a>Optymalizacja całego programu
 
-Umożliwia optymalizacje między modułami przez opóźnione generowanie kodu w celu łączenia czasu. Wymaga opcji konsolidatora "Generowanie kodu w czasie konsolidacji". Zestawy [`/GL`](gl-whole-program-optimization.md) .
+Umożliwia optymalizacje między modułami przez opóźnione generowanie kodu w celu łączenia czasu. Wymaga **generowania kodu w czasie konsolidacji**opcji konsolidatora. Zestawy [`/GL`](gl-whole-program-optimization.md) .
 
 ## <a name="cc-preprocessor-properties"></a>Właściwości preprocesora języka C/C++
 
@@ -177,7 +177,7 @@ Przetwarzanie wstępne bez dyrektyw #line.
 
 ### <a name="keep-comments"></a>Zachowaj Komentarze
 
-Pomija pasek komentarzy z kodu źródłowego; wymaga ustawienia jednej z opcji przetwarzania wstępnego. Zestawy [`/C`](c-preserve-comments-during-preprocessing.md) .
+Pomija pasek komentarzy z kodu źródłowego; wymaga ustawienia co najmniej jednej z opcji **przetwarzania wstępnego** . Zestawy [`/C`](c-preserve-comments-during-preprocessing.md) .
 
 ## <a name="cc-code-generation-properties"></a>Właściwości generowania kodu C/C++
 
@@ -212,7 +212,7 @@ Włącz podstawowe testy błędów środowiska uruchomieniowego, niezgodne z typ
 
 - **Ramki stosu** — włącza sprawdzanie błędów czasu wykonywania ramki stosu.
 - **Niezainicjowane zmienne** — umożliwia zgłaszanie, kiedy zmienna jest używana bez zainicjowania.
-- **Oba (/RTC1, equiv. to/RTCsu)** — odpowiednik wartości/RTCsu.
+- **Oba (/RTC1, equiv. to/RTCsu)** — odpowiednik **`/RTCsu`** .
 - **Domyślne** — domyślne testy środowiska uruchomieniowego.
 
 ### <a name="runtime-library"></a>Biblioteka środowiska uruchomieniowego
@@ -223,8 +223,8 @@ Określ bibliotekę środowiska uruchomieniowego do konsolidacji. Ustawia [ `/MT
 
 - **Wielowątkowy** — powoduje, że aplikacja korzysta z wielowątkowejej, statycznej wersji biblioteki wykonawczej.
 - **Debugowanie wielowątkowe** — definiuje _DEBUG i _MT. Ta opcja powoduje także, że kompilator umieszcza nazwę biblioteki *libcmtd. lib* w pliku, *`.obj`* dzięki czemu konsolidator będzie używać *libcmtd. lib* do rozpoznawania symboli zewnętrznych.
-- **Wielowątkowa Biblioteka DLL** — powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej określonej przez wielowątkowej i biblioteki DLL. Definiuje _MT i _DLL i powoduje, że kompilator umieszcza nazwę biblioteki *msvcrt. lib* w *`.obj`* pliku.
-- **Wielowątkowa Biblioteka DLL debugowania** — definiuje _DEBUG, _MT i _DLL i powoduje, że aplikacja korzysta z biblioteki wykonawczej wielowątkowej-i z biblioteką DLL. Powoduje także, że kompilator umieszcza nazwę biblioteki *msvcrtd. lib* w *`.obj`* pliku.
+- **Wielowątkowa Biblioteka DLL** — powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej określonej przez wielowątkowej i biblioteki DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki *msvcrt. lib* w *`.obj`* pliku.
+- **Wielowątkowa Biblioteka DLL debugowania** — definiuje `_DEBUG` , `_MT` i i powoduje, że `_DLL` aplikacja korzysta z biblioteki wykonawczej wielowątkowej-i z biblioteką DLL. Powoduje także, że kompilator umieszcza nazwę biblioteki *msvcrtd. lib* w *`.obj`* pliku.
 
 ### <a name="struct-member-alignment"></a>Wyrównanie elementu członkowskiego struktury
 
@@ -259,7 +259,7 @@ Kontrola zabezpieczeń funkcji Guard pomaga wykrywać próby wysłania do niedoz
 
 ### <a name="enable-function-level-linking"></a>Włącz łączenie na poziomie funkcji
 
-Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych funkcji (COMDAT). Wymagane do edycji i kontynuowania pracy. Ustawia [/Gy](gy-enable-function-level-linking.md).
+Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych funkcji (COMDAT). Wymagane do edycji i kontynuowania pracy. Zestawy [`/Gy`](gy-enable-function-level-linking.md) .
 
 ### <a name="enable-parallel-code-generation"></a>Włącz równoległe generowanie kodu
 
@@ -267,15 +267,15 @@ Umożliwia kompilatorowi generowanie równoległego kodu dla pętli zidentyfikow
 
 ### <a name="enable-enhanced-instruction-set"></a>Włącz rozszerzony zestaw instrukcji
 
-Umożliwia korzystanie z instrukcji znalezionych na procesorach, które obsługują ulepszone zestawy instrukcji. Na przykład rozszerzenia SSE, SSE2, AVX i AVX2 na IA-32. I rozszerzenia AVX i AVX2 do wersji x64. Obecnie **`/arch:SSE`** i **`/arch:SSE2`** są dostępne tylko podczas kompilowania dla architektury x86. Jeśli żadna opcja nie zostanie określona, kompilator będzie używać instrukcji znalezionych na procesorach, które obsługują SSE2. Korzystanie z ulepszonych instrukcji można wyłączyć za pomocą polecenia **`/arch:IA32`** . Aby uzyskać więcej informacji, [`/arch (x86)`](arch-x86.md) Zobacz [`/arch (x64)`](arch-x64.md) i [`/arch (ARM)`](arch-arm.md) .
+Umożliwia korzystanie z instrukcji znalezionych na procesorach, które obsługują ulepszone zestawy instrukcji. Na przykład rozszerzenia SSE, SSE2, AVX i AVX2 na IA-32. I rozszerzenia AVX i AVX2 do wersji x64. Obecnie **`/arch:SSE`** i **`/arch:SSE2`** są dostępne tylko podczas kompilowania dla architektury x86. Jeśli żadna opcja nie zostanie określona, kompilator będzie używać instrukcji znalezionych na procesorach, które obsługują SSE2. Korzystanie z ulepszonych instrukcji można wyłączyć za pomocą polecenia **`/arch:IA32`** . Aby uzyskać więcej informacji, zobacz [`/arch (x86)`](arch-x86.md) , [`/arch (x64)`](arch-x64.md) i [`/arch (ARM)`](arch-arm.md) .
 
 #### <a name="choices"></a>Choices
 
-- **Streaming SIMD Extensions** -Streaming SIMD Extensions. Przywraca**`/arch:SSE`**
-- **Streaming SIMD Extensions 2** — Streaming SIMD Extensions 2. Przywraca**`/arch:SSE2`**
-- **Zaawansowane rozszerzenia wektorów** — zaawansowane rozszerzenia wektorów. Przywraca**`/arch:AVX`**
-- **Zaawansowane rozszerzenia wektorów 2** — zaawansowane rozszerzenia wektorów 2. Przywraca**`/arch:AVX2`**
-- **Brak rozszerzonych instrukcji** — brak rozszerzonych instrukcji. Przywraca**`/arch:IA32`**
+- **Streaming SIMD Extensions** -Streaming SIMD Extensions. Przywraca  **`/arch:SSE`**
+- **Streaming SIMD Extensions 2** — Streaming SIMD Extensions 2. Przywraca  **`/arch:SSE2`**
+- **Zaawansowane rozszerzenia wektorów** — zaawansowane rozszerzenia wektorów. Przywraca  **`/arch:AVX`**
+- **Zaawansowane rozszerzenia wektorów 2** — zaawansowane rozszerzenia wektorów 2. Przywraca  **`/arch:AVX2`**
+- **Brak rozszerzonych instrukcji** — brak rozszerzonych instrukcji. Przywraca  **`/arch:IA32`**
 - **Nie ustawiono** — nie ustawiono.
 
 ### <a name="floating-point-model"></a>Model zmiennoprzecinkowy
@@ -290,11 +290,11 @@ Ustawia model zmiennoprzecinkowy. Ustawia [ `/fp:precise` , `/fp:strict` , `/fp:
 
 ### <a name="enable-floating-point-exceptions"></a>Włącz wyjątki zmiennoprzecinkowe
 
-Wiarygodny model wyjątków zmiennopozycyjnych. Wyjątki będą wywoływane natychmiast po ich wyzwoleniu. Ustawia [/FP: z wyjątkiem](fp-specify-floating-point-behavior.md).
+Wiarygodny model wyjątków zmiennopozycyjnych. Wyjątki będą wywoływane natychmiast po ich wyzwoleniu. Zestawy [`/fp:except`](fp-specify-floating-point-behavior.md) .
 
 ### <a name="create-hotpatchable-image"></a>Tworzenie obrazu możliwy do poprawiania
 
-Gdy Funkcja HotPatching jest włączona, kompilator zapewnia, że pierwsza instrukcja każdej funkcji wynosi dwa bajty, co jest wymagane w przypadku stosowania poprawek na gorąco. Ustawia [/hotpatch](hotpatch-create-hotpatchable-image.md).
+Gdy Funkcja HotPatching jest włączona, kompilator zapewnia, że pierwsza instrukcja każdej funkcji wynosi dwa bajty, co jest wymagane w przypadku stosowania poprawek na gorąco. Zestawy [`/hotpatch`](hotpatch-create-hotpatchable-image.md) .
 
 ### <a name="spectre-mitigation"></a>Spectre środki zaradcze
 
@@ -317,11 +317,11 @@ Włącza lub wyłącza tryb zgodności. Zestawy [`/permissive-`](permissive-stan
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Traktuj wchar_t jako typ wbudowany
 
-Gdy jest określony, typ jest **`wchar_t`** typem natywnym, który jest mapowany na **`__wchar_t`** w taki sam sposób, w jaki **`short`** mapuje się do **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)jest domyślnie włączona.
+Gdy jest określony, typ jest **`wchar_t`** typem natywnym, który jest mapowany na **`__wchar_t`** w taki sam sposób, w jaki **`short`** mapuje się do **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md) jest domyślnie włączona.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Wymuś zgodność w zakresie pętli for
 
-Używane do implementowania standardowego zachowania języka C++ dla instrukcji for z rozszerzeniami Microsoft. Zestawy [ `/Za` `/Ze` (Wyłącz rozszerzenia językowe](za-ze-disable-language-extensions.md)). [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)jest domyślnie włączona.
+Implementuje standardowe zachowanie języka C++ w przypadku `for` pętli instrukcji z rozszerzeniami Microsoft. Zestawy [ `/Za` `/Ze` (Wyłącz rozszerzenia językowe](za-ze-disable-language-extensions.md)). [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) jest domyślnie włączona.
 
 ### <a name="remove-unreferenced-code-and-data"></a>Usuń kod i dane, do których nie istnieją odwołania
 
@@ -333,7 +333,7 @@ Służy do identyfikowania typu odwołania rvalue jako wyniku operacji rzutowani
 
 ### <a name="enable-run-time-type-information"></a>Włącz informacje o typie w czasie wykonywania
 
-Dodaje kod do sprawdzania typów obiektów C++ w czasie wykonywania (informacje o typie środowiska uruchomieniowego). Ustawia [ `/GR` , `/GR-` ](gr-enable-run-time-type-information.md).
+Dodaje kod do sprawdzania typów obiektów C++ w czasie wykonywania (*Informacje o typie środowiska uruchomieniowego*lub RTTI). Ustawia [ `/GR` , `/GR-` ](gr-enable-run-time-type-information.md).
 
 ### <a name="open-mp-support"></a>Obsługa otwartych pakietów MP
 
@@ -362,8 +362,8 @@ Umożliwia utworzenie lub użycie prekompilowanego nagłówka podczas kompilowan
 
 #### <a name="choices"></a>Choices
 
-- **Create** — instruuje kompilator, aby utworzył prekompilowany plik nagłówkowy (. pch), który reprezentuje stan kompilacji w określonym punkcie.
-- **Użyj** — instruuje kompilator, aby korzystał z istniejącego prekompilowanego pliku nagłówkowego (. pch) w bieżącej kompilacji.
+- **Create** — instruuje kompilator, aby utworzył prekompilowany plik nagłówkowy ( *`.pch`* ), który reprezentuje stan kompilacji w określonym punkcie.
+- **Użyj** — instruuje kompilator, aby używał istniejącego prekompilowanego pliku nagłówkowego ( *`.pch`* ) w bieżącej kompilacji.
 - **Nie używa prekompilowanych nagłówków** — nie używa prekompilowanych nagłówków.
 
 ### <a name="precompiled-header-file"></a>Prekompilowany plik nagłówkowy
@@ -387,10 +387,10 @@ Określa zawartość pliku wyjściowego języka asemblera. Ustawia [ `/FA` , `/F
 #### <a name="choices"></a>Choices
 
 - **Brak listy** — brak listy.
-- **Listing tylko dla zestawu** — kod asemblera;*`.asm`*
-- **Zestaw z kodem maszynowym** i kodem modułu;*`.cod`*
-- **Zestaw ze źródłem kodu źródłowego** i kodem zestawu;*`.asm`*
-- **Zestaw, kod maszynowy i zestaw źródłowy** , kod maszynowy i kod źródłowy;*`.cod`*
+- **Listing tylko dla zestawu** — kod asemblera; *`.asm`*
+- **Zestaw z kodem maszynowym** i kodem modułu; *`.cod`*
+- **Zestaw ze źródłem kodu źródłowego** i kodem zestawu; *`.asm`*
+- **Zestaw, kod maszynowy i zestaw źródłowy** , kod maszynowy i kod źródłowy; *`.cod`*
 
 ### <a name="use-unicode-for-assembler-listing"></a>Użyj Unicode dla list asemblera
 
@@ -434,10 +434,10 @@ Wybierz domyślną konwencję wywoływania dla aplikacji (może być zastąpiona
 
 #### <a name="choices"></a>Choices
 
-- **`__cdecl`**-Określa **`__cdecl`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__stdcall`** lub **`__fastcall`** .
-- **`__fastcall`**-Określa **`__fastcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__stdcall`** . Wszystkie **`__fastcall`** funkcje muszą mieć prototypy.
-- **`__stdcall`**-Określa **`__stdcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__fastcall`** . Wszystkie **`__stdcall`** funkcje muszą mieć prototypy.
-- **`__vectorcall`**-Określa **`__vectorcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych jako **`__cdecl`** , **`__fastcall`** lub **`__stdcall`** . Wszystkie **`__vectorcall`** funkcje muszą mieć prototypy.
+- **`__cdecl`** -Określa **`__cdecl`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__stdcall`** lub **`__fastcall`** .
+- **`__fastcall`** -Określa **`__fastcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__stdcall`** . Wszystkie **`__fastcall`** funkcje muszą mieć prototypy.
+- **`__stdcall`** -Określa **`__stdcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__fastcall`** . Wszystkie **`__stdcall`** funkcje muszą mieć prototypy.
+- **`__vectorcall`** -Określa **`__vectorcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych jako **`__cdecl`** , **`__fastcall`** lub **`__stdcall`** . Wszystkie **`__vectorcall`** funkcje muszą mieć prototypy.
 
 ### <a name="compile-as"></a>Kompiluj jako
 

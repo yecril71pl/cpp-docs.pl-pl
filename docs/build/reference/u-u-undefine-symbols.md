@@ -1,6 +1,7 @@
 ---
 title: /U, /u (Usuń definicje symboli)
-ms.date: 06/08/2020
+description: Użyj opcji/U i/u kompilatora Microsoft C/C++, aby nie definiować symboli preprocesora.
+ms.date: 09/03/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 4d7a2b3d5df2b22dc53eb7b58bfb78cdb1824b26
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 78effabba2fa72e5ab7f2dfc6ef91f22383b063f
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616663"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609199"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Usuń definicje symboli)
 
@@ -26,7 +27,7 @@ ms.locfileid: "84616663"
 
 ## <a name="syntax"></a>Składnia
 
-> **`/U`**\[] —*symbol*\
+> **`/U`**\[ ] —*symbol*\
 > **`/u`**
 
 ## <a name="arguments"></a>Argumenty
@@ -44,14 +45,14 @@ Domyślnie kompilator może definiować dużą liczbę symboli specyficznych dla
 
 | Symbol | Funkcja |
 |--|--|
-| `_CHAR_UNSIGNED` | Domyślny typ char jest niepodpisany. Zdefiniowane, gdy [**`/J`**](j-default-char-type-is-unsigned.md) opcja jest określona. |
-| `_CPPRTTI` | Zdefiniowane dla kodu skompilowanego z [**`/GR`**](gr-enable-run-time-type-information.md) opcją. |
-| `_CPPUNWIND` | Zdefiniowane dla kodu skompilowanego z [**`/EHsc`**](eh-exception-handling-model.md) opcją. |
-| `_DLL` | Zdefiniowane, gdy [**`/MD`**](md-mt-ld-use-run-time-library.md) opcja jest określona. |
+| `_CHAR_UNSIGNED` | Domyślny typ char jest niepodpisany. Zdefiniowane, gdy [`/J`](j-default-char-type-is-unsigned.md) opcja jest określona. |
+| `_CPPRTTI` | Zdefiniowane dla kodu skompilowanego z [`/GR`](gr-enable-run-time-type-information.md) opcją. |
+| `_CPPUNWIND` | Zdefiniowane dla kodu skompilowanego z [`/EHsc`](eh-exception-handling-model.md) opcją. |
+| `_DLL` | Zdefiniowane, gdy [`/MD`](md-mt-ld-use-run-time-library.md) opcja jest określona. |
 | `_M_IX86` | Domyślnie zdefiniowane do 600 dla obiektów docelowych x86. |
 | `_MSC_VER` | Zdefiniowane jako unikatowa wartość całkowita dla każdej wersji kompilatora. Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). |
 | `_WIN32` | Zdefiniowane dla aplikacji WIN32. Zawsze zdefiniowane. |
-| `_MT` | Zdefiniowane, gdy jest określona opcja [ **`/MD`** or **`/MT`** ](md-mt-ld-use-run-time-library.md) . |
+| `_MT` | Zdefiniowane, gdy [`/MD`](md-mt-ld-use-run-time-library.md) [`/MT`](md-mt-ld-use-run-time-library.md) jest określona opcja or. |
 
 Aby zapoznać się z pełną listą wstępnie zdefiniowanych makr specyficznych dla firmy Microsoft, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
 
@@ -71,7 +72,7 @@ Aby zapoznać się z pełną listą wstępnie zdefiniowanych makr specyficznych 
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
-[**`/J`**(Domyślny typ char nie jest podpisany)](j-default-char-type-is-unsigned.md)<br/>
-[**`/GR`**(Włącz informacje typu run-time)](gr-enable-run-time-type-information.md)<br/>
-[**`/EH`**(Model obsługi wyjątków)](eh-exception-handling-model.md)<br/>
+[**`/J`** (Domyślny typ char nie jest podpisany)](j-default-char-type-is-unsigned.md)<br/>
+[**`/GR`** (Włącz informacje typu run-time)](gr-enable-run-time-type-information.md)<br/>
+[**`/EH`** (Model obsługi wyjątków)](eh-exception-handling-model.md)<br/>
 [**`/MD`**, **`/MT`** , **`/LD`** (Użyj biblioteki wykonawczej)](md-mt-ld-use-run-time-library.md)
