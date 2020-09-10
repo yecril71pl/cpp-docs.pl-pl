@@ -64,6 +64,8 @@
       href: ../c-runtime-library/crt-initialization.md
     - name: Stan globalny w środowisku CRT
       href: ../c-runtime-library/global-state.md
+    - name: Funkcje matematyczne niezależne od typu
+      href: ../c-runtime-library/tgmath.md
 - name: Procedury środowiska uruchomieniowego języka Universal C według kategorii
   expanded: false
   items:
