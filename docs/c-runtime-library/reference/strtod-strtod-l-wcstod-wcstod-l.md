@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554958"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933830"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -120,7 +120,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-Ustawienie kategorii **LC_NUMERIC** bieżących ustawień regionalnych określa rozpoznawanie znaku punktu podstawy w *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez sufiksu **_l** używają bieżących ustawień regionalnych; **_strtod_l** jest taka sama jak **_strtod_l** , z tą *różnicą, że zamiast tego korzystają* z przekazaną w zamian. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Ustawienie kategorii **LC_NUMERIC** bieżących ustawień regionalnych określa rozpoznawanie znaku punktu podstawy w *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez sufiksu **_l** używają bieżących ustawień regionalnych; **_strtod_l** jest taka sama jak **_strtod** , z wyjątkiem tego, że poprzednie używa przekazaną w zamian *ustawień regionalnych* . Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywana w lokalizacji wskazywanej przez *endptr*.
 
@@ -221,7 +221,7 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
