@@ -2,12 +2,12 @@
 title: Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609184"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041955"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 
@@ -60,7 +60,7 @@ Instalator programu Visual Studio obejmuje **opracowywanie aplikacji mobilnych p
 - Narzędzia programistyczne w języku c++ dla systemu iOS są wymagane do kompilowania kodu C++ przeznaczonego dla platformy iOS.
 
 > [!NOTE]
-> Jeśli używasz programu Visual Studio 2015, zobacz [Install Visual C++ dla opracowywania aplikacji mobilnych na wiele platform (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+> Jeśli używasz programu Visual Studio 2015, zobacz [Install Visual C++ dla opracowywania aplikacji mobilnych na wiele platform (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Instalowanie tworzenia aplikacji mobilnych przy użyciu obciążenia języka C++
 
@@ -109,7 +109,7 @@ W większości przypadków program Visual Studio może wykryć konfiguracje dla 
 
 1. Wybierz **przycisk OK** , aby zapisać lokalizacje folderów narzędzi niestandardowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instalowanie i Konfigurowanie narzędzi do kompilowania przy użyciu systemu iOS](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ aplikacji mobilnych na wiele platform](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4052
+title: Ostrzeżenie kompilatora (poziom 1) C4055
 ms.date: 11/04/2016
 f1_keywords:
 - C4055
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47883f60c3205125a8ee88b804c1d622b3ba0b41
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388608"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041032"
 ---
-# <a name="compiler-warning-level-1-c4055"></a>Kompilator ostrzeżenie (poziom 1) C4055
+# <a name="compiler-warning-level-1-c4055"></a>Ostrzeżenie kompilatora (poziom 1) C4055
 
-> "*konwersji*": ze wskaźnika danych "*type1*"do wskaźnika funkcji"*type2*"
+> "*Konwersja*": ze wskaźnika danych "*Type1*" do wskaźnika funkcji "*Type2*"
 
 ## <a name="remarks"></a>Uwagi
 
-**Przestarzałe:** To ostrzeżenie nie jest generowany w programie Visual Studio 2017 i nowsze wersje.
+**Przestarzałe:** To ostrzeżenie nie jest generowane przez program Visual Studio 2017 i jego nowsze wersje.
 
-Wskaźnik danych jest (prawdopodobnie nieprawidłowo) rzutowany na wskaźnik funkcji. To jest ostrzeżenia poziomu 1, w obszarze/za włączonego ostrzeżenia poziomu 4 pod /Ze.
+Wskaźnik danych jest rzutowany (prawdopodobnie nieprawidłowo) do wskaźnika funkcji. Jest to ostrzeżenie poziomu 1 w obszarze/za i ostrzeżenie poziomu 4 w obszarze/ze.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4055:
+Poniższy przykład generuje C4055:
 
 ```C
 // C4055.c
@@ -37,7 +37,7 @@ PFUNC f() {
 }
 ```
 
-Pod /Ze to jest ostrzeżenie poziom 4.
+W obszarze/ze jest to ostrzeżenie poziomu 4.
 
 ```C
 // C4055b.c

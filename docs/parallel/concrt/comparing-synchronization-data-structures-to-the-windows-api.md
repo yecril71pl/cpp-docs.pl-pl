@@ -5,12 +5,12 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b889570935b3a94e0cb8717c8af1783e2ce31c42
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510592"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040344"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Porównywanie struktur danych synchronizacji z Windows API
 
@@ -20,31 +20,31 @@ Struktury danych synchronizacji dostarczone przez środowisko uruchomieniowe wsp
 
 ## <a name="critical_section"></a>critical_section
 
-Klasa [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) przypomina strukturę systemu Windows `CRITICAL_SECTION` , ponieważ może być używana tylko przez wątki jednego procesu. Aby uzyskać więcej informacji na temat krytycznych sekcji w interfejsie API systemu Windows, zobacz [najważniejsze obiekty sekcji](/windows/win32/Sync/critical-section-objects).
+Klasa [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) przypomina strukturę systemu Windows, `CRITICAL_SECTION` ponieważ może być używana tylko przez wątki jednego procesu. Aby uzyskać więcej informacji na temat krytycznych sekcji w interfejsie API systemu Windows, zobacz [najważniejsze obiekty sekcji](/windows/win32/Sync/critical-section-objects).
 
 ## <a name="reader_writer_lock"></a>Klasa reader_writer_lock
 
 Klasa [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) przypomina blokady systemu Windows (SRW). W poniższej tabeli opisano podobieństwa i różnice.
 
-|Funkcja|`reader_writer_lock`|Blokada SRW|
-|-------------|--------------------------|--------------|
-|Niewspółpracujący|Tak|Tak|
-|Możliwość promowania czytnika do składnika zapisywania (Pomoc techniczna dotycząca uaktualniania)|Nie|Nie|
-|Może obniżyć poziom składnika zapisywania do czytnika (obsługa obniżenia poziomu)|Nie|Nie|
-|Blokada zapisu — preferencja|Tak|Nie|
-|Dostęp do modułów zapisujących FIFO|Tak|Nie|
+| Cechy | Klasa `reader_writer_lock` | Blokada SRW |
+|--|--|--|
+| Niewspółpracujący | Tak | Tak |
+| Możliwość promowania czytnika do składnika zapisywania (Pomoc techniczna dotycząca uaktualniania) | Nie | Nie |
+| Może obniżyć poziom składnika zapisywania do czytnika (obsługa obniżenia poziomu) | Nie | Nie |
+| Blokada zapisu — preferencja | Tak | Nie |
+| Dostęp do modułów zapisujących FIFO | Tak | Nie |
 
 Więcej informacji na temat blokad SRW można znaleźć w temacie [Slim Reader/Writer (SRW)](/windows/win32/sync/slim-reader-writer--srw--locks) w zestawie SDK platformy.
 
-## <a name="event"></a>zdarzenie
+## <a name="event"></a>event
 
-Klasa [concurrency:: Event](../../parallel/concrt/reference/event-class.md) przypomina nienazwane zdarzenie resetowania ręcznego systemu Windows. `event` Jednak obiekt zachowuje się wspólnie, podczas gdy zdarzenie systemu Windows działa zapobiegawczo. Aby uzyskać więcej informacji na temat zdarzeń systemu Windows, zobacz [obiektów zdarzeń](/windows/win32/Sync/event-objects).
+Klasa [concurrency:: Event](../../parallel/concrt/reference/event-class.md) przypomina nienazwane zdarzenie resetowania ręcznego systemu Windows. Jednak `event` obiekt zachowuje się wspólnie, podczas gdy zdarzenie systemu Windows działa zapobiegawczo. Aby uzyskać więcej informacji na temat zdarzeń systemu Windows, zobacz [obiektów zdarzeń](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Aby lepiej zrozumieć różnicę między elementami `event` klasy i zdarzeń systemu Windows, weź pod uwagę Poniższy przykład. Ten przykład umożliwia harmonogramowi tworzenie co najwyżej dwóch jednoczesnych zadań, a następnie wywołuje dwie podobne funkcje, `event` które używają klasy i zdarzenia ręcznego resetowania systemu Windows. Każda funkcja najpierw tworzy kilka zadań, które oczekują na zasygnalizowanie zdarzenia udostępnionego. Każda funkcja zwraca do uruchomionych zadań, a następnie sygnalizuje zdarzenie. Każda funkcja czeka na zdarzenie sygnalizowane.
+Aby lepiej zrozumieć różnicę między elementami `event` klasy i zdarzeń systemu Windows, weź pod uwagę Poniższy przykład. Ten przykład umożliwia harmonogramowi tworzenie co najwyżej dwóch jednoczesnych zadań, a następnie wywołuje dwie podobne funkcje, które używają `event` klasy i zdarzenia ręcznego resetowania systemu Windows. Każda funkcja najpierw tworzy kilka zadań, które oczekują na zasygnalizowanie zdarzenia udostępnionego. Każda funkcja zwraca do uruchomionych zadań, a następnie sygnalizuje zdarzenie. Każda funkcja czeka na zdarzenie sygnalizowane.
 
 ### <a name="code"></a>Kod
 
@@ -81,7 +81,7 @@ Windows event:
     Context 13: received the event.
 ```
 
-`event` Ponieważ Klasa zachowuje się wspólnie, harmonogram może ponownie przydzielić zasoby przetwarzania do innego kontekstu, gdy zdarzenie oczekuje na przekroczenie stanu sygnalizowania. W związku z tym więcej pracy jest realizowane przez wersję, która używa `event` klasy. W wersji korzystającej z zdarzeń systemu Windows każde zadanie oczekujące musi wprowadzić stan sygnalizujący, zanim następne zadanie zostanie uruchomione.
+Ponieważ `event` Klasa zachowuje się wspólnie, harmonogram może ponownie przydzielić zasoby przetwarzania do innego kontekstu, gdy zdarzenie oczekuje na przekroczenie stanu sygnalizowania. W związku z tym więcej pracy jest realizowane przez wersję, która używa `event` klasy. W wersji korzystającej z zdarzeń systemu Windows każde zadanie oczekujące musi wprowadzić stan sygnalizujący, zanim następne zadanie zostanie uruchomione.
 
 Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 

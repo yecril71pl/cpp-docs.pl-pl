@@ -1,5 +1,5 @@
 ---
-title: '&lt;wyliczenia systemu&gt; plików'
+title: '&lt;wyliczenia systemu plików &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - filesystem/std::filesystem::copy_options
@@ -11,26 +11,26 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368413"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041942"
 ---
-# <a name="ltfilesystemgt-enumerations"></a>&lt;wyliczenia systemu&gt; plików
+# <a name="ltfilesystemgt-enumerations"></a>&lt;wyliczenia systemu plików &gt;
 
-W tym temacie dokumentuje wyliczenia w nagłówku systemu plików.
+Ten temat dokumentuje wyliczenia w nagłówku systemu plików.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<eksperymentalny/system plików>
+**Nagłówek:**\<experimental/filesystem>
 
-**Obszar nazw:** std::experimental::system plików
+**Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
-Wyliczenie wartości maski bitowej używanej z funkcjami [kopiowania](filesystem-functions.md#copy) i [copy_file](filesystem-functions.md#copy_file) w celu określenia zachowania.
+Wyliczenie wartości masek bitowych, które są używane z funkcjami [kopiowania](filesystem-functions.md#copy) i [copy_file](filesystem-functions.md#copy_file) , aby określić zachowanie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -51,22 +51,22 @@ enum class copy_options {
 
 ### <a name="values"></a>Wartości
 
-|`Name`|Opis|
+| Nazwa | Opis |
 |------------|-----------------|
 |`none`|Wykonaj domyślne zachowanie dla operacji.|
-|`skip_existing`|Nie kopiuj, jeśli plik już istnieje, nie zgłaszaj błędu.|
+|`skip_existing`|Nie Kopiuj, jeśli plik już istnieje, nie zgłaszaj błędu.|
 |`overwrite_existing`|Zastąp plik, jeśli już istnieje.|
-|`update_existing`|Zastąp plik, jeśli już istnieje i jest starszy niż zamiennik.|
-|`recursive`|Rekursyjnie kopiuj podkatalogi i ich zawartość.|
-|`copy_symlinks`|Skopiuj dołącza symboliczne jako dowiązanie symboliczne, zamiast kopiować pliki, na które wskazują.|
-|`skip_symlinks`|Ignoruj dowiązania symboliczne.|
-|`directories_only`|Tylko iterować nad katalogami, ignorować pliki.|
-|`create_symlinks`|Zamiast kopiować pliki, można tworzyć łącza symboliczne. Ścieżka bezwzględna musi być używana jako ścieżka źródłowsza, chyba że miejscem docelowym jest bieżący katalog.|
-|`create_hard_links`|Zamiast kopiować pliki, łącz się z twardymi łączami.|
+|`update_existing`|Zastąp plik, jeśli już istnieje i jest starszy niż zastąpienie.|
+|`recursive`|Rekursywnie Kopiuj podkatalogi i ich zawartość.|
+|`copy_symlinks`|Skopiuj linki symboliczne jako linki symboliczne, zamiast kopiować pliki, do których wskazują.|
+|`skip_symlinks`|Ignoruj linki symboliczne.|
+|`directories_only`|Wykonaj iterację tylko dla katalogów, Ignoruj pliki.|
+|`create_symlinks`|Utwórz linki symboliczne zamiast kopiować pliki. Ścieżka bezwzględna musi być używana jako ścieżka źródłowa, chyba że miejsce docelowe jest bieżącym katalogiem.|
+|`create_hard_links`|Twórz twarde linki zamiast kopiować pliki.|
 
-## <a name="directory_options"></a><a name="directory_options"></a>directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
-Określa, czy należy obserwować łącza symboliczne do katalogów, czy je ignorować.
+Określa, czy mają być stosowane linki symboliczne do katalogów czy do ich ignorowania.
 
 ### <a name="syntax"></a>Składnia
 
@@ -81,12 +81,12 @@ enum class directory_options {
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`none`|Domyślne zachowanie: ignoruj dowiązania symboliczne do katalogów. Odmowa uprawnień jest błędem.|
-|`follow_directory_symlink`|Potraktuj symboliczne linki do katalogów jako rzeczywiste katalogi.|
+|`none`|Zachowanie domyślne: Ignoruj linki symboliczne do katalogów. Odmowa uprawnień jest błędem.|
+|`follow_directory_symlink`|Traktuj symboliczne linki do katalogów jako katalogi rzeczywiste.|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-Wyliczenie dla typów plików. Obsługiwane wartości są regularne, katalog, not_found i nieznane.
+Wyliczenie dla typów plików. Obsługiwane wartości to regularne, katalog, not_found i nieznane.
 
 ### <a name="syntax"></a>Składnia
 
@@ -110,27 +110,27 @@ enum class file_type {
 |Nazwa|Wartość|Opis|
 |----------|-----------|-----------------|
 |`not_found`|-1|Reprezentuje plik, który nie istnieje.|
-|`none`|0|Reprezentuje plik, który nie ma atrybutu typu. (Nie jest obsługiwany.)|
+|`none`|0|Reprezentuje plik, który nie ma atrybutu Type. (Nieobsługiwane).|
 |`regular`|1|Reprezentuje konwencjonalny plik dysku.|
 |`directory`|2|Reprezentuje katalog.|
-|`symlink`|3|Reprezentuje dowiązanie symboliczne. (Nie jest obsługiwany.)|
-|`block`|4|Reprezentuje plik specjalny blok w systemach opartych na systemie UNIX. (Nie jest obsługiwany.)|
-|`character`|5|Reprezentuje plik znaków specjalnych w systemach opartych na systemie UNIX. (Nie jest obsługiwany.)|
-|`fifo`|6|Reprezentuje plik FIFO w systemach opartych na systemie UNIX. (Nie jest obsługiwany.)|
-|`socket`|7|Reprezentuje gniazdo w systemach opartych na uniksie. (Nie jest obsługiwany.)|
-|`unknown`|8|Reprezentuje plik, którego stanu nie można określić.|
+|`symlink`|3|Reprezentuje łącze symboliczne. (Nieobsługiwane).|
+|`block`|4|Reprezentuje plik specjalny bloku w systemach opartych na systemie UNIX. (Nieobsługiwane).|
+|`character`|5|Reprezentuje plik specjalny znaku w systemach opartych na systemie UNIX. (Nieobsługiwane).|
+|`fifo`|6|Reprezentuje plik FIFO w systemach opartych na systemie UNIX. (Nieobsługiwane).|
+|`socket`|7|Reprezentuje gniazdo w systemach opartych na systemie UNIX. (Nieobsługiwane).|
+|`unknown`|8|Reprezentuje plik, którego stan nie może zostać określony.|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-Zawiera `replace`wartości `add` `remove`, `nofollow`, i .
+Obejmuje wartości `replace` , `add` , `remove` i `nofollow` .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>perms
+## <a name="perms"></a><a name="perms"></a> uprawnienia
 
-Flagi dla uprawnień do plików. Obsługiwane wartości są zasadniczo "tylko do odczytu" i wszystkie. W przypadku pliku tylko do odczytu nie ustawiono żadnych bitów *_write. W `all` przeciwnym razie bit (0x0777) jest ustawiony.
+Flagi uprawnień do plików. Obsługiwane wartości są zasadniczo "tylko do odczytu" i wszystkie. Dla pliku tylko do odczytu nie ustawiono żadnego z * _write bitów. W przeciwnym razie `all` jest ustawiona wartość bit (0x0777).
 
 ### <a name="syntax"></a>Składnia
 
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<>systemu plików](../standard-library/filesystem.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

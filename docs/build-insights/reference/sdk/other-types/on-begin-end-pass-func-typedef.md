@@ -1,6 +1,6 @@
 ---
 title: OnBeginEndPassFunc typedef
-description: Odwołanie do funkcji SDK OnBeginEndPassFunc funkcji typedef w języku C++.
+description: Odwołanie do zestawu SDK usługi Build Insights OnBeginEndPassFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3b3fc453245a47463c29ceeb30dfdc48c79aef35
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2008dfb86d6f45a1c05a59e1f0f4f8c7868dcda2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329086"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041981"
 ---
 # <a name="onbeginendpassfunc-typedef"></a>OnBeginEndPassFunc typedef
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Typedef `OnBeginEndPassFunc` jest jednym z podpisów funkcji używanych w [strukturach ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) i [RELOG_CALLBACKS.](relog-callbacks-struct.md)
+`OnBeginEndPassFunc`Element typedef jest jednym z podpisów funkcji używanych w strukturach [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) i [RELOG_CALLBACKS](relog-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,7 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnBeginEndPassFunc)(
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
 | `callbackContext` |  |
 

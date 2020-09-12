@@ -1,5 +1,5 @@
 ---
-title: /GENPROFILE, /FASTGENPROFILE (Generuj kompilację instrumentowaną profilowaniem)
+title: /GENPROFILE,/FASTGENPROFILE (generowanie profilowania z instrumentacją)
 ms.date: 03/14/2018
 f1_keywords:
 - GENPROFILE
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: 19ddf56d92cc2d8fbbfaf635c8e1602443e35b5b
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: a0d1678cd400801f4cb809ec3e93d333fbc6416a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825792"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041201"
 ---
-# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generuj kompilację instrumentowaną profilowaniem)
+# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE,/FASTGENPROFILE (generowanie profilowania z instrumentacją)
 
 Określa generowanie pliku. PGD przez konsolidator do obsługi optymalizacji opartej na profilach (PGO). **/GENPROFILE** i **/FASTGENPROFILE** używają różnych parametrów domyślnych. Użyj **/GENPROFILE** , aby preferować precyzję użycia szybkości i pamięci podczas profilowania. Użyj **/FASTGENPROFILE** , aby zwiększyć użycie pamięci i szybkość z dokładnością.
 
 ## <a name="syntax"></a>Składnia
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **dokładne**|**noexact**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**ścieżka**|**nopath** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_Nazwa pliku_}] \
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **dokładne**|**noexact**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**ścieżka**|**nopath** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_Nazwa pliku_}]
+> **/GENPROFILE** \[ **{** \[ **COUNTER32** \| **COUNTER64**] \| \[ **dokładne** \| **noexact**] \| **MEMMAX =** _#_ \| **MEMMIN =** _#_ \| \[ **Path** \| **nopath**] \| \[ **TRACKEH** \| **NOTRACKEH** ] \| **PGD =**_Nazwa pliku_}] \
+> **/FASTGENPROFILE** \[ **{** \[ **COUNTER32** \| **COUNTER64**] \| \[ **dokładne** \| **noexact**] \| **MEMMAX =** _#_ \| **MEMMIN =** _#_ \| [**Path** \| **nopath** ] \| \[ **TRACKEH** \| **NOTRACKEH** ] \| **PGD =**_Nazwa pliku_}]
 
 ### <a name="arguments"></a>Argumenty
 
-Dowolny z następujących argumentów można określić jako **/GENPROFILE** lub **/FASTGENPROFILE**. Argumenty wymienione tutaj oddzielone znakiem potoku (**|**) wykluczają się wzajemnie. Użyj znaku przecinka (**,**), aby oddzielić opcje.
+Dowolny z następujących argumentów można określić jako **/GENPROFILE** lub **/FASTGENPROFILE**. Argumenty wymienione tutaj oddzielone znakiem potoku () wykluczają **|** się wzajemnie. Użyj znaku przecinka (**,**), aby oddzielić opcje.
 
 **COUNTER32** &#124; **COUNTER64**<br/>
 Użyj **COUNTER32** , aby określić użycie 32-bitowych liczników sond i **COUNTER64** , aby określić 64-bitowe liczniki sond. Po określeniu **/GENPROFILE**wartość domyślna to **COUNTER64**. Po określeniu **/FASTGENPROFILE**wartość domyślna to **COUNTER32**.
@@ -36,16 +36,16 @@ Użyj **COUNTER32** , aby określić użycie 32-bitowych liczników sond i **COU
 **Dokładne** &#124; **noexact**<br/>
 Użyj **dokładnej** , aby określić, które są Zablokowani z bezpiecznymi wątkami dla sond. **Noexact** określa niechronione operacje przyrostu dla sond. Wartość domyślna to **noexact**.
 
-**MEMMAX**=*Wartość*MEMMAX, **MEMMIN**=*wartość*<br/>
+**MEMMAX** = *wartość*, **MEMMIN** = *wartość* MEMMIN<br/>
 Użyj **MEMMAX** i **MEMMIN** , aby określić maksymalne i minimalne rozmiary rezerwacji dla danych szkoleniowych w pamięci. Wartość jest ilością pamięci do zarezerwowania w bajtach. Domyślnie te wartości są określane przez wewnętrzny algorytm heurystyczny.
 
-**Ścieżka** &#124; **nopath** <br/>
-Użyj **ścieżki** , aby określić oddzielny zestaw PGO liczników dla każdej unikatowej ścieżki do funkcji. Użyj **nopath** , aby określić tylko jeden zestaw liczników dla każdej funkcji. Po określeniu **/GENPROFILE**, wartość domyślna to **Path** . Po określeniu **/FASTGENPROFILE**wartość domyślna to **nopath** .
+**Ścieżka**  &#124; **nopath** <br/>
+Użyj **ścieżki**  , aby określić oddzielny zestaw PGO liczników dla każdej unikatowej ścieżki do funkcji. Użyj **nopath**  , aby określić tylko jeden zestaw liczników dla każdej funkcji. Po określeniu **/GENPROFILE**, wartość domyślna to **Path** . Po określeniu **/FASTGENPROFILE**wartość domyślna to **nopath** .
 
-**TRACKEH** &#124; **NOTRACKEH** <br/>
-Określa, czy należy używać dodatkowych liczników, aby zachować dokładną liczbę wyjątków, gdy podczas uczenia zostaną zgłoszone wyjątki. Użyj **TRACKEH** , aby określić dodatkowe liczniki dla dokładnej liczby. Użyj **NOTRACKEH** , aby określić pojedyncze liczniki dla kodu, który nie korzysta z obsługi wyjątków lub nie napotyka wyjątków w scenariuszach szkoleniowych.  Po określeniu **/GENPROFILE**wartość domyślna to **TRACKEH** . Po określeniu **/FASTGENPROFILE**wartość domyślna to **NOTRACKEH** .
+**TRACKEH**  &#124; **NOTRACKEH** <br/>
+Określa, czy należy używać dodatkowych liczników, aby zachować dokładną liczbę wyjątków, gdy podczas uczenia zostaną zgłoszone wyjątki. Użyj **TRACKEH**  , aby określić dodatkowe liczniki dla dokładnej liczby. Użyj **NOTRACKEH**  , aby określić pojedyncze liczniki dla kodu, który nie korzysta z obsługi wyjątków lub nie napotyka wyjątków w scenariuszach szkoleniowych.  Po określeniu **/GENPROFILE**wartość domyślna to **TRACKEH** . Po określeniu **/FASTGENPROFILE**wartość domyślna to **NOTRACKEH** .
 
-**PGD**=*Nazwa pliku* PGD<br/>
+Plik **PGD** = *Nazwa pliku*<br/>
 Określa podstawową nazwę pliku. pgd. Domyślnie konsolidator używa podstawowej nazwy pliku obrazu wykonywalnego z rozszerzeniem. pgd.
 
 ## <a name="remarks"></a>Uwagi
@@ -60,7 +60,7 @@ Należy również określić **/LTCG** podczas określania **/GENPROFILE** lub *
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości** > **wiersza polecenia** **konsolidatora** > .
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
 
 1. Wprowadź opcje **/GENPROFILE** lub **/FASTGENPROFILE** i argumenty w polu **dodatkowe opcje** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
@@ -71,5 +71,5 @@ Należy również określić **/LTCG** podczas określania **/GENPROFILE** lub *
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)<br/>
-[/LTCG (Generowanie łączonych kodów czasowych)](ltcg-link-time-code-generation.md)<br/>
+[MSVC Opcje konsolidatora](linker-options.md)<br/>
+[/LTCG (generowanie kodu w czasie konsolidacji)](ltcg-link-time-code-generation.md)<br/>

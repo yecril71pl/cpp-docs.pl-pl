@@ -1,6 +1,6 @@
 ---
 title: Struktura SYMBOL_NAME_DATA
-description: C++ Build Insights SDK SYMBOL_NAME_DATA odwołania do struktury.
+description: Informacje o strukturze SYMBOL_NAME_DATA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d234c6c225eff87a0eecd98fa5ff60bf92db97f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325337"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041916"
 ---
 # <a name="symbol_name_data-structure"></a>Struktura SYMBOL_NAME_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `SYMBOL_NAME_DATA` opisuje symbol front-end kompilatora.
+`SYMBOL_NAME_DATA`Struktura opisuje symbol frontonu kompilatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,13 +40,13 @@ typedef struct SYMBOL_NAME_DATA_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `Key` | Klucz symbolu. Ta wartość jest unikatowa w analizowanym śladzie. |
+| `Key` | Klucz symbolu. Ta wartość jest unikatowa w obrębie analizowanego śledzenia. |
 | `Name` | Nazwa symbolu. |
 
 ## <a name="remarks"></a>Uwagi
 
-Symbole pochodzące z dwóch różnych kompilatorów przechodzi front-end może mieć taką samą nazwę, ale inny klucz. W takim przypadku należy użyć nazw symboli, aby określić, czy dwa typy są takie same.
+Symbole pochodzące z dwóch różnych przebiegów frontonu kompilatora mogą mieć taką samą nazwę, ale inny klucz. W takim przypadku należy użyć nazw symboli, aby określić, czy dwa typy są takie same.
 
 ::: moniker-end

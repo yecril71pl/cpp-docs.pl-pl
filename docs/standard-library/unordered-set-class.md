@@ -1,6 +1,7 @@
 ---
 title: unordered_set — Klasa
-ms.date: 11/04/2016
+description: Dokumentacja interfejsu API dla klasy kontenera standardowej biblioteki języka C++ `unordered_set` , która jest używana do przechowywania i pobierania danych z nieuporządkowanej kolekcji.
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -26,6 +27,7 @@ f1_keywords:
 - unordered_set/std::unordered_set::cend
 - unordered_set/std::unordered_set::clear
 - unordered_set/std::unordered_set::count
+- unordered_set/std::unordered_set::contains
 - unordered_set/std::unordered_set::emplace
 - unordered_set/std::unordered_set::emplace_hint
 - unordered_set/std::unordered_set::empty
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_set::cbegin
 - std::unordered_set::cend
 - std::unordered_set::clear
+- std::unordered_set::contains
 - std::unordered_set::count
 - std::unordered_set::emplace
 - std::unordered_set::emplace_hint
@@ -134,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839520"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040044"
 ---
 # <a name="unordered_set-class"></a>unordered_set — Klasa
 
-Szablon klasy opisuje obiekt, który kontroluje różnej długości sekwencje elementów typu `const Key` . Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W ramach każdego przedziału funkcja porównania określa, czy jakaś para elementów ma równoważną kolejność. Każdy element służy jako zarówno klucz sortowania, jak i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
+Szablon klasy opisuje obiekt, który kontroluje różnej długości sekwencje elementów typu `const Key` . Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W każdym przedziale funkcja porównywania określa, czy dowolna para elementów ma równoważne porządkowanie. Każdy element służy jako zarówno klucz sortowania, jak i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Wstawianie elementu unieważnia brak iteratorów i usunięcie elementu unieważnia tylko te Iteratory, które wskazują na usunięty element.
 
 ## <a name="syntax"></a>Składnia
 
@@ -192,7 +195,7 @@ Klasa alokatora.
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ elementu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -203,7 +206,8 @@ Klasa alokatora.
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy.|
-|[count](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[zawiera](#contains)<sup>c++ 20</sup>|Sprawdź, czy istnieje element z określonym kluczem w `unordered_set` .|
+|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[puste](#empty)|Sprawdza, czy nie ma żadnych elementów.|
@@ -236,9 +240,9 @@ Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane 
 
 Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_set:: load_factor](#load_factor) `()` do przekroczenia maksymalnego współczynnika obciążenia, kontener zwiększa liczbę zasobników i ponownie kompiluje tabelę skrótów zgodnie z wymaganiami.
 
-Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Na ogół nie można przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
+Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Nie można ogólnie przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
 
-Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_set:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt typu `allocator` . Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
+Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_set:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt typu `allocator` . Przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
 
 ## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
@@ -604,7 +608,7 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator
 ```
 
-Nie można usunąć odwołania do wartości zwracanej przez `cend` .
+Nie można usunąć odwołania do wartości zwracanej przez nie `cend` .
 
 ## <a name="clear"></a><a name="clear"></a> Wyczyść
 
@@ -847,6 +851,57 @@ int main()
 
 ```Output
 [c] [b] [a]
+```
+
+## <a name="contains"></a><a name="contains"></a> wyświetlana
+
+Sprawdza, czy istnieje element z określonym kluczem w `unordered_set` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*K*\
+Typ klucza.
+
+*głównych*\
+Wartość klucza elementu do wyszukania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli element znajduje się w kontenerze; `false` w przeciwnym razie.
+
+### <a name="remarks"></a>Uwagi
+
+`contains()` Nowość w języku C++ 20. Aby go użyć, określ [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md) opcja kompilatora.
+
+`template<class K> bool contains(const K& key) const` występuje tylko w przypadku, gdy `key_compare` jest przezroczysty.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_set<int> theUnorderedSet = { 1, 2 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedSet.contains(2) << '\n';
+    std::cout << theUnorderedSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
 ```
 
 ## <a name="count"></a><a name="count"></a> liczbą
@@ -2470,7 +2525,7 @@ Obiekt funkcji mieszania jest *wartością skrótu*argumentu (jeśli istnieje); 
 
 Obiekt funkcji porównywania jest argumentem *COMP*, jeśli jest obecny; w przeciwnym razie `Comp()` .
 
-Obiekt alokatora jest argumentem *Al*, jeśli jest obecny; w przeciwnym razie jest to `Alloc()` .
+Obiekt alokatora jest argumentem *Al*, jeśli jest obecny; w przeciwnym razie `Alloc()` .
 
 ## <a name="value_type"></a><a name="value_type"></a> value_type
 

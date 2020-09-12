@@ -1,35 +1,34 @@
 ---
-title: Przegląd preprocesora eksperymentalnego MSVC
-description: Preprocesor MSVC jest aktualizowany zgodnie ze standardami C/C++.
-ms.date: 02/09/2020
+title: Przegląd MSVC nowego preprocesora
+description: Preprocesor MSVC jest aktualizowany pod kątem zgodności ze standardami C/C++.
+ms.date: 09/10/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: 00c34ef75270e505d3781cf7eedf4d8aba95ee6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+- preprocessor, new
+ms.openlocfilehash: c95f923d8c38250958e26431b61a71a1e6a7fdda
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337480"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041370"
 ---
-# <a name="msvc-experimental-preprocessor-overview"></a>Przegląd preprocesora eksperymentalnego MSVC
+# <a name="msvc-new-preprocessor-overview"></a>Przegląd MSVC nowego preprocesora
 
 ::: moniker range="vs-2015"
 
-Visual Studio 2015 używa tradycyjnego preprocesora, który nie jest zgodny ze standardem C++. Eksperymentalny preprocesor jest dostępny w programie Visual Studio 2017 i programie Visual Studio 2019 przy użyciu przełącznika kompilatora [/experimental:preprocessor.](../build/reference/experimental-preprocessor.md) Więcej informacji na temat korzystania z nowego preprocesora w programie Visual Studio 2017 i programie Visual Studio 2019 jest dostępna. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj formantu selektor **wersji.** Znajduje się w górnej części spisu treści na tej stronie.
+Program Visual Studio 2015 używa tradycyjnego preprocesora, który nie jest zgodny ze standardem C++ lub C99. Począwszy od programu Visual Studio 2019 w wersji 16,5, Nowa obsługa preprocesora dla standardu C++ 20 jest kompletna. Te zmiany są dostępne za pomocą przełącznika kompilatora [/Zc: preprocesora](../build/reference/zc-preprocessor.md) . Wersja eksperymentalna nowego preprocesora jest dostępna w programie Visual Studio 2017 w wersji 15,8 lub nowszej przy użyciu przełącznika kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) . Więcej informacji na temat korzystania z nowego preprocesora w programie Visual Studio 2017 i Visual Studio 2019 jest dostępne. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Aktualizujemy preprocesor Microsoft C++, aby poprawić zgodność ze standardami, naprawić długotrwałe błędy i zmienić niektóre zachowania, które są oficjalnie niezdefiniowane. Dodaliśmy również nową diagnostykę, aby ostrzegać o błędach w definicjach makr.
+Aktualizujemy preprocesor Microsoft C++, aby poprawić zgodność ze standardami, rozwiązać od dawna dba błędów i zmienić niektóre zachowania, które są oficjalnie niezdefiniowane. Dodaliśmy również nową diagnostykę, aby ostrzec o błędach w definicjach makr.
 
-Te zmiany są dostępne przy użyciu przełącznika kompilatora [/experimental:preprocesor](../build/reference/experimental-preprocessor.md) w programie Visual Studio 2017 lub Visual Studio 2019. Domyślne zachowanie preprocesora pozostaje takie samo jak w poprzednich wersjach.
-
-Począwszy od programu Visual Studio 2019 w wersji 16.5, eksperymentalna obsługa preprocesora dla standardu C++20 jest pełna funkcji.
+Począwszy od programu Visual Studio 2019 w wersji 16,5, preprocesora w standardzie C++ 20 jest funkcja kompletna. Te zmiany są dostępne za pomocą przełącznika kompilatora [/Zc: preprocesora](../build/reference/zc-preprocessor.md) . Wersja eksperymentalna nowego preprocesora jest dostępna we wcześniejszych wersjach, począwszy od programu Visual Studio 2017 w wersji 15,8. Można ją włączyć za pomocą przełącznika kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) . Domyślne zachowanie preprocesora pozostaje takie samo jak w poprzednich wersjach.
 
 ## <a name="new-predefined-macro"></a>Nowe wstępnie zdefiniowane makro
 
-Można wykryć, który preprocesor jest używany w czasie kompilacji. Sprawdź wartość wstępnie zdefiniowanego makra [ \_\_MSVC TRADITIONAL,](predefined-macros.md) aby sprawdzić, czy używany jest tradycyjny preprocesor. To makro jest ustawiane bezwarunkowo przez wersje kompilatora, które go obsługują, niezależnie od którego wywoływany jest preprocesor. Jego wartość wynosi 1 dla tradycyjnego preprocesora. Jest to 0 dla zgodnego preprocesora.
+Możesz wykryć, który preprocesor jest używany w czasie kompilacji. Sprawdź wartość wstępnie zdefiniowanego makra, [`_MSVC_TRADITIONAL`](predefined-macros.md) Aby stwierdzić, czy tradycyjny preprocesor jest w użyciu. To makro jest ustawiane bezwarunkowo przez wersje kompilatora, które go obsługują, niezależnie od tego, który preprocesora jest wywoływany. Jej wartość jest równa 1 dla tradycyjnego preprocesora. Jest to 0 dla preprocesora.
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -39,13 +38,13 @@ Można wykryć, który preprocesor jest używany w czasie kompilacji. Sprawdź w
 #endif
 ```
 
-## <a name="behavior-changes-in-the-experimental-preprocessor"></a>Zmiany zachowania w preprocesorze eksperymentalnym
+## <a name="behavior-changes-in-the-new-preprocessor"></a>Zmiany zachowania w nowym preprocesorze
 
-Początkowe prace nad eksperymentalnym preprocesorem koncentrowały się na tym, aby wszystkie rozszerzenia makr były zgodne ze standardem. Umożliwia użycie kompilatora MSVC z bibliotekami, które są obecnie blokowane przez tradycyjne zachowania. Przetestowaliśmy zaktualizowany preprocesor w rzeczywistych projektach. Oto niektóre z najczęstszych zmian, które znaleźliśmy:
+Początkowa pracy nad nowym preprocesorem koncentruje się na tym, że wszystkie rozwinięcia makra są zgodne ze standardem. Umożliwia używanie kompilatora MSVC z bibliotekami, które są aktualnie blokowane przez tradycyjne zachowania. Zaktualizowaliśmy preprocesor w rzeczywistych projektach świata. Poniżej przedstawiono niektóre z bardziej typowych zmian, które zostały znalezione:
 
-### <a name="macro-comments"></a>Komentarze do makr
+### <a name="macro-comments"></a>Komentarze makr
 
-Tradycyjny preprocesor opiera się na buforach znaków, a nie tokenach preprocesora. Umożliwia nietypowe zachowanie, takie jak następująca sztuczka komentarza preprocesora, która nie działa w ramach zgodnego preprocesora:
+Tradycyjny preprocesor jest oparty na buforach znaków zamiast tokenów preprocesora. Pozwala to na nietypowe zachowanie, takie jak następująca lewa do komentarza preprocesora, która nie działa w ramach preprocesora:
 
 ```cpp
 #if DISAPPEAR
@@ -58,7 +57,7 @@ Tradycyjny preprocesor opiera się na buforach znaków, a nie tokenach preproces
 DISAPPEARING_TYPE myVal;
 ```
 
-Poprawka zgodna ze standardami `int myVal` polega na `#ifdef/#endif` deklarowaniu wewnątrz odpowiednich dyrektyw:
+Standardy — zgodność ze standardami polega na zadeklaruje `int myVal` wewnątrz odpowiednich `#ifdef/#endif` dyrektyw:
 
 ```cpp
 #define MYVAL 1
@@ -68,9 +67,9 @@ int myVal;
 #endif
 ```
 
-### <a name="lval"></a>L#val
+### <a name="lval"></a>L # Val
 
-Tradycyjny preprocesor niepoprawnie łączy prefiks ciągu z wynikiem [operatora stringizing (#):](stringizing-operator-hash.md)
+Tradycyjny preprocesor niepoprawnie łączy prefiks ciągu z wynikiem operatora [tworzenia ciągu (#)](stringizing-operator-hash.md) :
 
 ```cpp
  #define DEBUG_INFO(val) L"debug prefix:" L#val
@@ -80,7 +79,7 @@ Tradycyjny preprocesor niepoprawnie łączy prefiks ciągu z wynikiem [operatora
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-W takim przypadku `L` prefiks jest zbędne, ponieważ literały sąsiednich ciągów są łączone po rozwinieniu makra i tak. Poprawka zgodna z do tyłu polega na zmianie definicji:
+W tym przypadku `L` prefiks jest niezbędny, ponieważ sąsiadujące literały ciągu są łączone po rozwinięciu tego makra. Poprawka zgodna z poprzednimi wersjami ma na celu zmianę definicji:
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -88,7 +87,7 @@ W takim przypadku `L` prefiks jest zbędne, ponieważ literały sąsiednich cią
 //                                       no prefix
 ```
 
-Ten sam problem znajduje się również w makrach wygody, które "stringize" argument do szerokiego ciągu literal:
+Ten sam problem znajduje się również w wygodnych makrach, które "łańcuchujący" argumentem do szerokiego literału ciągu:
 
 ```cpp
  // The traditional preprocessor creates a single wide string literal token
@@ -97,28 +96,28 @@ Ten sam problem znajduje się również w makrach wygody, które "stringize" arg
 
 Problem można rozwiązać na różne sposoby:
 
-- Użyj konkabitacji `L""` `#str` ciągu i dodać prefiks. Sąsiednie literały ciągów są łączone po rozwinieniu makra:
+- Użyj łączenia ciągów `L""` i, `#str` Aby dodać prefiks. Sąsiadujące literały ciągu są łączone po rozwinięciu makra:
 
    ```cpp
    #define STRING1(str) L""#str
    ```
 
-- Dodaj prefiks `#str` po jest ciągniony z dodatkowym rozszerzeniem makra
+- Dodaj prefiks po `#str` ciągu z dodatkowym rozwinięciem makra
 
    ```cpp
    #define WIDE(str) L##str
    #define STRING2(str) WIDE(#str)
    ```
 
-- Operator łączenia służy `##` do łączenia tokenów. Kolejność operacji dla `##` `#` i jest nieokreślony, chociaż wszystkie kompilatory wydają się oceniać `#` operator wcześniej `##` w tym przypadku.
+- Użyj operatora łączenia, `##` Aby połączyć tokeny. Kolejność operacji dla `##` i `#` jest nieokreślona, mimo że wszystkie kompilatory pozornie `#` `##` wystawią operator w tym przypadku.
 
    ```cpp
    #define STRING3(str) L## #str
    ```
 
-### <a name="warning-on-invalid-"></a>Ostrzeżenie o nieprawidłowym\#\#
+### <a name="warning-on-invalid-"></a>Ostrzeżenie dla nieprawidłowego \#\#
 
-Gdy [operator wklejania tokenu (##)](token-pasting-operator-hash-hash.md) nie powoduje pojedynczego prawidłowego tokenu przetwarzania wstępnego, zachowanie jest niezdefiniowane. Tradycyjny preprocesor po cichu nie łączy tokenów. Nowy preprocesor pasuje do zachowania większości innych kompilatorów i emituje diagnostykę.
+Gdy [operator wklejania tokenu (# #)](token-pasting-operator-hash-hash.md) nie powoduje pojedynczego prawidłowego tokenu przetwarzania wstępnego, zachowanie jest niezdefiniowane. Tradycyjny preprocesor w trybie dyskretnym nie może połączyć tokenów. Nowy preprocesor jest zgodny z zachowaniem większości innych kompilatorów i emituje diagnostykę.
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -127,9 +126,9 @@ Gdy [operator wklejania tokenu (##)](token-pasting-operator-hash-hash.md) nie po
 ADD_STD(string) s;
 ```
 
-### <a name="comma-elision-in-variadic-macros"></a>Przecinek elision w makrach zmiennych
+### <a name="comma-elision-in-variadic-macros"></a>Dla koprocedury przecinków w makrach wariadyczne
 
-Tradycyjny preprocesor MSVC zawsze usuwa przecinki przed pustymi `__VA_ARGS__` zamiennikami. Eksperymentalny preprocesor bardziej śledzi zachowanie innych popularnych kompilatorów między platformami. Aby przecinek został usunięty, argument variadic musi brakować (nie tylko pusty) `##` i musi być oznaczony operatorem. Rozważmy następujący przykład:
+Tradycyjny preprocesor MSVC zawsze usuwa przecinki przed pustymi `__VA_ARGS__` zamiennikami. Nowy preprocesor jest bardziej blisko zachowaniem innych popularnych kompilatorów międzyplatformowych. Aby można było usunąć przecinek, argument wariadyczne musi być braku (nie tylko pusty) i musi być oznaczony `##` operatorem. Rozpatrzmy następujący przykład:
 
 ```cpp
 void func(int, int = 2, int = 3);
@@ -149,7 +148,7 @@ int main()
 }
 ```
 
-W poniższym przykładzie w `FUNC2(1)` wywołaniu argumentu variadic brakuje w wywoływanym makra. W wywołaniu `FUNC2(1, )` argumentu variadic jest pusty, ale nie brakuje (zwróć uwagę na przecinek na liście argumentów).
+W poniższym przykładzie w wywołaniu wywołania `FUNC2(1)` argumentu wariadyczne brakuje makra. W wywołaniu `FUNC2(1, )` argumentu wariadyczne jest puste, ale nie ma go na liście argumentów.
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -163,11 +162,11 @@ int main()
 }
 ```
 
-W nadchodzącym standardzie C++20 ten problem `__VA_OPT__`został rozwiązany przez dodanie . Eksperymentalna obsługa preprocesora `__VA_OPT__` jest dostępna od programu Visual Studio 2019 w wersji 16.5.
+W nadchodzącym standardzie języka C++ 20 ten problem został rozwiązany przez dodanie `__VA_OPT__` . Nowa obsługa preprocesora dla programu  `__VA_OPT__` jest dostępna w programie Visual Studio 2019 w wersji 16,5.
 
-### <a name="c20-variadic-macro-extension"></a>Rozszerzenie makra variadic C++20
+### <a name="c20-variadic-macro-extension"></a>Rozszerzenie makra wariadyczne języka c++ 20
 
-Eksperymentalny preprocesor obsługuje c++20 variadic makro argument elision:
+Nowy preprocesor obsługuje argument makra wariadyczne języka C++ 20 dla koprocedury:
 
 ```cpp
 #define FUNC(a, ...) __VA_ARGS__ + a
@@ -178,11 +177,11 @@ int main()
   }
 ```
 
-Ten kod nie jest zgodny przed standardem C++20. W programie MSVC eksperymentalny preprocesor rozszerza to zachowanie języka C++20 na niższe tryby standardowe języka (**`/std:c++14`**, **`/std:c++17`**). To rozszerzenie pasuje do zachowania innych głównych kompilatorów C++ między platformami.
+Ten kod nie jest zgodny przed standardem C++ 20. W programie MSVC nowy preprocesor rozszerza to zachowanie języka C++ 20 do trybu standardowego języka ( **`/std:c++14`** , **`/std:c++17`** ). To rozszerzenie jest zgodne z zachowaniem innych głównych kompilatorów języka C++ dla wielu platform.
 
 ### <a name="macro-arguments-are-unpacked"></a>Argumenty makr są "rozpakowane"
 
-W tradycyjnym preprocesorze, jeśli makro przekazuje jeden ze swoich argumentów do innego makro zależnego, argument nie zostanie "rozpakowany" po wstawieniu. Zazwyczaj ta optymalizacja pozostaje niezauważona, ale może prowadzić do nietypowego zachowania:
+W tradycyjnych preprocesorach, jeśli makro przekazuje jeden z argumentów do innego zależne makro, argument nie zostanie "rozpakowany", gdy zostanie wstawiony. Zwykle Ta optymalizacja nie jest zauważalna, ale może prowadzić do nietypowego zachowania:
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -197,11 +196,11 @@ const char* c[2] = { A(1, 2) };
 // const char c[2] = { "1, 2", };
 ```
 
-Podczas rozwijania, `A()`tradycyjny preprocesor przekazuje wszystkie argumenty `__VA_ARGS__` spakowane do pierwszego argumentu TWO_STRINGS, który pozostawia argument `TWO_STRINGS` variadic pusty. To powoduje, `#first` że wynik jest "1, 2", a nie tylko "1". Jeśli uważnie śledzisz, możesz się zastanawiać, co się stało `#__VA_ARGS__` z wynikiem tradycyjnego rozszerzenia preprocesora: jeśli parametr variadic jest pusty, powinien on spowodować pusty literał ciągu `""`. Oddzielny problem przechowywane pusty ciąg literał tokenu z generowane.
+Podczas rozszerzania `A()` tradycyjny preprocesor przekazuje wszystkie argumenty spakowane w `__VA_ARGS__` do pierwszego argumentu TWO_STRINGS, co pozostawia argument wariadyczne `TWO_STRINGS` pustego. Powoduje to, że wynikiem `#first` będzie "1, 2", a nie tylko "1". Jeśli masz ścisłą pracę, możesz zastanawiać się, co się stało z wynikami `#__VA_ARGS__` w tradycyjnym rozszerzeniu preprocesora: Jeśli parametr wariadyczne jest pusty, powinien wynikać z pustym literałem ciągu `""` . Oddzielny problem utrzymuje pusty token literału ciągu.
 
-### <a name="rescanning-replacement-list-for-macros"></a>Ponowne skanowanie listy zastępów dla makr
+### <a name="rescanning-replacement-list-for-macros"></a>Ponowne skanowanie listy zastępczej dla makr
 
-Po wymianie makra tokeny wynikowe są ponownie skanowane w celu zastąpienia dodatkowych identyfikatorów makr. Algorytm używany przez tradycyjny preprocesor do wykonywania rescan nie jest zgodny, jak pokazano w tym przykładzie na podstawie rzeczywistego kodu:
+Po wymianie makra powstające tokeny są ponownie skanowane pod kątem dodatkowych identyfikatorów makr, które mają zostać zastąpione. Algorytm używany przez tradycyjny preprocesor w celu przeprowadzenia ponownego skanowania nie jest zgodny, jak pokazano w tym przykładzie na podstawie rzeczywistego kodu:
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -220,16 +219,18 @@ DO_THING(1, "World");
 // IMPL1 ( "Hello","World");
 ```
 
-Chociaż ten przykład może wydawać się nieco wymyślony, widzieliśmy go w rzeczywistym kodzie świata. Aby zobaczyć, co się dzieje, możemy rozbić `DO_THING`ekspansję, zaczynając od:
+Chociaż ten przykład może wydawać się bitowym contrived, jest on widoczny w rzeczywistym kodzie.
 
-1. `DO_THING(1, "World")`rozszerza się na`CAT(IMPL, 1) ECHO(("Hello", "World"))`
-1. `CAT(IMPL, 1)`rozszerza się `IMPL ## 1`do , który rozszerza się na`IMPL1`
-1. Teraz tokeny są w tym stanie:`IMPL1 ECHO(("Hello", "World"))`
-1. Preprocesor odnajduje identyfikator `IMPL1`makra podobnego do funkcji . Ponieważ nie następuje `(`po nim , nie jest uważany za wywołanie makra podobnego do funkcji.
-1. Preprocesor przechodzi do następujących tokenów. Znajduje się makro `ECHO` podobne do funkcji, które zostanie wywołane: `ECHO(("Hello", "World"))`, które rozszerza się do`("Hello", "World")`
-1. `IMPL1`nigdy nie jest ponownie brana pod uwagę do ekspansji, więc pełny wynik ekspansji jest:`IMPL1("Hello", "World");`
+Aby zobaczyć, co się dzieje, możemy rozdzielić rozwinięcie, rozpoczynając od `DO_THING` :
 
-Aby zmodyfikować makro tak samo w przypadku preprocesora doświadczalnego, jak i tradycyjnego preprocesora, dodaj kolejną warstwę pośrednictwu:
+1. `DO_THING(1, "World")` rozwija się do `CAT(IMPL, 1) ECHO(("Hello", "World"))`
+1. `CAT(IMPL, 1)` rozwija do `IMPL ## 1` , który rozwija się do `IMPL1`
+1. Teraz tokeny są w tym stanie: `IMPL1 ECHO(("Hello", "World"))`
+1. Preprocesor wyszukuje identyfikator makra podobnej do funkcji `IMPL1` . Ponieważ nie następuje, nie jest `(` uważany za wywołanie makra podobnej do funkcji.
+1. Preprocesor przechodzi do następujących tokenów. Odnajdzie makro podobne do funkcji `ECHO` wywoływane: `ECHO(("Hello", "World"))` , które rozwija się do `("Hello", "World")`
+1. `IMPL1` nigdy nie jest ponownie brany pod uwagę dla rozwinięcia, więc pełny wynik rozwinięcia to: `IMPL1("Hello", "World");`
+
+Aby zmodyfikować makro tak samo jak w przypadku nowego preprocesora i tradycyjnego preprocesora, Dodaj kolejną warstwę operatora:
 
 ```cpp
 #define CAT(a,b) a##b
@@ -245,12 +246,12 @@ DO_THING_FIXED(1, "World");
 // do_thing_one( "Hello", "World");
 ```
 
-## <a name="incomplete-features"></a>Niekompletne funkcje
+## <a name="incomplete-features-before-165"></a>Niekompletne funkcje przed 16,5
 
-Począwszy od programu Visual Studio 2019 w wersji 16.5, eksperymentalny preprocesor jest kompletny dla języka C++20. W poprzednich wersjach programu Visual Studio eksperymentalny preprocesor jest w większości kompletny, chociaż niektóre logiki dyrektywy preprocesora nadal wraca do tradycyjnego zachowania. Oto częściowa lista niekompletnych funkcji w wersjach programu Visual Studio przed wersją 16.5:
+Począwszy od programu Visual Studio 2019 w wersji 16,5, nowy preprocesor to funkcja kompletna dla języka C++ 20. W poprzednich wersjach programu Visual Studio nowy preprocesor jest przeważnie kompletny, mimo że niektóre logika dyrektywy preprocesora nadal powraca do tradycyjnego zachowania. Oto częściowa lista niekompletnych funkcji w wersjach programu Visual Studio przed 16,5:
 
-- Wsparcie dla`_Pragma`
-- Funkcje języka C++20
-- Błąd blokowania doładowania: Operatory logiczne w wyrażeniach stałych preprocesora nie są w pełni zaimplementowane w nowym preprocesorze przed wersją 16.5. W `#if` niektórych dyrektywach nowy preprocesor może wrócić do tradycyjnego preprocesora. Efekt jest zauważalny tylko wtedy, gdy makra niezgodne z tradycyjnym preprocesorem zostają rozszerzone. Może się to zdarzyć podczas tworzenia slotów preprocesora Boost.
+- Obsługa `_Pragma`
+- Funkcje języka c++ 20
+- Zwiększ usterkę blokującą: operatory logiczne w wyrażeniach stałych preprocesora nie są w pełni zaimplementowane w nowym preprocesorze przed wersją 16,5. W przypadku niektórych `#if` dyrektyw nowy preprocesor może wrócić do tradycyjnego preprocesora. Efekt jest zauważalny tylko wtedy, gdy makra niezgodne z tradycyjną preprocesorem zostaną rozwinięte. Może się tak zdarzyć podczas kompilowania miejsc preprocesora.
 
 ::: moniker-end

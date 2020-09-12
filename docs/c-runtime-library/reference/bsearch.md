@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913381"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039550"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -78,11 +78,11 @@ Funkcja **bsearch** wykonuje binarne wyszukiwanie posortowanej tablicy elementó
 
 |Wartość zwrócona przez procedurę *porównania*|Opis|
 |-----------------------------------------|-----------------|
-|\<2,0|Klucz jest mniejszy niż element tablicy.|
-|0|Klucz jest równy elementowi tablicy.|
-|> 0|Klucz jest większy niż element tablicy.|
+|`< 0`|Klucz jest mniejszy niż element tablicy.|
+|`0`|Klucz jest równy elementowi tablicy.|
+|`> 0`|Klucz jest większy niż element tablicy.|
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* wynosi zero, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na `EINVAL` , a funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* wynosi zero, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na, `EINVAL` a funkcja zwraca **wartość null**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -90,7 +90,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**bsearch**|\<STDLIB. h> i \<Search. h>|
+|**bsearch**|\<stdlib.h> i \<search.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -139,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

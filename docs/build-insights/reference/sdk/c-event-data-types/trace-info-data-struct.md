@@ -1,6 +1,6 @@
 ---
-title: struktura TRACE_INFO_DATA
-description: C++ Build Insights SDK TRACE_INFO_DATA odwołania do struktury.
+title: Struktura TRACE_INFO_DATA
+description: Informacje o strukturze TRACE_INFO_DATA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38683ff2c5c5165b5fe2a1969ccf80fbfca3693f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325276"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040460"
 ---
-# <a name="trace_info_data-structure"></a>struktura TRACE_INFO_DATA
+# <a name="trace_info_data-structure"></a>Struktura TRACE_INFO_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `TRACE_INFO_DATA` opisuje śledzenia analizowane lub ponownie rejestrowane.
+`TRACE_INFO_DATA`Struktura opisuje przeanalizowane lub ponownie zarejestrowane ślady.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,15 +42,15 @@ typedef struct TRACE_INFO_DATA_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `LogicalProcessorCount` | Liczba procesorów logicznych na komputerze, na którym zebrano ślad. |
-| `TickFrequency` | Liczba znaczników na sekundę do użycia podczas oceny czasu trwania mierzonego w kleszczach. |
-| `StartTimestamp` | To pole jest ustawione na wartość znacznika przechwyconą w momencie rozpoczęcia śledzenia. |
-| `StopTimestamp` | To pole jest ustawione na wartość znacznika przechwyconą w momencie zatrzymania śledzenia. |
+| `LogicalProcessorCount` | Liczba procesorów logicznych na komputerze, na którym zebrano dane śledzenia. |
+| `TickFrequency` | Liczba taktów na sekundę do użycia podczas oceniania czasu trwania mierzoną w taktach. |
+| `StartTimestamp` | To pole jest ustawione na wartość takt przechwyconą w momencie rozpoczęcia śledzenia. |
+| `StopTimestamp` | To pole jest ustawione na wartość takt przechwyconą w momencie zatrzymania śledzenia. |
 
 ## <a name="remarks"></a>Uwagi
 
-`StartTimestamp` Odejmij `StopTimestamp` od uzyskania liczby kleszczy, które upłynęło podczas całego śladu. Służy `TickFrequency` do konwertowania wartości wynikowej na jednostkę czasu. Na przykład, który konwertuje znaczniki na jednostki czasu, zobacz [EVENT_DATA](event-data-struct.md).
+Odejmij `StartTimestamp` od `StopTimestamp` , aby uzyskać liczbę taktów, które upłynęły podczas całego śledzenia. Służy `TickFrequency` do konwertowania wartości wyniku na jednostkę czasu. Aby zapoznać się z przykładem, który konwertuje Takty na jednostki czasu, zobacz [EVENT_DATA](event-data-struct.md).
 
 ::: moniker-end

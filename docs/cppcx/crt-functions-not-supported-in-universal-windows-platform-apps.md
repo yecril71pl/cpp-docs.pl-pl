@@ -3,12 +3,12 @@ title: Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej sys
 description: Przewodnik referencyjny do funkcji CRT, które nie są obsługiwane w aplikacjach platforma uniwersalna systemu Windows.
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845721"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041838"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows
 
@@ -18,7 +18,7 @@ W poniższej tabeli wymieniono funkcje CRT, które są niedostępne podczas komp
 
 ## <a name="unsupported-crt-functions"></a>Nieobsługiwane funkcje CRT
 
-|Funkcja|Opis|Obejście|
+| Funkcja | Opis | Obejście |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|Te funkcje były przestarzałe w poprzednich wersjach CRT. Ponadto odpowiednie interfejsy API Win32 nie są dostępne dla aplikacji platformy UWP.|Brak obejścia.|
 |`chdir` `_chdrive` `getcwd`|Te funkcje są przestarzałe lub nie są bezpieczne dla wątków.|Używanie `_chdir` `_getcwd` i powiązane funkcje.|
@@ -33,12 +33,12 @@ W poniższej tabeli wymieniono funkcje CRT, które są niedostępne podczas komp
 |`_getsystime` `_setsystime`|Są to przestarzałe interfejsy API w poprzednich wersjach CRT. Ponadto użytkownik nie może ustawić czasu systemowego w aplikacji platformy UWP z powodu braku uprawnień.|Aby uzyskać tylko czas systemowy, użyj Win32 API `GetSystemTime` . Nie można ustawić czasu systemowego.|
 |`_environ``_putenv` `_putenv_s` `_searchenv` `_searchenv_s` `_dupenv_s` `_wputenv` `_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|Zmienne środowiskowe nie są dostępne dla aplikacji platformy UWP.|Brak obejścia. Aby ustawić strefę czasową, użyj `_tzset` .|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|Te funkcje były przestarzałe w poprzednich wersjach CRT. Ponadto użytkownik nie może ładować bibliotek DLL, z wyjątkiem tych, które są w tym samym pakiecie aplikacji.|Używaj interfejsów API Win32 `LoadPackagedLibrary` , `GetProcAddress` i `FreeLibrary` do ładowania i używania spakowanych bibliotek DLL.|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe`" ` ` spawnle ` ` spawnlp ` ` spawnlpe ` ` spawnv ` ` spawnve ` ` spawnvp ` ` spawnvpe ` ` system"|Ta funkcja jest niedostępna w aplikacjach platformy UWP. Aplikacja platformy UWP nie może wywołać innej aplikacji platformy UWP lub aplikacji klasycznej.|Brak obejścia.|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|Ta funkcja jest niedostępna w aplikacjach platformy UWP. Aplikacja platformy UWP nie może wywołać innej aplikacji platformy UWP lub aplikacji klasycznej.|Brak obejścia.|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|Te funkcje są zwykle używane do pracy ze stertą. Jednak odpowiednie interfejsy API Win32 nie są obsługiwane w aplikacjach platformy UWP. Aplikacje nie mogą już tworzyć ani używać stert prywatnych.|Brak obejścia. Jednak program `_heapwalk` jest dostępny w debugowaniu CRT tylko do celów debugowania. Tych funkcji nie można używać w aplikacjach, które są przekazywane do Microsoft Store.|
 
 Następujące funkcje są dostępne w aplikacji CRT for platformy UWP. Jednak należy ich używać tylko wtedy, gdy nie można używać odpowiednich interfejsów API Win32 lub środowisko wykonawcze systemu Windows, na przykład podczas przenoszenia dużych baz kodu:
 
-|Functions|Obejście|
+| Funkcje | Obejście |
 |-|-|
 |Jednobajtowe funkcje ciągów — na przykład,,, `strcat` `strcpy` `strlwr` i tak dalej.|PLATFORMY UWP aplikacje w formacie Unicode, ponieważ wszystkie interfejsy API Win32 i interfejsy API środowisko wykonawcze systemu Windows, które są dostępne, korzystają tylko z zestawów znaków Unicode.  Funkcje jednobajtowe zostały pozostawione w przypadku przenoszenia dużych baz kodu, ale w przeciwnym razie należy je unikać. Jeśli jest to możliwe, należy użyć odpowiednich funkcji o szerokim znaku.|
 |Funkcje we/wy strumienia i niskiego poziomu plików — na przykład,, `fopen` `open` i tak dalej.|Te funkcje są synchroniczne, co nie jest zalecane w przypadku aplikacji platformy UWP. W aplikacjach platformy UWP Użyj asynchronicznych interfejsów API, aby otworzyć, odczytać i zapisać w plikach, aby zapobiec zablokowaniu wątku interfejsu użytkownika. Przykładami takich interfejsów API są te, które znajdują się w `Windows::Storage::FileIO` klasie.|
@@ -47,7 +47,7 @@ Następujące funkcje są dostępne w aplikacji CRT for platformy UWP. Jednak na
 
 Wymienione wyżej interfejsy API i poniższe interfejsy API są niedostępne w aplikacjach do sklepu Windows 8. x i aplikacji Windows Phone 8. x.
 
-|Functions|Opis|Obejście|
+| Funkcje | Opis | Obejście |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|Wątki API Win32 nie są dostępne w aplikacjach do sklepu Windows 8. x.|`Windows Runtime Windows::System::Threading::ThreadPool` `concurrency::task` Zamiast tego użyj lub.|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|Koncepcja katalogu roboczego nie ma zastosowania do aplikacji ze sklepu Windows 8. x.|Zamiast tego użyj pełnych ścieżek.|

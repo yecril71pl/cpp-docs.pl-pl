@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520930"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042059"
 ---
 # <a name="pair-structure"></a>pair — Struktura
 
@@ -70,13 +70,14 @@ Para, której wartości mają być używane do inicjowania elementów innej pary
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Pierwszy (domyślny) Konstruktor inicjuje pierwszy element pary do domyślnego `T1` elementu Type i Second do default typu `T2` .
+Pierwszy (domyślny) Konstruktor inicjuje pierwszy element pary do wartości domyślnej typu `T1` i drugiego elementu do wartości domyślnej typu `T2` .  Jest on definiowany, jeśli oba typy to Default-konstrukcyjną.
 
-Drugi Konstruktor inicjuje pierwszy element pary do *Val1* i sekundę do *val2.*
+Drugi Konstruktor inicjuje pierwszy element pary do *Val1* , a drugi do *val2.*  Jest on definiowany, jeśli oba typy to Copy-konstrukcyjną.
 
-Trzeci Konstruktor (Template) inicjuje pierwszy element pary do `Right` . **pierwszy** i drugi do `Right` . **sekunda**.
+Trzeci Konstruktor (Template) inicjuje pierwszy element pary do `Right` . **pierwszy** i drugi do `Right` . **sekunda**.  Jest on definiowany, jeśli oba typy par są konstrukcyjną z dostarczonych typów wartości.
 
-Czwarty Konstruktor inicjuje pierwszy element pary do *Val1* i sekundę do *val2* przy użyciu [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+Czwarty Konstruktor inicjuje pierwszy element pary do *Val1* , a drugi do *val2* przy użyciu [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Jest on definiowany, jeśli oba typy par są konstrukcyjną z dostarczonych typów wartości.
 
 ## <a name="remarks"></a>Uwagi
 

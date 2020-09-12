@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229925"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041825"
 ---
 # <a name="event_data-structure"></a>Struktura EVENT_DATA
 
@@ -58,7 +58,7 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
 | `EventId` | Liczba, która identyfikuje zdarzenie. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](event-id-enum.md). |
 | `EventInstanceId` | Liczba, która jednoznacznie identyfikuje bieżące zdarzenie wewnątrz śladu. Ta wartość nie ulega zmianie podczas analizowania lub wielokrotnego rejestrowania tego samego śledzenia. To pole służy do identyfikowania tego samego zdarzenia w wielu analizach lub przerejestrowaniu przebiegów tego samego śledzenia. |
@@ -79,11 +79,11 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele pól w programie `EVENT_DATA` zawiera liczbę cykli. Informacje o kompilacji w języku C++ wykorzystują licznik wydajności okna jako źródło taktów. Liczba cykli musi być użyta z `TickFrequency` polem, aby przekonwertować ją do odpowiedniej jednostki czasu, na przykład sekund. Zapoznaj się z poniższym przykładem w celu wykonania tej konwersji. `EVENT_DATA`nie zawiera pola dla zwykłej liczby cykli działania. Aby uzyskać tę wartość, Odejmij `StartTimestamp` od `StopTimestamp` . `EVENT_DATA`jest strukturą, która jest przeznaczona do użycia przez użytkowników interfejsu API języka C. W przypadku użytkowników interfejsu API C++ klasy takie jak [zdarzenia](../cpp-event-data-types/event.md) do konwersji czasu są automatycznie.
+Wiele pól w programie `EVENT_DATA` zawiera liczbę cykli. Informacje o kompilacji w języku C++ wykorzystują licznik wydajności okna jako źródło taktów. Liczba cykli musi być użyta z `TickFrequency` polem, aby przekonwertować ją do odpowiedniej jednostki czasu, na przykład sekund. Zapoznaj się z poniższym przykładem w celu wykonania tej konwersji. `EVENT_DATA` nie zawiera pola dla zwykłej liczby cykli działania. Aby uzyskać tę wartość, Odejmij `StartTimestamp` od `StopTimestamp` . `EVENT_DATA` jest strukturą, która jest przeznaczona do użycia przez użytkowników interfejsu API języka C. W przypadku użytkowników interfejsu API C++ klasy takie jak [zdarzenia](../cpp-event-data-types/event.md) do konwersji czasu są automatycznie.
 
 Wartość `EVENT_DATA` `Data` pola zależy od wartości `EventId` pola. Wartość `Data` jest opisana w poniższej tabeli. W poniższej tabeli mogą brakować identyfikatorów jednostek. W tym przypadku `Data` pole jest ustawione na wartość **`nullptr`** lub zero.
 
-| `EventId`wartościami | Typ wskazywany przez`Data` |
+| `EventId` wartościami | Typ wskazywany przez `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |

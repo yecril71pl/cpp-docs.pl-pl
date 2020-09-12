@@ -2,12 +2,12 @@
 title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182814"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041461"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -27,7 +27,7 @@ C++ AMP zawiera kilka interfejsów API w przestrzeni nazw [concurrency:: Graphic
 
 Krótka Biblioteka wektorów udostępnia niektóre funkcje [typu wektora](https://go.microsoft.com/fwlink/p/?linkid=248500) zdefiniowanego w HLSL i są zwykle używane do definiowania tekseli. Krótki wektor jest strukturą danych, która przechowuje od jednej do czterech wartości tego samego typu. Obsługiwane typy to **`double`** ,,,, **`float`** **`int`** `norm` `uint` i `unorm` . Nazwy typów są pokazane w poniższej tabeli. Dla każdego typu istnieje również odpowiednia **`typedef`** , która nie ma znaku podkreślenia w nazwie. Typy, które mają znaki podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , dzięki czemu są wyraźnie oddzielone od typów podstawowych o podobnej nazwie, takich jak **`__int8`** i **`__int16`** .
 
-||Długość 2|Długość 3|Długość 4|
+|Typ|Długość 2|Długość 3|Długość 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|

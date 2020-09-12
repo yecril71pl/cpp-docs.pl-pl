@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: d074646a333090138c916bc4d3b7a2e072731b3d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228417"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042046"
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 
@@ -26,17 +26,17 @@ W przypadku korzystania z metody [concurrency:: CurrentScheduler:: Create](refer
 
 [Olicyelementkey "concurrency::P](reference/concurrency-namespace-enums.md#policyelementkey) Enumeration definiuje klucze zasad, które są skojarzone z harmonogram zadań. Poniższa tabela zawiera opis kluczy zasad i wartości domyślnej używanej przez środowisko uruchomieniowe dla każdego z nich.
 
-|Klucz zasad|Opis|Wartość domyślna|
-|----------------|-----------------|-------------------|
-|`SchedulerKind`|[Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) wartość określająca typ wątków do użycia w celu planowania zadań.|`ThreadScheduler`(Użyj zwykłych wątków). Jest to jedyna prawidłowa wartość dla tego klucza.|
-|`MaxConcurrency`|Wartość określająca **`unsigned int`** maksymalną liczbę zasobów współbieżności używanych przez harmonogram.|[concurrency:: MaxExecutionResources —](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|Wartość określająca **`unsigned int`** minimalną liczbę zasobów współbieżności używanych przez harmonogram.|`1`|
-|`TargetOversubscriptionFactor`|Wartość określająca liczbę **`unsigned int`** wątków do przydzielenia do każdego zasobu przetwarzania.|`1`|
-|`LocalContextCacheSize`|Wartość określająca **`unsigned int`** maksymalną liczbę kontekstów, które mogą być buforowane w lokalnej kolejce każdego procesora wirtualnego.|`8`|
-|`ContextStackSize`|Wartość określająca **`unsigned int`** rozmiar stosu w kilobajtach, który ma zostać zarezerwowany dla każdego kontekstu.|`0`(Użyj domyślnego rozmiaru stosu)|
-|`ContextPriority`|**`int`** Wartość, która określa priorytet wątku dla każdego kontekstu. Może to być dowolna wartość, którą można przekazać do [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) lub `INHERIT_THREAD_PRIORITY` .|`THREAD_PRIORITY_NORMAL`|
-
-|`SchedulingProtocol`| [Concurrency:: SchedulingProtocolType —](reference/concurrency-namespace-enums.md#schedulingprotocoltype) wartość określająca algorytm planowania do użycia. | `EnhanceScheduleGroupLocality` | |`DynamicProgressFeedback`| [Współbieżność::D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) wartość określająca, czy należy zrównoważyć zasoby zgodnie z informacjami o postępie opartym na statystyce.<br /><br /> **Uwaga** Nie należy ustawiać tych zasad, `ProgressFeedbackDisabled` ponieważ są one zarezerwowane do użytku przez środowisko uruchomieniowe. |`ProgressFeedbackEnabled`|
+| Klucz zasad | Description | Wartość domyślna |
+|--|--|--|
+| `SchedulerKind` | [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) wartość określająca typ wątków do użycia w celu planowania zadań. | `ThreadScheduler` (Użyj zwykłych wątków). Jest to jedyna prawidłowa wartość dla tego klucza. |
+| `MaxConcurrency` | Wartość określająca **`unsigned int`** maksymalną liczbę zasobów współbieżności używanych przez harmonogram. | [concurrency:: MaxExecutionResources —](reference/concurrency-namespace-constants1.md#maxexecutionresources) |
+| `MinConcurrency` | Wartość określająca **`unsigned int`** minimalną liczbę zasobów współbieżności używanych przez harmonogram. | `1` |
+| `TargetOversubscriptionFactor` | Wartość określająca liczbę **`unsigned int`** wątków do przydzielenia do każdego zasobu przetwarzania. | `1` |
+| `LocalContextCacheSize` | Wartość określająca **`unsigned int`** maksymalną liczbę kontekstów, które mogą być buforowane w lokalnej kolejce każdego procesora wirtualnego. | `8` |
+| `ContextStackSize` | Wartość określająca **`unsigned int`** rozmiar stosu w kilobajtach, który ma zostać zarezerwowany dla każdego kontekstu. | `0` (Użyj domyślnego rozmiaru stosu) |
+| `ContextPriority` | **`int`** Wartość, która określa priorytet wątku dla każdego kontekstu. Może to być dowolna wartość, którą można przekazać do [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) lub `INHERIT_THREAD_PRIORITY` . | `THREAD_PRIORITY_NORMAL` |
+| `SchedulingProtocol` | [Concurrency:: SchedulingProtocolType —](reference/concurrency-namespace-enums.md#schedulingprotocoltype) wartość określająca algorytm planowania do użycia. | `EnhanceScheduleGroupLocality` |
+| `DynamicProgressFeedback` | [Współbieżność::D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) wartość określająca, czy należy zrównoważyć zasoby zgodnie z informacjami o postępie opartym na statystyce.<br /><br /> **Uwaga** Nie należy ustawiać tych zasad, `ProgressFeedbackDisabled` ponieważ są one zarezerwowane do użytku przez środowisko uruchomieniowe. | `ProgressFeedbackEnabled` |
 
 Każdy harmonogram używa własnych zasad podczas planowania zadań. Zasady skojarzone z jednym harmonogramem nie wpływają na zachowanie innych harmonogramów. Ponadto nie można zmienić zasad harmonogramu po utworzeniu `Scheduler` obiektu.
 

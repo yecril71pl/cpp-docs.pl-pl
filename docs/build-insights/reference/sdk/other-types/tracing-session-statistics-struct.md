@@ -1,6 +1,6 @@
 ---
 title: Struktura TRACING_SESSION_STATISTICS
-description: C++ Build Insights SDK TRACING_SESSION_OPTIONS odwołania do struktury.
+description: Informacje o strukturze TRACING_SESSION_OPTIONS zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 96cff3a231fd515ec1c52a048b8350a63ba46a39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323384"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041188"
 ---
 # <a name="tracing_session_statistics-structure"></a>Struktura TRACING_SESSION_STATISTICS
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `TRACING_SESSION_STATISTICS` opisuje statystyki śledzenia, który został zebrany. Jego pola są ustawiane podczas zatrzymywania sesji śledzenia.
+`TRACING_SESSION_STATISTICS`Struktura zawiera informacje statystyczne na temat zebranych śladów. Jego pola są ustawiane podczas zatrzymywania sesji śledzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,24 +42,24 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `MSVCEventsLost` | Liczba zdarzeń MSVC, które zostały usunięte. |
-| `MSVCBuffersLost` | Liczba buforów zdarzeń MSVC, które zostały usunięte. |
-| `SystemEventsLost` | Liczba zdarzeń systemowych, które zostały usunięte. |
-| `SystemBuffersLost` | Liczba buforów zdarzeń systemowych, które zostały usunięte. |
+| `MSVCEventsLost` | Liczba porzuconych zdarzeń MSVC. |
+| `MSVCBuffersLost` | Liczba porzuconych buforów zdarzeń MSVC. |
+| `SystemEventsLost` | Liczba porzuconych zdarzeń systemowych. |
+| `SystemBuffersLost` | Liczba porzuconych buforów zdarzeń systemu. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura jest wypełniona podczas wywoływania następujących funkcji:
+Ta struktura jest wypełniana podczas wywoływania następujących funkcji:
 
-- [StopTracingSession (StopTracingSession)](../functions/stop-tracing-session.md)
+- [StopTracingSession](../functions/stop-tracing-session.md)
 - [StopTracingSessionA](../functions/stop-tracing-session-a.md)
 - [StopTracingSessionW](../functions/stop-tracing-session-w.md)
-- [StopAndAnalyzeTracingSession (StopAndAnalyzeTracingSession)](../functions/stop-and-analyze-tracing-session.md)
+- [StopAndAnalyzeTracingSession](../functions/stop-and-analyze-tracing-session.md)
 - [StopAndAnalyzeTracingSessionA](../functions/stop-and-analyze-tracing-session-a.md)
 - [StopAndAnalyzeTracingSessionW](../functions/stop-and-analyze-tracing-session-w.md)
-- [StopAndRelogTracingSession (StopAndRelogTracingSession)](../functions/stop-and-relog-tracing-session.md)
+- [StopAndRelogTracingSession](../functions/stop-and-relog-tracing-session.md)
 - [StopAndRelogTracingSessionA](../functions/stop-and-relog-tracing-session-a.md)
 - [StopAndRelogTracingSessionW](../functions/stop-and-relog-tracing-session-w.md)
 

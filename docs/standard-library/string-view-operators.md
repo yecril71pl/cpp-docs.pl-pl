@@ -1,6 +1,7 @@
 ---
 title: '&lt;&gt;operatory string_view'
-ms.date: 04/19/2019
+description: Dokumentacja interfejsu API dla `string_view` operatorów, które służą do porównywania dwóch `string_view` obiektów lub `string_view` a i innego obiektu String
+ms.date: 9/4/2020
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833221"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039888"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;&gt;operatory string_view
 
@@ -330,6 +331,10 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="requirements"></a>Wymagania
+
+[/std: c++ 17](../build/reference/std-specify-language-standard-version.md)
+
+## <a name="see-also"></a>Zobacz także
 
 [\<string_view>](../standard-library/string-view.md)

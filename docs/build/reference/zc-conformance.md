@@ -1,20 +1,21 @@
 ---
 title: /Zc (Zgodność)
-ms.date: 03/06/2018
+description: Opcje kompilatora zgodność/Zc włączają lub wyłączają obsługę zgodności zgodnej z poprzednimi lub wstecznymi.
+ms.date: 09/10/2020
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6d6d3b7736fd1775372a3b2093c53e177db5099e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234357"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041526"
 ---
-# <a name="zc-conformance"></a>`/Zc`Zgodności
+# <a name="zc-conformance"></a>`/Zc` Zgodności
 
 Możesz użyć **`/Zc`** opcji kompilatora, aby określić zachowanie kompilatora standardowego lub określonego przez firmę Microsoft.
 
@@ -38,6 +39,7 @@ Są to **`/Zc`** Opcje kompilatora:
 | [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Włącz niejawne **`noexcept`** dla wymaganych funkcji (domyślnie włączone). |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | Usuń odwołującą się funkcję lub dane, jeśli jest COMDAT lub ma tylko wewnętrzne połączenie (domyślnie wyłączone). |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | Wymuś reguły języka C++ 17 **`noexcept`** (włączone domyślnie w języku c++ 17 lub nowszym). |
+| [`/Zc:preprocessor`](zc-preprocessor.md) | Użyj nowego preprocesora, który jest domyślnie, z wyjątkiem C11/C17). |
 | [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | Tymczasowa wartość parametru UDT nie zostanie powiązana z odwołaniem lvalue innym niż const (domyślnie wyłączone). |
 | [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | Wymuszaj reguły konwersji jawnego typu standardowego języka C++ (domyślnie wyłączone). |
 | [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | Włącz funkcje cofania alokacji o rozmiarze globalnym w języku C++ 14 (domyślnie włączone). |

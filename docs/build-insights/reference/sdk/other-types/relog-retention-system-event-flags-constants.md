@@ -1,6 +1,6 @@
 ---
-title: RELOG_RETENTION_SYSTEM_EVENT_FLAGS stałe
-description: C++ Build Insights SDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS odwołania stałych.
+title: Stałe RELOG_RETENTION_SYSTEM_EVENT_FLAGS
+description: Zestaw SDK w usłudze C++ build Insights RELOG_RETENTION_SYSTEM_EVENT_FLAGS informacje stałe.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7110f809a819357b31951c203c1fa6ac9fb9f42e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5444c1a6b8799b1de8eea228211a5f2d6de638f8
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323469"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041409"
 ---
-# <a name="relog_retention_system_event_flags-constants"></a>RELOG_RETENTION_SYSTEM_EVENT_FLAGS stałe
+# <a name="relog_retention_system_event_flags-constants"></a>Stałe RELOG_RETENTION_SYSTEM_EVENT_FLAGS
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Stałe `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` są używane do opisania, które zdarzenia systemowe należy zachować w śladu ponownie rejestrowane. Użyj ich do zainicjowania `SystemEventsRetentionFlags` pola struktury [RELOG_DESCRIPTOR.](relog-descriptor-struct.md)
+`RELOG_RETENTION_SYSTEM_EVENT_FLAGS`Stałe są używane do opisywania, które zdarzenia systemowe należy zachować w ponownie zarejestrowanym śledzeniu. Użyj ich, aby zainicjować [RELOG_DESCRIPTOR](relog-descriptor-struct.md) pole struktury RELOG_DESCRIPTOR `SystemEventsRetentionFlags` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,10 +39,10 @@ static const unsigned long long
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Zachowaj zdarzenia systemu próbki procesora CPU w ponownie zarejestrowanym śladu. |
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Zachowaj wszystkie zdarzenia systemowe w ponownie zarejestrowanym śladu. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Zachowaj Przykładowe zdarzenia systemowe dotyczące procesora podczas ponownego rejestrowania śledzenia. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Zachowaj wszystkie zdarzenia systemowe w rejestrowanym śladzie. |
 
 ## <a name="remarks"></a>Uwagi
 

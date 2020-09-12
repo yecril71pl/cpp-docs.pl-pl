@@ -1,6 +1,6 @@
 ---
-title: Klasa wyliczenia AnalysisControl
-description: Odwołanie do wyliczenia Wyliczenia SDK AnalysisControl w ramach kompilacji języka C++.
+title: Klasa wyliczeniowa AnalysisControl
+description: Odwołanie do wyliczenia zestawu SDK usługi Build Insights AnalysisControl.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7b7fc0ce404f414b3ec07449bdc110d578fa101
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323643"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042020"
 ---
-# <a name="analysiscontrol-enum-class"></a>Klasa wyliczenia AnalysisControl
+# <a name="analysiscontrol-enum-class"></a>Klasa wyliczeniowa AnalysisControl
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `AnalysisControl` wyliczenia jest używana kontrolować przepływ analizy lub sesji ponownego rejestrowania. Zwraca `AnalysisControl` kod z funkcji elementu członkowskiego [IAnalyzer](ianalyzer-class.md) lub [IRelogger,](irelogger-class.md) aby kontrolować, co powinno się zdarzyć dalej.
+`AnalysisControl`Klasa enum służy do sterowania przepływem analizy lub sesji ponownego rejestrowania. Zwróć `AnalysisControl` kod z funkcji składowej [IAnalyzer](ianalyzer-class.md) lub [IRelogger](irelogger-class.md) , aby kontrolować, co powinno się stać dalej.
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `BLOCK` | Zapobiega dalszego propagowania bieżącego zdarzenia w grupie analizatora lub reloggera. |
-| `CANCEL` | Anuluj bieżącą sesję analizy lub ponownego rejestrowania. |
-| `CONTINUE` | Kontynuować bieżącą sesję analizy lub ponownego rejestrowania normalnie. Propagacji bieżącego zdarzenia do następnego analizatora lub relogger członka grupy. |
-| `FAILURE` | Anuluj bieżącą analizę lub ponowne rejestrowanie sesji i sygnalizuj błąd. |
+| `BLOCK` | Zapobiega dalszemu propagowaniu bieżącego zdarzenia w analizatorze lub grupie rejestratora. |
+| `CANCEL` | Anuluj bieżącą analizę lub przerejestrowanie. |
+| `CONTINUE` | Kontynuuj bieżącą analizę lub rejestrowanie w normalnym sesji. Propaguj bieżące zdarzenie do następnego elementu członkowskiego analizatora lub grupy ponownego rejestrowania. |
+| `FAILURE` | Anuluj bieżącą analizę lub przerejestrowanie sesji i sygnalizuj błąd. |
 
 ::: moniker-end

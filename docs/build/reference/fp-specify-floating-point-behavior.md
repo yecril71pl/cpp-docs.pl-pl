@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: f85f9b397ef3ab5bd070be1f4c81845405b14020
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234383"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040915"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Określenie zachowania zmiennoprzecinkowego)
 
@@ -43,11 +43,11 @@ Jeśli kod zmiennoprzecinkowy nie zależy od kolejności operacji i wyrażeń w 
 
 #### <a name="strict"></a>ściśle
 
-`/fp:strict`ma zachowanie podobne do `/fp:precise` , to oznacza, że kompilator zachowuje właściwości określania kolejności źródłowej i zaokrąglania kodu zmiennoprzecinkowego, gdy generuje i optymalizuje kod obiektu dla maszyny docelowej, i obserwuje Standard podczas obsługi wartości specjalnych. Ponadto program może bezpiecznie uzyskać dostęp lub zmodyfikować środowisko zmiennoprzecinkowe w czasie wykonywania.
+`/fp:strict` ma zachowanie podobne do `/fp:precise` , to oznacza, że kompilator zachowuje właściwości określania kolejności źródłowej i zaokrąglania kodu zmiennoprzecinkowego, gdy generuje i optymalizuje kod obiektu dla maszyny docelowej, i obserwuje Standard podczas obsługi wartości specjalnych. Ponadto program może bezpiecznie uzyskać dostęp lub zmodyfikować środowisko zmiennoprzecinkowe w czasie wykonywania.
 
 W obszarze `/fp:strict` , kompilator generuje kod, który umożliwia programowi bezpieczne anulowanie maskowania wyjątków zmiennoprzecinkowych, Odczyt lub zapis rejestrów stanu zmiennoprzecinkowego lub zmienianie trybów zaokrąglania. Jest ona zaokrąglana do dokładności kodu źródłowego w czterech określonych punktach podczas obliczania wyrażenia: w przypisaniach w typecasts, gdy argument zmiennoprzecinkowy jest przesyłany do wywołania funkcji i gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Obliczenia pośrednie mogą być wykonywane z dokładnością maszyny. Typecasts może służyć do jawnego zaokrąglania pośrednich obliczeń. Kompilator nie wykonuje transformacji algebraicznych w wyrażeniach zmiennoprzecinkowych, takich jak ponowne skojarzenie lub dystrybucja, chyba że transformacja ma na celu wygenerowanie bitowej identycznego wyniku. Wyrażenia, które obejmują specjalne wartości (NaN, + nieskończoność, nieskończoność,-0,0) są przetwarzane zgodnie ze specyfikacjami IEEE-754. Na przykład, `x != x` daje w **`true`** przypadku, gdy x jest NaN. Kontrakty zmiennoprzecinkowe nie są generowane w ramach `/fp:strict` .
 
-`/fp:strict`jest bardziej kosztowny niż `/fp:precise` ponieważ kompilator musi wstawić dodatkowe instrukcje dotyczące wyjątków pułapek i zezwalać programom na dostęp lub modyfikowanie środowiska zmiennoprzecinkowego w czasie wykonywania. Jeśli kod nie korzysta z tej możliwości, ale wymaga uporządkowania i zaokrąglania kodu źródłowego lub opiera się na wartościach specjalnych, użyj `/fp:precise` . W przeciwnym razie Rozważ użycie `/fp:fast` , co może spowodować szybsze i mniejsze kod.
+`/fp:strict` jest bardziej kosztowny niż `/fp:precise` ponieważ kompilator musi wstawić dodatkowe instrukcje dotyczące wyjątków pułapek i zezwalać programom na dostęp lub modyfikowanie środowiska zmiennoprzecinkowego w czasie wykonywania. Jeśli kod nie korzysta z tej możliwości, ale wymaga uporządkowania i zaokrąglania kodu źródłowego lub opiera się na wartościach specjalnych, użyj `/fp:precise` . W przeciwnym razie Rozważ użycie `/fp:fast` , co może spowodować szybsze i mniejsze kod.
 
 #### <a name="fast"></a>szybki
 
@@ -55,7 +55,7 @@ W obszarze `/fp:strict` , kompilator generuje kod, który umożliwia programowi 
 
 W obszarze `/fp:fast` kompilator generuje kod przeznaczony do uruchomienia w domyślnym środowisku zmiennoprzecinkowym i zakłada, że środowisko zmiennoprzecinkowe nie jest dostępne ani modyfikowane w czasie wykonywania. Oznacza to, że założono, że kod nie rozmaskuje wyjątków zmiennoprzecinkowych, odczytuje lub zapisuje rejestry stanu zmiennoprzecinkowego lub zmienia tryby zaokrąglania.
 
-`/fp:fast`Program jest przeznaczony dla programów, które nie wymagają dokładnego porządkowania kodu źródłowego i zaokrąglania wyrażeń zmiennoprzecinkowych, i nie opierają się na standardowych regułach obsługi wartości specjalnych, takich jak NaN. Jeśli kod zmiennoprzecinkowy wymaga zachowywania kolejności i zaokrąglania kodu źródłowego, lub opiera się na standardowym zachowaniu specjalnych wartości, użyj [/FP: precyzyjne](#precise). Jeśli kod uzyskuje dostęp do środowiska zmiennoprzecinkowego lub modyfikuje je, aby zmienić tryby zaokrąglania, anulować wyjątki zmiennoprzecinkowe lub sprawdzić stan zmiennoprzecinkowy, użyj [/FP: Strict](#strict).
+`/fp:fast` Program jest przeznaczony dla programów, które nie wymagają dokładnego porządkowania kodu źródłowego i zaokrąglania wyrażeń zmiennoprzecinkowych, i nie opierają się na standardowych regułach obsługi wartości specjalnych, takich jak NaN. Jeśli kod zmiennoprzecinkowy wymaga zachowywania kolejności i zaokrąglania kodu źródłowego, lub opiera się na standardowym zachowaniu specjalnych wartości, użyj [/FP: precyzyjne](#precise). Jeśli kod uzyskuje dostęp do środowiska zmiennoprzecinkowego lub modyfikuje je, aby zmienić tryby zaokrąglania, anulować wyjątki zmiennoprzecinkowe lub sprawdzić stan zmiennoprzecinkowy, użyj [/FP: Strict](#strict).
 
 #### <a name="except"></a>ale
 
@@ -73,7 +73,7 @@ Opcja [/za](za-ze-disable-language-extensions.md) (zgodność ze standardem ANSI
 
 Kompilator oferuje trzy dyrektywy pragma, aby zastąpić zachowanie zmiennoprzecinkowe określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)i [fp_contract](../../preprocessor/fp-contract.md). Za pomocą tych dyrektyw można kontrolować zachowanie zmiennoprzecinkowe na poziomie funkcji, a nie w ramach funkcji. Należy zauważyć, że dyrektywy te nie odpowiadają bezpośrednio na `/fp` Opcje. W tej tabeli pokazano, jak `/fp` Opcje i dyrektywy pragma są mapowane na siebie nawzajem. Aby uzyskać więcej informacji, zobacz dokumentację poszczególnych opcji i dyrektywy pragma.
 
-||float_control (precyzyjne)|float_control (z wyjątkiem)|fenv_access|fp_contract|
+| Opcja | float_control (precyzyjne) | float_control (z wyjątkiem) | fenv_access | fp_contract |
 |-|-|-|-|-|
 |`/fp:fast`|wyłączone|wyłączone|wyłączone|on|
 |`/fp:precise`|on|wyłączone|wyłączone|on|

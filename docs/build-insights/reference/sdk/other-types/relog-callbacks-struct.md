@@ -1,6 +1,6 @@
 ---
 title: Struktura RELOG_CALLBACKS
-description: C++ Build Insights SDK RELOG_CALLBACKS odwołania do struktury.
+description: Informacje o strukturze RELOG_CALLBACKS zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 60e7db81a48731090a23b82332704a79a51e97df
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55f63b05691e3d729ee42ed21049669b94053559
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328970"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041435"
 ---
 # <a name="relog_callbacks-structure"></a>Struktura RELOG_CALLBACKS
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `RELOG_CALLBACKS` jest używana podczas inicjowania [obiektu RELOG_DESCRIPTOR.](relog-descriptor-struct.md) Określa, które funkcje do wywołania podczas ponownego rejestrowania śledzenia zdarzeń dla systemu Windows (ETW) śledzenia.
+`RELOG_CALLBACKS`Struktura jest używana podczas inicjowania obiektu [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Określa funkcje, które mają być wywoływane podczas rejestrowania śledzenia zdarzeń systemu Windows (ETW).
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,19 +45,19 @@ typedef struct RELOG_CALLBACKS_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `OnStartActivity` | Wywoływana do przetwarzania zdarzenia rozpoczęcia działania. |
-| `OnStopActivity` | Wywoływana do przetwarzania zdarzenia zatrzymania działania. |
-| `OnSimpleEvent` | Wywoływana do przetwarzania prostego zdarzenia. |
-| `OnTraceInfo` | Wywoływany raz na początku przepojenia pass, po `OnBeginReloggingPass` został wywołany. |
-| `OnBeginRelogging` | Wywoływane podczas rozpoczynania sesji ponownego rejestrowania, przed rozpoczęciem przełęczy ponownego rejestrowania. |
-| `OnEndRelogging` | Wywoływana po zakończeniu sesji ponownego rejestrowania, po zakończeniu przełęczy ponownego rejestrowania. |
-| `OnBeginReloggingPass` | Wywoływane podczas rozpoczynania przepustu ponownego rejestrowania, przed przetworzeniem dowolnego zdarzenia. |
-| `OnEndReloggingPass` | Wywoływane po zakończeniu przepustu ponownego rejestrowania, po przetworzeniu wszystkich zdarzeń. |
+| `OnStartActivity` | Wywołuje się, by przetworzyć zdarzenie uruchomienia działania. |
+| `OnStopActivity` | Wywołuje się, by przetworzyć zdarzenie zatrzymania działania. |
+| `OnSimpleEvent` | Wywołuje się, by przetworzyć zdarzenie proste. |
+| `OnTraceInfo` | Wywoływana raz na początku przebiegu ponownie rejestrowania po `OnBeginReloggingPass` wywołaniu. |
+| `OnBeginRelogging` | Wywołuje się, gdy rozpocznie się sesja ponowna rejestracja przed rozpoczęciem przebiegu rejestrowania. |
+| `OnEndRelogging` | Wywołuje się, gdy kończy się sesja po zakończeniu rejestracji, po zakończeniu przebiegu rejestrowania. |
+| `OnBeginReloggingPass` | Wywołuje się, gdy rozpoczyna się ponowny rejestrowanie przed przetwarzaniem dowolnego zdarzenia. |
+| `OnEndReloggingPass` | Wywołuje się, gdy kończy się rejestrowanie przebiegu, po przetworzeniu wszystkich zdarzeń. |
 
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie elementy `RELOG_CALLBACKS` członkowskie struktury muszą wskazywać prawidłową funkcję. Aby uzyskać więcej informacji na temat przyjętych podpisów funkcji, zobacz [OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)i [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
+Wszystkie elementy członkowskie `RELOG_CALLBACKS` struktury muszą wskazywać na prawidłową funkcję. Aby uzyskać więcej informacji na temat zaakceptowanych podpisów funkcji, zobacz [OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)i [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
 
 ::: moniker-end

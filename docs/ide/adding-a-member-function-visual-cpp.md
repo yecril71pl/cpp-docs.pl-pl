@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228690"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040785"
 ---
 # <a name="add-a-member-function"></a>Dodawanie funkcji składowej
 
@@ -44,12 +44,25 @@ Po dodaniu funkcji składowej za pomocą kreatora można edytować kod w środow
 
   Ustawia zwracany typ dla funkcji członkowskiej, która jest dodawana. Możesz podać własny typ zwracany lub wybrać z listy dostępnych typów. Aby uzyskać informacje o typach, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned int`** |
-  | **`double`** | **`long`** | **`unsigned long`** |
-  | **`float`** | **`short`** | **`void`** |
-  | `HRESULT` | **`unsigned char`** | |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**\
+      **`int`**
+   :::column-end:::
+   :::column span="":::
+      **`long`**\
+      **`short`**\
+      **`unsigned char`**\
+      **`unsigned int`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned long`**\
+      **`void`**\
+      `HRESULT`
+   :::column-end:::
+:::row-end:::
 
 - **Nazwa funkcji**
 
@@ -59,11 +72,23 @@ Po dodaniu funkcji składowej za pomocą kreatora można edytować kod w środow
 
   Ustawia typ parametru, który jest dodawany do funkcji członkowskiej, jeśli funkcja członkowska ma parametry. Możesz podać własny typ parametru lub można wybrać z listy dostępnych typów.
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned char`** |
-  | **`double`** | **`long`** | **`unsigned int`** |
-  | **`float`** | **`short`** | **`unsigned long`** |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**
+   :::column-end:::
+   :::column span="":::
+      **`int`**\
+      **`long`**\
+      **`short`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned char`**\
+      **`unsigned int`**\
+      **`unsigned long`**
+   :::column-end:::
+:::row-end:::
 
 - **Nazwa parametru**
 
@@ -79,14 +104,14 @@ Po dodaniu funkcji składowej za pomocą kreatora można edytować kod w środow
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [użytek](../cpp/private-cpp.md)
+  - [private](../cpp/private-cpp.md)
 
   Sprawdź, czy nowa funkcja członkowska jest statyczna, wirtualna i czy jest wbudowana, czy czysta. Jeśli ustawisz czystą funkcję elementu członkowskiego, pole wyboru **wirtualne** jest zaznaczone, a **wbudowane** pole wyboru stanie się niedostępne. Wartość domyślna to niestatyczna, niewirtualna funkcja członkowska.
 
   | Opcja | Opis |
   |--------|-------------|
   | [Statyczny](../cpp/storage-classes-cpp.md) |  Określa, że funkcja działa jak Global i może być wywoływana poza klasą, nawet bez tworzenia wystąpienia klasy. Funkcja członkowska nie ma dostępu do niestatycznych elementów członkowskich. Funkcja członkowska określona jako `Static` nie może być wirtualna. |
-  | [Wirtualne](../cpp/virtual-cpp.md) | Upewnij się, że jest wywoływana poprawna funkcja członkowska dla obiektu, niezależnie od wyrażenia użytego do wywołania funkcji składowej. Funkcja członkowska określona jako `Virtual` nie może być statyczna. |
+  | [Wirtualnej](../cpp/virtual-cpp.md) | Upewnij się, że jest wywoływana poprawna funkcja członkowska dla obiektu, niezależnie od wyrażenia użytego do wywołania funkcji składowej. Funkcja członkowska określona jako `Virtual` nie może być statyczna. |
   | **Dotyczy** | Wskazuje, że nie podano implementacji dla zadeklarowanej wirtualnej funkcji członkowskiej. **Czysty** można określić tylko w przypadku wirtualnych funkcji Członkowskich. Klasa, która zawiera co najmniej jedną czystą wirtualną funkcję członkowską, jest uznawana za klasę abstrakcyjną. Klasy pochodne klasy abstrakcyjnej muszą implementować czystą wirtualną funkcję członkowską lub są one również klasami abstrakcyjnymi. |
   | [Alert](../cpp/inline-functions-cpp.md) | Instruuje kompilator, aby wstawiał kopię treści funkcji składowej w każdym miejscu, w którym wywoływana jest funkcja członkowska. Funkcja członkowska określona jako **wbudowana** nie może być czysta. |
 

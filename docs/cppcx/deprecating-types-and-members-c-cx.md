@@ -1,20 +1,20 @@
 ---
-title: Przestarzałe typy i składoweC++(/CX)
+title: Wycofane typy i składowe (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740499"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040330"
 ---
-# <a name="deprecating-types-and-members-ccx"></a>Przestarzałe typy i składoweC++(/CX)
+# <a name="deprecating-types-and-members-ccx"></a>Wycofane typy i składowe (C++/CX)
 
-W C++programie/CX jest możliwe wycofanie typów środowisko wykonawcze systemu Windows i członków dla producentów i konsumentów przy użyciu [przestarzałego](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybutu. Jeśli korzystasz z interfejsu API, do którego zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy czasu kompilacji, który wskazuje, że interfejs API jest przestarzały, a także zaleca alternatywny interfejs API do użycia. We własnych typach i metodach publicznych można zastosować ten atrybut i podać własny komunikat niestandardowy.
+W języku C++/CX jest możliwe wycofanie typów środowisko wykonawcze systemu Windows i członków dla producentów i konsumentów przy użyciu [przestarzałego](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybutu. Jeśli korzystasz z interfejsu API, do którego zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy czasu kompilacji, który wskazuje, że interfejs API jest przestarzały, a także zaleca alternatywny interfejs API do użycia. We własnych typach i metodach publicznych można zastosować ten atrybut i podać własny komunikat niestandardowy.
 
 > [!CAUTION]
-> [Przestarzały](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybut jest używany tylko z typami środowisko wykonawcze systemu Windows. Dla standardowych C++ klas i elementów członkowskich Użyj [__declspec (przestarzałe)](../cpp/deprecated-cpp.md).
+> [Przestarzały](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybut jest używany tylko z typami środowisko wykonawcze systemu Windows. W przypadku standardowych klas i elementów członkowskich języka C++ Użyj [__declspec (przestarzałe)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Przykład
 
@@ -39,20 +39,24 @@ public:
 
 W poniższej tabeli wymieniono konstrukcje, do których można zastosować przestarzały atrybut:
 
-| |
-|-|
-|Kontrolka XAML|
-|delegate|
-|zdarzenie|
-|pole wyliczeniowe|
-|enum|
-|struktura|
-|— metoda|
-|class|
-|interface|
-|property|
-|pole struktury|
-|sparametryzowany Konstruktor|
+:::row:::
+   :::column span="":::
+      określonej
+      Wierz
+      podstawowe
+      pole wyliczeniowe \
+      wydarzen
+      interface
+   :::column-end:::
+   :::column span="":::
+      Method
+      sparametryzowany Konstruktor \
+      wartość
+      konstrukcja
+      pole struktury \
+      Kontrolka XAML
+   :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Zobacz także
 

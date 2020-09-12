@@ -1,6 +1,6 @@
 ---
 title: Struktura FRONT_END_FILE_DATA
-description: C++ Build Insights SDK FRONT_END_FILE_DATA odwołania do struktury.
+description: Informacje o strukturze FRONT_END_FILE_DATA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7fb6b6fff4f309a3539a290f279d1e31cb1ed76b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2519bfd478776f54cee59ba08b83ea00b96beff
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325548"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041760"
 ---
 # <a name="front_end_file_data-structure"></a>Struktura FRONT_END_FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `FRONT_END_FILE_DATA` opisuje przetwarzanie pliku przez przód kompilatora.
+`FRONT_END_FILE_DATA`Struktura opisuje przetwarzanie pliku przez fronton kompilatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,8 +39,8 @@ typedef struct FRONT_END_FILE_DATA_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
-| `Path` | Ścieżka bezwzględna pliku, zakodowana w UTF-8. |
+| `Path` | Ścieżka bezwzględna pliku zakodowana w formacie UTF-8. |
 
 ::: moniker-end

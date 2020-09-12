@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229808"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039589"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Obsługa otwartych folderów dla systemów kompilacji C++ w programie Visual Studio
 
@@ -31,7 +31,7 @@ CMake jest zintegrowany w środowisku IDE programu Visual Studio jako składnik 
 
 Aby użyć środowiska IDE programu Visual Studio z systemem kompilacji lub zestawem narzędzi kompilatora, który nie jest bezpośrednio obsługiwany z menu głównego wybierz **plik | Otwórz | Lub naciśnij** **klawisze Ctrl + Shift + Alt + O**. Przejdź do folderu, który zawiera pliki kodu źródłowego. Aby skompilować projekt, skonfigurować funkcję IntelliSense i ustawić parametry debugowania, należy dodać trzy pliki JSON:
 
-| | |
+| Plik | Opis |
 |-|-|
 |CppProperties.jsna|Określ informacje o konfiguracji niestandardowej do przeglądania. Utwórz ten plik, w razie konieczności, w folderze głównym projektu. (Nieużywane w projektach CMake).|
 |tasks.vs.jsna|Określ niestandardowe polecenia kompilacji. Dostępne za pośrednictwem **elementu menu**kontekstowego **Eksplorator rozwiązań** .|
@@ -156,7 +156,7 @@ Spowoduje to utworzenie (lub otwarcie) *tasks.vs.js* w pliku w folderze. vs, kt�
 
 Plik JSON zostanie umieszczony w podfolderze *. vs* . Aby wyświetlić ten folder, kliknij przycisk **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań**. To zadanie można uruchomić, klikając prawym przyciskiem myszy węzeł główny w **Eksplorator rozwiązań** i wybierając polecenie **Kompiluj Hello**. Po zakończeniu zadania powinien zostać wyświetlony nowy plik *hello.exe* w **Eksplorator rozwiązań**.
 
-Można zdefiniować wiele rodzajów zadań. Poniższy przykład pokazuje *tasks.vs.jsw pliku* , który definiuje pojedyncze zadanie. `taskLabel`definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo`Określa pliki, na których można wykonać polecenie. `command`Właściwość odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu (*cmd.exe* w systemie Windows). Można też odwoływać się do zmiennych środowiskowych, które są zadeklarowane w CppProperties.jslub CMakeSettings.jsna. `args`Właściwość określa wiersz polecenia, który ma zostać wywołany. `${file}`Makro pobiera wybrany plik w **Eksplorator rozwiązań**. W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
+Można zdefiniować wiele rodzajów zadań. Poniższy przykład pokazuje *tasks.vs.jsw pliku* , który definiuje pojedyncze zadanie. `taskLabel` definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo` Określa pliki, na których można wykonać polecenie. `command`Właściwość odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu (*cmd.exe* w systemie Windows). Można też odwoływać się do zmiennych środowiskowych, które są zadeklarowane w CppProperties.jslub CMakeSettings.jsna. `args`Właściwość określa wiersz polecenia, który ma zostać wywołany. `${file}`Makro pobiera wybrany plik w **Eksplorator rozwiązań**. W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: float_control pragma
+title: float_control, pragma
 description: Opisuje użycie i efekty dyrektywy pragma float_control. Dyrektywa float_control steruje stanem precyzyjnej semantycznej semantyki i semantyki wyjątku w czasie wykonywania.
 ms.date: 11/18/2019
 f1_keywords:
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166787"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041929"
 ---
-# <a name="float_control-pragma"></a>float_control pragma
+# <a name="float_control-pragma"></a>float_control, pragma
 
 Określa zachowanie zmiennoprzecinkowe dla funkcji.
 
 ## <a name="syntax"></a>Składnia
 
 > **#pragma float_control**\
-> **#pragma float_control (precyzyjne,** { **na** | **off** } [ **, push** ] **)** \
-> **#pragma float_control (z wyjątkiem:** { **on** | **off** } [ **, push** ] **)** \
-> **float_control #pragma (** { **push** | **pop** } **)**
+> **#pragma float_control (precyzyjne,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (z wyjątkiem,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (** { **push**  |  **pop** } **)**
 
 ## <a name="options"></a>Opcje
 
-**precyzyjne** |  **wypchnięcie**\
+**precyzyjne**, **on**  |  **wyłączone**, **wypychane**\
 Określa, czy włączyć (**włączona**) Czy wyłączyć (**wyłączyć**) precyzyjne semantykę liczb zmiennoprzecinkowych. Aby uzyskać informacje o różnicach w opcji kompilatora **/FP: precyzyjne** , zobacz sekcję Uwagi. Opcjonalny token **wypychania** wypycha bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
 
-**z wyjątkiem** ** | ** **wypchnięcia**\
+**z wyjątkiem**, **on**  |  **off**, **push**\
 Określa, czy włączyć (**Włącz**) Czy wyłączyć (**off**) semantykę wyjątku zmiennoprzecinkowego. Opcjonalny token **wypychania** wypycha bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
 
 **chyba że** można ustawić tylko **na wartość włączone** , tylko wtedy, gdy jest również ustawiony **na wartość** **włączone**.
 
-**wypychanie**\
+**wydajności**\
 Wypchnięcie bieżące ustawienie **float_control** do wewnętrznego stosu kompilatora.
 
-\ **pop**
+**skakując**\
 Usuwa ustawienie **float_control** z góry wewnętrznego stosu kompilatora i sprawia, że nowe **float_control** ustawienie.
 
 ## <a name="remarks"></a>Uwagi
 
 **Float_control** pragma nie ma takiego samego zachowania jak opcja kompilatora [/FP](../build/reference/fp-specify-floating-point-behavior.md) . **Float_control** pragma reguluje tylko część zachowania zmiennoprzecinkowego. Aby ponownie utworzyć opcje kompilatora **/FP** , należy je połączyć z [fp_contract](../preprocessor/fp-contract.md) i [fenv_access](../preprocessor/fenv-access.md) pragma. W poniższej tabeli przedstawiono równoważne ustawienia dyrektywy pragma dla każdej opcji kompilatora:
 
-| | float_control (precyzyjne, \*) | float_control (z wyjątkiem \*) | fp_contract (\*) | fenv_access (\*) |
+| Opcja | float_control (precyzyjne \* ) | float_control (z wyjątkiem, \* ) | fp_contract ( \* ) | fenv_access ( \* ) |
 |-|-|-|-|-|
 | /FP: Strict             | on  | on  | wyłączone | on  |
 | /FP: Precyzyjna            | on  | wyłączone | on  | wyłączone |
-| /fp:fast               | wyłączone | wyłączone | on  | wyłączone |
+| /FP: szybka               | wyłączone | wyłączone | on  | wyłączone |
 
 Innymi słowy, może być konieczne użycie kilku pragm w połączeniu do emulowania opcji wiersza polecenia **/FP: Fast**, **/FP: precyzyjne**i **/FP: Strict** .
 
@@ -127,7 +127,7 @@ int main( ) {
 Pass
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [fenv_access](../preprocessor/fenv-access.md)\

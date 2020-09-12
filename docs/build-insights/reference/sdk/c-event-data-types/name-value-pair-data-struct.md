@@ -1,6 +1,6 @@
 ---
 title: Struktura NAME_VALUE_PAIR_DATA
-description: C++ Build Insights SDK NAME_VALUE_PAIR_DATA odwołania do struktury.
+description: Informacje o strukturze NAME_VALUE_PAIR_DATA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 384ed0340cd8de09101e2fe3e62e1a75f25e2bc1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325356"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041695"
 ---
 # <a name="name_value_pair_data-structure"></a>Struktura NAME_VALUE_PAIR_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `NAME_VALUE_PAIR_DATA` opisuje parę nazw i wartości.
+`NAME_VALUE_PAIR_DATA`Struktura opisuje parę nazw i wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,7 +39,7 @@ typedef struct NAME_VALUE_PAIR_DATA_TAG
 
 ## <a name="members"></a>Elementy członkowskie
 
-|  |  |
+| Nazwa | Opis |
 |--|--|
 | `Name` | Nazwa. |
 | `Value` | Wartość. |

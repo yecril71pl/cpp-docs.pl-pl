@@ -1,19 +1,19 @@
 ---
-title: Wyliczenie endian
+title: endian, wyliczenie
 description: Wyliczenie używane do określania wartości endian typów skalarnych
 ms.date: 08/27/2020
 f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194560"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040083"
 ---
-# <a name="endian-enum"></a>Wyliczenie endian
+# <a name="endian-enum"></a>endian, wyliczenie
 
 Wskazuje liczbę bajtów wszystkich typów skalarnych.
 
@@ -44,8 +44,8 @@ Wszystkie natywne typy skalarne to little-endian dla platform, które Microsoft 
 
 **Przestrzeń nazw:** std
 
-`/std:c++latest` jest wymagana
+[/std: wymagany jest język c + +](../build/reference/std-specify-language-standard-version.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<bit>](../standard-library/bit.md)  

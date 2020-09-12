@@ -1,6 +1,7 @@
 ---
 title: map — Klasa
-ms.date: 10/18/2018
+description: Dokumentacja interfejsu API dla klasy języka C++ (standard Template Library) `map` , która jest używana do przechowywania i pobierania danych z kolekcji, w której każdy element jest parą, która ma zarówno wartość danych, jak i klucz sortowania.
+ms.date: 9/10/2020
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -24,6 +25,7 @@ f1_keywords:
 - map/std::map::cend
 - map/std::map::clear
 - map/std::map::count
+- map/std::map::contains
 - map/std::map::crbegin
 - map/std::map::crend
 - map/std::map::emplace
@@ -67,6 +69,7 @@ helpviewer_keywords:
 - std::map [C++], cend
 - std::map [C++], clear
 - std::map [C++], count
+- std::map [C++], contains
 - std::map [C++], crbegin
 - std::map [C++], crend
 - std::map [C++], emplace
@@ -88,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: eba66debca3d866dadaba41a54549757ee05b861
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ebbccb688ffcd6f2354e5f3ec243cf56303c124
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846449"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040512"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -114,15 +117,15 @@ class map;
 ### <a name="parameters"></a>Parametry
 
 *Głównych*\
-Typ danych klucza, który ma być przechowywany w mapie.
+Typ danych klucza, który ma być przechowywany w `map` .
 
 *Wprowadź*\
-Typ danych elementu, który ma być przechowywany w mapie.
+Typ danych elementu, który ma być przechowywany w `map` .
 
 *Cech*\
-Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Ten argument jest opcjonalny, a Predykat binarny `less<Key>` jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w obiekcie `map` . Ten argument jest opcjonalny, a Predykat binarny `less<Key>` jest wartością domyślną.
 
-W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając predykat std:: less<> , który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
+W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając predykat std:: less<> , który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers) .
 
 *Alokator*\
 Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair<const Key, Type> >` .
@@ -145,16 +148,16 @@ Standardowa Klasa mapy biblioteki języka C++ to:
 
 Iterator dostarczony przez klasę mapy jest iteratorem dwukierunkowym, ale funkcje składowe klasy [INSERT](#insert) i [map](#map) mają wersje przyjmujące jako parametry szablonu słabszy iterator danych wejściowych, którego wymagania funkcjonalności są mniejsze niż te gwarantowane przez klasę iteratorów dwukierunkowych. Pojęcia innych iteratorów są powiązane przez udoskonalenia w ich funkcjonalnościach. Każde pojęcie iteratora ma swój własny zestaw wymagań, a algorytmy, które z nim pracują, muszą być ograniczone przez te wymagania. Iterator danych wejściowych może zostać wyłuskany, aby odwołać się do jakiegoś obiektu, a także może być zwiększony do następnego iteratora w sekwencji.
 
-Zalecamy, aby wybrać typ kontenera na podstawie rodzaju wyszukiwania i wstawiania, którego wymaga aplikacja. Kontenery asocjacyjne są zoptymalizowane dla operacji wyszukiwania, wstawiania i usuwania. Funkcje elementów członkowskich, które jawnie obsługują te operacje, wykonują je w czasie najgorszego przypadku, który jest proporcjonalny do logarytmu liczby elementów w kontenerze. Wstawianie elementów nie unieważnia iteratorów, a usuwanie elementów unieważnia tylko te iteratory, które w szczególności wskazywały na usunięte elementy.
+Zalecamy, aby wybrać typ kontenera na podstawie rodzaju wyszukiwania i wstawiania, którego wymaga aplikacja. Kontenery asocjacyjne są zoptymalizowane dla operacji wyszukiwania, wstawiania i usuwania. Funkcje elementów członkowskich, które jawnie obsługują te operacje, wykonują je w najgorszym czasie, który jest proporcjonalny do logarytmu liczby elementów w kontenerze. Wstawianie elementów nie unieważnia iteratorów, a usuwanie elementów unieważnia tylko te iteratory, które w szczególności wskazywały na usunięte elementy.
 
-Zalecamy, aby kontener asocjacyjny z wyboru był mapą, gdy warunki, które kojarzą wartości z kluczami, są spełnione przez aplikację. Model dla tego rodzaju struktury jest uporządkowaną listą jednoznacznie występujących słów kluczowych mających skojarzone wartości ciągów, które zapewniają definicje. Jeśli wyraz ma więcej niż jedną poprawną definicję, tak że klucz nie jest unikatowy, wówczas mapa wielokrotnego dopasowania byłaby kontenerem z wyboru. Jeśli jest przechowywana tylko lista wyrazów, zestaw będzie odpowiednim kontenerem. Jeśli jest dozwolonych wiele wystąpień słów, to zestaw wielokrotny będzie odpowiedni.
+Zalecamy, aby kontener asocjacyjny z wyboru był mapą, gdy warunki, które kojarzą wartości z kluczami, są spełnione przez aplikację. Model dla tego rodzaju struktury jest uporządkowaną listą jednoznacznie występujących słów kluczowych mających skojarzone wartości ciągów, które zapewniają definicje. Jeśli wyraz ma więcej niż jedną poprawną definicję, więc klucz nie jest unikatowy, a następnie multimap będzie kontenerem wyboru. Jeśli jest przechowywana tylko lista wyrazów, zestaw będzie odpowiednim kontenerem. Jeśli jest dozwolonych wiele wystąpień słów, to zestaw wielokrotny będzie odpowiedni.
 
-Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego obiektu funkcji typu [key_compare](#key_compare). Ten przechowywany obiekt jest funkcją porównywania, do której uzyskuje się dostęp poprzez wywołanie metody [key_comp](#key_comp) . Ogólnie rzecz biorąc, dowolne dwa dane elementy są porównywane, aby określić, czy jeden z nich jest mniejszy od drugiego lub czy są równoważne. W miarę porównywania wszystkich elementów, tworzona jest uporządkowana sekwencja nierównoważnych elementów.
+Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego obiektu funkcji typu [key_compare](#key_compare). Ten przechowywany obiekt jest funkcją porównywania, do której uzyskuje się dostęp poprzez wywołanie metody [key_comp](#key_comp) . Ogólnie rzecz biorąc, wszystkie dwa podano elementy są porównywane w celu określenia, czy jeden z nich jest mniejszy od drugiego, czy też są równoważne. W miarę porównywania wszystkich elementów, tworzona jest uporządkowana sekwencja nierównoważnych elementów.
 
 > [!NOTE]
 > Funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym. Predykat binarny f (x, y) jest obiektem funkcji, który ma dwa obiekty argumentu x i y oraz wartość zwracaną **`true`** lub **`false`** . Kolejność nałożona na zestaw jest ścisłym słabym porządkowaniem, jeśli Predykat binarny jest niezwrotny, niesymetryczny i przechodni oraz jeśli równoważność jest przechodnia, gdzie dwa obiekty x i y są zdefiniowane jako równoważne, gdy zarówno f (x, y), jak i f (y, x) **`false`** . Jeśli silniejszy warunek równości pomiędzy kluczami zastąpi ten równoważności, to porządkowanie będzie całkowite (w sensie, że wszystkie elementy są uporządkowane względem siebie), a dopasowane klucze będą od siebie nieodróżnialne.
 >
-> W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` `std::greater<>` predykat or, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
+> W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` predykat or `std::greater<>` , który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers) .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -169,13 +172,13 @@ Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego o
 |Nazwa|Opis|
 |-|-|
 |[allocator_type](#allocator_type)|Element typedef dla `allocator` klasy obiektu mapy.|
-|[const_iterator](#const_iterator)|Element typedef dla iteratora dwukierunkowego, który może odczytać **`const`** element na mapie.|
+|[const_iterator](#const_iterator)|Element typedef dla iteratora dwukierunkowego, który może odczytywać **`const`** element w `map` .|
 |[const_pointer](#const_pointer)|Element typedef dla wskaźnika do **`const`** elementu na mapie.|
 |[const_reference](#const_reference)|Element typedef dla odwołania do **`const`** elementu przechowywanego w mapie na potrzeby odczytywania i wykonywania **`const`** operacji.|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **`const`** element na mapie.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **`const`** element w `map` .|
 |[difference_type](#difference_type)|Element typedef całkowitoliczbowy ze znakiem dla liczby elementów mapy w zakresie między elementami wskazywanymi przez iteratory.|
 |[Iterator](#iterator)|Element typedef dla iteratora dwukierunkowego, który może odczytać lub zmodyfikować dowolny element w mapie.|
-|[key_compare](#key_compare)|Element typedef dla obiektu funkcji, która może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w mapie.|
+|[key_compare](#key_compare)|Element typedef dla obiektu funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w `map` .|
 |[key_type](#key_type)|Element typedef dla klucza sortowania przechowywanego w każdym elemencie mapy.|
 |[mapped_type](#mapped_type)|Element typedef dla danych przechowywanych w każdym elemencie mapy.|
 |[pointer](#pointer)|Element typedef dla wskaźnika do **`const`** elementu na mapie.|
@@ -188,32 +191,33 @@ Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego o
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[w](#at)|Wyszukuje element z określoną wartością klucza.|
-|[zaczną](#begin)|Zwraca iterator, który wskazuje na pierwszy element w mapie.|
-|[cbegin](#cbegin)|Zwraca iterator const, który wskazuje na pierwszy element w mapie.|
+|[w](#at)|Znajduje element z określoną wartością klucza.|
+|[zaczną](#begin)|Zwraca iterator, który wskazuje na pierwszy element w `map` .|
+|[cbegin](#cbegin)|Zwraca iterator const, który wskazuje na pierwszy element w `map` .|
 |[cend](#cend)|Zwraca wartość const iteratora poza końcem.|
-|[Wyczyść](#clear)|Usuwa wszystkie elementy mapy.|
-|[count](#count)|Zwraca liczbę elementów w mapie, których klucz pasuje do klucza określonego w parametrze.|
-|[crbegin —](#crbegin)|Zwraca iterator const, który wskazuje na pierwszy element w odwróconej mapie.|
-|[crend](#crend)|Zwraca iterator const, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
-|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do mapy.|
-|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do mapy, ze wskazówką położenia.|
-|[puste](#empty)|Zwraca **`true`** czy mapa jest pusta.|
+|[Wyczyść](#clear)|Kasuje wszystkie elementy `map` .|
+|[zawiera](#contains)<sup>c++ 20</sup>|Sprawdź, czy istnieje element z określonym kluczem w `map` .|
+|[liczbą](#count)|Zwraca liczbę elementów w mapie, których klucz pasuje do klucza określonego w parametrze.|
+|[crbegin —](#crbegin)|Zwraca iterator const, który wskazuje na pierwszy element w odwróconym `map` .|
+|[crend](#crend)|Zwraca iterator const, który wskazuje na lokalizację po ostatnim elemencie w odwróconym `map` .|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `map` .|
+|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `map` , z wskazówką umieszczenia.|
+|[puste](#empty)|Zwraca wartość **`true`** , jeśli `map` jest pusta.|
 |[punktów](#end)|Zwraca iterator poza końcem.|
 |[equal_range](#equal_range)|Zwraca parę iteratorów. Pierwszy iterator w parze wskazuje na pierwszy element w a `map` z kluczem, który jest większy niż określony klucz. Drugi iterator w parze wskazuje na pierwszy element w `map` z kluczem, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w mapie z określonych pozycji.|
-|[find](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w mapie, który ma klucz równy określonemu kluczowi.|
-|[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu, który jest używany do konstruowania mapy.|
-|[wstawienia](#insert)|Wstawia element lub zakres elementów do mapy na określonej pozycji.|
-|[key_comp](#key_comp)|Zwraca kopię obiektu porównania użytego do uporządkowania kluczy w mapie.|
-|[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w mapie, którego wartość klucza jest równa lub większa od określonego klucza.|
-|[max_size](#max_size)|Zwraca maksymalną długość mapy.|
-|[rbegin](#rbegin)|Zwraca iterator, który wskazuje na pierwszy element w odwróconej mapie.|
-|[rend](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
-|[zmienia](#size)|Zwraca liczbę elementów w mapie.|
+|[find](#find)|Zwraca iterator, który wskazuje na lokalizację elementu w `map` , który ma klucz równy określonemu kluczowi.|
+|[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu, który jest używany do konstruowania `map` .|
+|[wstawienia](#insert)|Wstawia element lub zakres elementów do `map` określonego położenia.|
+|[key_comp](#key_comp)|Zwraca kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `map` .|
+|[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w elemencie `map` , który ma wartość klucza, która jest równa lub większa od określonego klucza.|
+|[max_size](#max_size)|Zwraca maksymalną długość `map` .|
+|[rbegin](#rbegin)|Zwraca iterator, który wskazuje na pierwszy element w odwróconej `map` .|
+|[rend](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconym `map` .|
+|[zmienia](#size)|Zwraca liczbę elementów w `map` .|
 |[wymiany](#swap)|Zamienia elementy z dwóch map.|
-|[upper_bound](#upper_bound)|Zwraca iterator do pierwszego elementu w mapie, którego wartość klucza jest większa od określonego klucza.|
-|[value_comp](#value_comp)|Pobiera kopię obiektu porównania, użytego do uporządkowania wartości elementów w mapie.|
+|[upper_bound](#upper_bound)|Zwraca iterator do pierwszego elementu w elemencie `map` , który ma wartość klucza, która jest większa od określonego klucza.|
+|[value_comp](#value_comp)|Pobiera kopię obiektu porównania, który jest używany do porządkowania wartości elementów w `map` .|
 
 ### <a name="operators"></a>Operatory
 
@@ -285,7 +289,7 @@ int main()
 
 ## <a name="begin"></a><a name="begin"></a> zaczną
 
-Zwraca iterator odnoszący się do pierwszego elementu na mapie.
+Zwraca iterator odnoszący się do pierwszego elementu w `map` .
 
 ```cpp
 const_iterator begin() const;
@@ -295,7 +299,7 @@ iterator begin();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dwukierunkowy odnoszący się do pierwszego elementu w mapie lub lokalizacji, która pomyślnie ma pustą mapę.
+Iterator dwukierunkowy odnoszący się do pierwszego elementu w `map` lub lokalizacji, która pomyślnie ma pustą mapę.
 
 ### <a name="example"></a>Przykład
 
@@ -438,7 +442,7 @@ The size of the map after clearing is 0.
 
 ## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
-Typ, który dostarcza iterator dwukierunkowy, który może odczytać **`const`** element na mapie.
+Typ, który dostarcza iterator dwukierunkowy, który może odczytać **`const`** element w `map` .
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -504,7 +508,7 @@ int main( )
    const int &Ref1 = ( m1.begin( ) -> first );
 
    // The following line would cause an error as the
-   // non-const_reference cannot be used to access the key
+   // non-const_reference can't be used to access the key
    // int &Ref1 = ( m1.begin( ) -> first );
 
    cout << "The key of first element in the map is "
@@ -526,7 +530,7 @@ The data value of first element in the map is 10.
 
 ## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
-Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **`const`** element na mapie.
+Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **`const`** element w `map` .
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -616,6 +620,64 @@ The number of elements in m1 with a sort key of 2 is: 1.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
+## <a name="contains"></a><a name="contains"></a> wyświetlana
+
+Sprawdza, czy istnieje element z określonym kluczem w `map` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*K*\
+Typ klucza.
+
+*głównych*\
+Wartość klucza elementu do wyszukania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli element znajduje się w kontenerze; `false` w przeciwnym razie.
+
+### <a name="remarks"></a>Uwagi
+
+`contains()` Nowość w języku C++ 20. Aby go użyć, określ [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md) opcja kompilatora.
+
+`template<class K> bool contains(const K& key) const` występuje tylko w przypadku, gdy `key_compare` jest przezroczysty. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) .
+
+### <a name="example"></a>Przykład
+
+```cpp
+// Requires /std:c++latest
+#include <map>
+#include <string>
+#include <iostream>
+#include <functional>
+
+int main()
+{
+    std::map<int, bool> m = {{0, true},{1, false}};
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << m.contains(1) << '\n';
+    std::cout << m.contains(2) << '\n';
+
+    // call template function
+    std::map<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
+    std::cout << m2.contains("ten");
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
 ## <a name="crbegin"></a><a name="crbegin"></a> crbegin —
 
 Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej mapie.
@@ -682,7 +744,7 @@ Niepowodzenie odwrotnego iteratora dwukierunkowego, który odnosi się do lokali
 
 `crend` jest używany z odwróconą mapą, tak jak [koniec](#end) jest używany z `map` .
 
-Z wartością zwracaną `crend` , `map` nie można zmodyfikować obiektu.
+`crend` `map` Nie można zmodyfikować obiektu z wartością zwracaną.
 
 `crend` można go użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `map` .
 
@@ -731,7 +793,7 @@ typedef allocator_type::difference_type difference_type;
 
 `difference_type`Jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. `difference_type`Jest zazwyczaj używany do reprezentowania liczby elementów w zakresie *[First, Last)* między iteratorami `first` i `last` , zawiera element wskazywany przez `first` i zakres elementów do, ale nie obejmują, elementu wskazywanego przez `last` .
 
-Należy zauważyć, że chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak zestaw, odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu losowego, które są udostępniane przez losowy kontener dostępu, taki jak wektor.
+Chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak zestaw, odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu losowego, które są udostępniane przez losowy kontener dostępu, taki jak wektor.
 
 ### <a name="example"></a>Przykład
 
@@ -789,7 +851,7 @@ emplace(
 ### <a name="parameters"></a>Parametry
 
 *argumentów*\
-Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do mapy, chyba że zawiera już element o równoważnej kolejności.
+Argumenty przekazane do skonstruowania elementu do wstawienia do mapy, chyba że zawiera już element, którego wartość jest uporządkowana równorzędnie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -875,7 +937,7 @@ iterator emplace_hint(
 ### <a name="parameters"></a>Parametry
 
 *argumentów*\
-Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do mapy, chyba że mapa już zawiera ten element lub, bardziej ogólnie, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.
+Argumenty przekazywane do konstrukcji elementu do wstawienia do mapy, chyba że mapa już zawiera ten element lub, bardziej ogólnie, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.
 
 *miejscu*\
 Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).
@@ -1217,11 +1279,11 @@ Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanej
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element w mapie ( `map::end()` ), jeśli nie znaleziono żadnego dopasowania dla klucza.
+Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element w `map` ( `map::end()` ), jeśli nie znaleziono żadnego dopasowania dla klucza.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator, który odwołuje się do elementu w mapie, którego klucz sortowania jest równoważny z kluczem argumentu w predykacie binarnym, który wywołuje kolejność na podstawie mniejszej niż porównywalności relacji.
+Funkcja członkowska zwraca iterator, który odwołuje się do elementu w, `map` którego klucz sortowania jest odpowiednikiem klucza argumentu w predykacie binarnym, który wywołuje kolejność na podstawie mniejszej niż porównywalnej relacji.
 
 Jeśli wartość zwracana `find` jest przypisana do `const_iterator` , obiekt mapy nie może być modyfikowany. Jeśli wartość zwracana `find` jest przypisana do `iterator` , obiekt mapy można zmodyfikować
 
@@ -1398,7 +1460,7 @@ IList);
 ### <a name="parameters"></a>Parametry
 
 *Użyte*\
-Wartość elementu, który ma zostać wstawiony do mapy, chyba że zawiera już element, którego klucz jest uporządkowany równorzędnie.
+Wartość elementu do wstawienia do mapy, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.
 
 *Miejscu*\
 Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).
@@ -1576,7 +1638,7 @@ Przechowywany obiekt definiuje funkcję członkowską
 
 `bool operator(const Key& left, const Key& right);`
 
-zwraca, **`true`** Jeśli `left` poprzedza, i nie jest równa `right` w kolejności sortowania.
+zwraca, **`true`** Jeśli `left` poprzedza i nie jest równe `right` w kolejności sortowania.
 
 ### <a name="example"></a>Przykład
 
@@ -1631,7 +1693,7 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 
 ## <a name="key_compare"></a><a name="key_compare"></a> key_compare
 
-Typ, który dostarcza obiekt funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów na mapie.
+Typ, który dostarcza obiekt funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w `map` .
 
 ```cpp
 typedef Traits key_compare;
@@ -1641,7 +1703,7 @@ typedef Traits key_compare;
 
 `key_compare` jest synonimem *cech*parametrów szablonu.
 
-Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa map](../standard-library/map-class.md) .
+Aby uzyskać więcej informacji o *cechach*, zobacz temat [Klasa map](../standard-library/map-class.md) .
 
 ### <a name="example"></a>Przykład
 
@@ -1682,7 +1744,7 @@ Wartość klucza argumentu do porównania z kluczem sortowania elementu z przesz
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`iterator`Lub `const_iterator` który odnosi się do lokalizacji elementu w mapie, który ma klucz, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji, która kończy ostatni element na mapie, jeśli nie zostanie znaleziony żaden pasujący klucz.
+`iterator`Lub `const_iterator` który odnosi się do lokalizacji elementu w mapie, który ma klucz, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji, która powiodła się w `map` przypadku braku zgodności dla klucza.
 
 Jeśli wartość zwracana `lower_bound` jest przypisana do `const_iterator` , obiekt mapy nie może być modyfikowany. Jeśli wartość zwracana `lower_bound` jest przypisana do `iterator` , obiekt mapy może być modyfikowany.
 
@@ -1793,7 +1855,7 @@ map(
 Klasa alokatora magazynu, która ma być używana dla tego obiektu mapy, która jest domyślna `Allocator` .
 
 *Przepisów*\
-Funkcja porównywania typu `const Traits` służąca do porządkowania elementów w mapie, które są domyślnie `hash_compare` .
+Funkcja porównywania typu `const Traits` służąca do porządkowania elementów w `map` , które domyślnie są `hash_compare` .
 
 *Kliknij*\
 Mapa, której skonstruowany zestaw ma być kopią.
@@ -1821,7 +1883,7 @@ Czwarty Konstruktor określa kopię mapy *po prawej stronie*.
 
 Piąty Konstruktor określa kopię mapy, przenosząc *prawo*.
 
-Konstruktor szósty, siódmy i ósmy używają initializer_list, z którego mają zostać skopiowane elementy członkowskie.
+Konstruktory szóste, siódme i ósmy używają initializer_list, z którego mają zostać skopiowane elementy członkowskie.
 
 Następne trzy konstruktory kopiują zakres `[First, Last)` mapy ze wzrostem jawności w określaniu typu funkcji porównania klasy `Traits` i alokatora.
 
@@ -1953,7 +2015,7 @@ typedef Type mapped_type;
 
 Typ `mapped_type` jest synonimem dla parametru szablonu *typu* klasy.
 
-Aby uzyskać więcej informacji na temat *typu* , zobacz temat [Klasa map](../standard-library/map-class.md) .
+Aby uzyskać więcej informacji na temat *typu*, zobacz temat [Klasa map](../standard-library/map-class.md) .
 
 ### <a name="example"></a>Przykład
 
@@ -2013,7 +2075,7 @@ Odwołanie do wartości danych wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość klucza argumentu nie zostanie znaleziona, zostanie ona wstawiona wraz z wartością domyślną typu danych.
+Jeśli wartość klucza argumentu nie zostanie znaleziona, zostanie wstawiona wraz z wartością domyślną typu danych.
 
 `operator[]` może służyć do wstawiania elementów do mapy, `m` przy użyciu `m[key] = DataValue;` gdzie `DataValue` jest wartością `mapped_type` elementu z kluczową wartością *klucza*.
 
@@ -2269,7 +2331,7 @@ int main( )
    const int &Ref1 = ( m1.begin( ) -> first );
 
    // The following line would cause an error because the
-   // non-const_reference cannot be used to access the key
+   // non-const_reference can't be used to access the key
    // int &Ref1 = ( m1.begin( ) -> first );
 
    cout << "The key of first element in the map is "
@@ -2404,7 +2466,7 @@ Zobacz przykład dla [rbegin](#rbegin) , aby zapoznać się z przykładem sposob
 
 ## <a name="size"></a><a name="size"></a> zmienia
 
-Zwraca liczbę elementów w mapie.
+Zwraca liczbę elementów w `map` .
 
 ```cpp
 size_type size() const;
@@ -2545,7 +2607,7 @@ Wartość klucza argumentu do porównania z wartością klucza sortowania elemen
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`iterator`Lub `const_iterator` który odnosi się do lokalizacji elementu w mapie, który ma klucz, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji z ostatnim elementem w mapie, jeśli nie znaleziono pasujących kluczy.
+`iterator`Lub `const_iterator` który odnosi się do lokalizacji elementu w mapie, który ma klucz, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji, w której `map` nie znaleziono żadnego dopasowania dla klucza.
 
 Jeśli wartość zwracana jest przypisana do `const_iterator` , obiekt mapy nie może być modyfikowany. Jeśli wartość zwracana jest przypisana do `iterator` , obiekt mapy może być modyfikowany.
 
@@ -2713,7 +2775,7 @@ int main( )
         << mapped1 << "." << endl;
 
    // The following line would cause an error because
-   // the value_type is not assignable
+   // the value_type isn't assignable
    // value1 = cInt2Int ( 4, 40 );
 
    cout  << "The keys of the mapped elements are:";
@@ -2728,7 +2790,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opakowania](../cpp/containers-modern-cpp.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

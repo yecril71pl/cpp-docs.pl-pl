@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281812"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039818"
 ---
 # <a name="ltbitgt-functions"></a>&lt;&gt;funkcje bitowe
 
@@ -111,7 +111,7 @@ Zamiast używać `reinterpret_cast` , lub `memcpy()` , `bit_cast()` jest lepszym
 
 To Przeciążenie uczestniczy tylko w rozwiązaniu przeciążenia, jeśli:
 -  `sizeof(To) == sizeof(From)`
-- `To` i `From` są [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`).
+- `To` i `From` są [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Ten szablon funkcji jest `constexpr` if i tylko wtedy `To` , gdy, `From` i typy ich podobiektów są:
 - nie jest typem Unii ani wskaźnikiem
@@ -730,8 +730,8 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 
 **Przestrzeń nazw:** std
 
-`/std:c++latest` jest wymagana
+[/std: wymagany jest język c + +](../build/reference/std-specify-language-standard-version.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<bit>](bit.md)

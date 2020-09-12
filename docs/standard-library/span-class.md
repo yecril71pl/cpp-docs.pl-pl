@@ -1,5 +1,6 @@
 ---
 title: span — Klasa (standardowa biblioteka C++) | Microsoft Docs
+description: Dokumentacja interfejsu API dla klasy span (standard Template Library), która zapewnia uproszczony wgląd w ciągłą sekwencję obiektów.
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560455"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039967"
 ---
 # <a name="span-class-c-standard-library"></a>span — Klasa (standardowa biblioteka C++)
 
@@ -133,7 +134,7 @@ W przeciwieństwie do `array` lub `vector` , zakres nie jest "własny" elementó
 
 **Przestrzeń nazw:** std
 
-**Opcja kompilatora:** /std: c + + Najnowsza
+**Opcja kompilatora:** [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 
@@ -1116,7 +1117,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<span>](../standard-library/span.md)  
 [Jak używać odliczania argumentów szablonu klasy](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

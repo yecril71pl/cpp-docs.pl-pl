@@ -7,28 +7,26 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183438"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040889"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 
 W biblioteka MFC są wyświetlane trzy funkcje wywołania zwrotnego. Te funkcje wywołania zwrotnego są przesyłane do funkcji [przechwytywania:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [przechwytywania:: GrayString](../../mfc/reference/cdc-class.md#graystring)i [przechwytywania:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego muszą być przed powrotem w systemie Windows, ponieważ wyjątki nie mogą być zgłaszane przez granice wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz [wyjątki](../../mfc/exception-handling-in-mfc.md)w artykule.
 
-|Nazwa||
-|----------|-----------------|
-|[Funkcja wywołania zwrotnego dla CDC::EnumObjects](#enum_objects)||
-|[Funkcja wywołania zwrotnego dla CDC::GrayString](#graystring)||
-|[Funkcja wywołania zwrotnego dla CDC::SetAbortProc](#setabortproc)||
+[Funkcja wywołania zwrotnego dla funkcji przechwytywania:: EnumObjects](#enum_objects)\
+[Funkcja wywołania zwrotnego dla funkcji przechwytywania:: GrayString](#graystring)\
+[Funkcja wywołania zwrotnego dla CDC::SetAbortProc](#setabortproc)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxwin. h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>Funkcja wywołania zwrotnego dla funkcji przechwytywania:: EnumObjects
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> Funkcja wywołania zwrotnego dla funkcji przechwytywania:: EnumObjects
 
 Nazwa *ObjectFunc* jest symbolem zastępczym dla nazwy funkcji dostarczonej przez aplikację.
 
@@ -56,7 +54,7 @@ Funkcja wywołania zwrotnego zwraca wartość **`int`** . Wartość tego powrotu
 
 Rzeczywista nazwa musi zostać wyeksportowana.
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>Funkcja wywołania zwrotnego dla funkcji przechwytywania:: GrayString
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a> Funkcja wywołania zwrotnego dla funkcji przechwytywania:: GrayString
 
 *OutputFunc* jest symbolem zastępczym dla nazwy funkcji wywołania zwrotnego dostarczonej przez aplikację.
 
@@ -88,7 +86,7 @@ Zwracana wartość funkcji wywołania zwrotnego musi mieć wartość TRUE, aby w
 
 Funkcja wywołania zwrotnego (*OutputFunc*) musi narysować obraz względem współrzędnych (0, 0), a nie (*x*, *y*).
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>Funkcja wywołania zwrotnego dla funkcji przechwytywania:: SetAbortProc
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> Funkcja wywołania zwrotnego dla funkcji przechwytywania:: SetAbortProc
 
 Nazwa *AbortFunc* jest symbolem zastępczym dla nazwy funkcji dostarczonej przez aplikację.
 

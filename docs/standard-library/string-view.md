@@ -1,15 +1,16 @@
 ---
 title: '&lt;string_view&gt;'
-ms.date: 04/18/2019
+description: Omówienie `basic_string_view` , które odnosi się do stałej ciągłej sekwencji obiektów podobnej do znaku.
+ms.date: 9/4/2020
 helpviewer_keywords:
 - string_view header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 13b6f5c63b9426fc4c31527f0d1ae8291d07807f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f74f6c5855f71b0df46f585e874002cdb4308e42
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222215"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039914"
 ---
 # <a name="ltstring_viewgt"></a>&lt;string_view&gt;
 
@@ -23,7 +24,7 @@ Definiuje szablon klasy `basic_string_view` i powiązane typy oraz operatory. (W
 
 ## <a name="remarks"></a>Uwagi
 
-Rodzina string_view specjalizacji szablonów zapewnia wydajny sposób przekazywania dojścia do odczytu, bezpiecznego wyjątku, niebędącego właścicielem, do danych znakowych dowolnego obiektu, takiego jak ciąg, z pierwszym elementem sekwencji w pozycji zero. Parametr funkcji typu `string_view` (który jest elementem TypeDef dla `basic_string_view<char>` ) może przyjmować argumenty takie jak `std::string` , **char \* **lub wszelkie inne klasy podobne do ciągów o wąskich znakach, dla których zdefiniowano niejawną konwersję `string_view` . Analogicznie, parametr `wstring_view` `u16string_view` lub `u32string_view` może akceptować dowolny typ ciągu, dla którego zdefiniowano niejawną konwersję. Aby uzyskać więcej informacji, zobacz [Basic_string_view Class](../standard-library/basic-string-view-class.md).
+`string_view`Rodzina specjalizacji szablonów zapewnia wydajny sposób przekazywania dojścia do odczytu, bezpiecznego wyjątku, niebędącego właścicielem, do danych znakowych dowolnego obiektu przypominającego ciąg z pierwszym elementem sekwencji w pozycji zero. Parametr funkcji typu `string_view` (który jest elementem TypeDef dla `basic_string_view<char>` ) może przyjmować argumenty takie jak `std::string` , `char*` lub wszelkie inne klasy podobne do ciągów o wąskich znakach, dla których zdefiniowano niejawną konwersję `string_view` . Analogicznie, parametr `wstring_view` `u16string_view` lub `u32string_view` może akceptować dowolny typ ciągu, dla którego zdefiniowano niejawną konwersję. Aby uzyskać więcej informacji, zobacz [Basic_string_view Class](../standard-library/basic-string-view-class.md).
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -42,10 +43,10 @@ Rodzina string_view specjalizacji szablonów zapewnia wydajny sposób przekazywa
 |-|-|
 |[operator! =](../standard-library/string-view-operators.md#op_neq)|Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.|
 |[operator = =](../standard-library/string-view-operators.md#op_eq_eq)|Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.|
-|[<operatora](../standard-library/string-view-operators.md#op_lt)|Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie.|
+|[<operatora ](../standard-library/string-view-operators.md#op_lt)|Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie.|
 |[<operatora =](../standard-library/string-view-operators.md#op_lt_eq)|Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.|
-|[<operatora\<](../standard-library/string-view-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia `string_view` do strumienia wyjściowego.|
-|[>operatora](../standard-library/string-view-operators.md#op_gt)|Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.|
+|[<operatora \<](../standard-library/string-view-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia `string_view` do strumienia wyjściowego.|
+|[>operatora ](../standard-library/string-view-operators.md#op_gt)|Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.|
 |[>operatora =](../standard-library/string-view-operators.md#op_gt_eq)|Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.|
 
 ### <a name="literals"></a>Literały
@@ -67,7 +68,7 @@ Rodzina string_view specjalizacji szablonów zapewnia wydajny sposób przekazywa
 
 - **Przestrzeń nazw:** std
 
-- **Opcja kompilatora:** std: c++ 17 (lub nowsza)
+- **Opcja kompilatora:** [std: c++ 17](../build/reference/std-specify-language-standard-version.md) lub nowsza.
 
 ## <a name="see-also"></a>Zobacz także
 

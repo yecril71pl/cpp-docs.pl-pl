@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833260"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040604"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale:: operator ()
 
-Porównuje dwa `basic_string` obiekty zgodnie z regułami porównania leksykograficznych zdefiniowanymi przez ten aspekt std:: COLLATE <charT> .
+Porównuje dwa `basic_string` obiekty zgodnie z regułami porównania leksykograficznych zdefiniowanymi przez ten zestaw reguł ustawień regionalnych `std::collate<charT>` .
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -751,7 +751,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<locale>](../standard-library/locale.md)\
 [Strony kodowe](../c-runtime-library/code-pages.md)\

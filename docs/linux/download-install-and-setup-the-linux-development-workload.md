@@ -3,12 +3,12 @@ title: Instalowanie obciążenia C++ w systemie Linux w programie Visual Studio
 description: Jak pobrać, zainstalować i skonfigurować obciążenie systemu Linux dla języka C++ w programie Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765750"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040980"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
@@ -36,7 +36,7 @@ W przypadku każdego z tych scenariuszy wymagane jest programowanie dla systemu 
 
    ![Pole wyszukiwania systemu Windows](media/visual-studio-installer-search.png)
 
-1. Poszukaj Instalatora w obszarze wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu Instalatora wybierz pozycję **Modyfikuj**, a następnie kliknij kartę **obciążenia** . Przewiń w dół do **innych zestawów narzędzi** i wybierz pozycję Programowanie dla systemu **Linux przy użyciu języka C++** .
+1. Poszukaj Instalatora w obszarze wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu Instalatora wybierz pozycję **Modyfikuj**, a następnie kliknij kartę **obciążenia** . Przewiń w dół do **innych zestawów narzędzi** i wybierz pozycję Programowanie dla systemu **Linux za pomocą języka C++** .
 
    ![Obciążenie Visual C++ for Linux Development](media/linuxworkload.png)
 
@@ -56,7 +56,7 @@ W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z sys
 
 Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
 
-- **Kompilator programu** Visual Studio 2019 ma pełną pomoc techniczną dla programu i [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **Kompilator programu** Visual Studio 2019 ma pełną pomoc techniczną dla programu i [Clang](../build/clang-support-cmake.md).
 - **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux.
 - **rsync** i **zip** — włączenie funkcji rsync i zip umożliwia programowi Visual Studio wyodrębnienie plików nagłówkowych z systemu Linux do systemu plików Windows w celu użycia przez funkcję IntelliSense.
 - **make**

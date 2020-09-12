@@ -1,5 +1,5 @@
 ---
-title: Klasy kolekcji ATL
+title: Omówienie klasy kolekcji ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
@@ -11,92 +11,92 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223445"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040863"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 
-ATL zawiera wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasy, które użytkownik zdecyduje się użyć zależy od kilku czynników, takich jak:
+ATL udostępnia wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasa, która ma być używana, zależy od kilku czynników, w tym:
 
 - Ilość danych, które mają być przechowywane
 
-- Wydajność w porównaniu z wydajnością podczas uzyskiwania dostępu do danych
+- Wydajność i wydajność podczas uzyskiwania dostępu do danych
 
 - Możliwość dostępu do danych za pomocą indeksu lub klucza
 
-- Jak dane są porządkowane
+- Jak są uporządkowane dane
 
-- Osobistych preferencji
+- Preferencja osobista
 
-## <a name="small-collection-classes"></a>Klasy kolekcji małe
+## <a name="small-collection-classes"></a>Małe klasy kolekcji
 
-ATL zawiera następujące klasy tablic radzenia sobie z małej liczby obiektów. Te klasy są jednak ograniczone i przeznaczone do użytku wewnętrznego przez ATL. Nie zaleca się używania ich w swoich programach.
+ATL oferuje następujące klasy macierzy do obsługi małych liczb obiektów. Jednak te klasy są ograniczone i przeznaczone do użytku wewnętrznego przez ATL. Nie zaleca się korzystania z nich w swoich programach.
 
-|Class|Typ magazynu danych|
+|Klasa|Typ magazynu danych|
 |-----------|--------------------------|
-|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementuje klasę tablicy radzenia sobie z małej liczby obiektów.|
-|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementuje klasę mapowania radzenia sobie z małej liczby obiektów.|
+|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementuje klasę Array do celów związanych z małą liczbą obiektów.|
+|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementuje klasę mapowania na potrzeby postępowania z niewielką liczbą obiektów.|
 
-## <a name="general-purpose-collection-classes"></a>Klasy kolekcji ogólnego przeznaczenia
+## <a name="general-purpose-collection-classes"></a>Klasy kolekcji Ogólnego przeznaczenia
 
-Klasy postępuj zgodnie z implementacji tablic, list i map i są dostępne jako klasy kolekcji ogólnego przeznaczenia:
+Poniższe klasy implementują tablice, listy i mapy i są udostępniane jako klasy kolekcji ogólnego przeznaczenia:
 
-|Class|Typ magazynu danych|
+|Klasa|Typ magazynu danych|
 |-----------|--------------------------|
-|[CAtlArray](../atl/reference/catlarray-class.md)|Implementuje tablicy.|
+|[CAtlArray](../atl/reference/catlarray-class.md)|Implementuje tablicę.|
 |[CAtlList](../atl/reference/catllist-class.md)|Implementuje listę.|
-|[CAtlMap](../atl/reference/catlmap-class.md)|Implementuje struktury mapowania, według których dane mogą odwoływać się do klucza lub wartości.|
-|[CRBMap](../atl/reference/crbmap-class.md)|Implementuje struktury mapowania przy użyciu algorytmu Red czarny.|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementuje strukturę multimapping Red czarny.|
+|[CAtlMap](../atl/reference/catlmap-class.md)|Implementuje strukturę mapowania, zgodnie z którym dane mogą być przywoływane przez klucz lub wartość.|
+|[CRBMap](../atl/reference/crbmap-class.md)|Implementuje strukturę mapowania przy użyciu algorytmu Red-Black.|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementuje strukturę wielomap z czerwonym kolorem.|
 
-W ramach tych zajęć wyłapuje wiele błędy programowania, gdy są używane w kompilacjach debugowania, ale pokazano wydajność, te testy nie zostaną wykonane w sprzedaży detalicznej.
+Te klasy będą zalewkować wiele błędów programistycznych podczas korzystania z kompilacji debugowania, ale w celu zapewnienia wydajności te testy nie będą wykonywane w kompilacjach detalicznych.
 
-## <a name="specialized-collection-classes"></a>Klasy kolekcji specjalne
+## <a name="specialized-collection-classes"></a>Wyspecjalizowane klasy kolekcji
 
-Dostępne są również bardziej wyspecjalizowane klasy kolekcji do zarządzania i wskaźnikami interfejsu pamięci:
+Bardziej wyspecjalizowane klasy kolekcji są również udostępniane do zarządzania wskaźnikami pamięci i wskaźnikami interfejsu:
 
-|Class|Cel|
+|Klasa|Przeznaczenie|
 |-----------|-------------|
-|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Udostępnia metody przydatne przy konstruowaniu tablicy inteligentnych wskaźników.|
-|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Udostępnia metody przydatne podczas tworzenia listy inteligentne wskaźniki.|
-|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Magazyny `IUnknown` wskaźników i jest przeznaczony do użycia jako parametr do [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.|
-|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Udostępnia metody przydatne podczas tworzenia listy wskaźników sterty.|
-|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Udostępnia metody przydatne przy konstruowaniu tablicy wskaźników interfejsu COM.|
-|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Udostępnia metody przydatne podczas tworzenia listy wskaźniki interfejsu COM.|
+|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Zapewnia metody przydatne podczas konstruowania tablicy inteligentnych wskaźników.|
+|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Zapewnia metody przydatne podczas konstruowania listy inteligentnych wskaźników.|
+|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Przechowuje `IUnknown` wskaźniki i jest przeznaczony do użycia jako parametr klasy szablonu [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .|
+|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Zapewnia metody przydatne podczas konstruowania listy wskaźników sterty.|
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Zapewnia metody przydatne podczas konstruowania tablicy wskaźników interfejsu COM.|
+|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Zapewnia metody przydatne podczas konstruowania listy wskaźników interfejsu COM.|
 
 ## <a name="choosing-a-collection-class"></a>Wybieranie klasy kolekcji
 
-Każdą z klas kolekcji dostępne oferuje różną charakterystykę wydajności, jak pokazano w poniższej tabeli.
+Każda z dostępnych klas kolekcji oferuje różne charakterystyki wydajności, jak pokazano w poniższej tabeli.
 
-- Kolumny, 2 i 3 opisano każdej klasy porządkowanie i dostęp do właściwości. W tabeli termin "uporządkowane" oznacza, że kolejność, w którym elementy są wstawiane i usuwane określa ich kolejność, w kolekcji; nie oznacza to, że elementy są sortowane według ich zawartości. Termin "indexed" oznacza, że elementy w kolekcji mogą być pobierane według indeksu liczba całkowita, podobnie jak elementy w tablicy typowy.
+- Kolumny 2 i 3 opisują właściwości określania kolejności i dostępu każdej klasy. W tabeli termin "uporządkowane" oznacza, że kolejność, w której elementy są wstawiane i usuwane, określa ich kolejność w kolekcji. nie oznacza to, że elementy są sortowane według ich zawartości. Termin "Indexed" oznacza, że elementy w kolekcji mogą być pobierane przez indeks liczby całkowitej, podobnie jak elementy w typowej tablicy.
 
-- Kolumny 4 i 5 opisują wydajność każdej klasy. W aplikacji, które wymagają wielu wstawień do kolekcji szybkości wstawiania może być szczególnie ważne; dla innych aplikacji szybkość wyszukiwania może być niezwykle ważne.
+- Kolumny 4 i 5 opisują wydajność każdej klasy. W aplikacjach, które wymagają wielu operacji wstawiania do kolekcji, szybkość wstawiania może być szczególnie ważna; w przypadku innych aplikacji szybkość wyszukiwania może być bardziej ważna.
 
-- Kolumna 6 opisuje, czy każdy kształt zezwala na zduplikowane elementy.
+- Kolumna 6 zawiera informacje o tym, czy każdy kształt umożliwia duplikowanie elementów.
 
-- Wydajność operacji klasy danej kolekcji jest wyrażona w relacji między czasem potrzebnym do ukończenia operacji i liczbę elementów w kolekcji. Operacja przełączania ilość czasu, która zwiększa liniowo jako liczba wzrasta elementów jest określana jako algorytm O(n). Z drugiej strony operacja trwa okres czasu, która zwiększa się mniej jako liczba wzrasta elementów jest opisana algorytmu O (log n). W związku z tym pod względem wydajności, algorytmów O (log n), której algorytmy O(n) coraz częściej jako liczba wzrasta elementów.
+- Wydajność danej operacji klasy kolekcji jest wyrażona w zakresie relacji między czasem wymaganym do ukończenia operacji i liczbą elementów w kolekcji. Operacja trwa przez czas, który zwiększa się liniowo w miarę wzrostu liczby elementów, jest opisana jako algorytm O (n). Z kolei, operacja trwa przez pewien czas, który zwiększa mniejszą i mniejszą liczbę elementów, jest opisana jako algorytm O (log n). W związku z tym, w zakresie wydajności, algorytmy O (log n) outperform O (n) algorytmy więcej i więcej w miarę zwiększania liczby elementów.
 
-### <a name="collection-shape-features"></a>Kolekcja elementów kształtu
+### <a name="collection-shape-features"></a>Funkcje kształtu kolekcji
 
-|Kształt|Uporządkowane|Indeksowane|Wstaw<br /><br /> — element|Wyszukaj<br /><br /> określony element|Zduplikowany<br /><br /> elementy|
+|Kształt|Zamówione|Pełnotekstowych|Wstaw<br /><br />  — element|Wyszukaj<br /><br /> określony element|Duplikuj<br /><br /> elementy|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|Lista|Tak|Nie|Szybko (stały czas)|Powolne O(n)|Tak|
-|Tablica|Yes|Przez int (stały czas)|Powolne O(n), z wyjątkiem sytuacji, w przypadku wstawiania na końcu, w których wielkość stałym czasie|Powolne O(n)|Tak|
-|Mapa|Nie|Według klucza (stały czas)|Szybko (stały czas)|Szybko (stały czas)|Tak (wartości) (kluczy)|
-|Mapa red czarny|Tak (według kluczy)|Według klucza O (log n)|Szybkie O (log n)|Szybkie O (log n)|Nie|
-|Multimap red czarny|Tak (według kluczy)|Według klucza O(log n) (wiele wartości dla każdego klucza)|Szybkie O (log n)|Szybkie O (log n)|Tak (wiele wartości dla każdego klucza)|
+|Lista|Tak|Nie|Fast (stały czas)|Wolne O (n)|Tak|
+|Tablica|Tak|Według int (stały czas)|Wolno O (n), chyba że wstawiasz na końcu, w którym przypadku stały czas|Wolne O (n)|Tak|
+|Mapa|Nie|Według klucza (stały czas)|Fast (stały czas)|Fast (stały czas)|Nie (klucze) tak (wartości)|
+|Mapa Red-Black|Tak (za pomocą klucza)|Według klucza O (log n)|Fast O (log n)|Fast O (log n)|Nie|
+|Czerwony-czarny multimap|Tak (za pomocą klucza)|Według klucza O (log n) (wiele wartości na klucz)|Fast O (log n)|Fast O (log n)|Tak (wiele wartości na klucz)|
 
-## <a name="using-ctraits-objects"></a>Za pomocą ctraits — obiekty
+## <a name="using-ctraits-objects"></a>Korzystanie z obiektów CTraits
 
-Ponieważ klasy kolekcji ATL może służyć do przechowywania różnorodnych typy danych zdefiniowane przez użytkownika, może być przydatne można było przesłonić ważnych funkcji, takich jak porównania. Jest to osiągane przy użyciu ctraits — klasy.
+Jako że klasy kolekcji ATL mogą służyć do przechowywania szerokiego zakresu typów danych zdefiniowanych przez użytkownika, może być przydatne, aby przesłonić ważne funkcje, takie jak porównania. Jest to osiągane przy użyciu klas CTraits.
 
-Ctraits — klasy są podobne do, ale bardziej elastyczny niż funkcji pomocnika klasy kolekcji MFC; zobacz [pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md) Aby uzyskać więcej informacji.
+Klasy CTraits są podobne do, ale bardziej elastyczne niż, funkcje pomocnika klasy kolekcji MFC; Aby uzyskać więcej informacji, zobacz [Pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md) .
 
-Podczas tworzenia klasy kolekcji, istnieje możliwość określenia ctraits — klasy. Ta klasa zawiera kod, który będzie wykonywać operacje takie jak porównania, gdy wywoływana za pomocą innych metod, które tworzą klasy kolekcji. Na przykład obiekt listy zawiera własnych struktur zdefiniowanych przez użytkownika, można ponownie zdefiniować testu równości, aby porównać tylko niektórych zmiennych Członkowskich. W ten sposób obiekt listy Znajdź metoda będzie działać w sposób bardziej użyteczne.
+Podczas konstruowania klasy kolekcji można określić klasę CTraits. Ta klasa będzie zawierać kod, który wykona operacje, takie jak porównania, gdy są wywoływane przez inne metody, które tworzą klasę kolekcji. Na przykład jeśli obiekt listy zawiera własne struktury zdefiniowane przez użytkownika, możesz chcieć ponownie zdefiniować test równości, aby porównać tylko niektóre zmienne składowe. W ten sposób Metoda Find obiektu listy będzie działać w bardziej przydatny sposób.
 
 ## <a name="example"></a>Przykład
 
@@ -106,23 +106,23 @@ Podczas tworzenia klasy kolekcji, istnieje możliwość określenia ctraits — 
 
 ## <a name="comments"></a>Komentarze
 
-Aby uzyskać listę ctraits — klasy, zobacz [klas kolekcji](../atl/collection-classes.md).
+Aby uzyskać listę klas CTraits, zobacz [klasy kolekcji](../atl/collection-classes.md).
 
-Poniższy diagram przedstawia hierarchii klas dla ctraits — klasy.
+Na poniższym diagramie przedstawiono hierarchię klas klas CTraits.
 
-![Cechy hierarchii klas kolekcji](../atl/media/vctraitscollectionclasseshierarchy.gif "hierarchii cechy klas kolekcji")
+![Hierarchia cech dla klas kolekcji](../atl/media/vctraitscollectionclasseshierarchy.gif "Hierarchia cech dla klas kolekcji")
 
-## <a name="collection-classes-samples"></a>Przykłady klasy kolekcji
+## <a name="collection-classes-samples"></a>Przykłady klas kolekcji
 
-Poniższe przykłady pokazują klas kolekcji:
+Następujące przykłady przedstawiają klasy kolekcji:
 
-- [Przykładowe MMXSwarm](../overview/visual-cpp-samples.md)
+- [Przykład MMXSwarm](../overview/visual-cpp-samples.md)
 
-- [Przykładowe DynamicConsumer](../overview/visual-cpp-samples.md)
+- [Przykład DynamicConsumer](../overview/visual-cpp-samples.md)
 
-- [Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
+- [Przykład UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Przykładowe Neon](../overview/visual-cpp-samples.md)
+- [Przykład neonu](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Zobacz także
 
