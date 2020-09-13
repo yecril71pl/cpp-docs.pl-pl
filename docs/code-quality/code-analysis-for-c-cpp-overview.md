@@ -1,5 +1,5 @@
 ---
-title: Analiza kodu dla języka CC++ /przegląd
+title: Analiza kodu C/C++ — Omówienie
 ms.date: 04/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: 26168e66fcb2809bc1eab68d3c8fa1ccf7495568
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: e5f5b75057985dc769c8f1ab84765d628dc42fcc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418873"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040308"
 ---
-# <a name="code-analysis-for-cc-overview"></a>Analiza kodu dla języka CC++ /przegląd
+# <a name="code-analysis-for-cc-overview"></a>Analiza kodu C/C++ — Omówienie
 
-Narzędzie analityczneC++ c/Code zawiera informacje o możliwych defektach w kodzie źródłowymC++ c/. Typowe błędy kodowania zgłoszone przez narzędzie obejmują przepełnienia buforów, niezainicjowaną pamięć, odnośniki wskaźnika o wartości null oraz przecieki pamięci i zasobów. Narzędzie może również uruchamiać testy w oparciu o [ C++ podstawowe wytyczne](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+Narzędzie do analizy kodu C/C++ zawiera informacje o możliwych defektach w kodzie źródłowym języka C/C++. Typowe błędy kodowania zgłoszone przez narzędzie obejmują przepełnienia buforów, niezainicjowaną pamięć, odnośniki wskaźnika o wartości null oraz przecieki pamięci i zasobów. Narzędzie może również uruchamiać sprawdzenia względem [podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
 
 ## <a name="ide-integrated-development-environment-integration"></a>Integracja IDE (zintegrowane środowisko programistyczne)
 
@@ -45,11 +45,11 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>Obsługa #pragma
 
-Aby traktować ostrzeżenia jako błędy, można użyć dyrektywy `#pragma`. Włącza lub wyłącza ostrzeżenia oraz pomija ostrzeżenia dla poszczególnych wierszy kodu. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Można użyć `#pragma` dyrektywy do traktowania ostrzeżeń jako błędów, włączania lub wyłączania ostrzeżeń oraz pomijania ostrzeżeń dla poszczególnych wierszy kodu. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Obsługa adnotacji
 
-Adnotacje poprawiają dokładność analizy kodu. Adnotacje zawierają dodatkowe informacje na temat parametrów funkcji i typów zwracanych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
+Adnotacje poprawiają dokładność analizy kodu. Adnotacje zawierają dodatkowe informacje na temat parametrów funkcji i typów zwracanych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celu zmniejszenia wad kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 ## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>Uruchom Narzędzie analizy jako część zasad ewidencjonowania
 
@@ -57,15 +57,15 @@ Można wymagać, aby wszystkie operacje ewidencjonowania kodu źródłowego spe�
 
 ## <a name="team-build-integration"></a>Integracja kompilacji zespołowej
 
-W celu uruchomienia narzędzia do analizy kodu w ramach procesu kompilacji DevOps platformy Azure można użyć zintegrowanych funkcji systemu kompilacji. Aby uzyskać więcej informacji, zobacz [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
+W celu uruchomienia narzędzia do analizy kodu w ramach procesu kompilacji DevOps platformy Azure można użyć zintegrowanych funkcji systemu kompilacji. Aby uzyskać więcej informacji, zobacz [Azure Pipelines](/azure/devops/pipelines/index).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Szybki Start: Analiza kodu dla języka C/C++](quick-start-code-analysis-for-c-cpp.md)
-- [Przewodnik: Analizowanie kodu CC++ /Code dla wad](walkthrough-analyzing-c-cpp-code-for-defects.md)
-- [Analiza kodu C/C++ — ostrzeżenia](code-analysis-for-c-cpp-warnings.md)
+- [Szybki start: analiza kodu C/C++](quick-start-code-analysis-for-c-cpp.md)
+- [Przewodnik: Analizowanie kodu C/C++ pod kątem wad](walkthrough-analyzing-c-cpp-code-for-defects.md)
+- [Analiza kodu dla ostrzeżeń C/C++](code-analysis-for-c-cpp-warnings.md)
 - [Korzystanie z kontrolerów podstawowych wytycznych dotyczących języka C++](using-the-cpp-core-guidelines-checkers.md)
-- [C++Informacje dotyczące najważniejszych wskazówek dotyczących sprawdzania](code-analysis-for-cpp-corecheck.md)
-- [Użyj zestawów reguł, aby określić C++ reguły do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
+- [Informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++](code-analysis-for-cpp-corecheck.md)
+- [Użyj zestawów reguł, aby określić reguły języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
 - [Analizowanie jakości sterowników przy użyciu narzędzi do analizy kodu](/windows-hardware/drivers/develop/analyzing-driver-quality-by-using-code-analysis-tools)
 - [Analiza kodu dla ostrzeżeń dotyczących sterowników](/windows-hardware/drivers/devtest/prefast-for-drivers-warnings)
