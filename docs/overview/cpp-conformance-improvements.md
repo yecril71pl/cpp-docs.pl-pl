@@ -3,12 +3,12 @@ title: Ulepszenia zgodności języka C++
 ms.date: 08/04/2020
 description: Program Microsoft C++ w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka C++ 20.
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841392"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042124"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>Dane wyjściowe preprocesora zachowują nowy wiersz
 
-Eksperymentalny preprocesor umożliwia teraz zachowywanie nowego wiersza i odstępów podczas używania **`/P`** lub **`/E`** z **`/experimental:preprocessor`** . Tę zmianę można wyłączyć za pomocą polecenia **`/d1experimental:preprocessor:oldWhitespace`** .
+Eksperymentalny preprocesor umożliwia teraz zachowywanie nowego wiersza i odstępów podczas używania **`/P`** lub **`/E`** z **`/experimental:preprocessor`** .
 
 Podaną przykładowe źródło,
 
@@ -3651,6 +3651,6 @@ Mamy pełną listę ulepszeń zgodności w programie Visual Studio 2015 Update 3
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tabela zgodności języka Microsoft C++](visual-cpp-language-conformance.md)
