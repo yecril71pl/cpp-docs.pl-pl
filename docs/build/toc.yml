@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (Ograniczaj długość nazw zewnętrznych)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit (Użyj obiektu IFC jednostki nagłówka)
+                  href: ../build/reference/headerunit.md
                 - name: /HELP (Pomoc kompilatora wiersza polecenia)
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /homeparams (Kopiuj parametry rejestru do stosu)
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: '/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)'
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader (Utwórz jednostki nagłówka)'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference (Użyj obiektu IFC nazwanego modułu)'
+                  href: ../build/reference/module-reference.md
                 - name: /MP (Kompilacja z wieloma procesami)
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo (Pomijaj transparent startowy) (C/C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP (Określ typ pliku źródłowego)'
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude (Przetłumacz dyrektywy dołączania na dyrektywy importu)
+                  href: ../build/reference/translateinclude.md
                 - name: '/U, /u (Usuń definicje symboli)'
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)
