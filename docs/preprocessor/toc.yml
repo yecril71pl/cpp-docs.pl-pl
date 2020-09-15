@@ -5,7 +5,7 @@
   items:
     - name: Preprocesor
       href: ../preprocessor/preprocessor.md
-    - name: Omówienie preprocesora eksperymentalnego
+    - name: Omówienie nowego preprocesora
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: Fazy tłumaczenia
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'wykluczanie (#import)'
+            - name: wykluczanie (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: 'zmień nazwę (#import)'
+            - name: zmień nazwę (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: Operatory preprocesora
           href: ../preprocessor/preprocessor-operators.md
-        - name: 'Operator tworzenia ciągów (#)'
+        - name: Operator tworzenia ciągów (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: 'Operator konwersji na znaki (#@)'
+        - name: Operator konwersji na znaki (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: 'Operator wklejania tokenu (##)'
+        - name: Operator wklejania tokenu (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: Makra preprocesora (C/C++)
       expanded: false
