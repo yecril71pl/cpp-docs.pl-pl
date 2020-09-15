@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807774"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075806"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class and ref struct (C++/CLI i C++/CX)
 
@@ -29,7 +29,7 @@ Rozszerzenia **klasy ref** lub **ref struct** deklarują klasę lub strukturę, 
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref class name modifier : inherit_access base_type {};
 class_access ref struct name modifier : inherit_access base_type {};
 class_access value class name modifier : inherit_access base_type {};
 class_access value struct name modifier : inherit_access base_type {};
@@ -97,7 +97,7 @@ Podczas deklarowania obiektu za pomocą **klasy wartości** lub słów kluczowyc
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -116,7 +116,7 @@ Słowa kluczowe **klasy wartości** i **struktury wartości** instruują kompila
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ## <a name="see-also"></a>Zobacz także
 

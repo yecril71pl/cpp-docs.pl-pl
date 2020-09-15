@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 84572d44cd994da07d44e736983270a1e7acd1ec
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086984"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075793"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela zgodności języka Microsoft C++
 
@@ -171,7 +171,7 @@ Aby uzyskać szczegółowe informacje na temat udoskonaleń zgodności programu 
 | &nbsp;&nbsp;[`P1064R0 Allowing virtual function calls in constant expressions`](https://wg21.link/P1064R0) | Nie |
 | &nbsp;&nbsp;[`P1073R3 Immediate functions`](https://wg21.link/P1073R3) | Nie |
 | &nbsp;&nbsp;[`P1143R2 constinit`](https://wg21.link/P1143R2) | Nie |
-| &nbsp;&nbsp;[`P1236R1 Signed integers are two's complement`](https://wg21.link/P1236R1) | Nie dotyczy |
+| &nbsp;&nbsp;[`P1236R1 Signed integers are two's complement`](https://wg21.link/P1236R1) | Brak |
 | &nbsp;&nbsp;[`P1327R1 Allowing dynamic_cast, polymorphic typeid in constant expressions`](https://wg21.link/P1327R1) | Nie |
 | &nbsp;&nbsp;[`P1353R0 Missing feature-test macros`](https://wg21.link/P1353R0) | Nie |
 | &nbsp;&nbsp;[`P1668R1 Permitting unevaluated inline assembly in constexpr functions`](https://wg21.link/P1668R1) | Nie |
@@ -432,7 +432,7 @@ Opcja kompilatora [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 
 
 <a name="note_B"></a>__B__ obsługiwane w [`/permissive-`](../build/reference/permissive-standards-conformance.md) trybie w programie Visual Studio 2017 w wersji 15,7. Aby uzyskać więcej informacji, zobacz [dwuetapowa obsługa wyszukiwania nazw jest MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ obsługa reguł preprocesora C99 przez kompilator jest niekompletna w programie Visual Studio 2017. Przeniesiemy preprocesor i zaczniemy przedostawać te zmiany w programie Visual Studio 2017 w wersji 15,8 z przełącznikiem kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) .
+<a name="note_C"></a>__Począwszy od__ programu Visual Studio 2017 w wersji 15,8, kompilator zapewnia obsługę preprocesora C99 za pomocą przełącznika kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) . Począwszy od programu Visual Studio 2019 w wersji 16,6, kompilator pełni implementację preprocesora C99 za pośrednictwem [`/Zc:preprocessor`](../build/reference/zc-conformance.md) przełącznika. Jest on domyślnie włączony, gdy przełącznik kompilatora `/std:c11` lub `/std:c17` jest określony.
 
 <a name="note_D"></a>__D__ obsługiwane w ramach [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) z ostrzeżeniem suppressible [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) .
 
@@ -450,7 +450,7 @@ Opcja kompilatora [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 
 
 <a name="note_byte"></a>__bajty__ `std::byte` jest włączona przez [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (lub [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ), ale ponieważ może powodować konflikt z nagłówkami Windows SDK w niektórych przypadkach, zawiera szczegółowe makro rezygnacji. Można ją wyłączyć, definiując `_HAS_STD_BYTE` jako `0` .
 
-<a name="note_C11"></a>__C11__ Uniwersalna CRT wdrożyła części standardowej biblioteki C11, które są wymagane przez C++ 17, z wyjątkiem `strftime()` alternatywnych specyfikatorów konwersji C99 E/O, C11 `fopen()` mode i C11 `aligned_alloc()` . Ten ostatni jest mało prawdopodobne, ponieważ C11 określony `aligned_alloc()` w sposób, który jest niezgodny z implementacją firmy Microsoft `free()` : to, która `free()` musi być w stanie obsługiwać wysoce wyrównane alokacje.
+<a name="note_C11"></a>__C11__ Obsługa kompilatora dla C11 wymaga programu Visual Studio w wersji 16,8 lub nowszej. Obsługa biblioteki C11 wymaga Windows SDK w wersji 20211 lub nowszej. Uniwersalna CRT implementuje części standardowej biblioteki C11, które są wymagane przez C++ 17, z wyjątkiem `strftime()` alternatywnych specyfikatorów konwersji C99 E/O i C11 `aligned_alloc()` . Ta ostatnia jest mało prawdopodobne, ponieważ system operacyjny Windows nie obsługuje wyrównanych alokacji.
 
 <a name="note_rem"></a>__REM__ Funkcje usunięte, gdy [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) jest określona opcja kompilatora (lub). Te funkcje można włączyć w celu ułatwienia przejścia do nowszych trybów języka przy użyciu następujących makr: `_HAS_AUTO_PTR_ETC` , `_HAS_FUNCTION_ALLOCATOR_SUPPORT` , `_HAS_OLD_IOSTREAMS_MEMBERS` , i `_HAS_UNEXPECTED` .
 

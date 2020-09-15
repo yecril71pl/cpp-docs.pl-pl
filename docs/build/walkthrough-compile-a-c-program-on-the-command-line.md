@@ -1,21 +1,22 @@
 ---
-title: 'Przewodnik: kompilowanie programu w języku C w wierszu polecenia'
+title: 'Przewodnik: Kompilowanie programu w języku C w wierszu polecenia'
+description: Przewodnik przedstawiający sposób tworzenia prostego programu Hello world stylu C.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335263"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075611"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: kompilowanie programu w języku C w wierszu polecenia
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu w języku C w wierszu polecenia
 
 Visual C++ zawiera kompilator języka C, za pomocą którego można utworzyć wszystko z podstawowych programów konsolowych do pełnych aplikacji klasycznych systemu Windows, aplikacji mobilnych i innych.
 
@@ -81,14 +82,14 @@ W zależności od wersji programu Visual C++ i zainstalowanych aktualizacji mog�
 > [!NOTE]
 > Jeśli wystąpi błąd, taki jak "CL", nie został rozpoznany jako polecenie wewnętrzne lub zewnętrzne, program interoperacyjny lub plik wsadowy, "Błąd C1034 lub błąd LNK1104 podczas uruchamiania **CL** polecenia, nie jest używany wiersz polecenia dewelopera lub wystąpił problem z instalacją Visual C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
 
-Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub jeśli podczas wprowadzania `cl`zostanie wyświetlony komunikat o błędzie, instalacja Visual C++ może mieć problem. Jeśli używasz programu Visual Studio 2017 lub nowszego, spróbuj zainstalować ponownie **Programowanie aplikacji klasycznych przy użyciu obciążenia języka C++** w Instalatorze programu Visual Studio. Aby uzyskać szczegółowe informacje, zobacz [Install C++ Support in Visual Studio](vscpp-step-0-installation.md). Lub zainstaluj ponownie narzędzia kompilacji ze strony [plików do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/) . Nie należy przechodzić do następnej sekcji do momentu tego działania. Aby uzyskać więcej informacji na temat instalowania programu Visual Studio i rozwiązywania związanych z nim problemów, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio).
+Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub jeśli podczas wprowadzania zostanie wyświetlony komunikat o błędzie `cl` , instalacja Visual C++ może mieć problem. Jeśli używasz programu Visual Studio 2017 lub nowszego, spróbuj zainstalować ponownie **Programowanie aplikacji klasycznych przy użyciu obciążenia języka C++** w Instalatorze programu Visual Studio. Aby uzyskać szczegółowe informacje, zobacz [Install C++ Support in Visual Studio](vscpp-step-0-installation.md). Lub zainstaluj ponownie narzędzia kompilacji ze strony [plików do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/) . Nie należy przechodzić do następnej sekcji do momentu tego działania. Aby uzyskać więcej informacji na temat instalowania programu Visual Studio i rozwiązywania związanych z nim problemów, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio).
 
 > [!NOTE]
 > W zależności od wersji systemu Windows na komputerze i konfiguracji zabezpieczeń systemu może być konieczne kliknięcie prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrótu wiersza polecenia dla deweloperów, a następnie wybrać polecenie **Uruchom jako administrator** , aby pomyślnie skompilować i uruchomić program tworzony w ramach tego przewodnika.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Utwórz plik źródłowy w języku C i skompiluj go w wierszu polecenia
 
-1. W oknie wiersza polecenia dla deweloperów wpisz `cd c:\` polecenie, aby zmienić bieżący katalog roboczy na katalog główny dysku C:. Następnie wpisz `md c:\simple` polecenie, aby utworzyć katalog, a następnie wprowadź `cd c:\simple` zmiany w tym katalogu. Ten katalog zawiera plik źródłowy i skompilowany program.
+1. W oknie wiersza polecenia dla deweloperów wpisz polecenie, `cd c:\` Aby zmienić bieżący katalog roboczy na katalog główny dysku C:. Następnie wpisz polecenie, `md c:\simple` Aby utworzyć katalog, a następnie wprowadź `cd c:\simple` zmiany w tym katalogu. Ten katalog zawiera plik źródłowy i skompilowany program.
 
 1. Wprowadź `notepad simple.c` w wierszu polecenia dla deweloperów. W oknie dialogowym alertu Notatnika wybierz pozycję **tak** , aby utworzyć nowy prosty plik c w katalogu roboczym.
 
@@ -104,7 +105,7 @@ Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub j
     }
     ```
 
-1. Na pasku menu Notatnika wybierz pozycję **plik** > **Zapisz** , aby zapisać prostą. c w katalogu roboczym.
+1. Na pasku menu Notatnika wybierz pozycję **plik**  >  **Zapisz** , aby zapisać prostą. c w katalogu roboczym.
 
 1. Przełącz się z powrotem do okna wiersza polecenia dewelopera. Wprowadź `dir` w wierszu polecenia, aby wyświetlić zawartość katalogu c:\simple. Na liście katalogów powinien być widoczny plik źródłowy Simple. c, który wygląda następująco:
 
@@ -127,7 +128,7 @@ Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub j
 
 1. Aby skompilować program, wpisz `cl simple.c` w wierszu polecenia dewelopera.
 
-   W wierszach informacji wyjściowych wyświetlanych przez kompilator można zobaczyć nazwę programu wykonywalnego (Simple. exe):
+   W wierszach informacji wyjściowych wyświetlanych przez kompilator można zobaczyć nazwę programu wykonywalnego, simple.exe.
 
     ```Output
     c:\simple>cl simple.c
@@ -166,7 +167,7 @@ Kroki opisane w tym instruktażu umożliwiają utworzenie własnego kodu w języ
 
 `cl file1.c file2.c file3.c`
 
-Kompilator wyprowadza program o nazwie plik1. exe. Aby zmienić nazwę na Program1. exe, Dodaj opcję konsolidatora [/out](reference/out-output-file-name.md) :
+Kompilator wyprowadza program o nazwie file1.exe. Aby zmienić nazwę na program1.exe, Dodaj opcję konsolidatora [/out](reference/out-output-file-name.md) :
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
@@ -174,15 +175,15 @@ Aby automatycznie przechwytywać błędy programowania, zalecamy skompilowanie p
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Kompilator, CL. exe, ma wiele dodatkowych opcji, które można zastosować do kompilowania, optymalizowania, debugowania i analizowania kodu. Aby uzyskać szybką listę, `cl /?` wpisz w wierszu polecenia dewelopera. Możesz również kompilować i łączyć oddzielnie i stosować Opcje konsolidatora w bardziej złożonych scenariuszach kompilacji. Aby uzyskać więcej informacji na temat opcji kompilatora i konsolidatora, zobacz [Dokumentacja konstrukcyjna C/C++](reference/c-cpp-building-reference.md).
+Kompilator, cl.exe, ma wiele dodatkowych opcji, które można zastosować do kompilowania, optymalizowania, debugowania i analizowania kodu. Aby uzyskać szybką listę, wpisz `cl /?` w wierszu polecenia dewelopera. Możesz również kompilować i łączyć oddzielnie i stosować Opcje konsolidatora w bardziej złożonych scenariuszach kompilacji. Aby uzyskać więcej informacji na temat opcji kompilatora i konsolidatora, zobacz  [Dokumentacja konstrukcyjna C/C++](reference/c-cpp-building-reference.md).
 
 Aby skonfigurować i skompilować bardziej złożone projekty w wierszu polecenia, można użyć NMAKE i plików reguł programu make lub programów MSBuild i Project. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [NMAKE Reference](reference/nmake-reference.md) and [MSBuild](msbuild-visual-cpp.md).
 
 Języki C i C++ są podobne, ale nie są takie same. Kompilator Microsoft C/C++ (MSVC) korzysta z prostej reguły, aby określić, który język ma być używany podczas kompilowania kodu. Domyślnie kompilator MSVC traktuje wszystkie pliki kończące się na. c jako kod źródłowy C i wszystkie pliki kończące się na. cpp jako kod źródłowy języka C++. Aby wymusić, aby kompilator traktował wszystkie pliki jako C niezależne od rozszerzenia nazwy pliku, użyj opcji kompilatora [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
-MSVC jest zgodna ze standardem ISO C99, ale nie jest ściśle zgodne. W większości przypadków przenośny kod C zostanie skompilowany i uruchomiony zgodnie z oczekiwaniami. Visual C++ nie obsługuje większości zmian w pliku ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w artykule CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżeniu kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+MSVC jest zgodna ze standardem ISO C99, ale nie jest ściśle zgodne. W większości przypadków przenośny kod C zostanie skompilowany i uruchomiony zgodnie z oczekiwaniami. Visual C++ zapewnia obsługę zmian w ISO C11/C17. Aby skompilować z obsługą C11/C17, Użyj flagi kompilatora `/std:c11` lub `/std:c17` . Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w artykule CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżeniu kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przewodnik: tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Dokumentacja języka C](../c-language/c-language-reference.md)<br/>
