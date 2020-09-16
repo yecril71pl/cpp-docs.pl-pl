@@ -1,6 +1,7 @@
 ---
 title: Obsługa obliczeń matematycznych i zmiennoprzecinkowych
-ms.date: 01/31/2019
+description: Opisuje obsługę zmiennoprzecinkową w bibliotece uniwersalnego środowiska uruchomieniowego języka Microsoft (UCRT).
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226232"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569599"
 ---
 # <a name="math-and-floating-point-support"></a>Obsługa obliczeń matematycznych i zmiennoprzecinkowych
 
 Biblioteka uniwersalnego środowiska uruchomieniowego języka C (UCRT) udostępnia wiele prostych i zmiennoprzecinkowych funkcji biblioteki matematycznej, w tym wszystkie wymagane przez ISO C99. Funkcje zmiennoprzecinkowe są implementowane w celu zrównoważenia wydajności z korekcją. Ponieważ generowanie prawidłowo zaokrąglonego wyniku może być niezwykle kosztowne, te funkcje są zaprojektowane w celu wydajnego utworzenia bliskiego przybliżenia do prawidłowo zaokrąglonego wyniku. W większości przypadków powstaje wynik w zakresie od +/-1 ULP prawidłowo zaokrąglonego wyniku, chociaż mogą wystąpić sytuacje, w których występuje większa niedokładność.
+
+W przypadku ISO C standard 11 (C11) i nowszych, \<tgmath.h> nagłówek, oprócz \<math.h> i \<complex.h> , zawiera makra, które wywołują odpowiednią funkcję matematyczną na podstawie typów parametrów. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](tgmath.md) .
 
 Wiele funkcji wielozmiennoprzecinkowych bibliotek matematycznych ma różne implementacje dla różnych architektur procesora. Na przykład 32-bitowa architektura x86 CRT może mieć inną implementację niż 64-bit x64 CRT. Ponadto niektóre funkcje mogą mieć wiele implementacji dla danej architektury procesora CPU. Najbardziej wydajna implementacja jest wybierana dynamicznie w czasie wykonywania w zależności od zestawów instrukcji obsługiwanych przez procesor CPU. Na przykład w 32-bitowej architekturze x86, niektóre funkcje mają implementację x87 i implementację SSE2. W przypadku uruchamiania na PROCESORze, który obsługuje SSE2, używana jest szybsza implementacja SSE2. W przypadku uruchamiania na PROCESORze, który nie obsługuje SSE2, używana jest wolniejsza implementacja x87. Ponieważ różne implementacje funkcji biblioteki matematycznej mogą korzystać z różnych instrukcji procesora CPU i różnych algorytmów w celu wygenerowania ich wyników, funkcje mogą generować różne wyniki w procesorach. W większości przypadków wyniki znajdują się w przedziale od +/-1 ULP prawidłowo zaokrąglonego wyniku, ale rzeczywiste wyniki mogą się różnić w zależności od procesorów.
 
@@ -34,9 +37,9 @@ Poprzednie 16-bitowe wersje języka Microsoft C/C++ i Microsoft Visual C++ obsł
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Oblicza sinus hiperboliczny łuku
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Oblicza tangens łuku
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Oblicza tangens łuku hiperbolicznego
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg specyficzny dla ustawień regionalnych na**`double`**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje ciąg na**`double`**
-[_atoflt, _atoflt_l, _atoldbl _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg specyficzny dla ustawień regionalnych na **`float`** lub**`long double`**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg specyficzny dla ustawień regionalnych na **`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje ciąg na **`double`**
+[_atoflt, _atoflt_l, _atoldbl _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Konwertuje ciąg specyficzny dla ustawień regionalnych na **`float`** lub **`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Oblicza element główny modułu
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Oblicza granicę
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Oblicza wartość funkcji odwrotnej
@@ -88,7 +91,7 @@ Poprzednie 16-bitowe wersje języka Microsoft C/C++ i Microsoft Visual C++ obsł
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Oblicza iloraz i resztę dwóch wartości całkowitych
 [isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Określa, czy wartość jest skończona
 [isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Porównanie kolejności dwóch wartości zmiennoprzecinkowych
-[isinf](../c-runtime-library/reference/isinf.md)|Określa, czy wartość zmiennoprzecinkowa jest nieskończona
+[isinf —](../c-runtime-library/reference/isinf.md)|Określa, czy wartość zmiennoprzecinkowa jest nieskończona
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Testuje wartość zmiennoprzecinkową dla NaN
 [isnormal](../c-runtime-library/reference/isnormal.md)|Testuje, czy wartość zmiennoprzecinkowa jest ograniczona i nie była normalna
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Oblicza funkcję Bessela
@@ -126,16 +129,16 @@ Poprzednie 16-bitowe wersje języka Microsoft C/C++ i Microsoft Visual C++ obsł
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Oblicza sinus hiperboliczny
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Oblicza pierwiastek kwadratowy
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Pobiera słowo stanu zmiennoprzecinkowego
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Konwertuje ciąg na**`float`**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Konwertuje ciąg na**`long double`**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Konwertuje ciąg na **`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Konwertuje ciąg na **`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Oblicza tangens
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Oblicza tangens hiperboliczny
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Oblicza funkcję gamma
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Obcina część ułamkową
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje szeroki ciąg na**`double`**
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje szeroki ciąg na **`double`**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Oblicza funkcję Bessela
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Zmiennoprzecinkowe typy pierwotne](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[Procedury środowiska uruchomieniowego uniwersalnego języka C według kategorii](../c-runtime-library/run-time-routines-by-category.md)\
+[Zmiennoprzecinkowe typy pierwotne](../c-runtime-library/reference/floating-point-primitives.md)

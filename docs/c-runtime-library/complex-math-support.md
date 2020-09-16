@@ -1,5 +1,6 @@
 ---
 title: Kompleksowe wsparcie matematyczne języka C
+description: Opisuje kompleksowe wsparcie matematyczne w języku C w bibliotece środowiska uruchomieniowego Microsoft C (CRT)
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215182"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569541"
 ---
 # <a name="c-complex-math-support"></a>Kompleksowe wsparcie matematyczne języka C
 
@@ -28,9 +29,9 @@ Implementacja firmy Microsoft dla złożonego nagłówka. h definiuje te typy ja
 
 |Typ standardowy|Typ firmy Microsoft|
 |-|-|
-|**`float complex`** oraz**`float _Complex`**|**_Fcomplex**|
-|**`double complex`** oraz**`double _Complex`**|**_Dcomplex**|
-|**`long double complex`** oraz**`long double _Complex`**|**_Lcomplex**|
+|**`float complex`** oraz **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** oraz **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** oraz **`long double _Complex`**|**_Lcomplex**|
 
 Nagłówek Math. h definiuje oddzielny typ **_complex struktury**używany przez funkcję [_cabs](../c-runtime-library/reference/cabs.md) . Typ **_complex struktury** nie jest używany przez równoważne złożone skomplikowane funkcje matematyczne [OOZ, cabsf, CAB](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
@@ -99,4 +100,5 @@ Ponieważ liczby zespolone nie są typami natywnymi w kompilatorze firmy Microso
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Typ-ogólne matematyczne](tgmath.md)\
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)
