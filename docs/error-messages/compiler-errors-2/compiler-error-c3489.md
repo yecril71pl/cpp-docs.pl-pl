@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738417"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685769"
 ---
 # <a name="compiler-error-c3489"></a>Błąd kompilatora C3489
 
@@ -29,9 +29,9 @@ Po określeniu, że domyślny tryb przechwytywania dla wyrażenia lambda jest pr
 
 - Przekaż zmienną przez odwołanie do klauzuli Capture. (Może to spowodować zmianę zachowania wyrażenia lambda).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-Poniższy przykład generuje zmienną C3489 `n` pojawia się według wartości w klauzuli Capture wyrażenia lambda, którego tryb domyślny ma wartość:
+Poniższy przykład generuje zmienną C3489 `n` , która jest wyświetlana przez wartość w klauzuli Capture wyrażenia lambda, którego tryb domyślny ma wartość:
 
 ```cpp
 // C3489a.cpp
@@ -42,8 +42,6 @@ int main()
    [=, n]() { return n; } (); // C3489
 }
 ```
-
-## <a name="example"></a>Przykład
 
 W poniższym przykładzie przedstawiono cztery możliwe rozwiązania C3489:
 

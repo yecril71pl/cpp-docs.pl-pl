@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749311"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686512"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
@@ -32,7 +32,7 @@ Program Visual Studio używa *projektów* do organizowania kodu aplikacji oraz *
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź *HelloWorld* w polu Edycja **nazwy projektu** . Wybierz pozycję **Utwórz** , aby utworzyć projekt.
 
-   ![Nadaj nazwę i Utwórz nowy projekt](media/vs2019-configure-new-project-hello-world.png "Nadaj nazwę i Utwórz nowy projekt")
+   ![Zrzut ekranu przedstawiający okno dialogowe Konfigurowanie nowego projektu z Hello world wpisanych w polu tekstowym Nazwa projektu.](media/vs2019-configure-new-project-hello-world.png "Nadaj nazwę i Utwórz nowy projekt")
 
    Program Visual Studio tworzy nowy projekt. Wszystko jest gotowe do dodawania i edytowania kodu źródłowego. Domyślnie szablon aplikacji konsoli wypełnia kod źródłowy przy użyciu aplikacji "Hello world":
 
@@ -52,9 +52,9 @@ Program Visual Studio używa *projektów* do organizowania kodu aplikacji oraz *
 
 1. W oknie dialogowym **Nowy projekt** wybierz pozycję **zainstalowane > Visual C++** , jeśli nie została jeszcze wybrana, a następnie wybierz szablon **pusty projekt** . W polu **Nazwa** wprowadź wartość *HelloWorld*. Wybierz **przycisk OK** , aby utworzyć projekt.
 
-   ![Nadaj nazwę i Utwórz nowy projekt](media/vscpp-concierge-project-name-callouts.png "Nadaj nazwę i Utwórz nowy projekt")
+   ![Zrzut ekranu okna dialogowego Nowy projekt z zainstalowanym > Visual C plus plus zaznaczone i nazwane, opcja pustego projektu o nazwie out i Hellow World typeing w polu tekstowym Nazwa.](media/vscpp-concierge-project-name-callouts.png "Nadaj nazwę i Utwórz nowy projekt")
 
-Program Visual Studio tworzy nowy, pusty projekt. Jest to gotowe do specjalizacji dla rodzaju aplikacji, którą chcesz utworzyć, i dodania plików kodu źródłowego. Zrobisz to w następnym kroku.
+Program Visual Studio tworzy nowy, pusty projekt. Jest to gotowe do specjalizacji dla rodzaju aplikacji, którą chcesz utworzyć, i dodania plików kodu źródłowego. Zrobisz to w następnej kolejności.
 
 [Wystąpił problem.](#create-your-app-project-issues)
 
@@ -149,7 +149,7 @@ Jeśli nie widzisz **konsolidatora** na liście **Właściwości konfiguracji**,
 
 Formant menu rozwijanego nie pojawia się w polu właściwości **podsystemu** do momentu wybrania właściwości. Kliknij w polu edycji, aby go zaznaczyć. Możesz też nacisnąć klawisz **Tab** , aby przechodzić przez kontrolki okna dialogowego do momentu, gdy **podsystem** zostanie wyróżniony. Wybierz kontrolkę lista rozwijana lub naciśnij **kombinację klawiszy Alt + Strzałka w dół** , aby ją otworzyć.
 
-[Przejdź wstecz](#make-your-project-a-console-app)
+[Wstecz](#make-your-project-a-console-app)
 
 ### <a name="add-a-source-code-file-issues"></a>Dodaj plik kodu źródłowego: problemy
 

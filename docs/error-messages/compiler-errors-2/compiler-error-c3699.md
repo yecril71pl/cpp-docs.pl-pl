@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d313168e8033395da1749e000e52421939f77af4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758037"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686655"
 ---
 # <a name="compiler-error-c3699"></a>Błąd kompilatora C3699
 
 "operator": nie można użyć tego operatora pośredniego dla typu "Type"
 
-Podjęto próbę użycia operatora pośredniego, która nie jest dozwolona w `type`.
+Podjęto próbę użycia operatora pośredniego, który jest niedozwolony w `type` .
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3699.
 
@@ -34,8 +34,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Właściwość prosta nie może mieć typu referencyjnego. Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md) . Poniższy przykład generuje C3699.
 
 ```cpp
@@ -46,8 +44,6 @@ ref struct C {
    property System::String ^ y;   // OK
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Odpowiednikiem składni "wskaźnik do wskaźnika" jest dojście do odwołania śledzenia. Poniższy przykład generuje C3699.
 

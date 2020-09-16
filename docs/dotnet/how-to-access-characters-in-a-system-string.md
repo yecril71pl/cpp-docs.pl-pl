@@ -7,20 +7,20 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221370"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686798"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
 
 Dostęp do znaków obiektu można uzyskać <xref:System.String> w przypadku wywołań o wysokiej wydajności do funkcji niezarządzanych, które pobierają `wchar_t*` ciągi. Metoda daje wskaźnik wewnętrzny do pierwszego znaku <xref:System.String> obiektu. Ten wskaźnik może być manipulowany bezpośrednio lub przypięty i przeszedł do funkcji, która oczekuje zwykłego **`wchar_t`** ciągu.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-`PtrToStringChars`Zwraca element <xref:System.Char> , który jest wskaźnikiem wnętrza (znanym także jako `byref` ). W związku z tym podlega wyrzucaniu elementów bezużytecznych. Nie musisz przypinać tego wskaźnika, chyba że zamierzasz przekazać go do funkcji natywnej.
+`PtrToStringChars` Zwraca element <xref:System.Char> , który jest wskaźnikiem wnętrza (znanym także jako `byref` ). W związku z tym podlega wyrzucaniu elementów bezużytecznych. Nie musisz przypinać tego wskaźnika, chyba że zamierzasz przekazać go do funkcji natywnej.
 
 Rozważmy następujący kod.  Przypinanie nie jest potrzebne `ppchar` , ponieważ jest wskaźnikiem wnętrza, a jeśli moduł wyrzucania elementów bezużytecznych przeniesie ciąg do, zostanie również zaktualizowany `ppchar` . Bez [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), kod będzie działał i nie ma potencjalnego wpływu na wydajność spowodowany przez Przypinanie.
 
@@ -45,8 +45,6 @@ int main() {
 ```Output
 abcdefg
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład pokazuje, gdzie jest wymagany Przypinanie.
 
@@ -74,8 +72,6 @@ int main() {
 ```Output
 7
 ```
-
-## <a name="example"></a>Przykład
 
 Wewnętrzny wskaźnik ma wszystkie właściwości natywnego wskaźnika języka C++. Na przykład można użyć go do przeprowadzenia połączonej struktury danych i wykonania operacji wstawiania i usuwania przy użyciu tylko jednego wskaźnika:
 

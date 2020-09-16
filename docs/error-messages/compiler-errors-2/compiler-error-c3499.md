@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49c868b696df75a5b5148d32fb286019c6293e4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228846"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686140"
 ---
 # <a name="compiler-error-c3499"></a>Błąd kompilatora C3499
 
@@ -27,7 +27,7 @@ Kompilator generuje ten błąd, gdy wyrażenie lambda, które określa **`void`*
 
 - Połącz instrukcje tworzące treść wyrażenia lambda w pojedynczej instrukcji.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3499, ponieważ treść wyrażenia lambda zawiera wiele instrukcji i zwraca wartość, ale wyrażenie lambda nie określa zwracanego typu:
 
@@ -39,8 +39,6 @@ int main()
    [](int x) { int n = x * 2; return n; } (5); // C3499
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład przedstawia dwa możliwe rozwiązania do C3499. Pierwsze rozwiązanie zapewnia zwracany typ wyrażenia lambda. Druga rozdzielczość łączy instrukcje, które tworzą treść wyrażenia lambda w pojedynczej instrukcji.
 

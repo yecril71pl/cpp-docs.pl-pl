@@ -5,28 +5,28 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f7539b10ca6c503aede61d19de3d14fb9dcee8be
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988517"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686447"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Porady: konwertowanie kontenera STL/CLR na kolekcję .NET
 
-W tym temacie pokazano, jak konwertować kontenery STL/CLR na ich równoważne kolekcje platformy .NET. Przykładowo pokazujemy, jak przekonwertować [wektor](../dotnet/vector-stl-clr.md) STL/clr na <xref:System.Collections.Generic.ICollection%601> .NET i jak SKONWERTOWAĆ [mapę](../dotnet/map-stl-clr.md) stl/CLR na <xref:System.Collections.Generic.IDictionary%602>.NET, ale procedura jest podobna dla wszystkich kolekcji i kontenerów.
+W tym temacie pokazano, jak konwertować kontenery STL/CLR na ich równoważne kolekcje platformy .NET. Na przykład pokazujemy, jak przekonwertować [wektor](../dotnet/vector-stl-clr.md) STL/CLR na platformę .NET <xref:System.Collections.Generic.ICollection%601> oraz jak skonwertować [mapę](../dotnet/map-stl-clr.md) STL/CLR na platformę .NET <xref:System.Collections.Generic.IDictionary%602> , ale procedura jest podobna dla wszystkich kolekcji i kontenerów.
 
 ### <a name="to-create-a-collection-from-a-container"></a>Aby utworzyć kolekcję z kontenera
 
-1. Użyj jednej z poniższych metod:
+1. Użyj jednej z następujących metod:
 
    - Aby skonwertować część kontenera, wywołaj funkcję [make_collection](../dotnet/make-collection-stl-clr.md) i przekaż iterator BEGIN i End ITERATOR kontenera STL/CLR do skopiowania do kolekcji programu .NET. Ta funkcja szablonu przyjmuje Iteratory STL/CLR jako argument szablonu. Pierwszy przykład ilustruje tę metodę.
 
    - Aby przekonwertować cały kontener, należy rzutować go do odpowiedniego interfejsu kolekcji lub kolekcji interfejsów programu .NET. Drugi przykład ilustruje tę metodę.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-W tym przykładzie tworzymy `vector` STL/CLR i dodamy do niej 5 elementów. Następnie tworzymy kolekcję platformy .NET, wywołując funkcję `make_collection`. Na koniec zostanie wyświetlona zawartość nowo utworzonej kolekcji.
+W tym przykładzie tworzymy kod STL/CLR `vector` i dodamy do niego 5 elementów. Następnie tworzymy kolekcję platformy .NET przez wywołanie `make_collection` funkcji. Na koniec zostanie wyświetlona zawartość nowo utworzonej kolekcji.
 
 ```cpp
 // cliext_convert_vector_to_icollection.cpp
@@ -68,9 +68,7 @@ The contents of the System::Collections::Generic::ICollection are:
 7
 ```
 
-## <a name="example"></a>Przykład
-
-W tym przykładzie tworzymy `map` STL/CLR i dodamy do niej 5 elementów. Następnie utworzymy <xref:System.Collections.Generic.IDictionary%602> platformy .NET i przypiszesz `map` bezpośrednio do niego. Na koniec zostanie wyświetlona zawartość nowo utworzonej kolekcji.
+W tym przykładzie tworzymy kod STL/CLR `map` i dodamy do niego 5 elementów. Następnie utworzymy platformę .NET <xref:System.Collections.Generic.IDictionary%602> i przypiszemy `map` ją bezpośrednio. Na koniec zostanie wyświetlona zawartość nowo utworzonej kolekcji.
 
 ```cpp
 // cliext_convert_map_to_idictionary.cpp

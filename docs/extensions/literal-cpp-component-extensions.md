@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214259"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686733"
 ---
 # <a name="literal-ccli-and-ccx"></a>literał (C++/CLI i C++/CX)
 
@@ -33,7 +33,7 @@ Zmienna (składowa danych) oznaczona jako **literał** w kompilacji **/CLR** jes
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -49,7 +49,7 @@ Aby uzyskać więcej informacji, zobacz [static](../cpp/storage-classes-cpp.md) 
 
 **Literal** jest kontekstowym słowem kluczowym. Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) .
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład pokazuje, że zmienna **literału** oznacza **`static`** .
 
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje wpływ literału w metadanych:
 
@@ -87,8 +85,6 @@ Zwróć uwagę na różnice w metadanych dla `sc` i `lit` : `modopt` dyrektywa j
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład, utworzony w języku C#, odwołuje się do metadanych utworzonych w poprzednim przykładzie i pokazuje wpływ **literału** i **statyczne zmienne stałe** :
 
@@ -123,7 +119,7 @@ class B {
 
 ## <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ## <a name="see-also"></a>Zobacz także
 

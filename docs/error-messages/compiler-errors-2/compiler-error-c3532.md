@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9339797f42967ef1de0253b1e51092e6d98df5d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228820"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686785"
 ---
 # <a name="compiler-error-c3532"></a>Błąd kompilatora C3532
 
@@ -25,7 +25,7 @@ Nie można zadeklarować wskazanego typu za pomocą **`auto`** słowa kluczowego
 
 1. Upewnij się, że nie deklarujesz tablicy lub typu zwracanego przez metodę.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład daje C3532, ponieważ **`auto`** słowo kluczowe nie może deklarować zwracanego typu metody.
 
@@ -34,8 +34,6 @@ Poniższy przykład daje C3532, ponieważ **`auto`** słowo kluczowe nie może d
 // Compile with /Zc:auto
 auto f(){}   // C3532
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład daje C3532, ponieważ **`auto`** słowo kluczowe nie może deklarować tablicy.
 

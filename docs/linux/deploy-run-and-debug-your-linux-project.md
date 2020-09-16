@@ -3,14 +3,14 @@ title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux MSBuild C++
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu na zdalnym miejscu docelowym z wnętrza projektu systemu Linux w języku MSBuild w programie Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043892"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686707"
 ---
-# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Wdrażanie, uruchamianie i debugowanie projektu MSBuild systemu Linux
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Wdrażanie, uruchamianie i debugowanie projektu narzędzia w systemie Linux
 
 ::: moniker range="vs-2015"
 Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019**.
@@ -38,7 +38,7 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 
    GDB jest używany do debugowania aplikacji działających w systemie Linux. Podczas debugowania w systemie zdalnym (nie WSL) GDB można uruchomić w dwóch różnych trybach, które można wybrać z opcji **tryb debugowania** na stronie właściwości **debugowania** projektu:
 
-   ![Opcje GDB](media/vs2019-debugger-settings.png)
+   ![Zrzut ekranu przedstawiający okno dialogowe strony właściwości aplikacji konsoli systemu Linux dla programu Visual Studio 2019 z właściwościami konfiguracji > wybrane debugowanie i tryb debugowania wyróżniony za pomocą pozycji G B D zaznaczone i wyróżnione na liście rozwijanej.](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 
    GDB jest używany do debugowania aplikacji działających w systemie Linux. GDB może działać w dwóch różnych trybach, które można wybrać z opcji **tryb debugowania** na stronie właściwości **debugowania** projektu:
 
-   ![Opcje GDB](media/vs2017-debugger-settings.png)
+   ![Zrzut ekranu przedstawiający okno dialogowe strony właściwości aplikacji konsoli systemu Linux dla programu Visual Studio 2017 z właściwościami konfiguracji > wybrane debugowanie i tryb debugowania wyróżniony za pomocą pozycji G B D zaznaczone i wyróżnione na liście rozwijanej.](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
@@ -123,7 +123,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a>Określanie różnych maszyn do kompilowania i debugowania w projektach systemu Linux opartych na programie MSBuild
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> Określanie różnych maszyn do kompilowania i debugowania w projektach systemu Linux opartych na programie MSBuild
 
 W programie Visual Studio 2019 w wersji 16,1 można oddzielić zdalną maszynę kompilacji od zdalnego komputera debugowania w przypadku projektów systemu Linux opartych na programie MSBuild i projektów CMake przeznaczonych dla zdalnego komputera z systemem Linux. Można na przykład teraz przeprowadzić kompilację krzyżową na platformie x64 i wdrożyć ją na urządzeniu ARM w przypadku scenariuszy IoT.
 

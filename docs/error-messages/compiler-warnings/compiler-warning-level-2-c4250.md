@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162039"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686525"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Ostrzeżenie kompilatora (poziom 2) C4250
 
 "Class1": dziedziczy element "'klasa:: member" za pośrednictwem pozycji dominującej
 
-Co najmniej dwa składowe mają tę samą nazwę. Jeden w `class2` jest dziedziczony, ponieważ jest klasą bazową dla innych klas, które zawierały ten element członkowski.
+Co najmniej dwa składowe mają tę samą nazwę. Ta wartość `class2` jest dziedziczona, ponieważ jest klasą bazową dla innych klas, które zawierały ten element członkowski.
 
 Aby pominąć C4250, użyj dyrektywy pragma [ostrzeżenia](../../preprocessor/warning.md) .
 
 Ponieważ wirtualna Klasa bazowa jest współdzielona przez wiele klas pochodnych, nazwa w klasie pochodnej dominuje nazwę w klasie bazowej. Na przykład, uwzględniając następującą hierarchię klas, istnieją dwie definicje funkcji Func dziedziczone w obrębie rombu: wystąpienie VBC:: Func () za pomocą klasy słabej oraz elementu dominującego:: Func () za pomocą klasy dominującej. Niekwalifikowane wywołanie funkcji Func () za pomocą obiektu klasy Diamond, zawsze wywołuje wystąpienie dominuje:: Func ().  Jeśli słaba Klasa miała wprowadzić wystąpienie funkcji Func (), żadna definicja nie zostanie użyta, a wywołanie zostanie oflagowane jako niejednoznaczne.
+
+## <a name="examples"></a>Przykłady
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C4250.
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład pokazuje bardziej skomplikowaną sytuację. Poniższy przykład generuje C4250.
 

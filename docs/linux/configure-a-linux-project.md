@@ -3,12 +3,12 @@ title: Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Stud
 ms.date: 08/06/2020
 description: Skonfiguruj projekt systemu Linux oparty na programie MSBuild w programie Visual Studio, aby można było go skompilować.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043866"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685959"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Studio
 
@@ -93,7 +93,7 @@ Ponieważ cała kompilacja odbywa się na komputerze zdalnym (lub WSL), kilka do
 
 ![Zdarzenia kompilacji](media/settings_buildevents.png)
 
-## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a>Funkcja IntelliSense dla nagłówków w systemach zdalnych
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> Funkcja IntelliSense dla nagłówków w systemach zdalnych
 
 Po dodaniu nowego połączenia w **Menedżerze połączeń**program Visual Studio automatycznie wykrywa katalogi dołączania dla kompilatora w systemie zdalnym. Program Visual Studio następnie Zips pliki i skopiuje je do katalogu na lokalnym komputerze z systemem Windows. Po wykonaniu tej operacji, za każdym razem, gdy korzystasz z tego połączenia w projekcie programu Visual Studio lub CMake, nagłówki w tych katalogach są używane do udostępniania technologii IntelliSense.
 
@@ -110,13 +110,13 @@ Aby zarządzać pamięcią podręczną nagłówków, przejdź do **opcji narzęd
 
 ::: moniker range="vs-2017"
 
-![Funkcja IntelliSense nagłówka zdalnego](media/remote-header-intellisense.png)
+![Zrzut ekranu przedstawiający okno dialogowe Opcje z międzyplatformowym Menedżerem połączeń > > wybrano zdalne nagłówki programu IntelliSense.](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![Funkcja IntelliSense nagłówka zdalnego](media/connection-manager-vs2019.png)
+![Zrzut ekranu przedstawiający okno dialogowe Opcje z wybranym wieloplatformowym Menedżerem połączeń >.](media/connection-manager-vs2019.png)
 
 Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 
@@ -124,7 +124,7 @@ Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 
 ::: moniker-end
 
-## <a name="linux-target-locale"></a><a name="locale"></a>Ustawienia regionalne docelowego systemu Linux
+## <a name="linux-target-locale"></a><a name="locale"></a> Ustawienia regionalne docelowego systemu Linux
 
 Ustawienia języka programu Visual Studio nie są propagowane do celów systemu Linux, ponieważ program Visual Studio nie zarządza ani nie konfiguruje zainstalowanych pakietów. Komunikaty wyświetlane w oknie **danych wyjściowych** , takie jak błędy kompilacji, są wyświetlane przy użyciu języka i ustawień regionalnych docelowego systemu Linux. Należy skonfigurować cele systemu Linux dla żądanych ustawień regionalnych.
 

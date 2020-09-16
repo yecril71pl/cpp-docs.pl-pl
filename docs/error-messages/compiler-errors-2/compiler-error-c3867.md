@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 40825bf92a892917f815c955ee4ba1fb6fa906c3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756854"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686421"
 ---
 # <a name="compiler-error-c3867"></a>Błąd kompilatora C3867
 
-"Func": wywołanie funkcji nie ma listy argumentów; Użyj funkcji "& Func", aby utworzyć wskaźnik do składowej
+"Func": wywołanie funkcji nie ma listy argumentów; Użyj funkcji "&Func", aby utworzyć wskaźnik do składowej
 
 Podjęto próbę pobrania adresu funkcji składowej bez kwalifikowania funkcji składowej przy użyciu nazwy klasy i operatora address-of.
 
 Ten błąd może również zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: Ulepszona zgodność wskaźnika do składowej. Kod, który został skompilowany przed Visual Studio 2005, będzie teraz generował C3867.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 C3867 może być wystawiony przez kompilator z mylącą zalecaną rozdzielczością. Jeśli to możliwe, użyj klasy najbardziej pochodnej.
 
@@ -44,8 +44,6 @@ void Derived::Bar() {
    &Derived::Test;   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3867 i pokazuje, jak rozwiązać ten problem.
 
@@ -77,8 +75,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład generuje C3867 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
@@ -95,8 +91,6 @@ int main() {
    void (X::*pmf2)() = &X::mf;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3867.
 
@@ -119,8 +113,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3867.
 

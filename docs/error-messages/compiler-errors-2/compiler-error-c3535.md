@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228794"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686093"
 ---
 # <a name="compiler-error-c3535"></a>Błąd kompilatora C3535
 
@@ -27,7 +27,7 @@ Nie można wywnioskować typu zmiennej zadeklarowanej za pomocą **`auto`** sło
 
 1. Upewnij się, że jeśli deklaracja jest wskaźnikiem do typu, wyrażenie inicjacji jest typem wskaźnika.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład daje C3535, ponieważ wyrażenie inicjacji daje w wyniku **`void`** .
 
@@ -42,8 +42,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład daje C3535, ponieważ instrukcja deklaruje zmienną `x` jako wskaźnik do typu wywnioskowanego, ale typ wyrażenia inicjatora jest podwójny. W związku z tym kompilator nie może wywnioskować typu zmiennej.
 
 ```cpp
@@ -55,8 +53,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład daje C3535, ponieważ zmienna `p` deklaruje wskaźnik do typu wywnioskowanego, ale wyrażenie inicjacji nie jest typem wskaźnika.
 

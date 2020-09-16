@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833118"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686486"
 ---
 # <a name="db_column"></a>db_column
 
@@ -45,7 +45,7 @@ Obowiązkowe Skala, która ma być używana dla wpisu kolumny. Aby uzyskać szcz
 *Stany*<br/>
 Obowiązkowe Zmienna członkowska używana do przechowywania stanu tej kolumny. Stan wskazuje, czy wartość kolumny jest wartością danych, czy inną wartością, taką jak NULL. Aby uzyskać możliwe wartości, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-*Długość*<br/>
+*length*<br/>
 Obowiązkowe Zmienna członkowska używana do przechowywania rozmiaru kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
@@ -58,7 +58,7 @@ Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmie
 
 Aby zapoznać się z przykładem tego atrybutu używanym w aplikacji, zobacz [Odczytaj](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład tworzy powiązanie kolumny w tabeli z **`long`** elementem członkowskim danych i określa pola stanu i długości.
 
@@ -77,8 +77,6 @@ class CProducts {
    [ db_column("1", status="m_dwProductIDStatus", length="m_dwProductIDLength") ] LONG m_ProductID;
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład wiąże cztery kolumny z **`long`** , ciągiem znaków, sygnaturą czasową i `DB_NUMERIC` liczbą całkowitą w tej kolejności.
 
@@ -109,7 +107,7 @@ class CProducts {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

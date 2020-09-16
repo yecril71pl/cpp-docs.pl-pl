@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219757"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686759"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
 
@@ -113,7 +113,7 @@ Aby podsumować, użyj ograniczeń w kodzie zgodnie z następującymi regułami:
     ref class G2{};
     ```
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład ilustruje używanie ograniczeń do wywoływania metod wystąpień w parametrach typu.
 
@@ -175,8 +175,6 @@ int main() {
 "grandfather" is a senior
 ```
 
-## <a name="example"></a>Przykład
-
 Gdy parametr typu generycznego jest używany jako ograniczenie, jest on nazywany ograniczeniem typu owies. Ograniczenia typu owies są przydatne, gdy funkcja członkowska z własnym parametrem typu musi ograniczyć ten parametr do parametru typu zawierającego.
 
 W poniższym przykładzie, `T` jest ograniczeniem typu "owies" w kontekście `Add` metody.
@@ -198,6 +196,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

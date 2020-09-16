@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190160"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686322"
 ---
 # <a name="cast-operator-"></a>Operator rzutowania: ()
 
@@ -28,7 +28,7 @@ Każde wyrażenie jednoargumentowe jest traktowane jako wyrażenie rzutowania.
 
 Kompilator traktuje *wyrażenie cast* jako typ *type-name* po wprowadzeniu rzutowania typu. Rzutowania mogą służyć do konwertowania obiektów dowolnego typu skalarnego na lub z dowolnego innego typu skalarnego. Rzutowania typu jawnego są ograniczone przez te same reguły, które określają efekty konwersji niejawnych. Dodatkowe ograniczenia dotyczące rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentacji określonych typów.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -118,7 +116,7 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

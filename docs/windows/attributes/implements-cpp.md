@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842354"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686746"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -41,13 +41,13 @@ Domyślnie tylko interfejsy COM, które są klasami bazowymi, `coclass` są doda
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Tak|
+|**Powtarzalne**|Yes|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład składa się z trzech części: pliku. idl i skojarzonego z nim pliku h oraz pliku języka C++.
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>Przykład
 
 I następujący plik h, który musi być również dostępny dla kompilatora.
 
@@ -377,8 +375,6 @@ CBar;
 #endif
 ```
 
-## <a name="example"></a>Przykład
-
 W poniższym programie, bez implementuje, `IBar1` , `IBar2` , i `ISna` nie będzie w `coclass` wygenerowanym IDL.
 
 ```cpp
@@ -482,7 +478,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

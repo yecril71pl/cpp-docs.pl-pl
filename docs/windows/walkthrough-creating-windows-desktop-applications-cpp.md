@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231575"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686603"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu Windows (C++)
 
@@ -55,11 +55,11 @@ Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Wind
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **DesktopApp** , wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
-   ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
+   ![Krótkie wideo pokazujące użytkownika, który dodaje nowy element do projektu DesktopApp w programie Visual Studio 2019.](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
 1. W oknie dialogowym **Dodaj nowy element** wybierz opcję **plik C++ (. cpp)**. W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz pozycję **Dodaj**.
 
-   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
+   ![Zrzut ekranu przedstawiający okno dialogowe Dodaj nowy element w programie Visual Studio 2019 z zainstalowanym > Visual C plus plus zaznaczona i wyróżnioną opcją plik C plus plus.](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
 
 Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby kontynuować, przejdź do, aby [utworzyć kod](#create-the-code).
 
@@ -75,17 +75,17 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
    W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz przycisk **OK**.
 
-   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nazwij projekt DesktopApp")
+   ![Zrzut ekranu okna dialogowego Nowy projekt w programie Visual Studio 2017 z zainstalowanym > Visual C plus plus > Windows Desktop wybrana opcja kreatora pulpitu systemu Windows, a następnie DesktopApp wpisana w polu tekstowym Nazwa.](../build/media/desktop-app-new-project-name-153.png "Nazwij projekt DesktopApp")
 
 1. W oknie dialogowym **projekt pulpitu systemu Windows** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows (exe)**. W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Upewnij się, że nie wybrano **prekompilowanego nagłówka** . Wybierz **przycisk OK** , aby utworzyć projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **DesktopApp** , wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
-   ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
+   ![Krótkie wideo pokazujące użytkownika, który dodaje nowy element do projektu DesktopApp w programie Visual Studio 2017.](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
 1. W oknie dialogowym **Dodaj nowy element** wybierz opcję **plik C++ (. cpp)**. W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz pozycję **Dodaj**.
 
-   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
+   ![Zrzut ekranu przedstawiający okno dialogowe Dodaj nowy element w programie Visual Studio 2017 z zainstalowanym > Visual C plus plus zaznaczona i wyróżnioną opcją plik C plus plus.](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
 
 Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby kontynuować, przejdź do, aby [utworzyć kod](#create-the-code).
 
@@ -101,7 +101,7 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
    W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz przycisk **OK**.
 
-   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-150.png "Nazwij projekt DesktopApp")
+   ![Zrzut ekranu okna dialogowego Nowy projekt w programie Visual Studio 2015 z zainstalowanymi szablonami > > Visual C plus plus > Win32, opcja projektu Win32 wyróżniona i DesktopApp wpisana w polu tekstowym Nazwa.](../build/media/desktop-app-new-project-name-150.png "Nazwij projekt DesktopApp")
 
 1. Na stronie **Przegląd** **Kreatora aplikacji Win32**wybierz pozycję **dalej**.
 
@@ -111,11 +111,11 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt DesktopApp, wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
-   ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Dodaj nowy element do projektu DesktopApp")
+   ![Krótkie wideo pokazujące użytkownika, który dodaje nowy element do projektu DesktopApp w programie Visual Studio 2015.](../build/media/desktop-app-project-add-new-item-150.gif "Dodaj nowy element do projektu DesktopApp")
 
 1. W oknie dialogowym **Dodaj nowy element** wybierz opcję **plik C++ (. cpp)**. W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz pozycję **Dodaj**.
 
-   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik CPP do projektu DesktopApp")
+   ![Zrzut ekranu przedstawiający okno dialogowe Dodaj nowy element w programie Visual Studio 2015 z zainstalowanym > Visual C plus plus zaznaczona i wyróżnioną opcją plik C plus plus.](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik CPP do projektu DesktopApp")
 
 Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze.
 
@@ -127,7 +127,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
 
 ### <a name="to-start-a-windows-desktop-application"></a>Aby uruchomić aplikację klasyczną systemu Windows
 
-1. Tak jak w przypadku każdej aplikacji C i języka C++ musi istnieć `main` Funkcja jako punkt początkowy, każda aplikacja klasyczna systemu Windows musi mieć `WinMain` funkcję. `WinMain`ma następującą składnię.
+1. Tak jak w przypadku każdej aplikacji C i języka C++ musi istnieć `main` Funkcja jako punkt początkowy, każda aplikacja klasyczna systemu Windows musi mieć `WinMain` funkcję. `WinMain` ma następującą składnię.
 
    ```cpp
    int CALLBACK WinMain(
@@ -150,7 +150,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    #include <tchar.h>
    ```
 
-1. Wraz z `WinMain` funkcją, każda aplikacja klasyczna systemu Windows musi mieć również funkcję okna. Ta funkcja jest zazwyczaj nazwana `WndProc` , ale można ją nazwać w dowolny sposób. `WndProc`ma następującą składnię.
+1. Wraz z `WinMain` funkcją, każda aplikacja klasyczna systemu Windows musi mieć również funkcję okna. Ta funkcja jest zazwyczaj nazwana `WndProc` , ale można ją nazwać w dowolny sposób. `WndProc` ma następującą składnię.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -388,7 +388,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    }
    ```
 
-   `HDC`kod jest uchwytem do kontekstu urządzenia, który jest używany do rysowania w obszarze klienta okna. Użyj `BeginPaint` funkcji i, `EndPaint` Aby przygotować się do i zakończyć rysowanie w obszarze klienta. `BeginPaint`zwraca dojście do kontekstu urządzenia wyświetlania używanego do rysowania w obszarze klienta. `EndPaint`zamyka żądanie malowania i zwalnia kontekst urządzenia.
+   `HDC` kod jest uchwytem do kontekstu urządzenia, który jest używany do rysowania w obszarze klienta okna. Użyj `BeginPaint` funkcji i, `EndPaint` Aby przygotować się do i zakończyć rysowanie w obszarze klienta. `BeginPaint` zwraca dojście do kontekstu urządzenia wyświetlania używanego do rysowania w obszarze klienta. `EndPaint` zamyka żądanie malowania i zwalnia kontekst urządzenia.
 
 1. Aplikacja zwykle obsługuje wiele innych komunikatów. Na przykład [WM_CREATE](/windows/win32/winmsg/wm-create) podczas pierwszego tworzenia okna i [WM_DESTROY](/windows/win32/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawową funkcję, ale kompletną `WndProc` .
 

@@ -4,12 +4,12 @@ description: Użyj edytora kodu C++ w programie Visual Studio do formatowania, n
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206222"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686335"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Edytuj i Refaktoryzacja kodu C++ w programie Visual Studio
 
@@ -64,7 +64,7 @@ Poprzedni zrzut ekranu pokazuje kilka przycisków na liście rozwijanej. Umożli
 - Typy
 - Makra
 - Wyliczenia
-- Namespaces
+- Przestrzenie nazw
 
 Przycisk jest wyświetlany tylko wtedy, gdy jest on istotny dla bieżącej sesji IntelliSense. Zazwyczaj nie widzisz wszystkich przycisków w tym samym czasie.
 
@@ -98,11 +98,11 @@ W przypadku niektórych rodzajów błędów, a także wspólnych wzorców kodowa
 
 W poniższym przykładzie `vector` zadeklarowano, ale nie znaleziono definicji, dlatego edytor oferuje niezbędny plik nagłówka:
 
-![C&#43;&#43; szybka poprawka](../ide/media/quick-fix-for-header-cpp.png "Szybka naprawa języka C++")
+![Zrzut ekranu przedstawiający zygzaki błędów i szybką poprawkę zaoferowaną przez Edytor.](../ide/media/quick-fix-for-header-cpp.png "Szybka naprawa języka C++")
 
 Edytor oferuje również szybkie poprawki w przypadku niektórych możliwości refaktoryzacji. Na przykład, Jeśli deklarujesz klasę w pliku nagłówkowym, Visual Studio będzie oferować definicję dla niego w osobnym pliku. cpp.
 
-![C&#43;&#43; szybka poprawka](../ide/media/quick-fix.png "Szybka naprawa języka C++")
+![Zrzut ekranu przedstawiający stronę szybkie rozwiązywanie przy użyciu opcji Utwórz definicję iteratora trasy kanału w obszarze kanały kropka C P p z wyróżnioną opcją.](../ide/media/quick-fix.png "Szybka naprawa języka C++")
 
 ## <a name="change-tracking"></a>Śledzenie zmian
 
@@ -134,7 +134,7 @@ Aby uzyskać więcej informacji, zobacz [Dodawanie funkcji za pomocą kreatorów
 
 ## <a name="refactoring"></a>Refaktoryzacja
 
-Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie [żarówki](/visualstudio/ide/perform-quick-actions-with-light-bulbs) w edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Między innymi są to następujące funkcje:
+Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie [żarówki](/visualstudio/ide/perform-quick-actions-with-light-bulbs) w edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Te funkcje obejmują:
 
 - [Zmień nazwę](refactoring/rename.md)
 - [Extract — Funkcja](refactoring/extract-function.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562132"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686590"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -66,13 +66,11 @@ Na poniższej ilustracji przedstawiono okno dialogowe zawierające kontrolę adr
 
 ![Okno dialogowe z kontrolą adresu sieciowego i poradą.](../../mfc/reference/media/cnetaddctrl.png "Okno dialogowe z kontrolą adresu sieciowego i poradą.")
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład kodu jest częścią okna dialogowego, która sprawdza poprawność adresu sieciowego. Programy obsługi zdarzeń dla trzech przycisków radiowych określają, że adres sieciowy może być jednym z trzech typów adresów. Użytkownik wprowadza adres w polu tekstowym kontrolki sieci, a następnie naciska przycisk, aby sprawdzić poprawność adresu. Jeśli adres jest prawidłowy, zostanie wyświetlony komunikat o powodzeniu. w przeciwnym razie zostanie wyświetlony wstępnie zdefiniowany komunikat o błędzie porady.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład kodu z pliku nagłówkowego okna dialogowego definiuje zmienne [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) i [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) , które są wymagane przez metodę [CNetAddressCtrl:: GetAddress](#getaddress) .
 
@@ -256,7 +254,7 @@ Użyj metody [CNetAddressCtrl:: SetAllowType](#setallowtype) , aby określić ty
 
 Ten komunikat wywołuje [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) makro, które jest opisane w Windows SDK. To makro wysyła komunikat NCM_SETALLOWTYPE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

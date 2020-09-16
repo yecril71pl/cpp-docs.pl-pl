@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228716"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686616"
 ---
 # <a name="generic-delegates-ccli"></a>Delegaty ogólne (C++/CLI)
 
@@ -50,7 +50,7 @@ Nazwa delegata.
 *parametry formalne*<br/>
 Obowiązkowe Lista parametrów delegata.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Parametry typu delegata są określone w punkcie, w którym jest tworzony obiekt delegowany. Obiekt delegowany i skojarzona z nim Metoda musi mieć taki sam podpis. Poniżej znajduje się przykład ogólnej deklaracji delegata.
 
@@ -60,8 +60,6 @@ Parametry typu delegata są określone w punkcie, w którym jest tworzony obiekt
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje, że
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład deklaruje delegata ogólnego `GenDelegate<ItemType>` , a następnie tworzy wystąpienie go przez skojarzenie go z metodą `MyMethod` , która używa parametru typu `ItemType` . Tworzone i wywoływane są dwa wystąpienia delegata (liczba całkowita i podwójna).
 

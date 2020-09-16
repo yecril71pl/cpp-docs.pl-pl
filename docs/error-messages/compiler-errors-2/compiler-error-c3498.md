@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f1b978a585f3404cd3a881f25d6ef6a0f66b212d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738105"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686158"
 ---
 # <a name="compiler-error-c3498"></a>Błąd kompilatora C3498
 
@@ -23,7 +23,7 @@ Nie można przechwycić zmiennej, która ma typ zarządzany lub środowisko wyko
 
 - Przekaż zmienną zarządzaną lub środowisko wykonawcze systemu Windows do listy parametrów wyrażenia lambda.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3498, ponieważ zmienna, która ma typ zarządzany, pojawia się na liście przechwytywania wyrażenia lambda:
 
@@ -39,8 +39,6 @@ int main()
       { return String::Concat(s, r); } (", World!"); // C3498
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład rozwiązuje C3498 przez przekazanie zmiennej zarządzanej `s` do listy parametrów wyrażenia lambda:
 

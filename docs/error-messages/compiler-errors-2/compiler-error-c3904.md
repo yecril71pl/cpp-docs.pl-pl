@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749051"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686068"
 ---
 # <a name="compiler-error-c3904"></a>Błąd kompilatora C3904
 
 "property_accessor": należy określić liczbę parametrów
 
-Sprawdź liczbę parametrów w `get` i `set` metodach względem wymiarów właściwości.
+Sprawdź liczbę parametrów w `get` `set` metodach i dla wymiarów właściwości.
 
-- Liczba parametrów dla metody `get` musi być równa liczbie wymiarów właściwości lub zero dla nieindeksowanych właściwości.
+- Liczba parametrów dla `get` metody musi być równa liczbie wymiarów właściwości lub mieć wartość zero dla nieindeksowanych właściwości.
 
-- Liczba parametrów metody `set` musi być większa niż liczba wymiarów właściwości.
+- Liczba parametrów `set` metody musi być większa niż liczba wymiarów właściwości.
 
 Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3904.
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3904.
 

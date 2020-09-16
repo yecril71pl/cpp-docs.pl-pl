@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: 6eb1a05eaf6669daa4cb7142ff16a57f7caf39cd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 85e9025c26cc821cdbd8e5218e184f05e2b96b24
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857609"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685834"
 ---
 # <a name="__clrcall"></a>__clrcall
 
@@ -23,15 +23,15 @@ Punkty wejścia są oddzielnymi funkcjami wygenerowanymi przez kompilator. Jeśl
 
 Podczas pobierania adresu funkcji natywnej, jeśli nie określono **__clrcall** , kompilator używa natywnego punktu wejścia. **__clrcall** wskazuje, że funkcja jest zarządzana i nie ma potrzeby przechodzenia przez przejście z zarządzanego do natywnego. W takim przypadku kompilator używa zarządzanego punktu wejścia.
 
-Gdy jest używane `/clr` (nie `/clr:pure` lub `/clr:safe`) i **__clrcall** nie są używane, pobieranie adresu funkcji zawsze zwraca adres natywnej funkcji punktu wejścia. Gdy **__clrcall** jest używany, funkcja natywnego punktu wejścia nie zostanie utworzona, więc otrzymujesz adres funkcji zarządzanej, a nie funkcję thunk punktu wejścia. Aby uzyskać więcej informacji, zobacz [podwójny podwójna](../dotnet/double-thunking-cpp.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
+Gdy `/clr` `/clr:pure` `/clr:safe` używana jest wartość (not lub), a **__clrcall** nie jest używana, pobieranie adresu funkcji zawsze zwraca adres funkcji natywnego punktu wejścia. Gdy **__clrcall** jest używany, funkcja natywnego punktu wejścia nie zostanie utworzona, więc otrzymujesz adres funkcji zarządzanej, a nie funkcję thunk punktu wejścia. Aby uzyskać więcej informacji, zobacz [podwójny podwójna](../dotnet/double-thunking-cpp.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
 [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji są **__clrcall** i kompilator nie zezwoli na użycie funkcji wewnątrz jednostka kompilacji jako innej niż **__clrcall**. Gdy jest używany **/CLR: Pure** , **__clrcall** można określić tylko dla wskaźników funkcji i deklaracji zewnętrznych.
 
-Można bezpośrednio wywoływać **__clrcall** funkcje z istniejącego C++ kodu, który został skompilowany przy użyciu **/CLR** , o ile ta funkcja ma implementację MSIL. **__clrcall** funkcje nie mogą być wywoływane bezpośrednio z funkcji, które mają wbudowaną metodę ASM i wywołują intrinisics specyficzne dla procesora CPU, na przykład nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
+Można bezpośrednio wywoływać **__clrcall** funkcje z istniejącego kodu C++, który został skompilowany przy użyciu **/CLR** , o ile ta funkcja ma implementację MSIL. **__clrcall** funkcje nie mogą być wywoływane bezpośrednio z funkcji, które mają wbudowaną metodę ASM i wywołują intrinisics specyficzne dla procesora CPU, na przykład nawet jeśli te funkcje są kompilowane przy użyciu `/clr` .
 
-**__clrcall** wskaźników funkcji można używać tylko w domenie aplikacji, w której zostały utworzone.  Zamiast przekazywać **__clrcall** wskaźniki funkcji w różnych domenach aplikacji, należy użyć <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [domeny i wizualizacja C++aplikacji ](../dotnet/application-domains-and-visual-cpp.md).
+**__clrcall** wskaźników funkcji można używać tylko w domenie aplikacji, w której zostały utworzone.  Zamiast przekazywać **__clrcall** wskaźniki funkcji między domenami aplikacji, użyj polecenia <xref:System.CrossAppDomainDelegate> . Aby uzyskać więcej informacji, zobacz [domeny aplikacji i Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Należy pamiętać, że gdy funkcja jest zadeklarowana przy użyciu **__clrcall**, kod zostanie wygenerowany w razie konieczności; na przykład, gdy funkcja jest wywoływana.
 
@@ -69,8 +69,6 @@ in Func1
 in Func1
 in Func1
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje, że można zdefiniować wskaźnik funkcji, na przykład, deklaruje, że wskaźnik funkcji będzie wywoływany tylko z kodu zarządzanego. Dzięki temu kompilator może bezpośrednio wywołać funkcję zarządzaną i uniknąć natywnego punktu wejścia (podwójny thunk problemu).
 

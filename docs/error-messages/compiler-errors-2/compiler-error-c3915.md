@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756282"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686054"
 ---
 # <a name="compiler-error-c3915"></a>Błąd kompilatora C3915
 
@@ -21,7 +21,7 @@ Typ nie ma domyślnej właściwości indeksowanej.
 
 Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3915.
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
-C3915 może również wystąpić, jeśli próbujesz użyć domyślnego indeksatora w tym samym jednostka kompilacji, gdzie został on zdefiniowany przy użyciu <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 może również wystąpić, jeśli próbujesz użyć domyślnego indeksatora w tym samym jednostka kompilacji, gdzie został on zdefiniowany za pomocą <xref:System.Reflection.DefaultMemberAttribute> .
 
 Poniższy przykład generuje C3915.
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988279"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686460"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Porady: konwertowanie kolekcji .NET na kontener STL/CLR
 
-W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników kontenerów STL/CLR. Przykład pokazuje, jak przekonwertować <xref:System.Collections.Generic.List%601> .NET na [wektor](../dotnet/vector-stl-clr.md) STL/CLR oraz jak skonwertować <xref:System.Collections.Generic.Dictionary%602> .NET na [mapę](../dotnet/map-stl-clr.md)STL/CLR, ale procedura jest podobna dla wszystkich kolekcji i kontenerów.
+W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników kontenerów STL/CLR. Przykład pokazuje, jak przekonwertować platformę .NET <xref:System.Collections.Generic.List%601> na [wektor](../dotnet/vector-stl-clr.md) STL/CLR oraz jak skonwertować platformę .NET <xref:System.Collections.Generic.Dictionary%602> na [mapę](../dotnet/map-stl-clr.md)STL/CLR, ale procedura jest podobna dla wszystkich kolekcji i kontenerów.
 
 ### <a name="to-create-a-container-from-a-collection"></a>Aby utworzyć kontener z kolekcji
 
@@ -22,7 +22,7 @@ W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników ko
 
    Pierwszy przykład ilustruje tę procedurę.
 
--LUB-
+— Lub —
 
 1. Utwórz ogólny kontener STL/CLR przez utworzenie obiektu [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Ta klasa szablonu przyjmuje jako argument interfejs kolekcji .NET. Aby sprawdzić, które interfejsy są obsługiwane, zobacz [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
 
@@ -30,9 +30,9 @@ W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników ko
 
    Drugi przykład ilustruje tę procedurę.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-W tym przykładzie utworzysz ogólny <xref:System.Collections.Generic.List%601> i dodamy do niej 5 elementów. Następnie tworzymy `vector` przy użyciu konstruktora, który przyjmuje <xref:System.Collections.Generic.IEnumerable%601> jako argument.
+W tym przykładzie utworzymy rodzajowy <xref:System.Collections.Generic.List%601> i dodamy do niego 5 elementów. Następnie tworzymy `vector` przy użyciu konstruktora, który przyjmuje <xref:System.Collections.Generic.IEnumerable%601> jako argument.
 
 ```cpp
 // cliext_convert_list_to_vector.cpp
@@ -76,9 +76,7 @@ The contents of the cliext::vector are:
 11
 ```
 
-## <a name="example"></a>Przykład
-
-W tym przykładzie utworzysz ogólny <xref:System.Collections.Generic.Dictionary%602> i dodamy do niej 5 elementów. Następnie tworzymy `collection_adapter` do zawijania <xref:System.Collections.Generic.Dictionary%602> jako prostego kontenera STL/CLR. Na koniec tworzymy `map` i skopiujemy zawartość <xref:System.Collections.Generic.Dictionary%602> do `map` przez iterację w `collection_adapter`. W trakcie tego procesu tworzymy nową parę przy użyciu funkcji `make_pair` i Wstaw nową parę bezpośrednio do `map`.
+W tym przykładzie utworzymy rodzajowy <xref:System.Collections.Generic.Dictionary%602> i dodamy do niego 5 elementów. Następnie tworzymy, `collection_adapter` aby otoczyć obiekt <xref:System.Collections.Generic.Dictionary%602> jako prosty kontener STL/CLR. Na koniec tworzymy `map` i skopiujemy zawartość <xref:System.Collections.Generic.Dictionary%602> do elementu `map` przez iterację `collection_adapter` . W trakcie tego procesu tworzymy nową parę przy użyciu `make_pair` funkcji i wstawiamy nową parę bezpośrednio do `map` .
 
 ```cpp
 // cliext_convert_dictionary_to_map.cpp

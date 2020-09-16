@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758492"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686041"
 ---
 # <a name="compiler-error-c3918"></a>Błąd kompilatora C3918
 
@@ -19,7 +19,7 @@ Użycie wymaga elementu "member" jako elementu członkowskiego danych
 
 C3918 może wystąpić z kilku powodów związanych z zdarzeniami.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 C3918 może wystąpić, ponieważ element członkowski klasy jest wymagany w bieżącym kontekście. Poniższy przykład generuje C3918.
 
@@ -40,8 +40,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 C3918 jest również wynikiem próby sprawdzenia uproszczonego zdarzenia dla wartości null (Nazwa zdarzenia nie będzie już zapewniać bezpośredniego dostępu do delegata magazynu zapasowego dla zdarzenia).
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 C3918 może również wystąpić, jeśli użytkownik nieprawidłowo subskrybuje zdarzenie. Poniższy przykład generuje C3918.
 
