@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: 0ba3a8f9e60ab0b84266dd25b6b9ccfe10f75561
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 893dd9241f83895d253fc8b5513f56cab272e31c
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186715"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684680"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>Ostrzeżenie kompilatora (poziom 1) C4486
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186715"
 
 Ponieważ prywatna wirtualna funkcja członkowska zarządzanej klasy lub struktury nie jest dostępna lub przesłonięta, powinna być oznaczona jako [Sealed](../../extensions/sealed-cpp-component-extensions.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C4486.
 
@@ -32,8 +32,6 @@ private:
    virtual void f1() sealed {}   // OK
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje jedno możliwe użycie prywatnej zapieczętowanej funkcji wirtualnej.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845695"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684906"
 ---
 # <a name="checked-iterators"></a>Zaznaczone iteratory
 
@@ -73,7 +73,7 @@ Sprawdzony iterator odwołuje się do iteratora, który wywołuje się, `invalid
 
 Adaptery iteratorów obsługujące sprawdzone Iteratory są klasami klasy [checked_array_iterator](../standard-library/checked-array-iterator-class.md) i [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Podczas kompilowania przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu, który znajduje się poza granicami kontenera przy użyciu operatora indeksowania niektórych klas.
 
@@ -102,8 +102,6 @@ int main()
 
 Ten program drukuje "67", a następnie wyświetla okno dialogowe niepowodzenia potwierdzenia z dodatkowymi informacjami o błędzie.
 
-## <a name="example"></a>Przykład
-
 Podobnie, gdy kompilujesz przy użyciu _ITERATOR_DEBUG_LEVEL ustawionej na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu przy użyciu `front` lub `back` w klasach kontenera, gdy kontener jest pusty.
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 Ten program wyskakujące okno dialogowe niepowodzenia potwierdzenia z dodatkowymi informacjami o błędzie.
-
-## <a name="example"></a>Przykład
 
 Poniższy kod demonstruje różne scenariusze użycia iteratorów wraz z komentarzami dotyczącymi każdego z nich. Domyślnie _ITERATOR_DEBUG_LEVEL jest ustawiona na 2 w kompilacjach debugowania, a do 0 w kompilacjach detalicznych.
 
@@ -232,7 +228,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
 [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)

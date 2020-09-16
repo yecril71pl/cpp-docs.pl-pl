@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 1aca21402122a0c8641a7e57ace2a3477ff96f01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: deba9804b9c5c278b3ffcef2923bc8f89fefa676
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221344"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684537"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 
@@ -24,7 +24,7 @@ Nie można zadeklarować typu dojścia w typie natywnym. Vcclr. h udostępnia sz
 
 Środowisko uruchomieniowe będzie zachować skojarzenie między uchwytem a obiektem CLR, do którego się odwołuje. Gdy obiekt CLR jest przenoszony z sterty zebranych elementów bezużytecznych, uchwyt zwróci nowy adres obiektu. Zmienna nie musi być przypięta, zanim zostanie przypisana do `gcroot` szablonu.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład pokazuje, jak utworzyć `gcroot` obiekt na stosie natywnym.
 
@@ -50,8 +50,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład pokazuje, jak utworzyć `gcroot` obiekt na stercie natywnym.
 
@@ -80,8 +78,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład pokazuje, jak używać `gcroot` do przechowywania odwołań do typów wartości (nie typów referencyjnych) w typie natywnym przy użyciu `gcroot` typu opakowanego.
 

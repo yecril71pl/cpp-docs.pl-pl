@@ -8,18 +8,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988208"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684511"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Porady: utrzymywanie odwołania do obiektu w pamięci niezarządzanej
 
-Można użyć gcroot. h, który zawija <xref:System.Runtime.InteropServices.GCHandle>, aby pomieścić odwołanie do obiektu CLR w pamięci niezarządzanej. Alternatywnie możesz użyć `GCHandle` bezpośrednio.
+Można użyć gcroot. h, który zawija <xref:System.Runtime.InteropServices.GCHandle> , aby pomieścić odwołanie do obiektu CLR w pamięci niezarządzanej. Alternatywnie możesz użyć `GCHandle` bezpośrednio.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 ```cpp
 // hold_object_reference.cpp
@@ -55,9 +55,7 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## <a name="example"></a>Przykład
-
-`GCHandle` zapewnia sposób przechowywania odwołania do obiektu zarządzanego w pamięci niezarządzanej.  Metoda <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do tworzenia nieprzezroczystego uchwytu do obiektu zarządzanego i <xref:System.Runtime.InteropServices.GCHandle.Free%2A> w celu jego zwolnienia. Ponadto Metoda <xref:System.Runtime.InteropServices.GCHandle.Target%2A> pozwala uzyskać odwołanie do obiektu z dojścia w kodzie zarządzanym.
+`GCHandle` zapewnia sposób przechowywania odwołania do obiektu zarządzanego w pamięci niezarządzanej.  Używasz metody, <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> Aby utworzyć nieprzezroczysty uchwyt do obiektu zarządzanego i <xref:System.Runtime.InteropServices.GCHandle.Free%2A> wydać go. Ponadto <xref:System.Runtime.InteropServices.GCHandle.Target%2A> Metoda pozwala uzyskać odwołanie do obiektu z dojścia w kodzie zarządzanym.
 
 ```cpp
 // hold_object_reference_2.cpp
@@ -96,4 +94,4 @@ StringWrapper::m_handle == ManagedString
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

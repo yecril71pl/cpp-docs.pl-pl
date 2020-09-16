@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561391"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683484"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -100,7 +100,7 @@ Funkcje przekazywania zawijają wywołania do innych funkcji. Rozważmy szablon 
 
 W tym scenariuszu nie można zapisać odpowiedniego wyrażenia typu bez **`decltype`** specyfikatora typu. **`decltype`** Specyfikator typu włącza ogólne funkcje przekazywania, ponieważ nie utraci wymaganych informacji o tym, czy funkcja zwraca typ referencyjny. Aby zapoznać się z przykładem kodu funkcji przekazywania, zobacz `myFunc` przykład poprzedniej funkcji szablonu.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład kodu deklaruje opóźniony określony typ zwracany funkcji szablonu `Plus()` . `Plus`Funkcja przetwarza dwa operandy przy użyciu **`operator+`** przeciążenia. W związku z tym interpretacja operatora plus ( **`+`** ) i zwracanego typu `Plus` funkcji zależy od typów argumentów funkcji.
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>Przykład
 
 **Program Visual Studio 2017 lub nowszy:** Kompilator analizuje **`decltype`** argumenty, gdy zadeklarowane są szablony zamiast tworzenia wystąpienia. W związku z tym, jeśli w argumencie zostanie znaleziony niezależna specjalizacja **`decltype`** , nie zostanie ona odroczona do utworzenia wystąpienia — czas i zostanie przetworzona natychmiast, a wszystkie wynikające z niego błędy będą zdiagnozowane w tym czasie.
 

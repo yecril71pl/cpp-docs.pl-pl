@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162832"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685609"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Ostrzeżenie kompilatora (poziom 1) C4378
 
 Musi uzyskać wskaźniki funkcji, aby uruchomić inicjatory; Rozważmy system:: ModuleHandle:: ResolveMethodHandle
 
-W obszarze **/CLR**symbole inicjatora zawierają tokeny funkcji, a nie wskaźniki funkcji.  Należy przekonwertować tokeny na wskaźniki przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+W obszarze **/CLR**symbole inicjatora zawierają tokeny funkcji, a nie wskaźniki funkcji.  Należy przekonwertować tokeny na wskaźniki przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A> .
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C4378.
 
@@ -62,8 +62,6 @@ int main () {
    InitializeObjects();
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje, jak rozwiązać C4378.
 

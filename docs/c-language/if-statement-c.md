@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 67cdae033c3c8669c8bc7ae1d2e3584ef68498f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227845"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684147"
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 
@@ -34,7 +34,7 @@ W pierwszej postaci składni, jeśli *wyrażenie* jest prawdziwe (niezerowe), *i
 
 Poniżej przedstawiono przykłady **`if`** instrukcji:
 
-```
+```C
 if ( i > 0 )
     y = x / i;
 else
@@ -48,7 +48,7 @@ W tym przykładzie instrukcja `y = x/i;` jest wykonywana, jeśli `i` jest więks
 
 Podczas zagnieżdżania **`if`** instrukcji i **`else`** klauzule, należy użyć nawiasów klamrowych, aby zgrupować instrukcje i klauzule do instrukcji złożonych, które wyjaśniają zamiar. Jeśli nie ma żadnych nawiasów klamrowych, kompilator rozpoznaje niejasności, kojarząc każdy **`else`** z najbliżej **`if`** **`else`** .
 
-```
+```C
 if ( i > 0 )           /* Without braces */
     if ( j > i )
         x = j;
@@ -58,7 +58,7 @@ if ( i > 0 )           /* Without braces */
 
 **`else`** Klauzula jest skojarzona z wewnętrzną **`if`** instrukcją w tym przykładzie. Jeśli `i` jest mniejsza lub równa 0, żadna wartość nie jest przypisana do `x` .
 
-```
+```C
 if ( i > 0 )
 {                      /* With braces */
     if ( j > i )

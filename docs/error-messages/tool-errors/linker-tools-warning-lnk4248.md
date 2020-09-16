@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988101"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685428"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Ostrzeżenie LNK4248 narzędzi konsolidatora
 
@@ -31,7 +31,7 @@ Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomien
 
 1. Podaj definicję typu w module MSIL.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje LNK4248 narzędzi KONSOLIDATORA. Zdefiniuj strukturę A, aby rozwiązać ten problem.
 
@@ -47,8 +47,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład zawiera definicję typu.
 
 ```cpp
@@ -63,8 +61,6 @@ int main() {
    return valueA(a);
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje LNK4248 narzędzi KONSOLIDATORA.
 

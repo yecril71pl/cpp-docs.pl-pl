@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 88a678a19043d3229218dd69afbf8548348817df
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988424"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683965"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Porady: używanie typu natywnego w kompilacji /clr
 
@@ -21,7 +21,7 @@ Każdy zestaw musi zawierać definicję każdego typu natywnego, który będzie 
 
 Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład tworzy składnik, który definiuje i używa typu natywnego.
 
@@ -39,8 +39,6 @@ public ref struct ManagedClass {
    }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład definiuje klienta, który zużywa składnik. Zwróć uwagę, że jest to błąd w celu uzyskania dostępu do typu natywnego, chyba że jest on zdefiniowany w jednostka kompilacji.
 
@@ -63,4 +61,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -4,12 +4,12 @@ description: Nowe funkcje i poprawki w kompilatorze i narzędziach Microsoft C/C
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041682"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684749"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -649,7 +649,7 @@ Zestaw narzędzi Clang/C2 dostarczany z programem Visual Studio 2017 obsługuje 
 
 Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines) są obecnie dystrybuowane z programem Visual Studio. Włącz kontrolki na stronie **rozszerzenia analizy kodu** na stronach właściwości projektu. Rozszerzenia są następnie dołączane podczas uruchamiania analizy kodu. Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-![Pokazuje, w jaki sposób używać strony właściwości analizy kodu do wybierania zestawów reguł podstawowe sprawdzanie języka C++.](media/CppCoreCheck.png "Strona właściwości CppCoreCheck")
+![Zrzut ekranu przedstawiający okno dialogowe strony właściwości, w którym są wyświetlane właściwości konfiguracji > analizy kodu > ogólne wybrane i wiele testów podstawowych wymienionych w sekcji Uruchom ten zestaw reguł.](media/CppCoreCheck.png "Strona właściwości CppCoreCheck")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017, wersja 15.3
 
@@ -697,7 +697,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Pokazuje lokalizację kontrolek filtr i wyszukiwanie w oknie tabeli obiektów.](media/search.png)
+  ![Zrzut ekranu przedstawiający sekcję tabeli obiektów z listą rozwijaną typ i wyszukiwanym polem tekstowym.](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dla dowolnego zasobu, kliknij ikonę zegara obok dowolnego hiperłącza zasobu.
 

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5060c4b34005c1cc066e002d20ca70cbfea0fbef
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234279"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684823"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -157,7 +157,7 @@ Wielowątkowe wersje [bibliotek uruchomieniowych języka C](../../c-runtime-libr
 
 Aby użyć **_beginthread** lub **_beginthreadex**, aplikacja musi połączyć się z jedną z wielowątkowych bibliotek uruchomieniowych języka C.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład używa **_beginthread** i **_endthread**.
 
@@ -276,8 +276,6 @@ void Bounce( void * parg )
 ```
 
 Naciśnij dowolny klawisz, aby zakończyć przykładową aplikację.
-
-## <a name="example"></a>Przykład
 
 Poniższy przykładowy kod demonstruje, jak można użyć uchwytu wątku, który jest zwracany przez **_beginthreadex** za pomocą interfejsu API synchronizacji [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). Główny wątek czeka na zakończenie drugiego wątku przed kontynuowaniem. Gdy drugi wątek wywołuje **_endthreadex**, powoduje, że jego obiekt wątku przechodzi do stanu sygnalizującego. Dzięki temu wątek podstawowy będzie kontynuował działanie. Nie można tego zrobić przy użyciu **_beginthread** i **_endthread**, ponieważ **_endthread** wywołuje metodę **CloseHandle**, która niszczy obiekt wątku, zanim będzie można ustawić stan sygnalizowanie.
 

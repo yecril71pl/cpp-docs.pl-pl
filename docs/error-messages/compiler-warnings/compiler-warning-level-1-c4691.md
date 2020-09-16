@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 8065129e20b627eb387421455527f6aaec3fdc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a4d1de621983794acfae4de7707ba127df9a1b7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175379"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685570"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Ostrzeżenie kompilatora (poziom 1) C4691
 
@@ -21,9 +21,9 @@ Nie można odwołać się do pliku metadanych zawierającego pierwotną definicj
 
 W przypadku ponownego kompilowania *pliku*C4691 można zignorować lub wyłączyć za pomocą [ostrzeżenia](../../preprocessor/warning.md)pragma.  Oznacza to, że jeśli tworzony plik jest taki sam jak plik, którego kompilator oczekuje na znalezienie definicji typu, można zignorować C4691.
 
-Jednak nieoczekiwane zachowanie może wystąpić, jeśli kompilator używa definicji, która nie jest z tego samego zestawu, do którego odwołuje się metadane; Typy CLR są wpisywane nie tylko nazwami typu, ale również przez zestaw.  Oznacza to, że typ z z zestawu z. dll różni się od typu z zestawu y. dll.
+Jednak nieoczekiwane zachowanie może wystąpić, jeśli kompilator używa definicji, która nie jest z tego samego zestawu, do którego odwołuje się metadane; Typy CLR są wpisywane nie tylko nazwami typu, ale również przez zestaw.  Oznacza to, że typ Z z zestawu z.dll różni się od typu z y.dll zestawu.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład zawiera pierwotną definicję typu.
 
@@ -33,9 +33,7 @@ Ten przykład zawiera pierwotną definicję typu.
 public ref class Original_Type {};
 ```
 
-## <a name="example"></a>Przykład
-
-Ten przykład odwołuje się C4691_a. dll i deklaruje pole typu Original_Type.
+Ten przykład odwołuje się C4691_a.dll i deklaruje pole typu Original_Type.
 
 ```cpp
 // C4691_b.cpp
@@ -47,9 +45,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Przykład
-
-Poniższy przykład generuje C4691.  Zwróć uwagę, że ten przykład zawiera definicję Original_Type i nie odwołuje się do C4691a. dll.
+Poniższy przykład generuje C4691.  Zwróć uwagę, że ten przykład zawiera definicję Original_Type i nie odwołuje się do C4691a.dll.
 
 Aby rozwiązać ten problem, należy odwołać się do pliku metadanych, który zawiera pierwotną definicję typu, i usunąć lokalną deklarację i definicję.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: Podstawy analizatora wydajności systemu Windows'
+title: 'Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows'
 description: Samouczek dotyczący wykonywania podstawowych operacji w analizatorze wydajności systemu Windows.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,60 +7,60 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ae1050b9389527a12f5bdbea6d695c0f20510127
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323403"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685518"
 ---
-# <a name="tutorial-windows-performance-analyzer-basics"></a>Samouczek: Podstawy analizatora wydajności systemu Windows
+# <a name="tutorial-windows-performance-analyzer-basics"></a>Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows
 
 ::: moniker range="<=vs-2017"
 
-Narzędzia aplikacji Skompilowanie kompilacji języka C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją dla tej wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Narzędzia do tworzenia szczegółowych danych w języku C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Za pomocą programu C++ Build Insights skutecznie wymaga pewnej wiedzy na temat analizatora wydajności systemu Windows (WPA). Ten artykuł ułatwia zapoznanie się z typowymi operacjami WPA. Aby uzyskać więcej informacji na temat korzystania z usługi WPA, zobacz dokumentację [analizatora wydajności systemu Windows.](/windows-hardware/test/wpt/windows-performance-analyzer)
+Wydajny wgląd w dane w języku C++ wymaga pewnej znajomości analizatora wydajności systemu Windows. Ten artykuł ułatwia zapoznanie się z typowymi operacjami WPA. Więcej informacji o sposobach korzystania z protokołu WPA znajduje się w dokumentacji [analizatora wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer) .
 
-## <a name="change-the-view-mode"></a>Zmienianie trybu widoku
+## <a name="change-the-view-mode"></a>Zmień tryb widoku
 
-WPA oferuje dwa podstawowe tryby wyświetlania, aby eksplorować swoje ślady:
+WPA oferuje dwa podstawowe tryby widoku umożliwiające Eksplorowanie śladów:
 
-- tryb wykresu, oraz
-- w trybie tabeli.
+- Tryb grafu i
+- tryb tabeli.
 
-Można przełączać się między nimi za pomocą ikon trybu widoku w górnej części okienka widoku:
+Można przełączać się między nimi przy użyciu ikon trybu widoku w górnej części okienka widok:
 
-![Przełączanie między trybem wykresu a trybem tabeli.](media/wpa-switching-view-mode.gif)
+![Przełączanie między trybem grafu a trybem tabeli.](media/wpa-switching-view-mode.gif)
 
-## <a name="select-presets"></a>Zaznaczanie ustawień wstępnych
+## <a name="select-presets"></a>Wybieranie ustawień wstępnych
 
-Większość widoków WPA kompilacji języka C++ ma wiele ustawień predefiniowanych do wyboru. Ustawienia predefiniowane można wybrać za pomocą menu rozwijanego w górnej części okienka widoku:
+Większość widoków w usłudze C++ build Insights ma wiele ustawień wstępnych, które można wybrać. Możesz wybrać odpowiednie ustawienie wstępne za pomocą menu rozwijanego w górnej części okienka widok:
 
-![Wybór ustawień wstępnych.](media/wpa-presets.png)
+![Wybieranie ustawień wstępnych.](media/wpa-presets.png)
 
 ## <a name="zoom-in-and-out"></a>Powiększenie lub pomniejszenie
 
-Niektóre ślady kompilacji są tak duże, że trudno jest ustalić szczegóły. Aby powiększyć obszar, który Cię interesuje, kliknij prawym przyciskiem myszy wykres i wybierz **polecenie Powiększ**. Zawsze możesz wrócić do poprzedniego ustawienia, wybierając pozycję **Cofnij powiększenie**. Ten obraz przedstawia przykład użycia zaznaczenia i polecenia **Powiększenie,** aby powiększyć sekcję wykresu:
+Niektóre ślady kompilacji są bardzo duże, dlatego trudno jest wprowadzić szczegóły. Aby powiększyć obszar, który Cię interesuje, kliknij prawym przyciskiem myszy wykres i wybierz pozycję **Powiększ**. Zawsze możesz wrócić do poprzedniego ustawienia, wybierając polecenie **Cofnij powiększenie**. Ten obraz pokazuje przykład użycia zaznaczenia i **powiększania** w celu powiększania w sekcji grafu:
 
-![Powiększanie wykresu.](media/wpa-zooming.gif)
+![Krótkie wideo pokazujące powiększanie w grafie.](media/wpa-zooming.gif)
 
-## <a name="group-by-different-columns"></a>Grupowanie według różnych kolumn
+## <a name="group-by-different-columns"></a>Grupuj według różnych kolumn
 
-Sposób wyświetlania śledzenia można dostosować. Kliknij ikonę koła zębatego u góry okienka widoku i zmień kolejność kolumn w Edytorze widoku Eksploratora kompilacji. Kolumny znajdujące się powyżej żółtej linii w tym oknie dialogowym są kolumnami, według których wiersze danych są pogrupowane. Kolumna tuż nad żółtą linią jest szczególna: w widoku wykresu jest wyświetlana na kolorowych paskach.
+Możesz dostosować sposób wyświetlania śladu. Kliknij ikonę koła zębatego w górnej części okienka widok i ponownie Rozmieść kolumny w edytorze widoku programu Build Explorer. Kolumny znalezione powyżej żółtego wiersza w tym oknie dialogowym to te, które są pogrupowane według wierszy danych. Kolumna znajdująca się nad żółtym wierszem jest specjalna: w widoku wykresu jest wyświetlana na kolorowym pasku.
 
-Na tym obrazie przedstawiono przykładowy wykres słupkowy wywołania łącza. Używamy ikony koła zębatego, aby otworzyć okno dialogowe Edytor widoku Eksploratora kompilacji. Następnie przeciągamy pozycje kolumny Komponent i Nazwa nad żółtą linią. Konfiguracja jest zmieniana, aby zwiększyć poziom szczegółowości i zobaczyć, co faktycznie wydarzyło się wewnątrz konsolidatora:
+Ten obraz przedstawia przykładowy wykres słupkowy wywołania linku. Używamy ikony koła zębatego, aby otworzyć okno dialogowe edytora programu Build Explorer. Następnie przeciągniemy wpisy kolumny Component i Name powyżej żółtej linii. Konfiguracja została zmieniona, aby zwiększyć poziom szczegółowości i zobaczyć, co faktycznie się stało wewnątrz konsolidatora:
 
-![Powiększanie wykresu.](media/wpa-grouping.gif)
+![Krótkie wideo pokazujące, jak można grupować według różnych kolumn.](media/wpa-grouping.gif)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Samouczek: vcperf i analizator wydajności systemu Windows](vcperf-and-wpa.md)\
-[Referencje: polecenia vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Odwołanie: Widoki analizatora wydajności systemu Windows](/cpp/build-insights/reference/wpa-views)\
+[Samouczek: vcperf i Analizator wydajności systemu Windows](vcperf-and-wpa.md)\
+[Reference: polecenia vcperf](/cpp/build-insights/reference/vcperf-commands)\
+[Odwołanie: widoki Analizatora wydajności systemu Windows](/cpp/build-insights/reference/wpa-views)\
 [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea2c1a3d9a10fee455d20490f0408982f47ee0a7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738300"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684732"
 ---
 # <a name="compiler-error-c3493"></a>Błąd kompilatora C3493
 
 nie można przechwycić "var", ponieważ nie określono żadnego domyślnego trybu przechwytywania
 
-Puste wyrażenie lambda przechwytuje, `[]`, określa, że wyrażenie lambda nie jawnie lub niejawnie nie przechwytuje żadnych zmiennych.
+Puste wyrażenie lambda przechwytuje, `[]` określa, że wyrażenie lambda nie jawnie lub niejawnie nie przechwytuje żadnych zmiennych.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
@@ -25,7 +25,7 @@ Puste wyrażenie lambda przechwytuje, `[]`, określa, że wyrażenie lambda nie 
 
 - Jawnie Przechwyć co najmniej jedną zmienną.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3493, ponieważ modyfikuje zmienną zewnętrzną, ale określa pustą klauzulę przechwytywania:
 
@@ -38,8 +38,6 @@ int main()
    [](int n) { m = n; }(99); // C3493
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład rozwiązuje C3493 przez określenie jako domyślny tryb przechwytywania.
 

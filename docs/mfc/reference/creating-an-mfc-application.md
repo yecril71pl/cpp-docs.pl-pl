@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040096"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683458"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 
@@ -42,7 +42,7 @@ Najprostszym sposobem tworzenia aplikacji MFC jest użycie Kreatora aplikacji MF
 
 Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na formularzach](creating-a-forms-based-mfc-application.md).
 
-![Kreator aplikacji MFC dla programu Visual Studio 2019](media/mfc-app-wizard.png)
+![Zrzut ekranu Kreatora aplikacji MFC w programie Visual Studios 2019.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Aby utworzyć aplikację konsolową MFC
 
@@ -53,7 +53,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 1. Zmodyfikuj odpowiednio nazwę projektu, a następnie naciśnij przycisk **dalej** , aby otworzyć **Kreatora pulpitu systemu Windows**.
 1. Zaznacz pole **nagłówki MFC** i ustaw inne wartości zgodnie z wymaganiami, a następnie naciśnij przycisk **Zakończ**.
 
-![Okno dialogowe projektu programu Visual Studio 2019 dla systemu Windows](media/windows-desktop-wizard.png)
+![Zrzut ekranu kreatora pulpitu systemu Windows w programie Visual Studios 2019.](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 
 Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na formularzach](creating-a-forms-based-mfc-application.md).
 
-![Kreator aplikacji MFC dla programu Visual Studio 2017](media/mfc-app-wizard.png)
+![Zrzut ekranu Kreatora aplikacji MFC w programie Visual Studios 2017.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Aby utworzyć aplikację konsolową MFC
 
@@ -80,7 +80,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 1. Zmodyfikuj odpowiednio nazwę projektu, a następnie naciśnij przycisk **OK** , aby otworzyć **Kreatora pulpitu systemu Windows**.
 1. Zaznacz pole **nagłówki MFC** i ustaw inne wartości zgodnie z wymaganiami, a następnie naciśnij przycisk **Zakończ**.
 
-![Okno dialogowe projektu programu Visual Studio 2017 dla systemu Windows](media/windows-desktop-wizard-2017.png)
+![Zrzut ekranu kreatora pulpitu systemu Windows w programie Visual Studios 2017.](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 
 Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na formularzach](creating-a-forms-based-mfc-application.md).
 
-![Kreator aplikacji MFC dla programu Visual Studio 2015](media/mfc-app-wizard-2015.png)
+![Zrzut ekranu Kreatora aplikacji MFC w programie Visual Studios 2015.](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Aby utworzyć aplikację konsolową MFC
 

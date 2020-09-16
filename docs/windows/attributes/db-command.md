@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831375"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684589"
 ---
 # <a name="db_command"></a>db_command
 
@@ -123,7 +123,7 @@ Można użyć **db_command** z zakresem klasy lub funkcji; Główną różnicą 
 
 Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_ *YourClassName*, gdzie *YourClassName* jest nazwą, która została nadana klasie, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi z \_ metody dostępu *YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykład definiuje polecenie, które wybiera imiona i nazwiska z tabeli, w której kolumna State pasuje do "CA". **db_command** tworzy i odczytuje zestaw wierszy, w którym można wywołać funkcje generowane przez kreatora, takie jak [metody OpenAll i CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), a także `CRowset` funkcje członkowskie, takie jak [MoveNext](../../data/oledb/crowset-movenext.md).
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>Przykład
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Ten przykład używa `db_source` na klasie źródła danych `CMySource` i `db_command` w klasach poleceń `CCommand1` i `CCommand2` .
 
@@ -247,7 +243,7 @@ int main() {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)<br/>
 [Atrybuty autonomiczne](stand-alone-attributes.md)

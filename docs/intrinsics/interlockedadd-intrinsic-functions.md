@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217727"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683900"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedAdd
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Te funkcje wykonują niepodzielną dodanie, co gwarantuje, że operacja zostanie zakończona pomyślnie, gdy więcej niż jeden wątek ma dostęp do zmiennej udostępnionej.
 
@@ -101,15 +101,15 @@ Obie funkcje zwracają wynik dodania.
 |`_InterlockedAdd64_nf`|ARM, ARM64|
 |`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Wersje tych funkcji z sufiksami `_acq` lub `_rel` wykonują komplementarne Dodawanie przy użyciu semantyki pozyskiwania lub wydawania. *Uzyskanie semantyki* oznacza, że wynik operacji jest widoczny dla wszystkich wątków i procesorów przed późniejszym odczytaniem i zapisem pamięci. Pobieranie jest przydatne podczas wprowadzania sekcji krytycznej. *Semantyka wersji* oznacza, że wszystkie operacje odczytu i zapisu pamięci są wymuszane jako widoczne dla wszystkich wątków i procesorów, zanim wynik operacji zostanie wyświetlony jako widoczny. Wydanie jest przydatne przy opuszczaniu sekcji krytycznej. Elementy wewnętrzne z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
+Wersje tych funkcji z `_acq` `_rel` sufiksami lub wykonują komplementarne Dodawanie przy użyciu semantyki pozyskiwania lub wydawania. *Uzyskanie semantyki* oznacza, że wynik operacji jest widoczny dla wszystkich wątków i procesorów przed późniejszym odczytaniem i zapisem pamięci. Pobieranie jest przydatne podczas wprowadzania sekcji krytycznej. *Semantyka wersji* oznacza, że wszystkie operacje odczytu i zapisu pamięci są wymuszane jako widoczne dla wszystkich wątków i procesorów, zanim wynik operacji zostanie wyświetlony jako widoczny. Wydanie jest przydatne przy opuszczaniu sekcji krytycznej. Elementy wewnętrzne z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 ```cpp
 // interlockedadd.cpp
@@ -135,8 +135,6 @@ int main()
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>Przykład
 
 ```cpp
 // interlockedadd64.cpp

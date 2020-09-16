@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7ac3ef2b6ad8f05a454dafe5e6a7ea0abc07a066
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182945"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685492"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>Ostrzeżenie LNK4227 narzędzi konsolidatora
 
@@ -23,13 +23,13 @@ Konsolidator wykrył różnice w metadanych podczas scalania:
 
 - Jeden lub więcej plików kodu źródłowego w kompilacji.
 
-Na przykład LNK4227 narzędzi KONSOLIDATORA może być spowodowany tym, że istnieją dwie funkcje globalne o tej samej nazwie, ale informacje o parametrach zadeklarowane inaczej (to oznacza, że deklaracje nie są spójne we wszystkich compilands). Użyj Ildasm. exe/TEXT/METADATA *object_file* na każdym pliku. obj, aby zobaczyć, jak różnią się typy.
+Na przykład LNK4227 narzędzi KONSOLIDATORA może być spowodowany tym, że istnieją dwie funkcje globalne o tej samej nazwie, ale informacje o parametrach zadeklarowane inaczej (to oznacza, że deklaracje nie są spójne we wszystkich compilands). Użyj ildasm.exe/TEXT/METADATA *object_file* w każdym pliku. obj, aby zobaczyć, jak różnią się typy.
 
 LNK4227 narzędzi KONSOLIDATORA jest również używany do zgłaszania problemów, które pochodzą z innego narzędzia. Wyszukaj komunikat ostrzegawczy, aby uzyskać więcej informacji.
 
 Aby rozwiązać ten problem, należy naprawić problemy dotyczące metadanych.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 LNK4227 narzędzi KONSOLIDATORA jest generowany, gdy przywoływany zestaw został podpisany inaczej niż zestaw, który odwołuje się do niego.
 
@@ -62,9 +62,7 @@ ref class MyClass
 };
 ```
 
-## <a name="example"></a>Przykład
-
-LNK4227 narzędzi KONSOLIDATORA można również generować, gdy numery wersji w niewłaściwym formacie są przesyłane do atrybutów zestawu.  Notacja "*" jest specyficzna dla `AssemblyVersionAttribute`.  Aby rozwiązać ten problem, należy używać tylko cyfr w atrybutach wersji innych niż `AssemblyVersionAttribute`.
+LNK4227 narzędzi KONSOLIDATORA można również generować, gdy numery wersji w niewłaściwym formacie są przesyłane do atrybutów zestawu.  Notacja "*" jest specyficzna dla `AssemblyVersionAttribute` .  Aby rozwiązać ten problem, użyj tylko cyfr w atrybutach wersji innych niż `AssemblyVersionAttribute` .
 
 Poniższy przykład generuje LNK4227 narzędzi KONSOLIDATORA:
 

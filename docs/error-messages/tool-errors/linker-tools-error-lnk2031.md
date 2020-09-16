@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73ca4a51737d1c073b3164f7e5aaa6deba369a38
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225205"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684186"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Błąd narzędzi konsolidatora LNK2031
 
@@ -23,7 +23,7 @@ Podczas próby zaimportowania funkcji natywnej do czystego obrazu należy pamię
 
 **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Ten przykładowy kod generuje składnik z wyeksportowaną, natywną funkcją, której Konwencja wywołania jest niejawnie [__cdecl](../../cpp/cdecl.md).
 
@@ -34,8 +34,6 @@ extern "C" {
    __declspec(dllexport) int func() { return 3; }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład tworzy czysty klient korzystający z funkcji natywnej. Jednakże Konwencja wywoływania w opcji **/CLR: Pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład generuje LNK2031.
 
@@ -49,8 +47,6 @@ int main() {
    return func();
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład pokazuje, jak używać funkcji natywnej z czystego obrazu. Zanotuj jawny **`__cdecl`** specyfikator konwencji wywoływania.
 

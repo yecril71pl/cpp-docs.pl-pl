@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194866"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683445"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Błąd narzędzi konsolidatora LNK1313
 
@@ -19,11 +19,11 @@ ms.locfileid: "80194866"
 
 ## <a name="remarks"></a>Uwagi
 
-Bieżąca wersja programu Visual C++ nie obsługuje łączenia natywnych lub mieszanych plików. obj z atrybutami. obj, które zostały skompilowane z **/CLR: Pure**.
+Bieżąca wersja Visual C++ nie obsługuje łączenia natywnych lub mieszanych plików. obj z atrybutami. obj, które zostały skompilowane z **/CLR: Pure**.
 
 **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 ```cpp
 // LNK1313.cpp
@@ -32,16 +32,12 @@ Bieżąca wersja programu Visual C++ nie obsługuje łączenia natywnych lub mie
 int main() {}
 ```
 
-## <a name="example"></a>Przykład
-
 ```cpp
 // LNK1313_b.cpp
 // compile with: /c /clr
 // an IJW module
 void test(){}
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje LNK1313.
 

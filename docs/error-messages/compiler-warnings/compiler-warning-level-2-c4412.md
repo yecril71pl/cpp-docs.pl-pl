@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79b4ac95fbac344ff86922b84870e01c6681ed69
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161792"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684996"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Ostrzeżenie kompilatora (poziom 2) C4412
 
-> "*Function*": Sygnatura funkcji zawiera typ "*Type*"; C++ obiekty nie są bezpieczne do przechodzenia między czystym kodem a mieszanym lub natywnym.
+> "*Function*": Sygnatura funkcji zawiera typ "*Type*"; Obiekty C++ nie mogą być przekazywane między czystym kodem a mieszaniem i natywnym.
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017. Jeśli masz kod, który musi być czysty, zalecamy jego port C#.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017. Jeśli masz kod, który musi być czysty, zalecamy przekazanie go do języka C#.
 
 Kompilator wykrył potencjalnie niebezpieczną sytuację, która może spowodować błąd w czasie wykonywania: wywołanie jest wykonywane z **/CLR: Pure** jednostka kompilacji do funkcji zaimportowanej za pośrednictwem elementu dllimport, a sygnatura funkcji zawiera niebezpieczny typ. Typ jest niebezpieczny, jeśli zawiera funkcję członkowską lub ma element członkowski danych, który jest niebezpiecznym typem lub pośrednim do niebezpiecznego typu.
 
-Jest to niebezpieczne z powodu różnic w domyślnych konwencjach wywoływania między kodem czystym i natywnym (lub mieszanym natywnym i zarządzanym). Podczas importowania (za pośrednictwem `dllimport`) funkcji do **/CLR: Pure** jednostka kompilacji upewnij się, że deklaracje każdego typu w podpisie są identyczne z tymi w jednostka kompilacji, które eksportują funkcję (są szczególnie ważne w przypadku różnic w niejawnych konwencjach wywoływania).
+Jest to niebezpieczne z powodu różnic w domyślnych konwencjach wywoływania między kodem czystym i natywnym (lub mieszanym natywnym i zarządzanym). Podczas importowania (za pośrednictwem `dllimport` ) funkcji do **/CLR: Pure** jednostka kompilacji upewnij się, że deklaracje każdego typu w podpisie są identyczne z tymi w jednostka kompilacji, które eksportują funkcję (są szczególnie ważne w przypadku różnic w niejawnych konwencjach wywoływania).
 
 Wirtualna funkcja członkowska jest szczególnie podatna na zadawanie nieoczekiwanych wyników.  Jednak nawet niewirtualna funkcja powinna być testowana, aby upewnić się, że są odpowiednie wyniki. Jeśli masz pewność, że otrzymujesz poprawne wyniki, możesz zignorować to ostrzeżenie.
 
@@ -31,7 +31,7 @@ C4412 jest domyślnie wyłączona. Zobacz [ostrzeżenia kompilatora, które są 
 
 Aby usunąć to ostrzeżenie, Usuń wszystkie funkcje z typu.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C4412.
 
@@ -59,9 +59,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
-Poniższy przykład to plik nagłówka, który deklaruje dwa typy. Typ `Unsafe` jest niebezpieczny, ponieważ ma funkcję członkowską.
+Poniższy przykład to plik nagłówka, który deklaruje dwa typy. `Unsafe`Typ jest niebezpieczny, ponieważ ma funkcję członkowską.
 
 ```cpp
 // C4412.h
@@ -79,8 +77,6 @@ struct Safe {
 };
 ```
 
-## <a name="example"></a>Przykład
-
 Ten przykład eksportuje funkcje z typami zdefiniowanymi w pliku nagłówkowym.
 
 ```cpp
@@ -96,9 +92,7 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```
 
-## <a name="example"></a>Przykład
-
-Domyślna konwencja wywoływania w funkcji **/CLR: Pure** kompilacja różni się od kompilacji natywnej.  Po dołączeniu C4412. h `Test` domyślnie `__clrcall`. W przypadku kompilowania i uruchamiania tego programu (nie należy używać **/c**) program zgłosi wyjątek.
+Domyślna konwencja wywoływania w funkcji **/CLR: Pure** kompilacja różni się od kompilacji natywnej.  Gdy zostanie uwzględniony C4412. h, `Test` wartością domyślną jest `__clrcall` . W przypadku kompilowania i uruchamiania tego programu (nie należy używać **/c**) program zgłosi wyjątek.
 
 Poniższy przykład generuje C4412.
 

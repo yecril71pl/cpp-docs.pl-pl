@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518403"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684628"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Ostrzeżenie kompilatora (poziom 1) C4789
 
@@ -27,13 +27,13 @@ Ostrzeżenie występuje, jeśli kopia używa wewnętrznej formy jednej z następ
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
-- [memset](../../c-runtime-library/reference/memset-wmemset.md)
+- [funkcji memset](../../c-runtime-library/reference/memset-wmemset.md)
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
 Ostrzeżenie jest również wyświetlane w przypadku rzutowania parametru na większy typ danych, a następnie przypisywania kopii z odwołania lvalue.
 
-Wizualizacja C++ może generować to ostrzeżenie dla ścieżki kodu, która nigdy nie jest wykonywana. Możesz tymczasowo wyłączyć ostrzeżenie przy użyciu `#pragma`, jak pokazano w tym przykładzie:
+Visual C++ może wygenerować to ostrzeżenie dla ścieżki kodu, która nigdy nie jest wykonywana. Możesz tymczasowo wyłączyć ostrzeżenie przy użyciu `#pragma` , jak pokazano w poniższym przykładzie:
 
 ```cpp
 #pragma warning( push )
@@ -42,9 +42,9 @@ Wizualizacja C++ może generować to ostrzeżenie dla ścieżki kodu, która nig
 #pragma warning( pop )
 ```
 
-Ta idiom uniemożliwia wizualizację C++ generowanie ostrzeżenia dla określonego bloku kodu. `#pragma warning(push)` zachowuje istniejący stan przed zmianą `#pragma warning(disable: 4789)`. `#pragma warning(pop)` przywraca stan pushd i usuwa efekty `#pragma warning(disable:4789)`. Aby uzyskać więcej informacji na C++ temat dyrektywy preprocesora `#pragma`, zobacz dyrektywy [Warning](../../preprocessor/warning.md) i [pragma oraz słowo kluczowe __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Ta idiom zachowuje Visual C++ przed wygenerowaniem ostrzeżenia dla tego konkretnego bloku kodu. `#pragma warning(push)`Zachowuje istniejący stan przed `#pragma warning(disable: 4789)` wprowadzeniem zmian. `#pragma warning(pop)`Przywraca stan pushd i usuwa efekty `#pragma warning(disable:4789)` . Aby uzyskać więcej informacji na temat dyrektywy preprocesora języka C++ `#pragma` , zobacz dyrektywy [Warning](../../preprocessor/warning.md) i [pragma oraz słowo kluczowe __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C4789.
 
@@ -67,8 +67,6 @@ int main()
     memcpy(&c, &w, sizeof(wchar_t));
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje również C4789.
 

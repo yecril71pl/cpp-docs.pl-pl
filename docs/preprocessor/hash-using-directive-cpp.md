@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219433"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684264"
 ---
 # <a name="using-directive-ccli"></a>#using — dyrektywa (C++/CLI)
 
@@ -72,7 +72,7 @@ Kompilator wyszukuje odwołania w następującej ścieżce:
 
 - Katalogi w zmiennej środowiskowej LIBPATH.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Można skompilować zestaw, który odwołuje się do drugiego zestawu, który odwołuje się do trzeciego zestawu. Musisz tylko jawnie odwoływać się do trzeciego zestawu z pierwszego, jeśli jawnie używasz jednego z jego typów.
 
@@ -81,8 +81,6 @@ Można skompilować zestaw, który odwołuje się do drugiego zestawu, który od
 // compile with: /clr /LD
 public ref class A {};
 ```
-
-## <a name="example"></a>Przykład
 
 ```cpp
 // using_assembly_B.cpp
@@ -94,8 +92,6 @@ public:
    void Test() {}
 };
 ```
-
-## <a name="example"></a>Przykład
 
 W poniższym przykładzie kompilator nie raportuje błędu dotyczącego odwoływania *using_assembly_A.dll*, ponieważ program nie używa żadnego z typów zdefiniowanych w *using_assembly_A. cpp*.
 

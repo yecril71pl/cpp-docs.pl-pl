@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825581"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685414"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nazwij plik EXE)
 
@@ -43,7 +43,7 @@ W przypadku określenia opcji [/c (Kompiluj bez konsolidacji)](c-compile-without
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz stronę właściwości**Ogólne**  > **konsolidatora** >  **Właściwości konfiguracji**.
+1. Otwórz **Configuration Properties**  >  **Linker**  >  stronę właściwości**Ogólne** konsolidatora właściwości konfiguracji.
 
 1. Zmodyfikuj właściwość **pliku wyjściowego** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
@@ -51,15 +51,13 @@ W przypadku określenia opcji [/c (Kompiluj bez konsolidacji)](c-compile-without
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-Poniższy wiersz polecenia kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Powstały plik wykonywalny nosi nazwę PROCESS. exe i został utworzony w katalogu "C:\Users\User Name\repos\My Project\bin".
+Poniższy wiersz polecenia kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Powstały plik wykonywalny ma nazwę PROCESS.exe i został utworzony w katalogu "C:\Users\User Name\repos\My Project\bin".
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy wiersz polecenia tworzy plik wykonywalny w programie `C:\BIN` z tą samą nazwą bazową jak pierwszy plik źródłowy w bieżącym katalogu:
 
@@ -69,7 +67,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[Opcje pliku wyjściowego (/F)](output-file-f-options.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Określanie nazwy ścieżki](specifying-the-pathname.md)<br/>

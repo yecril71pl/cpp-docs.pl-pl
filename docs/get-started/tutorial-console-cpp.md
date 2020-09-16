@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14e1e18da5cdabae5366d4ba97a2260d5e99f076
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230587"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685324"
 ---
 # <a name="create-a-console-calculator-in-c"></a>Tworzenie kalkulatora konsoli w C++
 
@@ -75,11 +75,11 @@ Szablon nowej aplikacji konsolowej systemu Windows tworzy prostą aplikację w j
 
 1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . W oknie **dane wyjściowe** są wyświetlane wyniki procesu kompilacji.
 
-   ![Kompilowanie projektu](./media/calc-vs2019-build-your-project.png "Kompilowanie projektu")
+   ![Zrzut ekranu programu Visual Studio 2019 z oknem danych wyjściowych prezentujący wynik procesu kompilacji.](./media/calc-vs2019-build-your-project.png "Kompilowanie projektu")
 
 1. Aby uruchomić kod, na pasku menu wybierz **Debuguj**, **Uruchom bez debugowania**.
 
-   ![Uruchamianie projektu](./media/calc-vs2019-hello-world-console.png "Uruchamianie projektu")
+   ![Zrzut ekranu przedstawiający konsolę debugowania programu Visual Studio 2019 Microsoft Visual Studio, w której został pomyślnie uruchomiony kod.](./media/calc-vs2019-hello-world-console.png "Uruchamianie projektu")
 
    Zostanie otwarte okno konsoli, a następnie zostanie uruchomiona aplikacja. Po uruchomieniu aplikacji konsolowej w programie Visual Studio program uruchamia swój kod, a następnie drukuje polecenie "naciśnij dowolny klawisz, aby zamknąć to okno. . ." , aby dać Ci szansę zobaczyć dane wyjściowe. Gratulacje! Utworzono pierwszy "Hello, World!" Aplikacja konsolowa w programie Visual Studio!
 
@@ -142,11 +142,11 @@ Czas na dodanie pewnej logiki matematycznej.
 
 1. Przejdź do menu **projekt** i wybierz polecenie **Dodaj klasę**. W polu edycji **Nazwa klasy** wprowadź *Kalkulator*. Wybierz przycisk **OK**. Dwa nowe pliki zostaną dodane do projektu. Aby zapisać wszystkie zmienione pliki jednocześnie, naciśnij **klawisze Ctrl + Shift + S**. Jest to skrót klawiaturowy do **File**  >  **zapisywania wszystkich**plików. Istnieje również przycisk paska narzędzi dla opcji **Zapisz wszystko**— ikona dwóch dyskietek, która znajduje się obok przycisku **Zapisz** . Ogólnie rzecz biorąc, dobrym sposobem jest **zaoszczędzenie wszystkiego** często, więc nie przegap żadnych plików podczas zapisywania.
 
-   ![Utwórz klasę kalkulatora](./media/calc-vs2019-create-calculator-class.png "Utwórz klasę kalkulatora")
+   ![Zrzut ekranu przedstawiający okno dialogowe Dodawanie klasy z kalkulatorem wpisanych w polu tekstowym Nazwa klasy.](./media/calc-vs2019-create-calculator-class.png "Utwórz klasę kalkulatora")
 
    Klasa przypomina plan dla obiektu, który robi coś. W tym przypadku definiujemy Kalkulator i sposób jego działania. Kreator **dodawania klasy** użyty powyżej utworzył pliki. h i. cpp, które mają taką samą nazwę jak Klasa. Pełną listę plików projektu można wyświetlić w oknie **Eksplorator rozwiązań** widocznym po stronie IDE. Jeśli okno nie jest widoczne, możesz otworzyć je na pasku menu: wybierz pozycję **Wyświetl**  >  **Eksplorator rozwiązań**.
 
-   ![Eksplorator rozwiązań](./media/calc-vs2019-solution-explorer.png "Eksplorator rozwiązań")
+   ![Zrzut ekranu przedstawiający okno Eksplorator rozwiązań programu Visual Studio 2019 zawierające samouczek kalkulatora.](./media/calc-vs2019-solution-explorer.png "Eksplorator rozwiązań")
 
    Teraz powinno być otwartych trzy karty w edytorze: *CalculatorTutorial. cpp*, *Kalkulator. h*i *Kalkulator. cpp*. Jeśli przypadkowo zamkniesz jedną z nich, możesz otworzyć ją ponownie, klikając ją dwukrotnie w oknie **Eksplorator rozwiązań** .
 
@@ -170,7 +170,7 @@ Czas na dodanie pewnej logiki matematycznej.
 
 1. Zobaczysz zieloną zygzakę w obszarze `Calculate` . Jest to spowodowane tym, że funkcja nie została zdefiniowana `Calculate` w pliku. cpp. Umieść kursor nad słowem, kliknij żarówki (w tym przypadku śrubokręt), który wystawia, a następnie wybierz pozycję **Utwórz definicję elementu "Oblicz" w programie Kalkulator. cpp**.
 
-   ![Utwórz definicję obliczeń](./media/calc-vs2019-create-definition.png "Utwórz definicję obliczeń")
+   ![Zrzut ekranu programu Visual Studio 2019 z wyróżnioną opcją Utwórz definicję obliczeń w kalkulatorze C P P.](./media/calc-vs2019-create-definition.png "Utwórz definicję obliczeń")
 
    Zostanie wyświetlone wyskakujące okienko umożliwiające wgląd w zmiany kodu, które zostały wprowadzone w innym pliku. Kod został dodany do programu *Kalkulator. cpp*.
 
@@ -264,7 +264,7 @@ Teraz czas na ponowne przetestowanie programu w celu upewnienia się, że wszyst
 
 1. Wprowadź `5 + 5` polecenie i naciśnij klawisz **Enter**. Sprawdź, czy wynik wynosi 10.
 
-   ![Wynik 5 + 5](./media/calc-vs2019-five-plus-five.png "Wynik 5 + 5")
+   ![Zrzut ekranu konsoli debugowania programu Visual Studio Microsoft Visual Studio 2019 z poprawnym wynikiem 5 + 5.](./media/calc-vs2019-five-plus-five.png "Wynik 5 + 5")
 
 ## <a name="debug-the-app"></a>Debugowanie aplikacji
 
@@ -274,29 +274,29 @@ Ponieważ użytkownik może wpisywać dowolne elementy w oknie konsoli, należy 
 
 1. Ustaw punkt przerwania w `result = c.Calculate(x, oper, y);` wierszu zaraz po poproszeniu użytkownika o dane wejściowe. Aby ustawić punkt przerwania, kliknij pozycję obok linii na szarym pasku pionowym wzdłuż lewej krawędzi okna edytora. Zostanie wyświetlona czerwona kropka.
 
-   ![Ustawianie punktu przerwania](./media/calc-vs2019-set-breakpoint.png "Ustawianie punktu przerwania")
+   ![Zrzut ekranu programu Visual Studio 2019 przedstawiający czerwoną kropkę reprezentującą punkt przerwania.](./media/calc-vs2019-set-breakpoint.png "Ustawianie punktu przerwania")
 
    Teraz podczas debugowania programu program zawsze wstrzymuje wykonywanie w tym wierszu. Mamy już pomysł, że program działa w przypadku prostych przypadków. Ponieważ nie chcemy wstrzymywać wykonywania za każdym razem, Przypuśćmy, że punkt przerwania.
 
 1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania, a następnie wybierz pozycję **warunki**. W polu edycji dla warunku wprowadź `(y == 0) && (oper == '/')` . Po zakończeniu wybierz przycisk **Zamknij** . Warunek jest automatycznie zapisywany.
 
-   ![Ustaw punkt przerwania warunkowego](./media/calc-vs2019-conditional-breakpoint.png "Ustaw punkt przerwania warunkowego")
+   ![Zrzut ekranu programu Visual Studio 2019 pokazujący sekcję Ustawienia punktu przerwania oraz warunek dodany do wartości true.](./media/calc-vs2019-conditional-breakpoint.png "Ustaw punkt przerwania warunkowego")
 
    Teraz wstrzymamy wykonywanie w punkcie przerwania, w przypadku próby dzielenia przez 0.
 
 1. Aby debugować program, naciśnij klawisz **F5**lub wybierz przycisk paska narzędzi **lokalnego debugera systemu Windows** , który ma ikonę zielonej strzałki. W aplikacji konsolowej, jeśli wprowadzisz coś takiego jak "5-0", program zachowuje się normalnie i nadal działa. Jednak jeśli wpiszesz "10/0", zostanie on wstrzymany w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatorem a liczbami: `cin` jest to inteligentna wartość, aby odpowiednio analizować dane wejściowe.
 
-   ![Wstrzymaj w warunkowym punkcie przerwania](./media/calc-vs2019-debug-breakpoint.png "Wstrzymaj w warunkowym punkcie przerwania")
+   ![Zrzut ekranu przedstawiający program Visual Studios 2019 pokazujący, że program został wstrzymany w warunkowym punkcie przerwania.](./media/calc-vs2019-debug-breakpoint.png "Wstrzymaj w warunkowym punkcie przerwania")
 
 ### <a name="useful-windows-in-the-debugger"></a>Przydatne okna w debugerze
 
 Za każdym razem, gdy debugujesz kod, możesz zauważyć, że pojawiły się niektóre nowe okna. Te okna mogą pomóc w debugowaniu. Zapoznaj się z oknem **Autokorekty** . W oknie **samochody** są wyświetlane bieżące wartości zmiennych używanych co najmniej trzy wiersze przed i do bieżącego wiersza. Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do okna **zmiennych lokalnych** . Można faktycznie zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki wpływ ma w programie. W takim przypadku pozostawimy je samodzielnie.
 
-   ![Okno zmiennych lokalnych](./media/calc-vs2019-debug-locals.png "Okno zmiennych lokalnych")
+   ![Zrzut ekranu okna zmiennych lokalnych w programie Visual Studio 2019.](./media/calc-vs2019-debug-locals.png "Okno zmiennych lokalnych")
 
 Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobaczyć ich bieżące wartości, w przypadku których wykonywanie jest obecnie wstrzymane. Upewnij się, że okno edytora jest fokusem, klikając je najpierw.
 
-   ![Aktywuj, aby wyświetlić bieżące wartości zmiennych](./media/calc-vs2019-hover-tooltip.png "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
+   ![Zrzut ekranu programu Visual Studio 2019 z widoczną etykietą narzędzia wyświetlającą wartość zmiennej.](./media/calc-vs2019-hover-tooltip.png "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
 
 ### <a name="to-continue-debugging"></a>Aby kontynuować debugowanie
 
@@ -308,7 +308,7 @@ Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobacz
 
    Wygląda na to, że program wykonuje oczekiwane działania: Pobiera pierwszą liczbę i dzieli go przez drugi. W `cout` wierszu Umieść wskaźnik myszy nad zmienną lub zapoznaj się `result` `result` z oknem **Autokorekty** . Zobaczysz, że wartość zostanie wyświetlona na liście jako "inf", która nie wygląda w prawidłowym stanie, więc naprawimy ją. `cout`Wiersz tylko wyprowadza dane, które są przechowywane w `result` , więc po przekroczeniu kolejnej linii do przodu przy użyciu klawisza **F10**zostanie wyświetlone okno konsoli:
 
-   ![Wynik dzielenia przez zero](./media/calc-vs2019-divide-by-zero-fail.png "Wynik dzielenia przez zero")
+   ![Zrzut ekranu konsoli debugowania programu Visual Studio Microsoft Visual Studio 2019, która przedstawia wynik dzielenia przez zero.](./media/calc-vs2019-divide-by-zero-fail.png "Wynik dzielenia przez zero")
 
    Wynika to z faktu, że dzielenie przez zero jest niezdefiniowane, więc program nie ma numerycznej odpowiedzi na żądaną operację.
 
@@ -359,7 +359,7 @@ Przyjrzyjmy się dzielenie przez zero, dzięki czemu użytkownik może zrozumie�
 
 1. Teraz naciśnij klawisz **F5** . Wykonanie programu jest kontynuowane aż do momentu zaczekania na podanie danych wejściowych użytkownika. Wprowadź `10 / 0` ponownie. Teraz zostanie wydrukowany bardziej przydatny komunikat. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie normalnie.
 
-   ![Wynik końcowy po zmianach](./media/calc-vs2019-final-verification.png "Wynik końcowy po zmianach")
+   ![Zrzut ekranu konsoli debugowania programu Visual Studio Microsoft Visual Studio 2019, która przedstawia wynik końcowy po wprowadzeniu zmian.](./media/calc-vs2019-final-verification.png "Wynik końcowy po zmianach")
 
    > [!Note]
    > Gdy edytujesz kod w trybie debugowania, istnieje ryzyko, że kod staje się przestarzały. Dzieje się tak, gdy debuger nadal działa w starym kodzie i nie został jeszcze zaktualizowany ze zmianami. Debuger wyświetli okno dialogowe, aby poinformować użytkownika o tym, kiedy się dzieje. Czasami może być konieczne naciśnięcie klawisza **F5** w celu odświeżenia wykonywanego kodu. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji, gdy punkt wykonywania znajduje się wewnątrz tej funkcji, należy wykonać krok poza funkcję, a następnie ponownie w celu uzyskania zaktualizowanego kodu. Jeśli to nie zadziała z jakiegoś powodu, a zobaczysz komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku narzędzi w menu u góry IDE, a następnie ponownie Rozpocznij debugowanie, wprowadzając klawisz **F5** lub wybierając zieloną strzałkę "Odtwórz" obok przycisku Zatrzymaj na pasku narzędzi.
@@ -437,11 +437,11 @@ Szablon nowej aplikacji konsolowej systemu Windows tworzy prostą aplikację w j
 
 1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . W oknie **dane wyjściowe** są wyświetlane wyniki procesu kompilacji.
 
-   ![Kompilowanie projektu](./media/calculator-initial-build-output.png "Kompilowanie projektu")
+   ![Zrzut ekranu programu Visual Studio z oknem danych wyjściowych przedstawiającym wynik procesu kompilacji.](./media/calculator-initial-build-output.png "Kompilowanie projektu")
 
 1. Aby uruchomić kod, na pasku menu wybierz **Debuguj**, **Uruchom bez debugowania**.
 
-   ![Uruchamianie projektu](./media/calculator-hello-world-console.png "Uruchamianie projektu")
+   ![Zrzut ekranu przedstawiający konsolę debugowania Microsoft Visual Studio, w której połączono kod został pomyślnie uruchomiony.](./media/calculator-hello-world-console.png "Uruchamianie projektu")
 
    Zostanie otwarte okno konsoli, a następnie zostanie uruchomiona aplikacja. Po uruchomieniu aplikacji konsolowej w programie Visual Studio program uruchamia swój kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." , aby dać Ci szansę zobaczyć dane wyjściowe. Gratulacje! Utworzono pierwszy "Hello, World!" Aplikacja konsolowa w programie Visual Studio!
 
@@ -508,11 +508,11 @@ Czas na dodanie pewnej logiki matematycznej.
 
 1. Przejdź do menu **projekt** i wybierz polecenie **Dodaj klasę**. W polu edycji **Nazwa klasy** wprowadź *Kalkulator*. Wybierz przycisk **OK**. Dwa nowe pliki zostaną dodane do projektu. Aby zapisać wszystkie zmienione pliki jednocześnie, naciśnij **klawisze Ctrl + Shift + S**. Jest to skrót klawiaturowy do **File**  >  **zapisywania wszystkich**plików. Istnieje również przycisk paska narzędzi dla opcji **Zapisz wszystko**— ikona dwóch dyskietek, która znajduje się obok przycisku **Zapisz** . Ogólnie rzecz biorąc, dobrym sposobem jest **zaoszczędzenie wszystkiego** często, więc nie przegap żadnych plików podczas zapisywania.
 
-   ![Utwórz klasę kalkulatora](./media/calculator-create-class.gif "Utwórz klasę kalkulatora")
+   ![Krótkie wideo pokazujące użytkownika otwierającego okno dialogowe Dodaj klasę, wpisując Kalkulator w polu Nazwa klasy i wybierając pozycję O K.](./media/calculator-create-class.gif "Utwórz klasę kalkulatora")
 
    Klasa przypomina plan dla obiektu, który robi coś. W tym przypadku definiujemy Kalkulator i sposób jego działania. Kreator **dodawania klasy** użyty powyżej utworzył pliki. h i. cpp, które mają taką samą nazwę jak Klasa. Pełną listę plików projektu można wyświetlić w oknie **Eksplorator rozwiązań** widocznym po stronie IDE. Jeśli okno nie jest widoczne, możesz otworzyć je na pasku menu: wybierz pozycję **Wyświetl**  >  **Eksplorator rozwiązań**.
 
-   ![Eksplorator rozwiązań](./media/calculator-solution-explorer.png "Eksplorator rozwiązań")
+   ![Zrzut ekranu przedstawiający okno Eksplorator rozwiązań, w którym jest wyświetlany projekt samouczka kalkulatora.](./media/calculator-solution-explorer.png "Eksplorator rozwiązań")
 
    Teraz powinno być otwartych trzy karty w edytorze: *CalculatorTutorial. cpp*, *Kalkulator. h*i *Kalkulator. cpp*. Jeśli przypadkowo zamkniesz jedną z nich, możesz otworzyć ją ponownie, klikając ją dwukrotnie w oknie **Eksplorator rozwiązań** .
 
@@ -536,7 +536,7 @@ Czas na dodanie pewnej logiki matematycznej.
 
 1. Zobaczysz zieloną zygzakę w obszarze `Calculate` . Jest to spowodowane tym, że funkcja nie została zdefiniowana `Calculate` w pliku. cpp. Umieść kursor nad słowem, kliknij żarówki, który wystawia, a następnie wybierz pozycję **Utwórz definicję elementu "Oblicz" w programie Kalkulator. cpp**. Zostanie wyświetlone wyskakujące okienko umożliwiające wgląd w zmiany kodu, które zostały wprowadzone w innym pliku. Kod został dodany do programu *Kalkulator. cpp*.
 
-   ![Utwórz definicję obliczeń](./media/calculator-create-definition.gif "Utwórz definicję obliczeń")
+   ![Krótkie wideo pokazujące użytkownika, wybierając opcję Utwórz definicję obliczeń w kalkulatorze C P P.](./media/calculator-create-definition.gif "Utwórz definicję obliczeń")
 
    Obecnie tylko zwraca 0,0. Zmieńmy to. Naciśnij klawisz **ESC** , aby zamknąć okno podręczne.
 
@@ -628,7 +628,7 @@ Teraz czas na ponowne przetestowanie programu w celu upewnienia się, że wszyst
 
 1. Wprowadź `5 + 5` polecenie i naciśnij klawisz **Enter**. Sprawdź, czy wynik wynosi 10.
 
-   ![Wynik 5 + 5](./media/calculator-five-plus-five.png "Wynik 5 + 5")
+   ![Zrzut ekranu przedstawiający konsolę debugowania Microsoft Visual Studio z poprawnym wynikiem 5 + 5.](./media/calculator-five-plus-five.png "Wynik 5 + 5")
 
 ## <a name="debug-the-app"></a>Debugowanie aplikacji
 
@@ -638,19 +638,19 @@ Ponieważ użytkownik może wpisywać dowolne elementy w oknie konsoli, należy 
 
 1. Ustaw punkt przerwania w `result = c.Calculate(x, oper, y);` wierszu zaraz po poproszeniu użytkownika o dane wejściowe. Aby ustawić punkt przerwania, kliknij pozycję obok linii na szarym pasku pionowym wzdłuż lewej krawędzi okna edytora. Zostanie wyświetlona czerwona kropka.
 
-   ![Ustawianie punktu przerwania](./media/calculator-set-breakpoint.gif "Ustawianie punktu przerwania")
+   ![Krótkie wideo wizualizacji Studios pokazujące użytkownika tworzącego czerwoną kropkę reprezentującą punkt przerwania.](./media/calculator-set-breakpoint.gif "Ustawianie punktu przerwania")
 
    Teraz podczas debugowania programu program zawsze wstrzymuje wykonywanie w tym wierszu. Mamy już pomysł, że program działa w przypadku prostych przypadków. Ponieważ nie chcemy wstrzymywać wykonywania za każdym razem, Przypuśćmy, że punkt przerwania.
 
 1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania, a następnie wybierz pozycję **warunki**. W polu edycji dla warunku wprowadź `(y == 0) && (oper == '/')` . Po zakończeniu wybierz przycisk **Zamknij** . Warunek jest automatycznie zapisywany.
 
-   ![Ustaw punkt przerwania warunkowego](./media/calculator-conditional-breakpoint.gif "Ustaw punkt przerwania warunkowego")
+   ![Krótkie wideo programu Visual Studio 2019 pokazujące użytkownika, otwierając sekcję Ustawienia punktu przerwania i ustawiając warunkowy punkt przerwania.](./media/calculator-conditional-breakpoint.gif "Ustaw punkt przerwania warunkowego")
 
    Teraz wstrzymamy wykonywanie w punkcie przerwania, w przypadku próby dzielenia przez 0.
 
-1. Aby debugować program, naciśnij klawisz **F5**lub wybierz przycisk paska narzędzi **lokalnego debugera systemu Windows** , który ma ikonę zielonej strzałki. W aplikacji konsolowej, jeśli wprowadzisz coś takiego jak "5-0", program zachowuje się normalnie i nadal działa. Jednak jeśli wpiszesz "10/0", zostanie on wstrzymany w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatorem i liczbami. `cin`jest wystarczająco inteligentny, aby odpowiednio analizować dane wejściowe.
+1. Aby debugować program, naciśnij klawisz **F5**lub wybierz przycisk paska narzędzi **lokalnego debugera systemu Windows** , który ma ikonę zielonej strzałki. W aplikacji konsolowej, jeśli wprowadzisz coś takiego jak "5-0", program zachowuje się normalnie i nadal działa. Jednak jeśli wpiszesz "10/0", zostanie on wstrzymany w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatorem i liczbami. `cin` jest wystarczająco inteligentny, aby odpowiednio analizować dane wejściowe.
 
-   ![Wstrzymaj w warunkowym punkcie przerwania](./media/calculator-debug-conditional.gif "Wstrzymaj w warunkowym punkcie przerwania")
+   ![Krótkie wideo Visual Studios pokazujące, że program został wstrzymany w warunkowym punkcie przerwania.](./media/calculator-debug-conditional.gif "Wstrzymaj w warunkowym punkcie przerwania")
 
 ### <a name="useful-windows-in-the-debugger"></a>Przydatne okna w debugerze
 
@@ -660,11 +660,11 @@ Za każdym razem, gdy debugujesz kod, możesz zauważyć, że pojawiły się nie
 
 Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do okna **zmiennych lokalnych** . Można faktycznie zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki wpływ ma w programie. W takim przypadku pozostawimy je samodzielnie.
 
-   ![Okno zmiennych lokalnych](./media/calculator-locals.png "Okno zmiennych lokalnych")
+   ![Zrzut ekranu okna zmiennych lokalnych.](./media/calculator-locals.png "Okno zmiennych lokalnych")
 
 Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobaczyć ich bieżące wartości, w przypadku których wykonywanie jest obecnie wstrzymane. Upewnij się, że okno edytora jest fokusem, klikając je najpierw.
 
-   ![Aktywuj, aby wyświetlić bieżące wartości zmiennych](./media/calculator-hover-tooltip.gif "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
+   ![Krótkie wideo pokazujące wyświetlaną wartość zmiennej.](./media/calculator-hover-tooltip.gif "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
 
 ### <a name="to-continue-debugging"></a>Aby kontynuować debugowanie
 
@@ -678,7 +678,7 @@ Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobacz
 
    Wygląda na to, że program wykonuje oczekiwane działania: Pobiera pierwszą liczbę i dzieli go przez drugi. W `cout` wierszu Umieść wskaźnik myszy nad zmienną lub zapoznaj się `result` `result` z oknem **Autokorekty** . Zobaczysz, że wartość zostanie wyświetlona na liście jako "inf", która nie wygląda w prawidłowym stanie, więc naprawimy ją. `cout`Wiersz tylko wyprowadza dane, które są przechowywane w `result` , więc po przekroczeniu kolejnej linii do przodu przy użyciu klawisza **F10**zostanie wyświetlone okno konsoli:
 
-   ![Wynik dzielenia przez zero](./media/calculator-divide-by-zero-fail.png "Wynik dzielenia przez zero")
+   ![Zrzut ekranu przedstawiający konsolę debugowania Microsoft Visual Studio z wynikami dzielenia przez zero.](./media/calculator-divide-by-zero-fail.png "Wynik dzielenia przez zero")
 
    Wynika to z faktu, że dzielenie przez zero jest niezdefiniowane, więc program nie ma numerycznej odpowiedzi na żądaną operację.
 
@@ -730,7 +730,7 @@ Przyjrzyjmy się dzielenie przez zero, dzięki czemu użytkownik może zrozumie�
 
 1. Teraz naciśnij klawisz **F5** . Wykonanie programu jest kontynuowane aż do momentu zaczekania na podanie danych wejściowych użytkownika. Wprowadź `10 / 0` ponownie. Teraz zostanie wydrukowany bardziej przydatny komunikat. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie normalnie.
 
-   ![Wynik końcowy po zmianach](./media/calculator-final-verification.gif "Wynik końcowy po zmianach")
+   ![Krótkie wideo z Microsoft Visual Studio konsoli debugowania pokazującą wynik końcowy po wprowadzeniu zmian.](./media/calculator-final-verification.gif "Wynik końcowy po zmianach")
 
    > [!Note]
    > Gdy edytujesz kod w trybie debugowania, istnieje ryzyko, że kod staje się przestarzały. Dzieje się tak, gdy debuger nadal działa w starym kodzie i nie został jeszcze zaktualizowany ze zmianami. Debuger wyświetli okno dialogowe, aby poinformować użytkownika o tym, kiedy się dzieje. Czasami może być konieczne naciśnięcie klawisza **F5** w celu odświeżenia wykonywanego kodu. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji, gdy punkt wykonywania znajduje się wewnątrz tej funkcji, należy wykonać krok poza funkcję, a następnie ponownie w celu uzyskania zaktualizowanego kodu. Jeśli to nie zadziała z jakiegoś powodu, a zobaczysz komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku narzędzi w menu u góry IDE, a następnie ponownie Rozpocznij debugowanie, wprowadzając klawisz **F5** lub wybierając zieloną strzałkę "Odtwórz" obok przycisku Zatrzymaj na pasku narzędzi.
