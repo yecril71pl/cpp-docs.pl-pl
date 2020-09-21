@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837466"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743454"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml makra pomocnika
 
@@ -64,10 +64,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLANCHORELEMENT_HREF.
 
@@ -90,10 +90,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLANCHORELEMENT_TARGET.
 
@@ -116,10 +116,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLELEMENT_INNERHTML.
 
@@ -142,10 +142,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLELEMENT_INNERTEXT.
 
@@ -168,10 +168,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana. Zobacz *wartość* w [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro powiedzie się tylko po uruchomieniu formantów mających Właściwość Value. Kontrolki, które mają właściwość Value, obejmują pola edycji, pola listy i pola kombi.
 
@@ -196,10 +196,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -222,10 +222,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 To makro wywołuje funkcję [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu identyfikatora wysyłania DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -248,10 +248,10 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *Nazwij*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*funkcję*<br/>
+*var*<br/>
 Wartość wymieniana.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 Przy użyciu makra DDX_DHtml_Img_Src do pobrania właściwości src dla elementu obrazu, obiekt obrazu programu Internet Explorer zwróci w pełni zmieniony adres URL dla źródła obrazu. Jeśli na przykład użyjesz makra DDX_DHtml_Img_Src, aby ustawić właściwość src elementu obrazu na ciąg "jakiś interesujący obraz", po pobraniu tej właściwości program Internet Explorer zwróci ciąg "res://d:\myapplication\myapp.exe/some%20interesting%20picture."
 

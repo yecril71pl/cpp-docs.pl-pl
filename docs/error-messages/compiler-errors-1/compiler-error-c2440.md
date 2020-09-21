@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87207982"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742115"
 ---
 # <a name="compiler-error-c2440"></a>Błąd kompilatora C2440
 
@@ -19,9 +19,11 @@ ms.locfileid: "87207982"
 
 Kompilator nie może rzutować z `type1` na `type2` .
 
-## <a name="example"></a>Przykład
+C2440 może być spowodowany próbą zainicjowania niestałej **`char*`** (lub) przy `wchar_t*` użyciu literału ciągu w kodzie C++, gdy opcja zgodności kompilatora [/Zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) jest ustawiona. W C, typ literału ciągu jest tablicą **`char`** , ale w języku C++ jest tablicą `const char` .
 
-C2440 może być spowodowany próbą zainicjowania niestałej **`char*`** (lub) przy `wchar_t*` użyciu literału ciągu w kodzie C++, gdy opcja zgodności kompilatora [/Zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) jest ustawiona. W C, typ literału ciągu jest tablicą **`char`** , ale w języku C++ jest tablicą `const char` . Ten przykład generuje C2440:
+## <a name="examples"></a>Przykłady
+
+Ten przykład generuje C2440:
 
 ```cpp
 // C2440s.cpp
@@ -37,8 +39,6 @@ int main() {
    const char* s2 = "tests"; // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2440 może również być spowodowany próbą przekonwertowania wskaźnika do elementu członkowskiego na typ void *. Następny przykład generuje C2440:
 
@@ -61,8 +61,6 @@ public:
 };
 ```
 
-## <a name="example"></a>Przykład
-
 C2440 może również być spowodowany próbą rzutowania z typu, który jest tylko zadeklarowany do przodu, ale nie jest zdefiniowany. Ten przykład generuje C2440:
 
 ```cpp
@@ -75,8 +73,6 @@ Base * func(Derived * d) {
     return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Błędy C2440 w wierszach 15 i 16 z kolejnego przykładu są kwalifikowane do `Incompatible calling conventions for UDT return value` wiadomości. *UDT* to typ zdefiniowany przez użytkownika, taki jak Klasa, struktura lub Unia. Te rodzaje błędów niezgodności są spowodowane tym, gdy Konwencja wywoływania UDT określona w zwracanym typie deklaracji do przodu powoduje konflikt z rzeczywistą konwencją wywoływania UDT i kiedy jest używana wskaźnik funkcji.
 
@@ -126,8 +122,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 C2440 może również wystąpić, Jeśli przypiszesz zero do wewnętrznego wskaźnika:
 
 ```cpp
@@ -140,8 +134,6 @@ int main() {
    ipi = nullptr;   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2440 może również wystąpić w przypadku nieprawidłowego użycia konwersji zdefiniowanej przez użytkownika. Na przykład, gdy operator konwersji został zdefiniowany jako **`explicit`** , kompilator nie może użyć go w niejawnej konwersji. Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownika (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Ten przykład generuje C2440:
 
@@ -165,8 +157,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 C2440 może również wystąpić, jeśli spróbujesz utworzyć wystąpienie tablicy Visual C++, której typem jest <xref:System.Array> .  Aby uzyskać więcej informacji, zobacz [tablice](../../extensions/arrays-cpp-component-extensions.md).  Następny przykład generuje C2440:
 
 ```cpp
@@ -180,8 +170,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 C2440 może również wystąpić ze względu na zmiany w funkcji atrybutów.  Poniższy przykład generuje C2440.
 
 ```cpp
@@ -191,8 +179,6 @@ C2440 może również wystąpić ze względu na zmiany w funkcji atrybutów.  Po
 // try the following line instead
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
-
-## <a name="example"></a>Przykład
 
 Kompilator języka Microsoft C++ nie zezwala już [operatorowi const_cast](../../cpp/const-cast-operator.md) na rzutowanie, gdy jest kompilowany kod źródłowy korzystający z programowania **/CLR** .
 
@@ -212,8 +198,6 @@ int main() {
    d = dynamic_cast<Derived^>(b);   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2440 może wystąpić ze względu na zgodność ze zmianami kompilatora w programie Visual Studio 2015 Update 3. Wcześniej kompilator nieprawidłowo traktował określone wyrażenie DISTINCT jako ten sam typ podczas identyfikowania dopasowania szablonu dla **`static_cast`** operacji. Teraz kompilator rozróżnia typy prawidłowo, a kod, który opierał się na poprzednim **`static_cast`** zachowaniu, jest przerwany. Aby rozwiązać ten problem, Zmień argument szablonu tak, aby pasował do typu parametru szablonu lub użyć **`reinterpret_cast`** rzutowania w stylu języka C.
 
@@ -239,8 +223,6 @@ int main()
 
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 ```
-
-## <a name="example"></a>Przykład
 
 ### <a name="copy-list-initialization"></a>Inicjalizacja kopiowania listy
 
@@ -278,8 +260,6 @@ int main()
     const A& a2{ 1 };
 }
 ```
-
-## <a name="example"></a>Przykład
 
 ### <a name="cv-qualifiers-in-class-construction"></a>kwalifikatory CV w konstrukcji klasy
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f72af3d7149db7362df9fa23ac5ad6c058c552b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755873"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743467"
 ---
 # <a name="compiler-error-c3104"></a>Błąd kompilatora C3104
 
@@ -23,7 +23,7 @@ Aby uzyskać więcej informacji, zobacz [typy parametrów atrybutów](../../exte
 
 Ten błąd może zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: podczas przekazywania tablic zarządzanych do atrybutów niestandardowych typ tablicy nie jest już określany na podstawie listy inicjalizacji agregacji. Kompilator wymaga teraz, aby określić typ tablicy oraz listę inicjatorów.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C3104.
 
@@ -43,8 +43,6 @@ public ref struct ABC : public Attribute {
 // [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]
 ref struct AStruct{};
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3104.
 

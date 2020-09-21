@@ -1,9 +1,10 @@
 ---
 title: 'Operator wyłączny sumy bitowej OR: ^'
 description: Wzorzec języka C++ lub Składnia operatora OR.
-ms.date: 07/23/2020
+ms.date: 09/21/2020
 f1_keywords:
 - xor_cpp
+- ^
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 4823c245ffca7032347e37c0c25c2963407733a7
+ms.sourcegitcommit: f656092eebbcb148ca4d3b7a6a8508eff8f7e85f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521164"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90836631"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operator wyłączny sumy bitowej OR: ^
 
@@ -32,10 +33,11 @@ Operator wyłączny bitowego or ( **`^`** ) porównuje każdy bit pierwszego ope
 
 Oba operandy operatora muszą mieć typy całkowite. Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów.
 
+Aby uzyskać więcej informacji na temat alternatywnego użycia **`^`** znaku w c++/CLI i c++/CX, zobacz [uchwyt do operatora obiektu (^) (c++/CLI i c++/CX)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+
 ## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla ^
 
 Język C++ określa **`xor`** jako alternatywną pisownię **`^`** . W języku C alternatywna pisownia jest podawana jako makro w \<iso646.h> nagłówku. W języku C++ alternatywna pisownia jest słowem kluczowym; Użycie \<iso646.h> lub odpowiednik języka C++ \<ciso646> jest przestarzałe. W programie Microsoft C++ [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) Opcja kompilatora or jest wymagana do włączenia alternatywnej pisowni.
-
 
 ## <a name="example"></a>Przykład
 
@@ -53,6 +55,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
