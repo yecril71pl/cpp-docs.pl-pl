@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 60324ae914c9490144a715e06323ee6d184ce201
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079737"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742921"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
@@ -35,34 +35,13 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-Wszystkie składniki modelu COM pochodzą z `CComObjectRootEx` i `CComCoClass`. `CComObjectRootEx` zapewnia wszystkie implementacje interfejsu `IUnknown`. Może obsługiwać dowolny model wątkowości. `CComCoClass` obsługuje wszelkie wymagane błędy. Aby wysłać bogatsze informacje o błędzie do klienta programu, można użyć niektórych interfejsów API błędów w `CComCoClass`.
+Wszystkie składniki modelu COM pochodzą z `CComObjectRootEx` i `CComCoClass` . `CComObjectRootEx` zawiera wszystkie implementacje `IUnknown` interfejsu. Może obsługiwać dowolny model wątkowości. `CComCoClass` obsługuje wszystkie wymagane wymagania dotyczące obsługi błędów. Jeśli chcesz wysłać bogatsze informacje o błędzie do klienta, możesz użyć niektórych interfejsów API błędów w `CComCoClass` .
 
-Obiekt źródła danych dziedziczy również z kilku klas "Impl". Każda Klasa zawiera implementację interfejsu. Obiekt źródła danych implementuje interfejsy `IPersist`, `IDBProperties`, `IDBInitialize`i `IDBCreateSession`. Każdy interfejs jest wymagany przez OLE DB w celu zaimplementowania obiektu źródła danych. Można wybrać opcję obsługi lub nieobsługi określonych funkcji przez dziedziczenie lub niedziedziczenie z jednej z tych klas "Impl". Jeśli chcesz obsługiwać interfejs `IDBDataSourceAdmin`, dziedziczą z klasy `IDBDataSourceAdminImpl`, aby uzyskać wymagane funkcje.
-
-## <a name="com-map"></a>Mapa COM
-
-Za każdym razem, gdy klient wywołuje `QueryInterface` interfejsu w źródle danych, przechodzi przez następującą mapę COM:
-
-```cpp
-/////////////////////////////////////////////////////////////////////////
-// CCustomSource
-class ATL_NO_VTABLE CCustomSource :
-   public CComObjectRootEx<CComSingleThreadModel>,
-   public CComCoClass<CCustomSource, &CLSID_Custom>,
-   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
-   public IDBInitializeImpl<CCustomSource>,
-   public IDBPropertiesImpl<CCustomSource>,
-   public IPersistImpl<CCustomSource>,
-   public IInternalConnectionImpl<CCustomSource>
-```
-
-Wszystkie składniki modelu COM pochodzą z `CComObjectRootEx` i `CComCoClass`. `CComObjectRootEx` zapewnia wszystkie implementacje interfejsu `IUnknown`. Może obsługiwać dowolny model wątkowości. `CComCoClass` obsługuje wszelkie wymagane błędy. Aby wysłać bogatsze informacje o błędzie do klienta programu, można użyć niektórych interfejsów API błędów w `CComCoClass`.
-
-Obiekt źródła danych dziedziczy również z kilku klas "Impl". Każda Klasa zawiera implementację interfejsu. Obiekt źródła danych implementuje interfejsy `IPersist`, `IDBProperties`, `IDBInitialize`i `IDBCreateSession`. Każdy interfejs jest wymagany przez OLE DB w celu zaimplementowania obiektu źródła danych. Można wybrać opcję obsługi lub nieobsługi określonych funkcji przez dziedziczenie lub niedziedziczenie z jednej z tych klas "Impl". Jeśli chcesz obsługiwać interfejs `IDBDataSourceAdmin`, dziedziczą z klasy `IDBDataSourceAdminImpl`, aby uzyskać wymagane funkcje.
+Obiekt źródła danych dziedziczy również z kilku klas "Impl". Każda Klasa zawiera implementację interfejsu. Obiekt źródła danych implementuje `IPersist` `IDBProperties` interfejsy,, `IDBInitialize` , i `IDBCreateSession` . Każdy interfejs jest wymagany przez OLE DB w celu zaimplementowania obiektu źródła danych. Można wybrać opcję obsługi lub nieobsługi określonych funkcji przez dziedziczenie lub niedziedziczenie z jednej z tych klas "Impl". Jeśli chcesz obsługiwać `IDBDataSourceAdmin` interfejs, dziedziczysz z `IDBDataSourceAdminImpl` klasy w celu uzyskania wymaganych funkcji.
 
 ## <a name="com-map"></a>Mapa COM
 
-Za każdym razem, gdy klient wywołuje `QueryInterface` interfejsu w źródle danych, przechodzi przez następującą mapę COM:
+Za każdym razem, gdy klient wywołuje `QueryInterface` interfejs w źródle danych, przechodzi przez następującą mapę com:
 
 ```cpp
 BEGIN_COM_MAP(CCustomSource)
@@ -74,7 +53,7 @@ BEGIN_COM_MAP(CCustomSource)
 END_COM_MAP()
 ```
 
-Makra COM_INTERFACE_ENTRY pochodzą z ATL i poinformują o implementacji `QueryInterface` w `CComObjectRootEx` w celu zwrócenia odpowiednich interfejsów.
+Makra COM_INTERFACE_ENTRY pochodzą z ATL i informują o implementacji programu `QueryInterface` w `CComObjectRootEx` celu zwrócenia odpowiednich interfejsów.
 
 ## <a name="property-map"></a>Mapa właściwości
 
@@ -148,9 +127,9 @@ BEGIN_PROPSET_MAP(CCustomSource)
 END_PROPSET_MAP()
 ```
 
-Właściwości w OLE DB są zgrupowane. Obiekt źródła danych ma dwie grupy właściwości: jeden dla zestawu DBPROPSET_DATASOURCEINFO i jeden dla zestawu DBPROPSET_DBINIT. Zestaw DBPROPSET_DATASOURCEINFO odpowiada właściwościom dostawcy i jego źródła danych. Zestaw DBPROPSET_DBINIT odpowiada właściwościom używanym podczas inicjacji. Szablony dostawcy OLE DB obsługują te zestawy za pomocą PROPERTY_SET makr. Makra tworzą blok zawierający tablicę właściwości. Za każdym razem, gdy klient wywołuje interfejs `IDBProperties`, Dostawca używa mapy właściwości.
+Właściwości w OLE DB są zgrupowane. Obiekt źródła danych ma dwie grupy właściwości: jeden dla zestawu DBPROPSET_DATASOURCEINFO i jeden dla zestawu DBPROPSET_DBINIT. Zestaw DBPROPSET_DATASOURCEINFO odpowiada właściwościom dostawcy i jego źródła danych. Zestaw DBPROPSET_DBINIT odpowiada właściwościom używanym podczas inicjacji. Szablony dostawcy OLE DB obsługują te zestawy za pomocą PROPERTY_SET makr. Makra tworzą blok zawierający tablicę właściwości. Za każdym razem, gdy klient wywołuje `IDBProperties` interfejs, Dostawca używa mapy właściwości.
 
-Nie trzeba implementować każdej właściwości w specyfikacji. Należy jednak obsługiwać wymagane właściwości; Aby uzyskać więcej informacji, zobacz specyfikację poziomu 0. Jeśli nie chcesz obsługiwać właściwości, możesz usunąć ją z mapy. Jeśli chcesz obsłużyć właściwość, Dodaj ją do mapy za pomocą makra PROPERTY_INFO_ENTRY. Makro odnosi się do struktury `UPROPINFO`, jak pokazano w poniższym kodzie:
+Nie trzeba implementować każdej właściwości w specyfikacji. Należy jednak obsługiwać wymagane właściwości; Aby uzyskać więcej informacji, zobacz specyfikację poziomu 0. Jeśli nie chcesz obsługiwać właściwości, możesz usunąć ją z mapy. Jeśli chcesz obsłużyć właściwość, Dodaj ją do mapy za pomocą makra PROPERTY_INFO_ENTRY. Makro odpowiada `UPROPINFO` strukturze, jak pokazano w poniższym kodzie:
 
 ```cpp
 struct UPROPINFO
@@ -168,17 +147,17 @@ struct UPROPINFO
 };
 ```
 
-Każdy element w strukturze reprezentuje informacje do obsługi właściwości. Zawiera `DBPROPID`, aby określić identyfikator GUID i identyfikator właściwości. Zawiera również wpisy określające typ i wartość właściwości.
+Każdy element w strukturze reprezentuje informacje do obsługi właściwości. Zawiera on, `DBPROPID` Aby określić identyfikator GUID i identyfikator właściwości. Zawiera również wpisy określające typ i wartość właściwości.
 
-Jeśli chcesz zmienić wartość domyślną właściwości (należy zauważyć, że konsument może zmienić wartość właściwości zapisywalnej w dowolnym momencie), można użyć makra PROPERTY_INFO_ENTRY_VALUE lub PROPERTY_INFO_ENTRY_EX. Te makra umożliwiają określenie wartości odpowiadającej właściwości. Makro PROPERTY_INFO_ENTRY_VALUE jest notacją skróconą, która pozwala na zmianę wartości. Makro PROPERTY_INFO_ENTRY_VALUE wywołuje PROPERTY_INFO_ENTRY_EX makro. To makro umożliwia dodanie lub zmianę wszystkich atrybutów w strukturze `UPROPINFO`.
+Jeśli chcesz zmienić wartość domyślną właściwości (należy zauważyć, że konsument może zmienić wartość właściwości zapisywalnej w dowolnym momencie), można użyć makra PROPERTY_INFO_ENTRY_VALUE lub PROPERTY_INFO_ENTRY_EX. Te makra umożliwiają określenie wartości odpowiadającej właściwości. Makro PROPERTY_INFO_ENTRY_VALUE jest notacją skróconą, która pozwala na zmianę wartości. Makro PROPERTY_INFO_ENTRY_VALUE wywołuje PROPERTY_INFO_ENTRY_EX makro. To makro umożliwia dodanie lub zmianę wszystkich atrybutów w `UPROPINFO` strukturze.
 
 Jeśli chcesz zdefiniować własny zestaw właściwości, możesz dodać jeden, tworząc dodatkową kombinację BEGIN_PROPSET_MAP/END_PROPSET_MAP. Zdefiniuj identyfikator GUID dla zestawu właściwości, a następnie zdefiniuj własne właściwości. Jeśli masz właściwości specyficzne dla dostawcy, Dodaj je do nowego zestawu właściwości zamiast przy użyciu istniejącego. Pozwala to uniknąć problemów z nowszymi wersjami OLE DB.
 
 ## <a name="user-defined-property-sets"></a>Zestawy właściwości zdefiniowane przez użytkownika
 
-Wizualizacja C++ obsługuje zestawy właściwości zdefiniowane przez użytkownika. Nie musisz przesłonić `GetProperties` ani `GetPropertyInfo`. Zamiast tego, szablony wykrywają dowolny zdefiniowany przez użytkownika zestaw właściwości i dodają go do odpowiedniego obiektu.
+Visual C++ obsługuje zestawy właściwości zdefiniowane przez użytkownika. Nie musisz przesłonić `GetProperties` lub `GetPropertyInfo` . Zamiast tego, szablony wykrywają dowolny zdefiniowany przez użytkownika zestaw właściwości i dodają go do odpowiedniego obiektu.
 
-Jeśli istnieje zestaw właściwości zdefiniowany przez użytkownika, który musi być dostępny w czasie inicjacji (czyli przed wywołaniem konsumenta `IDBInitialize::Initialize`), można go określić przy użyciu flagi UPROPSET_USERINIT wraz z makrom BEGIN_PROPERTY_SET_EX. Aby to OLE DB działało, zestaw właściwości musi znajdować się w obiekcie źródła danych. Na przykład:
+Jeśli istnieje zestaw właściwości zdefiniowany przez użytkownika, który musi być dostępny w czasie inicjacji (to jest przed wywołaniem konsumenta `IDBInitialize::Initialize` ), można go określić przy użyciu flagi UPROPSET_USERINIT wraz z makrem BEGIN_PROPERTY_SET_EX. Aby to OLE DB działało, zestaw właściwości musi znajdować się w obiekcie źródła danych. Na przykład:
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -188,4 +167,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Pliki generowane przez kreatora dostawcy](../../data/oledb/provider-wizard-generated-files.md)<br/>

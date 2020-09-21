@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
-ms.openlocfilehash: 62af8cca5131a5cb21df45f09c55ee5beb3fc718
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdd1b4155d30dd2513d87ac217ca20ca7baabd8a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760650"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743168"
 ---
 # <a name="compiler-error-c2804"></a>Błąd kompilatora C2804
 
@@ -19,7 +19,7 @@ binarny operator "operator" ma zbyt wiele parametrów
 
 Funkcja składowej przeciążonego operatora binarnego jest zadeklarowana z więcej niż jednym parametrem. Pierwszy operand funkcji składowej operatora binarnego, którego typem jest typ otaczający operatora, jest implikowany.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2804 i pokazuje, jak rozwiązać ten problem.
 
@@ -37,8 +37,6 @@ int main() {
    x += y;   // equivalent to x.operator+=(y)
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C2804 i pokazuje, jak rozwiązać ten problem.
 

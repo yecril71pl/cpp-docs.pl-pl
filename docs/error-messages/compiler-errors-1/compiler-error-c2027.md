@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 59d0e5d5a5f0957f2d73cdb863ccee9a2dd2a026
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751004"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743259"
 ---
 # <a name="compiler-error-c2027"></a>Błąd kompilatora C2027
 
@@ -19,7 +19,7 @@ Użycie niezdefiniowanego typu "Type"
 
 Nie można użyć typu, dopóki nie zostanie on zdefiniowany. Aby rozwiązać ten problem, upewnij się, że typ jest w pełni zdefiniowany przed odwołaniem do niego.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2027.
 
@@ -40,8 +40,6 @@ int main() {
    pD->func();
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Można zadeklarować wskaźnik do zadeklarowanego, ale niezdefiniowanego typu. Ale C++ nie zezwala na odwołanie do niezdefiniowanego typu.
 

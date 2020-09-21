@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 2c632966c9ac1264747568facd459a33d1e13338
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfd40add5e2b2503a5eea9610cadffd97bb0a80
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233083"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743324"
 ---
 # <a name="ltmapgt-operators"></a>&lt;&gt;Operatory mapy
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt mapy po lewej stronie operatora nie jest równy obiektowi mapy po prawej stronie.
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest mniejszy niż obiekt mapy po prawej stronie.
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest mniejszy niż lub równy obiektowi mapy po prawej stronie.
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest równy obiektowi mapy po prawej stronie.
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest większy niż obiekt mapy po prawej stronie.
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest większy niż lub równy obiektowi mapy po prawej stronie.
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operator! = (multimap)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a> operator! = (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora nie jest równy obiektowi multimap po prawej stronie.
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_multimap"></a>zakład&lt;
+## <a name="operatorlt-multimap"></a><a name="op_lt_multimap"></a> operator &lt; (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest mniejszy niż obiekt multimap po prawej stronie.
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>zakład&lt;=
+## <a name="operatorlt-multimap"></a><a name="op_lt_eq_multimap"></a> operator &lt; = (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest mniejszy niż lub równy obiektowi multimap po prawej stronie.
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
+## <a name="operator-multimap"></a><a name="op_eq_eq_multimap"></a> operator = = (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest równy obiektowi multimap po prawej stronie.
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_multimap"></a>zakład&gt;
+## <a name="operatorgt-multimap"></a><a name="op_gt_multimap"></a> operator &gt; (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest większy niż obiekt multimap po prawej stronie.
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>zakład&gt;=
+## <a name="operatorgt-multimap"></a><a name="op_gt_eq_multimap"></a> operator &gt; = (multimap)
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest większy niż lub równy obiektowi multimap po prawej stronie.
 

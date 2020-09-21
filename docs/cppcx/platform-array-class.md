@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837763"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742947"
 ---
 # <a name="platformarray-class"></a>Platform:: Array, Klasa
 
@@ -66,7 +66,7 @@ Opcja kompilatora: **/zw**
 
 Inicjuje jednowymiarową, modyfikowalną tablicę typów określonych przez parametr szablonu klasy, *T*.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 Array(unsigned int size);
@@ -92,7 +92,7 @@ Aby uzyskać więcej informacji na temat tworzenia wystąpień platform:: Array,
 
 Pobiera odwołanie do elementu tablicy w określonej lokalizacji indeksu.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 T& get(unsigned int index)  const;
@@ -100,7 +100,7 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Indeks oparty na zero, który identyfikuje element w tablicy. Minimalny indeks to 0, a maksymalny indeks to wartość określona przez `size` parametr w [konstruktorze Array](#ctor).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -111,7 +111,7 @@ Element tablicy określony przez `index` parametr.
 
 Pobiera dojście do bieżącej tablicy.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 property Array^ Value;

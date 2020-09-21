@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226942"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742960"
 ---
 # <a name="platformagile-class"></a>Platform:: Agile — Klasa
 
@@ -82,11 +82,11 @@ Większość klas w środowisko wykonawcze systemu Windows są Agile. Obiekt Agi
 
 **Nagłówek:** Agile. h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Agile:: Agile — Konstruktor
+## <a name="agileagile-constructor"></a><a name="ctor"></a> Agile:: Agile — Konstruktor
 
 Inicjuje nowe wystąpienie klasy Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 Agile();
@@ -107,11 +107,11 @@ W drugiej wersji tego konstruktora obiekt używany do zainicjowania nowego wyst�
 
 Pierwsza wersja tego konstruktora jest konstruktorem domyślnym. Druga wersja Inicjuje nową klasę wystąpienia Agile z obiektu określonego przez `object` parametr. Trzecia wersja jest konstruktorem kopiowania. Czwarta wersja jest konstruktorem przenoszenia. Ten konstruktor nie może zgłosić wyjątków.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Agile:: ~ Agile — destruktor
+## <a name="agileagile-destructor"></a><a name="dtor"></a> Agile:: ~ Agile — destruktor
 
 Niszczy bieżące wystąpienie klasy Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 ~Agile();
@@ -121,11 +121,11 @@ Niszczy bieżące wystąpienie klasy Agile.
 
 Ten destruktor zwalnia również obiekt reprezentowany przez bieżący obiekt Agile.
 
-## <a name="agileget-method"></a><a name="get"></a>Agile:: Get — Metoda
+## <a name="agileget-method"></a><a name="get"></a> Agile:: Get — Metoda
 
 Zwraca dojście do obiektu, który jest reprezentowany przez bieżący obiekt Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 T^ Get() const;
@@ -137,11 +137,11 @@ Dojście do obiektu reprezentowanego przez bieżący obiekt Agile.
 
 Typ wartości zwracanej jest w rzeczywistości niejawnym typem wewnętrznym. Wygodnym sposobem przechowywania wartości zwracanej jest przypisanie jej do zmiennej, która jest zadeklarowana za pomocą **`auto`** słowa kluczowego odejmowania. Na przykład `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Agile:: GetAddressOf — Metoda
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Agile:: GetAddressOf — Metoda
 
 Ponownie inicjuje bieżący obiekt Agile, a następnie zwraca adres dojścia do obiektu typu `T` .
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 T^* GetAddressOf() throw();
@@ -160,11 +160,11 @@ Adres dojścia do obiektu typu `T` .
 
 Ta operacja zwalnia bieżącą reprezentację obiektu typu `T` , jeśli istnieje; ponownie inicjuje składowe danych obiektu Agile; uzyskuje bieżący kontekst wątku, a następnie zwraca adres zmiennej dojścia do obiektu, która może reprezentować obiekt niebędący Agile. Aby spowodować, że wystąpienie klasy Agile reprezentuje obiekt, użyj operatora przypisania ([Agile:: operator =](#operator-assign)), aby przypisać obiekt do wystąpienia klasy Agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Agile:: GetAddressOfForInOut, Metoda
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a> Agile:: GetAddressOfForInOut, Metoda
 
 Zwraca adres dojścia do obiektu reprezentowanego przez bieżący obiekt Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 T^* GetAddressOfForInOut()  throw();
@@ -183,11 +183,11 @@ Adres dojścia do obiektu reprezentowanego przez bieżący obiekt Agile.
 
 Ta operacja uzyskuje bieżący kontekst wątku, a następnie zwraca adres dojścia do obiektu źródłowego.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Agile:: Release — Metoda
+## <a name="agilerelease-method"></a><a name="release"></a> Agile:: Release — Metoda
 
 Odrzuca bieżący obiekt i kontekst obiektu Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 void Release() throw();
@@ -197,11 +197,11 @@ void Release() throw();
 
 Obiekt źródłowy i kontekst bieżącego obiektu Agile są odrzucane, jeśli istnieją, a następnie wartość obiektu Agile jest ustawiona na wartość null.
 
-## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a>Agile:: operator-— &gt; operator
+## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a> Agile:: operator-— &gt; operator
 
 Pobiera dojście do obiektu reprezentowanego przez bieżący obiekt Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 T^ operator->() const throw();
@@ -213,11 +213,11 @@ Dojście do obiektu reprezentowane przez bieżący obiekt Agile.
 
 Ten operator faktycznie zwraca niejawny typ wewnętrzny. Wygodnym sposobem przechowywania wartości zwracanej jest przypisanie jej do zmiennej, która jest zadeklarowana za pomocą **`auto`** słowa kluczowego odejmowania.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Agile:: operator = — operator
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a> Agile:: operator = — operator
 
 Przypisuje określony obiekt do bieżącego obiektu Agile.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 Agile<T> operator=( T^ object ) throw();
@@ -239,7 +239,7 @@ Wskaźnik interfejsu IUnknown obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do obiektu typu`T`
+Dojście do obiektu typu `T`
 
 ### <a name="remarks"></a>Uwagi
 
@@ -247,6 +247,6 @@ Pierwsza wersja operatora przypisania kopiuje dojście do typu referencyjnego do
 
 Operacja przypisania automatycznie utrzymuje kontekst bieżącego obiektu Agile.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)

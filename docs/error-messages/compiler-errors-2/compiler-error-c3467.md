@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: bba505b01df8eb1b253fbecb0db93d94ae62d5ac
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dd7046fcf87a6b8f095092ef0de4b94326151e87
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756373"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742830"
 ---
 # <a name="compiler-error-c3467"></a>Błąd kompilatora C3467
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756373"
 
 Kompilator znalazł więcej niż jedną deklarację typu forward dla tego samego typu. Dozwolona jest tylko jedna deklaracja na typ.
 
-Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie dalej typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład tworzy składnik.
 
@@ -30,8 +30,6 @@ Poniższy przykład tworzy składnik.
 // compile with: /LD /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3467.
 

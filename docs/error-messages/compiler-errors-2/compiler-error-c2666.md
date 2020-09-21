@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755996"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743220"
 ---
 # <a name="compiler-error-c2666"></a>Błąd kompilatora C2666
 
 "Identyfikator": przeciążenia liczb mają podobne konwersje
 
 Przeciążona funkcja lub operator jest niejednoznaczny.   Formalne listy parametrów mogą być zbyt podobne, aby kompilator mógł rozwiązać niejednoznaczność.  Aby rozwiązać ten błąd, należy jawnie rzutować co najmniej jeden z rzeczywistych parametrów.
+
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2666:
 
@@ -41,11 +43,9 @@ Ten błąd może również zostać wygenerowany w wyniku działania kompilatora,
 
 - Konwersja kwalifikacji nie jest taka sama jak konwersja tożsamości
 
-W przypadku operatorów binarnych \<, >, \<=, i > =, przesłany parametr jest teraz niejawnie konwertowany na typ operandu, jeśli typ parametru definiuje zdefiniowany przez użytkownika Operator konwersji do przekonwertowania na typ operandu. Istnieje teraz potencjalne niejednoznaczność.
+W przypadku operatorów binarnych \<, > \<=, and > =, przesłany parametr jest teraz niejawnie konwertowany na typ operandu, jeśli typ parametru definiuje zdefiniowany przez użytkownika Operator konwersji do przekonwertowania na typ operandu. Istnieje teraz potencjalne niejednoznaczność.
 
-W przypadku kodu, który jest prawidłowy w wersji Visual Studio .NET 2003 i Visual Studio .NET C++, wywołaj operator klasy jawnie za pomocą składni funkcji.
-
-## <a name="example"></a>Przykład
+W przypadku kodu, który jest prawidłowy w wersji programu Visual Studio .NET 2003 i Visual Studio .NET Visual C++, wywołaj operator klasy jawnie za pomocą składni funkcji.
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C2666
 

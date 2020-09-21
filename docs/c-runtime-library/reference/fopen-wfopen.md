@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216963"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743064"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -157,6 +157,7 @@ Poniższe opcje można dołączyć do *trybu* , aby określić dodatkowe zachowa
 
 |modyfikator *trybu*|Zachowanie|
 |-|-|
+| **x** | Wymusza Niepowodzenie funkcji, jeśli *Nazwa pliku* już istnieje. Można go używać tylko ze specyfikatorami "w" lub "w +". |
 | **s** | Włącz flagę zatwierdzania dla skojarzonej *nazwy pliku* , aby zawartość bufora plików była zapisywana bezpośrednio na dysk, jeśli zostanie wywołana **fflush** lub **_flushall** . |
 | **Azotan** | Zresetuj flagę zatwierdzania dla skojarzonej *nazwy pliku* na wartość "No-Commit". Jest to opcja domyślna. Zastępuje ona również globalną flagę zatwierdzania w przypadku łączenia programu z TOWARami. OBJ. Globalna flaga zatwierdzania ma wartość "No-Commit", chyba że jawnie łączysz program z TOWARami. OBJ (zobacz [Opcje linku](../../c-runtime-library/link-options.md)). |
 | **N** | Określa, że plik nie jest dziedziczony przez procesy podrzędne. |
@@ -178,6 +179,7 @@ Prawidłowe znaki w ciągu *trybu* , który jest używany w **fopen** i **_fdope
 |**w +**|** \_ O \_ RDWR** (zazwyczaj ** \_ o \_ RDWR** &#124; ** \_ o \_ ** &#124; ** \_ o \_ TRUNC —**)|
 |**b**|**\_O \_ plik binarny**|
 |**&**|**\_O \_ tekst**|
+|**x**|**\_O \_ bez**|
 |**s**|Brak|
 |**Azotan**|Brak|
 |**S**|**\_O \_ sekwencyjnie**|
@@ -312,7 +314,7 @@ int main(int argc, char** argv)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

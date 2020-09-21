@@ -1,6 +1,6 @@
 ---
 title: /ERRORREPORT (Zgłaszaj wewnętrzne błędy konsolidatora)
-description: Przewodnik referencyjny dotyczący opcji wiersza polecenia w programie Microsoft NMAKE.
+description: Dowiedz się, jak używać/ERRORREPORT.
 ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7d16904da8490018235278347f23e37339739415
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257692"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742739"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Zgłaszaj wewnętrzne błędy konsolidatora)
 
@@ -23,7 +23,7 @@ Opcja **/errorreport** jest przestarzała. Począwszy od systemu Windows Vista, 
 
 ## <a name="syntax"></a>Składnia
 
-> **/ErrorReport:** \[ **none** \| **monit** \| **kolejki** \| **send** ]
+> **/ErrorReport:** \[ **Brak** \| **Monituj** \| **Kolejka** \| **Wyślij** ]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -31,9 +31,9 @@ Argumenty **/errorreport** są zastępowane przez ustawienia usługi Raportowani
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz stronę właściwości **konfiguracji** > **konsolidator** > **zaawansowanej** strony właściwości.
+1. Otwórz **Configuration Properties**  >  **Linker**  >  stronę właściwości**Zaawansowane** konsolidatora właściwości konfiguracji.
 
 1. Zmodyfikuj właściwość **raportowanie błędów** .
 
@@ -43,5 +43,5 @@ Argumenty **/errorreport** są zastępowane przez ustawienia usługi Raportowani
 
 ## <a name="see-also"></a>Zobacz też
 
-[Odwołanie\ konsolidatora MSVC](linking.md)
-[MSVC Opcje konsolidatora](linker-options.md)
+[Odwołanie konsolidatora MSVC](linking.md)\
+[Opcje konsolidatora MSVC](linker-options.md)

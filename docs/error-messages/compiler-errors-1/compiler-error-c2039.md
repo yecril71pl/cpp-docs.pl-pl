@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6dc79db11f08ce00cdb86e930173c052cd5187ed
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757686"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742687"
 ---
 # <a name="compiler-error-c2039"></a>Błąd kompilatora C2039
 
@@ -19,7 +19,7 @@ ms.locfileid: "74757686"
 
 Kod niepoprawnie wywołuje lub odwołuje się do elementu członkowskiego struktury, klasy lub Unii.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2039.
 
@@ -35,8 +35,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład generuje C2039.
 
 ```cpp
@@ -49,8 +47,6 @@ int main() {
    Console::WriteLine( "{0}", DateTime::Now::get());   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C2039.
 
@@ -68,9 +64,7 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## <a name="example"></a>Przykład
-
-C2039 może również wystąpić, jeśli próbujesz nieprawidłowo uzyskać dostęp do domyślnego indeksatora. Poniższy przykład definiuje składnik utworzony w C#.
+C2039 może również wystąpić, jeśli próbujesz nieprawidłowo uzyskać dostęp do domyślnego indeksatora. Poniższy przykład definiuje składnik utworzony w języku C#.
 
 ```
 // C2039_d.cs
@@ -84,8 +78,6 @@ public class B {
    }
 };
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C2039.
 
@@ -103,8 +95,6 @@ int main() {
    Console::WriteLine(n);
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2039 może również wystąpić, jeśli używasz typów ogólnych. Poniższy przykład generuje C2039.
 
@@ -128,8 +118,6 @@ int main() {
    f(gcnew R());
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2039 może wystąpić podczas próby zwolnienia zasobów zarządzanych lub niezarządzanych. Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 

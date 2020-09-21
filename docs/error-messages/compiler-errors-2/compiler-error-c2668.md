@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177160"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743207"
 ---
 # <a name="compiler-error-c2668"></a>Błąd kompilatora C2668
 
@@ -19,9 +19,9 @@ ms.locfileid: "80177160"
 
 Nie można rozpoznać określonego przeciążonego wywołania funkcji. Możesz chcieć jawnie rzutować co najmniej jeden z rzeczywistych parametrów.
 
-Ten błąd można także uzyskać za pomocą szablonu. Jeśli w tej samej klasie istnieje zwykła funkcja członkowska i wbudowana funkcja członkowska o tym samym podpisie, szablon, który musi być wcześniej. Jest to ograniczenie bieżącej implementacji wizualizacji C++.
+Ten błąd można także uzyskać za pomocą szablonu. Jeśli w tej samej klasie istnieje zwykła funkcja członkowska i wbudowana funkcja członkowska o tym samym podpisie, szablon, który musi być wcześniej. Jest to ograniczenie bieżącej implementacji Visual C++.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2668:
 
@@ -40,8 +40,6 @@ int main() {
    func( (X)d, (X)d );   // OK, uses func( X, X )
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Innym sposobem na rozwiązanie tego błędu jest [użycie deklaracji using](../../cpp/using-declaration.md):
 
@@ -84,11 +82,9 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>Przykład
-
 Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: niejednoznaczna konwersja na rzutowanie stałej 0.
 
-Konwersja na rzutowanie przy użyciu stałej 0 jest niejednoznaczna, ponieważ int wymaga konwersji zarówno na wartość Long, jak i na wartość pustą *. Aby rozwiązać ten problem, należy rzutować 0 do dokładnego typu parametru funkcji, który jest używany przez, aby nie trzeba było przeprowadzać konwersji (kod ten będzie prawidłowy w Visual Studio .NET 2003 i Visual Studio .NET C++
+Konwersja na rzutowanie przy użyciu stałej 0 jest niejednoznaczna, ponieważ int wymaga konwersji zarówno na wartość Long, jak i na wartość pustą *. Aby rozwiązać ten problem, należy rzutować 0 do dokładnego typu parametru funkcji, który jest używany przez, aby nie trzeba było przeprowadzać konwersji (kod ten będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET Visual C++).
 
 ```cpp
 // C2668c.cpp
@@ -108,8 +104,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowe i podwójne formy wszystkich funkcji matematycznych.
 
 ```cpp
@@ -123,8 +117,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Ten błąd może wystąpić, ponieważ pow (int, int) została usunięta z Math. h w CRT.
 
 ```cpp
@@ -135,8 +127,6 @@ int main() {
    pow((double)9,9);   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Ten kod działa prawidłowo w programie Visual Studio 2015, ale kończy się niepowodzeniem w programie Visual Studio 2017 lub nowszym z C2668. W programie Visual Studio 2015 kompilator błędnie traktował inicjalizację listy kopiowania w taki sam sposób jak regularne inicjowanie kopiowania; jest on uważany tylko za konwersję konstruktorów w celu rozpoznania przeciążenia.
 

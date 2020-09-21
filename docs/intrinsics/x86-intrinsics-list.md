@@ -1,6 +1,6 @@
 ---
 title: Lista funkcji wewnętrznych x86
-description: Lista odwołań dla elementów wewnętrznych x64 (AMD64) obsługiwanych przez kompilator języka Microsoft C++ w programie Visual Studio.
+description: Lista odwołań wewnętrznych procesorów x86 obsługiwana przez kompilator języka Microsoft C++ w programie Visual Studio.
 ms.date: 02/28/2020
 f1_keywords:
 - intrin/_addcarry_u16
@@ -2309,12 +2309,12 @@ helpviewer_keywords:
 - _xsaveopt x86 intrinsic
 - _xsetbv x86 intrinsic
 - _xtest x86 intrinsic
-ms.openlocfilehash: f13be5ddaa79382e3d58e96b2f4aaa0d7f9d6566
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: a5892b809e74e04806f27f06437b9fbedae68754
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610923"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741881"
 ---
 # <a name="x86-intrinsics-list"></a>Lista funkcji wewnętrznych x86
 

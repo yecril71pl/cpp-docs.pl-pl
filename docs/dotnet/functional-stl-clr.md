@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221435"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743311"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -126,7 +126,7 @@ Dołącz nagłówek STL/CLR, `<cliext/functional>` Aby zdefiniować liczbę klas
 
 ## <a name="members"></a>Elementy członkowskie
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 Klasa genereic opisuje delegata dwóch argumentów. Służy do tego określenie delegata w odniesieniu do jego argumentu i typów zwracanych.
 
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 Klasa genereic opisuje delegata dwóch argumentów, która zwraca wartość **`void`** . Używasz tego elementu jako delegata w odniesieniu do jego argumentu.
 
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> binary_negate (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca wartość logiczną, a nie przechowywane dwa argumenty Funktor. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
@@ -305,7 +305,7 @@ public:
 *Zabawa*<br/>
 Typ przechowywanego Funktor.
 
-## <a name="member-functions"></a>Funkcje elementów członkowskich
+### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st — (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st — (STL/CLR)
 
 Generuje `binder1st` dla argumentu i Funktor.
 
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd — (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd — (STL/CLR)
 
 Generuje `binder2nd` dla argumentu i Funktor.
 
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st — (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st — (STL/CLR)
 
 Klasa szablonu opisuje jednoargumentowe Funktor, które, po wywołaniu, zwraca przechowywane dwa argumenty Funktor, które są wywoływane z przechowywanym pierwszym argumentem i podanym drugim argumentem. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd — (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd — (STL/CLR)
 
 Klasa szablonu opisuje jednoargumentowe Funktor, które, po wywołaniu, zwraca przechowywane dwa argumenty Funktor, które są wywoływane przy użyciu podanego pierwszego argumentu i przechowywanego drugiego argumentu. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
@@ -685,7 +685,7 @@ public:
 *Zabawa*<br/>
 Typ przechowywanego Funktor.
 
-## <a name="member-functions"></a>Funkcje elementów członkowskich
+### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>podziały (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a> podziały (STL/CLR)
 
 Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument podzielony przez drugi. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> equal_to (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>większe (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a> większe (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy od drugiego. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> greater_equal (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy lub równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a> less (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy od drugiego. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> less_equal (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy lub równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> logical_and (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy oba argumenty i drugi test mają wartość true. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> logical_not (STL/CLR)
 
 Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy jego argument ma wartość false. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> logical_or (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugi test ma wartość true. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>minus (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a> minus (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca pierwszy argument minus sekunda. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>Moduł (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a> Moduł (STL/CLR)
 
 Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument modulo drugi. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>Mnoży (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> Mnoży (STL/CLR)
 
 Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument, który przetimes sekundy. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>Negate (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a> Negate (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca swój argument negacji. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument nie jest równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 — (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 — (STL/CLR)
 
 Generuje `unary_negate` dla elementu Funktor.
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 — (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 — (STL/CLR)
 
 Generuje `binary_negate` dla elementu Funktor.
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>Plus (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a> Plus (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który po wywołaniu zwraca pierwszy argument Plus sekunda. Służy do określania obiektu funkcji w postaci typu argumentu.
 
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 Klasa genereic opisuje delegata z jednym argumentem. Służy do tego określenie delegata w odniesieniu do jego argumentu i typów zwracanych.
 
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 Klasa genereic opisuje delegata z jednym argumentem, który zwraca wartość **`void`** . Służy do tego określenie delegata pod względem jego typu argumentu.
 
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> unary_negate (STL/CLR)
 
 Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca wartość logiczną, a nie przechowywany Funktor jednego argumentu. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 

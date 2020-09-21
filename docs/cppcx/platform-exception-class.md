@@ -1,5 +1,5 @@
 ---
-title: Platforma::Klasa wyjątku
+title: 'Platform:: Exception, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363783"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741973"
 ---
-# <a name="platformexception-class"></a>Platforma::Klasa wyjątku
+# <a name="platformexception-class"></a>Platform:: Exception, Klasa
 
-Reprezentuje błędy, które występują podczas wykonywania aplikacji. Niestandardowe klasy wyjątków nie `Platform::Exception`mogą pochodzić z . Jeśli potrzebujesz wyjątku niestandardowego, `Platform::COMException` możesz użyć i określić hresult specyficzne dla aplikacji.
+Reprezentuje błędy występujące podczas wykonywania aplikacji. Nie można wyprowadzać klas wyjątków niestandardowych z `Platform::Exception` . Jeśli wymagany jest wyjątek niestandardowy, można użyć `Platform::COMException` i określić wartość HRESULT specyficzną dla aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,46 +29,46 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="members"></a>Elementy członkowskie
 
-Klasa `Exception` dziedziczy z `Object` klasy `IException`i `IPrintable`, `IEquatable` , i interfejsów.
+`Exception`Klasa dziedziczy z `Object` klasy i `IException` `IPrintable` interfejsów,, i `IEquatable` .
 
-Klasa `Exception` ma również następujące rodzaje elementów członkowskich.
+`Exception`Klasa ma również następujące rodzaje elementów członkowskich.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Członek|Opis|
 |------------|-----------------|
-|[Wyjątek::Wyjątek](#ctor)|Inicjuje nowe wystąpienie klasy `Exception`.|
+|[Wyjątek:: Exception](#ctor)|Inicjuje nowe wystąpienie klasy `Exception`.|
 
 ### <a name="methods"></a>Metody
 
-Klasa `Exception` dziedziczy `Equals()`, `Finalize()``GetHashCode()`,`GetType()``MemberwiseClose()`, `ToString()` i metody z [Platform::Object Class](../cppcx/platform-object-class.md). Klasa `Exception` ma również następującą metodę.
+`Exception`Klasa dziedziczy `Equals()` metody,,,, `Finalize()` `GetHashCode()` `GetType()` `MemberwiseClose()` i `ToString()` z [klasy platform:: Object](../cppcx/platform-object-class.md). `Exception`Klasa ma również następującą metodę.
 
 |Członek|Opis|
 |------------|-----------------|
-|[Wyjątek::CreateException](#createexception)|Tworzy wyjątek, który reprezentuje określoną wartość HRESULT.|
+|[Wyjątek:: CreateException](#createexception)|Tworzy wyjątek, który reprezentuje określoną wartość HRESULT.|
 
 ### <a name="properties"></a>Właściwości
 
-Klasa Exception ma również następujące właściwości.
+Klasa wyjątku ma również następujące właściwości.
 
 |Członek|Opis|
 |------------|-----------------|
-|[Wyjątek::HResult](#hresult)|HRESULT, który odpowiada wyjątku.|
-|[Wyjątek::Wiadomość](#message)|Komunikat, który opisuje wyjątek. Ta wartość jest tylko do odczytu `Exception` i nie można zmodyfikować po skonstruowaniu.|
+|[Wyjątek:: HResult](#hresult)|WYNIK HRESULT, który odnosi się do wyjątku.|
+|[Wyjątek:: Message](#message)|Komunikat, który opisuje wyjątek. Ta wartość jest tylko do odczytu i nie można jej modyfikować po `Exception` utworzeniu.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalny obsługiwany klient:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
 **Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Obszar nazw:** Platformy
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Wyjątek::CreateException Metoda
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a> Exception:: CreateException — Metoda
 
-Tworzy platformę::Exception^ z określonej wartości HRESULT.
+Tworzy platformę:: Exception ^ z określonej wartości HRESULT.
 
 ### <a name="syntax"></a>Składnia
 
@@ -79,25 +79,25 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parametry
 
-*Hr*<br/>
-Wartość HRESULT, które zazwyczaj można uzyskać z wywołania do metody COM. Jeśli wartość jest 0, który jest równy S_OK, ta metoda zgłasza [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) ponieważ metody COM, które zakończyć się pomyślnie nie powinny zgłaszać wyjątki.
+*godz.*<br/>
+Wartość HRESULT, która zwykle uzyskuje się z wywołania metody COM. Jeśli wartość wynosi 0, która jest równa S_OK, ta metoda zgłasza [platformę:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) , ponieważ metody com, które powiodło się, nie powinny generować wyjątków.
 
 *Komunikat*<br/>
-Ciąg opisujący błąd.
+Ciąg, który opisuje błąd.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyjątek reprezentujący błąd HRESULT.
+Wyjątek, który reprezentuje błąd HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do tworzenia wyjątku z HRESULT, który jest zwracany, na przykład z wywołania do metody interfejsu COM. Można użyć przeciążenia, które zajmuje String^ parametr, aby zapewnić wiadomość niestandardową.
+Użyj tej metody, aby utworzyć wyjątek z wynik HRESULT, który jest zwracany, na przykład z wywołania metody interfejsu COM. Można użyć przeciążenia, które pobiera komunikat niestandardowy w ciągu ^.
 
-Zdecydowanie zaleca się użycie CreateException do tworzenia silnie typizowanego wyjątku, a nie tworzenia [platformy::COMException,](../cppcx/platform-comexception-class.md) która zawiera tylko HRESULT.
+Zdecydowanie zaleca się użycie elementu CreateException w celu utworzenia wyjątku o jednoznacznie określonym typie zamiast tworzenia [platformy:: COMException](../cppcx/platform-comexception-class.md) , która tylko zawiera wynik HRESULT.
 
-## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Wyjątek::Konstruktor wyjątków
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a> Exception:: Exception — Konstruktor
 
-Intializes nowe wystąpienie Exception klasy.
+Aktywuje nowe wystąpienie klasy Exception.
 
 ### <a name="syntax"></a>Składnia
 
@@ -108,15 +108,15 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parametry
 
-*Hresult*<br/>
+*wynik*<br/>
 Błąd HRESULT, który jest reprezentowany przez wyjątek.
 
 *Komunikat*<br/>
-Komunikat określony przez użytkownika, taki jak tekst nakazowy, skojarzony z wyjątkiem. Ogólnie rzecz biorąc należy preferować drugie przeciążenie, aby zapewnić opisowy komunikat, który jest jak najbardziej szczegółowy o tym, jak i dlaczego wystąpił błąd.
+Komunikat określony przez użytkownika, taki jak tekst, który jest skojarzony z wyjątkiem. Ogólnie rzecz biorąc należy preferować drugie Przeciążenie, aby zapewnić opisowy komunikat, który jest jak najbardziej specyficzny dla tego, jak i dlaczego wystąpił błąd.
 
-## <a name="exceptionhresult-property"></a><a name="hresult"></a>Wyjątek::Właściwość HResult
+## <a name="exceptionhresult-property"></a><a name="hresult"></a> Exception:: HResult — Właściwość
 
-HRESULT, który odpowiada wyjątku.
+WYNIK HRESULT, który odnosi się do wyjątku.
 
 ### <a name="syntax"></a>Składnia
 
@@ -125,17 +125,17 @@ public:
     property int HResult { int get(); }
 ```
 
-## <a name="property-value"></a>Wartość właściwości
+### <a name="property-value"></a>Wartość właściwości
 
 Wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Większość wyjątków rozpoczyna się jako błędy COM, które są zwracane jako wartości HRESULT. C++/CX konwertuje te wartości na platform::Exception^ obiektów i ta właściwość przechowuje wartość oryginalnego kodu błędu.
+Większość wyjątków rozpoczyna się jako błędy COM, które są zwracane jako wartości HRESULT. C++/CX konwertuje te wartości na obiekt platform:: Exception ^, a ta właściwość przechowuje wartość oryginalnego kodu błędu.
 
-## <a name="exceptionmessage-property"></a><a name="message"></a>Wyjątek::Message Właściwość
+## <a name="exceptionmessage-property"></a><a name="message"></a> Exception:: Message — właściwość
 
-Komunikat opisujący błąd.
+Komunikat, który opisuje błąd.
 
 ### <a name="syntax"></a>Składnia
 
@@ -143,13 +143,13 @@ Komunikat opisujący błąd.
 public:property String^ Message;
 ```
 
-## <a name="property-value"></a>Wartość właściwości
+### <a name="property-value"></a>Wartość właściwości
 
-W wyjątkach, które pochodzą ze środowiska wykonawczego systemu Windows, jest to opis błędu dostarczony przez system.
+W wyjątkach, które pochodzą z środowisko wykonawcze systemu Windows, jest to systemowy opis błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-W systemie Windows 8 ta właściwość jest tylko do odczytu, ponieważ wyjątki w tej wersji środowiska wykonawczego systemu Windows są transportowane przez ABI tylko jako HRESULTS. W systemie Windows 8.1 bogatsze informacje o wyjątkach są transportowane przez usługę ABI i można podać niestandardowy komunikat, do którego inne składniki mogą uzyskać dostęp programowo. Aby uzyskać więcej informacji, zobacz [Wyjątki (C++/CX)](../cppcx/exceptions-c-cx.md).
+W systemie Windows 8 Ta właściwość jest tylko do odczytu, ponieważ wyjątki w tej wersji środowisko wykonawcze systemu Windows są transportowane przez ABI tylko jako HRESULTs. W Windows 8.1, bogatsze informacje o wyjątkach są transportowane przez ABI i można udostępnić niestandardowy komunikat, który inne składniki mogą uzyskać dostęp programowo. Aby uzyskać więcej informacji, zobacz [wyjątki (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>Zobacz też
 

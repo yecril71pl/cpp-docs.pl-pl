@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756061"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743246"
 ---
 # <a name="compiler-error-c2660"></a>Błąd kompilatora C2660
 
@@ -23,9 +23,9 @@ C2660 może wystąpić, jeśli przypadkowo wywoła funkcję interfejsu API syste
 
 - Dostosuj wywołanie funkcji tak, aby była zgodna z formatem wywołania funkcji składowej.
 
-- Użyj operatora rozpoznawania zakresu (`::`), aby poinformować kompilator, aby przeszukał nazwę funkcji w globalnej przestrzeni nazw.
+- Użyj operatora rozpoznawania zakresu ( `::` ), aby poinformować kompilator, aby przeszukał nazwę funkcji w globalnej przestrzeni nazw.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2660.
 
@@ -38,8 +38,6 @@ int main() {
    func( 1, 0 );   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2660 może również wystąpić, jeśli próbujesz bezpośrednio wywołać metodę Dispose typu zarządzanego. Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Poniższy przykład generuje C2660.
 
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2660 pojawi się, jeśli Klasa pochodna ukryje funkcję.
 
@@ -92,8 +88,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 C2660 może wystąpić w przypadku nieprawidłowego wywołania właściwości indeksowanej.
 
 ```cpp
@@ -117,8 +111,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 C2660 może wystąpić w przypadku nieprawidłowego wywołania właściwości indeksowanej.
 
 ```cpp
@@ -139,8 +131,6 @@ int main() {
    int x2 = a[3,5];   // OK
 }
 ```
-
-## <a name="example"></a>Przykład
 
 C2660 może wystąpić w przypadku zdefiniowania nowego operatora w klasie szablonu, ale gdzie New Operator tworzy obiekt, którego typ jest inny niż typ otaczający.
 

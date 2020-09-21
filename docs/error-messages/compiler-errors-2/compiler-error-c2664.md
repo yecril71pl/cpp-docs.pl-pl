@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4368358b88e5334a4aa70d1dd51450ce3dbb27e
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221123"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743233"
 ---
 # <a name="compiler-error-c2664"></a>Błąd kompilatora C2664
 
@@ -33,7 +33,7 @@ C2664 może być też wygenerowany, jeśli klasa ukrywa składową w jednej z je
 
 Aby uzyskać więcej informacji, zobacz [How to: Convert system:: String to wchar_t * lub \* char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
@@ -57,8 +57,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Ten przykład generuje również C2664 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
@@ -75,8 +73,6 @@ int main() {
    func( 1, 1 );   // No conversion from int to A.
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Następny przykład ilustruje C2664 za pomocą literału ciągu do wywołania `Test` i pokazuje, jak rozwiązać ten problem. Ponieważ parametr jest `szString` odwołaniem, obiekt musi być utworzony przez odpowiedni Konstruktor. W wyniku powstaje tymczasowy obiekt, którego nie można użyć do zainicjowania odwołania.
 
@@ -117,8 +113,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Kompilator wymusza standardowe wymagania dotyczące języka C++ do zastosowania **`const`** . Ten przykład generuje C2664:
 
 ```cpp
@@ -141,8 +135,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Poniżej przedstawiono bardziej skomplikowaną sytuację, w której jest generowany C2664, w tym wskazówki dotyczące sposobu jej naprawy:
 
@@ -187,8 +179,6 @@ int main( ) {
 }
 ```
 
-## <a name="example"></a>Przykład
-
 Zmienna enum nie jest konwertowana na jej typ podstawowy, tak aby wywołanie funkcji zostało spełnione. Aby uzyskać więcej informacji, zobacz [enum Class](../../extensions/enum-class-cpp-component-extensions.md). Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
@@ -208,8 +198,6 @@ int main() {
    Test(Char(aa));   // OK - fix by using a conversion cast
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Błąd w kompilatorze midl powoduje, że typ wchar_t jest emitowany jako short bez znaku w bibliotece typów. Aby wyeliminować ten błąd, rzutuj typ w kodzie źródłowym C++ lub zdefiniuj typ jako ciąg w pliku idl.
 
@@ -234,8 +222,6 @@ library myproj1 {
 
 C2664 jest również uruchamiany przy użyciu **`wchar_t`** podczas przenoszenia kodu z Visual C++ 6,0 do nowszych wersji. W Visual C++ 6,0 i starszych **`wchar_t`** była **`typedef`** dla **`unsigned short`** i była niejawnie przekonwertowana na ten typ. Po Visual C++ 6,0, **`wchar_t`** jest własnym typem wbudowanym, jak określono w standardzie C++, i nie jest już niejawnie konwertowany na **`unsigned short`** . Zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
@@ -255,8 +241,6 @@ int main() {
    ptr->testarr((unsigned short *)mybuff, len);   // OK - Fix by using a cast
 }
 ```
-
-## <a name="example"></a>Przykład
 
 Jeśli kompilator nie może wywnioskować argumentów szablonu, również jest generowany C2664.
 

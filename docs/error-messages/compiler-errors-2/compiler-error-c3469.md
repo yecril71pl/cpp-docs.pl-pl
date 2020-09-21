@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-ms.openlocfilehash: 546de5a65f6e4c2fd370ba781d01945df2bbfce5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 32d61e022de47b95ce3e84f1575cc090c74d70e3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760546"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742804"
 ---
 # <a name="compiler-error-c3469"></a>Błąd kompilatora C3469
 
@@ -19,9 +19,9 @@ ms.locfileid: "74760546"
 
 Nie można użyć przesyłania dalej typu w klasie generycznej.
 
-Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie dalej typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład tworzy składnik.
 
@@ -33,8 +33,6 @@ public ref class GR {};
 
 public ref class GR2 {};
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3466.
 

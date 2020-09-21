@@ -1,5 +1,5 @@
 ---
-title: 'TN041: MFC / Ole1 do MFC / OLE 2'
+title: 'TN041: migracja MFC-OLE1 do MFC-OLE 2'
 ms.date: 10/18/2018
 helpviewer_keywords:
 - OLE1 [MFC]
@@ -11,66 +11,66 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 78ffefb198b92acbac5c3c18acd9496835845e6f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7d0381983481278b1410ae0ff11463519d4cbb34
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611001"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743155"
 ---
-# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/Ole1 do MFC/OLE 2
+# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migracja z MFC/OLE1 do MFC/OLE 2
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-## <a name="general-issues-relating-to-migration"></a>Ogólne problemy dotyczące migracji
+## <a name="general-issues-relating-to-migration"></a>Ogólne problemy związane z migracją
 
-Jednym z celów projektowania dla klas OLE 2 w wersji 2.5 MFC (lub nowsza) było przechowywać wiele taką samą architekturę wprowadzone w MFC w wersji 2.0 dla pomocy technicznej w wersji 1.0 OLE. W rezultacie wiele z tych samych klas OLE w MFC w wersji 2.0 nadal istnieć w tej wersji biblioteki MFC (`COleDocument`, `COleServerDoc`, `COleClientItem`, `COleServerItem`). Ponadto wiele interfejsów API w ramach tych zajęć są dokładnie takie same. Jednak OLE 2 różni się znacząco od OLE 1.0, dzięki czemu można spodziewać się, że niektóre szczegóły zostały zmienione. Osoby zaznajomione z obsługą OLE1 MFC 2.0 będzie uważasz, że w domu z obsługą 2.0 biblioteki MFC.
+Jednym z celów projektowania klas OLE 2 w MFC 2,5 (i wyższych) było zachowanie większości tej samej architektury w MFC 2,0 dla obsługi OLE 1,0. W związku z tym wiele z tych samych klas OLE w MFC 2,0 nadal istnieje w tej wersji MFC ( `COleDocument` ,, `COleServerDoc` `COleClientItem` , `COleServerItem` ). Ponadto wiele interfejsów API w tych klasach jest dokładnie takie same. Jednak OLE 2 różni się od OLE 1,0, dzięki czemu można oczekiwać, że niektóre szczegóły zostały zmienione. Jeśli znasz obsługę OLE1 MFC 2.0, zobaczysz w domu z obsługą 2,0 MFC.
 
-Jeśli jesteś biorąc istniejącej aplikacji MFC/OLE1 i dodawanie funkcji OLE 2 do niego, należy najpierw przeczytaj tę uwagę. Ta uwaga opisano niektóre ogólne problemy mogą wystąpić podczas przenoszenia własne funkcje OLE1 do MFC/OLE 2, a następnie omówiono problemy niewykrytych podczas przenoszenia dwie aplikacje uwzględnione w MFC w wersji 2.0: przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md).
+Jeśli tworzysz istniejącą aplikację MFC/OLE1 i dodasz do niej funkcję OLE 2, należy najpierw przeczytać tę uwagę. Ta uwaga dotyczy niektórych ogólnych problemów, które mogą wystąpić podczas przenoszenia funkcji OLE1 do MFC/OLE 2, a następnie omawiają problemy, które nie zostały pokryte podczas przenoszenia dwóch aplikacji zawartych w MFC 2,0: MFC OLE Samples [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md).
 
-## <a name="mfc-documentview-architecture-is-important"></a>Ważne jest, architektury dokument/widok MFC
+## <a name="mfc-documentview-architecture-is-important"></a>Architektura dokumentu MFC/widoku jest ważna
 
-Jeśli aplikacja nie używa architektury dokument/widok MFC i chcesz dodać obsługę OLE 2 do swojej aplikacji, nadszedł czas, aby przejść do dokumentu/widoku. Wiele korzyści klasy MFC-OLE 2 tylko są realizowane, gdy aplikacja wykorzystuje wbudowanych architektury i składników MFC.
+Jeśli aplikacja nie korzysta z architektury dokumentu/widoku MFC i chcesz dodać do aplikacji obsługę OLE 2, to teraz czas przejścia do dokumentu/widoku. Wiele zalet klas OLE 2 klasy MFC jest realizowanych tylko wtedy, gdy aplikacja korzysta z wbudowanej architektury i składników MFC.
 
-Implementowanie serwera lub kontenera bez korzystania z architektury MFC jest możliwe, ale niezalecane.
+Implementacja serwera lub kontenera bez użycia architektury MFC jest możliwe, ale nie jest to zalecane.
 
-## <a name="use-mfc-implementation-instead-of-your-own"></a>Użyj MFC — implementacja zamiast własne
+## <a name="use-mfc-implementation-instead-of-your-own"></a>Użyj implementacji MFC zamiast własnych
 
-Klasy MFC "puszkach wykonania", takie jak `CToolBar`, `CStatusBar`, i `CScrollView` wbudowanych specjalnych przypadków kod obsługi OLE 2. Tak Jeśli używasz tych klas w aplikacji będą korzystać z umieścić w nich działań zmierzających do uświadomić im OLE. Ponownie możliwe jest "roll własnej" klas w tym miejscu dla tych celów, ale nie jest zalecane. Jeśli musisz zaimplementować podobne funkcje, kodzie źródłowym MFC jest doskonałą odwołaniem radzenia sobie z niektórych bardziej precyzyjną punktów OLE (zwłaszcza jeśli chodzi o aktywacji w miejscu).
+Klasy MFC "implementacji w trybie konserwowania", takie jak `CToolBar` , `CStatusBar` i `CScrollView` mają wbudowane specjalne kody przypadków dla obsługi OLE 2. Dlatego, jeśli możesz użyć tych klas w aplikacji, możesz skorzystać z nakładu pracy w nich, aby zapewnić im świadomość OLE. Z tego względu możliwe jest, aby w tym celu "klasy" "samodzielnie", ale nie jest to zalecane. Jeśli musisz zaimplementować podobną funkcjonalność, kod źródłowy MFC jest doskonałym odwołaniem do podawania niektórych precyzyjnych punktów OLE (zwłaszcza w przypadku aktywacji w miejscu).
 
-## <a name="examine-the-mfc-sample-code"></a>Wypróbowaniem przykładowego kodu MFC
+## <a name="examine-the-mfc-sample-code"></a>Badanie przykładowego kodu MFC
 
-Istnieje kilka przykładów MFC, które obejmują funkcje OLE. Każda z tych aplikacji implementuje OLE z o określony kąt:
+Istnieje szereg przykładów MFC, które obejmują funkcje OLE. Każda z tych aplikacji implementuje mechanizm OLE z innego kąta:
 
-- [HIERSVR](../overview/visual-cpp-samples.md) przeznaczony głównie do użytku jako aplikacja serwera. Została uwzględniona w MFC w wersji 2.0 jako aplikacja MFC/OLE1 i został przenoszone do MFC/OLE 2 i następnie rozszerzone w taki sposób, że implementuje w OLE 2 wiele funkcji OLE.
+- [HIERSVR](../overview/visual-cpp-samples.md) Przeznaczony głównie do użytku jako aplikacja serwera. Została ona uwzględniona w bibliotece MFC 2,0 jako aplikacja MFC/OLE1 i została przełączona do MFC/OLE 2, a następnie rozszerzona, aby implementował wiele funkcji OLE dostępnych w OLE 2.
 
-- [OCLIENT](../overview/visual-cpp-samples.md) jest to aplikacja autonomiczna kontenera, przeznaczony do zademonstrowania wiele funkcji OLE z punktu widzenia kontenera. Zbyt został on przenoszone z MFC w wersji 2.0, a następnie rozszerzyć w celu obsługi wielu bardziej zaawansowanych funkcji OLE, takich jak formaty Schowka niestandardowych i łącza do elementów osadzonych.
+- [OCLIENT](../overview/visual-cpp-samples.md) Jest to autonomiczna aplikacja kontenera, która przedstawia wiele funkcji OLE z punktu widzenia kontenera. Port został przesunięty z biblioteki MFC 2,0, a następnie rozszerzony do obsługi wielu bardziej zaawansowanych funkcji OLE, takich jak niestandardowe formaty schowka i linki do elementów osadzonych.
 
-- [DRAWCLI](../overview/visual-cpp-samples.md) tej aplikacji implementuje obsługi kontenerów OLE znacznie jak OCLIENT tak, z tą różnicą, że odbywa się to w ramach istniejącego programu rysowania zorientowane obiektowo. Przedstawia on sposób może zaimplementować Obsługa kontenerów OLE i zintegrować ją z istniejącej aplikacji.
+- [DRAWCLI](../overview/visual-cpp-samples.md) Ta aplikacja implementuje obsługę kontenera OLE podobnie jak OCLIENT, z tą różnicą, że działa ona w ramach istniejącego programu do rysowania zorientowanego obiektowo. Pokazuje, jak można zaimplementować obsługę kontenera OLE i zintegrować ją z istniejącą aplikacją.
 
-- [SUPERPAD](../overview/visual-cpp-samples.md) tej aplikacji, a także jest dobrym rozwiązaniem aplikacji autonomicznej, jest również serwerem OLE. Obsługa serwera, który implementuje są minimalist to jeszcze gotowe. Szczególne znaczenie w odniesieniu się, jak używa usług Schowka OLE do kopiowania danych do Schowka, ale używa funkcji wbudowanych w kontrolce Windows "edit" do implementacji funkcji Wklej Schowka. Spowoduje to pokazanie interesujących kombinacji tradycyjnych użycie interfejsu API Windows, a także integrację z nowych OLE interfejsów API.
+- [SUPERPAD](../overview/visual-cpp-samples.md) Ta aplikacja, a także w przypadku aplikacji autonomicznej, również jest serwerem OLE. Obsługa serwera, który implementuje, jest dość minimalistyczny. Szczególnie ważne jest, w jaki sposób używa usług Schowka OLE do kopiowania danych do schowka, ale używa funkcji wbudowanych w kontrolce "Edytuj" systemu Windows w celu zaimplementowania funkcji wklejania Schowka. Przedstawia to interesujące mieszanie tradycyjnych zastosowań interfejsu API systemu Windows, a także integrację z nowymi interfejsami API OLE.
 
-Aby uzyskać więcej informacji na temat przykładowych aplikacji zobacz "MFC próbki pomoc".
+Aby uzyskać więcej informacji na temat przykładowych aplikacji, zobacz "pomoc Przykładowa MFC".
 
-## <a name="case-study-oclient-from-mfc-20"></a>Analiza przypadku: OCLIENT z MFC w wersji 2.0
+## <a name="case-study-oclient-from-mfc-20"></a>Analiza przypadku: OCLIENT z MFC 2,0
 
-Jak wspomniano powyżej, [OCLIENT](../overview/visual-cpp-samples.md) została uwzględniona w MFC w wersji 2.0 i wdrażane w OLE z MFC/OLE1. Poniżej opisano kroki, według których ta aplikacja początkowo został skonwertowany do używania klas MFC/OLE 2. Wiele funkcji zostały dodane po początkowej portu zostało ukończone, aby lepiej zilustrować klasy MFC/OLE. Te funkcje nie zostały omówione w tym miejscu; Zobacz na przykład aby uzyskać więcej informacji na temat tych zaawansowanych funkcji.
+Jak wspomniano powyżej, [OCLIENT](../overview/visual-cpp-samples.md) został uwzględniony w MFC 2,0 i zaimplementowany OLE z MFC/OLE1. Kroki, według których ta aplikacja była początkowo konwertowana, aby używać klas MFC/OLE 2, opisano poniżej. Dodano szereg funkcji po zakończeniu wstępnego portu w celu lepszego zilustrowania klas MFC/OLE. Te funkcje nie zostaną omówione w tym miejscu. Zapoznaj się z przykładem, aby uzyskać więcej informacji na temat tych zaawansowanych funkcji.
 
 > [!NOTE]
-> Błędy kompilatora i instrukcje krok po kroku proces został utworzony przy użyciu programu Visual C++ wersji 2.0. Określone komunikaty o błędach i lokalizacje mógł ulec zmianie z Visual C++ 4.0, ale informacje koncepcyjne poniżej pozostaje ważny.
+> Błędy kompilatora i proces krok po kroku został utworzony przy użyciu Visual C++ 2,0. Określone komunikaty o błędach i lokalizacje mogą ulec zmianie w Visual C++ 4,0, ale informacje o pojęciach pozostają poprawne.
 
-## <a name="getting-it-up-and-running"></a>Go i przeprowadzanie
+### <a name="getting-it-up-and-running"></a>Pobieranie i uruchamianie
 
-To podejście do portu OCLIENT próbki MFC/OLE na początek wbudowanie jej i naprawianie błędów kompilatora oczywiste, które będą powodować. Jeśli pobierania próbki OCLIENT z MFC w wersji 2.0 i skompilować go w tej wersji MFC, przekonasz się, że nie są to wiele błędów, aby rozwiązać. Błędy w kolejności, w której miały miejsce zostały opisane poniżej.
+Podejście podjęte do przenoszenia przykładu OCLIENT do MFC/OLE jest uruchamiane przez skompilowanie go i naprawianie błędów kompilatora, które będą wynikiem. Jeśli pobierasz próbkę OCLIENT z MFC 2,0 i skompilujesz ją w tej wersji MFC, zobaczysz, że nie ma więcej błędów do rozwiązania. Błędy w kolejności, w której wystąpiły, zostały opisane poniżej.
 
-## <a name="compile-and-fix-errors"></a>Kompilacji i poprawki błędów
+### <a name="compile-and-fix-errors"></a>Kompiluj i naprawiaj błędy
 
 ```Output
 \oclient\mainview.cpp(104) : error C2660: 'Draw' : function does not take 4 parameters
 ```
 
-Pierwszy dotyczy błąd `COleClientItem::Draw`. MFC/OLE1 zajęło więcej parametrów niż trwa wersji MFC/OLE. Dodatkowe parametry często nie były konieczne i zwykle o wartości NULL (jak w poniższym przykładzie). Tej wersji biblioteki MFC można automatycznie określić wartości lpWBounds po przechwytywania zmian danych, który jest rysowana metaplik kontrolera domeny. Ponadto parametru pFormatDC nie jest już konieczne ponieważ struktura będzie zbudować ją od "atrybut DC" PDC przekazanej. Tak, aby rozwiązać ten problem, po prostu usuń dwa dodatkowe wartości NULL parametrów wywołania rysowania.
+Pierwsze problemy związane z błędami `COleClientItem::Draw` . W MFC/OLE1 trwało więcej parametrów niż jest to wersja MFC/OLE. Dodatkowe parametry często nie są potrzebne i zazwyczaj mają wartość NULL (jak w tym przykładzie). Ta wersja MFC może automatycznie określić wartości dla lpWBounds, gdy do przeszukiwania jest używana wartość w formacie metapliku. Ponadto parametr pFormatDC nie jest już konieczny, ponieważ platforma kompiluje jeden z "Attribute DC" z kontrolera pDC. Aby rozwiązać ten problem, wystarczy usunąć dwa dodatkowe parametry o wartości NULL do wywołania rysowania.
 
 ```Output
 \oclient\mainview.cpp(273) : error C2065: 'OLE_MAXNAMESIZE' : undeclared identifier
@@ -80,9 +80,9 @@ Pierwszy dotyczy błąd `COleClientItem::Draw`. MFC/OLE1 zajęło więcej parame
 \oclient\mainview.cpp(288) : error C2664: 'CreateStaticFromClipboard' : cannot convert parameter 1 from 'char [1]' to 'enum ::tagOLERENDER '
 ```
 
-Błędy powyżej wynikają z faktu, wszystkie `COleClientItem::CreateXXXX` funkcji MFC/OLE1 wymagane, że unikatową nazwę można przekazać do reprezentowania elementu. Jest to wymaganie bazowego OLE interfejsu API. Jest to konieczne w MFC/OLE 2, ponieważ OLE 2 nie używa DDE jako podstawowy mechanizm komunikacji (nazwa została użyta w konwersacji). Aby rozwiązać ten problem, można usunąć `CreateNewName` funkcji, a także wszystkie odwołania do niego. To proste dowiedzieć się, co każdej funkcji MFC/OLE jest oczekiwana w tej wersji poprzez umieszczenie kursora na wywołanie i naciskając klawisz F1.
+Powyższe błędy powyżej wynikają z faktu, że wszystkie `COleClientItem::CreateXXXX` funkcje w MFC/OLE1 wymagały przekazanie unikatowej nazwy do reprezentowania elementu. Jest to wymaganie źródłowego interfejsu API OLE. Nie jest to konieczne w przypadku MFC/OLE 2, ponieważ OLE 2 nie używa DDE jako podstawowego mechanizmu komunikacji (nazwa została użyta w konwersacji DDE). Aby rozwiązać ten problem, można usunąć funkcję, `CreateNewName` a także wszystkie odwołania do niej. Można łatwo sprawdzić, jakie funkcje MFC/OLE są oczekiwane w tej wersji po prostu przez umieszczenie kursora na wywołaniu i naciśnięcie klawisza F1.
 
-Inny obszar, który różni się znacząco jest obsługa Schowka OLE 2. Za pomocą OLE1 użyto Schowka Windows który interfejsów API wchodzić w interakcje ze Schowka. Przy użyciu OLE 2 jest to realizowane przy użyciu innego mechanizmu. Interfejsy API MFC/OLE1 zakłada, że Schowka był otwarty przed skopiowaniem `COleClientItem` obiektu do Schowka. To nie jest już konieczne i spowoduje, że wszystkie operacje na schowku MFC/OLE nie powiedzie się. Podczas edycji kodu, aby usunąć zależności na `CreateNewName`, należy także usunąć kod, który otwiera i zamyka Schowka Windows.
+Inny obszar, który jest znacząco różny, to obsługa Schowka OLE 2. W przypadku korzystania z OLE1 interfejsy API Schowka systemu Windows współpracują ze schowka. W przypadku OLE 2 jest to realizowane przy użyciu innego mechanizmu. Interfejsy API MFC/OLE1 założono, że schowek był otwarty przed skopiowaniem `COleClientItem` obiektu do Schowka. Nie jest to już konieczne i spowoduje to niepowodzenie wszystkich operacji w schowku MFC/OLE. Podczas edycji kodu w celu usunięcia zależności w programie `CreateNewName` należy również usunąć kod, który otwiera i zamyka Schowek systemu Windows.
 
 ```Output
 \oclient\mainview.cpp(332) : error C2065: 'AfxOleInsertDialog' : undeclared identifier
@@ -91,7 +91,7 @@ Inny obszar, który różni się znacząco jest obsługa Schowka OLE 2. Za pomoc
 \oclient\mainview.cpp(347) : error C2039: 'CreateNewObject' : is not a member of 'CRectItem'
 ```
 
-Te błędy są wynikiem `CMainView::OnInsertObject` programu obsługi. Obsługa polecenia "Wstaw nowy obiekt" jest inny obszar, w którym rzeczy uległy zmianie jeszcze chwilę. W tym przypadku jest najprostszym scalania oryginalnego wdrożenia z podanym przez AppWizard dla nowej aplikacji kontenera OLE. W rzeczywistości jest to technika, który można zastosować do przenoszenia innych aplikacji. W MFC/OLE1 okna dialogowego "Wstawianie obiektu" wyświetlony po wywołaniu `AfxOleInsertDialog` funkcji. W tej wersji można skonstruować `COleInsertObject` obiektu okna dialogowego, a następnie wywołać `DoModal`. Ponadto nowe elementy OLE są tworzone za pomocą **CLSID** zamiast ciągu classname. Wynik końcowy powinien wyglądać mniej więcej tak
+Te błędy są wynikiem `CMainView::OnInsertObject` procedury obsługi. Obsługa polecenia "Wstaw nowy obiekt" to inny obszar, w którym zmienia się całkiem nieco. W takim przypadku najłatwiej jest po prostu scalić oryginalną implementację z usługą AppWizard dla nowej aplikacji kontenera OLE. W rzeczywistości jest to technika, którą można zastosować do przenoszenia innych aplikacji. W MFC/OLE1 wyświetla się okno dialogowe "Wstaw obiekt", wywołując `AfxOleInsertDialog` funkcję. W tej wersji utworzysz `COleInsertObject` obiekt okna dialogowego i Wywołaj `DoModal` . Ponadto nowe elementy OLE są tworzone przy użyciu **identyfikatora CLSID** zamiast ciągu ClassName. Wynik końcowy powinien wyglądać podobnie do tego
 
 ```cpp
 COleInsertDialog dlg;
@@ -139,20 +139,20 @@ EndWaitCursor();
 ```
 
 > [!NOTE]
-> Wstaw nowy obiekt mogą być różne dla aplikacji):
+> Wstawianie nowego obiektu może być inne dla aplikacji):
 
-Należy również uwzględnić \<afxodlgs.h >, który zawiera deklarację dla `COleInsertObject` klasy okien dialogowych, a także innych standardowych oknach dialogowych dostarczonych przez MFC.
+Należy również uwzględnić \<afxodlgs.h> , który zawiera deklarację dla `COleInsertObject` klasy okna dialogowego, a także inne standardowe okna dialogowe zapewniane przez MFC.
 
 ```Output
 \oclient\mainview.cpp(367) : error C2065: 'OLEVERB_PRIMARY' : undeclared identifier
 \oclient\mainview.cpp(367) : error C2660: 'DoVerb' : function does not take 1 parameters
 ```
 
-Te błędy są spowodowane przez fakt, że niektóre stałe OLE1 zostały zmienione w wersji OLE 2, mimo że pojęcia są takie same. W tym przypadku `OLEVERB_PRIMARY` została zmieniona na `OLEIVERB_PRIMARY`. OLE1 i OLE 2 primary — zlecenie jest zazwyczaj wykonywane przez kontener po użytkownik kliknie element.
+Te błędy są spowodowane faktem, że niektóre stałe OLE1 uległy zmianie w OLE 2, chociaż w koncepcji są takie same. W tym przypadku `OLEVERB_PRIMARY` zmienił się na `OLEIVERB_PRIMARY` . Zarówno OLE1, jak i OLE 2, zlecenie podstawowe jest zwykle wykonywane przez kontener, gdy użytkownik kliknie dwukrotnie element.
 
-Ponadto `DoVerb` przyjmuje teraz dodatkowy parametr — wskaźnik do widoku (`CView`*). Ten parametr jest używany tylko w celu zaimplementowania "Edycja wizualna" (lub aktywacji w miejscu). Teraz możesz ustawić tego parametru wartości NULL, ponieważ nie wdrażają tej funkcji w tej chwili.
+Ponadto `DoVerb` teraz pobiera dodatkowy parametr — wskaźnik do widoku ( `CView` *). Ten parametr jest używany tylko do implementacji "edycji wizualnej" (lub aktywacji w miejscu). W przypadku ustawienia tego parametru na wartość NULL, ponieważ ta funkcja nie jest obecnie wdrażana.
 
-Aby upewnić się, że struktura nigdy nie próbuje w miejscu aktywować, należy zastąpić `COleClientItem::CanActivate` w następujący sposób:
+Aby upewnić się, że platforma nigdy nie próbuje aktywować w miejscu, należy przesłonić `COleClientItem::CanActivate` następujące czynności:
 
 ```cpp
 BOOL CRectItem::CanActivate()
@@ -168,9 +168,9 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function
 ```
 
-W MFC/OLE1 `COleClientItem::GetBounds` i `SetBounds` były używane do wykonywania zapytań i manipulowania w zakresie elementu ( `left` i `top` elementy Członkowskie były zawsze zero). MFC/OLE 2 jest to bardziej bezpośrednio obsługiwane przez `COleClientItem::GetExtent` i `SetExtent`, którego dotyczy **rozmiar** lub `CSize` zamiast tego.
+W MFC/OLE1 `COleClientItem::GetBounds` i `SetBounds` były używane do wykonywania zapytań i manipulowania zakresem elementu ( `left` `top` elementy i są zawsze równe zero). W MFC/OLE 2 jest to bardziej bezpośrednio obsługiwane przez `COleClientItem::GetExtent` `SetExtent` program i, które zajmuje się **rozmiarem** lub w `CSize` zamian.
 
-Kod dla Twojego nowego SetItemRectToServer i wywołania UpdateItemRectFromServer wyglądać następująco:
+Kod dla nowych SetItemRectToServer i wywołań UpdateItemRectFromServer wygląda następująco:
 
 ```cpp
 BOOL CRectItem::UpdateItemRectFromServer()
@@ -227,15 +227,15 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function
 ```
 
-W interfejsie API synchroniczne MFC/OLE1 wywołania z kontenera do serwera zostały *symulowane*, ponieważ OLE1 założenia asynchroniczne w wielu przypadkach. Konieczne było pod kątem zaległych wywołania asynchronicznego w toku przed przetworzeniem polecenia przez użytkownika. MFC/OLE1 podane `COleClientItem::InWaitForRelease` funkcji, aby to zrobić. MFC/OLE 2 nie jest to konieczne, aby móc usunąć zastąpienie OnCommand cmainframe — wszystko ze sobą.
+W przypadku synchronicznych wywołań interfejsu API MFC/OLE1 z kontenera na serwer zostały *symulowane*, ponieważ OLE1 było w wielu przypadkach asynchroniczne asynchronicznie. Przed przetworzeniem poleceń od użytkownika było konieczne wyszukanie oczekujących wywołań asynchronicznych. MFC/OLE1 udostępnia `COleClientItem::InWaitForRelease` funkcję do wykonania tej czynności. W MFC/OLE 2 nie jest to konieczne, aby można było usunąć przesłonięcie polecenia we wszystkich CMainFrame.
 
-W tym momencie OCLIENT kompilacji i połącz.
+W tym momencie OCLIENT skompiluje i utworzy link.
 
-## <a name="other-necessary-changes"></a>Inne wymagane zmiany
+### <a name="other-necessary-changes"></a>Inne niezbędne zmiany
 
-Istnieje kilka kwestii, które nie zostały wykonane, które zapewnią OCLIENT z pracy, jednak. Zaleca się rozwiązać te problemy, teraz zamiast później.
+Istnieje kilka rzeczy, które nie są gotowe do działania OCLIENT. Lepiej jest rozwiązać te problemy teraz zamiast w przyszłości.
 
-Najpierw należy zainicjować bibliotek OLE. Jest to realizowane przez wywołanie `AfxOleInit` z `InitInstance`:
+Najpierw konieczne jest zainicjowanie bibliotek OLE. Jest to realizowane przez wywołanie `AfxOleInit` z `InitInstance` :
 
 ```cpp
 if (!AfxOleInit())
@@ -245,7 +245,7 @@ if (!AfxOleInit())
 }
 ```
 
-Jest również dobrym pomysłem pod kątem funkcji wirtualnych dla zmiany listy parametrów. Jednej z tych funkcji jest `COleClientItem::OnChange`, zastąpione w każdej aplikacji kontenera MFC/OLE. Patrząc na pomoc online, zobaczysz, czy dodatkowy "DWORD dwParam" został dodany. Nowe CRectItem::OnChange wygląda następująco:
+Dobrym pomysłem jest również sprawdzenie funkcji wirtualnych dla zmian listy parametrów. Jedna taka funkcja jest `COleClientItem::OnChange` zastępowana w każdej aplikacji kontenera MFC/OLE. Przeglądając pomoc online, zobaczysz, że dodano dodatkową wartość "DWORD dwParam". Nowa CRectItem:: OnChange wygląda następująco:
 
 ```cpp
 void
@@ -269,7 +269,7 @@ CRectItem::OnChange(OLE_NOTIFICATION wNotification, DWORD dwParam)
 }
 ```
 
-W MFC/OLE1 aplikacji kontenerowych pochodne klasy dokumentów z `COleClientDoc`. MFC/OLE 2 ta klasa została usunięta i zastąpiona `COleDocument` (tej nowej organizacji sprawia, że łatwiej tworzyć aplikacje kontenera/serwera). Brak **#define** mapujący `COleClientDoc` do `COleDocument` ułatwiają przenoszenie aplikacji MFC/OLE1 do MFC/OLE 2, takie jak OCLIENT. Jedna z funkcji nie są dostarczane przez `COleDocument` która przekazała `COleClientDoc` jest komunikatem polecenia standardowe wpisy mapy. Odbywa się to przez aplikacje serwera, które także używają `COleDocument` (bezpośrednio), nie pociągają za sobą obciążenie programy obsługi tych poleceń, chyba że są one aplikacji kontenera/serwera. Należy dodać następujące wpisy na mapie komunikatów CMainDoc:
+W MFC/OLE1, aplikacje kontenera pochodne klasy dokumentu `COleClientDoc` . W MFC/OLE 2 Ta klasa została usunięta i zastąpiona przez `COleDocument` (Ta nowa organizacja ułatwia tworzenie aplikacji kontenera/serwera). Istnieje **#define** , która jest mapowana `COleClientDoc` na, aby `COleDocument` uprościć port MFC/OLE1 do MFC/OLE 2, takich jak OCLIENT. Jedną z funkcji, które nie są dostarczane przez `COleDocument` program, `COleClientDoc` jest standardowe wpisy mapy komunikatów poleceń. Dzieje się tak, aby aplikacje serwera, które również używały `COleDocument` (pośrednio), nie przenoszą do nich nakładów obsługi poleceń, chyba że są to aplikacje kontenera/serwera. Należy dodać następujące wpisy do mapy komunikatów CMainDoc:
 
 ```cpp
 ON_UPDATE_COMMAND_UI(ID_EDIT_PASTE, OnUpdatePasteMenu)
@@ -281,17 +281,17 @@ ON_UPDATE_COMMAND_UI(ID_OLE_EDIT_CONVERT, OnUpdateObjectVerbMenu)
 ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 ```
 
-Trwa wykonania wszystkich poleceń `COleDocument`, która jest klasą bazową dla dokumentu.
+Implementacja wszystkich tych poleceń znajduje się w `COleDocument` , która jest klasą bazową dla dokumentu.
 
-W tym momencie OCLIENT jest funkcjonalności aplikacji kontenera OLE. Jest możliwe wstawianie elementów dowolnego typu (OLE1 lub OLE 2). Ponieważ nie zaimplementowano niezbędne kodu w celu włączenia aktywacji w miejscu, w osobnym oknie, jak wiele OLE1 edytowania elementów. W następnej sekcji omówiono niezbędne zmiany, aby umożliwić edycję w miejscu (nazywane czasem "Edycja wizualna").
+W tym momencie OCLIENT jest funkcjonalną aplikacją kontenera OLE. Można wstawiać elementy dowolnego typu (OLE1 lub OLE 2). Ponieważ wymagany kod umożliwiający aktywację w miejscu nie jest zaimplementowany, elementy są edytowane w osobnym oknie, podobnie jak w przypadku OLE1. W następnej sekcji omówiono niezbędne zmiany, które umożliwiają edycję w miejscu (czasami nazywaną "edycją wizualizacji").
 
-## <a name="adding-visual-editing"></a>Dodawanie "Edycja wizualna"
+### <a name="adding-visual-editing"></a>Dodawanie "edycji wizualnej"
 
-Jedną z najbardziej interesujących funkcji OLE jest aktywacja w miejscu (lub "Edycja wizualna"). Ta funkcja umożliwia aplikacji serwera do przejęcia części interfejsu użytkownika kontenera podać więcej edycji interfejs użytkownika. Aby zaimplementować aktywacji w miejscu do OCLIENT, specjalne zasoby, należy dodać oraz dodatkowy kod. Te zasoby i kod zwykle są dostarczane przez AppWizard — w rzeczywistości większość tutaj kod został pobierają bezpośrednio z nowej aplikacji przez kreatora AppWizard z obsługą "Container".
+Jedną z najbardziej interesujących funkcji technologii OLE jest aktywacja w miejscu (lub "Edycja wizualna"). Ta funkcja umożliwia aplikacji serwera przejęcie części interfejsu użytkownika kontenera w celu zapewnienia bardziej bezproblemowego interfejsu edycji dla użytkownika. Aby zaimplementować aktywację w miejscu do OCLIENT, należy dodać pewne zasoby specjalne, a także dodatkowy kod. Te zasoby i kod są zwykle dostarczane przez AppWizard — w rzeczywistości większość kodu została pokazana bezpośrednio od nowej aplikacji AppWizard z obsługą "Container".
 
-Po pierwsze jest to konieczne, można dodać zasobu menu, który ma być używany, gdy istnieje element, który jest aktywny w miejscu. Ten zasób dodatkowe menu można utworzyć w wizualizacji C++ Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie z wyjątkiem plików i okno wyskakujące okienka. Dwa pasków separatorów są wstawiane do plików i okno wyskakujące okienka do wskazania rozdzielenie grup (powinien wyglądać podobnie jak: File &#124;&#124; Window). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
+Najpierw należy dodać zasób menu, który ma być używany, gdy istnieje element, który jest aktywny. Ten dodatkowy zasób menu można utworzyć w Visual C++ przez skopiowanie zasobu IDR_OCLITYPE i usunięcie wszystkich plików i okien wyskakujących. Dwa paski separatora są wstawiane między oknami wyskakującymi plików i okien, aby wskazać separację grup (powinna wyglądać tak: plik &#124;&#124; okno). Aby uzyskać więcej informacji o tym, co oznaczają te separatory i jak są scalane menu serwera i kontenera, zobacz menu [i zasoby: scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
-Po utworzeniu tych menu utworzone, możesz podać tę informację framework wiedzieć o nich. Jest to realizowane przez wywołanie `CDocTemplate::SetContainerInfo` dla szablonu dokumentu, aby można go dodać do listy szablonów dokumentów w elemencie InitInstance. Nowy kod, aby zarejestrować szablon dokumentu, który wygląda następująco:
+Po utworzeniu tych menu musisz powiadomić o nich strukturę. W tym celu należy wywołać `CDocTemplate::SetContainerInfo` szablon dokumentu przed dodaniem go do listy szablonów dokumentów w InitInstance. Nowy kod do zarejestrowania szablonu dokumentu wygląda następująco:
 
 ```cpp
 CDocTemplate* pTemplate = new CMultiDocTemplate(
@@ -305,23 +305,23 @@ pTemplate->SetContainerInfo(IDR_OLECLITYPE_INPLACE);
 AddDocTemplate(pTemplate);
 ```
 
-Zasób IDR_OLECLITYPE_INPLACE jest specjalnym zasobem w miejscu, utworzone w elemencie wizualnym C++.
+Zasób IDR_OLECLITYPE_INPLACE jest specjalnym zasobem w miejscu utworzonym w Visual C++.
 
-Aby włączyć aktywacji w miejscu, istnieją pewne elementy, które trzeba zmienić zarówno `CView` klasy pochodnej (CMainView), jak również `COleClientItem` klasy (CRectItem). Wszystkie te zastąpienia są dostarczane przez AppWizard, a większość implementacji pojawią się bezpośrednio z aplikacji przez kreatora AppWizard domyślne.
+Aby włączyć aktywację w miejscu, istnieje kilka rzeczy, które należy zmienić zarówno w `CView` klasie pochodnej (CMainView), jak i `COleClientItem` klasie pochodnej (CRectItem). Wszystkie te zastąpienia są udostępniane przez AppWizard i większość implementacji będzie pochodzić bezpośrednio z domyślnej aplikacji AppWizard.
 
-W pierwszym kroku tego portu, aktywacji w miejscu został wyłączony całkowicie przez zastąpienie `COleClientItem::CanActivate`. To zastąpienie powinny zostać usunięte w celu zezwolenia na aktywację w miejscu. Ponadto NULL została przekazana do wszystkich wywołań `DoVerb` (istnieją dwa z nich) powodu dostarczanie widoku tylko niezbędne do aktywacji w miejscu. Aby w pełni zaimplementować aktywacji w miejscu, należy przekazać prawidłowy widok, w `DoVerb` wywołania. Jeden z tych wywołań `CMainView::OnInsertObject`:
+W pierwszym kroku tego portu aktywacja w miejscu została wyłączona całkowicie przez zastąpienie `COleClientItem::CanActivate` . To zastąpienie powinno zostać usunięte, aby umożliwić aktywację w miejscu. Ponadto wartość NULL została przeniesiona do wszystkich wywołań do `DoVerb` (Istnieją dwa z nich), ponieważ udostępnienie widoku było wymagane tylko w przypadku aktywacji w miejscu. Aby w pełni zaimplementować aktywację w miejscu, konieczne jest przekazanie poprawnego widoku w `DoVerb` wywołaniu. Jedno z tych wywołań jest w `CMainView::OnInsertObject` :
 
 ```cpp
 pItem->DoVerb(OLEIVERB_SHOW, this);
 ```
 
-Trwa inny `CMainView::OnLButtonDblClk`:
+Drugi jest w `CMainView::OnLButtonDblClk` :
 
 ```cpp
 m_pSelection->DoVerb(OLEIVERB_PRIMARY, this);
 ```
 
-Należy zastąpić `COleClientItem::OnGetItemPosition`. Instruuje ona serwer, gdzie umieścić okno względem okna kontenera, gdy element jest aktywowany w miejscu. Aby uzyskać OCLIENT wdrożenie jest proste:
+Konieczne jest przesłonięcie `COleClientItem::OnGetItemPosition` . Informuje to serwer, na którym należy umieścić okno względem okna kontenera, gdy element jest aktywowany w miejscu. W przypadku OCLIENT implementacja jest prosta:
 
 ```cpp
 void CRectItem::OnGetItemPosition(CRect& rPosition)
@@ -330,7 +330,7 @@ void CRectItem::OnGetItemPosition(CRect& rPosition)
 }
 ```
 
-Większość serwerów wdrożenia, co jest nazywane "w miejscu zmiany rozmiaru." Dzięki temu okno server o rozmiarze i przenoszone, gdy użytkownik edytuje element. Kontener musi uczestniczyć w tej akcji, ponieważ przenoszenia lub zmieniania rozmiaru okna zazwyczaj ma wpływ na położenie i rozmiar, w obrębie samego dokumentu kontenera. Wykonania na OCLIENT synchronizuje wewnętrznego prostokąt, obsługiwane przez m_rect za pomocą nowego położenia i rozmiaru.
+Większość serwerów implementuje również to, co jest nazywane "zmianą w miejscu". Umożliwia to rozmiar i przeniesienie okna serwera, gdy użytkownik edytuje element. Kontener musi brać udział w tej akcji, ponieważ przeniesienie lub zmiana rozmiaru okna zwykle wpływa na położenie i rozmiar w obrębie samego dokumentu kontenera. Implementacja OCLIENT synchronizuje wewnętrzny prostokąt, który jest obsługiwany przez m_rect z nową pozycją i rozmiarem.
 
 ```cpp
 BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
@@ -349,9 +349,9 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 }
 ```
 
-W tym momencie jest wystarczająca ilość kodu, aby umożliwić element jest aktywowany w miejscu i zmiany rozmiaru i przenoszenie elementu, gdy będzie aktywny, ale żaden kod nie umożliwi użytkownikowi Zakończ sesję edycji. Mimo że niektóre serwery udostępni tę funkcję samodzielnie dzięki obsłudze klawisz escape, zaleca się, że kontenery zapewniają Dezaktywuj element na dwa sposoby: (1) klikając poza elementu i (2), naciskając klawisz ESC.
+W tym momencie jest wystarczająco duży kod, aby umożliwić aktywowanie elementu w miejscu i zaradzić sobie z rozmiarem i przeniesieniem elementu, gdy jest aktywny, ale żaden kod nie zezwoli użytkownikowi na zakończenie sesji edytowania. Mimo że niektóre serwery będą zapewniały te funkcje przez obsługę klucza ucieczki, zaleca się, aby kontenery zapewniały dwa sposoby dezaktywowania elementu: (1) przez kliknięcie elementu poza elementem i (2) przez naciśnięcie klawisza UCIECZKi.
 
-Klawisz ESCAPE, Dodaj akcelerator z wizualizacją C++ mapujący vk_escape — klawisz do polecenia ID_CANCEL_EDIT jest dodawany do tych zasobów. Obsługa tego polecenia są następujące:
+Dla klawisza UCIECZKi Dodaj akcelerator z Visual C++, który mapuje klucz VK_ESCAPE na polecenie, ID_CANCEL_EDIT zostanie dodany do zasobów. Procedura obsługi dla tego polecenia jest następująca:
 
 ```cpp
 // The following command handler provides the standard
@@ -367,7 +367,7 @@ Klawisz ESCAPE, Dodaj akcelerator z wizualizacją C++ mapujący vk_escape — kl
 }
 ```
 
-Aby obsłużyć przypadek, gdy użytkownik kliknie poza elementu, Dodaj następujący kod na początku `CMainView::SetSelection`:
+Aby obsłużyć przypadek, w którym użytkownik kliknie poza elementem, należy dodać następujący kod na początku `CMainView::SetSelection` :
 
 ```cpp
 if (pNewSel != m_pSelection || pNewSel == NULL)
@@ -379,7 +379,7 @@ if (pNewSel != m_pSelection || pNewSel == NULL)
 }
 ```
 
-Gdy element jest aktywny w miejscu, powinien mieć fokus. Aby upewnić się, że jest to możliwe Obsługa funkcji OnSetFocus tak, aby fokus zawsze jest przekazywany do aktywnego elementu, gdy widok otrzymuje fokus:
+Gdy element jest aktywny, powinien mieć fokus. Aby upewnić się, że jest to przypadek obsługujący funkcji OnSetFocus, dzięki czemu fokus jest zawsze przenoszony do aktywnego elementu, gdy widok otrzymuje fokus:
 
 ```cpp
 // Special handling of OnSetFocus and OnSize are required
@@ -405,7 +405,7 @@ void CMainView::OnSetFocus(CWnd* pOldWnd)
 }
 ```
 
-Przy zmianie rozmiaru widoku należy powiadomić aktywny element, który zmienił się prostokątny. W tym zapewnia funkcję obsługi `OnSize`:
+Gdy zmieniany jest rozmiar widoku, należy powiadomić aktywny element, że prostokąt wycinka został zmieniony. W tym celu należy udostępnić program obsługi dla `OnSize` :
 
 ```cpp
 void CMainView::OnSize(UINT nType, int cx, int cy)
@@ -418,38 +418,38 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 }
 ```
 
-## <a name="case-study-hiersvr-from-mfc-20"></a>Analiza przypadku: HIERSVR z MFC w wersji 2.0
+## <a name="case-study-hiersvr-from-mfc-20"></a>Analiza przypadku: HIERSVR z MFC 2,0
 
-[HIERSVR](../overview/visual-cpp-samples.md) również została uwzględniona w MFC w wersji 2.0 i wdrażane w OLE z MFC/OLE1. Ta uwaga krótko opisano kroki, według których ta aplikacja początkowo został skonwertowany do używania klas MFC/OLE 2. Wiele funkcji zostały dodane po początkowej portu zostało ukończone, aby lepiej zilustrować klas MFC/OLE 2. Te funkcje nie zostały omówione w tym miejscu; Zobacz na przykład aby uzyskać więcej informacji na temat tych zaawansowanych funkcji.
+[HIERSVR](../overview/visual-cpp-samples.md) również został uwzględniony w MFC 2,0 i zaimplementowane OLE z MFC/OLE1. W tej uwadze krótko opisano kroki, za pomocą których ta aplikacja była początkowo konwertowana do używania klas MFC/OLE 2. Po zakończeniu wstępnego portu dodano szereg funkcji, aby lepiej zilustrować klasy MFC/OLE 2. Te funkcje nie zostaną omówione w tym miejscu. Zapoznaj się z przykładem, aby uzyskać więcej informacji na temat tych zaawansowanych funkcji.
 
 > [!NOTE]
-> Błędy kompilatora i instrukcje krok po kroku proces został utworzony przy użyciu programu Visual C++ wersji 2.0. Określone komunikaty o błędach i lokalizacje mógł ulec zmianie z Visual C++ 4.0, ale informacje koncepcyjne poniżej pozostaje ważny.
+> Błędy kompilatora i proces krok po kroku został utworzony przy użyciu Visual C++ 2,0. Określone komunikaty o błędach i lokalizacje mogą ulec zmianie w Visual C++ 4,0, ale informacje o pojęciach pozostają poprawne.
 
-## <a name="getting-it-up-and-running"></a>Go i przeprowadzanie
+### <a name="getting-it-up-and-running"></a>Pobieranie i uruchamianie
 
-To podejście do portu HIERSVR próbki MFC/OLE na początek wbudowanie jej i naprawianie błędów kompilatora oczywiste, które będą powodować. Jeśli pobierania próbki HIERSVR z MFC w wersji 2.0 i skompilować go w tej wersji MFC, przekonasz się, że nie są wiele błędów, aby rozwiązać (mimo że ma więcej niż z przykładem OCLIENT). Błędy w kolejności, w którym występują zwykle są opisane poniżej.
+Podejście podjęte do przenoszenia przykładu HIERSVR do MFC/OLE jest uruchamiane przez skompilowanie go i naprawianie błędów kompilatora, które będą wynikiem. Jeśli pobierasz próbkę HIERSVR z MFC 2,0 i skompilujesz ją w tej wersji MFC, zobaczysz, że nie ma wielu błędów do rozwiązania (chociaż jest więcej niż z przykładem OCLIENT). Błędy w kolejności, w której zwykle występują, są opisane poniżej.
 
-## <a name="compile-and-fix-errors"></a>Kompilacji i poprawki błędów
+### <a name="compile-and-fix-errors"></a>Kompiluj i naprawiaj błędy
 
 ```Output
 \hiersvr\hiersvr.cpp(83) : error C2039: 'RunEmbedded' : is not a member of 'COleTemplateServer'
 ```
 
-Ten pierwszy błąd wykazuje znacznie większe problem z `InitInstance` funkcji na serwerach. Inicjowanie wymagane przez serwer OLE jest prawdopodobnie jedną z największych zmiany, które należy wprowadzać w aplikacji MFC/OLE1 jego uruchamiania. Najlepiej, aby zrobić to Przyjrzyj się przez kreatora AppWizard tworzy dla serwera OLE i modyfikować kod zgodnie z potrzebami. Poniżej przedstawiono kilka kwestii, o których należy pamiętać:
+Ten pierwszy błąd wskazuje na znacznie większy problem z `InitInstance` funkcją dla serwerów. Inicjalizacja wymagana dla serwera OLE jest prawdopodobnie jednym z największych zmian, które trzeba wykonać w aplikacji MFC/OLE1, aby było uruchomione. Najlepszym zagadnieniem jest to, co AppWizard tworzy dla serwera OLE i w razie potrzeby modyfikuje kod. Poniżej przedstawiono niektóre kwestie, o których należy pamiętać:
 
-Należy zainicjować bibliotek OLE przez wywołanie metody `AfxOleInit`
+Konieczne jest zainicjowanie bibliotek OLE, wywołując `AfxOleInit`
 
-Wywołaj SetServerInfo obiektu szablonu dokumentu, można ustawić obsługuje zasobów serwera i informacje o klasie czasu wykonywania, nie można ustawić za pomocą `CDocTemplate` konstruktora.
+Wywołaj SetServerInfo w obiekcie szablonu dokumentu, aby ustawić uchwyty zasobów serwera i informacje o klasie środowiska uruchomieniowego, których nie można ustawić za pomocą `CDocTemplate` konstruktora.
 
-Nie pokazuj okna głównego aplikacji, jeśli/Embedding znajduje się w wierszu polecenia.
+Nie pokazuj okna głównego aplikacji, jeśli przełącznikiem/Embedding jest obecny w wierszu polecenia.
 
-Będziesz potrzebować **GUID** dokumentu. Jest to unikatowy identyfikator typu dokumentu (128-bitowy). Kreator AppWizard utworzy go dla Ciebie — Jeśli używasz techniki opisanej w tym miejscu kopiowania nowy kod z nową aplikację serwera generowane przez kreatora AppWizard, użytkownik może po prostu "wykradać" identyfikatora GUID z tej aplikacji. W przeciwnym razie możesz użyć GUIDGEN. Narzędzie EXE w katalogu BIN.
+Wymagany jest **Identyfikator GUID** dla dokumentu. To jest unikatowy identyfikator typu dokumentu (128 bitów). AppWizard utworzy aplikację, więc jeśli używasz opisanej tutaj techniki kopiowania nowego kodu z nowej aplikacji serwera wygenerowanej przez AppWizard, możesz po prostu "ukraść" Identyfikator GUID z tej aplikacji. Jeśli nie, możesz użyć narzędzia GUIDGEN.EXE w katalogu BIN.
 
-Jest to konieczne "połączyć" usługi `COleTemplateServer` obiektu do szablonu dokumentu, wywołując `COleTemplateServer::ConnectTemplate`.
+Należy "połączyć" `COleTemplateServer` obiekt z szablonem dokumentu przez wywołanie `COleTemplateServer::ConnectTemplate` .
 
-Gdy aplikacja jest uruchomiona w autonomicznej, należy zaktualizować rejestru systemowego. Dzięki temu, gdy użytkownik przesuwa. EXE dla aplikacji, uruchamiając go z nowej lokalizacji spowoduje zaktualizowanie bazy danych rejestracji systemu Windows do punktu do nowej lokalizacji.
+Zaktualizuj rejestr systemu, gdy aplikacja jest uruchamiana autonomicznie. W ten sposób, jeśli użytkownik przenosi. Program EXE dla aplikacji, który uruchamia go z nowej lokalizacji, zaktualizuje bazę danych rejestracji systemu Windows, aby wskazywała nową lokalizację.
 
-Po zastosowaniu wszystkie te zmiany, w oparciu o AppWizard tworzy dla `InitInstance`, `InitInstance` (i związane z identyfikatorem GUID) dla HIERSVR powinien wyglądać następująco:
+Po zastosowaniu wszystkich tych zmian w zależności od tego, co AppWizard tworzy dla programu `InitInstance` , `InitInstance` (i powiązany identyfikator GUID) dla HIERSVR powinien zostać odczytany w następujący sposób:
 
 ```cpp
 // this is the GUID for HIERSVR documents
@@ -523,9 +523,9 @@ BOOL COLEServerApp::InitInstance()
 }
 ```
 
-Zauważysz, że powyższy kod odwołuje się do nowych identyfikatorów zasobów, IDR_HIERSVRTYPE_SRVR_EMB. Jest to zasób menu do użycia podczas edycji dokumentu, który jest osadzony w innym kontenerze. W MFC/OLE1 określonych edytować element osadzony elementów menu zostały zmienione na bieżąco. Przy użyciu struktury menu zupełnie innego, podczas edytowania element osadzony zamiast edytowania dokumentu oparte na plikach w znacznie ułatwia zapewnia różnych interfejsów użytkownika dla te dwa różne tryby. Jak zobaczysz później, zasobu menu całkowicie oddzielona jest używany podczas edytowania osadzonego obiektu w miejscu.
+Zobaczysz, że powyższy kod odwołuje się do nowego identyfikatora zasobu, IDR_HIERSVRTYPE_SRVR_EMB. Jest to zasób menu, który ma być używany, gdy edytowany jest dokument osadzony w innym kontenerze. W MFC/OLE1 elementy menu specyficzne dla edycji osadzonego elementu zostały zmodyfikowane na bieżąco. Użycie całkowicie różnej struktury menu podczas edytowania elementu osadzonego zamiast edytowania dokumentu opartego na plikach ułatwia udostępnianie różnych interfejsów użytkownika dla tych dwóch oddzielnych trybów. Jak zobaczysz później, w trakcie edycji osadzonego obiektu w miejscu zostanie użyty całkowicie oddzielny zasób menu.
 
-Do tworzenia tego zasobu, należy załadować skrypt zasobu do wizualizacji C++ i skopiuj istniejący zasób IDR_HIERSVRTYPE w menu. Zmień nazwę nowego zasobu IDR_HIERSVRTYPE_SRVR_EMB (jest to tej samej konwencji nazewnictwa, która przez kreatora AppWizard używa). Następnie zmień "Zapisz" na "Aktualizuj plik"; Nadaj mu identyfikator id_file_update — polecenie. Również zmienić "Zapisz plik jako" do "Pliku Zapisz kopię jako"; Nadaj mu identyfikator id_file_save_copy_as — polecenie. Struktura dostarcza implementację oba te polecenia.
+Aby utworzyć ten zasób, Załaduj skrypt zasobów do Visual C++ i skopiuj istniejący zasób menu IDR_HIERSVRTYPE. Zmień nazwę nowego zasobu na IDR_HIERSVRTYPE_SRVR_EMB (jest to taka sama Konwencja nazewnictwa, której używa AppWizard). Dalej Zmień "plik Zapisz" na "Aktualizacja plików"; Nadaj mu identyfikator polecenia ID_FILE_UPDATE. Zmień również plik "Zapisz jako" na "plik Zapisz kopię jako"; Nadaj mu identyfikator polecenia ID_FILE_SAVE_COPY_AS. Struktura zawiera implementację obu tych poleceń.
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -535,20 +535,20 @@ Do tworzenia tego zasobu, należy załadować skrypt zasobu do wizualizacji C++ 
 \hiersvr\svritem.h(60) : error C2501: 'OnSetData' : missing decl-specifiers
 ```
 
-Liczba błędów wynikających z zastępowania metody `OnSetData`, ponieważ odwołuje się do **OLESTATUS** typu. **OLESTATUS** było możliwości OLE1 zwrócone błędy. Zostało to zmienione na **HRESULT** OLE 2, mimo że MFC zazwyczaj konwertuje **HRESULT** do `COleException` zawierające błąd. W tym konkretnym przypadku zastępowania metody `OnSetData` nie jest już konieczne, więc jest najłatwiejszym, jej usunięcie.
+Istnieje wiele błędów wynikających z przesłonięcia `OnSetData` , ponieważ odwołuje się do typu **OleStatus** . **OleStatus** był sposób, w jaki OLE1 zwrócił błędy. Ten element został zmieniony na **HRESULT** w OLE 2, chociaż MFC zwykle konwertuje **wynik HRESULT** na `COleException` błąd. W tym konkretnym przypadku przesłonięcie `OnSetData` nie jest już konieczne, więc najprostszym rozwiązaniem jest jego usunięcie.
 
 ```Output
 \hiersvr\svritem.cpp(30) : error C2660: 'COleServerItem::COleServerItem' : function does not take 1 parameters
 ```
 
-`COleServerItem` Konstruktor przyjmuje jako dodatkowy parametr "BOOL". Ta flaga Określa, jak zarządzanie pamięcią jest wykonywane na `COleServerItem` obiektów. Ustawiając dla niej wartość true, struktura obsługuje zarządzanie pamięcią tych obiektów — ich usuwania, gdy nie są już wymagane. Używa HIERSVR `CServerItem` (pochodną `COleServerItem`) obiektów w ramach jej danych w trybie macierzystym, więc ta flaga będzie ustawiona na wartość FALSE. Dzięki temu HIERSVR określić, gdy każdy element na serwerze zostanie usunięty.
+`COleServerItem`Konstruktor pobiera dodatkowy parametr "bool". Ta flaga określa sposób zarządzania pamięcią w `COleServerItem` obiektach. Po ustawieniu na wartość TRUE Framework obsługuje zarządzanie pamięcią tych obiektów, usuwając je, gdy nie są już potrzebne. HIERSVR używa `CServerItem` obiektów pochodnych (pochodzących z `COleServerItem` ) jako części danych natywnych, więc ustawisz flagę na wartość false. Dzięki temu HIERSVR określić, kiedy każdy element serwera jest usuwany.
 
 ```Output
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class
 ```
 
-Jak sugerują te błędy są niektóre funkcje "czysto wirtualne", które nie zostały zastąpione CServerItem. Prawdopodobnie przyczyną jest fakt, że lista parametrów OnDraw firmy został zmieniony. Aby naprawić ten błąd, zmień `CServerItem::OnDraw` w następujący sposób (a także deklaracji w svritem.h):
+Ponieważ te błędy oznaczają, istnieją pewne funkcje "czysty-wirtualny", które nie zostały zastąpione w CServerItem. Najprawdopodobniej wynika to z faktu, że lista parametrów OnDraw została zmieniona. Aby naprawić ten błąd, należy zmienić `CServerItem::OnDraw` w następujący sposób (a także deklarację w svritem. h):
 
 ```cpp
 BOOL CServerItem::OnDraw(CDC* pDC, CSize& rSize)
@@ -559,7 +559,7 @@ BOOL CServerItem::OnDraw(CDC* pDC, CSize& rSize)
 }
 ```
 
-Nowy parametr jest "rSize". Dzięki temu można wpisać rozmiar rysunku, jeśli jest to wygodne. Ten rozmiar musi być w **HIMETRIC**. W tym przypadku go nie jest wygodne wypełnić tę wartość, więc struktura wywołuje `OnGetExtent` do pobrania w zakresie. W tym do pracy, musisz zaimplementować `OnGetExtent`:
+Nowy parametr to "elementu rsize". Pozwala to na wypełnienie rozmiaru rysunku, o ile jest to wygodne. Ten rozmiar musi być w **HIMETRIC**. W tym przypadku nie jest to wygodne do wypełnienia tej wartości w, więc struktura wywołuje w `OnGetExtent` celu pobrania zakresu. Aby to działało, należy wdrożyć `OnGetExtent` :
 
 ```cpp
 BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
@@ -579,7 +579,7 @@ BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'
 ```
 
-W funkcji CServerItem::CalcNodeSize rozmiar elementu jest konwertowany na **HIMETRIC** i zapisywane w *m_rectBounds*. Nieudokumentowany "*m_rectBounds*" członkiem `COleServerItem` nie istnieje (go częściowo zastąpiono *m_sizeExtent*, ale w OLE 2 tego elementu członkowskiego ma użycia nieco inne niż *m_rectBounds* w programie OLE1). Zamiast ustawiać **HIMETRIC** rozmiar do tej zmiennej składowej, zostanie zwrócona go. Ta wartość zwracana jest używana w `OnGetExtent`, wcześniej zaimplementowane.
+W funkcji CServerItem:: CalcNodeSize rozmiar elementu jest konwertowany na **HIMETRIC** i przechowywany w *m_rectBounds*. Nieudokumentowany element członkowski "*m_rectBounds*" `COleServerItem` nie istnieje (częściowo zastąpiony przez *M_SIZEEXTENT*, ale w OLE 2 ten element członkowski ma nieco inne użycie niż *m_rectBounds* OLE1). Zamiast ustawiania rozmiaru **HIMETRIC** w tej zmiennej składowej, należy ją zwrócić. Ta wartość zwracana jest używana w `OnGetExtent` , wcześniej wdrożone.
 
 ```cpp
 CSize CServerItem::CalcNodeSize()
@@ -598,15 +598,15 @@ CSize CServerItem::CalcNodeSize()
 }
 ```
 
-Zastępuje również CServerItem `COleServerItem::OnGetTextData`. Ta funkcja jest przestarzała w MFC/OLE i zastępuje innego mechanizmu. Wersja MFC 3.0, MFC OLE próbki [HIERSVR](../overview/visual-cpp-samples.md) implementuje tej funkcji przez zastąpienie `COleServerItem::OnRenderFileData`. Nie jest to ważne w przypadku tego portu podstawowe, dzięki czemu możesz usunąć zastąpienie OnGetTextData.
+CServerItem również zastąpień `COleServerItem::OnGetTextData` . Ta funkcja jest przestarzała w MFC/OLE i jest zastępowana przez inny mechanizm. Wersja MFC 3,0 przykładu MFC OLE [HIERSVR](../overview/visual-cpp-samples.md) implementuje tę funkcję przez zastąpienie `COleServerItem::OnRenderFileData` . Ta funkcja nie jest ważna dla tego podstawowego portu, więc można usunąć zastąpienie OnGetTextData.
 
-Istnieje wiele więcej błędów w svritem.cpp, które nie zostały uwzględnione. Nie są one błędy "członu real" — po prostu błędy spowodowane przez poprzednie błędy.
+Istnieje dużo więcej błędów w svritem. cpp, które nie zostały rozkierowane. Nie są to "prawdziwe" błędy — tylko błędy spowodowane przez poprzednie błędy.
 
 ```Output
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` nie obsługuje już `bIncludeNative` flagi. Natywne kopiowane są dane (dane zapisywane przez funkcję serializacja element serwera) zawsze, aby usunąć pierwszy parametr. Ponadto `CopyToClipboard` spowoduje zgłoszenie wyjątku, po wystąpieniu błędu zamiast zwracać wartość FALSE. Zmień kod dla CServerView::OnEditCopy w następujący sposób:
+`COleServerItem::CopyToClipboard` nie obsługuje już `bIncludeNative` flagi. Dane natywne (dane zapisywane przez funkcję serializacji elementu serwera) są zawsze kopiowane, dlatego należy usunąć pierwszy parametr. Ponadto program `CopyToClipboard` zgłosi wyjątek, gdy wystąpi błąd, zamiast zwracać wartość false. Zmień kod dla CServerView:: OnEditCopy w następujący sposób:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -626,29 +626,29 @@ void CServerView::OnEditCopy()
 }
 ```
 
-Mimo że wystąpiły błędy wynikające z kompilacji w wersji MFC 2.0 HIERSVR, niż wystąpiły dla tej samej wersji OCLIENT, wystąpiły faktycznie mniejszej liczby zmian.
+Mimo że wystąpiły błędy związane z kompilacją wersji MFC 2,0 HIERSVR niż w przypadku tej samej wersji OCLIENT, wprowadzono mniej zmian.
 
-W tym momencie HIERSVR będzie skompilować link i działać jako serwer OLE, ale bez funkcji edycji w miejscu, która będzie następnie zaimplementowana.
+W tym momencie HIERSVR kompiluje i łączy i działa jako serwer OLE, ale bez funkcji edycji w miejscu, która zostanie wdrożona dalej.
 
-## <a name="adding-visual-editing"></a>Dodawanie "Edycja wizualna"
+### <a name="adding-visual-editing"></a>Dodawanie "edycji wizualnej"
 
-Aby dodać "Edycja wizualna" (lub aktywacji w miejscu) do tej aplikacji, istnieje tylko kilka rzeczy, które należy zadbać o:
+Aby dodać "edycję wizualizacji" (lub aktywację w miejscu) do tej aplikacji serwera, należy wziąć pod uwagę tylko kilka rzeczy:
 
-- Potrzebujesz zasobu menu specjalne ma być używany, gdy element jest aktywny w miejscu.
+- Potrzebujesz specjalnego zasobu menu, który będzie używany, gdy element jest aktywny.
 
-- Ta aplikacja ma pasek narzędzi, dlatego potrzebujesz narzędzi z podzbiorem normalne narzędzi, aby dopasować polecenia menu dostępny z serwera (odpowiada zasobów menu wymienionymi powyżej).
+- Ta aplikacja ma pasek narzędzi, Dlatego potrzebny jest pasek narzędzi z tylko podzbiorem normalnego paska narzędzi, aby dopasować polecenia menu dostępne na serwerze (zgodne z powyższym zasobem menu).
 
-- Potrzebujesz nową klasę pochodną `COleIPFrameWnd` zapewniający interfejsu użytkownika w miejscu (podobnie jak cmainframe —, pochodzące z `CMDIFrameWnd`, zapewnia interfejs użytkownika MDI).
+- Potrzebna jest nowa klasa pochodna, `COleIPFrameWnd` która zapewnia interfejs użytkownika w miejscu (podobnie jak CMainFrame, pochodny od `CMDIFrameWnd` , udostępnia interfejs użytkownika MDI).
 
-- Musisz poinformować szablon o tych specjalnych zasobów i klas.
+- Należy popowiedzieć platformę dotyczącą tych specjalnych zasobów i klas.
 
-Zasób menu jest łatwo jest tworzyć. Uruchamianie wizualizacji C++, Kopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko edytowanie i pomocy menu wyskakujące okienka. Dodaj separatory, dwóch menu Between menu Edycja i pomocy (powinien wyglądać podobnie jak: Edytuj &#124; &#124; pomocy). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener, zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
+Zasób menu jest łatwy do utworzenia. Uruchom Visual C++, skopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu tak, aby tylko okna podręczne menu Edycja i pomoc zostały pozostawione. Dodaj dwa separatory do menu w oknie Edycja i pomoc (powinny wyglądać następująco: Edycja pomocy &#124;&#124; ). Aby uzyskać więcej informacji o tym, co oznaczają te separatory i jak są scalane menu serwera i kontenera, zobacz menu [i zasoby: scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
-Mapy bitowe dla paska narzędzi podzbioru można łatwo utworzyć przez skopiowanie jednego z nowej aplikacji wygenerowane przez kreatora AppWizard z zaznaczoną opcją "Server". Następnie można zaimportować tej mapy bitowej do Visual C++. Należy podać identyfikator IDR_HIERSVRTYPE_SRVR_IP mapy bitowej.
+Mapę bitową dla podzestawu na pasku narzędzi można łatwo utworzyć przez skopiowanie jednego z AppWizard wygenerowanej aplikacji z opcją "serwer". Tę mapę bitową można następnie zaimportować do Visual C++. Upewnij się, że mapa bitowa ma identyfikator IDR_HIERSVRTYPE_SRVR_IP.
 
-Klasa jest pochodną `COleIPFrameWnd` może zostać skopiowany z aplikacji wygenerowane przez kreatora AppWizard przy użyciu również pomoc techniczna dotycząca serwera. Skopiuj obydwa pliki IPFRAME. CPP i IPFRAME. Godz. i dodać je do projektu. Upewnij się, że `LoadBitmap` wywołanie odnosi się do IDR_HIERSVRTYPE_SRVR_IP, mapy bitowej, utworzony w poprzednim kroku.
+Klasa pochodna z `COleIPFrameWnd` może zostać skopiowana z aplikacji wygenerowanej przez AppWizard z obsługą serwera. Skopiuj oba pliki, IPFRAME. CPP i IPFRAME. H i Dodaj do projektu. Upewnij się, że `LoadBitmap` wywołanie odwołuje się do IDR_HIERSVRTYPE_SRVR_IP, mapa bitowa utworzona w poprzednim kroku.
 
-Teraz, gdy są tworzone nowe zasoby i klasy, należy dodać niezbędny kod tak, aby w ramach wie o tych (i wie, że teraz ta aplikacja obsługuje edycję w miejscu). Jest to realizowane przez dodanie niektórych większą liczbę parametrów, aby `SetServerInfo` wywołania `InitInstance` funkcji:
+Teraz, gdy zostaną utworzone wszystkie nowe zasoby i klasy, Dodaj wymagany kod, aby platforma wie o tych (i wie, że ta aplikacja obsługuje teraz edycję w miejscu). Jest to realizowane przez dodanie kilku parametrów do `SetServerInfo` wywołania w `InitInstance` funkcji:
 
 ```cpp
 pDocTemplate->SetServerInfo(IDR_HIERSVRTYPE_SRVR_EMB,
@@ -656,7 +656,7 @@ pDocTemplate->SetServerInfo(IDR_HIERSVRTYPE_SRVR_EMB,
     RUNTIME_CLASS(CInPlaceFrame));
 ```
 
-Jest teraz gotowy do uruchomienia w miejscu w dowolnym kontenerze, który również obsługuje aktywacji w miejscu. Istnieje jednak jeden drobny błąd ukryte w kodzie. HIERSVR obsługuje menu kontekstowe, wyświetlane po naciśnięciu prawego przycisku myszy. To menu działa w przypadku, gdy HIERSVR jest w pełni otwarty, ale nie działa podczas edytowania osadzania w miejscu. Przyczyny można przypiąć w dół do tego jednego wiersza kodu w CServerView::OnRButtonDown:
+Jest teraz gotowa do uruchamiania w miejscu w dowolnym kontenerze, który również obsługuje aktywację w miejscu. Jednak istnieje jedna drobna usterka nadal lurking w kodzie. HIERSVR obsługuje menu kontekstowe, wyświetlane, gdy użytkownik naciśnie prawy przycisk myszy. To menu działa, gdy HIERSVR jest w pełni otwarte, ale nie działa podczas edytowania osadzania w miejscu. Przyczyna może być przypięta do tego samego wiersza kodu w CServerView:: OnRButtonDown:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
@@ -665,7 +665,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Zwróć uwagę, odwołanie do `AfxGetApp()->m_pMainWnd`. Serwer jest aktywowany w miejscu, ma okno główne i elementu m_pMainWnd jest ustawiona, ale jest zwykle niewidoczne. Ponadto, w tym oknie odnosi się do *głównego* okna aplikacji, Otwórz okno ramek MDI, który jest wyświetlany, gdy serwer jest w pełni lub uruchomić autonomiczną. Nie odwołuje się do okna aktywnej ramki — gdy w miejscu aktywowane czyli ramkę okna pochodzące z `COleIPFrameWnd`. Aby uzyskać poprawny aktywnego okna, nawet wtedy, gdy w miejscu edytowania tej wersji biblioteki MFC dodaje nową funkcję, `AfxGetMainWnd`. Ogólnie rzecz biorąc, należy użyć tej funkcji, zamiast `AfxGetApp()->m_pMainWnd`. Ten kod musi zmienić w następujący sposób:
+Zwróć uwagę na odwołanie do `AfxGetApp()->m_pMainWnd` . Gdy serwer jest aktywowany w miejscu, ma okno główne, a m_pMainWnd jest ustawiony, ale jest zwykle niewidoczny. Ponadto to okno odnosi się do *głównego* okna aplikacji, okna ramki MDI, które pojawia się, gdy serwer jest w pełni otwarty lub uruchamiany autonomicznie. Nie odwołuje się do aktywnego okna ramki, które w miejscu aktywowanym jest oknem ramki pochodnym `COleIPFrameWnd` . Aby uzyskać poprawne aktywne okno, nawet w przypadku edycji w miejscu, ta wersja MFC dodaje nową funkcję, `AfxGetMainWnd` . Ogólnie rzecz biorąc należy używać tej funkcji zamiast `AfxGetApp()->m_pMainWnd` . Ten kod musi ulec zmianie w następujący sposób:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
@@ -674,17 +674,17 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetMainWnd());
 ```
 
-Masz teraz minimalny zestaw jest włączone dla aktywacji w miejscu funkcjonalności serwera OLE. Ale nadal są dostępne z MFC/OLE 2, które nie były dostępne w MFC/OLE1 wiele funkcji. Zobacz przykład HIERSVR więcej pomysłów na temat funkcji, które można zaimplementować. Poniżej wymieniono niektóre funkcje, które implementuje HIERSVR:
+Teraz można korzystać z serwera OLE w minimalnym stopniu dla funkcjonalnej aktywacji w miejscu. Jednak nadal dostępnych jest wiele funkcji MFC/OLE 2, które nie były dostępne w MFC/OLE1. Zobacz przykład HIERSVR, aby poznać więcej pomysłów na temat funkcji, które warto zaimplementować. Poniżej wymieniono niektóre z funkcji, które HIERSVR implementuje:
 
-- Powiększanie na wartość true, zachowanie WYSIWYG w odniesieniu do kontenera.
+- Powiększanie, w przypadku rzeczywistego zachowania WYSIWYG w odniesieniu do kontenera.
 
-- Przeciągania / upuszczania i format schowka niestandardowych.
+- Przeciąganie/upuszczanie i niestandardowy format schowka.
 
-- Przewijanie okno kontenera jako wybór zostanie zmieniony.
+- Przewijanie okna kontenera w miarę zmiany zaznaczenia.
 
-Przykładowe HIERSVR 3.0 MFC używa również nieco inny projekt dla jego elementów serwera. To pomaga zachować pamięci i sprawia, że łącza jest bardziej elastyczna. Za pomocą wersji 2.0 HIERSVR każdy węzeł w drzewie *jest a* `COleServerItem`. `COleServerItem` niesie ze sobą obciążenie nieco więcej, niż jest to absolutnie konieczne dla każdego z tych węzłów, ale `COleServerItem` jest wymagana dla każdego aktywnego łącza. Ale w większości przypadków jest bardzo mało aktywnych łączy w danym momencie. Aby to bardziej wydajne, HIERSVR w tej wersji MFC oddziela węzła z `COleServerItem`. Ma ona zarówno CServerNode i `CServerItem` klasy. `CServerItem` (Pochodną `COleServerItem`) jest tworzony tylko, gdy jest to konieczne. Kontener (lub kontenery) należy zatrzymać przy użyciu określonego łącze, aby dany węzeł, obiekt CServerItem skojarzony z CServerNode skasowanie. Ten projekt jest bardziej wydajne i bardziej elastycznym. Jego elastyczność jest dostępna w podczas pracy z wieloma łączami zaznaczenia. Żadna z tych dwóch wersji HIERSVR nie obsługują wielokrotnego wyboru, ale jest znacznie łatwiejsze do dodania (i obsługują linki do tych opcji) do wersji MFC 3.0 HIERSVR, ponieważ `COleServerItem` są oddzielone od danych natywnych.
+Przykład HIERSVR w MFC 3,0 używa również nieco innego projektu dla elementów serwera. Pozwala to zaoszczędzić pamięć i sprawia, że linki są bardziej elastyczne. W przypadku wersji 2,0 HIERSVR każdy węzeł w drzewie *to-a* `COleServerItem` . `COleServerItem` wykonuje nieco bardziej narzuty, niż jest to absolutnie konieczne dla każdego z tych węzłów, ale `COleServerItem` jest wymagany dla każdego aktywnego linku. Jednak w większości przypadków aktywne linki są dostępne w danym momencie. Aby zwiększyć efektywność, HIERSVR w tej wersji MFC oddziela węzeł od `COleServerItem` . Ma zarówno CServerNode, jak i `CServerItem` klasę. `CServerItem`(Pochodny od `COleServerItem` ) jest tworzony tylko w razie potrzeby. Gdy kontener (lub kontenery) zakończy korzystanie z tego konkretnego linku do tego określonego węzła, obiekt CServerItem skojarzony z CServerNode jest usuwany. Ten projekt jest bardziej wydajny i bardziej elastyczny. Jego elastyczność jest dostępna podczas pracy z wieloma łączami wyboru. Żadna z tych dwóch wersji programu HIERSVR nie obsługuje wielokrotnego wyboru, ale byłoby znacznie łatwiejsze do dodania (i do obsługi linków do takich opcji) z wersją MFC 3,0 HIERSVR, ponieważ `COleServerItem` jest oddzielona od danych natywnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

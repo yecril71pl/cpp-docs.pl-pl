@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759363"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741986"
 ---
 # <a name="compiler-error-c3238"></a>Błąd kompilatora C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759363"
 
 Typ został zdefiniowany w aplikacji klienckiej, która jest również zdefiniowana, za pomocą składni przekazywania typów, w przywoływanym zestawie. Oba typy nie mogą być zdefiniowane w zakresie aplikacji.
 
-Aby uzyskać więcej informacji, zobacz [przekazywanie typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
+Aby uzyskać więcej informacji, zobacz [przekazywanie dalej typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
 Poniższy przykład tworzy zestaw, który zawiera typ, który został przesłany dalej z innego zestawu.
 
@@ -31,8 +31,6 @@ Poniższy przykład tworzy zestaw, który zawiera typ, który został przesłany
 public ref class R {};
 ```
 
-## <a name="example"></a>Przykład
-
 Poniższy przykład tworzy zestaw, który służy do zawiera definicję typu, ale nie tylko zawiera składnię przekazywania typów.
 
 ```cpp
@@ -41,8 +39,6 @@ Poniższy przykład tworzy zestaw, który służy do zawiera definicję typu, al
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3238.
 
