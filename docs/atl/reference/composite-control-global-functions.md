@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833559"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353119"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolki złożonej
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [jak: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat sterowania instrukcjami definicji zasobów, zobacz [Parametry formantów wspólnych](/windows/win32/menurc/common-control-parameters) w obszarze Windows SDK: SDK Tools.
+Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [How to: Create Resources](../../windows/how-to-create-a-resource-script-file.md). Aby uzyskać więcej informacji na temat sterowania instrukcjami definicji zasobów, zobacz [Parametry formantów wspólnych](/windows/win32/menurc/common-control-parameters) w obszarze Windows SDK: SDK Tools.
 
 Aby uzyskać więcej informacji na temat ogólnych okien dialogowych, zobacz [DialogBox](/windows/win32/api/winuser/nf-winuser-dialogboxw) i [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) w Windows SDK.
 
@@ -298,7 +298,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) , aby uzyskać przykład użycia `AtlAxCreateControlLic` .
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) , aby uzyskać przykład użycia `AtlAxCreateControlLic` .
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -365,7 +365,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) , aby uzyskać przykład użycia `AtlAxCreateControlLicEx` .
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) , aby uzyskać przykład użycia `AtlAxCreateControlLicEx` .
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 

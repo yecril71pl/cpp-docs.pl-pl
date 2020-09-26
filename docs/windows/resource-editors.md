@@ -1,5 +1,5 @@
 ---
-title: Edytory zasobówC++()
+title: Edytory zasobów (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167891"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353171"
 ---
-# <a name="resource-editors-c"></a>Edytory zasobówC++()
+# <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
 Edytor zasobów to wyspecjalizowane środowisko do tworzenia lub modyfikowania zasobów uwzględnionych w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępniają techniki i interfejsy ułatwiające szybkie i łatwe tworzenie i modyfikowanie zasobów aplikacji. Edytory zasobów umożliwiają wyświetlanie i edytowanie zasobów w odpowiednim edytorze i Podgląd zasobów.
 
@@ -39,26 +39,26 @@ Odpowiedni edytor zostanie otwarty automatycznie podczas tworzenia lub otwierani
 
 |Korzystanie z...|Aby edytować...|
 |----------------|----------------|
-|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach C++ programu Visual Studio.|
-|[Edytor plików binarnych](binary-editor.md)|Informacje o danych binarnych i zasoby niestandardowe C++w wizualizacjach, Visual Basic C# lub projektach wizualnych.|
-|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach programu C++ Visual Studio.|
-|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursory i inne pliki obrazów w wizualizacji C++, Visual Basic lub Visual C# .|
-|[Edytor menu](../windows/menu-editor.md)|Zasoby menu w projektach programu C++ Visual Studio.|
+|[Edytor akceleratorów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach programu Visual Studio C++.|
+|[Edytor binarny](binary-editor.md)|Informacje o danych binarnych i zasoby niestandardowe w projektach Visual C++, Visual Basic lub Visual C#.|
+|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach programu Visual Studio C++.|
+|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursory i inne pliki obrazów w projektach Visual C++, Visual Basic lub Visual C#.|
+|[Edytor menu](../windows/menu-editor.md)|Zasoby menu w projektach programu Visual Studio C++.|
 |[Edytor wstążki](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
-|[Edytor ciągów](../windows/string-editor.md)|Tabele ciągów w projektach programu C++ Visual Studio.|
-|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi w projektach C++ programu Visual Studio. **Edytor paska narzędzi** jest częścią **edytora obrazu**.|
-|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach C++ programu Visual Studio.|
+|[Edytor ciągów](../windows/string-editor.md)|Tabele ciągów w projektach programu Visual Studio C++.|
+|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi w projektach programu Visual Studio C++. **Edytor paska narzędzi** jest częścią **edytora obrazu**.|
+|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach programu Visual Studio C++.|
 
 > [!NOTE]
 > Jeśli projekt nie zawiera jeszcze pliku. RC, zobacz [How to: Create Resources](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="view-and-edit-resources"></a>Wyświetlanie i edytowanie zasobów
 
-Każdy typ zasobu ma Edytor zasobów specyficzny dla tego typu zasobu. Można zmieniać rozmieszczenie, zmieniać rozmiar, dodawać kontrolki i funkcje albo modyfikować aspekty zasobu przy użyciu skojarzonego z nim edytora. Możesz również edytować zasób w [formacie tekstowym](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [formacie binarnym](../windows/opening-a-resource-for-binary-editing.md).
+Każdy typ zasobu ma Edytor zasobów specyficzny dla tego typu zasobu. Można zmieniać rozmieszczenie, zmieniać rozmiar, dodawać kontrolki i funkcje albo modyfikować aspekty zasobu przy użyciu skojarzonego z nim edytora. Możesz również edytować zasób w formacie tekstowym i formacie binarnym. Aby uzyskać więcej informacji, zobacz [How to: Create Resources](../windows/how-to-create-a-resource-script-file.md).
 
 Niektóre typy zasobów są pojedynczymi plikami, które mogą być importowane i używane na różne sposoby. obejmują one mapy bitowe, ikony, kursory, paski narzędzi i pliki HTML. Takie zasoby mają nazwy plików i [identyfikatory zasobów](../windows/symbols-resource-identifiers.md). Inne, takie jak okna dialogowe, menu i tabele ciągów w projektach Win32, istnieją tylko jako część pliku skryptu zasobu (. RC) lub plik szablonu zasobów (. rct).
 
-Zasoby mogą być również edytowane poza projektem bez otwartego projektu, zobacz [How to: Create Resources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Zasoby mogą być również edytowane poza projektem bez otwierania projektu. Aby uzyskać więcej informacji, zobacz [How to: Create Resources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
 > Właściwości zasobu można zmodyfikować przy użyciu okna **Właściwości** .
@@ -73,7 +73,7 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Aby wyświetlić zasób Win32 w edytorze zasobów
 
-1. Przejdź do **widoku** menu, > inne > **Widok zasobów** **systemu Windows** .
+1. Przejdź do menu **Wyświetl**  >  **inne widok zasobów systemu Windows**  >  **Resource View**.
 
 1. Jeśli okno **Widok zasobów** nie jest oknem najwyższego poziomu, wybierz kartę **Widok zasobów** , aby ją wyświetlić.
 
@@ -96,7 +96,7 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 Ponieważ projekty zarządzane nie używają plików skryptów zasobów, należy otworzyć zasoby z **Eksplorator rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszystkie zarządzane zasoby, które chcesz edytować, muszą być zasobami połączonymi i edytorami zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-- Aby wyświetlić zasób zarządzany w edytorze zasobów, w **Eksplorator rozwiązań**kliknij dwukrotnie zasób, na przykład *BITMAP1. bmp*, a zasób zostanie otwarty w odpowiednim edytorze.
+- Aby wyświetlić zasób zarządzany w edytorze zasobów, w **Eksplorator rozwiązań**kliknij dwukrotnie zasób, na przykład *Bitmap1.bmp*, a zasób zostanie otwarty w odpowiednim edytorze.
 
 - Aby usunąć istniejący zasób zarządzany, w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
@@ -118,13 +118,13 @@ Następujące zasoby nie udostępniają wizualizacji Visual Preview: akcelerator
 1. W [okno właściwości](/visualstudio/ide/reference/properties-window)wybierz przycisk **strony właściwości** .
 
    > [!TIP]
-   > Użyj skrótu, przejdź do **widoku** menu, > **strony właściwości**.
+   > Użyj skrótu, przejdź do widoku menu **View**  >  **strony właściwości**.
 
    Zostanie otwarta strona **Właściwości** zasobu wyświetlająca podgląd tego zasobu. Możesz użyć klawiszy strzałek w **górę** i **w dół** , aby nawigować po formancie drzewa w **Widok zasobów** lub oknie dokumentu. Na stronie **Właściwości** pozostanie otwarta i zostanie wyświetlony dowolny zasób, który ma fokus i będzie można go wyświetlić.
 
 ## <a name="requirements"></a>Wymagania
 
-None
+Brak
 
 ## <a name="see-also"></a>Zobacz też
 

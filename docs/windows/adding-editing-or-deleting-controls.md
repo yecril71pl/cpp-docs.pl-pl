@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831687"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352755"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
@@ -201,7 +201,7 @@ Aby użyć formantów RichEdit, należy wywołać `LoadLibrary` . Aby uzyskać w
 >
 > Można użyć bieżącej klasy [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) z starszą kontrolką RichEdit 1,0, ale `CRichEditCtrl` jest ona przeznaczona tylko do obsługi formantu RichEdit 2,0. Ponieważ RichEdit 1,0 i RichEdit 2,0 są podobne, większość metod będzie działała. Istnieją jednak pewne różnice między kontrolkami 1,0 i 2,0, dlatego niektóre metody mogą funkcjonować nieprawidłowo lub nie działały wcale.
 
-### <a name="activex-controls"></a>Kontrolki ActiveX
+## <a name="insert-activex-controls"></a>Wstaw kontrolki ActiveX
 
 Program Visual Studio umożliwia Wstawianie kontrolek ActiveX do okna dialogowego. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md) i [kontenery kontrolek ActiveX](../mfc/activex-control-containers.md).
 
@@ -215,7 +215,7 @@ Okno dialogowe **Wstawianie kontrolki ActiveX** umożliwia Wstawianie kontrolek 
 > [!CAUTION]
 > Dystrybucja wszystkich formantów ActiveX w systemie może nie być poprawna. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, które zainstalowało kontrolki, lub skontaktuj się z firmą oprogramowania.
 
-#### <a name="to-add-an-activex-control"></a>Aby dodać kontrolkę ActiveX
+### <a name="to-add-an-activex-control"></a>Aby dodać kontrolkę ActiveX
 
 1. Otwórz okno dialogowe w **edytorze okien dialogowych**.
 
@@ -230,7 +230,7 @@ Okno dialogowe **Wstawianie kontrolki ActiveX** umożliwia Wstawianie kontrolek 
 > [!TIP]
 > Możesz użyć menu skrótów w **edytorze okien dialogowych** , aby szybko dodać zarejestrowane kontrolki ActiveX do okna dialogowego, lub spróbować dodać kontrolki ActiveX w oknie **przybornika** , aby uzyskać łatwy dostęp.
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX
+### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX
 
 Kontrolki ActiveX dostarczone przez niezależnych dostawców mogą mieć własne właściwości i cechy. Te właściwości są wyświetlane w oknie **Właściwości** . Wszystkie strony właściwości utworzone przez autorów kontrolki ActiveX są wyświetlane w oknie dialogowym **właściwości strony** . (Aby wyświetlić **stronę właściwości** dla konkretnej kontrolki ActiveX, wybierz przycisk **strony właściwości** w [okno właściwości](/visualstudio/ide/reference/properties-window)).
 

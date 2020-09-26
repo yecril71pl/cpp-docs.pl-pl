@@ -91,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 7ebbccb688ffcd6f2354e5f3ec243cf56303c124
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: ee98c7e694912d27585755f0ff29eafd0cdbdbca
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040512"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353106"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -206,7 +206,7 @@ Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego o
 |[punktów](#end)|Zwraca iterator poza końcem.|
 |[equal_range](#equal_range)|Zwraca parę iteratorów. Pierwszy iterator w parze wskazuje na pierwszy element w a `map` z kluczem, który jest większy niż określony klucz. Drugi iterator w parze wskazuje na pierwszy element w `map` z kluczem, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w mapie z określonych pozycji.|
-|[find](#find)|Zwraca iterator, który wskazuje na lokalizację elementu w `map` , który ma klucz równy określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator, który wskazuje na lokalizację elementu w `map` , który ma klucz równy określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu, który jest używany do konstruowania `map` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `map` określonego położenia.|
 |[key_comp](#key_comp)|Zwraca kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `map` .|
@@ -2790,8 +2790,8 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opakowania](../cpp/containers-modern-cpp.md)\
+[Opakowania](./stl-containers.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

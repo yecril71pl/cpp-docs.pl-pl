@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: a33414ec1c1b01742382150049f8e99f4a70ae34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833429"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353015"
 ---
 # <a name="iatlmemmgr-class"></a>Klasa IAtlMemMgr
 
@@ -937,7 +937,7 @@ Wywołanie tej metody jest równoważne wywołaniu [IAxWinHostWindowLic:: Create
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLic` .
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLic` .
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic::CreateControlLicEx
 
@@ -965,7 +965,7 @@ Aby uzyskać opis pozostałych parametrów i wartości zwracanej, zobacz [IAxWin
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLicEx` .
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) dla przykładu korzystającego z programu `IAxWinHostWindowLic::CreateControlLicEx` .
 
 ## <a name="see-also"></a>Zobacz też
 

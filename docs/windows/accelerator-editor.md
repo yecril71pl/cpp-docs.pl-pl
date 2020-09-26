@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623483"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353093"
 ---
 # <a name="accelerator-editor-c"></a>Edytor akceleratorów (C++)
 
@@ -184,7 +184,7 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 1. Przejdź do [okno właściwości](/visualstudio/ide/reference/properties-window) i wpisz wartości, które mają być współużytkowane przez wszystkie wybrane akceleratory.
 
 > [!NOTE]
-> Każda wartość modyfikatora jest wyświetlana jako właściwość logiczna w oknie **Właściwości** . Jeśli zmienisz wartość [modyfikatora](../windows/accelerator-modifier-property.md) w oknie **Właściwości** , tabela akceleratora traktuje nowy modyfikator jako dodatek do wszystkich modyfikatorów, które wcześniej znajdowały się w tym miejscu. W związku z tym, jeśli ustawisz dowolne wartości modyfikatorów, musisz ustawić wszystkie z nich, aby upewnić się, że każdy akcelerator ma te same ustawienia **modyfikatora** .
+> Każda wartość modyfikatora jest wyświetlana jako właściwość logiczna w oknie **Właściwości** . Jeśli zmienisz wartość modyfikatora w oknie **Właściwości** , tabela akceleratora traktuje nowy modyfikator jako dodatek do wszystkich modyfikatorów, które wcześniej znajdowały się w tym miejscu. W związku z tym, jeśli ustawisz dowolne wartości modyfikatorów, musisz ustawić wszystkie z nich, aby upewnić się, że każdy akcelerator ma te same ustawienia **modyfikatora** .
 
 ## <a name="requirements"></a>Wymagania
 

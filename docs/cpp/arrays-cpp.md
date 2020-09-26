@@ -6,16 +6,16 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565966"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352794"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
-Tablica jest sekwencją obiektów tego samego typu, które zajmują ciągły obszar pamięci. Tradycyjne tablice języka C są źródłem wielu błędów, ale są nadal wspólne, szczególnie w przypadku starszych baz kodu. W nowoczesnej C++ zdecydowanie zalecamy użycie [std:: Vector](../standard-library/vector-class.md) lub [std:: Array](../standard-library/array-class-stl.md) zamiast tablic w stylu C opisanych w tej sekcji. Oba te standardowe typy bibliotek przechowują swoje elementy jako ciągły blok pamięci. Jednak zapewniają znacznie większe bezpieczeństwo typów i obsługują Iteratory, które mają na celu wskazanie prawidłowej lokalizacji w ramach sekwencji. Aby uzyskać więcej informacji, zobacz [kontenery (Modern C++)](containers-modern-cpp.md).
+Tablica jest sekwencją obiektów tego samego typu, które zajmują ciągły obszar pamięci. Tradycyjne tablice języka C są źródłem wielu błędów, ale są nadal wspólne, szczególnie w przypadku starszych baz kodu. W nowoczesnej C++ zdecydowanie zalecamy użycie [std:: Vector](../standard-library/vector-class.md) lub [std:: Array](../standard-library/array-class-stl.md) zamiast tablic w stylu C opisanych w tej sekcji. Oba te standardowe typy bibliotek przechowują swoje elementy jako ciągły blok pamięci. Jednak zapewniają znacznie większe bezpieczeństwo typów i obsługują Iteratory, które mają na celu wskazanie prawidłowej lokalizacji w ramach sekwencji. Aby uzyskać więcej informacji, zobacz [kontenery](../standard-library/stl-containers.md).
 
 ## <a name="stack-declarations"></a>Deklaracje stosu
 

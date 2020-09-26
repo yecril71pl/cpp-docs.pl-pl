@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: e857a4f6369b9aa939b5dcba17e02efaf81600b0
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040954"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353184"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -190,7 +190,7 @@ W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `st
 |[punktów](#end)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w `multiset` .|
 |[equal_range](#equal_range)|Zwraca parę iteratorów. Pierwszy iterator w parze wskazuje na pierwszy element w a `multiset` z kluczem, który jest większy niż określony klucz. Drugi iterator w parze wskazuje na pierwszy element w `multiset` kluczu, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `multiset` z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.|
-|[find](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w `multiset` , który ma klucz równy określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w `multiset` , który ma klucz równy określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu, który jest używany do konstruowania `multiset` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `multiset` .|
 |[key_comp](#key_comp)|Udostępnia obiekt funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w `multiset` .|
@@ -2372,8 +2372,8 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opakowania](../cpp/containers-modern-cpp.md)\
+[Opakowania](./stl-containers.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

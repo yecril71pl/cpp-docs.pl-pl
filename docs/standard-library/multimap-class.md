@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: e2d0236a0e643ac92bb771b90a1f021807f03fda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040681"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353197"
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -198,7 +198,7 @@ W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `st
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `multimap` .|
 |[equal_range](#equal_range)|Wyszukuje zakres elementów, gdzie klucz elementu pasuje do określonej wartości.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `multimap` z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.|
-|[find](#find)|Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w `multimap` , który ma klucz równoważny do określonego klucza.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w `multimap` , który ma klucz równoważny do określonego klucza.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `multimap` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `multimap` .|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `multimap` .|
@@ -2515,8 +2515,8 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opakowania](../cpp/containers-modern-cpp.md)\
+[Opakowania](./stl-containers.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: a53481a57676b5b4a253a3501d3536e5115907a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833416"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352963"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch, interfejs
 
@@ -98,7 +98,7 @@ Ten interfejs jest udostępniany przez obiekty obsługujące kontrolki ActiveX A
 
 Jeśli łączysz się z ATL90.dll, **AxHost** załaduje informacje o typie z biblioteki typów w bibliotece DLL.
 
-Aby uzyskać więcej informacji, zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
+Aby uzyskać więcej informacji, zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) .
 
 ## <a name="requirements"></a>Wymagania
 

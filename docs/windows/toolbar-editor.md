@@ -1,5 +1,5 @@
 ---
-title: Edytor paska narzędziC++()
+title: Edytor paska narzędzi (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
@@ -50,14 +50,14 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: ca7f031cbdcfc3378a0917e84b257fd7212563e1
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514693"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353028"
 ---
-# <a name="toolbar-editor-c"></a>Edytor paska narzędziC++()
+# <a name="toolbar-editor-c"></a>Edytor paska narzędzi (C++)
 
 **Edytor paska narzędzi** umożliwia tworzenie zasobów paska narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. **Edytor paska narzędzi** używa graficznego obrazu, aby pokazać pasek narzędzi i przyciski, które dokładnie przypominają wygląd gotowej aplikacji.
 
@@ -68,9 +68,9 @@ Okno **Edytor paska narzędzi** pokazuje dwa widoki obrazu przycisku, tak samo j
 
 **Edytor paska narzędzi** jest podobny do **edytora obrazu** w funkcji, a elementy menu, narzędzia graficzne i siatka mapy bitowej między nimi są takie same. W menu **obraz** znajduje się polecenie menu do przełączania między **edytorem pasków narzędzi** i **edytorem obrazu**. Aby uzyskać więcej informacji na temat korzystania z paska narzędzi **grafiki** , palety **kolorów** lub menu **obrazu** , zobacz [Edytor obrazów](../windows/image-editor-for-icons.md).
 
-Można utworzyć nowy pasek narzędzi w C++ projekcie, konwertując mapę bitową. Grafika z mapy bitowej jest konwertowana na obrazy przycisków dla paska narzędzi. Zwykle Mapa bitowa zawiera kilka obrazów przycisków na jednej mapie bitowej z jednym obrazem dla każdego przycisku. Obrazy mogą być dowolnego rozmiaru, ponieważ domyślnie wynosi 16 pikseli i wysokość obrazu. Możesz określić rozmiar obrazów przycisków w oknie dialogowym **nowy zasób paska narzędzi** , gdy wybierzesz **Edytor paska narzędzi** z menu **obraz** w **Edytorze obrazu**.
+Można utworzyć nowy pasek narzędzi w projekcie języka C++, konwertując mapę bitową. Grafika z mapy bitowej jest konwertowana na obrazy przycisków dla paska narzędzi. Zwykle Mapa bitowa zawiera kilka obrazów przycisków na jednej mapie bitowej z jednym obrazem dla każdego przycisku. Obrazy mogą być dowolnego rozmiaru, ponieważ domyślnie wynosi 16 pikseli i wysokość obrazu. Możesz określić rozmiar obrazów przycisków w oknie dialogowym **nowy zasób paska narzędzi** , gdy wybierzesz **Edytor paska narzędzi** z menu **obraz** w **Edytorze obrazu**.
 
-Okno dialogowe **nowy zasób paska narzędzi** pozwala określić szerokość i wysokość przycisków, które są dodawane do zasobu paska narzędzi w C++ projekcie. Wartość domyślna to 16 × 15 pikseli.
+Okno dialogowe **nowy zasób paska narzędzi** pozwala określić szerokość i wysokość przycisków dodawanych do zasobu paska narzędzi w projekcie języka C++. Wartość domyślna to 16 × 15 pikseli.
 
 Mapa bitowa użyta do utworzenia paska narzędzi ma maksymalną szerokość 2048, więc jeśli ustawisz **Szerokość przycisku** na *512*, możesz mieć tylko cztery przyciski. Jeśli ustawisz szerokość na *513*, możesz mieć tylko trzy przyciski.
 
@@ -90,14 +90,14 @@ Przycisk paska narzędzi ma następujące właściwości:
 
 |Właściwość|Opis|
 |--------------|-----------------|
-|**ID**|Definiuje identyfikator przycisku. Lista rozwijana zawiera wspólne nazwy **identyfikatorów** .|
+|**#C1**|Definiuje identyfikator przycisku. Lista rozwijana zawiera wspólne nazwy **identyfikatorów** .|
 |**Szerokość**|Ustawia szerokość przycisku. zalecane jest 16 pikseli.|
 |**Proporcj**|Ustawia wysokość przycisku. Wysokość jednego przycisku zmienia wysokość wszystkich przycisków na pasku narzędzi. zalecane 15 pikseli.|
-|**Pytać**|Definiuje komunikat wyświetlany na pasku stanu. Dodanie *\n* i nazwy powoduje dodanie **etykietki narzędzia** do tego przycisku paska narzędzi. Aby uzyskać więcej informacji, zobacz [Tworzenie etykietki narzędzia](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**Monit**|Definiuje komunikat wyświetlany na pasku stanu. Dodanie *\n* i nazwy powoduje dodanie **etykietki narzędzia** do tego przycisku paska narzędzi. Aby uzyskać więcej informacji, zobacz [Aby utworzyć etykietkę narzędzia dla przycisku paska narzędzi](#to-create-a-tool-tip-for-a-toolbar-button).|
 
 **Szerokość** i **wysokość** stosują się do wszystkich przycisków. Mapa bitowa, która jest używana do tworzenia paska narzędzi ma maksymalną szerokość 2048, więc jeśli ustawisz szerokość przycisku na *512*, możesz mieć tylko cztery przyciski, a jeśli ustawisz szerokość na *513*, możesz mieć tylko trzy przyciski.
 
-## <a name="how-to"></a>Instrukcje
+## <a name="how-to"></a>Procedura
 
 **Edytor paska narzędzi** umożliwia:
 
@@ -113,7 +113,7 @@ Przycisk paska narzędzi ma następujące właściwości:
 
 1. Otwórz istniejący zasób mapy bitowej w [Edytorze obrazu](../windows/image-editor-for-icons.md). Jeśli mapa bitowa nie znajduje się już w pliku *. RC* , kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję **Importuj**, a następnie przejdź do mapy bitowej, którą chcesz dodać do pliku *. RC* , a następnie wybierz polecenie **Otwórz**.
 
-1. Przejdź do menu **obraz** > **Edytor paska narzędzi**.
+1. Przejdź do **Image**  >  **edytora pasków narzędzi**obrazu menu.
 
    Pojawi się okno dialogowe **nowy zasób paska narzędzi** . Można zmienić szerokość i wysokość obrazów ikon, aby dopasować ją do mapy bitowej. Obraz paska narzędzi jest następnie wyświetlany w **Edytorze paska narzędzi**.
 
@@ -134,7 +134,7 @@ Przycisk paska narzędzi ma następujące właściwości:
 
    - Przypisz identyfikator do pustego przycisku na prawym końcu paska narzędzi. Można to zrobić, edytując Właściwość **ID** w [oknie właściwości](/visualstudio/ide/reference/properties-window). Na przykład możesz chcieć nadać przyciskowi paska narzędzi ten sam identyfikator jako opcję menu. W takim przypadku użyj pola listy rozwijanej, aby wybrać **Identyfikator** opcji menu.
 
-   - Wybierz przycisk puste na prawym końcu paska narzędzi w okienku **widok paska narzędzi** i Rozpocznij rysowanie. Zostanie przypisany domyślny identyfikator polecenia przycisku (ID_BUTTON\<n >).
+   - Wybierz przycisk puste na prawym końcu paska narzędzi w okienku **widok paska narzędzi** i Rozpocznij rysowanie. Zostanie przypisany domyślny identyfikator polecenia przycisku (ID_BUTTON \<n> ).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Aby dodać obraz do paska narzędzi jako przycisk
 
@@ -145,11 +145,11 @@ Przycisk paska narzędzi ma następujące właściwości:
    > [!NOTE]
    > Jeśli otworzysz obraz w programie Visual Studio, zostanie on otwarty w **Edytorze obrazu**. Możesz również otworzyć obraz w innych programach graficznych.
 
-1. Przejdź do menu **edytuj** > **Kopiuj**.
+1. Przejdź do menu **Edycja**  >  **Kopiuj**.
 
 1. Przejdź do paska narzędzi, wybierając jego kartę w górnej części okna źródłowego.
 
-1. Przejdź do menu **edytuj** > **Wklej**.
+1. Przejdź do menu **Edycja**  >  **Wklej**.
 
    Obraz zostanie wyświetlony na pasku narzędzi jako nowy przycisk.
 
@@ -175,7 +175,7 @@ W okienku **widok paska narzędzi** przeciągnij przycisk, który ma zostać prz
 
 #### <a name="to-change-the-properties-of-a-toolbar-button"></a>Aby zmienić właściwości przycisku paska narzędzi
 
-1. W C++ projekcie, wybierz przycisk paska narzędzi.
+1. W projekcie języka C++, wybierz przycisk paska narzędzi.
 
 1. Wpisz nowy identyfikator we właściwości **ID** w [oknie właściwości](/visualstudio/ide/reference/properties-window)lub Użyj listy rozwijanej, aby wybrać nowy **Identyfikator**.
 
@@ -183,26 +183,26 @@ W okienku **widok paska narzędzi** przeciągnij przycisk, który ma zostać prz
 
 1. Wybierz przycisk paska narzędzi.
 
-1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu **monitu** Dodaj opis przycisku dla paska stanu, a następnie po wiadomości Dodaj `\n` i nazwę etykietki narzędzia.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu **monitu** Dodaj opis przycisku dla paska stanu, a następnie po wiadomości, Dodaj `\n` i nazwę etykietki narzędzia.
 
 Na przykład, aby wyświetlić etykietkę narzędzia dla przycisku **Drukuj** w programie **WordPad**:
 
 1. Otwórz program **WordPad**.
 
-1. Umieść wskaźnik myszy nad przyciskiem paska narzędzi **Drukowanie** i zwróć uwagę na to, że wyraz `Print` teraz jest przepływany pod wskaźnikiem myszy.
+1. Umieść wskaźnik myszy nad przyciskiem paska narzędzi **Drukowanie** i Zauważ, że wyraz `Print` teraz jest przepływany pod wskaźnikiem myszy.
 
-1. Spójrz na pasek stanu u dołu okna programu **WordPad** i Zauważ, że teraz zostanie wyświetlony tekst `Prints the active document`.
+1. Spójrz na pasek stanu u dołu okna programu **WordPad** i zwróć uwagę na to, że teraz jest wyświetlany tekst `Prints the active document` .
 
 `Print` jest nazwą etykietki narzędzia i `Prints the active document` jest opisem przycisku dla paska stanu.
 
-Jeśli chcesz ten efekt przy użyciu **edytora paska narzędzi**, ustaw właściwość **monit** na `Prints the active document\nPrint`.
+Jeśli chcesz ten efekt przy użyciu **edytora paska narzędzi**, ustaw właściwość **monit** na `Prints the active document\nPrint` .
 
 ## <a name="requirements"></a>Wymagania
 
 MFC lub ATL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Edytory zasobów](../windows/resource-editors.md)
-[menu i inne zasoby](/windows/win32/menurc/resources)<br/>
+[Edytory zasobów](../windows/resource-editors.md) 
+ [Menu i inne zasoby](/windows/win32/menurc/resources)<br/>
 [Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>

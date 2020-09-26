@@ -4,12 +4,12 @@ description: Opisuje nowy idiomy programistyczny w nowoczesnej C++ i ich racjona
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232199"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353054"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Witamy w języku C++ — nowoczesny C++
 
@@ -75,7 +75,7 @@ W przypadku konieczności optymalizacji wydajności należy rozważyć użycie:
 
 - Nieuporządkowane Kontenery asocjacyjne, takie jak [`unordered_map`](../standard-library/unordered-map-class.md) . Są to mniejsze obciążenie poszczególnych elementów i wyszukiwanie w czasie stałym, ale mogą być trudniejsze do użycia poprawnie i wydajnie.
 
-- Posortowane `vector` . Aby uzyskać więcej informacji, zobacz [algorytmy](../cpp/algorithms-modern-cpp.md).
+- Posortowane `vector` . Aby uzyskać więcej informacji, zobacz [algorytmy](../standard-library/algorithms.md).
 
 Nie używaj tablic stylów języka C. W przypadku starszych interfejsów API, które wymagają bezpośredniego dostępu do danych, należy użyć metod dostępu, takich jak `f(vec.data(), vec.size());` zamiast. Aby uzyskać więcej informacji na temat kontenerów, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 

@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0730f4eb6ba8e625c2c40cecddc4f689ec775d17
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042033"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352781"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset — Klasa
 
@@ -209,7 +209,7 @@ Klasa alokatora.
 |[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
 |[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[find](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
 |[wstawienia](#insert)|Dodaje elementy.|
@@ -2592,9 +2592,9 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<unordered_set>](../standard-library/unordered-set.md)\
-[Opakowania](../cpp/containers-modern-cpp.md)\
+[Opakowania](./stl-containers.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)
