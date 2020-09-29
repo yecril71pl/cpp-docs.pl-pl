@@ -1,44 +1,23 @@
 ---
-title: 'Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)'
-ms.date: 09/12/2018
+title: 'Instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)'
+description: Jak utworzyć i użyć klasy zdefiniowanej przez użytkownika i typów struktur w kodzie C++/CLI.
+ms.date: 09/25/2020
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2fe9ed46a6d7f1135179b8002993d729ea3c42eb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17d0885d42febc1d2789c8711b54a76066ee8176
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216430"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414584"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)
 
 W tym artykule pokazano, jak definiować i korzystać z typów referencyjnych zdefiniowanych przez użytkownika i typów wartości w języku C++/CLI.
 
-## <a name="contents"></a><a name="BKMK_Contents"></a>Contents
-
-[Tworzenie wystąpienia obiektu](#BKMK_Object_instantiation)
-
-[Klasy abstrakcyjne niejawnie](#BKMK_Implicitly_abstract_classes)
-
-[Widoczność typu](#BKMK_Type_visibility)
-
-[Widoczność elementów członkowskich](#BKMK_Member_visibility)
-
-[Publiczne i prywatne klasy natywne](#BKMK_Public_and_private_native_classes)
-
-[Konstruktory statyczne](#BKMK_Static_constructors)
-
-[Semantyka tego wskaźnika](#BKMK_Semantics_of_the_this_pointer)
-
-[Funkcje ukrywania za pomocą podpisu](#BKMK_Hide_by_signature_functions)
-
-[Kopiuj konstruktory](#BKMK_Copy_constructors)
-
-[Destruktory i finalizatory](#BKMK_Destructors_and_finalizers)
-
-## <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>Tworzenie wystąpienia obiektu
+## <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a> Tworzenie wystąpienia obiektu
 
 Typy odwołań (ref) można tworzyć tylko na stercie zarządzanym, a nie na stosie ani na stercie natywnym. Typy wartości można tworzyć przy użyciu stosu lub sterty zarządzanej.
 
@@ -93,11 +72,14 @@ int main() {
 }
 ```
 
-## <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>Klasy abstrakcyjne niejawnie
+## <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a> Klasy abstrakcyjne niejawnie
 
-Nie można utworzyć wystąpienia *niejawnie klasy abstrakcyjnej* . Klasa jest abstrakcyjna niejawnie, jeśli typ podstawowy klasy jest interfejsem, a Klasa nie implementuje wszystkich funkcji elementów członkowskich interfejsu.
+Nie można utworzyć wystąpienia *niejawnie klasy abstrakcyjnej* . Klasa jest abstrakcyjna niejawnie, gdy:
 
-Jeśli nie można skonstruować obiektów z klasy, która jest pochodną interfejsu, przyczyną może być niejawne abstrakcyjność klasy. Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [abstract](../extensions/abstract-cpp-component-extensions.md).
+- podstawowy typ klasy jest interfejsem, a
+- Klasa nie implementuje wszystkich funkcji elementów członkowskich interfejsu.
+
+Nie można tworzyć obiektów z klasy, która jest pochodną interfejsu. Przyczyną może być niejawne abstrakcyjność klasy. Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [abstract](../extensions/abstract-cpp-component-extensions.md).
 
 Poniższy przykład kodu pokazuje, że `MyClass` nie można utworzyć wystąpienia klasy, ponieważ funkcja `MyClass::func2` nie jest zaimplementowana. Aby włączyć przykład do kompilowania, Usuń komentarz `MyClass::func2` .
 
@@ -121,17 +103,17 @@ int main() {
 }
 ```
 
-## <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>Widoczność typu
+## <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a> Widoczność typu
 
-Można kontrolować widoczność typów środowiska uruchomieniowego języka wspólnego (CLR), tak aby, jeśli odwołuje się do zestawu, typy w zestawie mogą być widoczne lub nie być widoczne poza zestawem.
+Można kontrolować widoczność typów środowiska uruchomieniowego języka wspólnego (CLR). Gdy zestaw jest przywoływany, kontrolujesz, czy typy w zestawie są widoczne, czy nie są widoczne poza zestawem.
 
-`public`wskazuje, że typ jest widoczny dla każdego pliku źródłowego, który zawiera `#using` dyrektywę dla zestawu, który zawiera typ.  `private`wskazuje, że typ nie jest widoczny dla plików źródłowych zawierających `#using` dyrektywę dla zestawu, który zawiera typ. Jednak typy prywatne są widoczne w tym samym zestawie. Domyślnie widoczność klasy to `private` .
+`public` wskazuje, że typ jest widoczny dla każdego pliku źródłowego, który zawiera `#using` dyrektywę dla zestawu, który zawiera typ.  `private` wskazuje, że typ nie jest widoczny dla plików źródłowych zawierających `#using` dyrektywę dla zestawu, który zawiera typ. Jednak typy prywatne są widoczne w tym samym zestawie. Domyślnie widoczność klasy to `private` .
 
 Domyślnie przed programem Visual Studio 2005 typy natywne miały publiczny dostęp poza zestawem. Włącz [Ostrzeżenie kompilatora (poziom 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) , aby ułatwić sprawdzenie, gdzie prywatne typy natywne są używane nieprawidłowo. Użyj dyrektywy pragma [make_public](../preprocessor/make-public.md) , aby zapewnić publiczny dostęp do typu natywnego w pliku kodu źródłowego, którego nie można modyfikować.
 
 Aby uzyskać więcej informacji, zobacz [#using dyrektywie](../preprocessor/hash-using-directive-cpp.md).
 
-Poniższy przykład pokazuje, jak zadeklarować typy i określić ich dostępność, a następnie uzyskać dostęp do tych typów wewnątrz zestawu. Oczywiście, jeśli do zestawu, który ma typy prywatne, odwołuje się użycie `#using` , widoczne są tylko typy publiczne w zestawie.
+Poniższy przykład pokazuje, jak zadeklarować typy i określić ich dostępność, a następnie uzyskać dostęp do tych typów wewnątrz zestawu. Jeśli do zestawu, do którego odwołuje się typ prywatny, przywoływane jest użycie `#using` , widoczne są tylko typy publiczne w zestawie.
 
 ```cpp
 // type_visibility.cpp
@@ -218,22 +200,22 @@ int main() {
 in Public_Class
 ```
 
-## <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>Widoczność elementów członkowskich
+## <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a> Widoczność elementów członkowskich
 
-Dostęp do elementu członkowskiego klasy publicznej można uzyskać z poziomu tego samego zestawu innego niż dostęp do niego spoza zestawu przy użyciu par specyfikatorów dostępu **`public`** , **`protected`** i**`private`**
+Dostęp do elementu członkowskiego klasy publicznej można uzyskać z poziomu tego samego zestawu innego niż dostęp do niego spoza zestawu przy użyciu par specyfikatorów dostępu **`public`** , **`protected`** i **`private`**
 
 Ta tabela zawiera podsumowanie wpływu różnych specyfikatorów dostępu:
 
 |Specyfikator|Efekt|
 |---------------|------------|
-|public|Element członkowski jest dostępny wewnątrz i na zewnątrz zestawu.  Aby uzyskać więcej informacji, zobacz [Public](../cpp/public-cpp.md) .|
-|private|Składowa nie jest dostępna, ani wewnątrz ani poza zestawem.  Aby uzyskać więcej informacji, zobacz [Private](../cpp/private-cpp.md) .|
-|protected|Składowa jest dostępna wewnątrz i na zewnątrz zestawu, ale tylko dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [chroniona](../cpp/protected-cpp.md) .|
-|internal|Składowa jest publiczna wewnątrz zestawu, ale jest prywatna poza zestawem.  `internal`jest kontekstowym słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
-|publiczna chroniona lub chroniona publicznie|Składowa jest publiczna wewnątrz zestawu, ale chroniona poza zestawem.|
-|prywatne chronione lub chronione prywatnie|Składowa jest chroniona wewnątrz zestawu, ale prywatny poza zestawem.|
+|`public`|Element członkowski jest dostępny wewnątrz i na zewnątrz zestawu. Aby uzyskać więcej informacji, zobacz [`public`](../cpp/public-cpp.md).|
+|`private`|Składowa jest niedostępna, zarówno wewnątrz, jak i na zewnątrz zestawu.  Aby uzyskać więcej informacji, zobacz [`private`](../cpp/private-cpp.md).|
+|`protected`|Składowa jest dostępna wewnątrz i na zewnątrz zestawu, ale tylko dla typów pochodnych. Aby uzyskać więcej informacji, zobacz [`protected`](../cpp/protected-cpp.md).|
+|`internal`|Składowa jest publiczna wewnątrz zestawu, ale jest prywatna poza zestawem. `internal` jest kontekstowym słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
+|`public protected` oraz `protected public`|Składowa jest publiczna wewnątrz zestawu, ale chroniona poza zestawem.|
+|`private protected` oraz `protected private`|Składowa jest chroniona wewnątrz zestawu, ale prywatny poza zestawem.|
 
-Poniższy przykład pokazuje publiczny typ, który ma składowe, które są zadeklarowane przy użyciu różnych podano, a następnie pokazuje dostęp tych członków z wewnątrz zestawu.
+Poniższy przykład pokazuje typ publiczny, który ma składowe, które są zadeklarowane przy użyciu różnych specyfikatorów dostępu. Następnie wyświetla dostęp do tych członków z wnętrza zestawu.
 
 ```cpp
 // compile with: /clr
@@ -358,7 +340,7 @@ ref struct MyClass : public Public_Class {
 };
 ```
 
-Poniższy przykład zużywa składnik, który został utworzony w poprzednim przykładzie, i w ten sposób pokazuje, jak uzyskać dostęp do elementów członkowskich spoza zestawu.
+Poniższy przykład zużywa składnik, który został utworzony w poprzednim przykładzie. Pokazuje, jak uzyskać dostęp do elementów członkowskich spoza zestawu.
 
 ```cpp
 // compile with: /clr
@@ -406,7 +388,7 @@ exiting function of derived class
 =======================
 ```
 
-## <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>Publiczne i prywatne klasy natywne
+## <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a> Publiczne i prywatne klasy natywne
 
 Z typem zarządzanym można odwoływać się do typu natywnego.  Na przykład funkcja w typie zarządzanym może przyjmować parametr, którego typ jest strukturą natywną.  Jeśli typ zarządzany i funkcja są publiczne w zestawie, wówczas typem natywnym również musi być Public.
 
@@ -445,13 +427,13 @@ int main() {
 }
 ```
 
-## <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a>Konstruktory statyczne
+## <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a> Konstruktory statyczne
 
 Typ CLR — na przykład Klasa lub struktura — może mieć Konstruktor statyczny, którego można użyć do zainicjowania statycznych elementów członkowskich danych.  Konstruktor statyczny jest wywoływany najwyżej raz i jest wywoływany przed uzyskaniem dostępu do dowolnego statycznego elementu członkowskiego typu po raz pierwszy.
 
 Konstruktor wystąpienia zawsze jest uruchamiany po konstruktorze statycznym.
 
-Kompilator nie może wywołać wywołania konstruktora, jeśli klasa ma Konstruktor statyczny.  Kompilator nie może wbudowana wywołania żadnej funkcji członkowskiej, jeśli klasa jest typem wartości, ma statyczny Konstruktor i nie ma konstruktora instancji.  Środowisko CLR może być wbudowane wywołanie, ale kompilator nie może.
+Kompilator nie może wykonać wywołania konstruktora, jeśli klasa ma Konstruktor statyczny. Kompilator nie może wbudowana wywołania żadnej funkcji członkowskiej, jeśli klasa jest typem wartości, ma statyczny Konstruktor i nie ma konstruktora wystąpienia. Środowisko CLR może być wbudowane wywołanie, ale kompilator nie może.
 
 Zdefiniuj statyczny Konstruktor jako prywatną funkcję członkowską, ponieważ jest przeznaczony do wywoływania tylko przez środowisko CLR.
 
@@ -491,17 +473,13 @@ in static constructor
 11
 ```
 
-## <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>Semantyka tego wskaźnika
+## <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a> Semantyka `this` wskaźnika
 
-Jeśli używasz Visual C++ do definiowania typów, **`this`** wskaźnik w typie referencyjnym jest typu "dojście". **`this`** Wskaźnik w typie wartości jest typu "wskaźnik wewnętrzny".
+Gdy używasz języka C++ \CLI do definiowania typów, **`this`** wskaźnik w typie referencyjnym jest *uchwytem typu dojście*. **`this`** Wskaźnik w typie wartości jest typu *wskaźnika wewnętrznego*.
 
 Te różne semantyki **`this`** wskaźnika mogą spowodować nieoczekiwane zachowanie w przypadku wywołania domyślnego indeksatora. W następnym przykładzie pokazano poprawny sposób dostępu do domyślnego indeksatora zarówno w typie referencyjnym, jak i w typie wartości.
 
-Aby uzyskać więcej informacji, zobacz
-
-- [Operator uchwytu do obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
-
-- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
+Aby uzyskać więcej informacji, zobacz [uchwyt do operatora obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) i [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -546,17 +524,17 @@ int main() {
 10.89
 ```
 
-## <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>Funkcje ukrywania za pomocą podpisu
+## <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a> Funkcje ukrywania za pomocą podpisu
 
-W standardowym języku C++ funkcja w klasie bazowej jest ukryta przez funkcję, która ma taką samą nazwę w klasie pochodnej, nawet jeśli funkcja klasy pochodnej nie ma tej samej liczby lub rodzaju parametrów. Jest to nazywane semantyką *ukrywania przez nazwę* . W typie referencyjnym funkcja w klasie bazowej może być ukryta przez funkcję w klasie pochodnej, jeśli zarówno nazwa, jak i lista parametrów są takie same. Jest to nazywane semantyką *Ukryj przez podpis* .
+W standardowym języku C++ funkcja w klasie bazowej jest ukryta przez funkcję, która ma taką samą nazwę w klasie pochodnej, nawet jeśli funkcja klasy pochodnej nie ma tego samego rodzaju lub liczby parametrów. Jest ona znana jako semantyka *ukrycia przez nazwę* . W typie referencyjnym funkcja w klasie bazowej jest tylko ukryta przez funkcję w klasie pochodnej, jeśli zarówno nazwa, jak i lista parametrów są takie same. Jest ona znana jako semantyka *ukrycia przez podpis* .
 
-Klasa jest traktowana jako Klasa ukrywania według podpisu, gdy wszystkie jej funkcje są oznaczone w metadanych jako `hidebysig` . Domyślnie wszystkie klasy, które są tworzone w ramach opcji **/CLR** , mają `hidebysig` funkcje. Gdy Klasa ma `hidebysig` funkcje, kompilator nie ukrywa funkcji według nazwy w żadnej bezpośredniej klasie podstawowej, ale jeśli kompilator napotyka klasę ukrycia-by-name w łańcuchu dziedziczenia, kontynuuje działanie ukrywania przez nazwę.
+Klasa jest traktowana jako Klasa ukrywania według podpisu, gdy wszystkie jej funkcje są oznaczone w metadanych jako `hidebysig` . Domyślnie wszystkie klasy, które są tworzone w **`/clr`** programie mają `hidebysig` funkcje. Gdy Klasa ma `hidebysig` funkcje, kompilator nie ukrywa funkcji według nazwy w żadnej bezpośredniej klasie podstawowej, ale jeśli kompilator napotyka klasę ukrycia-by-name w łańcuchu dziedziczenia, kontynuuje działanie ukrywania przez nazwę.
 
-W obszarze semantyka ukrycia po podpisie, gdy funkcja jest wywoływana w obiekcie, kompilator identyfikuje najbardziej pochodną klasę, która zawiera funkcję, która może spełnić wywołanie funkcji. Jeśli w klasie jest tylko jedna funkcja, która może spełnić wywołanie, kompilator wywołuje tę funkcję. Jeśli w klasie jest więcej niż jedna funkcja, która może spełnić wywołanie, kompilator używa reguł rozpoznawania przeciążenia, aby określić, która funkcja ma być wywoływana. Aby uzyskać więcej informacji na temat reguł przeciążenia, zobacz [przeciążanie funkcji](../cpp/function-overloading.md).
+W obszarze semantyka ukrycia po podpisie, gdy funkcja jest wywoływana w obiekcie, kompilator identyfikuje najbardziej pochodną klasę, która zawiera funkcję, która może spełnić wywołanie funkcji. Jeśli istnieje tylko jedna funkcja w klasie, która spełnia wywołanie, kompilator wywołuje tę funkcję. Jeśli w klasie jest więcej niż jedna funkcja, która może spełnić wywołanie, kompilator używa reguł rozpoznawania przeciążenia, aby określić, która funkcja ma być wywoływana. Aby uzyskać więcej informacji na temat reguł przeciążenia, zobacz [przeciążanie funkcji](../cpp/function-overloading.md).
 
 Dla danego wywołania funkcji funkcja w klasie bazowej może mieć sygnaturę, która sprawia, że jest nieco lepszym dopasowaniem niż funkcja w klasie pochodnej. Jeśli jednak funkcja została jawnie wywołana dla obiektu klasy pochodnej, wywoływana jest funkcja klasy pochodnej.
 
-Ponieważ wartość zwracana nie jest uważana za część podpisu funkcji, funkcja klasy bazowej jest ukryta, jeśli ma taką samą nazwę i ma tę samą liczbę i rodzaj argumentów jak funkcja klasy pochodnej, nawet jeśli różni się w typie wartości zwracanej.
+Ponieważ wartość zwracana nie jest uważana za część podpisu funkcji, funkcja klasy bazowej jest ukryta, jeśli ma taką samą nazwę i ma ten sam rodzaj i liczbę argumentów jak funkcja klasy pochodnej, nawet jeśli różni się w typie wartości zwracanej.
 
 Poniższy przykład pokazuje, że funkcja w klasie bazowej nie jest ukryta przez funkcję w klasie pochodnej.
 
@@ -654,11 +632,11 @@ Derived::Test4
 97
 ```
 
-## <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>Kopiuj konstruktory
+## <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a> Kopiuj konstruktory
 
 Standard C++ oznacza, że Konstruktor kopiujący jest wywoływany, gdy obiekt jest przenoszony, w taki sposób, że obiekt jest tworzony i niszczony pod tym samym adresem.
 
-Jednakże, gdy **/CLR** jest używany do kompilowania i funkcja, która jest skompilowana do MSIL wywołuje funkcję natywną, w której Klasa macierzysta — lub więcej niż jedna — jest przenoszona przez wartość i gdzie Klasa macierzysta ma Konstruktor kopiujący i/lub destruktor, Konstruktor kopiujący nie jest wywoływany i obiekt jest niszczony pod innym adresem niż w miejscu, w którym został utworzony. Może to spowodować problemy, jeśli klasa ma wskaźnik do samego siebie lub jeśli kod śledzi obiekty według adresu.
+Jeśli jednak funkcja, która jest skompilowana do MSIL wywołuje funkcję natywną, w której Klasa macierzysta lub więcej niż jedna — jest przenoszona przez wartość i gdzie Klasa macierzysta ma Konstruktor kopiujący lub destruktor, Konstruktor kopiujący nie jest wywoływany i obiekt jest niszczony pod innym adresem niż w miejscu, w którym został utworzony. Takie zachowanie może spowodować problemy, jeśli klasa ma wskaźnik do samego siebie lub jeśli kod śledzi obiekty według adresu.
 
 Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -719,9 +697,9 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-## <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>Destruktory i finalizatory
+## <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a> Destruktory i finalizatory
 
-Destruktory w typie referencyjnym wykonują jednoznaczne czyszczenie zasobów. Finalizatory czyścią niezarządzane zasoby i mogą być wywoływane przez destruktor lub Niedeterministyczny przez moduł wyrzucania elementów bezużytecznych. Aby uzyskać informacje o destruktorach w standardowym języku C++, zobacz [destruktory](../cpp/destructors-cpp.md).
+Destruktory w typie referencyjnym mają niejednoznaczne czyszczenie zasobów. Finalizatory czyścią niezarządzane zasoby i mogą być wywoływane przez destruktora lub niejednoznaczne przez moduł wyrzucania elementów bezużytecznych. Aby uzyskać informacje o destruktorach w standardowym języku C++, zobacz [destruktory](../cpp/destructors-cpp.md).
 
 ```cpp
 class classname {
@@ -730,9 +708,7 @@ class classname {
 };
 ```
 
-Zachowanie destruktorów w zarządzanej klasie Visual C++ różni się od Managed Extensions for C++. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [zmiany w semantyce destruktora](../dotnet/changes-in-destructor-semantics.md).
-
-Moduł wyrzucania elementów bezużytecznych CLR usuwa nieużywane obiekty zarządzane i zwalnia ich pamięć, gdy nie są już wymagane. Jednak typ może korzystać z zasobów, które nie wiedzą, jak zwolnić. Te zasoby są znane jako niezarządzane zasoby (na przykład natywne uchwyty plików). Zalecamy wydanie wszystkich niezarządzanych zasobów w programie finalizatora. Ponieważ zarządzane zasoby są wydawane w sposób Niedeterministyczny przez moduł wyrzucania elementów bezużytecznych, nie ma bezpiecznego odwoływania się do zasobów zarządzanych w finalizatorze, ponieważ istnieje możliwość, że moduł zbierający elementy bezużyteczne już wyczyszczone.
+Moduł wyrzucania elementów bezużytecznych CLR usuwa nieużywane obiekty zarządzane i zwalnia ich pamięć, gdy nie są już potrzebne. Jednak typ może korzystać z zasobów, które nie wiedzą, jak zwolnić. Te zasoby są znane jako *niezarządzane* zasoby (na przykład natywne uchwyty plików). Zalecamy wydanie wszystkich niezarządzanych zasobów w programie finalizatora. Moduł wyrzucania elementów bezużytecznych zwalnia zarządzane zasoby w sposób niedeterministyczny, dlatego nie można bezpiecznie odwoływać się do zarządzanych zasobów w finalizatorze. Dzieje się tak, ponieważ istnieje możliwość, że moduł zbierający elementy bezużyteczne już je wyczyszczone.
 
 Finalizator Visual C++ nie jest taki sam jak <xref:System.Object.Finalize%2A> Metoda. (Dokumentacja środowiska CLR używa finalizatora i <xref:System.Object.Finalize%2A> metody z synonimem). <xref:System.Object.Finalize%2A>Metoda jest wywoływana przez moduł wyrzucania elementów bezużytecznych, który wywołuje każdy finalizator w łańcuchu dziedziczenia klas. W przeciwieństwie do Visual C++ destruktorów, wywołanie finalizatora klasy pochodnej nie powoduje, że kompilator wywołuje finalizator we wszystkich klasach bazowych.
 
@@ -755,7 +731,7 @@ void Dispose(bool disposing) {
 }
 ```
 
-Typem zarządzanym może być również użycie zarządzanych zasobów, które wolisz zwolnić, i nie pozostawać do wyrzucania elementów bezużytecznych, aby zwolnić niedeterministycznie w pewnym momencie, gdy obiekt nie jest już wymagany. Deterministyczna wersja zasobów może znacząco poprawić wydajność.
+Typ zarządzany może również wykorzystywać zarządzane zasoby, które wolisz zwolnić. Nie można chcieć, aby moduł wyrzucania elementów bezużytecznych zwolnił obiekt w pewnym momencie, gdy obiekt nie jest już wymagany. Deterministyczna wersja zasobów może znacząco poprawić wydajność.
 
 Kompilator języka Microsoft C++ umożliwia definiowanie destruktora do niejednoznacznego czyszczenia obiektów. Użyj destruktora, aby zwolnić wszystkie zasoby, które mają być wydane w sposób deterministyczny.  Jeśli jest obecny finalizator, wywołaj go z destruktora, aby uniknąć duplikowania kodu.
 
@@ -781,15 +757,15 @@ ref struct A {
 };
 ```
 
-Jeśli kod wykorzystujący typ nie wywołuje destruktora, Moduł wyrzucania elementów bezużytecznych ostatecznie zwolni wszystkie zarządzane zasoby.
+Jeśli kod, który zużywa typ, nie wywołuje destruktora, Moduł wyrzucania elementów bezużytecznych ostatecznie zwolni wszystkie zarządzane zasoby.
 
-Obecność destruktora nie sugeruje obecności finalizatora. Jednak obecność finalizatora oznacza, że należy zdefiniować destruktor i wywołać finalizator z tego destruktora. Zapewnia to jednoznaczne wydawanie niezarządzanych zasobów.
+Obecność destruktora nie oznacza obecności finalizatora. Jednak obecność finalizatora oznacza, że należy zdefiniować destruktor i wywołać finalizator z tego destruktora. To wywołanie umożliwia jednoznaczne wydawanie niezarządzanych zasobów.
 
 Wywoływanie destruktora pomijania — przy użyciu <xref:System.GC.SuppressFinalize%2A> — finalizowanie obiektu. Jeśli destruktor nie jest wywoływany, finalizator typu będzie ostatecznie wywoływany przez moduł wyrzucania elementów bezużytecznych.
 
-Jednoznaczne czyszczenie zasobów obiektu przez wywołanie destruktora może poprawić wydajność w porównaniu z umożliwieniem niedeterministycznemu zapełnieniu obiektu przez środowisko CLR.
+Aby zwiększyć wydajność, można wywołać destruktor, aby w sposób niejednoznaczny wyczyścić zasoby obiektu, zamiast pozwolić, aby środowisko CLR w sposób niejednoznaczny zakończył obiekt.
 
-Kod, który został zapisany w Visual C++ i skompilowany przy użyciu **/CLR** , uruchamia destruktor typu, jeśli:
+Kod, który został zapisany w Visual C++ i skompilowany przy użyciu, **`/clr`** uruchamia destruktor typu, jeśli:
 
 - Obiekt, który jest tworzony przy użyciu semantyki stosu, wykracza poza zakres. Aby uzyskać więcej informacji, zobacz [semantyka stosu języka C++ dla typów referencyjnych](../dotnet/cpp-stack-semantics-for-reference-types.md).
 
@@ -801,7 +777,7 @@ Kod, który został zapisany w Visual C++ i skompilowany przy użyciu **/CLR** ,
 
 - Użytkownik jawnie wywołuje destruktor.
 
-Jeśli typ jest zużywany przez klienta, który jest zapisywany w innym języku, destruktor jest wywoływany w następujący sposób:
+Jeśli klient, który jest zapisany w innym języku zużywa swój typ, destruktor zostaje wywołany w następujący sposób:
 
 - W wywołaniu <xref:System.IDisposable.Dispose%2A> .
 
@@ -809,7 +785,7 @@ Jeśli typ jest zużywany przez klienta, który jest zapisywany w innym języku,
 
 - Jeśli typ wykracza poza zakres w instrukcji języka C# **`using`** .
 
-Jeśli utworzysz obiekt typu referencyjnego na stercie zarządzanym (nie korzystasz z semantyki stosu dla typów referencyjnych), użyj składni [try-finally](../cpp/try-finally-statement.md) , aby upewnić się, że wyjątek nie uniemożliwia uruchomienia destruktora.
+Jeśli nie korzystasz z semantyki stosu dla typów referencyjnych i utworzysz obiekt typu referencyjnego na stercie zarządzanym, użyj składni [try-finally](../cpp/try-finally-statement.md) , aby upewnić się, że wyjątek nie uniemożliwia uruchomienia destruktora.
 
 ```cpp
 // compile with: /clr
@@ -834,7 +810,7 @@ Jeśli typ ma finalizator, kompilator generuje `Finalize(void)` metodę, która 
 
 Jeśli typ ma finalizator lub destruktor, kompilator generuje `Dispose(bool)` metodę, zgodnie ze wzorcem projektu. (Aby uzyskać więcej informacji, zobacz artykuł usuwanie [wzorców](/dotnet/standard/design-guidelines/dispose-pattern)). Nie można jawnie tworzyć ani wywoływać `Dispose(bool)` w Visual C++.
 
-Jeśli typ ma klasę bazową, która jest zgodna ze wzorcem projektu, destruktory dla wszystkich klas podstawowych są wywoływane, gdy wywoływana jest destruktor klasy pochodnej. (Jeśli typ jest zapisywana w Visual C++, kompilator zapewnia, że typy implementują ten wzorzec.) Innymi słowy, destruktor klasy referencyjnej łańcuchuje do jej baz i elementów członkowskich, jak określono w standardzie C++ — najpierw jest uruchamiany destruktor klasy, a następnie destruktory dla swoich elementów członkowskich w odwrocie do kolejności, w której zostały skonstruowane, i na końcu destruktory dla klas bazowych w odwrocie do kolejności, w której zostały zbudowane.
+Jeśli typ ma klasę bazową, która jest zgodna ze wzorcem projektu, destruktory dla wszystkich klas podstawowych są wywoływane, gdy wywoływana jest destruktor klasy pochodnej. (Jeśli typ jest zapisywana w Visual C++, kompilator zapewnia, że typy implementują ten wzorzec.) Innymi słowy, destruktor klasy referencyjnej łańcuchuje do jej baz i członków zgodnie z definicją w standardzie C++. Najpierw jest uruchamiany destruktor klasy. Następnie destruktory dla swoich elementów członkowskich są uruchamiane w odwrotnej kolejności, w której zostały skonstruowane. Na koniec destruktory dla jego klas bazowych są uruchamiane w odwrocie od kolejności, w której zostały skonstruowane.
 
 Destruktory i finalizatory nie są dozwolone wewnątrz typów wartości lub interfejsów.
 
@@ -842,11 +818,11 @@ Finalizator może być zdefiniowany lub zadeklarowany tylko w typie referencyjny
 
 Po uruchomieniu finalizatora obiektu finalizatory w każdej klasie bazowej są również wywoływane, zaczynając od najmniej typu pochodnego. Finalizatory elementów członkowskich danych nie są automatycznie łańcuchowe przez finalizator klasy.
 
-Jeśli finalizator usuwa wskaźnik natywny w typie zarządzanym, należy się upewnić, że odwołania do lub przez wskaźnik natywny nie są przedwcześnie zbierane; Wywołaj destruktor w typie zarządzanym zamiast używać <xref:System.GC.KeepAlive%2A> .
+Jeśli finalizator usuwa wskaźnik natywny w typie zarządzanym, należy się upewnić, że odwołania do lub przez wskaźnik natywny nie są przedwcześnie zbierane. Wywołaj destruktor w typie zarządzanym zamiast używać <xref:System.GC.KeepAlive%2A> .
 
 W czasie kompilacji można wykryć, czy typ ma finalizator lub destruktor. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Następny przykład przedstawia dwa typy, jeden, który ma niezarządzane zasoby i jeden, który ma zarządzane zasoby, które są w sposób jednoznaczny wystawione.
+Następny przykład przedstawia dwa typy: jeden, który ma niezarządzane zasoby i jeden, który ma zarządzane zasoby, które są wystawione w sposób deterministyczny.
 
 ```cpp
 // compile with: /clr
@@ -914,5 +890,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
 [Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

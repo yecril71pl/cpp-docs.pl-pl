@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216391"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414610"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Porady: rozszerzanie biblioteki kierowania
 
@@ -102,7 +102,7 @@ namespace msclr {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-extend-marshaling-library"></a>Przykład: rozszerzona biblioteka organizacyjna
 
 Poniższy przykład rozszerza bibliotekę organizowania z konwersją, która nie wymaga kontekstu. W tym przykładzie kod konwertuje informacje o pracowniku z typu danych natywnych na typ danych zarządzanych.
 
@@ -164,7 +164,7 @@ Managed address: 123 Main Street
 Managed zip code: 98111
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-convert-employee-information"></a>Przykład: konwertowanie informacji o pracownikach
 
 Poniższy przykład konwertuje informacje o pracownikach z zarządzanego typu danych na natywny typ danych. Ta konwersja wymaga kontekstu organizowania.
 

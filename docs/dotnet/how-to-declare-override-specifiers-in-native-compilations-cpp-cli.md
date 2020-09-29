@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221331"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414597"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Porady: deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C++/CLI)
 
@@ -18,7 +18,7 @@ ms.locfileid: "87221331"
 > [!NOTE]
 > Język standardowy ISO C++ 11 ma identyfikator [przesłonięcia](../cpp/override-specifier.md) i [końcowy](../cpp/final-specifier.md) identyfikator, a oba są obsługiwane w programie Visual Studio `final` , a nie **`sealed`** w kodzie, który jest przeznaczony do skompilowania jako tylko natywny.
 
-## <a name="example"></a>Przykład
+## <a name="example-sealed-is-valid"></a>Przykład: zapieczętowany jest prawidłowy
 
 ### <a name="description"></a>Opis
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-override-is-valid"></a>Przykład: przesłonięcie jest prawidłowe
 
 ### <a name="description"></a>Opis
 
@@ -69,7 +69,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-abstract-is-valid"></a>Przykład: abstrakcyjny jest prawidłowy
 
 ### <a name="description"></a>Opis
 

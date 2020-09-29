@@ -1,6 +1,7 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 06/09/2020
+description: Funkcje z ulepszeniami zabezpieczeń umożliwiają uzyskanie komunikatu o błędzie systemu lub wydrukowanie komunikatu o błędzie dostarczonego przez użytkownika.
+ms.date: 09/25/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 4e594a37425714ef521c083785120e2262225b19
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664329"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414623"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -80,6 +81,9 @@ errno_t __wcserror_s(
    size_t sizeInWords,
    const wchar_t *strErrMsg
 );
+```
+
+```cpp
 template <size_t size>
 errno_t strerror_s(
    char (&buffer)[size],
@@ -104,26 +108,26 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buforu*<br/>
+*buforu*\
 Bufor do przechowywania ciągu błędu.
 
-*sizeInBytes*<br/>
+*sizeInBytes*\
 Liczba bajtów w buforze.
 
-*sizeInWords*<br/>
+*sizeInWords*\
 Liczba wyrazów w buforze.
 
-*errnum*<br/>
+*errnum*\
 Numer błędu.
 
-*strErrMsg*<br/>
+*strErrMsg*\
 Wiadomość dostarczona przez użytkownika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 
-### <a name="error-condtions"></a>Warunki błędów
+### <a name="error-conditions"></a>Warunki błędów
 
 |*buforu*|*sizeInBytes/sizeInWords*|*strErrMsg*|Zawartość *buforu*|
 |--------------|------------------------|-----------------|--------------------------|
@@ -131,6 +135,8 @@ Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 |dowolny|0|dowolny|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
+
+Funkcja **strerror_s** jest bezpieczna wątkowo.
 
 Funkcja **strerror_s** mapuje *errnum* na ciąg komunikatu o błędzie, zwracając ciąg w *buforze*. **_strerror_s** nie przyjmuje numeru błędu; używa ona bieżącej wartości **errno** , aby określić odpowiedni komunikat. Ani nie **strerror_s** ani **_strerror_s** rzeczywiście drukuje komunikat: dla tego elementu należy wywołać funkcję wyjściową, taką jak [fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
@@ -142,7 +148,7 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Jeśli *strErrMsg* ma **wartość null**, **_strerror_s** zwraca ciąg w *buforze* zawierającym komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu. Ciąg komunikatu o błędzie jest zakończony znakiem nowego wiersza ("\n"). Jeśli *strErrMsg* nie jest równa **NULL**, wówczas **_strerror_s** zwraca ciąg w *buforze* zawierającym (w kolejności) komunikat ciągu, dwukropek, spację, komunikat o błędzie systemu dla ostatniego wywołania biblioteki, generując błąd i znak nowego wiersza. Ciąg może zawierać maksymalnie 94 znaków.
+Jeśli *strErrMsg* ma **wartość null**, **_strerror_s** zwraca ciąg w *buforze* , który zawiera komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu. Ciąg komunikatu o błędzie jest zakończony znakiem nowego wiersza ("\n"). Jeśli *strErrMsg* nie jest równa **NULL**, wówczas **_strerror_s** zwraca ciąg w *buforze* zawierającym (w kolejności) komunikat ciągu, dwukropek, spację, komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu, oraz znak nowego wiersza. Ciąg może zawierać maksymalnie 94 znaków.
 
 Te funkcje obcinają komunikat o błędzie, jeśli jego długość przekracza rozmiar buforu-1. Ciąg otrzymany w *buforze* będzie zawsze zakończony wartością null.
 
@@ -152,7 +158,7 @@ Rzeczywisty numer błędu dla **_strerror_s** jest przechowywany w zmiennej [err
 
 Te funkcje sprawdzają poprawność swoich parametrów. Jeśli bufor ma **wartość null** lub jeśli parametr size ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
 
-**_strerror_s**, **_wcserror_s**i **__wcserror_s** nie są częścią definicji ANSI, ale zamiast niej są rozszerzeniami Microsoft. Nie należy używać ich w przypadku, gdy przenośność jest pożądana; w przypadku zgodności ze standardem ANSI Użyj zamiast tego **strerror_s** .
+**_strerror_s**, **_wcserror_s**i **__wcserror_s** nie są częścią definicji ANSI, ale zamiast tego są rozszerzeniami Microsoft. Nie używaj ich w przypadku, gdy przenośność jest pożądana; w przypadku zgodności ze standardem ANSI Użyj zamiast tego **strerror_s** .
 
 W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
@@ -181,7 +187,7 @@ Zobacz przykład dla [pError](perror-wperror.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror, _wperror](perror-wperror.md)<br/>
+[Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)\
+[clearerr](clearerr.md)\
+[fError](ferror.md)\
+[perror, _wperror](perror-wperror.md)

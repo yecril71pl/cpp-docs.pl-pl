@@ -9,22 +9,22 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0ccf71d40db0bc6989620d2ca126ce74311805da
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988193"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413830"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Porady: kierowanie tablic za pomocą międzyoperacyjności języka C++
 
-Ten temat przedstawia jeden aspekt współdziałania wizualnego C++ . Aby uzyskać więcej informacji, [Zobacz C++ using Interop (niejawny PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [using C++ Interop (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale te funkcje współdziałają w taki sam sposób, jeśli zostały zdefiniowane w oddzielnych plikach. Pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-managed-array-to-unmanaged-function"></a>Przykład: Przekaż zarządzaną tablicę do funkcji niezarządzanej
 
-W poniższym przykładzie pokazano, jak przekazać zarządzaną tablicę do funkcji niezarządzanej. Funkcja zarządzana używa [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby pominąć odzyskiwanie pamięci dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzaną funkcję z przypiętym wskaźnikiem do sterty GC, można uniknąć narzutu na tworzenie kopii tablicy. Aby zademonstrować, że niezarządzana funkcja uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartość tablicy, a zmiany są uwzględniane, gdy zarządzana funkcja wznawia kontrolę.
+W poniższym przykładzie pokazano, jak przekazać zarządzaną tablicę do funkcji niezarządzanej. Funkcja zarządzana używa [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby pominąć wyrzucanie elementów bezużytecznych dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzaną funkcję z przypiętym wskaźnikiem do sterty GC, można uniknąć narzutu na tworzenie kopii tablicy. Aby zademonstrować, że niezarządzana funkcja uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartość tablicy, a zmiany są uwzględniane, gdy zarządzana funkcja wznawia kontrolę.
 
 ```cpp
 // PassArray1.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-unmanaged-array-to-managed-function"></a>Przykład: Przekaż niezarządzaną tablicę do funkcji zarządzanej
 
 W poniższym przykładzie pokazano przekazywanie niezarządzanej tablicy do funkcji zarządzanej. Funkcja zarządzana uzyskuje bezpośredni dostęp do pamięci tablicy (w przeciwieństwie do tworzenia zarządzanej tablicy i kopiowania zawartości tablicy), co pozwala na odzwierciedlenie zmian wprowadzonych przez funkcję zarządzaną w funkcji zarządzanej, gdy odzyska ona kontrolę.
 
@@ -131,4 +131,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

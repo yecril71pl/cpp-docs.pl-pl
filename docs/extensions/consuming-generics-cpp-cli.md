@@ -5,22 +5,22 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172415"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414142"
 ---
 # <a name="consuming-generics-ccli"></a>Konsumowanie typów ogólnych (C++/CLI)
 
 Typy ogólne utworzone w jednym języku .NET (lub platformy UWP) mogą być używane w innych językach. W przeciwieństwie do szablonów, ogólna w skompilowanym zestawie nadal pozostaje ogólna. W ten sposób jeden może tworzyć wystąpienia typu ogólnego w innym zestawie, a nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.
 
-## <a name="example"></a>Przykład
+## <a name="example-generic-class-defined-in-c"></a>Przykład: Klasa generyczna zdefiniowana w C #
 
 ### <a name="description"></a>Opis
 
-Ten przykład pokazuje klasę generyczną zdefiniowaną C#w elemencie.
+Ten przykład pokazuje klasę generyczną zdefiniowaną w języku C#.
 
 ### <a name="code"></a>Kod
 
@@ -80,11 +80,11 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-consume-assembly-authored-in-c"></a>Przykład: korzystanie z zestawu napisanego w języku C #
 
 ### <a name="description"></a>Opis
 
-Ten przykład korzysta z zestawu, który został utworzony C#w.
+Ten przykład korzysta z zestawu napisanego w języku C#.
 
 ### <a name="code"></a>Kod
 
@@ -118,6 +118,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

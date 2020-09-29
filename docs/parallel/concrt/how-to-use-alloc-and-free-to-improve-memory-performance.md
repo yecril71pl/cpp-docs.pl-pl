@@ -5,38 +5,38 @@ helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: 8438e833262d42c6083f48f759501c573a35c772
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e5e5207fe435e73df60b757d4f595aacbb70fe72
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142785"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414025"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Porady: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci
 
-W tym dokumencie przedstawiono sposób korzystania z funkcji [concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency:: Free](reference/concurrency-namespace-functions.md#free) w celu zwiększenia wydajności pamięci. Porównuje czas wymagany do odwrócenia elementów tablicy równolegle dla trzech różnych typów, które określają operatory `new` i `delete`.
+W tym dokumencie przedstawiono sposób korzystania z funkcji [concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency:: Free](reference/concurrency-namespace-functions.md#free) w celu zwiększenia wydajności pamięci. Porównuje czas wymagany do odwrócenia elementów tablicy równolegle dla trzech różnych typów, które określają `new` `delete` Operatory i.
 
-`Alloc` i `Free` funkcje są najbardziej przydatne, gdy wiele wątków często wywołuje zarówno `Alloc`, jak i `Free`. Środowisko uruchomieniowe utrzymuje oddzielną pamięć podręczną pamięci dla każdego wątku; w związku z tym środowisko uruchomieniowe zarządza pamięcią bez użycia blokad lub barier pamięci.
+`Alloc`Funkcje i `Free` są najbardziej przydatne, gdy wiele wątków często wywołuje jednocześnie `Alloc` i `Free` . Środowisko uruchomieniowe utrzymuje oddzielną pamięć podręczną pamięci dla każdego wątku; w związku z tym środowisko uruchomieniowe zarządza pamięcią bez użycia blokad lub barier pamięci.
 
-## <a name="example"></a>Przykład
+## <a name="example-types-that-specify-new-and-delete-operators"></a>Przykład: typy określające operatory New i DELETE
 
-W poniższym przykładzie pokazano trzy typy, które określają operatory `new` i `delete`. Klasa `new_delete` używa operatorów globalnych `new` i `delete`, Klasa `malloc_free` używa funkcji [malloc](../../c-runtime-library/reference/malloc.md) i [Free](../../c-runtime-library/reference/free.md) środowiska uruchomieniowego języka C, a Klasa `Alloc_Free` używa funkcji środowisko uruchomieniowe współbieżności `Alloc` i `Free`.
+W poniższym przykładzie pokazano trzy typy, które określają `new` Operatory i `delete` . `new_delete`Klasa używa `new` operatorów globalnych i `delete` , `malloc_free` Klasa używa funkcji [malloc](../../c-runtime-library/reference/malloc.md) i [Free](../../c-runtime-library/reference/free.md) środowiska uruchomieniowego języka C, a `Alloc_Free` Klasa używa środowisko uruchomieniowe współbieżności `Alloc` i `Free` funkcji.
 
 [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-swap-and-reverse_array-functions"></a>Przykład: funkcje zamiany i reverse_array
 
-W poniższym przykładzie przedstawiono funkcje `swap` i `reverse_array`. Funkcja `swap` wymienia zawartość tablicy w określonych indeksach. Przydziela pamięć ze sterty dla zmiennej tymczasowej. Funkcja `reverse_array` tworzy dużą tablicę i oblicza czas wymagany do odwrócenia tablicy kilka razy równolegle.
+W poniższym przykładzie przedstawiono `swap` funkcje i `reverse_array` . `swap`Funkcja wymienia zawartość tablicy w określonych indeksach. Przydziela pamięć ze sterty dla zmiennej tymczasowej. `reverse_array`Funkcja tworzy dużą tablicę i oblicza czas wymagany do odwrócenia tablicy kilka razy równolegle.
 
 [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-wmain-function"></a>Przykład: funkcja wmain
 
-W poniższym przykładzie pokazano funkcję `wmain`, która oblicza czas wymagany do działania funkcji `reverse_array` w przypadku `new_delete`, `malloc_free`i `Alloc_Free` typów, z których każdy korzysta z innego schematu alokacji pamięci.
+Poniższy przykład pokazuje `wmain` funkcję, która oblicza czas wymagany do `reverse_array` działania funkcji na `new_delete` , `malloc_free` , i `Alloc_Free` , z których każdy używa innego schematu alokacji pamięci.
 
 [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="complete-code-example"></a>Pełny przykład kodu
 
 Kompletny przykład.
 
@@ -50,15 +50,15 @@ Took 1672 ms with malloc/free.
 Took 656 ms with Alloc/Free.
 ```
 
-W tym przykładzie typ, który używa funkcji `Alloc` i `Free` zapewnia najlepszą wydajność pamięci, ponieważ funkcje `Alloc` i `Free` są zoptymalizowane pod kątem często przypisywania i zwalniania bloków pamięci z wielu wątków.
+W tym przykładzie typ, który korzysta z `Alloc` funkcji i `Free` zapewnia najlepszą wydajność pamięci, ponieważ `Alloc` `Free` funkcje i są zoptymalizowane pod kątem często przypisywania i zwalniania bloków pamięci z wielu wątków.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `allocators.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `allocators.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-> **/EHsc. cpp. exe**
+> **cl.exe przy/EHsceń. cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc — funkcja](reference/concurrency-namespace-functions.md#alloc)<br/>

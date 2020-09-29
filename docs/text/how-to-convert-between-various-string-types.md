@@ -7,20 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224503"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414519"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Porady: konwertowanie między rozmaitymi typami ciągów
 
 W tym temacie pokazano, jak konwertować różne Visual C++ typy ciągów na inne ciągi. Typy ciągów, które są objęte usługą `char *` obejmują `wchar_t*` ,, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)i <xref:System.String?displayProperty=fullName> . We wszystkich przypadkach kopia ciągu jest wykonywana po przekonwertowaniu na nowy typ. Wszelkie zmiany wprowadzone w nowym ciągu nie wpłyną na oryginalny ciąg i na odwrót.
 
-## <a name="converting-from-char-"></a>Konwertowanie z char\*
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-char-"></a>Przykład: Konwertuj z char *
 
 ### <a name="description"></a>Opis
 
@@ -119,9 +117,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>Konwertowanie z wchar_t\*
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-wchar_t-"></a>Przykład: konwertowanie z wchar_t *
 
 ### <a name="description"></a>Opis
 
@@ -243,9 +239,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>Konwertowanie z _bstr_t
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-_bstr_t"></a>Przykład: konwertowanie z _bstr_t
 
 ### <a name="description"></a>Opis
 
@@ -343,9 +337,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Konwertowanie z CComBSTR
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-ccombstr"></a>Przykład: konwertowanie z CComBSTR
 
 ### <a name="description"></a>Opis
 
@@ -453,15 +445,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Konwertowanie z CString
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-cstring"></a>Przykład: konwertowanie z CString
 
 ### <a name="description"></a>Opis
 
-Ten przykład ilustruje sposób konwersji z `CString` do innych typów ciągów wymienionych powyżej. `CString`jest oparty na typie danych używanie TCHAR, który z kolei zależy od tego, czy symbol `_UNICODE` jest zdefiniowany. Jeśli `_UNICODE` program nie jest zdefiniowany, `TCHAR` jest zdefiniowany jako char i `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest zdefiniowany jako **`wchar_t`** i `CString` zawiera ciąg znaków szerokich.
+Ten przykład ilustruje sposób konwersji z `CString` do innych typów ciągów wymienionych powyżej. `CString` jest oparty na typie danych używanie TCHAR, który z kolei zależy od tego, czy symbol `_UNICODE` jest zdefiniowany. Jeśli `_UNICODE` program nie jest zdefiniowany, `TCHAR` jest zdefiniowany jako char i `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest zdefiniowany jako **`wchar_t`** i `CString` zawiera ciąg znaków szerokich.
 
-`CStringA`jest ciągiem wielobajtowym zawsze z wersją programu `CString` , `CStringW` jest tylko ciąg znaków szerokiej wersji. Nie `CStringA` `CStringW` należy ani używać `_UNICODE` do określenia sposobu kompilowania. `CStringA`i `CStringW` są używane w tym przykładzie w celu wyjaśnienia drobnych różnic dotyczących alokacji rozmiaru buforu i obsługi danych wyjściowych.
+`CStringA` jest ciągiem wielobajtowym zawsze z wersją programu `CString` , `CStringW` jest tylko ciąg znaków szerokiej wersji. Nie `CStringA` `CStringW` należy ani używać `_UNICODE` do określenia sposobu kompilowania. `CStringA` i `CStringW` są używane w tym przykładzie w celu wyjaśnienia drobnych różnic dotyczących alokacji rozmiaru buforu i obsługi danych wyjściowych.
 
 ### <a name="code"></a>Kod
 
@@ -597,9 +587,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>Konwertowanie z basic_string
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-basic_string"></a>Przykład: konwertowanie z basic_string
 
 ### <a name="description"></a>Opis
 
@@ -693,9 +681,7 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Konwersja z System:: String
-
-## <a name="example"></a>Przykład
+## <a name="example-convert-from-systemstring"></a>Przykład: Convert from system:: String
 
 ### <a name="description"></a>Opis
 

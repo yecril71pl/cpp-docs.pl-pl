@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393782"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414155"
 ---
 # <a name="debug-class-ccli"></a>Klasa Debug (C++/CLI)
 
-Korzystając z <xref:System.Diagnostics.Debug> w aplikacji Visual C++, zachowanie nie zmienił się od debugowania, jak i kompilację wydania.
+W przypadku używania <xref:System.Diagnostics.Debug> w aplikacji Visual C++ zachowanie nie zmienia się między debugowaniem a kompilacją wydania.
 
 ## <a name="remarks"></a>Uwagi
 
-Zachowanie <xref:System.Diagnostics.Trace> jest taka sama jak zachowanie dla klasy debugowania, ale jest zależny od symbolu śledzenia, które zostały zdefiniowane. Oznacza to, że musisz `#ifdef` żadnego kodu dotyczące śledzenia, aby zapobiec debugowanie kompilacji wydania.
+Zachowanie <xref:System.Diagnostics.Trace> jest identyczne z zachowaniem dla klasy Debug, ale jest zależne od zdefiniowanego śladu symbolu. Oznacza to, że należy `#ifdef` każdy kod związany ze śledzeniem, aby zapobiec zachowaniem debugowania w kompilacji wydania.
 
-## <a name="example"></a>Przykład
+## <a name="example-always-executes-output-statements"></a>Przykład: zawsze wykonuje instrukcje wyjściowe
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład wykonuje zawsze oświadczeń danych wyjściowych, niezależnie od tego, czy kompilujesz z **/DDEBUG** lub **/DTRACE**.
+Poniższy przykład zawsze wykonuje instrukcje wyjściowe, niezależnie od tego, czy kompilujesz przy użyciu **/DDEBUG** czy **/DTrace**.
 
 ### <a name="code"></a>Kod
 
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-use-ifdef-and-endif-directives"></a>Przykład: Użyj dyrektyw #ifdef i #endif
 
 ### <a name="description"></a>Opis
 
-Aby uzyskać oczekiwane zachowanie (oznacza to, że żadne dane wyjściowe "test" druk dla wersji kompilacji), należy użyć `#ifdef` i `#endif` dyrektywy. W poprzednim przykładzie kodu zmienia się poniżej, aby zademonstrować tę poprawkę:
+Aby uzyskać oczekiwane zachowanie (to oznacza, że dane wyjściowe "testowe" są drukowane dla kompilacji wydania), należy użyć `#ifdef` dyrektyw i `#endif` . Poprzedni przykład kodu został zmodyfikowany poniżej, aby przedstawić tę poprawkę:
 
 ### <a name="code"></a>Kod
 

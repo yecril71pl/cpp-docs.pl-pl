@@ -1,13 +1,13 @@
 ---
 title: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
 description: W tym artykule opisano sposób konfigurowania projektów systemu Linux w języku C++ w programie Visual Studio do używania adresu Sanitizer.
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686668"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414204"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
 
@@ -33,7 +33,7 @@ Możesz również wyświetlić pełne dane wyjściowe ASan (w tym miejsce, gdzie
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Włącz ASan dla projektów systemu Linux opartych na programie MSBuild
 
 > [!NOTE]
-> Począwszy od programu Visual Studio 2019 w wersji 16,4, AddressSanitizer for Linux projekty są włączane za pośrednictwem **Właściwości konfiguracji**  >  **C/C++**  >  **enable Address Sanitizer**.
+> Począwszy od programu Visual Studio 2019 w wersji 16,4, AddressSanitizer for Linux projekty są włączane za pośrednictwem właściwości konfiguracji właściwości **projektu**  >  **Configuration Properties**  >  **C/C++**  >  **enable Address Sanitizer**.
 
 Aby włączyć ASan dla projektów systemu Linux opartych na programie MSBuild, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** a następnie wybierz pozycję **Właściwości**. Następnie przejdź do pozycji **Właściwości konfiguracji**. program do oczyszczania  >  **C/C++**  >  **Sanitizers**. ASan jest włączana za pośrednictwem flag kompilatora i konsolidatora i wymaga, aby projekt został ponownie skompilowany do pracy.
 
@@ -51,7 +51,7 @@ Upewnij się, że masz wybraną konfigurację systemu Linux (na przykład **Linu
 
 ![Zrzut ekranu przedstawiający okienko po lewej stronie z debugowaniem systemu Linux wyświetlanym jako jedna z opcji konfiguracji.](media/linux-debug-configuration.png)
 
-Opcje ASan są **Ogólne**. Wprowadź flagi środowiska uruchomieniowego ASan w formacie "Flaga = wartość" oddzielone średnikami.
+Opcje ASan są **Ogólne**. Wprowadź flagi środowiska uruchomieniowego ASan w formacie "Flaga = wartość", rozdzielone spacjami. Interfejs użytkownika niepoprawnie sugeruje użycie średników. Użyj spacji lub średników, aby oddzielić flagi.
 
 ![Zrzut ekranu przedstawiający opcję Włącz adres Sanitizer z niektórymi flagami czasu wykonywania Sanitizer.](media/cmake-settings-asan-options.png)
 

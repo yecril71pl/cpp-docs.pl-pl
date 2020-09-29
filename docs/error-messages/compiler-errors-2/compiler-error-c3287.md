@@ -1,25 +1,28 @@
 ---
 title: Błąd kompilatora C3287
-ms.date: 11/04/2016
+description: Opis błędu kompilatora języka Microsoft C++ C3287.
+ms.date: 09/25/2020
 f1_keywords:
 - C3287
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4067355ef1bc1992d0f8519656bcd1063179aef4
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749610"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414324"
 ---
 # <a name="compiler-error-c3287"></a>Błąd kompilatora C3287
 
-Typ "Type" (typ zwracany przez GetEnumerator) musi mieć odpowiednią funkcję składową MoveNext oraz publiczną właściwość Current
+> Typ "*Type*" (typ zwracany przez GetEnumerator) musi mieć odpowiednią funkcję składową MoveNext oraz publiczną właściwość Current
 
-Klasy kolekcji zdefiniowane przez użytkownika muszą zawierać definicje `MoveNext` i `Current`.
+## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji [, zobacz How to: Iterowanie zdefiniowanej przez użytkownika kolekcji z dla każdego z nich](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .
+Klasy kolekcji zdefiniowane przez użytkownika muszą zawierać definicje dla `MoveNext` i `Current` .
+
+Aby uzyskać więcej informacji, zobacz [dla każdego, w](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Przykład
 

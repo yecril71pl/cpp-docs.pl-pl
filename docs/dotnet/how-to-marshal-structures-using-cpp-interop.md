@@ -9,22 +9,22 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: a77745c9a60c9759f8b3b2df91bcbc4cb507533b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 8ca53761647c1f3d5ea059ddf381cb334cd2a993
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988173"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413843"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Porady: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++
 
-Ten temat przedstawia jeden aspekt współdziałania wizualnego C++ . Aby uzyskać więcej informacji, [Zobacz C++ using Interop (niejawny PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [using C++ Interop (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale te funkcje współdziałają w taki sam sposób, jeśli zostały zdefiniowane w oddzielnych plikach. Pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-structure-from-managed-to-unmanaged-function"></a>Przykład: Przekaż strukturę z zarządzanej do niezarządzanej funkcji
 
-Poniższy przykład demonstruje przekazywanie struktury z zarządzanej do niezarządzanej funkcji, zarówno przez wartość, jak i przez odwołanie. Ze względu na to, że struktura w tym przykładzie zawiera tylko proste, wewnętrzne typy danych (zobacz [danych kopiowalnych i typy inne niż danych kopiowalnych](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie jest wymagane żadne specjalne kierowanie. Aby zorganizować struktury inne niż danych kopiowalnych, takie jak te, które zawierają wskaźniki, zobacz [How to: Marshaling Embedded C++ ](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)Reports using Interop.
+Poniższy przykład demonstruje przekazywanie struktury z zarządzanej do niezarządzanej funkcji, zarówno przez wartość, jak i przez odwołanie. Ze względu na to, że struktura w tym przykładzie zawiera tylko proste, wewnętrzne typy danych (zobacz [danych kopiowalnych i typy inne niż danych kopiowalnych](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie jest wymagane żadne specjalne kierowanie. Aby zorganizować struktury inne niż danych kopiowalnych, takie jak te, które zawierają wskaźniki, zobacz [How to: Marshaling Embedded Reports using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```cpp
 // PassStruct1.cpp
@@ -80,9 +80,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-structure-from-unmanaged-to-managed-function"></a>Przykład: Przekaż strukturę z niezarządzanej do funkcji zarządzanej
 
-Poniższy przykład demonstruje przekazywanie struktury z niezarządzanej do funkcji zarządzanej, zarówno przez wartość, jak i przez odwołanie. Ze względu na to, że struktura w tym przykładzie zawiera tylko proste, wewnętrzne typy danych (zobacz [danych kopiowalnych i typy inne niż danych kopiowalnych](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie jest wymagane żadne specjalne kierowanie. Aby zorganizować struktury inne niż danych kopiowalnych, takie jak te, które zawierają wskaźniki, zobacz [How to: Marshaling Embedded C++ ](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)Reports using Interop.
+Poniższy przykład demonstruje przekazywanie struktury z niezarządzanej do funkcji zarządzanej, zarówno przez wartość, jak i przez odwołanie. Ze względu na to, że struktura w tym przykładzie zawiera tylko proste, wewnętrzne typy danych (zobacz [danych kopiowalnych i typy inne niż danych kopiowalnych](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie jest wymagane żadne specjalne kierowanie. Aby zorganizować struktury inne niż danych kopiowalnych, takie jak te, które zawierają wskaźniki, zobacz [How to: Marshaling Embedded Reports using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```cpp
 // PassStruct2.cpp
@@ -149,4 +149,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
