@@ -6,33 +6,33 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261608"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499370"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Dodawanie okna dialogowego ATL
 
-Aby dodać okno dialogowe ATL do projektu, projekt musi być projektu ATL lub projekt MFC, który obejmuje obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
+Aby dodać do projektu okno dialogowe ATL, projekt musi być projektem ATL lub projektem MFC zawierającym obsługę ATL. Możesz użyć [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md) do utworzenia aplikacji ATL lub [dodać obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
 
-Domyślnie Kreator okna dialogowego ATL implementuje okno dialogowe pochodną [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Ta klasa zawiera obsługę hostowania kontrolki ActiveX i Windows. Jeśli nie mają obciążenie obsługi formantów ActiveX, gdy kreator został wygenerowany kod, należy zastąpić wszystkie wystąpienia elementu `CAxDialogImpl` z oboma [CSimpleDialog](../../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako klasę bazową .
+Domyślnie Kreator okna dialogowego ATL implementuje okno dialogowe pochodzące z [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Ta klasa obejmuje obsługę hostingu formantów ActiveX i okien. Jeśli nie chcesz obciążać obsługi formantu ActiveX, po wygenerowaniu kodu przez kreatora Zastąp wszystkie wystąpienia `CAxDialogImpl` z [CSimpleDialog](../../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako klasą bazową.
 
 > [!NOTE]
-> `CSimpleDialog` tworzy tylko modalnych okien dialogowych, które obsługują tylko Windows wspólnych formantów. `CDialogImpl` Tworzy albo w modalnym lub niemodalnym dialogowych.
+> `CSimpleDialog` tworzy tylko modalne okna dialogowe, które obsługują tylko formanty standardowe systemu Windows. `CDialogImpl` tworzy modalne lub Niemodalne okna dialogowe.
 
-## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Można dodać zasobu okna dialogowego ATL do projektu
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Aby dodać zasób okna dialogowego ATL do projektu
 
-1. Utwórz projekt ATL za pomocą [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md).
+1. Utwórz Projekt ATL przy użyciu [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md).
 
-1. Z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu i kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
+1. W [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code)kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij polecenie **Dodaj** z menu skrótów. Kliknij pozycję **Dodaj klasę**.
 
-1. W **szablony** okienku [Dodaj klasę](../../ide/add-class-dialog-box.md) okno dialogowe, kliknij przycisk **okno dialogowe ATL**. Kliknij przycisk **Otwórz** do wyświetlenia [Kreator okna dialogowego ATL](../../atl/reference/atl-dialog-wizard.md).
+1. W okienku **Szablony** okna dialogowego [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) kliknij przycisk **okna dialogowego ATL**. Kliknij przycisk **Otwórz** , aby wyświetlić [Kreatora okna dialogowego ATL](../../atl/reference/atl-dialog-wizard.md).
 
-Aby uzyskać więcej informacji, zobacz [Implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md).
+Aby uzyskać więcej informacji, zobacz [implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Klasy okien](../../atl/atl-window-classes.md)<br/>

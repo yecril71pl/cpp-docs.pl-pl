@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b4bb198ae883e53e7947ce7f123bb0d3f092aaf3
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752473"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500396"
 ---
 # <a name="compiler-error-c3743"></a>Błąd kompilatora C3743
 
 można tylko podpiąć/odpiąć cały interfejs, gdy parametr "layout_dependent" event_receiver ma wartość true
 
-Funkcja [__unhook](../../cpp/unhook.md) różni się w zależności od liczby parametrów pobieranych na podstawie wartości przesłanej do parametru `layout_dependent` w klasie [event_receiver](../../windows/event-receiver.md) .
+Funkcja [__unhook](../../cpp/unhook.md) różni się w zależności od liczby parametrów pobieranych na podstawie wartości przesłanej do `layout_dependent` parametru w klasie [event_receiver](../../windows/attributes/event-receiver.md) .
 
 Poniższy przykład generuje C3743:
 

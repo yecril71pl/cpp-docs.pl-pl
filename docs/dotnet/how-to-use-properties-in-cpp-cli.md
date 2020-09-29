@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c786c7746cd40a970af3a5ae4436119def4c805b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225673"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499677"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia
 
@@ -88,7 +88,7 @@ Właściwość indeksowana zwykle uwidacznia strukturę danych, do której uzysk
 
 Jeśli używasz domyślnej właściwości indeksowanej, możesz uzyskać dostęp do struktury danych tylko w odniesieniu do nazwy klasy, ale jeśli używasz właściwości indeksowanej zdefiniowanej przez użytkownika, musisz określić nazwę właściwości, aby uzyskać dostęp do struktury danych.
 
-Aby uzyskać informacje o sposobach korzystania z indeksatora, który jest pisany w języku C#, zobacz [How to: korzystanie z indeksatora języka C# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Aby uzyskać informacje o sposobach korzystania z indeksatora, który jest pisany w języku C#, zobacz [How to: korzystanie z indeksatora języka C# (C++/CLI)](./interoperability-with-other-dotnet-languages-cpp-cli.md#consume_indexer).
 
 Ten przykładowy kod pokazuje, jak używać domyślnych i zdefiniowanych przez użytkownika właściwości indeksowanych:
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [wartość](../extensions/property-cpp-component-extensions.md)

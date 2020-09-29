@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446871"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498577"
 ---
 # <a name="swap-function-auto_handle"></a>Funkcja swap (auto_handle)
 
-Zamienia obiekty między jeden `auto_handle` i drugi.
+Zamienia obiekty między nimi `auto_handle` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,10 +29,10 @@ void swap(
 #### <a name="parameters"></a>Parametry
 
 *_left*<br/>
-`auto_handle`.
+A `auto_handle` .
 
 *_right*<br/>
-Inny `auto_handle`.
+Inny `auto_handle` .
 
 ## <a name="example"></a>Przykład
 
@@ -63,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówkowy** \<msclr \ auto_handle. h >
+**Plik nagłówka**\<msclr\auto_handle.h>
 
 Msclr **przestrzeni nazw**
 
 ## <a name="see-also"></a>Zobacz też
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

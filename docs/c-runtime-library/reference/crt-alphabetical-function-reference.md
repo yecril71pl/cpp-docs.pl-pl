@@ -1,41 +1,41 @@
 ---
-title: UCRT alfabetyczne odwołanie funkcji
+title: UCRT alfabetyczne odwołanie do funkcji
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340342"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499396"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>UCRT alfabetyczne odwołanie funkcji
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT alfabetyczne odwołanie do funkcji
 
-Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po prostu CRT) jest uporządkowane alfabetycznie według procedury. Aby znaleźć procedurę CRT w oparciu o funkcjonalność, zobacz [procedury czasu wykonywania języka Universal C według kategorii](../../c-runtime-library/run-time-routines-by-category.md).
+Dokumentacja biblioteki uniwersalnego środowiska uruchomieniowego języka C (UCRT, często tylko CRT) jest uporządkowana alfabetycznie według procedury. Aby znaleźć procedurę CRT na podstawie funkcjonalności, zobacz [uniwersalne procedury środowiska uruchomieniowego C według kategorii](../../c-runtime-library/run-time-routines-by-category.md).
 
-## <a name="a"></a>ELEMENT
+## <a name="a"></a>A
 
-[abort](abort.md)
+[przerwij](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[ABS](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[access](access-crt.md)
+[niego](access-crt.md)
 
 [_access](access-waccess.md)
 
 [_access_s](access-s-waccess-s.md)
 
-[ACOS](acos-acosf-acosl.md)
+[Acos](acos-acosf-acosl.md)
 
-[acosf](acos-acosf-acosl.md)
+[acosf —](acos-acosf-acosl.md)
 
-[acosh](acosh-acoshf-acoshl.md)
+[ACOSH —](acosh-acoshf-acoshl.md)
 
-[acoshf](acosh-acoshf-acoshl.md)
+[acoshf —](acosh-acoshf-acoshl.md)
 
 [acoshl](acosh-acoshf-acoshl.md)
 
@@ -81,23 +81,23 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [and_eq](and-eq.md)
 
-[asctime —](asctime-wasctime.md)
+[asctime](asctime-wasctime.md)
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[ASIN](asin-asinf-asinl.md)
+[Asin](asin-asinf-asinl.md)
 
 [asinf —](asin-asinf-asinl.md)
 
 [ASINH —](asinh-asinhf-asinhl.md)
 
-[asinhf](asinh-asinhf-asinhl.md)
+[asinhf —](asinh-asinhf-asinhl.md)
 
 [asinhl](asinh-asinhf-asinhl.md)
 
-[asinl —](asin-asinf-asinl.md)
+[asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[stanowcz](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -111,15 +111,15 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [atan2](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-[atan2f](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[atan2f —](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-[atanf](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[atanf —](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-[atanh](atanh-atanhf-atanhl.md)
+[ATANH —](atanh-atanhf-atanhl.md)
 
-[atanhf](atanh-atanhf-atanhl.md)
+[atanhf —](atanh-atanhf-atanhl.md)
 
 [atanhl](atanh-atanhf-atanhl.md)
 
@@ -191,11 +191,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[OOZ](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
-[cabsl](cabs-cabsf-cabsl.md)
+[OOZ](cabs-cabsf-cabsl.md)
 
 [cacos](cacos-cacosf-cacosl.md)
 
@@ -245,9 +245,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [catanl](catan-catanf-catanl.md)
 
-[cbrt](cbrt-cbrtf-cbrtl.md)
+[cbrt —](cbrt-cbrtf-cbrtl.md)
 
-[cbrtf](cbrt-cbrtf-cbrtl.md)
+[cbrtf —](cbrt-cbrtf-cbrtl.md)
 
 [cbrtl](cbrt-cbrtf-cbrtl.md)
 
@@ -263,9 +263,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [ccosl](ccos-ccosf-ccosl.md)
 
-[Ceil —](ceil-ceilf-ceill.md)
+[CEIL —](ceil-ceilf-ceill.md)
 
-[ceilf](ceil-ceilf-ceill.md)
+[ceilf —](ceil-ceilf-ceill.md)
 
 [ceill](ceil-ceilf-ceill.md)
 
@@ -297,7 +297,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [chmod](chmod.md)
 
-[_chmod —](chmod-wchmod.md)
+[_chmod](chmod-wchmod.md)
 
 [chsize](posix-chsize.md)
 
@@ -317,9 +317,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [clearerr_s](clearerr-s.md)
 
-[_clearfp —](clear87-clearfp.md)
+[_clearfp](clear87-clearfp.md)
 
-[clock](clock.md)
+[zegar](clock.md)
 
 [clog](clog-clogf-clogl.md)
 
@@ -333,7 +333,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [clogl](clog-clogf-clogl.md)
 
-[close](posix-close.md)
+[ściśle](posix-close.md)
 
 [_close](close.md)
 
@@ -361,21 +361,21 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_copysign](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[copysignf](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
+[copysignf —](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
 [_copysignf](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[copysignl —](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
+[copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[cos](cos-cosf-cosl.md)
+[cosinus](cos-cosf-cosl.md)
 
-[cosf](cos-cosf-cosl.md)
+[cosf —](cos-cosf-cosl.md)
 
-[cosh](cosh-coshf-coshl.md)
+[cosh —](cosh-coshf-coshl.md)
 
-[coshf](cosh-coshf-coshl.md)
+[coshf —](cosh-coshf-coshl.md)
 
 [coshl](cosh-coshf-coshl.md)
 
@@ -411,7 +411,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [cputs](cputs.md)
 
-[_cputs —](cputs-cputws.md)
+[_cputs](cputs-cputws.md)
 
 [_cputws](cputs-cputws.md)
 
@@ -521,7 +521,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [ctanl](ctan-ctanf-ctanl.md)
 
-[ctime —](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
+[CTime](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
 [ctime_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
@@ -531,7 +531,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_ctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
-[_ctime64_s —](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
+[_ctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
 [_cwait](cwait.md)
 
@@ -561,7 +561,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 ## <a name="d"></a>D
 
-[difftime —](difftime-difftime32-difftime64.md)
+[difftime](difftime-difftime32-difftime64.md)
 
 [_difftime32](difftime-difftime32-difftime64.md)
 
@@ -571,7 +571,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_dup](dup-dup2.md)
 
-[Dup](posix-dup-dup2.md)
+[DUP](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -593,19 +593,19 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_endthreadex](endthread-endthreadex.md)
 
-[eof](posix-eof.md)
+[końca](posix-eof.md)
 
 [_eof](eof.md)
 
-[erf](erf-erff-erfl-erfc-erfcf-erfcl.md)
+[Funkcja](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
 [ERFC —](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
-[erfcf](erf-erff-erfl-erfc-erfcf-erfcl.md)
+[erfcf —](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
 [erfcl](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
-[erff](erf-erff-erfl-erfc-erfcf-erfcl.md)
+[erff —](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
 [erfl](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
@@ -619,7 +619,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [execlp](execlp.md)
 
-[_execlp —](execlp-wexeclp.md)
+[_execlp](execlp-wexeclp.md)
 
 [execlpe](execlpe.md)
 
@@ -641,17 +641,17 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_execvpe](execvpe-wexecvpe.md)
 
-[Zakończ](exit-exit-exit.md)
+[Opuść](exit-exit-exit.md)
 
 [_Exit](exit-exit-exit.md)
 
 [_exit](exit-exit-exit.md)
 
-[exp](exp-expf.md)
+[EXP](exp-expf.md)
 
-[exp2](exp2-exp2f-exp2l.md)
+[exp2 —](exp2-exp2f-exp2l.md)
 
-[exp2f](exp2-exp2f-exp2l.md)
+[exp2f —](exp2-exp2f-exp2l.md)
 
 [exp2l](exp2-exp2f-exp2l.md)
 
@@ -659,13 +659,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_expand_dbg](expand-dbg.md)
 
-[expf](exp-expf.md)
+[expf —](exp-expf.md)
 
-[expm1](expm1-expm1f-expm1l.md)
+[expm1 —](expm1-expm1f-expm1l.md)
 
-[expm1f](expm1-expm1f-expm1l.md)
+[expm1f —](expm1-expm1f-expm1l.md)
 
-[expm1l —](expm1-expm1f-expm1l.md)
+[expm1l](expm1-expm1f-expm1l.md)
 
 ## <a name="f"></a>F
 
@@ -673,7 +673,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [fabsf —](fabs-fabsf-fabsl.md)
 
-[fclose —](fclose-fcloseall.md)
+[fclose](fclose-fcloseall.md)
 
 [_fclose_nolock](fclose-nolock.md)
 
@@ -687,9 +687,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_fcvt_s](fcvt-s.md)
 
-[fdim](fdim-fdimf-fdiml.md)
+[fdim —](fdim-fdimf-fdiml.md)
 
-[fdimf](fdim-fdimf-fdiml.md)
+[fdimf —](fdim-fdimf-fdiml.md)
 
 [fdiml](fdim-fdimf-fdiml.md)
 
@@ -745,7 +745,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_fgetwchar](fgetchar-fgetwchar.md)
 
-[fgetws —](fgets-fgetws.md)
+[fgetws](fgets-fgetws.md)
 
 [filelength](filelength.md)
 
@@ -787,41 +787,41 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_finitef](finite-finitef.md)
 
-[floor](floor-floorf-floorl.md)
+[wykładzin](floor-floorf-floorl.md)
 
-[floorf](floor-floorf-floorl.md)
+[floorf —](floor-floorf-floorl.md)
 
-[floorl](floor-floorf-floorl.md)
+[piętro](floor-floorf-floorl.md)
 
 [flushall](posix-flushall.md)
 
 [_flushall](flushall.md)
 
-[fma](fma-fmaf-fmal.md)
+[FMA](fma-fmaf-fmal.md)
 
-[fmaf](fma-fmaf-fmal.md)
+[fmaf —](fma-fmaf-fmal.md)
 
 [fmal](fma-fmaf-fmal.md)
 
-[fmax](fmax-fmaxf-fmaxl.md)
+[Fmax —](fmax-fmaxf-fmaxl.md)
 
-[fmaxf](fmax-fmaxf-fmaxl.md)
+[fmaxf —](fmax-fmaxf-fmaxl.md)
 
 [fmaxl](fmax-fmaxf-fmaxl.md)
 
-[fmin](fmin-fminf-fminl.md)
+[fmin —](fmin-fminf-fminl.md)
 
 [fminf —](fmin-fminf-fminl.md)
 
 [fminl](fmin-fminf-fminl.md)
 
-[Fmod —](fmod-fmodf.md)
+[FMOD —](fmod-fmodf.md)
 
-[fmodf](fmod-fmodf.md)
+[fmodf —](fmod-fmodf.md)
 
-[fopen —](fopen-wfopen.md)
+[fopen](fopen-wfopen.md)
 
-[fopen_s —](fopen-s-wfopen-s.md)
+[fopen_s](fopen-s-wfopen-s.md)
 
 [_fpclass](fpclass-fpclassf.md)
 
@@ -853,15 +853,15 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_fputchar](fputchar-fputwchar.md)
 
-[fputs —](fputs-fputws.md)
+[fputs](fputs-fputws.md)
 
-[fputwc —](fputc-fputwc.md)
+[fputwc](fputc-fputwc.md)
 
 [_fputwc_nolock](fputc-nolock-fputwc-nolock.md)
 
-[_fputwchar —](fputchar-fputwchar.md)
+[_fputwchar](fputchar-fputwchar.md)
 
-[fputws —](fputs-fputws.md)
+[fputws](fputs-fputws.md)
 
 [fread](fread.md)
 
@@ -871,7 +871,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [fread_s](fread-s.md)
 
-[free](free.md)
+[zwolniony](free.md)
 
 [_free_dbg](free-dbg.md)
 
@@ -879,13 +879,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_freea](freea.md)
 
-[freopen —](freopen-wfreopen.md)
+[freopen](freopen-wfreopen.md)
 
-[freopen_s —](freopen-s-wfreopen-s.md)
+[freopen_s](freopen-s-wfreopen-s.md)
 
 [frexp](frexp.md)
 
-[fscanf —](fscanf-fscanf-l-fwscanf-fwscanf-l.md)
+[fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)
 
 [_fscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)
 
@@ -1017,7 +1017,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_get_wpgmptr](get-wpgmptr.md)
 
-[getc](getc-getwc.md)
+[getc —](getc-getwc.md)
 
 [_getc_nolock](getc-nolock-getwc-nolock.md)
 
@@ -1027,7 +1027,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_getch_nolock](getch-nolock-getwch-nolock.md)
 
-[getchar](getchar-getwchar.md)
+[GetChar](getchar-getwchar.md)
 
 [_getchar_nolock](getchar-nolock-getwchar-nolock.md)
 
@@ -1111,11 +1111,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_heapwalk](heapwalk.md)
 
-[hypot](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[hypot —](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypot](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
-[hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[hypotf —](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
@@ -1133,9 +1133,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_i64tow_s](itoa-s-itow-s.md)
 
-[ilogb](ilogb-ilogbf-ilogbl2.md)
+[ilogb —](ilogb-ilogbf-ilogbl2.md)
 
-[ilogbf](ilogb-ilogbf-ilogbl2.md)
+[ilogbf —](ilogb-ilogbf-ilogbl2.md)
 
 [ilogbl](ilogb-ilogbf-ilogbl2.md)
 
@@ -1171,7 +1171,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [isatty](posix-isatty.md)
 
-[isblank](isblank-iswblank-isblank-l-iswblank-l.md)
+[ISBLANK](isblank-iswblank-isblank-l-iswblank-l.md)
 
 [_isblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
@@ -1195,21 +1195,21 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_isctype_l](isctype-iswctype-isctype-l-iswctype-l.md)
 
-[isdigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
+[IsDigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[isfinite](finite-finitef.md)
+[isFinite](finite-finitef.md)
 
-[isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
+[isgraf](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[isgreater](floating-point-ordering.md)
+[isdoskonałyer](floating-point-ordering.md)
 
 [isgreaterequal](floating-point-ordering.md)
 
-[isinf](isinf.md)
+[isinf —](isinf.md)
 
 [isleadbyte](isleadbyte-isleadbyte-l.md)
 
@@ -1221,7 +1221,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [islessgreater](floating-point-ordering.md)
 
-[islower](islower-iswlower-islower-l-iswlower-l.md)
+[IsLower](islower-iswlower-islower-l-iswlower-l.md)
 
 [_islower_l](islower-iswlower-islower-l-iswlower-l.md)
 
@@ -1231,13 +1231,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_ismbbalpha](ismbbalpha-ismbbalpha-l.md)
 
-[_ismbbalpha_l —](ismbbalpha-ismbbalpha-l.md)
+[_ismbbalpha_l](ismbbalpha-ismbbalpha-l.md)
 
 [_ismbbblank](ismbbblank-ismbbblank-l.md)
 
 [_ismbbblank_l](ismbbblank-ismbbblank-l.md)
 
-[_ismbbgraph —](ismbbgraph-ismbbgraph-l.md)
+[_ismbbgraph](ismbbgraph-ismbbgraph-l.md)
 
 [_ismbbgraph_l](ismbbgraph-ismbbgraph-l.md)
 
@@ -1337,21 +1337,21 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_ismbcsymbol_l](ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)
 
-[_ismbcupper —](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)
+[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)
 
 [_ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)
 
-[_ismbslead —](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
+[_ismbslead](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[_ismbslead_l —](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
+[_ismbslead_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[_ismbstrail —](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
+[_ismbstrail](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
 [_ismbstrail_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isNaN —](isnan-isnan-isnanf.md)
+[isNaN](isnan-isnan-isnanf.md)
 
-[_isnan —](isnan-isnan-isnanf.md)
+[_isnan](isnan-isnan-isnanf.md)
 
 [_isnanf](isnan-isnan-isnanf.md)
 
@@ -1371,7 +1371,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [isunordered](floating-point-ordering.md)
 
-[isupper](isupper-isupper-l-iswupper-iswupper-l.md)
+[IsUpper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_isupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
@@ -1381,7 +1381,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [iswalpha](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
 
-[_iswalpha_l —](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
+[_iswalpha_l](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
 
 [iswascii](isascii-isascii-iswascii.md)
 
@@ -1409,7 +1409,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_iswdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[iswgraph —](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
+[iswgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_iswgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
@@ -1417,7 +1417,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_iswlower_l](islower-iswlower-islower-l-iswlower-l.md)
 
-[iswprint —](isprint-iswprint-isprint-l-iswprint-l.md)
+[iswprint](isprint-iswprint-isprint-l-iswprint-l.md)
 
 [_iswprint_l](isprint-iswprint-isprint-l-iswprint-l.md)
 
@@ -1429,9 +1429,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_iswspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
-[iswupper —](isupper-isupper-l-iswupper-iswupper-l.md)
+[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
-[_iswupper_l —](isupper-isupper-l-iswupper-iswupper-l.md)
+[_iswupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [iswxdigit](isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)
 
@@ -1459,7 +1459,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_j1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[j1](j0-j1-jn.md)
+[J1](j0-j1-jn.md)
 
 [_jn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -1473,11 +1473,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 ## <a name="l"></a>L
 
-[labs](abs-labs-llabs-abs64.md)
+[Labs](abs-labs-llabs-abs64.md)
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1485,15 +1485,15 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_lfind_s](lfind-s.md)
 
-[lgamma](lgamma-lgammaf-lgammal.md)
+[lgamma —](lgamma-lgammaf-lgammal.md)
 
-[lgammaf](lgamma-lgammaf-lgammal.md)
+[lgammaf —](lgamma-lgammaf-lgammal.md)
 
 [lgammal](lgamma-lgammaf-lgammal.md)
 
-[llabs —](abs-labs-llabs-abs64.md)
+[llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1501,61 +1501,61 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
-[llround —](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[llround](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
 [llroundf](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
-[llroundl —](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
 [localeconv](localeconv.md)
 
 [localtime](localtime-localtime32-localtime64.md)
 
-[localtime_s —](localtime-s-localtime32-s-localtime64-s.md)
+[localtime_s](localtime-s-localtime32-s-localtime64-s.md)
 
 [_localtime32](localtime-localtime32-localtime64.md)
 
 [_localtime32_s](localtime-s-localtime32-s-localtime64-s.md)
 
-[_localtime64 —](localtime-localtime32-localtime64.md)
+[_localtime64](localtime-localtime32-localtime64.md)
 
-[_localtime64_s —](localtime-s-localtime32-s-localtime64-s.md)
+[_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[blokowan](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[rejestrowane](log-logf-log10-log10f.md)
 
-[log10](log-logf-log10-log10f.md)
+[log10 —](log-logf-log10-log10f.md)
 
-[log10f](log-logf-log10-log10f.md)
+[log10f —](log-logf-log10-log10f.md)
 
-[log1p](log1p-log1pf-log1pl2.md)
+[log1p —](log1p-log1pf-log1pl2.md)
 
-[log1pf](log1p-log1pf-log1pl2.md)
+[log1pf —](log1p-log1pf-log1pl2.md)
 
 [log1pl](log1p-log1pf-log1pl2.md)
 
-[log2](log2-log2f-log2l.md)
+[log2 —](log2-log2f-log2l.md)
 
-[log2f](log2-log2f-log2l.md)
+[log2f —](log2-log2f-log2l.md)
 
 [log2l](log2-log2f-log2l.md)
 
-[logb](logb-logbf-logbl-logb-logbf.md)
+[logb —](logb-logbf-logbl-logb-logbf.md)
 
-[_logb —](logb-logbf-logbl-logb-logbf.md)
+[_logb](logb-logbf-logbl-logb-logbf.md)
 
-[logbf](logb-logbf-logbl-logb-logbf.md)
+[logbf —](logb-logbf-logbl-logb-logbf.md)
 
 [_logbf](logb-logbf-logbl-logb-logbf.md)
 
 [logbl](logb-logbf-logbl-logb-logbf.md)
 
-[logf](log-logf-log10-log10f.md)
+[logf —](log-logf-log10-log10f.md)
 
 [longjmp](longjmp.md)
 
@@ -1569,11 +1569,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_lrotr](lrotl-lrotr.md)
 
-[lround —](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[lround](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
-[lroundf —](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[lroundf](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
-[lroundl —](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[lroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
 [_lsearch](lsearch.md)
 
@@ -1709,7 +1709,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)
 
-[_mbsdup —](strdup-wcsdup-mbsdup.md)
+[_mbsdup](strdup-wcsdup-mbsdup.md)
 
 [_mbsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
@@ -1915,7 +1915,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [memchr](memchr-wmemchr.md)
 
-[memcmp](memcmp-wmemcmp.md)
+[funkcji memcmp](memcmp-wmemcmp.md)
 
 [memcpy](memcpy-wmemcpy.md)
 
@@ -1929,9 +1929,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [memmove](memmove-wmemmove.md)
 
-[memmove_s —](memmove-s-wmemmove-s.md)
+[memmove_s](memmove-s-wmemmove-s.md)
 
-[memset](memset-wmemset.md)
+[funkcji memset](memset-wmemset.md)
 
 [__min](min.md)
 
@@ -1957,9 +1957,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_mktime64](mktime-mktime32-mktime64.md)
 
-[modf](modf-modff-modfl.md)
+[modf —](modf-modff-modfl.md)
 
-[modff](modf-modff-modfl.md)
+[modff —](modf-modff-modfl.md)
 
 [_msize](msize.md)
 
@@ -1967,23 +1967,23 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 ## <a name="n"></a>N
 
-[nan](nan-nanf-nanl.md)
+[NaN](nan-nanf-nanl.md)
 
-[nanf](nan-nanf-nanl.md)
+[nanf —](nan-nanf-nanl.md)
 
 [nanl](nan-nanf-nanl.md)
 
-[nearbyint](nearbyint-nearbyintf-nearbyintl1.md)
+[nearbyint —](nearbyint-nearbyintf-nearbyintl1.md)
 
-[nearbyintf](nearbyint-nearbyintf-nearbyintl1.md)
+[nearbyintf —](nearbyint-nearbyintf-nearbyintl1.md)
 
 [nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)
 
-[nextafter](nextafter-functions.md)
+[nextafter —](nextafter-functions.md)
 
 [_nextafter](nextafter-functions.md)
 
-[nextafterf](nextafter-functions.md)
+[nextafterf —](nextafter-functions.md)
 
 [_nextafterf](nextafter-functions.md)
 
@@ -1999,27 +1999,27 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [normf](norm-normf-norml1.md)
 
-[norml](norm-normf-norml1.md)
+[Norma](norm-normf-norml1.md)
 
-[not](not.md)
+[niemożliwe](not.md)
 
 [not_eq](not-eq.md)
 
 ## <a name="o"></a>O
 
-[offsetof](offsetof-macro.md)
+[makro OffsetOf](offsetof-macro.md)
 
 [_onexit](onexit-onexit-m.md)
 
 [_onexit_m](onexit-onexit-m.md)
 
-[open](open.md)
+[Otwórz](open.md)
 
 [_open](open-wopen.md)
 
 [_open_osfhandle](open-osfhandle.md)
 
-[or](or.md)
+[lub](or.md)
 
 [or_eq](or-eq.md)
 
@@ -2027,15 +2027,15 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_pclose](pclose.md)
 
-[perror](perror-wperror.md)
+[pError](perror-wperror.md)
 
 [_pipe](pipe.md)
 
 [_popen](popen-wpopen.md)
 
-[Pow](pow-powf-powl.md)
+[pow](pow-powf-powl.md)
 
-[powf](pow-powf-powl.md)
+[powf —](pow-powf-powl.md)
 
 [powl](pow-powf-powl.md)
 
@@ -2073,7 +2073,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_putenv_s](putenv-s-wputenv-s.md)
 
-[umieszcza](puts-putws.md)
+[sumaryczn](puts-putws.md)
 
 [putw](posix-putw.md)
 
@@ -2107,13 +2107,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 ## <a name="r"></a>R
 
-[raise](raise.md)
+[wywołaj](raise.md)
 
-[rand](rand.md)
+[Rand](rand.md)
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[Przeczytaj](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,27 +2125,27 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[Pozostała](remainder-remainderf-remainderl.md)
+[pozostałej części](remainder-remainderf-remainderl.md)
 
-[remainderf](remainder-remainderf-remainderl.md)
+[remainderf —](remainder-remainderf-remainderl.md)
 
-[remainderl](remainder-remainderf-remainderl.md)
+[reszta](remainder-remainderf-remainderl.md)
 
-[remove](remove-wremove.md)
+[usuwa](remove-wremove.md)
 
-[remquo](remquo-remquof-remquol.md)
+[remquo —](remquo-remquof-remquol.md)
 
-[remquof](remquo-remquof-remquol.md)
+[remquof —](remquo-remquof-remquol.md)
 
 [remquol](remquo-remquof-remquol.md)
 
-[Zmień nazwę](rename-wrename.md)
+[ZmieńNazwę](rename-wrename.md)
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[przewijanie](rewind.md)
 
-[rint](rint-rintf-rintl.md)
+[rukuj](rint-rintf-rintl.md)
 
 [rintf](rint-rintf-rintl.md)
 
@@ -2167,11 +2167,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[ROUND](round-roundf-roundl.md)
+[Nit](round-roundf-roundl.md)
 
-[roundf](round-roundf-roundl.md)
+[roundf —](round-roundf-roundl.md)
 
-[roundl —](round-roundf-roundl.md)
+[Zaokrąglij](round-roundf-roundl.md)
 
 [_RPT](rpt-rptf-rptw-rptfw-macros.md)
 
@@ -2201,9 +2201,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [scalblnl](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
 
-[scalbn](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
+[scalbn —](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
 
-[scalbnf](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
+[scalbnf —](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
 
 [scalbnl](scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
 
@@ -2285,27 +2285,27 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_setmbcp](setmbcp.md)
 
-[setmode](posix-setmode.md)
+[setMode](posix-setmode.md)
 
 [_setmode](setmode.md)
 
 [setvbuf](setvbuf.md)
 
-[signal](signal.md)
+[sygnał](signal.md)
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[sinus](sin-sinf-sinl.md)
 
-[sinf](sin-sinf-sinl.md)
+[SINF —](sin-sinf-sinl.md)
 
 [SINH](sinh-sinhf-sinhl.md)
 
-[sinhf](sinh-sinhf-sinhl.md)
+[sinhf —](sinh-sinhf-sinhl.md)
 
-[sinhl](sinh-sinhf-sinhl.md)
+[SINH](sinh-sinhf-sinhl.md)
 
-[sinl —](sin-sinf-sinl.md)
+[sinl](sin-sinf-sinl.md)
 
 [snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
 
@@ -2353,11 +2353,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [spawnle](spawnle.md)
 
-[_spawnle —](spawnle-wspawnle.md)
+[_spawnle](spawnle-wspawnle.md)
 
 [spawnlp](spawnlp.md)
 
-[_spawnlp —](spawnlp-wspawnlp.md)
+[_spawnlp](spawnlp-wspawnlp.md)
 
 [spawnlpe](spawnlpe.md)
 
@@ -2369,7 +2369,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [spawnve](spawnve.md)
 
-[_spawnve —](spawnve-wspawnve.md)
+[_spawnve](spawnve-wspawnve.md)
 
 [spawnvp](spawnvp.md)
 
@@ -2383,7 +2383,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_splitpath_s](splitpath-s-wsplitpath-s.md)
 
-[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
+[sprintf —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
 
 [_sprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
 
@@ -2397,9 +2397,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [sqrt](sqrt-sqrtf-sqrtl.md)
 
-[sqrtf](sqrt-sqrtf-sqrtl.md)
+[sqrtf —](sqrt-sqrtf-sqrtl.md)
 
-[sqrtl](sqrt-sqrtf-sqrtl.md)
+[sqrt](sqrt-sqrtf-sqrtl.md)
 
 [srand](srand.md)
 
@@ -2441,7 +2441,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [strcmpi](strcmpi.md)
 
-[strcoll](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
+[strcoll —](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
 [_strcoll_l](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
@@ -2629,7 +2629,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [strtoumax](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
-[_strtoumax_l —](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
+[_strtoumax_l](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
 [_strupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
@@ -2645,7 +2645,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_strxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
 
-[swab](posix-swab.md)
+[wymaz](posix-swab.md)
 
 [_swab](swab.md)
 
@@ -2675,13 +2675,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[Tan](tan-tanf-tanl.md)
 
-[tanf —](tan-tanf-tanl.md)
+[TANF —](tan-tanf-tanl.md)
 
-[tanh](tanh-tanhf-tanhl.md)
+[TANH —](tanh-tanhf-tanhl.md)
 
-[tanhf](tanh-tanhf-tanhl.md)
+[tanhf —](tanh-tanhf-tanhl.md)
 
 [tanhl](tanh-tanhf-tanhl.md)
 
@@ -2699,15 +2699,15 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[Zakończenie](terminate-crt.md)
+[kończyć](terminate-crt.md)
 
-[tgamma](tgamma-tgammaf-tgammal.md)
+[tgamma —](tgamma-tgammaf-tgammal.md)
 
-[tgammaf](tgamma-tgammaf-tgammal.md)
+[tgammaf —](tgamma-tgammaf-tgammal.md)
 
 [tgammal](tgamma-tgammaf-tgammal.md)
 
-[czas](time-time32-time64.md)
+[pierwszym](time-time32-time64.md)
 
 [_time32](time-time32-time64.md)
 
@@ -2731,13 +2731,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [toascii](toascii-toascii.md)
 
-[tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[ToLower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[ToUpper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
@@ -2749,13 +2749,13 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_towlower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[towupper —](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[towupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-[_towupper_l —](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[_towupper_l](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-[trunc](trunc-truncf-truncl.md)
+[TRUNC —](trunc-truncf-truncl.md)
 
-[truncf](trunc-truncf-truncl.md)
+[truncf —](trunc-truncf-truncl.md)
 
 [truncl](trunc-truncf-truncl.md)
 
@@ -2783,7 +2783,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_ultow_s](itoa-s-itow-s.md)
 
-[umask](posix-umask.md)
+[Maska umask](posix-umask.md)
 
 [_umask](umask.md)
 
@@ -2791,9 +2791,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[oczekiwan](unexpected-crt.md)
 
-[ungetc](ungetc-ungetwc.md)
+[ungetc —](ungetc-ungetwc.md)
 
 [_ungetc_nolock](ungetc-nolock-ungetwc-nolock.md)
 
@@ -2811,7 +2811,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-[unlink](unlink.md)
+[rozłącz](unlink.md)
 
 [_unlink](unlink-wunlink.md)
 
@@ -2889,7 +2889,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [vfwscanf_s](vfscanf-s-vfwscanf-s.md)
 
-[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
+[vprintf —](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
 
 [_vprintf_l](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
 
@@ -3005,7 +3005,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wchdir](chdir-wchdir.md)
 
-[_wchmod —](chmod-wchmod.md)
+[_wchmod](chmod-wchmod.md)
 
 [_wcreat](creat-wcreat.md)
 
@@ -3021,7 +3021,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [wcschr](strchr-wcschr-mbschr-mbschr-l.md)
 
-[wcscmp —](strcmp-wcscmp-mbscmp.md)
+[wcscmp](strcmp-wcscmp-mbscmp.md)
 
 [wcscoll](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
@@ -3037,7 +3037,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsdup](strdup-wcsdup-mbsdup.md)
 
-[wcsdup —](strdup-wcsdup.md)
+[wcsdup](strdup-wcsdup.md)
 
 [_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -3047,7 +3047,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
 
-[__wcserror_s —](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
+[__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
 
 [wcsftime](strftime-wcsftime-strftime-l-wcsftime-l.md)
 
@@ -3055,7 +3055,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
-[wcsicmp —](stricmp-wcsicmp.md)
+[wcsicmp](stricmp-wcsicmp.md)
 
 [_wcsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
@@ -3079,7 +3079,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)
 
-[wcsncat —](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
+[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
 
 [_wcsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
 
@@ -3087,7 +3087,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)
 
-[wcsncmp —](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
 
 [_wcsncnt](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)
 
@@ -3095,7 +3095,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsncoll_l](strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)
 
-[wcsncpy —](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
 
 [_wcsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
 
@@ -3131,9 +3131,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)
 
-[wcspbrk —](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)
+[wcspbrk](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)
 
-[wcsrchr —](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+[wcsrchr](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
 
 [_wcsrev](strrev-wcsrev-mbsrev-mbsrev-l.md)
 
@@ -3157,7 +3157,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsspnp](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)
 
-[wcsstr —](strstr-wcsstr-mbsstr-mbsstr-l.md)
+[wcsstr](strstr-wcsstr-mbsstr-mbsstr-l.md)
 
 [wcstod](strtod-strtod-l-wcstod-wcstod-l.md)
 
@@ -3195,11 +3195,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
-[wcstombs —](wcstombs-wcstombs-l.md)
+[wcstombs](wcstombs-wcstombs-l.md)
 
 [_wcstombs_l](wcstombs-wcstombs-l.md)
 
-[wcstombs_s —](wcstombs-s-wcstombs-s-l.md)
+[wcstombs_s](wcstombs-s-wcstombs-s-l.md)
 
 [_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)
 
@@ -3221,7 +3221,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
-[wcsupr —](strupr-wcsupr.md)
+[wcsupr](strupr-wcsupr.md)
 
 [_wcsupr_l](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
@@ -3247,11 +3247,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [wctob](wctob.md)
 
-[wctomb —](wctomb-wctomb-l.md)
+[wctomb](wctomb-wctomb-l.md)
 
 [_wctomb_l](wctomb-wctomb-l.md)
 
-[wctomb_s —](wctomb-s-wctomb-s-l.md)
+[wctomb_s](wctomb-s-wctomb-s-l.md)
 
 [_wctomb_s_l](wctomb-s-wctomb-s-l.md)
 
@@ -3347,9 +3347,9 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [wmemmove](memmove-wmemmove.md)
 
-[wmemmove_s —](memmove-s-wmemmove-s.md)
+[wmemmove_s](memmove-s-wmemmove-s.md)
 
-[wmemset —](memset-wmemset.md)
+[wmemset](memset-wmemset.md)
 
 [_wmkdir](mkdir-wmkdir.md)
 
@@ -3381,11 +3381,11 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_wremove](remove-wremove.md)
 
-[_wrename —](rename-wrename.md)
+[_wrename](rename-wrename.md)
 
 [_write](write.md)
 
-[write](posix-write.md)
+[prawem](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3491,7 +3491,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [xor_eq](xor-eq.md)
 
-## <a name="y"></a>T
+## <a name="y"></a>Y
 
 [_y0](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3499,12 +3499,12 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[y1](y0-y1-yn.md)
+[Y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
 [yn](y0-y1-yn.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../../c-runtime-library/c-run-time-library-reference.md)<br/>

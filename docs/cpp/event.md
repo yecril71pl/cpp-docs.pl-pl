@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 2adbadecacb41a8e92cd36f55da9b376b4e1b006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1c9fa5a6df4cbb1c18e5d5406bdde0197d155b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227520"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498819"
 ---
 # <a name="__event"></a>__event
 
@@ -77,7 +77,7 @@ Zobacz [Obsługa zdarzeń w modelu COM](../cpp/event-handling-in-com.md) dla prz
 
 Aby uzyskać informacje na temat kodowania zdarzeń w nowej składni, zobacz [Event](../extensions/event-cpp-component-extensions.md).
 
-Zdarzenia zarządzane są elementami członkowskimi lub metodami danych. W przypadku użycia ze zdarzeniem zwracany typ delegata musi być zgodny z [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Zwracany typ procedury obsługi zdarzeń musi być zgodny z typem zwracanym delegata. Aby uzyskać więcej informacji na temat delegatów, zobacz [delegats and Events](../dotnet/delegates-and-events.md). Jeśli zarządzanym zdarzeniem jest element członkowski danych, jego typ musi być wskaźnikiem do delegata.
+Zdarzenia zarządzane są elementami członkowskimi lub metodami danych. W przypadku użycia ze zdarzeniem zwracany typ delegata musi być zgodny z [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Zwracany typ procedury obsługi zdarzeń musi być zgodny z typem zwracanym delegata. Aby uzyskać więcej informacji na temat delegatów, zobacz [delegats and Events](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md). Jeśli zarządzanym zdarzeniem jest element członkowski danych, jego typ musi być wskaźnikiem do delegata.
 
 W .NET Framework można traktować składową danych tak, jakby była to sama metoda (czyli `Invoke` Metoda odpowiedniego delegata). Należy wstępnie zdefiniować typ delegata do deklarowania elementu członkowskiego danych zdarzenia zarządzanego. W przeciwieństwie do zarządzanej metody zdarzenia niejawnie definiuje odpowiadającą zarządzaną delegata, jeśli nie jest jeszcze zdefiniowana. Na przykład można zadeklarować wartość zdarzenia, taką jak `OnClick` zdarzenie w następujący sposób:
 
@@ -127,7 +127,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Obsługa zdarzeń](../cpp/event-handling.md)<br/>

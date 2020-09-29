@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 12b2db55a393928683e65c8faca49595fbbebc51
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389964"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499591"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -23,21 +23,21 @@ Ten artykuł zawiera informacje o narzędziach i wskazówkach dotyczących zabez
 
 Te funkcje zabezpieczeń są wbudowane w kompilator i konsolidator języka Microsoft C++:
 
-[`/guard`(Włącz ochronę przepływu sterowania)](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (Włącz ochronę przepływu sterowania)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Powoduje, że kompilator analizuje przepływ sterowania dla pośrednich celów wywołań w czasie kompilacji, a następnie wstawia kod w celu zweryfikowania obiektów docelowych w czasie wykonywania.
 
-[`/GS`(Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)<br/>
 Instruuje kompilator, aby wstawiał kod wykrywania przepełnienia do funkcji, które są zagrożone. Po wykryciu przekroczenia zostanie zatrzymane wykonywanie operacji. Domyślnie ta opcja jest włączona.
 
-[`/SAFESEH`(Obraz ma bezpieczne procedury obsługi wyjątków)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (Obraz ma bezpieczne procedury obsługi wyjątków)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 Nakazuje konsolidatorowi dołączenie do obrazu wyjściowego tabeli zawierającej adres każdego programu obsługi wyjątków. W czasie wykonywania system operacyjny używa tej tabeli, aby upewnić się, że są wykonywane tylko wiarygodne programy obsługi wyjątków. Pozwala to zapobiec wykonywaniu obsługi wyjątków, które zostały wprowadzone w ramach złośliwego ataku w czasie wykonywania. Domyślnie ta opcja jest wyłączona.
 
 [`/NXCOMPAT`](../build/reference/nxcompat.md), [ `/NXCOMPAT` (Zgodne z zapobieganie wykonywaniu danych)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) te opcje kompilatora i konsolidatora umożliwiają zachowanie zgodności zapobiegania wykonywaniu danych (DEP). Funkcja DEP chroni procesor przed wykonaniem stron niekodowych.
 
-[`/analyze`(Analiza kodu)](../build/reference/analyze-code-analysis.md)<br/>
-Ta opcja kompilatora aktywuje analizę kodu, która zgłasza potencjalne problemy z zabezpieczeniami, takie jak przepełnienie buforu, pamięć niezainicjowana, cofanie odwołania wskaźnika i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla C/C++ — Omówienie](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+[`/analyze` (Analiza kodu)](../build/reference/analyze-code-analysis.md)<br/>
+Ta opcja kompilatora aktywuje analizę kodu, która zgłasza potencjalne problemy z zabezpieczeniami, takie jak przepełnienie buforu, pamięć niezainicjowana, cofanie odwołania wskaźnika i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla C/C++ — Omówienie](../code-quality/code-analysis-for-c-cpp-overview.md).
 
-[`/DYNAMICBASE`(Użyj losowości układu przestrzeni adresowej)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (Użyj losowości układu przestrzeni adresowej)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Ta opcja konsolidatora umożliwia tworzenie obrazu wykonywalnego, który może zostać załadowany w różnych lokalizacjach w pamięci na początku wykonywania. Ta opcja powoduje również, że lokalizacja stosu w pamięci znacznie mniej przewidywalna.
 
 ## <a name="security-enhanced-crt"></a>Ulepszone zabezpieczenia — CRT

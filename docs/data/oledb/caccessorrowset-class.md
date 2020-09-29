@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843290"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498719"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 
@@ -64,7 +64,7 @@ Klasa zestawu wierszy.
 
 | Nazwa | Opis |
 |--|--|
-| [Węglowodor](#bind) | Tworzy powiązania (używane `bBind` , gdy jest określony **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [Węglowodor](#bind) | Tworzy powiązania (używane `bBind` , gdy jest określony **`false`** w [CCommand:: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset](#caccessorrowset) | Konstruktor. |
 | [Zamknij](#close) | Zamyka zestaw wierszy i wszelkie metody dostępu. |
 | [FreeRecordMemory](#freerecordmemory) | Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione. |
@@ -76,7 +76,7 @@ Klasa `TAccessor` zarządza akcesorem. Klasa *TRowset* zarządza zestawem wiersz
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: bind
 
-Tworzy powiązania, jeśli określono `bBind` **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Tworzy powiązania, jeśli określono `bBind` **`false`** w [CCommand:: Open](./ccommand-class.md#open).
 
 ### <a name="syntax"></a>Składnia
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226011"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499831"
 ---
 # <a name="class-c"></a>klasa (C++)
 
@@ -40,7 +40,7 @@ Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zapoznaj się
 *MS-decl-spec*<br/>
 Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zapoznaj się ze słowem kluczowym [__declspec](../cpp/declspec.md) .
 
-*seryjn*<br/>
+*tag*<br/>
 Nazwa typu nadana klasie. Tag zostaje zastrzeżonym słowem w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana Klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
 *Lista podstawowa*<br/>
@@ -50,7 +50,7 @@ Opcjonalna lista klas lub struktur, z których ta klasa będzie dziedziczyć cz�
 Lista elementów członkowskich klasy. Aby uzyskać więcej informacji, zapoznaj się z [omówieniem składowej klasy](../cpp/class-member-overview.md) .
 
 *Deklaratory*<br/>
-Lista deklarator określa nazwy jednego lub większej liczby wystąpień typu klasy. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych klasy są **`public`** . Jest to bardziej popularne w strukturach, których składowe danych są **`public`** Domyślnie, niż w klasach. Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](../cpp/overview-of-declarators.md) .
+Lista deklarator określa nazwy jednego lub większej liczby wystąpień typu klasy. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych klasy są **`public`** . Jest to bardziej popularne w strukturach, których składowe danych są **`public`** Domyślnie, niż w klasach. Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](./declarations-and-definitions-cpp.md) .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -140,7 +140,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832454"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499310"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -42,7 +42,7 @@ Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do pr
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu, a następnie kliknij polecenie **Dodaj** z menu skrótów. Kliknij pozycję **Dodaj klasę**.
 
-   Pojawi się okno dialogowe [Dodaj klasę](../../ide/add-class-dialog-box.md) .
+   Pojawi się okno dialogowe [Dodaj klasę](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) .
 
 1. Po wybraniu folderu **ATL** w okienku **Kategorie** wybierz obiekt do wstawienia z okienka **Szablony** . Kliknij przycisk **Otwórz**. Zostanie wyświetlony Kreator kodu dla wybranego obiektu.
 

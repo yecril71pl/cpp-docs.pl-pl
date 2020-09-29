@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225114"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500381"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid  (C++/CLI i C++/CX)
 
@@ -51,7 +51,7 @@ W języku C++/CX element typeid zwraca [platformę:: Type](../cppcx/platform-typ
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -74,13 +74,13 @@ Nazwa typu (Abstract deklarator), dla którego ma być `System::Type` obiekt.
 
 **`typeid`** musi być w stanie oszacować nazwę typu (Type) w czasie kompilacji, natomiast GetType oblicza typ do zwrócenia w czasie wykonywania.
 
-**`typeid`** może przyjmować nazwę typu natywnego lub alias środowiska uruchomieniowego języka wspólnego dla nazwy typu natywnego; Aby uzyskać więcej informacji [, zobacz .NET Framework odpowiedników typów natywnych języka c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) .
+**`typeid`** może przyjmować nazwę typu natywnego lub alias środowiska uruchomieniowego języka wspólnego dla nazwy typu natywnego; Aby uzyskać więcej informacji [, zobacz .NET Framework odpowiedników typów natywnych języka c++ (c++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet) .
 
 **`typeid`** działa również z typami natywnymi, chociaż nadal zwracają `System::Type` .  Aby uzyskać strukturę type_info, użyj [ `typeid` operatora](../cpp/typeid-operator.md).
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

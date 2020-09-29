@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108435"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500169"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -82,7 +82,7 @@ Jak używać funkcji produktywności w edytorze języka C++ do refaktoryzacji, n
 [Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code)<br/>
 Użyj debugera programu Visual Studio z projektami języka C++.
 
-[Analiza kodu C/C++ — Omówienie](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Analiza kodu C/C++ — Omówienie](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 Użyj adnotacji SAL lub podstawowe wytyczne dotyczące języka C++ych elementów sprawdzających, aby przeprowadzić analizę statyczną.
 
 [Zapisz testy jednostkowe dla C/C++ w programie Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -152,7 +152,7 @@ Algorytmy asynchroniczne i równoległe, wykonywane przez CPU.
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Duże równoległe algorytmy, wykonywane przez GPU.
 
-[Biblioteka szablonów środowisko wykonawcze systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Biblioteka szablonów środowisko wykonawcze systemu Windows (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 Aplikacje i składniki platforma uniwersalna systemu Windows (platformy UWP).
 
 [Programowanie na platformie .NET przy użyciu języka C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

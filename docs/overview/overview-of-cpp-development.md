@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684368"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500277"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
@@ -75,7 +75,7 @@ Jeśli program ma interfejs użytkownika, można użyć projektanta, aby szybko 
 
 Aby uzyskać więcej informacji na temat projektowania interfejsu użytkownika dla aplikacji platforma uniwersalna systemu Windows, zobacz [projektowanie i interfejs](https://developer.microsoft.com/windows/design)użytkownika.
 
-Aby uzyskać więcej informacji na temat tworzenia interfejsu użytkownika dla aplikacji MFC, zobacz [aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md). Aby uzyskać informacje na temat programów Win32 systemu Windows, zobacz [aplikacje klasyczne systemu Windows](../windows/windows-desktop-applications-cpp.md).
+Aby uzyskać więcej informacji na temat tworzenia interfejsu użytkownika dla aplikacji MFC, zobacz [aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md). Aby uzyskać informacje na temat programów Win32 systemu Windows, zobacz [aplikacje klasyczne systemu Windows](../windows/desktop-applications-visual-cpp.md).
 
 ## <a name="write-code"></a>Pisanie kodu
 
@@ -117,7 +117,7 @@ Aby uzyskać więcej informacji, zobacz [Weryfikowanie kodu przy użyciu testów
 
 ## <a name="analyze"></a>Analiza
 
-Program Visual Studio zawiera narzędzia do analizy kodu statycznego, które mogą wykrywać potencjalne problemy w kodzie źródłowym. Te narzędzia obejmują implementację elementów sprawdzania reguł [podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) . Aby uzyskać więcej informacji, zobacz [Analiza kodu dla C/C++ — Omówienie](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+Program Visual Studio zawiera narzędzia do analizy kodu statycznego, które mogą wykrywać potencjalne problemy w kodzie źródłowym. Te narzędzia obejmują implementację elementów sprawdzania reguł [podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) . Aby uzyskać więcej informacji, zobacz [Analiza kodu dla C/C++ — Omówienie](../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ## <a name="deploy-completed-applications"></a>Wdrażanie ukończonych aplikacji
 

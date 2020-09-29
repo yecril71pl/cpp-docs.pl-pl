@@ -12,16 +12,16 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292305"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500099"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Scalaj wprowadzony kod)
 
-Tworzy kopię każdego pliku źródłowego z kodem scalane w źródle.
+Tworzy kopię każdego pliku źródłowego z wstrzykniętym kodem scalonym ze źródłem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ Tworzy kopię każdego pliku źródłowego z kodem scalane w źródle.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby rozróżnić pliku źródłowego scalone z oryginalnego pliku źródłowego **/Fx** dodanie rozszerzenia .mrg między nazwę pliku i rozszerzenie pliku. Na przykład plik o nazwie MyCode.cpp zawierające kod opartego na atrybutach i utworzonych za pomocą **/Fx** tworzy plik o nazwie MyCode.mrg.cpp zawierający następujący kod:
+Aby odróżnić scalony plik źródłowy od oryginalnego pliku źródłowego, **/FX** dodaje rozszerzenie. MRG między nazwą pliku a rozszerzeniem pliku. Na przykład plik o nazwie Moja Code. cpp zawierający kod z atrybutem i utworzony za pomocą **/FX** tworzy plik o nazwie MRG. cpp zawierający następujący kod:
 
 ```
 //+++ Start Injected Code
@@ -44,7 +44,7 @@ Aby rozróżnić pliku źródłowego scalone z oryginalnego pliku źródłowego 
 //--- End Injected Code
 ```
 
-W pliku .mrg kod, który został wprowadzony ze względu na atrybut będzie rozdzielonych w następujący sposób:
+W pliku. MRG kod, który został wstrzyknięty ze względu na atrybut, zostanie rozdzielony w następujący sposób:
 
 ```
 //+++ Start Injected Code
@@ -52,30 +52,30 @@ W pliku .mrg kod, który został wprowadzony ze względu na atrybut będzie rozd
 //--- End Injected Code
 ```
 
-[No_injected_text](../../windows/no-injected-text.md) atrybutu jest osadzony w pliku .mrg, który umożliwia kompilacji pliku .mrg bez tekstu jest reinjected.
+Atrybut [No_injected_text](../../windows/attributes/no-injected-text.md) jest osadzony w pliku. MRG, który umożliwia Kompilowanie pliku. MRG bez odwstrzykiwania tekstu.
 
-Należy pamiętać, że plik źródłowy .mrg ma być reprezentację kodu źródłowego, które są wstrzykiwane przez kompilator. Plik .mrg mogą kompilacji albo nie działać dokładnie jako oryginalnego pliku źródłowego.
+Należy pamiętać, że plik źródłowy. MRG jest przeznaczony do reprezentowania kodu źródłowego wstrzykiwanego przez kompilator. Plik. MRG może nie kompilować ani działać dokładnie jako oryginalny plik źródłowy.
 
-Makra nie zostaną rozwinięte w pliku .mrg.
+Makra nie są rozwinięte w pliku. MRG.
 
-Jeśli program obejmuje pliku nagłówka, który używa wprowadzonego kodu **/Fx** generuje. mrg.h w pliku nagłówka. **/FX** scalania nie obejmuje pliki, które nie korzystają z kodem.
+Jeśli program zawiera plik nagłówka, który używa wstrzykniętego kodu, **/FX** generuje plik. MRG. h dla tego nagłówka. **/FX** nie scala plików dołączanych, które nie używają wstrzykniętego kodu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++** .
 
-1. Kliknij przycisk **pliki wyjściowe** stronę właściwości.
+1. Kliknij stronę właściwości **pliki wyjściowe** .
 
-1. Modyfikowanie **rozwiń źródła opartego na atrybutach** właściwości.
+1. Zmodyfikuj właściwość **rozszerzonego atrybutu Source** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[Opcje pliku wyjściowego (/F)](output-file-f-options.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -6,56 +6,56 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706902"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499452"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
 ::: moniker range="vs-2019"
 
-Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Strony właściwości są obiektów COM, które implementują `IPropertyPage` lub `IPropertyPage2` interfejsu. ATL zapewnia obsługę implementowania strony właściwości, za pośrednictwem [Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md).
+Strony właściwości to obiekty COM implementujące `IPropertyPage` interfejs lub `IPropertyPage2` . ATL zapewnia obsługę implementowania stron właściwości za pomocą [Kreatora strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [oknie dialogowym Dodaj klasę](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
 Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
 
-- Utwórz lub Otwórz projekt serwera ATL dołączana dynamicznie biblioteka (DLL).
+- Utwórz lub Otwórz projekt serwera biblioteki dołączanej dynamicznie (DLL) ATL.
 
-- Otwórz [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md) i wybierz **strony właściwości ATL**.
+- Otwórz okno [dialogowe Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) i wybierz opcję **Strona właściwości ATL**.
 
-- Upewnij się, że strona właściwości jest typu apartment Threading (ponieważ ma on interfejsu użytkownika).
+- Upewnij się, że strona właściwości jest komórką Apartment (ponieważ ma interfejs użytkownika).
 
-- Ustaw tytuł, opis (Doc String) i plik pomocy do skojarzenia z Twojej strony.
+- Ustaw tytuł, opis (doc String) i plik pomocy, który ma zostać skojarzony ze stroną.
 
-- Dodawanie formantów do okna dialogowego wygenerowanego pełnić rolę interfejsu użytkownika strony właściwości.
+- Dodaj formanty do wygenerowanego zasobu okna dialogowego, aby pełnić rolę interfejsu użytkownika strony właściwości.
 
-- Odpowiadanie na zmiany w interfejsie użytkownika strony do przeprowadzenia weryfikacji, zaktualizuj lokację strony lub zaktualizować obiekty skojarzone z Twojej strony. W szczególności należy wywołać [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) po użytkownik wprowadza zmiany do strony właściwości.
+- Odpowiedz na zmiany w interfejsie użytkownika strony, aby przeprowadzić walidację, zaktualizować witrynę strony lub zaktualizować obiekty skojarzone ze stroną. W szczególności należy wywołać metodę [IPropertyPageImpl:: SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) , gdy użytkownik wprowadza zmiany na stronie właściwości.
 
-- Opcjonalnie zastąpić `IPropertyPageImpl` metod, korzystając z poniższych wskazówek.
+- Opcjonalnie Przesłoń `IPropertyPageImpl` metody, korzystając z poniższych wskazówek.
 
-   |Metoda IPropertyPageImpl|Zastąp, jeśli chcesz...|Uwagi|
+   |IPropertyPageImpl, Metoda|Przesłoń, gdy chcesz...|Uwagi|
    |------------------------------|----------------------------------|-----------|
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Wykonaj podstawowe wykonuje testów liczbę obiektów, które były przekazywane do strony swojego i interfejsy, które obsługują.|Wykonaj swój kod przed wywołaniem implementacji klasy podstawowej. Jeśli obiekty ustawiania nie odpowiada Twoim oczekiwaniom, wywołanie powinno nie tak szybko, jak to możliwe.|
-   |[Aktywuj](../atl/reference/ipropertypageimpl-class.md#activate)|Zainicjuj na stronie interfejsu użytkownika (na przykład ustawić formanty okna dialogowego za pomocą bieżące wartości właściwości z obiektów, dynamicznie utworzyć formanty lub wykonać inne inicjalizacje).|Wywołania implementacji klasy podstawowej zanim kod tak, aby klasa bazowa ma możliwość tworzenia okna dialogowego i wszystkich kontrolek, przed podjęciem próby je zaktualizować.|
-   |[Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply)|Sprawdź poprawność ustawień właściwości i zaktualizować obiektów.|Nie ma potrzeby wywoływały implementację klasy podstawowej, ponieważ nie robi nic, oprócz śledzenia wywołania.|
-   |[Dezaktywuj](../atl/reference/ipropertypageimpl-class.md#deactivate)|Wyczyść elementy związane z okna.|Implementacja klasy bazowej niszczy okno dialogowe reprezentujący stronę właściwości. Jeśli musisz wyczyścić przed jest niszczony, okno dialogowe, należy dodać kod przed wywołaniem klasy bazowej.|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Wykonaj podstawowe testy Sanity na liczbę obiektów, które są przesyłane do strony, oraz obsługiwane przez nich interfejsy.|Wykonaj własny kod przed wywołaniem implementacji klasy bazowej. Jeśli ustawione obiekty nie są zgodne z oczekiwaniami, należy wykonać wywołanie najszybciej, jak to możliwe.|
+   |[Zdezaktywować](../atl/reference/ipropertypageimpl-class.md#activate)|Zainicjuj interfejs użytkownika strony (na przykład ustaw kontrolki okna dialogowego z bieżącymi wartościami właściwości z obiektów, twórz formanty dynamicznie lub wykonuj inne inicjalizacje).|Wywołaj implementację klasy bazowej przed kodem, aby Klasa bazowa mogła utworzyć okno dialogowe i wszystkie formanty przed próbą ich aktualizacji.|
+   |[Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply)|Sprawdź poprawność ustawień właściwości i zaktualizuj obiekty.|Nie ma potrzeby wywoływania implementacji klasy podstawowej, ponieważ nie ma nic więcej od śledzenia wywołania.|
+   |[Dezaktywuj](../atl/reference/ipropertypageimpl-class.md#deactivate)|Wyczyść elementy związane z oknem.|Implementacja klasy bazowej niszczy okno dialogowe reprezentujące stronę właściwości. Aby wyczyścić przed zniszczeniem okna dialogowego, należy dodać kod przed wywołaniem klasy bazowej.|
 
-Przykładem implementacji strony właściwości, można zobaczyć [przykładu: Implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).
+Aby zapoznać się z przykładową implementacją strony właściwości, zobacz [przykład: implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Chcąc formantów ActiveX hosta na stronie właściwości, należy zmienić pochodnym klasy generowane przez kreatora. Zastąp **CDialogImpl\<CYourClass >** z **CAxDialogImpl\<CYourClass >** na liście klas bazowych.
+> Jeśli chcesz hostować kontrolki ActiveX na stronie właściwości, musisz zmienić sposób wyprowadzania klasy generowanej przez kreatora. Zastąp **CDialogImpl \<CYourClass> ** z **CAxDialogImpl \<CYourClass> ** na liście klas bazowych.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
-[Przykładowe ATLPages](../overview/visual-cpp-samples.md)
+[Przykład ATLPages](../overview/visual-cpp-samples.md)

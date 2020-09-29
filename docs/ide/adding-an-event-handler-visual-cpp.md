@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447509"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499647"
 ---
 # <a name="add-an-event-handler"></a>Dodawanie procedury obsługi zdarzeń
 
@@ -38,7 +38,7 @@ Można dodać zdarzenie do klasy implementującej okno dialogowe przy użyciu [o
 
    Jeśli wybrany typ komunikatu ma już procedurę obsługi zdarzeń dla wybranej klasy, **Dodawanie i edytowanie** jest niedostępne, a **Edycja kodu** jest dostępna. Wybierz pozycję **Edytuj kod** , aby otworzyć Edytor tekstu w istniejącej funkcji.
 
-Można też dodać procedury obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window). Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Można też dodać procedury obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window). Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-editing-or-deleting-controls.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -46,19 +46,19 @@ Można też dodać procedury obsługi zdarzeń z [okno właściwości](/visualst
 
 ## <a name="event-handler-wizard"></a>Kreator obsługi zdarzeń
 
-Ten Kreator dodaje procedurę obsługi zdarzeń dla kontrolki okna dialogowego do wybranej klasy. Jeśli dodasz procedurę obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window), możesz dodać ją tylko do klasy, która implementuje okno dialogowe. Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Ten Kreator dodaje procedurę obsługi zdarzeń dla kontrolki okna dialogowego do wybranej klasy. Jeśli dodasz procedurę obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window), możesz dodać ją tylko do klasy, która implementuje okno dialogowe. Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-editing-or-deleting-controls.md).
 
 - **Nazwa polecenia**
 
   Identyfikuje wybraną kontrolkę, dla której dodano procedurę obsługi zdarzeń. To pole jest niedostępne.
 
-- **Typ komunikatu**
+- **Typ wiadomości**
 
   Wyświetla listę bieżących możliwych programów obsługi komunikatów dla wybranej kontrolki.
 
 - **Nazwa procedury obsługi funkcji**
 
-  Wyświetla nazwę funkcji dodanej do obsłużenia zdarzenia. Nazwa jest domyślnie oparta na typie komunikatu i poleceniu, poprzedzone przez `On`. Na przykład dla przycisku o nazwie `IDC_BUTTON1`, typ komunikatu `BN_CLICKED` wyświetla nazwę procedury obsługi funkcji `OnBnClickedButton1`.
+  Wyświetla nazwę funkcji dodanej do obsłużenia zdarzenia. Nazwa jest domyślnie oparta na typie komunikatu i poleceniu, poprzedzone przez `On` . Na przykład dla przycisku o nazwie `IDC_BUTTON1` typ komunikatu `BN_CLICKED` wyświetla nazwę procedury obsługi funkcji `OnBnClickedButton1` .
 
 - **Lista klas**
 

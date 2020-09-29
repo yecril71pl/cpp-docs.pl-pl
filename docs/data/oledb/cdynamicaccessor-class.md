@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838207"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498678"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor — Klasa
 
@@ -176,7 +176,7 @@ class CDynamicAccessor : public CAccessorBase
 
 Użyj `CDynamicAccessor` metod, aby uzyskać informacje o kolumnach, takie jak nazwy kolumn, liczba kolumn, typ danych i tak dalej. Następnie za pomocą tych informacji można utworzyć metodę dostępu dynamicznie w czasie wykonywania.
 
-Informacje o kolumnie są przechowywane w buforze, który jest tworzony i zarządzany przez tę klasę. Pobierz dane z buforu przy użyciu [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).
+Informacje o kolumnie są przechowywane w buforze, który jest tworzony i zarządzany przez tę klasę. Pobierz dane z buforu przy użyciu [GetValue](#getvalue).
 
 Aby zapoznać się z omówieniem i przykładami dotyczącymi korzystania z klas akcesorów dynamicznych, zobacz [Używanie dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).
 
@@ -217,10 +217,10 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### <a name="parameters"></a>Parametry
 
 *eBlobHandling*<br/>
-Określa, jak mają być obsługiwane dane binarne obiektów binarnych (BLOB). Wartość domyślna to DBBLOBHANDLING_DEFAULT. Zobacz [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) , aby uzyskać opis wartości DBBLOBHANDLINGENUM.
+Określa, jak mają być obsługiwane dane binarne obiektów binarnych (BLOB). Wartość domyślna to DBBLOBHANDLING_DEFAULT. Zobacz [SetBlobHandling](#setblobhandling) , aby uzyskać opis wartości DBBLOBHANDLINGENUM.
 
 *nBlobSize*<br/>
-Maksymalny rozmiar obiektu BLOB w bajtach; dane kolumny za tą wartością są traktowane jako obiekty BLOB. Wartość domyślna to 8 000. Aby uzyskać szczegółowe informacje, zobacz [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) .
+Maksymalny rozmiar obiektu BLOB w bajtach; dane kolumny za tą wartością są traktowane jako obiekty BLOB. Wartość domyślna to 8 000. Aby uzyskać szczegółowe informacje, zobacz [SetBlobSizeLimit](#setblobsizelimit) .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -250,7 +250,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość obsługi obiektu BLOB *eBlobHandling* jako ustawioną przez [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
+Zwraca wartość obsługi obiektu BLOB *eBlobHandling* jako ustawioną przez [SetBlobHandling](#setblobhandling).
 
 ## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor:: GetBlobSizeLimit
 
@@ -264,7 +264,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość obsługi obiektu BLOB *nBlobSize* jako ustawioną przez [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
+Zwraca wartość obsługi obiektu BLOB *nBlobSize* jako ustawioną przez [SetBlobSizeLimit](#setblobsizelimit).
 
 ## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: GetBookmark
 

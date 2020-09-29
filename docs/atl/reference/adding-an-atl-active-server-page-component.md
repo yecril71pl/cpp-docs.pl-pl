@@ -1,15 +1,15 @@
 ---
-title: Dodawanie składnika strony Active Server ATL
+title: Dodawanie składnika strony Active Server Page ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0180077de7ab96cb75736d34e112731e47b9589b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075297"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499358"
 ---
-# <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
+# <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server Page ATL
 
 ::: moniker range="vs-2019"
 
@@ -19,7 +19,7 @@ Kreator składnika strony Active Server ATL nie jest dostępny w programie Visua
 
 ::: moniker range="<=vs-2017"
 
-Aby dodać obiekt Active Template Library (ATL) do projektu, projekt musi zostać utworzony jako aplikacja ATL COM lub jako aplikacja MFC, która zawiera obsługę ATL. Możesz użyć [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md) do utworzenia aplikacji ATL, możesz wybrać opcję **Dodaj obsługę ATL do MFC** z okna dialogowego [Dodaj klasę](../../ide/add-class-dialog-box.md) lub [dodać obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
+Aby dodać obiekt Active Template Library (ATL) do projektu, projekt musi zostać utworzony jako aplikacja ATL COM lub jako aplikacja MFC, która zawiera obsługę ATL. Możesz użyć [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md) do utworzenia aplikacji ATL, możesz wybrać opcję **Dodaj obsługę ATL do MFC** z okna dialogowego [Dodaj klasę](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) lub [dodać obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
 
 Składniki stron Active Server są częścią architektury Internet Information Services, która udostępnia następujące zaawansowane funkcje Web Development:
 
@@ -35,7 +35,7 @@ Składniki stron Active Server są częścią architektury Internet Information 
 
 1. W menu skrótów kliknij polecenie **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
-1. W oknie dialogowym [Dodawanie klasy](../../ide/add-class-dialog-box.md) w okienku **Szablony** kliknij pozycję **ATL Active Server Strona składnika**, a następnie kliknij przycisk **otwórz** , aby wyświetlić [Kreatora składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. W oknie dialogowym [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) w okienku **Szablony** kliknij pozycję **ATL Active Server Strona składnika**, a następnie kliknij przycisk **otwórz** , aby wyświetlić [Kreatora składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 

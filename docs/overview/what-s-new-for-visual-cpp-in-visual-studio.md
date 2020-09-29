@@ -4,18 +4,18 @@ description: Nowe funkcje i poprawki w kompilatorze i narzędziach Microsoft C/C
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684749"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500271"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Program Visual Studio 2019 oferuje wiele aktualizacji i poprawek do środowiska Microsoft C++. Rozwiązano wiele usterek i problemów w kompilatorze i narzędziach. Wiele z tych problemów zostało przesłanych przez klientów w wyniku [zgłoszenia problemu](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) i [udostępnienia opcji sugestii](https://developercommunity.visualstudio.com/spaces/62/index.html) w obszarze **Wyślij opinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat nowości we wszystkich wersjach programu Visual Studio, zobacz [co nowego w programie Visual studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2017, zobacz [co nowego w języku c++ w programie Visual studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2015 i jego wcześniejszych wersjach, zobacz [Visual C++ co nowego 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Program Visual Studio 2019 oferuje wiele aktualizacji i poprawek do środowiska Microsoft C++. Rozwiązano wiele usterek i problemów w kompilatorze i narzędziach. Wiele z tych problemów zostało przesłanych przez klientów w wyniku [zgłoszenia problemu](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) i [udostępnienia opcji sugestii](https://developercommunity.visualstudio.com/spaces/62/index.html) w obszarze **Wyślij opinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat nowości we wszystkich wersjach programu Visual Studio, zobacz [co nowego w programie Visual studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2017, zobacz [co nowego w języku c++ w programie Visual studio 2017](?preserve-view=true&view=vs-2017). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2015 i jego wcześniejszych wersjach, zobacz [Visual C++ co nowego 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="c-compiler"></a>kompilator C++
 
@@ -240,7 +240,7 @@ Szablon zarządzanego projektu testowego w języku C++ nie jest już dostępny. 
 
 ::: moniker range="=vs-2017"
 
-Program Visual Studio 2017 udostępnia wiele aktualizacji i poprawek do środowiska języka C++. Naprawiono ponad 250 usterek i zgłoszono problemy w kompilatorze i narzędziach. Wiele przesłanych przez klientów w wyniku [zgłoszenia problemu i udostępnienia opcji sugestii](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) w obszarze **Wyślij opinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat nowości we wszystkich wersjach programu Visual Studio, zobacz [co nowego w programie Visual studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2019, zobacz [co nowego w języku c++ w programie Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2015 i jego wcześniejszych wersjach, zobacz [Visual C++ co nowego 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Program Visual Studio 2017 udostępnia wiele aktualizacji i poprawek do środowiska języka C++. Naprawiono ponad 250 usterek i zgłoszono problemy w kompilatorze i narzędziach. Wiele przesłanych przez klientów w wyniku [zgłoszenia problemu i udostępnienia opcji sugestii](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) w obszarze **Wyślij opinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat nowości we wszystkich wersjach programu Visual Studio, zobacz [co nowego w programie Visual studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2019, zobacz [co nowego w języku c++ w programie Visual Studio](?preserve-view=true&view=vs-2019). Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2015 i jego wcześniejszych wersjach, zobacz [Visual C++ co nowego 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="visual-studio-2017-c-compiler"></a>Kompilator języka Visual Studio 2017 C++
 
@@ -254,7 +254,7 @@ Kompilator obsługuje około 75% funkcji, które są nowością w języku C++ 17
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
-Zestaw narzędzi kompilatora MSVC w programie Visual Studio w wersji 15,7 jest teraz zgodny ze standardem C++. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie: MSVC jest zgodny ze standardem c++](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) i [zgodnym z językiem Microsoft c++](../visual-cpp-language-conformance.md).
+Zestaw narzędzi kompilatora MSVC w programie Visual Studio w wersji 15,7 jest teraz zgodny ze standardem C++. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie: MSVC jest zgodny ze standardem c++](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) i [zgodnym z językiem Microsoft c++](./visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 w wersji 15,8
 
@@ -363,7 +363,7 @@ Program Visual Studio 2017 RTM zawiera więcej ulepszeń biblioteki standardowej
 - Dodano \<optional\> , \<variant\> , `shared_ptr::weak_type` , i \<cstdalign\> .
 - Włączono C++ 14 **`constexpr`** w `min(initializer_list)` , `max(initializer_list)` , i `minmax(initializer_list)` ,, `min_element()` i `max_element()` `minmax_element()` .
 
-Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](../visual-cpp-language-conformance.md).
+Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](./visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017, wersja 15.3
 
@@ -425,7 +425,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 - `constexpr char_traits`
 - Wskazówki dotyczące odejmowania dla standardowej biblioteki
 
-Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](../visual-cpp-language-conformance.md).
+Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](./visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Poprawki wydajności i przepływności
 
@@ -647,7 +647,7 @@ Zestaw narzędzi Clang/C2 dostarczany z programem Visual Studio 2017 obsługuje 
 
 ## <a name="c-code-analysis"></a>Analiza kodu w języku C++
 
-Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines) są obecnie dystrybuowane z programem Visual Studio. Włącz kontrolki na stronie **rozszerzenia analizy kodu** na stronach właściwości projektu. Rozszerzenia są następnie dołączane podczas uruchamiania analizy kodu. Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
+Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines) są obecnie dystrybuowane z programem Visual Studio. Włącz kontrolki na stronie **rozszerzenia analizy kodu** na stronach właściwości projektu. Rozszerzenia są następnie dołączane podczas uruchamiania analizy kodu. Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](../code-quality/using-the-cpp-core-guidelines-checkers.md).
 
 ![Zrzut ekranu przedstawiający okno dialogowe strony właściwości, w którym są wyświetlane właściwości konfiguracji > analizy kodu > ogólne wybrane i wiele testów podstawowych wymienionych w sekcji Uruchom ten zestaw reguł.](media/CppCoreCheck.png "Strona właściwości CppCoreCheck")
 
@@ -668,7 +668,7 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
 - Dodano obsługę [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) , która umożliwia określenie reguł analizy kodu do uruchomienia.
-- Dodano obsługę dodatkowych reguł podstawowe wytyczne dotyczące języka C++.  Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
+- Dodano obsługę dodatkowych reguł podstawowe wytyczne dotyczące języka C++.  Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](../code-quality/using-the-cpp-core-guidelines-checkers.md).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Testy jednostkowe w programie Visual Studio 2017
 
@@ -737,12 +737,12 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 ::: moniker range="=vs-2015"
 
-Aby zapoznać się z pełną listą nowości w programie Visual Studio 2015 Update 3, zobacz [Visual C++ co nowego 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Aby zapoznać się z pełną listą nowości w programie Visual Studio 2015 Update 3, zobacz [Visual C++ co nowego 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 Aby uzyskać więcej informacji na temat nowości we wszystkich wersjach programu Visual Studio 2015, zobacz informacje o wersji. Są one połączone z [historią informacji o wersji programu Visual Studio 2015](/visualstudio/releasenotes/vs2015-version-history).
 
-Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2019, zobacz [co nowego w języku c++ w programie Visual studio 2019](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true).
+Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2019, zobacz [co nowego w języku c++ w programie Visual studio 2019](?preserve-view=true&view=vs-2019).
 
-Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2017, zobacz [co nowego w języku c++ w programie Visual studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true).
+Aby uzyskać informacje na temat Nowości w języku C++ w programie Visual Studio 2017, zobacz [co nowego w języku c++ w programie Visual studio 2017](?preserve-view=true&view=vs-2017).
 
 ::: moniker-end

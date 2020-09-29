@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 7866afd26c901181f2b4193a87daf5dca2b0c67f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226688"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499574"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementowanie okna dialogowego
 
@@ -20,7 +20,7 @@ Istnieją dwa sposoby dodawania okna dialogowego do projektu ATL: Użyj Kreatora
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Dodawanie okna dialogowego przy użyciu kreatora okna dialogowego ATL
 
-W [oknie dialogowym Dodawanie klasy](../ide/add-class-dialog-box.md)wybierz obiekt okna dialogowego ATL, aby dodać okno dialogowe do projektu ATL. Wypełnij odpowiednie pola w Kreatorze okna dialogowego ATL i kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodzącą od [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Otwórz **Widok zasobów** z menu **Widok** , Znajdź okno dialogowe, a następnie kliknij je dwukrotnie, aby otworzyć je w edytorze zasobów.
+W [oknie dialogowym Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)wybierz obiekt okna dialogowego ATL, aby dodać okno dialogowe do projektu ATL. Wypełnij odpowiednie pola w Kreatorze okna dialogowego ATL i kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodzącą od [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Otwórz **Widok zasobów** z menu **Widok** , Znajdź okno dialogowe, a następnie kliknij je dwukrotnie, aby otworzyć je w edytorze zasobów.
 
 > [!NOTE]
 > Jeśli Twoje okno dialogowe pochodzi od `CAxDialogImpl` , może hostować zarówno kontrolki ActiveX, jak i Windows. Jeśli nie chcesz obciążać obsługi formantów ActiveX w klasie okna dialogowego, zamiast tego użyj [CSimpleDialog](../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../atl/reference/cdialogimpl-class.md) .
@@ -34,7 +34,7 @@ Zaimplementowanie okna dialogowego jest podobne do implementującego okno. Klasa
 > [!NOTE]
 > Gdy tworzysz okno dialogowe przy użyciu kreatora okna dialogowego ATL, Kreator automatycznie doda `IDD` element członkowski jako **`enum`** Typ.
 
-`CDialogImpl`umożliwia zaimplementowanie modalnego lub niemodalnego okna dialogowego, które obsługuje formanty systemu Windows. `CAxDialogImpl`umożliwia zaimplementowanie modalnego lub niemodalnego okna dialogowego, które obsługuje kontrolki ActiveX i okna.
+`CDialogImpl` umożliwia zaimplementowanie modalnego lub niemodalnego okna dialogowego, które obsługuje formanty systemu Windows. `CAxDialogImpl` umożliwia zaimplementowanie modalnego lub niemodalnego okna dialogowego, które obsługuje kontrolki ActiveX i okna.
 
 Aby utworzyć modalne okno dialogowe, Utwórz wystąpienie `CDialogImpl` klasy pochodnej (lub `CAxDialogImpl` pochodnej), a następnie Wywołaj metodę [DoModal](../atl/reference/cdialogimpl-class.md#domodal) . Aby zamknąć modalne okno dialogowe, wywołaj metodę [zdarzenie EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) z procedury obsługi komunikatów. Aby utworzyć niemodalne okno dialogowe, wywołaj metodę [Create](../atl/reference/cdialogimpl-class.md#create) zamiast `DoModal` . Aby zniszczyć niemodalne okno dialogowe, wywołaj [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).
 
@@ -46,6 +46,6 @@ Następująca Klasa implementuje okno dialogowe:
 
 [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy okien](../atl/atl-window-classes.md)

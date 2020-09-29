@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4cd7444d18d26124f8c3c642bba55fb7592f5c8b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075273"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499320"
 ---
 # <a name="adding-an-atl-property-page"></a>Dodawanie strony właściwości ATL
 
@@ -31,12 +31,12 @@ Jeśli dodajesz stronę właściwości kontrolki, formant musi obsługiwać inte
 
 1. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj klasę**.
 
-1. W oknie dialogowym [Dodawanie klasy](../../ide/add-class-dialog-box.md) w okienku **Szablony** kliknij pozycję **Strona właściwości ATL** , a następnie kliknij przycisk **Otwórz** , aby wyświetlić [Kreatora strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md).
+1. W oknie dialogowym [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) w okienku **Szablony** kliknij pozycję **Strona właściwości ATL** , a następnie kliknij przycisk **Otwórz** , aby wyświetlić [Kreatora strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md).
 
 Po utworzeniu strony właściwości dla kontrolki musisz podać wpis [PROP_PAGE](property-map-macros.md#prop_page) w mapie właściwości dla kontrolki.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Strony właściwości](../../atl/atl-com-property-pages.md)<br/>
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
+[Podstawowe informacje o obiektach COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Przykład: implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214857"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500589"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -83,7 +83,7 @@ Dołącz nagłówek STL/CLR `<cliext/utility>` w celu zdefiniowania klasy szablo
 
 ## <a name="members"></a>Elementy członkowskie
 
-## <a name="pair-stlclr"></a><a name="pair"></a>para (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a> para (STL/CLR)
 
 Klasa szablonu opisuje obiekt, który zawija parę wartości.
 
@@ -128,7 +128,7 @@ Typ drugiej opakowanej wartości.
 
 Obiekt przechowuje parę wartości. Ta klasa szablonu służy do łączenia dwóch wartości w jeden obiekt. Ponadto obiekt `cliext::pair` (opisany tutaj) przechowuje tylko typy zarządzane; aby można było przechowywać parę typów niezarządzanych `std::pair` , zadeklarowanych w `<utility>` .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>para:: First (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a> para:: First (STL/CLR)
 
 Pierwsza opakowana wartość.
 
@@ -165,7 +165,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>para:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a> para:: first_type (STL/CLR)
 
 Typ pierwszej opakowanej wartości.
 
@@ -202,7 +202,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>para:: operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a> para:: operator = (STL/CLR)
 
 Zastępuje składowaną parę wartości.
 
@@ -246,7 +246,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>para::p powietrze (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a> para::p powietrze (STL/CLR)
 
 Konstruuje obiekt pary.
 
@@ -282,11 +282,11 @@ Konstruktor:
 
 `pair(pair<Value1, Value2>% right);`
 
-Inicjuje składowaną parę z `right.` [parą:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right.` [parę:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicjuje składowaną parę z `right.` [parą:: First (STL/CLR)](#first) i `right.` [parę:: Second (STL/CLR)](#second).
 
 `pair(pair<Value1, Value2>^ right);`
 
-Inicjuje składowaną parę z `right->` [parą:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right>` [parę:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicjuje składowaną parę z `right->` [parą:: First (STL/CLR)](#first) i `right>` [parę:: Second (STL/CLR)](#second).
 
 Konstruktor:
 
@@ -331,7 +331,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>para:: Second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a> para:: Second (STL/CLR)
 
 Druga opakowana wartość.
 
@@ -368,7 +368,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>para:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a> para:: second_type (STL/CLR)
 
 Typ drugiej opakowanej wartości.
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>para:: swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a> para:: swap (STL/CLR)
 
 Zamienia zawartość dwóch par.
 
@@ -474,7 +474,7 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
+## <a name="make_pair-stlclr"></a><a name="make_pair"></a> make_pair (STL/CLR)
 
 Utwórz `pair` z pary wartości.
 
@@ -527,7 +527,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (para) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a> operator! = (para) (STL/CLR)
 
 Para nie jest równa porównaniu.
 
@@ -581,7 +581,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operator &lt; (para) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a> operator &lt; (para) (STL/CLR)
 
 Para jest mniejsza niż porównanie.
 
@@ -635,7 +635,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator &lt; = (para) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a> operator &lt; = (para) (STL/CLR)
 
 Para jest mniejsza niż lub równa.
 
@@ -689,7 +689,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (para) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a> operator = = (para) (STL/CLR)
 
 Porównanie równości pary.
 
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operator &gt; (para) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a> operator &gt; (para) (STL/CLR)
 
 Para większa niż porównanie.
 
@@ -797,7 +797,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator &gt; = (para) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a> operator &gt; = (para) (STL/CLR)
 
 Para większa niż lub równa porównywania.
 

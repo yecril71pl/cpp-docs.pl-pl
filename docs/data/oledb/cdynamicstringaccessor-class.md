@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838168"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498665"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor — Klasa
 
@@ -51,7 +51,7 @@ Natywny typ danych kolumn w magazynie danych nie ma znaczenia; tak długo, jak d
 
 Użyj `CDynamicStringAccessor` metod, aby uzyskać informacje o kolumnie. Te informacje o kolumnie służą do dynamicznego tworzenia akcesora w czasie wykonywania.
 
-Informacje o kolumnie są przechowywane w buforze utworzonym i zarządzanym przez tę klasę. Pobierz dane z buforu za pomocą polecenia [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)lub Zapisz je w buforze przy użyciu polecenia [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Informacje o kolumnie są przechowywane w buforze utworzonym i zarządzanym przez tę klasę. Pobierz dane z buforu za pomocą polecenia [GetString](#getstring)lub Zapisz je w buforze przy użyciu polecenia [SetString](#setstring).
 
 Aby zapoznać się z omówieniem i przykładami dotyczącymi korzystania z klas akcesorów dynamicznych, zobacz [Używanie dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).
 

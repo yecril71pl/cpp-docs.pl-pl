@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743311"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499713"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -417,7 +417,7 @@ Pierwszy argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca [binder1st — (STL/CLR)](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego pierwszego argumentu w Funktor jednoargumentowym, który wywołuje ją z drugim argumentem.
+Funkcja Template zwraca [binder1st — (STL/CLR)](#binder1st) `<Fun>(functor, left)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego pierwszego argumentu w Funktor jednoargumentowym, który wywołuje ją z drugim argumentem.
 
 ### <a name="example"></a>Przykład
 
@@ -498,7 +498,7 @@ Drugi argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca [binder2nd — (STL/CLR)](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego drugiego argumentu w Funktor jednym argumencie, który wywołuje go przy użyciu pierwszego argumentu.
+Funkcja Template zwraca [binder2nd — (STL/CLR)](#binder2nd) `<Fun>(functor, right)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego drugiego argumentu w Funktor jednym argumencie, który wywołuje go przy użyciu pierwszego argumentu.
 
 ### <a name="example"></a>Przykład
 
@@ -2173,7 +2173,7 @@ Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor z jednym argumentem w Funktor, który dostarcza jej wartość logiczną.
+Funkcja szablonu zwraca [unary_negate (STL/CLR)](#unary_negate) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor z jednym argumentem w Funktor, który dostarcza jej wartość logiczną.
 
 ### <a name="example"></a>Przykład
 
@@ -2245,7 +2245,7 @@ Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego w Funktor, który zapewnia jego wartość logiczną.
+Funkcja szablonu zwraca [binary_negate (STL/CLR)](#negate) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego w Funktor, który zapewnia jego wartość logiczną.
 
 ### <a name="example"></a>Przykład
 

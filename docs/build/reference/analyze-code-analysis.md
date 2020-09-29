@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 643d8428e3760926832429db5a4425e078ed776b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389795"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500084"
 ---
-# <a name="analyze-code-analysis"></a>`/analyze`(Analiza kodu)
+# <a name="analyze-code-analysis"></a>`/analyze` (Analiza kodu)
 
 Włącza opcje analizy kodu i kontroli.
 
@@ -84,14 +84,14 @@ Włącza określoną preszybką wtyczkę w ramach przebiegów analizy kodu.
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC.dll jest wtyczką implementującą testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+LocalEspC.dll jest wtyczką implementującą testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
-Aby uruchomić LocalEspC.dll, Użyj tej opcji kompilatora:**`/analyze:plugin LocalEspC.dll`**
+Aby uruchomić LocalEspC.dll, Użyj tej opcji kompilatora: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck.dll implementuje testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+ConcurrencyCheck.dll implementuje testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Aby uruchomić ConcurrencyCheck.dll, najpierw uruchom to polecenie z poziomu wiersza polecenia dewelopera:
 
@@ -136,14 +136,14 @@ Następujący przykładowy zestaw reguł niestandardowych Instruuje aparat regu�
 ::: moniker-end
 
 **`/analyze:stacksize`***Liczba*\
-Parametr *Number* , który jest używany z tą opcją, określa rozmiar (w bajtach) ramki stosu, dla której jest generowane ostrzeżenie [C6262](/cpp/code-quality/c6262) . Spacja przed *liczbą* jest opcjonalna. Jeśli ten parametr nie jest określony, rozmiar ramki stosu jest domyślnie 16 KB.
+Parametr *Number* , który jest używany z tą opcją, określa rozmiar (w bajtach) ramki stosu, dla której jest generowane ostrzeżenie [C6262](../../code-quality/c6262.md) . Spacja przed *liczbą* jest opcjonalna. Jeśli ten parametr nie jest określony, rozmiar ramki stosu jest domyślnie 16 KB.
 
 **`/analyze:WX-`**\
 Ostrzeżenia analizy kodu nie są traktowane jako błędy podczas kompilowania za pomocą programu **`/WX`** . Aby uzyskać więcej informacji, zobacz [ `/WX` (poziom ostrzeżenia)](compiler-option-warning-level.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Analiza kodu dla c/C++ — Omówienie](/cpp/code-quality/code-analysis-for-c-cpp-overview) i [Analiza kodu dla ostrzeżeń c/c++](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
+Aby uzyskać więcej informacji, zobacz [Analiza kodu dla c/C++ — Omówienie](../../code-quality/code-analysis-for-c-cpp-overview.md) i [Analiza kodu dla ostrzeżeń c/c++](../../code-quality/code-analysis-for-c-cpp-warnings.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 

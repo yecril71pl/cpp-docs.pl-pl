@@ -4,22 +4,22 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: cf16ea0e6e14981f1105456a5f17d68c05a9c3fa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4ed2dd2140176fe302d2b6800a3aa7768d17eedd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189211"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498904"
 ---
 # <a name="event-handling"></a>Obsługa zdarzeń
 
-Obsługa zdarzeń jest głównie obsługiwana dla klas COM (C++ klasy implementujące obiekty com, zazwyczaj przy użyciu klas ATL lub atrybut [klasy coclass](../windows/coclass.md) ). Aby uzyskać więcej informacji, zobacz [Obsługa zdarzeń w modelu COM](../cpp/event-handling-in-com.md).
+Obsługa zdarzeń jest przede wszystkim obsługiwana dla klas COM (klasy C++ implementujące obiekty COM, zazwyczaj przy użyciu klas ATL lub atrybutu [coclass](../windows/attributes/coclass.md) ). Aby uzyskać więcej informacji, zobacz [Obsługa zdarzeń w modelu COM](../cpp/event-handling-in-com.md).
 
-Obsługa zdarzeń jest również obsługiwana dla natywnych C++ klasC++ (klasy, które nie implementują obiektów com), jednak pomoc techniczna jest przestarzała i zostanie usunięta w przyszłej wersji.  Aby uzyskać więcej informacji, zobacz [Obsługa zdarzeń w C++trybie macierzystym ](../cpp/event-handling-in-native-cpp.md).
+Obsługa zdarzeń jest również obsługiwana dla natywnych klas języka C++ (klasy C++, które nie implementują obiektów COM), jednak pomoc techniczna jest przestarzała i zostanie usunięta w przyszłej wersji.  Aby uzyskać więcej informacji, zobacz [Obsługa zdarzeń w natywnym języku C++](../cpp/event-handling-in-native-cpp.md).
 
 Obsługa zdarzeń obsługuje pojedyncze i wielowątkowe użycie i chroni dane przed jednoczesnym dostępem wielowątkowej. Umożliwia także wyprowadzanie podklas z klas źródłowych zdarzeń lub odbiorników oraz obsługę rozszerzonych źródeł zdarzeń/odbieranych w klasie pochodnej.
 
-Kompilator firmy C++ Microsoft zawiera atrybuty i słowa kluczowe do deklarowania zdarzeń i programów obsługi zdarzeń. Atrybuty i słowa kluczowe zdarzenia mogą być używane w programach CLR i w programach C++ natywnych.
+Kompilator języka Microsoft C++ zawiera atrybuty i słowa kluczowe do deklarowania zdarzeń i programów obsługi zdarzeń. Atrybuty i słowa kluczowe zdarzenia mogą być używane w programach CLR i w natywnych programach języka C++.
 
 |Temat|Opis|
 |-----------|-----------------|
