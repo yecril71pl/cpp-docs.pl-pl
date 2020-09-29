@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b1efc0969373b6a91b0800ae71477b2371814bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756464"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501438"
 ---
 # <a name="compiler-error-c3059"></a>Błąd kompilatora C3059
 
 "var": symbol "threadprivate" nie może być używany w klauzuli "klauzula"
 
-W klauzuli użyto symbolu [threadprivate](../../parallel/openmp/reference/threadprivate.md) .
+W klauzuli użyto symbolu [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) .
 
 Poniższy przykład generuje C3059:
 

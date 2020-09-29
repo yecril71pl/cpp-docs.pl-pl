@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211461"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500657"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
 
@@ -17,7 +17,7 @@ W poniższym przykładzie założono, że dodajesz OLE DB obsługę konsumenta d
 
 Aby dodać obsługę OLE DB konsumenta bez użycia **kreatora ATL OLE DB użytkownika**:
 
-- W pliku *PCH. h* Dołącz następujące instrukcje `#include`:
+- W pliku *PCH. h* Dołącz następujące `#include` instrukcje:
 
     ```cpp
     #include <atlbase.h>
@@ -40,13 +40,13 @@ Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- Wywołaj `CoInitialize`, aby zainicjować COM. Jest to wywoływane w kodzie głównym. Na przykład:
+- Wywołanie `CoInitialize` inicjalizacji com. Jest to wywoływane w kodzie głównym. Na przykład:
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Wywołanie [CDataSource:: Open](../../data/oledb/cdatasource-open.md) lub jednej z jej odmian.
+- Wywołanie [CDataSource:: Open](./cdatasource-class.md#open) lub jednej z jej odmian.
 
 - Otwórz połączenie ze źródłem danych, Otwórz sesję i Otwórz i Zainicjuj zestaw wierszy (a także wykonaj również polecenie):
 
@@ -56,7 +56,7 @@ Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- Opcjonalnie ustaw właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty` i przekaż je jako parametr do `rs.Open`. Aby zapoznać się z przykładem, jak to zrobić, zobacz `GetRowsetProperties` w [metodach generowanych przez kreatora klientów](../../data/oledb/consumer-wizard-generated-methods.md).
+- Opcjonalnie ustaw właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty` i przekaż je jako parametr do `rs.Open` . Aby zapoznać się z przykładem, jak to zrobić, zobacz `GetRowsetProperties` w [metodach generowanych przez kreatora klienta](../../data/oledb/consumer-wizard-generated-methods.md).
 
 - Można teraz używać zestawu wierszy do pobierania i manipulowania danymi.
 
@@ -68,9 +68,9 @@ Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
     ds.Close();
     ```
 
-   Jeśli używasz polecenia, możesz chcieć wywołać `ReleaseCommand` po `Close`. Przykład kodu w [CCommand:: Close](../../data/oledb/ccommand-close.md) pokazuje, jak wywołać `Close` i `ReleaseCommand`.
+   Jeśli używasz polecenia, możesz chcieć wywołać `ReleaseCommand` po `Close` . Przykład kodu w [CCommand:: Close](./ccommand-class.md#close) pokazuje, jak wywołać `Close` i `ReleaseCommand` .
 
-- Wywołaj `CoUnInitialize`, aby odzainicjować model COM. Jest to wywoływane w kodzie głównym.
+- Wywołaj metodę `CoUnInitialize` Uninitialize com. Jest to wywoływane w kodzie głównym.
 
     ```cpp
     CoUninitialize();
@@ -78,4 +78,4 @@ Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Tworzenie klienta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

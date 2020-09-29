@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fceb57e062b9179245ba235fb497ff526a6660e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214831"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501683"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: kompilowanie programu C++/CLI, który jest przeznaczony dla środowiska CLR w programie Visual Studio
 
@@ -84,7 +84,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 
 1. Kliknij nowo utworzoną kartę w programie Visual Studio i wpisz prawidłowy program Visual C++ lub skopiuj i wklej jeden z przykładowych programów.
 
-   Na przykład możesz użyć programu przykładowego [: Napisz plik tekstowy (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) (w węźle **Obsługa plików i we/wy** przewodnika programowania).
+   Na przykład możesz użyć programu przykładowego [: Napisz plik tekstowy (C++/CLI)](./file-handling-and-i-o-cpp-cli.md#write_text) (w węźle **Obsługa plików i we/wy** przewodnika programowania).
 
    W przypadku korzystania z przykładowego programu należy zauważyć, że użycie **`gcnew`** słowa kluczowego zamiast **`new`** podczas tworzenia obiektu .NET i **`gcnew`** zwraca dojście (), `^` a nie wskaźnik ( `*` ):
 
@@ -107,7 +107,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
    > [!NOTE]
    > Wybór pustego szablonu projektu CLR powoduje automatyczne ustawienie `/clr` opcji kompilatora. Aby to sprawdzić, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i kliknij polecenie **Właściwości**, a następnie sprawdź opcję **Obsługa środowiska uruchomieniowego** CLR **General** w węźle ogólne **Właściwości konfiguracji**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

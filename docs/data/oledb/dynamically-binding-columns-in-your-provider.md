@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210980"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501853"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
 
@@ -23,7 +23,7 @@ Upewnij się, że naprawdę potrzebujesz dynamicznego powiązania kolumn. Może 
 
 ## <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne wiązanie kolumn
 
-1. Usuń wszystkie `PROVIDER_COLUMN_MAP`s z kodu.
+1. Usuń wszystkie `PROVIDER_COLUMN_MAP` elementy s z kodu.
 
 1. W rekordzie użytkownika (struktury) Dodaj następującą deklarację:
 
@@ -31,9 +31,9 @@ Upewnij się, że naprawdę potrzebujesz dynamicznego powiązania kolumn. Może 
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Zaimplementuj funkcję `GetColumnInfo`. Ta funkcja określa sposób przechowywania informacji. Może być konieczne uzyskanie właściwości lub innych informacji dotyczących tej funkcji. Możesz chcieć utworzyć makro, podobnie jak makro [COLUMN_ENTRY](../../data/oledb/column-entry.md) , aby dodać własne informacje.
+1. Zaimplementuj `GetColumnInfo` funkcję. Ta funkcja określa sposób przechowywania informacji. Może być konieczne uzyskanie właściwości lub innych informacji dotyczących tej funkcji. Możesz chcieć utworzyć makro, podobnie jak makro [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry) , aby dodać własne informacje.
 
-   Poniższy przykład przedstawia funkcję `GetColumnInfo`.
+   Poniższy przykład pokazuje `GetColumnInfo` funkcję.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero

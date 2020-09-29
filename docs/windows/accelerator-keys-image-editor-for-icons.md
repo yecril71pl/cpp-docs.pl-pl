@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0f54b244526bbda878dd75b0e1ca97a89d680ea6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622007"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500872"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Klawisze skrótów (Edytor obrazów C++ dla ikon)
 
@@ -23,8 +23,8 @@ Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które
 |-------------|----------|-----------------|
 |Image. AirBrushTool|**Ctrl**  +  **A**|Rysuje przy użyciu aerografu z wybranym rozmiarem i kolorem.|
 |Image.BrushTool|**Ctrl**  +  **B**|Rysuje przy użyciu pędzla o wybranym kształcie, rozmiarze i kolorze.|
-|Image. CopyAndOutlineSelection|**Ctrl**  +  **SHIFT**  +  **U**|Tworzy kopię bieżącego zaznaczenia i zawiera jej obramowanie. Jeśli kolor tła jest zawarty w bieżącym zaznaczeniu, zostanie on wykluczony, jeśli wybrano opcję [przezroczysty](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) .|
-|Image.DrawOpaque|**Ctrl**  +  **J**|Sprawia, że bieżące zaznaczenie jest [nieprzezroczyste lub przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|
+|Image. CopyAndOutlineSelection|**Ctrl**  +  **SHIFT**  +  **U**|Tworzy kopię bieżącego zaznaczenia i zawiera jej obramowanie. Jeśli kolor tła jest zawarty w bieżącym zaznaczeniu, zostanie on wykluczony, jeśli wybrano opcję [przezroczysty](./image-editor-for-icons.md) .|
+|Image.DrawOpaque|**Ctrl**  +  **J**|Sprawia, że bieżące zaznaczenie jest [nieprzezroczyste lub przezroczyste](./image-editor-for-icons.md).|
 |Image.EllipseTool|**Ctrl**  +  **P**|Rysuje elipsę o wybranej szerokości linii i kolorze.|
 |Image. EraserTool|**Ctrl**  +  **SHIFT**  +  **I**|Wymazuje część obrazu (z bieżącym kolorem tła).|
 |Image.FilledEllipseTool|**Ctrl**  +  **SHIFT**  +  **Alt**  +  **P**|Rysuje wypełnioną elipsę.|
@@ -37,7 +37,7 @@ Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które
 |Image.LineTool|**Ctrl**  +  **L**|Rysuje linię prostą o wybranym kształcie, rozmiarze i kolorze.|
 |Image.MagnificationTool|**Ctrl**  +  **M**|Aktywuje narzędzie **Powiększ** , które umożliwia powiększanie określonych sekcji obrazu.|
 |Image.Magnify|**Ctrl**  +  **SHIFT**  +  **M**|Przełącza między bieżącym powiększeniem i powiększeniem 1:1.|
-|Image.NewImageType|**Insert**|Uruchamia okno [ \<Device> dialogowe Nowy typ obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) , za pomocą którego można utworzyć obraz dla innego typu obrazu.|
+|Image.NewImageType|**Insert**|Uruchamia okno [ \<Device> dialogowe Nowy typ obrazu](./creating-an-icon-or-other-image-image-editor-for-icons.md) , za pomocą którego można utworzyć obraz dla innego typu obrazu.|
 |Image.NextColor|**Ctrl**  +  **]**<br /><br /> — lub —<br /><br /> **Ctrl**  +  **Strzałka w prawo**|Zmienia kolor pierwszego planu rysunku na następny kolor palety.|
 |Image.NextRightColor|**Ctrl**  +  **SHIFT**  +  **]**<br /><br /> — lub —<br /><br /> **SHIFT**  +  **Ctrl**  +  **Strzałka w prawo**|Zmienia kolor tła rysunku na następny kolor palety.|
 |Image.OutlinedEllipseTool|**SHIFT**  +  **Alt**  +  **P**|Rysuje wypełnioną elipsę z konturem.|
@@ -50,11 +50,11 @@ Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które
 |Image.RectangleTool|ATL + R|Rysuje prostokąt o wybranej szerokości linii i kolorze.|
 |Image.Rotate90Degrees|**Ctrl**  +  **SHIFT**  +  **H**|Obraca obraz lub zaznaczenie o 90 stopni.|
 |Image.RoundedRectangleTool|**Alt**  +  **W**|Rysuje prostokąt zaokrąglony o wybranej szerokości linii i kolorze.|
-|Image.ShowGrid|**Ctrl**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę pikseli (zaznacza lub czyści opcję **Siatka pikseli** w [oknie dialogowym Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
-|Image.ShowTileGrid|**Ctrl**  +  **SHIFT**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę kafelków (zaznacza lub czyści opcję **siatki kafelków** w [oknie dialogowym Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.ShowGrid|**Ctrl**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę pikseli (zaznacza lub czyści opcję **Siatka pikseli** w [oknie dialogowym Ustawienia siatki](./image-editor-for-icons.md)).|
+|Image.ShowTileGrid|**Ctrl**  +  **SHIFT**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę kafelków (zaznacza lub czyści opcję **siatki kafelków** w [oknie dialogowym Ustawienia siatki](./image-editor-for-icons.md)).|
 |Image.SmallBrush|**Ctrl**  +  **.** (kropka)|Zmniejsza rozmiar **pędzla** do jednego piksela. (Zobacz również Image. LargerBrush i Image. SmallerBrush w tej tabeli).|
 |Image.SmallerBrush|**Ctrl**  +  Ctrl **-** przed|Zmniejsza rozmiar pędzla o jeden piksel w każdym kierunku. Aby ponownie rozwinąć rozmiar pędzla, zobacz Image. LargerBrush w tej tabeli.|
-|Image.TextTool|**Ctrl**  +  **T**|Otwiera [okno dialogowe Narzędzie tekstowe](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
+|Image.TextTool|**Ctrl**  +  **T**|Otwiera [okno dialogowe Narzędzie tekstowe](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**Ctrl**  +  **U**|Rysuje przy użyciu bieżącego zaznaczenia jako pędzla.|
 |Image.ZoomIn|**Ctrl**  +  **SHIFT**  +  **.** (kropka)<br /><br /> — lub —<br /><br /> **Ctrl**  +  **Strzałka w górę**|Zwiększa powiększenie bieżącego widoku.|
 |Image.ZoomOut|**Ctrl**  +  **,** (przecinek)<br /><br /> — lub —<br /><br /> **Ctrl**  +  **Strzałka w dół**|Zmniejsza powiększenie bieżącego widoku.|

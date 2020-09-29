@@ -8,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
-ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.openlocfilehash: 60f5254a2378ed38d931f304bd5e1ebe833a3332
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90569541"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502122"
 ---
 # <a name="c-complex-math-support"></a>Kompleksowe wsparcie matematyczne języka C
 
@@ -98,7 +98,7 @@ Ponieważ liczby zespolone nie są typami natywnymi w kompilatorze firmy Microso
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Pomnóż dwie liczby zespolone|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Mnożenie złożonej i liczby zmiennoprzecinkowej|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typ-ogólne matematyczne](tgmath.md)\
 [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)

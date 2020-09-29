@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 86da5081fbe63728b062879838ac3ffe78504ccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80a43446f0367acb89a04fdaa8198b5cff5a6697
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211487"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500974"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 
@@ -23,11 +23,11 @@ Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 201
 
 W przypadku wygenerowania konsumenta przy użyciu **kreatora ATL OLE DB Consumer** można korzystać z szablonów OLE DB lub atrybutów OLE DB. W obu przypadkach Kreator generuje klasę poleceń i klasę rekordu użytkownika. Klasa Command zawiera kod umożliwiający otwarcie źródła danych i zestawu wierszy określonego w kreatorze. Klasa rekordu użytkownika zawiera mapę kolumn dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:
 
-- W przypadku wybrania użytkownika z szablonem Kreator wygeneruje klasę poleceń i klasę rekordu użytkownika. Klasa poleceń będzie miała nazwę, którą wprowadzisz w polu **klasy** kreatora (na przykład `CProducts`), a Klasa rekordu użytkownika będzie miała nazwę formularza "metoda dostępu*ClassName*" (na przykład `CProductsAccessor`). Obie klasy są umieszczane w pliku nagłówkowym użytkownika.
+- W przypadku wybrania użytkownika z szablonem Kreator wygeneruje klasę poleceń i klasę rekordu użytkownika. Klasa poleceń będzie miała nazwę, którą wprowadzisz w polu **klasy** w Kreatorze (na przykład `CProducts` ), a Klasa rekordu użytkownika będzie miała nazwę formularza "metoda dostępu*ClassName*" (na przykład `CProductsAccessor` ). Obie klasy są umieszczane w pliku nagłówkowym użytkownika.
 
 - W przypadku wybrania odbiorcy z atrybutem Klasa rekordu użytkownika będzie miała nazwę formularza "_*ClassName*akcesor" i zostanie wprowadzona. Oznacza to, że będzie można wyświetlić tylko klasę poleceń w edytorze tekstu. można wyświetlić tylko klasę rekordu użytkownika jako wstrzyknięty kod. Aby uzyskać informacje na temat wyświetlania wstrzykniętego kodu, zobacz [debugowanie wstrzykiwanego kodu](/visualstudio/debugger/how-to-debug-injected-code).
 
-W poniższych przykładach użyto klasy Command utworzonej w tabeli `Products` bazy danych `Northwind`, aby przedstawić kod klienta wygenerowany przez kreatora dla klasy poleceń i klasy rekordu użytkownika.
+W poniższych przykładach użyto klasy Command utworzonej w `Products` tabeli `Northwind` bazy danych, aby przedstawić kod klienta wygenerowany przez kreatora dla klasy poleceń i klasy rekordu użytkownika.
 
 ## <a name="templated-user-record-classes"></a>Klasy rekordów użytkowników z szablonami
 
@@ -41,7 +41,7 @@ Pierwsza część klasy rekordu użytkownika zawiera deklaracje elementu członk
 > W przypadku modyfikacji klasy rekordu użytkownika lub napisania własnego odbiorcy zmienne danych muszą występować przed zmiennymi stan i długość.
 
 > [!NOTE]
-> Kreator OLE DB użytkownika ATL używa typu `DB_NUMERIC` do powiązania typów danych liczbowych. Wcześniej użył `DBTYPE_VARNUMERIC` (format, który jest opisywany przez typ `DB_VARNUMERIC`; Zobacz OLEDB. h). Jeśli nie używasz Kreatora do tworzenia odbiorców, zalecamy korzystanie z `DB_NUMERIC`.
+> Kreator OLE DB użytkownika ATL używa `DB_NUMERIC` typu do powiązania typów danych liczbowych. Wcześniej używany `DBTYPE_VARNUMERIC` (format, który jest opisywany przez `DB_VARNUMERIC` Typ; Zobacz OLEDB. h). Jeśli nie używasz Kreatora do tworzenia odbiorców, zalecamy korzystanie z programu `DB_NUMERIC` .
 
 ```cpp
 // Products.H : Declaration of the CProducts class
@@ -150,11 +150,11 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Klasy rekordów użytkowników z Wstrzykiwanymi atrybutami
 
-Jeśli utworzysz klienta OLE DB przy użyciu atrybutów bazy danych ([db_command](../../windows/db-command.md) lub [DB_Table](../../windows/db-table.md)), atrybuty iniekcji klasy rekordu użytkownika z nazwą formularza "_*ClassName*akcesor". Na przykład jeśli nazwa klasy poleceń `COrders`, Klasa rekordu użytkownika zostanie `_COrdersAccessor`a. Mimo że Klasa rekordu użytkownika pojawia się w **Widok klasy**, dwukrotnie klikając ją w pliku nagłówkowym, można w tym celu przejść do klasy polecenia lub tabeli. W takich przypadkach można wyświetlić tylko rzeczywistą deklarację klasy rekordu użytkownika, wyświetlając kod wstrzykiwanego atrybutu.
+Jeśli utworzysz klienta OLE DB przy użyciu atrybutów bazy danych ([db_command](../../windows/attributes/db-command.md) lub [DB_Table](../../windows/attributes/db-table.md)), atrybuty iniekcji klasy rekordu użytkownika z nazwą formularza "_*ClassName*akcesor". Jeśli na przykład nazwa została określona jako Klasa poleceń `COrders` , Klasa rekordu użytkownika będzie `_COrdersAccessor` . Mimo że Klasa rekordu użytkownika pojawia się w **Widok klasy**, dwukrotnie klikając ją w pliku nagłówkowym, można w tym celu przejść do klasy polecenia lub tabeli. W takich przypadkach można wyświetlić tylko rzeczywistą deklarację klasy rekordu użytkownika, wyświetlając kod wstrzykiwanego atrybutu.
 
-Mogą istnieć potencjalne komplikacje w przypadku dodawania lub zastępowania metod w przypadku użytkowników z atrybutami. Na przykład można dodać konstruktora `_COrdersAccessor` do deklaracji `COrders`, ale należy pamiętać, że w rzeczywistości dodaje konstruktora do klasy wstrzykiwanej `COrdersAccessor`. Taki Konstruktor może inicjować kolumny/parametry, ale nie można utworzyć konstruktora kopiującego w ten sposób, ponieważ nie może on bezpośrednio utworzyć wystąpienia obiektu `COrdersAccessor`. Jeśli potrzebujesz konstruktora (lub innej metody) bezpośrednio w klasie `COrders`, zalecamy zdefiniowanie nowej klasy pochodnej z `COrders` i dodanie niezbędnych metod.
+Mogą istnieć potencjalne komplikacje w przypadku dodawania lub zastępowania metod w przypadku użytkowników z atrybutami. Na przykład, można dodać `_COrdersAccessor` konstruktora do `COrders` deklaracji, ale należy pamiętać, że w rzeczywistości dodaje konstruktora do klasy wstrzykiwanej `COrdersAccessor` . Taki Konstruktor może inicjować kolumny/parametry, ale nie można utworzyć konstruktora kopiującego w ten sposób, ponieważ nie może on bezpośrednio utworzyć wystąpienia `COrdersAccessor` obiektu. Jeśli potrzebujesz konstruktora (lub innej metody) bezpośrednio w `COrders` klasie, zaleca się zdefiniowanie nowej klasy pochodnej z `COrders` i dodanie niezbędnych metod.
 
-W poniższym przykładzie Kreator generuje deklarację dla klasy `COrders`, ale Klasa rekordu użytkownika `COrdersAccessor` nie jest wyświetlona, ponieważ atrybuty iniekcji.
+W poniższym przykładzie Kreator generuje deklarację dla klasy `COrders` , ale Klasa rekordu użytkownika `COrdersAccessor` nie zostanie wyświetlona, ponieważ atrybuty wstrzyknąć.
 
 ```cpp
 #define _ATL_ATTRIBUTES

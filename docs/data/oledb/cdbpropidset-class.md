@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838298"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502503"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet — Klasa
 
-Dziedziczy ze `DBPROPIDSET` struktury i dodaje konstruktora, który inicjuje pola klucza oraz metodę dostępu [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Dziedziczy ze `DBPROPIDSET` struktury i dodaje konstruktora, który inicjuje pola klucza oraz metodę dostępu [AddPropertyID](#addpropertyid) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -126,7 +126,7 @@ podczas Identyfikator GUID służący do ustawiania `guidPropertySet` pola struk
 
 ### <a name="remarks"></a>Uwagi
 
-To pole można również ustawić przez [konstruktora](../../data/oledb/cdbpropidset-cdbpropidset.md) . Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.
+To pole można również ustawić przez [konstruktora](#cdbpropidset) . Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: operator =
 

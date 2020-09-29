@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47f68bcf5c62aa54cc5ee60de166e1085f5a3fc5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211007"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500936"
 ---
 # <a name="defining-stored-procedures"></a>Definiowanie procedur składowanych
 
-Przed wywołaniem procedury składowanej należy najpierw ją zdefiniować przy użyciu makra [DEFINE_COMMAND](../../data/oledb/define-command.md) . Podczas definiowania polecenia należy zauważyć, że parametry ze znakiem zapytania (?) jako znacznik parametru:
+Przed wywołaniem procedury składowanej należy najpierw ją zdefiniować przy użyciu makra [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Podczas definiowania polecenia należy zauważyć, że parametry ze znakiem zapytania (?) jako znacznik parametru:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
@@ -35,7 +35,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-W poprzednim przykładzie zdefiniowano procedurę przechowywaną. Zwykle w celu wydajnego ponownego użycia kodu baza danych zawiera zestaw wstępnie zdefiniowanych procedur przechowywanych z nazwami, takimi jak `Sales by Year` lub `dt_adduserobject`. Definicje można wyświetlić za pomocą Menedżera SQL Server Enterprise. Są one wywoływane w następujący sposób (rozmieszczenie *?* parametry są zależne od interfejsu procedury składowanej:
+W poprzednim przykładzie zdefiniowano procedurę przechowywaną. Zwykle w celu wydajnego ponownego użycia kodu baza danych zawiera zestaw wstępnie zdefiniowanych procedur przechowywanych z nazwami, takimi jak `Sales by Year` lub `dt_adduserobject` . Definicje można wyświetlić za pomocą Menedżera SQL Server Enterprise. Są one wywoływane w następujący sposób (rozmieszczenie *?* parametry są zależne od interfejsu procedury składowanej:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
@@ -48,7 +48,7 @@ Następnie zadeklaruj klasę poleceń:
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-Na koniec Wywołaj procedurę składowaną w `OpenRowset` w następujący sposób:
+Na koniec Wywołaj procedurę składowaną w `OpenRowset` następujący sposób:
 
 ```cpp
 CSession m_session;
@@ -59,7 +59,7 @@ HRESULT OpenRowset()
 }
 ```
 
-Należy również pamiętać, że można zdefiniować procedurę przechowywaną przy użyciu atrybutu bazy danych [db_command](../../windows/db-command.md) w następujący sposób:
+Należy również pamiętać, że można zdefiniować procedurę przechowywaną przy użyciu atrybutu bazy danych [db_command](../../windows/attributes/db-command.md) w następujący sposób:
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")

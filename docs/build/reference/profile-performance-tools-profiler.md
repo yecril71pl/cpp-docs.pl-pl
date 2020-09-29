@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: cf07154c6b681e2ad30a85a62a0db996c3f3d911
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078312"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500781"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler narzędzi do oceny wydajności)
 
@@ -38,11 +38,11 @@ Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajn
 
 /PROFILE powoduje, że konsolidator generuje sekcję relokacji w obrazie programu.  Sekcja relokacja umożliwia programowi Profiler przekształcenie obrazu programu w celu pobrania danych profilu.
 
-**/Profile** jest dostępny tylko w wersjach Enterprise (Development Team).  Aby uzyskać więcej informacji o szybkim przeniesieniu, zobacz [AnalizaC++ kodu dla języka C/przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** jest dostępny tylko w wersjach Enterprise (Development Team).  Aby uzyskać więcej informacji o szybkim przeniesieniu, zobacz [Analiza kodu dla C/C++ — Omówienie](../../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń węzeł **Właściwości konfiguracji** .
 
@@ -58,9 +58,9 @@ Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajn
 
 ### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Aby ustawić tę opcję konsolidatora w projekcie programu Visual Studio CMake
 
-Projekt **CMAKE** nie zawiera **stron właściwości**. Opcje konsolidatora można ustawić przez modifing CMakeLists. txt.
+Projekt **CMAKE** nie ma **stron właściwości**, a Opcje konsolidatora można ustawić przez modifing CMakeLists.txt.
 
-1. Otwórz CMakeLists. txt w katalogu głównym projektu.
+1. Otwórz CMakeLists.txt w katalogu głównym projektu.
 
 1. Dodaj poniższy kod. Aby uzyskać szczegółowe informacje, zobacz [CMAKE References](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
 
@@ -73,4 +73,4 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

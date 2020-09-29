@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 42d8dfecd32b4aecd0daa4034497ec9abff6d11a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b4b01e4fb202cfd7a923d22cb57ce5ec6988e11d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619938"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502288"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Formanty MFC ActiveX: dodawanie metod standardowych
 
@@ -20,16 +20,16 @@ Metoda magazynowa różni się od metody niestandardowej w tym, że została ju�
 >[!IMPORTANT]
 > Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
-`COleControl`obsługuje dwie metody podstawowe: DoClick i Refresh. Odświeżanie jest wywoływane przez użytkownika kontrolki w celu natychmiastowej aktualizacji wyglądu kontrolki; DoClick jest wywoływana w celu wyzwolenia zdarzenia kliknięcia kontrolki.
+`COleControl` obsługuje dwie metody podstawowe: DoClick i Refresh. Odświeżanie jest wywoływane przez użytkownika kontrolki w celu natychmiastowej aktualizacji wyglądu kontrolki; DoClick jest wywoływana w celu wyzwolenia zdarzenia kliknięcia kontrolki.
 
 |Metoda|Wpis mapy wysyłania|Komentarz|
 |------------|------------------------|-------------|
 |`DoClick`|**DISP_STOCKPROP_DOCLICK ()**|Uruchamia zdarzenie kliknięcia.|
 |`Refresh`|**DISP_STOCKPROP_REFRESH ()**|Natychmiast aktualizuje wygląd formantu.|
 
-## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>Dodawanie metody giełdowej przy użyciu Kreatora dodawania metody
+## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a> Dodawanie metody giełdowej przy użyciu Kreatora dodawania metody
 
-Dodawanie metody giełdowej jest proste przy użyciu [Kreatora dodawania metody](../ide/add-method-wizard.md). Poniższa procedura pokazuje, jak dodać metodę Refresh do kontrolki utworzonej przy użyciu kreatora kontrolek ActiveX MFC.
+Dodawanie metody giełdowej jest proste przy użyciu [Kreatora dodawania metody](../ide/adding-a-method-visual-cpp.md#add-method-wizard). Poniższa procedura pokazuje, jak dodać metodę Refresh do kontrolki utworzonej przy użyciu kreatora kontrolek ActiveX MFC.
 
 #### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Aby dodać metodę odświeżania magazynu za pomocą Kreatora dodawania metody
 
@@ -47,7 +47,7 @@ Dodawanie metody giełdowej jest proste przy użyciu [Kreatora dodawania metody]
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>Dodawanie zmian w Kreatorze metody dla metod podstawowych
+## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a> Dodawanie zmian w Kreatorze metody dla metod podstawowych
 
 Ponieważ metoda odświeżania magazynu jest obsługiwana przez klasę bazową formantu, **Kreator dodawania metody** nie zmienia deklaracji klasy kontrolki w jakikolwiek sposób. Dodaje wpis dla metody do mapy wysyłania kontrolki i do jej. Plik IDL. Poniższy wiersz jest dodawany do mapy wysyłania kontrolki, która znajduje się w jej implementacji (. CPP):
 

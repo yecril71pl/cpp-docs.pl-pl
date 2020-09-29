@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845591"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501824"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
@@ -90,7 +90,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 |[Anuluj](#cancel)|Anuluje bieżące wykonanie polecenia.|
 |[CancelExecution](#cancelexecution)|Anuluje bieżące wykonanie polecenia.|
 |[CreateRowset](#createrowset)|Tworzy obiekt zestawu wierszy.|
-|[Realizacja](#execute)|Wykonuje polecenie.|
+|[Wykonaj polecenie](#execute)|Wykonuje polecenie.|
 |[GetDBSession](#getdbsession)|Zwraca wskaźnik interfejsu do sesji, która utworzyła polecenie.|
 |[ICommandImpl](#icommandimpl)|Konstruktor.|
 
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: isrowset
 
-Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) , aby utworzyć pojedynczy zestaw wierszy.
+Wywoływane przez [Execute](#execute) , aby utworzyć pojedynczy zestaw wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -201,7 +201,7 @@ Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms71809
 
 Żądany interfejs wychodzący będzie interfejsem uzyskanym z obiektu zestawu wierszy, który tworzy ta funkcja.
 
-`Execute` wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
+`Execute` wywołuje [zestaw wierszy](#createrowset). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: GetDBSession
 

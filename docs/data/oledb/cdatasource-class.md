@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838350"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502548"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 
@@ -95,7 +95,7 @@ class CDataSource
 
 ## <a name="remarks"></a>Uwagi
 
-Co najmniej jedna sesja bazy danych może zostać utworzona dla jednego połączenia. Te sesje są reprezentowane przez program `CSession` . Musisz wywołać [CDataSource:: Open](../../data/oledb/cdatasource-open.md) , aby otworzyć połączenie przed utworzeniem sesji przy użyciu usługi `CSession::Open` .
+Co najmniej jedna sesja bazy danych może zostać utworzona dla jednego połączenia. Te sesje są reprezentowane przez program `CSession` . Musisz wywołać [CDataSource:: Open](#open) , aby otworzyć połączenie przed utworzeniem sesji przy użyciu usługi `CSession::Open` .
 
 Aby zapoznać się z przykładem sposobu użycia `CDataSource` , zobacz przykład [catdb](../../overview/visual-cpp-samples.md) .
 
@@ -159,7 +159,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać pojedynczą właściwość, należy użyć [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+Aby uzyskać pojedynczą właściwość, należy użyć [GetProperty](#getproperty).
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: GetProperty
 
@@ -190,7 +190,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać wiele właściwości, użyj [Właściwości GetProperties](../../data/oledb/cdatasource-getproperties.md).
+Aby uzyskać wiele właściwości, użyj [Właściwości GetProperties](#getproperties).
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: Open
 

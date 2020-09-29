@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500695"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 
@@ -27,13 +27,13 @@ Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 201
 
 - `CloseAll` zamyka wszystkie otwarte zestawy wierszy i zwalnia wszystkie wykonania poleceń.
 
-- `OpenRowset` jest wywoływana przez `OpenAll`, aby otworzyć zestaw wierszy lub zestawy wierszy konsumenta.
+- `OpenRowset` jest wywoływany przez, `OpenAll` Aby otworzyć zestaw wierszy lub zestawy wierszy odbiorcy.
 
-- `GetRowsetProperties` Pobiera wskaźnik do zbioru właściwości zestawu wierszy, dla którego można ustawić właściwości.
+- `GetRowsetProperties` Pobiera wskaźnik do zestawu właściwości zestawu wierszy, za pomocą którego można ustawić właściwości.
 
 - `OpenDataSource` otwiera źródło danych przy użyciu ciągu inicjującego określonego w oknie dialogowym **Właściwości łącza danych** .
 
-- `CloseDataSource` zamyka źródło danych w odpowiedni sposób.
+- `CloseDataSource` w odpowiedni sposób zamyka źródło danych.
 
 ## <a name="openall-and-closeall"></a>Metody OpenAll i CloseAll
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-Poniższy przykład pokazuje, jak można wywołać `OpenAll` i `CloseAll`, gdy wielokrotnie wykonujesz to samo polecenie. Porównaj przykład kodu w [CCommand:: Close](../../data/oledb/ccommand-close.md), który pokazuje odmianę, która wywołuje `Close` i `ReleaseCommand` zamiast `CloseAll`.
+Poniższy przykład pokazuje, jak można nawiązać połączenie `OpenAll` i `CloseAll` kiedy wielokrotnie wykonać to samo polecenie. Porównaj przykład kodu w [CCommand:: Close](./ccommand-class.md#close), który pokazuje odmianę, która wywołuje `Close` i `ReleaseCommand` zamiast `CloseAll` .
 
 ```cpp
 int main(int argc, char* argv[])
@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku zdefiniowania metody `HasBookmark`, kod `OpenAll` ustawia właściwość `DBPROP_IRowsetLocate`; Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
+W przypadku zdefiniowania `HasBookmark` metody, `OpenAll` kod ustawia `DBPROP_IRowsetLocate` Właściwość. Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
 
 ## <a name="openrowset"></a>OpenRowset
 
@@ -89,7 +89,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
 ```
 
-`OpenAll` wywołuje tę metodę, aby otworzyć zestaw wierszy lub zestawy wierszy w odbiorcy. Zazwyczaj nie trzeba wywoływać `OpenRowset`, chyba że chcesz współpracować z wieloma źródłami danych/sesjami/zestawami wierszy. `OpenRowset` jest zadeklarowana w pliku nagłówkowym polecenia lub klasy tabeli:
+`OpenAll` wywołuje tę metodę, aby otworzyć zestaw wierszy lub zestawy wierszy w odbiorcy. Zazwyczaj nie trzeba dzwonić, `OpenRowset` chyba że chcesz współpracować z wieloma źródłami danych/sesjami/zestawami wierszy. `OpenRowset` jest zadeklarowany w pliku nagłówkowym polecenia lub klasy tabeli:
 
 ```cpp
 // OLE DB Template version:
@@ -104,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }
 ```
 
-Atrybuty implementują tę metodę inaczej. Ta wersja pobiera obiekt sesji i ciąg polecenia, który domyślnie jest ciągiem poleceń określonym w db_command, chociaż można przekazać inny. W przypadku zdefiniowania metody `HasBookmark`, kod `OpenRowset` ustawia właściwość `DBPROP_IRowsetLocate`; Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
+Atrybuty implementują tę metodę inaczej. Ta wersja pobiera obiekt sesji i ciąg polecenia, który domyślnie jest ciągiem poleceń określonym w db_command, chociaż można przekazać inny. W przypadku zdefiniowania `HasBookmark` metody, `OpenRowset` kod ustawia `DBPROP_IRowsetLocate` Właściwość. Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
 
 ```cpp
 // Attribute-injected version:
@@ -129,7 +129,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);
 ```
 
-Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; Możesz użyć tego wskaźnika, aby ustawić właściwości, takie jak `DBPROP_IRowsetChange`. `GetRowsetProperties` jest używany w klasie rekordu użytkownika w następujący sposób. Możesz zmodyfikować ten kod, aby ustawić dodatkowe właściwości zestawu wierszy:
+Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; Ten wskaźnik służy do ustawiania właściwości, takich jak `DBPROP_IRowsetChange` . `GetRowsetProperties` jest używany w klasie rekordu użytkownika w następujący sposób. Możesz zmodyfikować ten kod, aby ustawić dodatkowe właściwości zestawu wierszy:
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -143,7 +143,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 
 ### <a name="remarks"></a>Uwagi
 
-Nie należy definiować globalnej metody `GetRowsetProperties`, ponieważ może ona powodować konflikt z elementem zdefiniowanym przez kreatora. Jest to metoda wygenerowana przez kreatora, którą można uzyskać z szablonem i projektami z atrybutami. atrybuty nie wstrzyknąć tego kodu.
+Nie należy definiować metody globalnej, `GetRowsetProperties` ponieważ może ona powodować konflikt z elementem zdefiniowanym przez kreatora. Jest to metoda wygenerowana przez kreatora, którą można uzyskać z szablonem i projektami z atrybutami. atrybuty nie wstrzyknąć tego kodu.
 
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource i CloseDataSource
 
@@ -155,7 +155,7 @@ void CloseDataSource();
 
 ### <a name="remarks"></a>Uwagi
 
-Kreator definiuje metody `OpenDataSource` i `CloseDataSource`; wywołania `OpenDataSource` [CDataSource:: OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
+Kreator definiuje metody `OpenDataSource` i `CloseDataSource` ; `OpenDataSource` wywołuje [CDataSource:: OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring).
 
 ::: moniker-end
 

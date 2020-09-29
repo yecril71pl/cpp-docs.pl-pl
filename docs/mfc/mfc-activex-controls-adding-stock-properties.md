@@ -9,16 +9,16 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 13e8af5ddb3dd5130c864e42383e3bb9ff23b87b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 27fed55ac8a5fc8b95f81c1bfd2c6edb3da6227d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625425"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502243"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Formanty MFC ActiveX: dodawanie właściwości standardowych
 
-Właściwości giełdowe różnią się od właściwości niestandardowych w tym, że są już zaimplementowane przez klasę `COleControl` . `COleControl`zawiera wstępnie zdefiniowane funkcje członkowskie, które obsługują wspólne właściwości formantu. Niektóre typowe właściwości obejmują podpis kontrolki i kolor pierwszego planu i tła. Aby uzyskać informacje dotyczące innych właściwości podstawowych, zobacz temat [właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) w dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowych są zawsze poprzedzone DISP_STOCKPROP.
+Właściwości giełdowe różnią się od właściwości niestandardowych w tym, że są już zaimplementowane przez klasę `COleControl` . `COleControl` zawiera wstępnie zdefiniowane funkcje członkowskie, które obsługują wspólne właściwości formantu. Niektóre typowe właściwości obejmują podpis kontrolki i kolor pierwszego planu i tła. Aby uzyskać informacje dotyczące innych właściwości podstawowych, zobacz temat [właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) w dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowych są zawsze poprzedzone DISP_STOCKPROP.
 
 W tym artykule opisano, jak dodać właściwość giełdową (w tym przypadku podpis) do kontrolki ActiveX przy użyciu Kreatora dodawania właściwości i objaśniające modyfikacje kodu. Tematy obejmują:
 
@@ -35,7 +35,7 @@ W tym artykule opisano, jak dodać właściwość giełdową (w tym przypadku po
     > [!NOTE]
     >  Visual Basic kontrolki niestandardowe mają zazwyczaj właściwości takie jak Top, Left, Width, Height, align, tag, Name, TabIndex, TabStop i Parent. Kontenery kontrolek ActiveX są jednak odpowiedzialne za implementację tych właściwości kontroli, dlatego kontrolki ActiveX nie powinny obsługiwać tych właściwości.
 
-## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Za pomocą Kreatora dodawania właściwości, aby dodać właściwość giełdową
+## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a> Za pomocą Kreatora dodawania właściwości, aby dodać właściwość giełdową
 
 Dodawanie właściwości podstawowych wymaga mniejszej ilości kodu niż Dodawanie właściwości niestandardowych, ponieważ obsługa właściwości jest obsługiwana automatycznie przez `COleControl` . Poniższa procedura pokazuje dodanie właściwości spisu do struktury formantów ActiveX i może również służyć do dodawania innych właściwości podstawowych. Zastąp wybraną nazwę właściwości giełdy dla podpisu.
 
@@ -49,13 +49,13 @@ Dodawanie właściwości podstawowych wymaga mniejszej ilości kodu niż Dodawan
 
 1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.
 
-   Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/names-add-property-wizard.md).
+   Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. W polu **Nazwa właściwości** kliknij pozycję **podpis**.
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Dodawanie zmian w Kreatorze właściwości dla właściwości podstawowych
+## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a> Dodawanie zmian w Kreatorze właściwości dla właściwości podstawowych
 
 Ponieważ `COleControl` obsługuje właściwości podstawowe, Kreator dodawania właściwości nie zmienia deklaracji klasy w jakikolwiek sposób; dodaje właściwość do mapy wysyłania. Kreator dodawania właściwości dodaje następujący wiersz do mapy wysyłania kontrolki, która znajduje się w implementacji (. CPP):
 
@@ -69,7 +69,7 @@ Ten wiersz przypisuje Właściwość Caption o określonym IDENTYFIKATORze. Nale
 
 Spowoduje to udostępnienie właściwości Caption użytkownikom formantu. Aby użyć wartości właściwości giełdowej, uzyskaj dostęp do zmiennej składowej lub funkcji członkowskiej `COleControl` klasy bazowej. Aby uzyskać więcej informacji na temat tych zmiennych składowych i funkcji Członkowskich, zobacz następną sekcję, właściwości giełdowe obsługiwane przez Kreatora dodawania właściwości.
 
-## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości
+## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a> Właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości
 
 `COleControl`Klasa zawiera dziewięć właściwości podstawowych. Możesz dodać odpowiednie właściwości przy użyciu Kreatora dodawania właściwości.
 
@@ -84,13 +84,13 @@ Spowoduje to udostępnienie właściwości Caption użytkownikom formantu. Aby u
 |`ForeColor`|DISP_STOCKPROP_FORECOLOR ()|Wartość dostępna poprzez wywołanie `GetForeColor` .|
 |`hWnd`|DISP_STOCKPROP_HWND ()|Wartość dostępna jako `m_hWnd` .|
 |`Text`|DISP_STOCKPROP_TEXT ()|Wartość dostępna poprzez wywołanie `InternalGetText` . Ta właściwość jest taka sama jak `Caption` , z wyjątkiem nazwy właściwości.|
-|`ReadyState`|DISP_STOCKPROP_READYSTATE ()|Wartość dostępna jako `m_lReadyState` lub`GetReadyState`|
+|`ReadyState`|DISP_STOCKPROP_READYSTATE ()|Wartość dostępna jako `m_lReadyState` lub `GetReadyState`|
 
-## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Właściwości i powiadomienia dotyczące akcji
+## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a> Właściwości i powiadomienia dotyczące akcji
 
 Większość właściwości podstawowych ma funkcje powiadomień, które mogą zostać zastąpione. Na przykład za każdym razem, gdy `BackColor` Właściwość zostanie zmieniona, `OnBackColorChanged` wywoływana jest funkcja (funkcja członkowska klasy kontrolki). Domyślne implementacje (in `COleControl` ) `InvalidateControl` . Zastąp tę funkcję, jeśli chcesz podjąć dodatkowe działania w odpowiedzi na tę sytuację.
 
-## <a name="color-properties"></a><a name="_core_color_properties"></a>Właściwości koloru
+## <a name="color-properties"></a><a name="_core_color_properties"></a> Właściwości koloru
 
 `ForeColor` `BackColor` Podczas malowania kontrolki można użyć zasobów i właściwości lub własnych właściwości kolorów niestandardowych. Aby użyć właściwości Color, wywołaj funkcję członkowską [COleControl:: TranslateColor](reference/colecontrol-class.md#translatecolor) . Parametry tej funkcji to wartość właściwości Color i opcjonalnego dojścia do palety. Wartość zwracana jest wartością **COLORREF** , która może być przenoszona do funkcji GDI, takich jak `SetTextColor` i `CreateSolidBrush` .
 

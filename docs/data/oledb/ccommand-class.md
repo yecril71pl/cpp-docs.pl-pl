@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838441"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501006"
 ---
 # <a name="ccommand-class"></a>Klasa CCommand
 
@@ -131,7 +131,7 @@ void Close();
 
 Polecenie używa zestawu wierszy, akcesora zestawu wyników i (opcjonalnie) metody dostępu do parametrów (w przeciwieństwie do tabel, które nie obsługują parametrów i nie potrzebują metody dostępu do parametrów).
 
-Po wykonaniu polecenia, należy wywołać oba `Close` i [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) po poleceniu.
+Po wykonaniu polecenia, należy wywołać oba `Close` i [ReleaseCommand](#releasecommand) po poleceniu.
 
 Aby wielokrotnie wykonać to samo polecenie, należy wydać każdy akcesor zestawu wyników, wywołując `Close` przed wywołaniem `Execute` . Na końcu serii należy zwolnić metodę dostępu do parametru przez wywołanie metody `ReleaseCommand` . Inny typowy scenariusz wywołuje procedurę składowaną, która ma parametry wyjściowe. W przypadku wielu dostawców (takich jak dostawca OLE DB dla SQL Server) wartości parametrów wyjściowych nie będą dostępne do momentu zamknięcia akcesora zestawu wyników. Wywołaj, `Close` Aby zamknąć zwracaną metodę dostępu zestawu wierszy i zestawu wyników, ale nie metodę dostępu do parametru, umożliwiając w ten sposób pobieranie wartości parametrów wyjściowych.
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 podczas Sesja, w której ma zostać wykonane polecenie.
 
 *wszCommand*<br/>
-podczas Polecenie do wykonania, które zostało przesłane jako ciąg Unicode. Może mieć wartość NULL przy użyciu `CAccessor` , w którym przypadku polecenie zostanie pobrane z wartości przesłanej do makra [DEFINE_COMMAND](../../data/oledb/define-command.md) . Aby uzyskać szczegółowe informacje, zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) w *dokumentacji programisty OLE DB* .
+podczas Polecenie do wykonania, które zostało przesłane jako ciąg Unicode. Może mieć wartość NULL przy użyciu `CAccessor` , w którym przypadku polecenie zostanie pobrane z wartości przesłanej do makra [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Aby uzyskać szczegółowe informacje, zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
 *szCommand*<br/>
 podczas Analogicznie jak *wszCommand* , z tą różnicą, że ten parametr pobiera ciąg poleceń ANSI. Czwarta postać tej metody może przyjmować wartość NULL. Aby uzyskać szczegółowe informacje, zobacz sekcję "uwagi" w dalszej części tego tematu.
@@ -253,14 +253,14 @@ Druga forma `Open` przyjmuje ciąg polecenia ANSI i nie ma wartości domyślnej 
 
 Trzecia forma `Open` dopuszcza, aby ciąg polecenia miał wartość null, z powodu typu **`int`** z wartością domyślną NULL. Jest on przeznaczony do wywoływania `Open(session, NULL);` lub `Open(session);` ponieważ ma wartość null, jest typu **`int`** . Ta wersja wymaga i potwierdza, że **`int`** parametr ma wartość null.
 
-Użyj czwartej formy, `Open` gdy utworzono już polecenie i chcesz wykonać pojedyncze [przygotowanie](../../data/oledb/ccommand-prepare.md) i wiele wykonań.
+Użyj czwartej formy, `Open` gdy utworzono już polecenie i chcesz wykonać pojedyncze [przygotowanie](#prepare) i wiele wykonań.
 
 > [!NOTE]
 > `Open` wywołania `Execute` , które z kolei powodują wywoływanie `GetNextResult` .
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
-Wywołuje [CCommand::](../../data/oledb/ccommand-createcommand.md) ICommandText, aby utworzyć polecenie dla określonej sesji, a następnie wywołuje [:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , aby określić tekst polecenia.
+Wywołuje [CCommand::](#createcommand) ICommandText, aby utworzyć polecenie dla określonej sesji, a następnie wywołuje [:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , aby określić tekst polecenia.
 
 ### <a name="syntax"></a>Składnia
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-`ReleaseCommand` jest używany w połączeniu z `Close` . Zobacz [Zamknij](../../data/oledb/ccommand-close.md) , aby uzyskać szczegółowe informacje na temat użycia.
+`ReleaseCommand` jest używany w połączeniu z `Close` . Zobacz [Zamknij](#close) , aby uzyskać szczegółowe informacje na temat użycia.
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
