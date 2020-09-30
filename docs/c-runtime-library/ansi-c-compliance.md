@@ -1,6 +1,8 @@
 ---
 title: Zgodność ANSI-C
+description: Omówienie konwencji nazewnictwa środowiska uruchomieniowego języka Microsoft C dla zgodności ze standardem ANSI C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 helpviewer_keywords:
@@ -13,21 +15,21 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a3f9299be7dbef4783faa8e6d08fe6ad8461f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290433"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590306"
 ---
 # <a name="ansi-c-compliance"></a>Zgodność ANSI-C
 
-Konwencja nazewnictwa dla wszystkich identyfikatorów specyficzne dla firmy Microsoft w systemie czasu wykonywania (na przykład funkcje, makra, stałe, zmienne i definicje typów) jest standardem ANSI. W tej dokumentacji każda funkcja środowiska wykonawczego, która następuje standardy ANSI/ISO C podano jako zgodny ze standardem ANSI. Aplikacje zgodne z ANSI, należy używać tylko tych funkcji zgodne z ANSI.
+Konwencja nazewnictwa dla wszystkich identyfikatorów specyficznych dla firmy Microsoft w systemie czasu wykonywania (takich jak funkcje, makra, stałe, zmienne i definicje typów) jest zgodna ze standardem ANSI. W tej dokumentacji każda funkcja czasu wykonywania zgodna ze standardami ANSI/ISO C jest zapisywana jako zgodna ze standardem ANSI. Aplikacje zgodne ze standardem ANSI powinny używać tylko tych funkcji zgodnych ze standardem ANSI.
 
-Nazwy funkcji specyficznych dla firmy Microsoft i zmienne globalne rozpoczynają się od jednego podkreślenia. Te nazwy mogą zostać zastąpione tylko lokalnie w zakresie kodu. Na przykład, gdy zostaną umieszczone pliki nagłówkowe środowiska wykonawczego firmy Microsoft, możesz nadal lokalnie zastąpić funkcji specyficzne dla firmy Microsoft o nazwie `_open` przez zadeklarowanie zmiennej lokalnej o tej samej nazwie. Jednak nie można użyć tej nazwy własnego globalnej funkcji lub zmienna globalna.
+Nazwy funkcji specyficznych dla firmy Microsoft i zmiennych globalnych zaczynają się pojedynczym podkreśleniem. Te nazwy można przesłonić tylko lokalnie, w ramach zakresu kodu. Na przykład podczas dołączania plików nagłówka Microsoft Run-Time można nadal lokalnie przesłonić funkcję specyficzną dla firmy Microsoft o nazwie `_open` przez zadeklarowanie zmiennej lokalnej o tej samej nazwie. Nie można jednak użyć tej nazwy dla własnej funkcji globalnej lub zmiennej globalnej.
 
-Nazwy makra specyficzne dla firmy Microsoft i stałych manifestu rozpocząć z dwoma podkreśleniami lub pojedynczego wiodącego podkreślnika bezpośrednio po nim wielkiej litery. Zakres tych identyfikatorów jest bezwzględna. Na przykład nie można użyć identyfikatora specyficzne dla firmy Microsoft **_UPPER** z tego powodu.
+Nazwy makr specyficznych dla firmy Microsoft i stałe manifestu zaczynają się od dwóch znaków podkreślenia lub z pojedynczym wiodącym podkreśleniem bezpośrednio po Wielkiej litery. Zakres tych identyfikatorów jest bezwzględny. Na przykład nie można użyć identyfikatora specyficznego dla firmy Microsoft **_UPPER** z tego powodu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zgodność](../c-runtime-library/compatibility.md)

@@ -1,7 +1,8 @@
 ---
 title: Biblioteka CRT — Funkcje
-description: Pliki, które zawierają biblioteki środowiska uruchomieniowego języka Microsoft C i ich skojarzone opcje kompilatora i dyrektywy preprocesora.
+description: Lista plików, które zawierają biblioteki środowiska uruchomieniowego języka Microsoft C i ich skojarzone opcje kompilatora i dyrektywy preprocesora.
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609106"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589786"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -95,7 +96,7 @@ Ta wersja CRT nie jest w pełni zgodna ze standardem C99. W wersjach wcześniejs
 | *`libcpmtd.lib`* | Wielowątkowe, statyczne łącze | **`/MTd`** | `_DEBUG`, `_MT` |
 | *`msvcprtd.lib`* | Wielowątkowy, dynamiczny link (Biblioteka importowana dla *`msvcp<version>d.dll`* ) | **`/MDd`** | `_DEBUG`, `_MT`, `_DLL` |
 
-Podczas kompilowania wersji wydania projektu, jedna z podstawowych bibliotek środowiska uruchomieniowego C ( *`libcmt.lib`* , *`msvcmrt.lib`* , *`msvcrt.lib`* ) jest domyślnie łączona, w zależności od wybranej opcji kompilatora (wielowątkowy, DLL, **`/clr`** ). Jeśli dołączysz jeden z [plików nagłówkowych standardowej biblioteki języka c++](../standard-library/cpp-standard-library-header-files.md) w kodzie, standardowa biblioteka języka c++ zostanie automatycznie połączona przez Visual C++ w czasie kompilacji. Przykład:
+Podczas kompilowania wersji wydania projektu, jedna z podstawowych bibliotek środowiska uruchomieniowego C ( *`libcmt.lib`* , *`msvcmrt.lib`* , *`msvcrt.lib`* ) jest domyślnie łączona, w zależności od wybranej opcji kompilatora (wielowątkowy, DLL, **`/clr`** ). Jeśli dołączysz jeden z [plików nagłówkowych standardowej biblioteki języka c++](../standard-library/cpp-standard-library-header-files.md) w kodzie, standardowa biblioteka języka c++ zostanie automatycznie połączona przez Visual C++ w czasie kompilacji. Na przykład:
 
 ```cpp
 #include <ios>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3ee6b21cc1bcb8e33bc76d2efab58808bfc0aa2b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042189"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589877"
 ---
 # <a name="set-compiler-and-build-properties"></a>Ustawianie właściwości kompilatora i Build
 
@@ -136,7 +136,7 @@ Opisuje kolejność obliczeń dla plików. props,. Target,. vcxproj i zmiennych 
 [Modyfikowanie właściwości i obiektów docelowych bez zmieniania pliku projektu](modify-project-properties-without-changing-project-file.md)<br/>
 Jak utworzyć ustawienia kompilacji tymczasowej bez konieczności modyfikowania pliku projektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty programu Visual Studio — C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [Struktura plików vcxproj i props](reference/vcxproj-file-structure.md)<br/>

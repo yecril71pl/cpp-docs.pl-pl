@@ -1,6 +1,8 @@
 ---
 title: Funkcje zabezpieczeń w CRT
-ms.date: 11/04/2016
+description: Omówienie bezpiecznych funkcji CRT w środowisku uruchomieniowym języka Microsoft C.
+ms.date: 09/29/2020
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -24,70 +26,68 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 963f5510350aa3be25586811889189d28a5f7b66
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361006"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589890"
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 
-Wiele starych funkcji CRT ma nowsze, bezpieczniejsze wersje. Jeśli istnieje funkcja secure, starsza, mniej bezpieczna wersja jest oznaczona `_s` jako przestarzała, a nowa wersja ma sufiks ("secure").
+Wiele starych funkcji CRT ma nowsze, bezpieczniejsze wersje. Jeśli istnieje bezpieczna funkcja, Starsza, mniej bezpieczna wersja jest oznaczona jako przestarzała, a nowa wersja ma `_s` sufiks ("Secure").
 
-W tym kontekście "przestarzałe" oznacza tylko, że użycie funkcji nie jest zalecane; nie oznacza, że funkcja jest zaplanowane do usunięcia z CRT.
+W tym kontekście "przestarzałe" oznacza użycie funkcji nie jest zalecane. Nie oznacza to, że funkcja jest zaplanowana do usunięcia z CRT.
 
-Bezpieczne funkcje nie zapobiegają błędom zabezpieczeń ani ich nie korygują; raczej łapią błędy, gdy wystąpią. Przeprowadzają dodatkowe kontrole warunków błędu, a w przypadku błędu wywołują program obsługi błędów (patrz [Sprawdzanie poprawności parametrów).](../c-runtime-library/parameter-validation.md)
+Funkcje Secure nie uniemożliwiają lub nie korygują błędów zabezpieczeń. Zamiast tego przechwytują błędy, gdy wystąpią. Wykonują dodatkowe sprawdzenia dotyczące warunków błędów. Jeśli wystąpi błąd, wywołuje procedurę obsługi błędów (zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md)).
 
-Na przykład `strcpy` funkcja nie ma możliwości informowania, czy ciąg, który jest kopiowany jest zbyt duży dla buforu docelowego. Jednak jego bezpieczny `strcpy_s`odpowiednik, , przyjmuje rozmiar buforu jako parametr, dzięki czemu można określić, czy nastąpi przepełnienie buforu. Jeśli używasz `strcpy_s` do kopiowania jedenaście znaków do buforu dziesięciu znaków, jest to błąd z Twojej strony; `strcpy_s` nie można poprawić błędu, ale może wykryć błąd i poinformować użytkownika, wywołując nieprawidłowy program obsługi parametrów.
+Na przykład `strcpy` Funkcja nie może stwierdzić, czy ciąg, który jest kopiowany jest zbyt duży dla bufora docelowego. Jego bezpieczny odpowiednik, `strcpy_s` , pobiera rozmiar buforu jako parametr. W ten sposób można określić, czy wystąpiło przepełnienie buforu. Jeśli używasz `strcpy_s` do kopiowania 11 znaków do 10-znakowego bufora, który jest błędem w Twojej części; `strcpy_s` nie można poprawić błędu. Ale może wykryć błąd i poinformować Cię o wywołaniu procedury obsługi nieprawidłowego parametru.
 
-## <a name="eliminating-deprecation-warnings"></a>Eliminowanie ostrzeżeń o usuwaniu
+## <a name="eliminating-deprecation-warnings"></a>Eliminowanie ostrzeżeń o zaniechaniu
 
-Istnieje kilka sposobów, aby wyeliminować ostrzeżenia o deprecation dla starszych, mniej bezpiecznych funkcji. Najprostszym jest po `_CRT_SECURE_NO_WARNINGS` prostu zdefiniować lub użyć pragmy [ostrzegawczej.](../preprocessor/warning.md) Albo wyłączy ostrzeżenia o uszczukaniu, ale oczywiście nadal istnieją problemy z zabezpieczeniami, które spowodowały ostrzeżenia. O wiele lepiej jest pozostawić ostrzeżenia o nadszyfrywanie włączone i skorzystać z nowych funkcji zabezpieczeń CRT.
+Istnieje kilka sposobów wyeliminowania ostrzeżeń o wycofaniu dla starszych, mniej bezpiecznych funkcji. Najprostszym jest po prostu zdefiniowanie `_CRT_SECURE_NO_WARNINGS` lub użycie dyrektywy pragma [ostrzeżenia](../preprocessor/warning.md) . Spowoduje to wyłączenie ostrzeżeń o zaniechaniu, ale nadal istnieją problemy z zabezpieczeniami, które spowodowały ostrzeżenia. Lepiej jest pozostawić ostrzeżenia o wycofaniu i korzystać z nowych funkcji zabezpieczeń CRT.
 
-W języku C++ najprostszym sposobem, aby to zrobić, jest użycie [bezpiecznego przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md), co w wielu przypadkach wyeliminuje ostrzeżenia o deprecation, zastępując wywołania przestarzałych funkcji wywołaniem nowych bezpiecznych wersji tych funkcji. Rozważmy na przykład to przestarzałe wywołanie: `strcpy`
+W języku C++ Najprostszym sposobem na to jest użycie [przeciążenia bezpiecznego szablonu](../c-runtime-library/secure-template-overloads.md). Spowoduje to wyeliminowanie ostrzeżeń o zaniechaniu w wielu przypadkach przez zamianę wywołań przestarzałych funkcji na wywołania bezpiecznych wersji tych funkcji. Rozważmy na przykład to przestarzałe wywołanie do `strcpy` :
 
 ```
 char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-Definiowanie `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 eliminuje ostrzeżenie, `strcpy` zmieniając `strcpy_s`wywołanie do , co zapobiega przekroczeniu buforu. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md).
+Zdefiniowanie `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 eliminuje ostrzeżenie przez zmianę `strcpy` wywołania do `strcpy_s` , co uniemożliwia przekroczenie buforu. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../c-runtime-library/secure-template-overloads.md).
 
-W przypadku tych przestarzałych funkcji bez przeciążeń bezpiecznego szablonu zdecydowanie należy rozważyć ręczne aktualizowanie kodu w celu użycia bezpiecznych wersji.
+W przypadku tych przestarzałych funkcji bez zabezpieczeń przeciążeń szablonów należy okresowo rozważyć ręczne aktualizowanie kodu w celu używania bezpiecznych wersji.
 
-Innym źródłem ostrzeżeń o wycofanie, niezwiązane z zabezpieczeniami, są funkcje POSIX. Zastąp nazwy funkcji POSIX ich standardowymi odpowiednikami (na przykład zmień [dostęp](../c-runtime-library/reference/access-crt.md) do [_access)](../c-runtime-library/reference/access-waccess.md)lub `_CRT_NONSTDC_NO_WARNINGS`wyłącz ostrzeżenia o posix związanych z poniżaniem, definiując . Aby uzyskać więcej informacji, zobacz [Zgodność](compatibility.md).
+Innym źródłem ostrzeżeń o zaniechaniu, niezwiązanych z zabezpieczeniami, jest funkcja POSIX. Zamień nazwy funkcji POSIX na ich standardowe odpowiedniki (na przykład zmiana [dostępu](../c-runtime-library/reference/access-crt.md) do [_access](../c-runtime-library/reference/access-waccess.md)) lub Wyłącz ostrzeżenia o zaniechaniu związanym z systemem POSIX przez zdefiniowanie `_CRT_NONSTDC_NO_WARNINGS` . Aby uzyskać więcej informacji, zobacz [zgodność](compatibility.md).
 
 ## <a name="additional-security-features"></a>Dodatkowe funkcje zabezpieczeń
 
-Niektóre funkcje zabezpieczeń są następujące:
+Niektóre funkcje zabezpieczeń obejmują:
 
-- `Parameter Validation`. Parametry przekazywane do funkcji CRT są sprawdzane, zarówno w bezpiecznych funkcjach, jak i w wielu istniejących wersjach funkcji. Te weryfikacje obejmują:
+- `Parameter Validation`. Zabezpiecz funkcje i wiele niezabezpieczonych odpowiedników, sprawdź poprawność parametrów. Sprawdzanie poprawności może obejmować:
 
-  - Sprawdzanie wartości **NULL** przekazanych do funkcji.
+  - Sprawdzanie wartości **null** .
+  - Sprawdzanie poprawności wyliczanych wartości.
+  - Sprawdzanie, czy wartości całkowite znajdują się w prawidłowych zakresach.
 
-  - Sprawdzanie wyliczonych wartości pod kątem ważności.
+- Aby uzyskać więcej informacji, zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md).
 
-  - Sprawdzanie, czy wartości integralne znajdują się w prawidłowych zakresach.
+- Program obsługi dla nieprawidłowych parametrów jest również dostępny dla dewelopera. Gdy funkcja napotka nieprawidłowy parametr, a nie zostanie potwierdzona i zakończona aplikacja, CRT pozwala sprawdzić te problemy za pośrednictwem [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-- Aby uzyskać więcej informacji, zobacz [Sprawdzanie poprawności parametrów](../c-runtime-library/parameter-validation.md).
+- `Sized Buffers`. Rozmiar buforu należy przekazać do dowolnej bezpiecznej funkcji, która zapisuje dane w buforze. Bezpieczne wersje sprawdzają, czy bufor jest wystarczająco duży przed zapisem w nim. Pozwala to uniknąć niegroźnych błędów przepełnienia buforu, które mogą pozwolić na wykonanie złośliwego kodu. Te funkcje zwykle zwracają `errno` Kod błędu i wywołują procedurę obsługi nieprawidłowego parametru, jeśli rozmiar buforu jest zbyt mały. Funkcje odczytane z buforów wejściowych, takie jak `gets` , mają bezpieczne wersje, które wymagają określenia maksymalnego rozmiaru.
 
-- Program obsługi dla nieprawidłowych parametrów jest również dostępny dla dewelopera. Gdy napotkanie nieprawidłowy parametr, zamiast potwierdzenia i zamykania aplikacji, CRT zapewnia sposób, aby sprawdzić te problemy z [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) funkcji.
+- `Null termination`. Niektóre funkcje, które nie mogą być niezakończonymi ciągami, mają bezpieczne wersje, co gwarantuje, że ciągi są prawidłowo zakończone wartością null.
 
-- `Sized Buffers`. Funkcje bezpieczne wymagają, aby rozmiar buforu był przekazywany do dowolnej funkcji, która zapisuje do buforu. Bezpieczne wersje sprawdzają, czy bufor jest wystarczająco duży przed zapisaniem do niego, co pomaga uniknąć niebezpiecznych błędów przepełnienia buforu, które mogą umożliwić wykonanie złośliwego kodu. Te funkcje `errno` zwykle zwracają typ kodu błędu i wywołać nieprawidłowy program obsługi parametrów, jeśli rozmiar buforu jest zbyt mały. Funkcje odczytywane z buforów wejściowych, takie jak `gets`, mają bezpieczne wersje, które wymagają określenia maksymalnego rozmiaru.
+- `Enhanced error reporting`. Funkcje Secure zwracają kody błędów z więcej informacji o błędach niż to, które były dostępne w przypadku istniejących funkcji. Funkcje Secure i wiele wcześniej istniejących funkcji teraz ustawiają `errno` i często zwracają `errno` typ kodu, aby zapewnić lepsze raportowanie błędów.
 
-- `Null termination`. Niektóre funkcje, które opuściły potencjalnie nie zakończone ciągi mają bezpieczne wersje, które zapewniają, że ciągi są poprawnie zakończone zerem.
+- `Filesystem security`. Bezpieczne interfejsy API we/wy plików obsługują bezpieczny dostęp do plików w domyślnym przypadku.
 
-- `Enhanced error reporting`. Bezpieczne funkcje zwracają kody błędów z większą liczoną niż dostępna w istniejących funkcjach. Bezpieczne funkcje i wiele istniejących funkcji teraz `errno` ustawić i `errno` często zwraca typ kodu, jak również, aby zapewnić lepsze raportowanie błędów.
+- `Windows security`. Interfejsy API bezpiecznego przetwarzania wymuszają zasady zabezpieczeń i zezwalają na określenie list kontroli dostępu.
 
-- `Filesystem security`. Bezpieczne interfejsy WE/Wy plików obsługują bezpieczny dostęp do plików w przypadku domyślnym.
-
-- `Windows security`. Bezpieczne interfejsy API procesów wymuszają zasady zabezpieczeń i umożliwiają określanie list ACL.
-
-- `Format string syntax checking`. Nieprawidłowe ciągi są wykrywane, na przykład `printf` przy użyciu niepoprawnych znaków pola typu w ciągach formatu.
+- `Format string syntax checking`. Wykryto nieprawidłowe ciągi, na przykład przy użyciu nieprawidłowych znaków pola typu w `printf` ciągach formatu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Walidacja parametru](../c-runtime-library/parameter-validation.md)<br/>
-[Bezpieczne przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md)<br/>
+[Sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md)<br/>
+[Bezpieczne przeciążenia szablonów](../c-runtime-library/secure-template-overloads.md)<br/>
 [Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

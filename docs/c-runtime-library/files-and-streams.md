@@ -1,48 +1,50 @@
 ---
 title: Pliki i strumienie
+description: Omówienie plików i strumieni w bibliotece środowiska uruchomieniowego Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343748"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589968"
 ---
 # <a name="files-and-streams"></a>Pliki i strumienie
 
-Program komunikuje się ze środowiska docelowego, Odczyt i zapis plików. Plik może być:
+Program komunikuje się ze środowiskiem docelowym poprzez odczytywanie i zapisywanie plików. Plik może być:
 
-- Zestaw danych, które mogą odczytywać i zapisywać w wielokrotnie.
+- Zestaw danych, który można odczytywać i zapisywać wielokrotnie.
 
-- Strumień bajtów wygenerowany przez program (na przykład potok).
+- Strumień bajtów generowany przez program (na przykład potok).
 
-- Strumień bajtów odebranych z lub wysyłane do urządzenia peryferyjne.
+- Strumień bajtów odebranych z lub wysłanych na urządzenie peryferyjne.
 
-Ostatnie dwa elementy są interaktywne plików. Są to zazwyczaj podmiotu zabezpieczeń oznacza, że za pomocą którego do interakcji z programem. Manipulowania wszystkie te rodzaje plików w taki sam sposób, wywołując funkcje biblioteki. Możesz dołączyć standardowy nagłówek stdio —. H, aby zadeklarować większość tych funkcji.
+Ostatnie dwa elementy to pliki interaktywne. Pliki są zazwyczaj podmiotem zabezpieczeń, za pomocą którego można korzystać z programu. Wszystkie te rodzaje plików są przetwarzane w taki sam sposób — przez wywoływanie funkcji biblioteki. Dołączenie standardowego nagłówka STDIO. H, aby zadeklarować większość tych funkcji.
 
-Aby można było wykonać wiele operacji na pliku, można otworzyć pliku. Otwieranie pliku kojarzy ją z usługą stream, struktura danych w ramach standardowej biblioteki C, która glosses przez wiele różnic między plikami różnych rodzajów. Biblioteka przechowuje informacje o stanie każdego strumienia w obiekcie typu pliku.
+Aby można było wykonać wiele operacji na pliku, należy otworzyć plik. Otwarcie pliku powoduje skojarzenie go ze strumieniem, strukturą danych w standardowej bibliotece języka C, która zabłyszcząca wiele różnic między plikami różnych rodzajów. Biblioteka zachowuje stan każdego strumienia w obiekcie typu plik.
 
-Środowisko docelowe otwiera trzy pliki przed uruchomieniem programu. Plik można otworzyć przez wywołanie funkcji biblioteki [fopen —, _wfopen —](../c-runtime-library/reference/fopen-wfopen.md) za pomocą dwóch argumentów. ( `fopen` Funkcja jest przestarzała, użyj [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md) zamiast.) Pierwszy argument jest nazwą pliku. Drugi argument jest ciąg C, który określa:
+Środowisko docelowe otwiera trzy pliki przed uruchomieniem programu. Możesz otworzyć plik, wywołując funkcję biblioteki [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) z dwoma argumentami. ( `fopen` Funkcja jest przestarzała, użyj [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) zamiast niej). Pierwszym argumentem jest nazwa pliku. Drugi argument jest ciągiem C, który określa:
 
-- Czy zamierzasz odczytu danych z pliku lub zapisywanie danych do jej lub obu.
+- Czy zamierzasz odczytywać dane z pliku, czy zapisywać do nich dane.
 
-- Czy chcesz wygenerować nowej zawartości dla pliku (lub utworzenie pliku, jeśli wcześniej nie istniał) lub nie podawaj żadnej istniejącej zawartości w miejscu.
+- Czy zamierzasz generować nową zawartość dla pliku (lub utworzyć plik, jeśli jeszcze nie istnieje) lub pozostawić istniejącą zawartość na miejscu.
 
-- Operacje zapisu do pliku może zmienić istniejącą zawartość czy powinna tylko Dołącz bajtów na końcu pliku.
+- Czy operacje zapisu w pliku mogą zmieniać istniejącą zawartość lub dołączać tylko bajty na końcu pliku.
 
-- Czy chcesz manipulowania strumienia tekstu lub strumienia binarnego.
+- Czy chcesz manipulować strumieniem tekstu lub strumieniem binarnym.
 
-Gdy plik zostanie pomyślnie otwarty, następnie można określić, czy strumień jest zorientowane na bajt (strumień bajtów) lub całego obiektowo (strumień szerokości). Strumień jest początkowo niepowiązanej. Wywoływanie niektórych funkcji do wykonywania operacji strumienia sprawia, że obiektowo, podczas gdy niektóre inne funkcje ułatwiają szerokiego zorientowanej na bajt. Po strumień obsługuje orientacji, dopóki nie jest ono zamknięte przez wywołanie [fclose —](../c-runtime-library/reference/fclose-fcloseall.md) lub [freopen —](../c-runtime-library/reference/freopen-wfreopen.md).
+Po pomyślnym otwarciu pliku można określić, czy strumień jest zorientowany na bajty (strumień bajtów) czy zorientowany na szerokie (szeroki strumień). Na początku nie powiązano strumienia. Wywoływanie niektórych funkcji w strumieniu sprawia, że jest to zorientowane na bajty, a niektóre inne funkcje sprawiają, że są zorientowane na szeroką. Po ustanowieniu strumień zachowuje swoją orientację, dopóki nie zostanie zamknięty przez wywołanie [fclose](../c-runtime-library/reference/fclose-fcloseall.md) lub [freopen](../c-runtime-library/reference/freopen-wfreopen.md).
 
-© 1989-2001 by P.J. Plauger i Jim Brodie. Wszelkie prawa zastrzeżone.
+© 1989-2001 według P.J. Plauger i Jim Brodie. All rights reserved.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Strumienie binarne i tekstowe](../c-runtime-library/text-and-binary-streams.md)<br/>
-[Strumienie byte oraz szerokie](../c-runtime-library/byte-and-wide-streams.md)<br/>
-[Sterowanie strumieniami](../c-runtime-library/controlling-streams.md)<br/>
-[Stany strumieni](../c-runtime-library/stream-states.md)
+[Strumienie tekstu i danych binarnych](../c-runtime-library/text-and-binary-streams.md)<br/>
+[Strumienie bajtowe i szerokie](../c-runtime-library/byte-and-wide-streams.md)<br/>
+[Kontrolowanie strumieni](../c-runtime-library/controlling-streams.md)<br/>
+[Stany strumienia](../c-runtime-library/stream-states.md)

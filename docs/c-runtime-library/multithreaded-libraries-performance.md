@@ -1,39 +1,41 @@
 ---
 title: Wydajność bibliotek wielowątkowych
+description: Przegląd, jak uzyskać największą wydajność z bibliotek wielowątkowych środowiska uruchomieniowego Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342409"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590202"
 ---
 # <a name="multithreaded-libraries-performance"></a>Wydajność bibliotek wielowątkowych
 
-Jednowątkowe CRT nie jest już dostępna. W tym temacie omówiono sposób uzyskać maksymalną wydajność bibliotek wielowątkowych.
+Jednowątkowy CRT nie jest już dostępny. W tym temacie omówiono, jak uzyskać maksymalną wydajność z bibliotek wielowątkowych.
 
-## <a name="maximizing-performance"></a>Maksymalizacja wydajności
+## <a name="maximizing-performance"></a>Maksymalizowanie wydajności
 
-Wydajność bibliotek wielowątkowych została ulepszona i zbliża się wydajność bibliotek wyeliminowane teraz apartamentem. W tych sytuacjach podczas jeszcze większej wydajności jest wymagany, istnieje kilka nowych funkcji.
+Wydajność bibliotek wielowątkowych została ulepszona i jest bliska wydajności teraz usuniętych bibliotek jednowątkowych. W tych sytuacjach, gdy wymagana jest jeszcze większa wydajność, istnieje kilka nowych funkcji.
 
-- Blokowanie niezależnych strumienia pozwala na blokowanie strumienia, a następnie użyj [_nolock — funkcje](../c-runtime-library/nolock-functions.md) , uzyskać dostęp do strumienia bezpośrednio. Dzięki temu użycia blokady, aby być podciągnięta poza krytyczne pętli.
+- Niezależne blokowanie strumienia umożliwia zablokowanie strumienia, a następnie użycie [funkcji _nolock](../c-runtime-library/nolock-functions.md) , które uzyskują bezpośredni dostęp do strumienia. Pozwala to na podkluczenie użycia blokady poza pętlą krytyczną.
 
-- Ustawienia regionalne dla wątku zmniejsza koszty dostępu ustawień regionalnych dla scenariusze wielowątkowe (zobacz [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)).
+- Ustawienia regionalne poszczególnych wątków zmniejszają koszt dostępu do ustawień regionalnych dla scenariuszy wielowątkowych (zobacz [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)).
 
-- Funkcje zależne od ustawień regionalnych (przy użyciu nazwy kończące się na _l) przyjmują ustawień regionalnych jako parametru, usuwając znaczne ograniczenie kosztów (na przykład [printf, _printf_l —, wprintf, _wprintf_l —](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)).
+- Funkcje zależne od ustawień regionalnych (z nazwami kończącymi się _l) przyjmują ustawienia regionalne jako parametr, usuwając koszt znaczący (na przykład [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)).
 
-- Optymalizacja pod kątem typowych strony kodowe zmniejszyć koszt wiele operacji krótki.
+- Optymalizacje dla wspólnych strony kodowej zmniejszają koszt wielu krótkich operacji.
 
-- Definiowanie [_CRT_DISABLE_PERFCRIT_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md) wymusza wszystkie operacje We/Wy przyjęto założenie modelu jednowątkowe operacji We/Wy i używać formy _nolock — funkcje. Dzięki temu wysoce I/O-based aplikacje jednowątkowe w celu uzyskania lepszej wydajności.
+- Zdefiniowanie [_CRT_DISABLE_PERFCRIT_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md) wymusza wszystkie operacje we/wy, aby założyć model we/wy z jednym wątkiem, i użyć _nolock formularzy funkcji. Dzięki temu wysoce wielowątkowe aplikacje korzystające z operacji we/wy mogą uzyskać lepszą wydajność.
 
-- Narażenia uchwyt sterty CRT umożliwia włączenie Windows niskiego fragmentację sterty (LFH) na stercie CRT, która może znacznie poprawić wydajność w scenariuszach wysoce skalowaną.
+- Ekspozycja uchwytu sterty CRT umożliwia włączenie sterty niskiej fragmentacji systemu Windows (LFH) dla sterty CRT, co może znacznie poprawić wydajność w wysoce skalowalnych scenariuszach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

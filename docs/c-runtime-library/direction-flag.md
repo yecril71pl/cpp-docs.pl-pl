@@ -1,15 +1,17 @@
 ---
 title: Flaga kierunku
+description: Opisuje efekt flagi kierunku procesora CPU w funkcjach środowiska uruchomieniowego Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: 04e096c6a62f806f4c214745a8401b1730eda3a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a8f06b3b8caf08e1d3db2159bfc730e25229733b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443382"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589994"
 ---
 # <a name="direction-flag"></a>Flaga kierunku
 
@@ -21,4 +23,4 @@ Funkcja biblioteki wykonawczej C, taka jak procedury manipulowania ciągiem i ma
 
 ## <a name="see-also"></a>Zobacz też
 
-[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

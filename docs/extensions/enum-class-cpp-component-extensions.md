@@ -3,12 +3,12 @@ title: klasa wyliczeniowa  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219719"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590319"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>klasa wyliczeniowa  (C++/CLI i C++/CX)
 
@@ -59,7 +59,7 @@ Aby uzyskać więcej informacji i zapoznać się z przykładami, zobacz [wylicze
 
 Należy zauważyć, że kompilator emituje komunikaty o błędach, jeśli wyrażenie stałe definiujące wartość modułu wyliczającego nie może być reprezentowane przez *Typ podstawowy*.  Jednak kompilator nie zgłasza błędu dla wartości, która jest nieodpowiedni dla typu źródłowego. Na przykład:
 
-- Jeśli *Typ podstawowy* jest wartością numeryczną, a moduł wyliczający określa maksymalną wartość tego typu, wartość kolejnej niejawnie zdefiniowanej enumeratoin nie może być reprezentowana.
+- Jeśli *Typ podstawowy* jest wartością numeryczną, a moduł wyliczający określa maksymalną wartość tego typu, wartość następnego niejawnie zdefiniowanego wyliczenia nie może być reprezentowana.
 
 - Jeśli *Typ podstawowy* jest **`bool`** i więcej niż dwa moduły wyliczające są zdefiniowane niejawnie, nie można przedstawić modułów wyliczających po pierwszych dwóch.
 
@@ -67,7 +67,7 @@ Należy zauważyć, że kompilator emituje komunikaty o błędach, jeśli wyraż
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -176,7 +176,7 @@ Aby uzyskać więcej informacji na temat typów wyliczeniowych CLR, zobacz:
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

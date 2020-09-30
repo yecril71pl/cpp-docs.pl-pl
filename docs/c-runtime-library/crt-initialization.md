@@ -1,25 +1,27 @@
 ---
 title: Inicjalizacja CRT
+description: Opisuje sposób inicjowania stanu globalnego w kodzie natywnym przez CRT.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446687"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589773"
 ---
 # <a name="crt-initialization"></a>Inicjalizacja CRT
 
-W tym temacie opisano, jak CRT inicjalizuje globalnego stanów w kodzie natywnym.
+W tym temacie opisano sposób inicjowania przez CRT stanu globalnego w kodzie natywnym.
 
-Domyślnie konsolidator zawiera biblioteki CRT, która zawiera swój własny kod startowy. Ten kod startowy inicjuje biblioteki CRT, wywołuje inicjatorów globalnych, a następnie wywołuje dostarczonych przez użytkownika `main` funkcji dla aplikacji konsoli.
+Domyślnie konsolidator obejmuje bibliotekę CRT, która udostępnia własny kod uruchomienia. Ten kod uruchamiania inicjuje bibliotekę CRT, wywołuje globalne inicjatory, a następnie wywołuje funkcję dostarczoną przez użytkownika `main` dla aplikacji konsolowych.
 
-## <a name="initializing-a-global-object"></a>Inicjowanie obiektów globalnych
+## <a name="initializing-a-global-object"></a>Inicjowanie obiektu globalnego
 
-Rozważmy poniższy kod:
+Spójrzmy na poniższy kod:
 
 ```
 int func(void)
@@ -35,13 +37,13 @@ int main()
 }
 ```
 
-Zgodnie ze standardem C/C++ `func()` musi zostać wywołana przed `main()` jest wykonywany. Ale który ją wywołuje?
+Zgodnie ze standardem C/C++, `func()` musi być wywoływana przed `main()` wykonaniem. Ale który je wywołuje?
 
-Jednym ze sposobów, aby określić, to jest, aby ustawić punkt przerwania `func()`, debugowania aplikacji i sprawdzić stosu. Jest to możliwe, ponieważ kod źródłowy CRT jest dołączony do Visual Studio.
+Jednym ze sposobów określenia obiektu wywołującego jest ustawienie punktu przerwania w programie `func()` , debugowanie aplikacji i sprawdzenie stosu. Jest to możliwe, ponieważ kod źródłowy CRT jest dołączony do programu Visual Studio.
 
-Podczas przeglądania funkcji na stosie znajdziesz, że CRT jest lista wskaźników do funkcji w pętli i wywoływania każdy z nich, po ich napotkaniu. Te funkcje są podobne do `func()` lub konstruktory wystąpień klas.
+Podczas przeglądania funkcji na stosie zobaczysz, że CRT wywołuje listę wskaźników funkcji. Te funkcje są podobne do `func()` , lub konstruktorów dla wystąpień klas.
 
-CRT uzyskuje listę wskaźników funkcji, z Microsoft C++ kompilatora. Gdy kompilator wykryje inicjatorze globalnym, generuje dynamiczny inicjator w `.CRT$XCU` sekcji (gdzie `CRT` jest nazwy sekcji i `XCU` to nazwa grupy). Aby uzyskać listę tych inicjatory dynamicznego, uruchom polecenie **dumpbin/all main.obj**, a następnie wyszukaj `.CRT$XCU` sekcji (w przypadku main.cpp jest kompilowany jako plik C++ nie jest to plik C). Będzie podobny do następującego:
+CRT pobiera listę wskaźników funkcji z kompilatora języka Microsoft C++. Gdy kompilator widzi inicjatora globalnego, generuje inicjator dynamiczny w `.CRT$XCU` sekcji gdzie `CRT` jest nazwą sekcji i `XCU` jest nazwą grupy. Aby uzyskać listę inicjatorów dynamicznych, uruchom polecenie **polecenia DUMPBIN/All Main. obj**, a następnie wyszukaj `.CRT$XCU` sekcję. Ma to zastosowanie, gdy Main. cpp jest kompilowany jako plik języka C++, a nie plik C. Będzie wyglądać podobnie do poniższego przykładu:
 
 ```
 SECTION HEADER #6
@@ -63,23 +65,23 @@ RAW DATA #6
   00000000: 00 00 00 00                                      ....
 
 RELOCATIONS #6
-                                                Symbol    Symbol
+                                               Symbol    Symbol
 Offset    Type              Applied To         Index     Name
---------  ----------------  -----------------  --------  ------
-00000000  DIR32                      00000000         C  ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
+--------  ----------------  -----------------  --------  -------
+00000000  DIR32             00000000           C         ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
 ```
 
 CRT definiuje dwa wskaźniki:
 
-- `__xc_a` W `.CRT$XCA`
+- `__xc_a` w elemencie `.CRT$XCA`
 
-- `__xc_z` W `.CRT$XCZ`
+- `__xc_z` w elemencie `.CRT$XCZ`
 
-Obie grupy nie mają inne symbole zdefiniowane, z wyjątkiem `__xc_a` i `__xc_z`.
+Żadna z grup nie ma żadnych innych symboli zdefiniowanych poza `__xc_a` i `__xc_z` .
 
-Teraz, gdy program łączący odczytuje różne `.CRT` grup, jego łączy je w jednej sekcji i porządkuje je w kolejności alfabetycznej. Oznacza to, że inicjatorów globalnych zdefiniowanych przez użytkownika (który Microsoft C++ kompilator umieszcza w `.CRT$XCU`) będzie zawsze mają po `.CRT$XCA` i przed `.CRT$XCZ`.
+Teraz, gdy konsolidator odczytuje różne `.CRT` grupy, łączy je w jednej sekcji i porządkuje je alfabetycznie. Oznacza to, że zdefiniowane przez użytkownika inicjatory globalne (które są umieszczane w kompilatorze Microsoft C++ `.CRT$XCU` ) zawsze będą znajdować się po `.CRT$XCA` i wcześniej `.CRT$XCZ` .
 
-Sekcja będzie wyglądać w następujący sposób:
+Sekcja będzie wyglądać podobnie do poniższego przykładu:
 
 ```
 .CRT$XCA
@@ -91,8 +93,8 @@ Sekcja będzie wyglądać w następujący sposób:
             __xc_z
 ```
 
-Tak, biblioteka CRT będą wykorzystywane serwery `__xc_a` i `__xc_z` do określenia początku i końca listy inicjatorów globalnych ze względu na sposób, w którym one są ułożone w pamięci po załadowaniu obrazu.
+Dlatego Biblioteka CRT używa zarówno programu `__xc_a` , jak i `__xc_z` do określenia początku i końca listy globalnych inicjatorów z powodu sposobu, w jaki są one ustalone w pamięci po załadowaniu obrazu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

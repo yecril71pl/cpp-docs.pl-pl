@@ -1,17 +1,18 @@
 ---
-title: Typ-ogólne matematyczne
+title: Funkcje matematyczne niezależne od typu
 description: Opisuje makra w <tgmath. h>, które ułatwiają pisanie kodu w języku C, który wywołuje prawą funkcję matematyczną w oparciu o typ argumentu.
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557678"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590228"
 ---
-# <a name="type-generic-math"></a>Typ-ogólne matematyczne
+# <a name="type-generic-math"></a>Funkcje matematyczne niezależne od typu
 
 W przypadku ISO C standard 11 (C11) i nowszych, \<tgmath.h> nagłówek, oprócz \<math.h> i \<complex.h> , zawiera makra, które wywołują odpowiednią funkcję matematyczną na podstawie typów parametrów.
 

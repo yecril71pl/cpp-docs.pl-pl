@@ -1,5 +1,7 @@
 ---
 title: Mapowania zwykłego tekstu
+description: Wprowadzenie do mapowań specyficznych dla firmy Microsoft dla typów danych, procedur i innych obiektów w środowisku uruchomieniowym języka C.
+ms.topic: conceptual
 ms.date: 11/04/2016
 f1_keywords:
 - _UNICODE
@@ -27,26 +29,26 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea3b1eef413a0d9f52e81795c04424d533b83504
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221877"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590111"
 ---
 # <a name="using-generic-text-mappings"></a>Mapowania zwykłego tekstu
 
 **Specyficzne dla firmy Microsoft**
 
-Aby uprościć Programowanie kodu dla różnych rynków międzynarodowych, Biblioteka wykonawcza firmy Microsoft zapewnia specyficzne dla firmy Microsoft mapowania "ogólny-tekst" dla wielu typów danych, procedur i innych obiektów. Mapowania te są zdefiniowane w używanie TCHAR. C. Przy użyciu tych mapowań nazw można napisać kod generyczny, który można skompilować dla dowolnego z trzech rodzajów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stałej manifestu zdefiniowanej przy użyciu `#define` instrukcji. Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne ze standardem ANSI.
+Aby uprościć Programowanie kodu dla różnych rynków międzynarodowych, Biblioteka wykonawcza firmy Microsoft zapewnia specyficzne dla firmy Microsoft mapowania "ogólny-tekst" dla wielu typów danych, procedur i innych obiektów. Mapowania te są zdefiniowane w używanie TCHAR. H. Przy użyciu tych mapowań nazw można napisać kod generyczny, który można skompilować dla dowolnego z trzech rodzajów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stałej manifestu zdefiniowanej przy użyciu `#define` instrukcji. Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne ze standardem ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora dla mapowań tekstu ogólnego
 
 |#define|Skompilowana wersja|Przykład|
 |--------------|----------------------|-------------|
-|`_UNICODE`|Unicode (znak dwubajtowy)|`_tcsrev`mapuje do`_wcsrev`|
-|`_MBCS`|Znaki wielobajtowe|`_tcsrev`mapuje do`_mbsrev`|
-|Brak (wartość domyślna: nie jest ani `_UNICODE` `_MBCS` zdefiniowana)|SBCS (ASCII)|`_tcsrev`mapuje do`strrev`|
+|`_UNICODE`|Unicode (znak dwubajtowy)|`_tcsrev` mapuje do `_wcsrev`|
+|`_MBCS`|Znaki wielobajtowe|`_tcsrev` mapuje do `_mbsrev`|
+|Brak (wartość domyślna: nie jest ani `_UNICODE` `_MBCS` zdefiniowana)|SBCS (ASCII)|`_tcsrev` mapuje do `strrev`|
 
 Na przykład funkcja generyczna tekstu `_tcsrev` zdefiniowana w używanie TCHAR. H, mapowanie do `mbsrev` if zostało `MBCS` zdefiniowane w programie lub w `_wcsrev` przypadku, gdy został `_UNICODE` zdefiniowany. W przeciwnym razie `_tcsrev` mapuje na `strrev` .
 
@@ -61,7 +63,7 @@ Typ danych rodzajowych `_TCHAR` , zdefiniowany również w używanie TCHAR. H ma
 |`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
 |`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
-|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L`(konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
+|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L` (konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
 
 Aby uzyskać pełną listę mapowań tekstu ogólnego procedur, zmiennych i innych obiektów, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md).
 
@@ -97,7 +99,7 @@ W ten sposób można pisać, konserwować i kompilować pojedynczy plik kodu źr
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapowania typów danych](../c-runtime-library/data-type-mappings.md)<br/>
