@@ -1,18 +1,18 @@
 ---
 title: Błąd narzędzi konsolidatora LNK1104
-description: W tym artykule opisano błąd C++ konsolidatora Microsoft C and (MSVC) LNK1104, jego przyczyny i możliwe rozwiązania.
+description: W tym artykule opisano błąd konsolidatora Microsoft C i C++ (MSVC) LNK1104, jego przyczyny i możliwe rozwiązania.
 ms.date: 12/13/2019
 f1_keywords:
 - LNK1104
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: 8878db1b0829703b22b2f7863eb7955d17ad3096
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: aa7bcf34cddfa24956d807131b3c484e7d580e73
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301785"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506036"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Błąd narzędzi konsolidatora LNK1104
 
@@ -44,7 +44,7 @@ Jeśli plik, który nie może zostać otwarty, jest jednym z plików biblioteki 
 
 ### <a name="versioned-vcruntime-libraries"></a>Biblioteki vcruntime z wersjami
 
-Jeśli komunikat o błędzie ma wersję biblioteki firmy Microsoft, taką jak *msvcr120. lib*, zestaw narzędzi platformy dla tej wersji kompilatora może nie być zainstalowany. Aby rozwiązać ten problem, dostępne są dwie opcje: Uaktualnij projekt do korzystania z bieżącego zestawu narzędzi platformy lub zainstaluj starszy zestaw narzędzi i skompiluj projekt bez zmian. Aby uzyskać więcej informacji, zobacz [uaktualnianie projektów ze starszych wersji C++ wizualizacji](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) i [Używanie natywnego wielu elementów docelowych w programie Visual Studio w celu kompilowania starych projektów](../../porting/use-native-multi-targeting.md).
+Jeśli komunikat o błędzie ma wersję biblioteki firmy Microsoft, taką jak *msvcr120. lib*, zestaw narzędzi platformy dla tej wersji kompilatora może nie być zainstalowany. Aby rozwiązać ten problem, dostępne są dwie opcje: Uaktualnij projekt do korzystania z bieżącego zestawu narzędzi platformy lub zainstaluj starszy zestaw narzędzi i skompiluj projekt bez zmian. Aby uzyskać więcej informacji, zobacz [uaktualnianie projektów z wcześniejszych wersji programu Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) i [Używanie natywnego wielu elementów docelowych w programie Visual Studio w celu kompilowania starych projektów](../../porting/use-native-multi-targeting.md).
 
 ### <a name="retail-debug-or-platform-specific-libraries"></a>Biblioteki detaliczne, debugowania lub specyficzne dla platformy
 
@@ -52,7 +52,7 @@ Ten błąd może wystąpić podczas pierwszej kompilacji nowej docelowej platfor
 
 ### <a name="the-vccorliblib-library"></a>Biblioteka vccorlib. lib
 
-Nie ma bibliotek Spectre-z ograniczeniami dla aplikacji uniwersalnych systemu Windows (platformy UWP) ani składników. Jeśli komunikat o błędzie zawiera *vccorlib. lib*, być może włączono [/QSPECTRE](../../build/reference/qspectre.md) w projekcie platformy UWP. Wyłącz opcję kompilatora **/Qspectre** , aby rozwiązać ten problem. W programie Visual Studio Zmień właściwość **Spectre ograniczenia** . Znajduje się na stronie **generowania kodu** **CC++ /**  > okna dialogowego **strony właściwości** projektu.
+Nie ma bibliotek Spectre-z ograniczeniami dla aplikacji uniwersalnych systemu Windows (platformy UWP) ani składników. Jeśli komunikat o błędzie zawiera *vccorlib. lib*, być może włączono [/QSPECTRE](../../build/reference/qspectre.md) w projekcie platformy UWP. Wyłącz opcję kompilatora **/Qspectre** , aby rozwiązać ten problem. W programie Visual Studio Zmień właściwość **Spectre ograniczenia** . Znajduje się na stronie generowania **kodu C/C++**  >  **Code Generation** okna dialogowego **strony właściwości** projektu.
 
 ### <a name="libraries-in-projects-from-online-or-other-sources"></a>Biblioteki w projektach z Internetu lub innych źródeł
 
@@ -72,19 +72,19 @@ Istnieje kilka typowych przyczyn tego problemu:
 
 - Biblioteka może mieć zależności od innych bibliotek, które nie są zainstalowane.
 
-Aby rozwiązać problem z ścieżką dla kompilacji wiersza polecenia, sprawdź, czy zmienna środowiskowa LIB jest ustawiona. Upewnij się, że zawiera ona ścieżki dla wszystkich używanych bibliotek oraz dla każdej kompilacji, którą tworzysz. W środowisku IDE ścieżki biblioteki są ustawiane przez **Katalogi VC + +**  > właściwości **katalogi biblioteki** . Upewnij się, że wszystkie katalogi zawierające potrzebne biblioteki są wymienione w tym miejscu dla każdej kompilacji, którą tworzysz.
+Aby rozwiązać problem z ścieżką dla kompilacji wiersza polecenia, sprawdź, czy zmienna środowiskowa LIB jest ustawiona. Upewnij się, że zawiera ona ścieżki dla wszystkich używanych bibliotek oraz dla każdej kompilacji, którą tworzysz. W środowisku IDE ścieżki biblioteki są ustawiane przez właściwość katalogi katalogów **VC + +**  >  **Library Directories** . Upewnij się, że wszystkie katalogi zawierające potrzebne biblioteki są wymienione w tym miejscu dla każdej kompilacji, którą tworzysz.
 
 Może być konieczne dostarczenie katalogu biblioteki, który zastąpi Katalog biblioteki standardowej. W wierszu polecenia Użyj opcji [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . W środowisku IDE Użyj właściwości **Dodatkowe katalogi biblioteki** we **właściwościach konfiguracji > konsolidatora >** stronie właściwości ogólnej dla projektu.
 
-Upewnij się, że instalujesz każdą wersję biblioteki potrzebną dla kompilacji, którą tworzysz. Rozważ użycie narzędzia do zarządzania pakietami [vcpkg](../../vcpkg.md) w celu zautomatyzowania instalacji i konfiguracji wielu wspólnych bibliotek. Gdy jest to możliwe, najlepiej utworzyć własne kopie bibliotek innych firm. Następnie upewnij się, że wszystkie lokalne zależności bibliotek zostały utworzone dla tych samych konfiguracji co projekt.
+Upewnij się, że instalujesz każdą wersję biblioteki potrzebną dla kompilacji, którą tworzysz. Rozważ użycie narzędzia do zarządzania pakietami [vcpkg](../../build/vcpkg.md) w celu zautomatyzowania instalacji i konfiguracji wielu wspólnych bibliotek. Gdy jest to możliwe, najlepiej utworzyć własne kopie bibliotek innych firm. Następnie upewnij się, że wszystkie lokalne zależności bibliotek zostały utworzone dla tych samych konfiguracji co projekt.
 
 ## <a name="cant-open-a-file-built-by-your-project"></a>Nie można otworzyć pliku skompilowanego przez projekt
 
-Ten błąd może pojawić się, jeśli *Nazwa pliku* nie istnieje jeszcze, gdy konsolidator próbuje uzyskać do niego dostęp. Może się to zdarzyć, gdy jeden projekt zależy od innego w rozwiązaniu, ale projekty są kompilowane w niewłaściwej kolejności. Aby rozwiązać ten problem, upewnij się, że odwołania do projektu są ustawione w projekcie, który używa tego pliku. Następnie brakujący plik zostanie skompilowany przed jego zainstalowaniem. Aby uzyskać więcej informacji, zobacz [Dodawanie odwołań w projektach C++ programu Visual Studio](../../build/adding-references-in-visual-cpp-projects.md) i [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
+Ten błąd może pojawić się, jeśli *Nazwa pliku* nie istnieje jeszcze, gdy konsolidator próbuje uzyskać do niego dostęp. Może się to zdarzyć, gdy jeden projekt zależy od innego w rozwiązaniu, ale projekty są kompilowane w niewłaściwej kolejności. Aby rozwiązać ten problem, upewnij się, że odwołania do projektu są ustawione w projekcie, który używa tego pliku. Następnie brakujący plik zostanie skompilowany przed jego zainstalowaniem. Aby uzyskać więcej informacji, zobacz [Dodawanie odwołań w projektach Visual Studio C++](../../build/adding-references-in-visual-cpp-projects.md) i [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
 
-## <a name="cannot-open-file-cprogramobj"></a>Nie można otworzyć pliku "C:\\program. obj"
+## <a name="cannot-open-file-cprogramobj"></a>Nie można otworzyć pliku "C: \\ program. obj"
 
-Jeśli zobaczysz nazwę pliku *C:\\program. obj* w komunikacie o błędzie, zawiń ścieżki biblioteki w podwójnych cudzysłowach. Ten błąd występuje, gdy nieopakowana ścieżka rozpoczynająca się od *C:\\pliki programu* są przekazywane do konsolidatora. Nieopakowane ścieżki mogą również spowodować podobne błędy. Zwykle pokazują one nieoczekiwany plik. obj w katalogu głównym dysku.
+Jeśli zobaczysz nazwę pliku *C: \\ program. obj* w komunikacie o błędzie, zawiń ścieżki biblioteki w podwójnych cudzysłowach. Ten błąd występuje, gdy nieopakowana ścieżka rozpoczynająca się od *C: \\ Program Files* jest przenoszona do konsolidatora. Nieopakowane ścieżki mogą również spowodować podobne błędy. Zwykle pokazują one nieoczekiwany plik. obj w katalogu głównym dysku.
 
 Aby rozwiązać ten problem w przypadku kompilacji w wierszu polecenia, sprawdź parametry opcji [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . Sprawdź również ścieżki określone w zmiennej środowiskowej LIB i ścieżki określone w wierszu polecenia. Pamiętaj, aby używać cudzysłowów podwójnych wokół wszystkich ścieżek zawierających spacje.
 
@@ -116,11 +116,11 @@ Ten błąd może pojawić się, gdy ścieżka do *nazwy pliku* zostanie rozszerz
 
 ### <a name="files-that-are-too-large"></a>Pliki, które są zbyt duże
 
-Ten błąd może wystąpić, ponieważ plik jest zbyt duży. Biblioteki lub pliki obiektów o rozmiarze przekraczającym gigabajty mogą spowodować problemy związane z konsolidatorem 32-bitowym. Możliwym rozwiązaniem tego problemu jest użycie zestawu narzędzi 64-bitowego. Aby uzyskać więcej informacji na temat korzystania z 64-bitowego zestawu narzędzi w wierszu polecenia, zobacz [How to: Enable a 64-bitowy zestaw C++ narzędzi wizualnych w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Aby uzyskać informacje na temat korzystania z 64-bitowego zestawu narzędzi w IDE, zobacz [Korzystanie z programu MSBuild z kompilatorem i narzędziami 64-bitowymi](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project). Zapoznaj się również z tym Stack Overflow wpisem: [jak sprawić, aby program Visual Studio korzystał z natywnej amd64 łańcucha narzędzi](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Ten błąd może wystąpić, ponieważ plik jest zbyt duży. Biblioteki lub pliki obiektów o rozmiarze przekraczającym gigabajty mogą spowodować problemy związane z konsolidatorem 32-bitowym. Możliwym rozwiązaniem tego problemu jest użycie zestawu narzędzi 64-bitowego. Aby uzyskać więcej informacji na temat korzystania z 64-bitowego zestawu narzędzi w wierszu polecenia, zobacz [How to: Enable a 64-bit Visual C++ zestaw narzędzi w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Aby uzyskać informacje na temat korzystania z 64-bitowego zestawu narzędzi w IDE, zobacz [Korzystanie z programu MSBuild z kompilatorem i narzędziami 64-bitowymi](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project). Zapoznaj się również z tym Stack Overflow wpisem: [jak sprawić, aby program Visual Studio korzystał z natywnej amd64 łańcucha narzędzi](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 ### <a name="incorrect-file-permissions"></a>Nieprawidłowe uprawnienia do pliku
 
-Ten błąd może wystąpić, jeśli masz niewystarczające uprawnienia do pliku *filename*. Może się tak zdarzyć, jeśli używasz zwykłego konta użytkownika do uzyskiwania dostępu do plików bibliotek w chronionych katalogach systemu. Lub, jeśli używasz plików skopiowanych z innych użytkowników, którzy nadal mają ustawione pierwotne uprawnienia. Aby rozwiązać ten problem, Przenieś plik do zapisywalnego katalogu projektu. Jeśli przeniesiony plik ma uprawnienia niedostępności, uruchom polecenie takeown. exe w oknie polecenia administratora, aby przejąć własność pliku.
+Ten błąd może wystąpić, jeśli masz niewystarczające uprawnienia do pliku *filename*. Może się tak zdarzyć, jeśli używasz zwykłego konta użytkownika do uzyskiwania dostępu do plików bibliotek w chronionych katalogach systemu. Lub, jeśli używasz plików skopiowanych z innych użytkowników, którzy nadal mają ustawione pierwotne uprawnienia. Aby rozwiązać ten problem, Przenieś plik do zapisywalnego katalogu projektu. Jeśli przeniesiony plik ma niedostępne uprawnienia, uruchom polecenie takeown.exe w oknie polecenia administratora, aby przejąć własność pliku.
 
 ### <a name="insufficient-disk-space"></a>Za mało miejsca na dysku
 
@@ -132,6 +132,6 @@ Jeśli *Nazwa pliku* ma nazwę lnk*nnn*, jest to nazwa pliku wygenerowana przez 
 
 ## <a name="help-my-issue-isnt-listed-here"></a>Pomoc, mój problem nie jest tutaj wymieniony.
 
-Jeśli żaden z wymienionych tu problemów nie ma zastosowania, możesz użyć narzędzi do przesyłania opinii w programie Visual Studio, aby uzyskać pomoc. W środowisku IDE przejdź do paska menu, a następnie wybierz pozycję **pomoc > Wyślij opinię > Zgłoś problem**. Lub Prześlij sugestię, korzystając z **pomocy > wysyłania opinii > wysłania sugestii**. Możesz również użyć witryny sieci Web programu C++ Visual Studio [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html). Użyj go, aby wyszukać odpowiedzi na pytania i poprosił o pomoc. Aby uzyskać więcej informacji, zobacz [Jak zgłosić problem z zestawem narzędzi C++ wizualnych lub dokumentacją](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Jeśli żaden z wymienionych tu problemów nie ma zastosowania, możesz użyć narzędzi do przesyłania opinii w programie Visual Studio, aby uzyskać pomoc. W środowisku IDE przejdź do paska menu, a następnie wybierz pozycję **pomoc > Wyślij opinię > Zgłoś problem**. Lub Prześlij sugestię, korzystając z **pomocy > wysyłania opinii > wysłania sugestii**. Możesz również użyć witryny sieci Web Visual Studio C++ [Developer](https://developercommunity.visualstudio.com/spaces/62/index.html). Użyj go, aby wyszukać odpowiedzi na pytania i poprosił o pomoc. Aby uzyskać więcej informacji, zobacz [Jak zgłosić problem z zestawem narzędzi Visual C++ lub dokumentacją](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
-Jeśli wykryto nowy sposób rozwiązania tego problemu, który należy dodać do tego artykułu, skontaktuj się z nami. Opinię można wysłać do nas za pomocą poniższego przycisku dla **tej strony**. Użyj go, aby utworzyć nowy problem w naszej [ C++ dokumentacji repozytorium GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues). Dziękujemy!
+Jeśli wykryto nowy sposób rozwiązania tego problemu, który należy dodać do tego artykułu, skontaktuj się z nami. Opinię można wysłać do nas za pomocą poniższego przycisku dla **tej strony**. Użyj go, aby utworzyć nowy problem w naszym [repozytorium GitHub dokumentacji języka C++](https://github.com/MicrosoftDocs/cpp-docs/issues). Dziękujemy.

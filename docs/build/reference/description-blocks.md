@@ -1,22 +1,22 @@
 ---
 title: Bloki opisów
-description: NMAKE używa bloków opisu do kojarzenia obiektów docelowych, zależności i poleceń w pliku makefile.
+description: NMAKE używa bloków opisu do kojarzenia obiektów docelowych, zależności i poleceń w pliku reguł programu make.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - description blocks
 - NMAKE program, description blocks
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
-ms.openlocfilehash: e4e80b59d3d30b3b34c55b40d337ef5c078e6404
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f7bf3a26eadde91471e8b45ec26e0abea906244
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322261"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506595"
 ---
 # <a name="description-blocks"></a>Bloki opisów
 
-Bloki opisu tworzą rdzeń pliku makefile. Opisują one *obiekty docelowe*lub pliki do utworzenia i ich *zależności*, pliki potrzebne do utworzenia obiektów docelowych. Blok opisu może zawierać *polecenia,* które opisują sposób tworzenia obiektów docelowych z zależności. Blok opisu jest wierszem zależności, po którym opcjonalnie następuje blok poleceń:
+Bloki opisu tworzą rdzeń pliku reguł programu make. Określają one *cele*lub pliki do utworzenia oraz ich *zależności*, pliki, które są konieczne do utworzenia obiektów docelowych. Blok opisu może zawierać *polecenia*, które opisują sposób tworzenia obiektów docelowych z zależności. Blok opisu jest linią zależności, opcjonalnie po którym następuje blok poleceń:
 
 ```makefile
 targets... : dependents...
@@ -25,25 +25,25 @@ targets... : dependents...
 
 ## <a name="dependency-lines"></a>Linie zależności
 
-*Wiersz zależności* określa jeden lub więcej obiektów docelowych i zero lub więcej osób zależnych. Jeśli obiekt docelowy nie istnieje lub ma wcześniejszą sygnaturę czasową niż zależna, NMAKE wykonuje polecenia w bloku poleceń. NMAKE wykonuje również blok poleceń, jeśli obiekt docelowy jest [pseudotargetem.](pseudotargets.md) Oto przykładowy wiersz zależności:
+*Linia zależności* określa co najmniej jeden element docelowy i zero lub więcej elementów zależnych. Jeśli obiekt docelowy nie istnieje lub ma wcześniejszą sygnaturę czasową niż zależna, NMAKE wykonuje polecenia w bloku poleceń. NMAKE wykonuje również blok poleceń, jeśli obiektem docelowym jest [pseudotarget](#pseudotargets). Oto przykładowa linia zależności:
 
 ```makefile
 hi_bye.exe : hello.obj goodbye.obj helper.lib
 ```
 
-W tym wierszu `hi_bye.exe` zależności jest obiekt docelowy. Jego zależności `hello.obj`to `goodbye.obj`, `helper.lib`i . Wiersz zależności mówi NMAKE do tworzenia `hello.obj`obiektu `goodbye.obj`docelowego, gdy , lub `helper.lib` zmienił się ostatnio niż `hi_bye.exe`.
+W tym wierszu zależności `hi_bye.exe` jest obiektem docelowym. Jego zależności to `hello.obj` , `goodbye.obj` i `helper.lib` . Linia zależności instruuje NMAKE, aby kompilować obiekt docelowy w każdym momencie `hello.obj` , `goodbye.obj` lub `helper.lib` ostatnio został zmieniony niż `hi_bye.exe` .
 
-Cel musi znajdować się na początku wiersza. Nie można go wcięć żadnymi spacjami ani zakładkami. Użyj dwukropka (`:`), aby oddzielić obiekty docelowe od osób zależnych. Spacje lub karty są dozwolone między elementami`:`docelowymi, separatorem dwukropek ( ) i zależnymi. Aby podzielić linię zależności, użyj ukośnika odwrotnego (`\`) po docelowych lub zależnych.
+Element docelowy musi znajdować się na początku wiersza. Nie można utworzyć wcięcia przy użyciu żadnych spacji ani tabulatorów. Użyj dwukropka ( `:` ), aby oddzielić elementy docelowe od elementów zależnych. Spacje lub tabulatory są dozwolone między obiektami docelowymi, separatorem dwukropka ( `:` ) i elementami zależnymi. Aby podzielić linię zależności, użyj ukośnika odwrotnego ( `\` ) po elemencie docelowym lub zależnie.
 
-Przed wykonaniem bloków poleceń, NMAKE skanuje wszystkie zależności i wszelkie odpowiednie *reguły*wnioskowania do tworzenia drzewa zależności . Drzewo zależności określa kroki wymagane do pełnej aktualizacji obiektu docelowego. NMAKE sprawdza rekurencyjnie, czy osoba zależna sama jest obiektem docelowym na innej liście zależności. Po zbudowaniu drzewa zależności NMAKE sprawdza sygnatury czasowe. Jeśli wszelkie zależności w drzewie są nowsze niż miejsce docelowe, NMAKE buduje miejsce docelowe.
+Przed wykonaniem bloków poleceń NMAKE skanuje wszystkie zależności i stosowane reguły wnioskowania w celu utworzenia *drzewa zależności*. Drzewo zależności określa kroki wymagane do pełnej aktualizacji celu. NMAKE sprawdza rekursywnie, niezależnie od tego, czy zależny jest sam obiekt docelowy na innej liście zależności. Po skompilowaniu drzewa zależności NMAKE sprawdza sygnatury czasowe. Jeśli którykolwiek z elementów zależnych w drzewie jest nowszy niż docelowy, NMAKE kompiluje element docelowy.
 
-## <a name="targets"></a><a name="targets"></a>Cele
+## <a name="targets"></a><a name="targets"></a> Celach
 
-Sekcja cele wiersza zależności określa jeden lub więcej obiektów docelowych. Celem może być dowolna prawidłowa nazwa pliku, nazwa katalogu lub [pseudotarget](pseudotargets.md). Oddziel wiele obiektów docelowych przy użyciu jednego lub większej liczby spacji lub kart. Obiekty docelowe nie są rozróżniane. Ścieżki są dozwolone za pomocą nazwy plików. Cel i jego ścieżka nie mogą przekraczać 256 znaków. Jeśli obiekt docelowy poprzedzający dwukropek jest pojedynczym znakiem, należy użyć odstępu oddzielającego. W przeciwnym razie NMAKE interpretuje kombinację dwukropek jako specyfikator dysku.
+Sekcja targets linii zależności określa co najmniej jeden element docelowy. Obiektem docelowym może być dowolna prawidłowa nazwa pliku, katalog lub [pseudotarget](#pseudotargets). Oddziel wiele obiektów docelowych przy użyciu co najmniej jednej spacji lub kart. W obiektach docelowych nie jest rozróżniana wielkość liter. Ścieżki są dozwolone z nazwami plików. Wartość docelowa i jej ścieżka nie mogą przekraczać 256 znaków. Jeśli obiekt docelowy poprzedzający dwukropek jest pojedynczym znakiem, Użyj spacji rozdzielającej. W przeciwnym razie NMAKE interpretuje kombinację dwukropka jako specyfikatora dysku.
 
-### <a name="multiple-targets"></a><a name="multiple-targets"></a>Wiele celów
+### <a name="multiple-targets"></a><a name="multiple-targets"></a> Wiele obiektów docelowych
 
-NMAKE ocenia wiele obiektów docelowych w jednej zależności, tak jakby każdy z nich zostały określone w osobnym bloku opisu.
+NMAKE oblicza wiele obiektów docelowych w pojedynczej zależności, tak jak gdyby zostały określone w osobnym bloku opisu.
 
 Na przykład ta reguła:
 
@@ -52,7 +52,7 @@ bounce.exe leap.exe : jump.obj
    echo Building...
 ```
 
-ocenia się jako:
+jest oceniane jako:
 
 ```makefile
 bounce.exe : jump.obj
@@ -62,9 +62,9 @@ leap.exe : jump.obj
    echo Building...
 ```
 
-### <a name="cumulative-dependencies"></a><a name="cumulative-dependencies"></a>Skumulowane zależności
+### <a name="cumulative-dependencies"></a><a name="cumulative-dependencies"></a> Zależności zbiorcze
 
-Zależności są kumulatywne w bloku opisu, jeśli obiekt docelowy jest powtarzany.
+Zależności są kumulowane w bloku opisu, jeśli element docelowy jest powtarzany.
 
 Na przykład ten zestaw reguł,
 
@@ -74,14 +74,14 @@ bounce.exe : up.obj
    echo Building bounce.exe...
 ```
 
-ocenia się jako:
+jest oceniane jako:
 
 ```makefile
 bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Jeśli masz wiele obiektów docelowych w wielu wierszach zależności w jednym bloku opisu, NMAKE ocenia je tak, jakby każdy z nich został określony w osobnym bloku opisu. Jednak tylko obiekty docelowe w ostatnim wierszu zależności używają bloku poleceń. NMAKE próbuje użyć reguły wnioskowania dla innych obiektów docelowych.
+Jeśli masz wiele obiektów docelowych w wielu wierszach zależności w jednym bloku opisu, NMAKE oblicza je tak, jakby zostały określone w osobnym bloku opisu. Jednak tylko obiekty docelowe w ostatnim wierszu zależności używają bloku poleceń. NMAKE próbuje użyć reguły wnioskowania dla innych celów.
 
 Na przykład ten zestaw reguł,
 
@@ -91,7 +91,7 @@ bounce.exe climb.exe : up.obj
    echo Building bounce.exe...
 ```
 
-ocenia się jako:
+jest oceniane jako:
 
 ```makefile
 leap.exe : jump.obj
@@ -104,9 +104,9 @@ climb.exe : up.obj
    echo Building bounce.exe...
 ```
 
-### <a name="targets-in-multiple-description-blocks"></a><a name="targets-in-multiple-description-blocks"></a>Obiekty docelowe w wielu blokach opisu
+### <a name="targets-in-multiple-description-blocks"></a><a name="targets-in-multiple-description-blocks"></a> Elementy docelowe w blokach z wieloma opisami
 
-Aby zaktualizować obiekt docelowy w więcej niż jednym bloku opisów przy użyciu różnych poleceń, określ dwa kolejne dwukropki (::) między celami a osobami pozostającymi na utrzymaniu.
+Aby zaktualizować element docelowy w więcej niż jednym bloku opisu przy użyciu różnych poleceń, określ dwa kolejne dwukropki (::) między elementami docelowymi i elementami zależnymi.
 
 ```makefile
 target.lib :: one.asm two.asm three.asm
@@ -117,9 +117,9 @@ target.lib :: four.c five.c
     lib target four.obj five.obj
 ```
 
-### <a name="dependency-side-effects"></a><a name="dependency-side-effects"></a>Skutki uboczne zależności
+### <a name="dependency-side-effects"></a><a name="dependency-side-effects"></a> Efekty uboczne zależności
 
-Można określić obiekt docelowy z dwukropkiem (:) w dwóch wierszach zależności w różnych lokalizacjach. Jeśli polecenia pojawiają się tylko po jednym z wierszy, NMAKE interpretuje zależności tak, jakby wiersze były przylegające lub połączone. Nie wywołuje reguły wnioskowania dla zależności, która nie ma poleceń. Zamiast tego NMAKE zakłada, że zależności należą do jednego bloku opisu i wykonuje polecenia określone z innymi zależnościami. Należy wziąć pod uwagę ten zestaw reguł:
+Można określić element docelowy z dwukropkiem (:) w dwóch wierszach zależności w różnych lokalizacjach. Jeśli polecenia pojawiają się po tylko jednym z wierszy, NMAKE interpretuje zależności tak, jakby linie były sąsiadujące lub połączone. Nie wywołuje reguły wnioskowania dla zależności, która nie ma poleceń. Zamiast tego, NMAKE zakłada, że zależności należą do jednego bloku opisu i wykonuje polecenia określone z inną zależnością. Należy wziąć pod uwagę ten zestaw reguł:
 
 ```makefile
 bounce.exe : jump.obj
@@ -128,14 +128,14 @@ bounce.exe : jump.obj
 bounce.exe : up.obj
 ```
 
-ocenia się jako:
+jest oceniane jako:
 
 ```makefile
 bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Efekt ten nie występuje, jeśli`::`używany jest podwójny dwukropek ( ). Na przykład ten zestaw reguł:
+Ten efekt nie występuje, gdy jest używany podwójny dwukropek ( `::` ). Na przykład ten zestaw reguł:
 
 ```makefile
 bounce.exe :: jump.obj
@@ -144,7 +144,7 @@ bounce.exe :: jump.obj
 bounce.exe :: up.obj
 ```
 
-ocenia się jako:
+jest oceniane jako:
 
 ```makefile
 bounce.exe : jump.obj
@@ -154,24 +154,24 @@ bounce.exe : up.obj
 # invokes an inference rule
 ```
 
-### <a name="pseudotargets"></a><a name="pseudotargets"></a>Pseudotargety
+### <a name="pseudotargets"></a><a name="pseudotargets"></a> Pseudo cele
 
-*Pseudotarget* jest etykietą używaną zamiast nazwy pliku w wierszu zależności. Jest interpretowany jako plik, który nie istnieje, a więc jest nieaktualny. NMAKE zakłada, że sygnatura czasowa pseudotargetu jest taka sama jak najnowsza ze wszystkich jego zależności. Jeśli nie ma zależności, zakłada się bieżący czas. Jeśli pseudotarget jest używany jako cel, jego polecenia są zawsze wykonywane. Pseudotarget używany jako zależny musi również pojawić się jako obiekt docelowy w innej zależności. Jednak ta zależność nie musi mieć bloku poleceń.
+*Pseudotarget* to etykieta użyta zamiast nazwy pliku w wierszu zależności. Jest on interpretowany jako plik, który nie istnieje, a więc jest nieaktualny. NMAKE zakłada, że sygnatura czasowa pseudotarget jest taka sama jak Najnowsza z jej elementów zależnych. Jeśli nie ma żadnych zależności, założono bieżącą godzinę. Jeśli pseudotarget jest używany jako element docelowy, jego polecenia są zawsze wykonywane. Pseudotarget używany jako element zależny musi również występować jako obiekt docelowy w innej zależności. Jednak taka zależność nie musi mieć bloku poleceń.
 
-Nazwy pseudotargetów są zgodne z regułami składni nazwy pliku dla obiektów docelowych. Jeśli jednak nazwa nie ma rozszerzenia, może przekroczyć limit 8 znaków dla nazw plików i może mieć do 256 znaków.
+Nazwy pseudotarget są zgodne z regułami składni nazw dla elementów docelowych. Jeśli jednak nazwa nie ma rozszerzenia, może przekroczyć limit 8 znaków dla nazw plików i może składać się z maksymalnie 256 znaków.
 
-Pseudotargets są przydatne, gdy chcesz NMAKE do tworzenia więcej niż jeden cel automatycznie. NMAKE tylko buduje cele określone w wierszu polecenia. Lub, jeśli nie określono celu wiersza polecenia, tworzy tylko pierwszy obiekt docelowy w pierwszej zależności w pliku makefile. Możesz powiedzieć NMAKE, aby zbudować wiele obiektów docelowych bez wyświetlania ich osobno w wierszu polecenia. Napisz blok opisu z zależnością zawierającą pseudotarget i wyświetl listę obiektów docelowych, które chcesz zbudować jako jego zależne. Następnie umieść ten blok opisu najpierw w pliku makefile lub określ pseudotarget w wierszu polecenia NMAKE.
+Pseudo cele są przydatne, gdy chcesz, aby NMAKE automatycznie kompilować więcej niż jeden element docelowy. NMAKE kompiluje tylko elementy docelowe określone w wierszu polecenia. Lub, jeśli nie określono elementu docelowego wiersza polecenia, kompiluje tylko pierwszy element docelowy w pierwszej zależności w pliku reguł programu make. Możesz powiedzieć NMAKE, aby kompilować wiele obiektów docelowych bez wyświetlania ich indywidualnie w wierszu polecenia. Napisz blok opisu z zależnością zawierającą element pseudotarget, a następnie utwórz listę obiektów docelowych, które chcesz skompilować jako zależne. Następnie umieść ten blok opisu jako pierwszy w pliku reguł programu make lub określ pseudotarget w wierszu polecenia NMAKE.
 
-W tym przykładzie UPDATE jest pseudotargetem.
+W tym przykładzie aktualizacja jest pseudotarget.
 
 ```makefile
 UPDATE : *.*
 !COPY $** c:\product\release
 ```
 
-Po ocenie update NMAKE kopiuje wszystkie pliki w bieżącym katalogu do określonego dysku i katalogu.
+Gdy aktualizacja jest szacowana, NMAKE kopiuje wszystkie pliki w bieżącym katalogu do określonego dysku i katalogu.
 
-W poniższym pliku makefile `all` pseudotarget `project1.exe` `project2.exe` tworzy zarówno `all` i jeśli albo nie jest określony cel w wierszu polecenia. Pseudotarget `setenv` zmienia zmienną środowiskową `.exe` LIB przed zaktualizowaniem plików:
+W poniższym pliku reguł programu make pseudotarget `all` kompiluje zarówno, `project1.exe` jak i `project2.exe` Jeśli `all` nie określono elementu docelowego w wierszu polecenia. Pseudotarget `setenv` zmienia zmienną środowiskową lib przed `.exe` zaktualizowaniem plików:
 
 ```makefile
 all : setenv project1.exe project2.exe
@@ -186,23 +186,23 @@ setenv :
     set LIB=\project\lib
 ```
 
-## <a name="dependents"></a><a name="dependents"></a>Zależności
+## <a name="dependents"></a><a name="dependents"></a> Zależności
 
-W wierszu zależności określ zero lub więcej`:`zależności po dwukropku ( ) lub podwójnym dwukropku (`::`), używając dowolnej prawidłowej nazwy pliku lub [pseudotargetu](pseudotargets.md). Oddziel wiele zależności za pomocą jednego lub większej liczby spacji lub kart. Osoby pozostające na utrzymaniu nie są rozróżniane. Ścieżki są dozwolone za pomocą nazwy plików.
+W wierszu zależności należy określić zero lub więcej zależności od dwukropka ( `:` ) lub podwójnego dwukropka ( `::` ) przy użyciu dowolnych prawidłowych nazw pliku lub [pseudotarget](#pseudotargets). Oddziel wiele zależności, używając co najmniej jednej spacji lub kart. Zależne nie są rozróżniane wielkości liter. Ścieżki są dozwolone z nazwami plików.
 
-### <a name="inferred-dependents"></a><a name="inferred-dependents"></a>Wywnioskować zależności
+### <a name="inferred-dependents"></a><a name="inferred-dependents"></a> Zależności wywnioskowane
 
-Wraz z zależnymi, które jawnie wymienisz w wierszu zależności, NMAKE może przyjąć *wywnioskowane zależne*. Wywnioskowane zależne pochodzi od reguły wnioskowania i jest oceniane przed jawnych zależności. Gdy wywnioskowane zależne jest nieaktualne w porównaniu do jego obiektu docelowego, NMAKE wywołuje blok poleceń dla zależności. Jeśli wywnioskowane zależne nie istnieje lub jest nieaktualne w porównaniu do własnych osób zależnych, NMAKE najpierw aktualizuje wywnioskowane zależne. Aby uzyskać więcej informacji na temat wywnioskować zależności, zobacz [Reguły wnioskowania](inference-rules.md).
+Wraz z zależnościami, które można jawnie wyświetlić w wierszu zależności, NMAKE może przyjmować *zależne zależności*. Zależne od wywnioskowanego elementu pochodzą z reguły wnioskowania i są oceniane przed jawnymi elementami zależnymi. Gdy wywnioskowane zależności są nieaktualne w porównaniu do ich celu, NMAKE wywołuje blok poleceń dla zależności. Jeśli wywnioskowane zależnie nie istnieje lub jest nieaktualne w porównaniu z własnymi zależnymi, NMAKE najpierw aktualizuje zależne zależności. Aby uzyskać więcej informacji o wnioskach zależnych, zobacz [reguły wnioskowania](inference-rules.md).
 
-### <a name="search-paths-for-dependents"></a><a name="search-paths-for-dependents"></a>Szukaj ścieżek dla osób pozostających na utrzymaniu
+### <a name="search-paths-for-dependents"></a><a name="search-paths-for-dependents"></a> Ścieżki wyszukiwania dla zależności
 
-Można określić opcjonalną ścieżkę wyszukiwania dla każdego zależnego. Oto składnia określająca zestaw katalogów do wyszukania:
+Możesz określić opcjonalną ścieżkę wyszukiwania dla każdego elementu zależnego. Oto składnia określająca zestaw katalogów do przeszukania:
 
-> **{**_katalog_\[**;** _katalog ...]_ **}**_zależne_
+> **{**_Directory_ \[ **;** _katalog_...] **}**_zależne_
 
-Nazwy katalogów należy ująć w nawiasy klamrowe (`{ }`). Oddziel wiele katalogów średnikiem`;`( ). Miejsca ani karty nie są dozwolone. NMAKE szuka zależności najpierw w bieżącym katalogu, a następnie na liście katalogów w określonej kolejności. Za pomocą makra można określić część lub całość ścieżki wyszukiwania. Tylko określony zależny używa tej ścieżki wyszukiwania.
+Nazwy katalogów należy ująć w nawiasy klamrowe ( `{ }` ). Rozdziel wiele katalogów średnikami ( `;` ). Nie są dozwolone żadne spacje ani karty. NMAKE szuka elementu zależnego najpierw w bieżącym katalogu, a następnie na liście katalogów w określonej kolejności. Możesz użyć makra, aby określić część lub wszystkie ścieżki wyszukiwania. Tylko określone zależne użycie tej ścieżki wyszukiwania.
 
-#### <a name="directory-search-path-example"></a>Przykład ścieżki wyszukiwania katalogu
+#### <a name="directory-search-path-example"></a>Przykład ścieżki wyszukiwania w katalogu
 
 Ten wiersz zależności pokazuje, jak utworzyć specyfikację katalogu dla wyszukiwania:
 
@@ -210,8 +210,8 @@ Ten wiersz zależności pokazuje, jak utworzyć specyfikację katalogu dla wyszu
 reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 ```
 
-Cel `reverse.exe` ma jeden `retro.obj`zależny, . Lista złącza klamrowa określa dwa katalogi. NMAKE najpierw `retro.obj` wyszukuje w bieżącym katalogu. Jeśli go nie ma, NMAKE `\src\omega` przeszukuje `e:\repo\backwards` katalog, a następnie katalog.
+Element docelowy `reverse.exe` ma jedną zależność, `retro.obj` . Lista ujęta w nawiasy klamrowe określa dwa katalogi. NMAKE wyszukuje `retro.obj` najpierw w bieżącym katalogu. Jeśli tak nie jest, NMAKE przeszukuje `\src\omega` katalog, a następnie `e:\repo\backwards` katalog.
 
 ## <a name="see-also"></a>Zobacz też
 
-[NMAKE — dokumentacja](nmake-reference.md)
+[Odwołanie NMAKE](nmake-reference.md)

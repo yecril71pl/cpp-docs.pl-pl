@@ -3,16 +3,16 @@ title: launch.vs.jsodwołanie do schematu (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841990"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505666"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsodwołanie do schematu (C++)
 
-Użyj *launch.vs.jsna* pliku, aby skonfigurować parametry debugowania. , Aby utworzyć plik. Kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** i wybierz polecenie **Debuguj i Uruchom ustawienia**. Wybierz opcję, która najlepiej pasuje do Twojego projektu, a następnie użyj następujących właściwości, aby zmodyfikować konfigurację zgodnie z potrzebami. Aby uzyskać więcej informacji na temat debugowania projektów CMake, zobacz [Konfigurowanie CMAKE debugowania sesji](/cpp/build/configure-cmake-debugging-sessions).
+Użyj *launch.vs.jsna* pliku, aby skonfigurować parametry debugowania. , Aby utworzyć plik. Kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** i wybierz polecenie **Debuguj i Uruchom ustawienia**. Wybierz opcję, która najlepiej pasuje do Twojego projektu, a następnie użyj następujących właściwości, aby zmodyfikować konfigurację zgodnie z potrzebami. Aby uzyskać więcej informacji na temat debugowania projektów CMake, zobacz [Konfigurowanie CMAKE debugowania sesji](./configure-cmake-debugging-sessions.md).
 
 ## <a name="default-properties"></a>Właściwości domyślne
 

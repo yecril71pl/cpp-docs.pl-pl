@@ -32,12 +32,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 1c4c7961a173eb47394d03e9aabdd14574e62b08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363898"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505932"
 ---
 # <a name="openmp-clauses"></a>Klauzule OpenMP
 
@@ -45,14 +45,14 @@ Zawiera łącza do klauzul używanych w interfejsie API OpenMP.
 
 Visual C++ obsługuje następujące klauzule OpenMP.
 
-Dla atrybutów ogólnych:
+Ogólne atrybuty:
 
 |Klauzula|Opis|
 |------|-----------|
-|[if](#if-openmp)|Określa, czy pętla ma być wykonywana równolegle, czy szeregowo.|
-|[num_threads](#num-threads)|Ustawia liczbę wątków w zespole wątków.|
-|[Zamówione](#ordered-openmp-clauses)|Wymagane na równolegle [dla](openmp-directives.md#for-openmp) instrukcji, jeśli [uporządkowana](openmp-directives.md#ordered-openmp-directives) dyrektywa ma być używany w pętli.|
-|[Harmonogram](#schedule)|Dotyczy dyrektywy [for.](openmp-directives.md#for-openmp)|
+|[przypadku](#if-openmp)|Określa, czy pętla powinna być wykonywana równolegle, czy w szeregu.|
+|[num_threads](#num-threads)|Ustawia liczbę wątków w zespole wątku.|
+|[każe](#ordered-openmp-clauses)|Wymagane w przypadku instrukcji Parallel [for](openmp-directives.md#for-openmp) , jeśli [uporządkowana](openmp-directives.md#ordered-openmp-directives) dyrektywa ma być używana w pętli.|
+|[rozkład](#schedule)|Dotyczy dyrektywy [for](openmp-directives.md#for-openmp) .|
 |[nowait](#nowait)|Zastępuje barierę niejawną w dyrektywie.|
 
 W przypadku atrybutów udostępniania danych:
@@ -60,17 +60,17 @@ W przypadku atrybutów udostępniania danych:
 |Klauzula|Opis|
 |------|-----------|
 |[private](#private-openmp)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.|
-|[firstprivate](#firstprivate)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i że zmienna powinna być inicjowana z wartością zmiennej, ponieważ istnieje przed konstrukcją równoległą.|
-|[lastprivate](#lastprivate)|Określa, że otaczająca wersja kontekstu zmiennej jest równa wersji prywatnej wątku, który wykonuje ostateczną iterację (konstrukcja dla pętli) lub ostatnią sekcję (#pragma sekcje).|
-|[Udostępnionych](#shared-openmp)|Określa, że jedna lub więcej zmiennych powinny być współużytkowane przez wszystkie wątki.|
-|[default](#default-openmp)|Określa zachowanie zmiennych nieskopowych w regionie równoległym.|
-|[reduction](#reduction)|Określa, że jedna lub więcej zmiennych, które są prywatne dla każdego wątku są przedmiotem operacji redukcji na końcu regionu równoległego.|
-|[copyin](#copyin)|Umożliwia wątkom dostęp do wartości wątku głównego dla zmiennej [threadprivate.](openmp-directives.md#threadprivate)|
-|[copyprivate](#copyprivate)|Określa, że jedna lub więcej zmiennych powinny być współużytkowane przez wszystkie wątki.|
+|[firstprivate](#firstprivate)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i że zmienna powinna zostać zainicjowana przy użyciu wartości zmiennej, ponieważ istnieje przed równoległą konstrukcją.|
+|[lastprivate](#lastprivate)|Określa, że wersja zmiennej otaczającego kontekstu jest równa prywatnej wersji danego wątku wykonuje ostateczną iterację (konstrukcja pętla) lub ostatnią sekcję (#pragma sekcje).|
+|[udostępniać](#shared-openmp)|Określa, że co najmniej jedna zmienna powinna być współdzielona między wszystkie wątki.|
+|[default](#default-openmp)|Określa zachowanie zmiennych nienależących do zakresu w równoległym regionie.|
+|[reduction](#reduction)|Określa, że jedna lub więcej zmiennych, które są prywatne dla każdego wątku, jest podmiotem operacji zmniejszania na końcu regionu równoległego.|
+|[copyin](#copyin)|Zezwala wątkom na dostęp do wartości wątku głównego dla zmiennej [threadprivate](openmp-directives.md#threadprivate) .|
+|[copyprivate](#copyprivate)|Określa, że co najmniej jedna zmienna powinna być współdzielona między wszystkie wątki.|
 
-## <a name="copyin"></a><a name="copyin"></a>copyin
+## <a name="copyin"></a><a name="copyin"></a> copyin
 
-Umożliwia wątkom dostęp do wartości wątku głównego dla zmiennej [threadprivate.](openmp-directives.md#threadprivate)
+Zezwala wątkom na dostęp do wartości wątku głównego dla zmiennej [threadprivate](openmp-directives.md#threadprivate) .
 
 ```cpp
 copyin(var)
@@ -78,26 +78,26 @@ copyin(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Zmienna, `threadprivate` która zostanie zainicjowana z wartością zmiennej w wątku głównym, ponieważ istnieje przed konstrukcją równoległą.
+*funkcję*<br/>
+`threadprivate`Zmienna, która zostanie zainicjowana przy użyciu wartości zmiennej w wątku głównym, która istnieje przed równoległą konstrukcją.
 
 ### <a name="remarks"></a>Uwagi
 
-`copyin`ma zastosowanie do następujących dyrektyw:
+`copyin` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.7 Copy](../2-directives.md#2727-copyin).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [threadprivate](openmp-directives.md#threadprivate) na przykład `copyin`przy użyciu .
+Zobacz [threadprivate](openmp-directives.md#threadprivate) , aby poznać przykład użycia `copyin` .
 
-## <a name="copyprivate"></a><a name="copyprivate"></a>Copyprivate
+## <a name="copyprivate"></a><a name="copyprivate"></a> copyprivate
 
-Określa, że jedna lub więcej zmiennych powinny być współużytkowane przez wszystkie wątki.
+Określa, że co najmniej jedna zmienna powinna być współdzielona między wszystkie wątki.
 
 ```cpp
 copyprivate(var)
@@ -105,14 +105,14 @@ copyprivate(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Co najmniej jedna zmienna do udostępnienia. Jeśli określono więcej niż jedną zmienną, należy oddzielić nazwy zmiennych przecinkiem.
+*funkcję*<br/>
+Co najmniej jedna zmienna do udostępnienia. Jeśli określono więcej niż jedną zmienną, oddziel nazwy zmiennych przecinkami.
 
 ### <a name="remarks"></a>Uwagi
 
-`copyprivate`zastosowanie do [jednolitej](openmp-directives.md#single) dyrektywy.
+`copyprivate` dotyczy [pojedynczej](openmp-directives.md#single) dyrektywy.
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.8 copyprivate](../2-directives.md#2728-copyprivate).
 
 ### <a name="example"></a>Przykład
 
@@ -180,9 +180,9 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default"></a><a name="default-openmp"></a>Domyślny
+## <a name="default"></a><a name="default-openmp"></a> wartooć
 
-Określa zachowanie zmiennych nieskopowych w regionie równoległym.
+Określa zachowanie zmiennych nienależących do zakresu w równoległym regionie.
 
 ```cpp
 default(shared | none)
@@ -190,23 +190,23 @@ default(shared | none)
 
 ### <a name="remarks"></a>Uwagi
 
-`shared`, która obowiązuje, `default` jeśli klauzula jest nieokreślona, oznacza, że każda zmienna w regionie równoległym będzie traktowana tak, jakby została określona za pomocą klauzuli [udostępnionej.](#shared-openmp) `none`oznacza, że wszystkie zmienne używane w regionie równoległym, które nie są objęte [zakresem](#private-openmp)z private , [shared](#shared-openmp), [reduction](#reduction), [firstprivate](#firstprivate)lub [lastprivate](#lastprivate) klauzuli spowoduje błąd kompilatora.
+`shared`, która obowiązuje, jeśli `default` klauzula nie jest określona, oznacza, że jakakolwiek zmienna w regionie równoległym będzie traktowana jak jeśli została określona za pomocą klauzuli [Shared](#shared-openmp) . `none` oznacza, że wszelkie zmienne używane w równoległym regionie, które nie należą do zakresu klauzuli [Private](#private-openmp), [Shared](#shared-openmp), [redukcyjne](#reduction), [firstprivate](#firstprivate)lub [lastprivate](#lastprivate) , spowodują błąd kompilatora.
 
-`default`ma zastosowanie do następujących dyrektyw:
+`default` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.5 default](../2-directives.md#2725-default).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [prywatny](#private-openmp) przykład użycia `default`.
+Zapoznaj się z przykładem [prywatnym](#private-openmp) `default` .
 
-## <a name="firstprivate"></a><a name="firstprivate"></a>Firstprivate
+## <a name="firstprivate"></a><a name="firstprivate"></a> firstprivate
 
-Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i że zmienna powinna być inicjowana z wartością zmiennej, ponieważ istnieje przed konstrukcją równoległą.
+Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i że zmienna powinna zostać zainicjowana przy użyciu wartości zmiennej, ponieważ istnieje przed równoległą konstrukcją.
 
 ```cpp
 firstprivate(var)
@@ -214,27 +214,27 @@ firstprivate(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Zmienna, która ma wystąpienia w każdym wątku i która zostanie zainicjowana z wartością zmiennej, ponieważ istnieje przed konstrukcją równoległą. Jeśli określono więcej niż jedną zmienną, należy oddzielić nazwy zmiennych przecinkiem.
+*funkcję*<br/>
+Zmienna, która ma wystąpienia w każdym wątku i zostanie zainicjowana przy użyciu wartości zmiennej, ponieważ istnieje przed równoległą konstrukcją. Jeśli określono więcej niż jedną zmienną, oddziel nazwy zmiennych przecinkami.
 
 ### <a name="remarks"></a>Uwagi
 
-`firstprivate`ma zastosowanie do następujących dyrektyw:
+`firstprivate` dotyczy następujących dyrektyw:
 
-- [for](openmp-directives.md#for-openmp)
-- [parallel](openmp-directives.md#parallel)
-- [Sekcje](openmp-directives.md#sections-openmp)
-- [Pojedynczy](openmp-directives.md#single)
+- [dla](openmp-directives.md#for-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [poszczególne](openmp-directives.md#sections-openmp)
+- [wiersz](openmp-directives.md#single)
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.2 firstprivate](../2-directives.md#2722-firstprivate).
 
 ### <a name="example"></a>Przykład
 
-Na przykład za `firstprivate`pomocą , zobacz przykład w [prywatnych](#private-openmp).
+Przykład użycia programu `firstprivate` można znaleźć w przykładowym [prywatnym](#private-openmp).
 
-## <a name="if-openmp"></a><a name="if-openmp"></a>jeśli (OpenMP)
+## <a name="if-openmp"></a><a name="if-openmp"></a> if (OpenMP)
 
-Określa, czy pętla ma być wykonywana równolegle, czy szeregowo.
+Określa, czy pętla powinna być wykonywana równolegle, czy w szeregu.
 
 ```cpp
 if(expression)
@@ -242,18 +242,18 @@ if(expression)
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
-Wyrażenie integralne, które, jeśli ma wartość true (nonzero), powoduje, że kod w regionie równoległym jest wykonywany równolegle. Jeśli wyrażenie ma wartość false (zero), region równoległy jest wykonywany szeregowo (przez pojedynczy wątek).
+*wyrażenia*<br/>
+Całkowite wyrażenie, które zwraca wartość true (niezerowa), powoduje równoległe wykonywanie kodu w regionie równoległym. Jeśli wyrażenie zwróci wartość false (zero), region równoległy jest wykonywany w szeregu (za pomocą pojedynczego wątku).
 
 ### <a name="remarks"></a>Uwagi
 
-`if`ma zastosowanie do następujących dyrektyw:
+`if` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).
+Aby uzyskać więcej informacji, zobacz [2,3 równoległa konstrukcja](../2-directives.md#23-parallel-construct).
 
 ### <a name="example"></a>Przykład
 
@@ -291,9 +291,9 @@ val = 0, serialized
 val = 2, parallelized with 2 threads
 ```
 
-## <a name="lastprivate"></a><a name="lastprivate"></a>Lastprivate
+## <a name="lastprivate"></a><a name="lastprivate"></a> lastprivate
 
-Określa, że otaczająca wersja kontekstu zmiennej jest równa wersji prywatnej wątku, który wykonuje ostateczną iterację (konstrukcja dla pętli) lub ostatnią sekcję (#pragma sekcje).
+Określa, że wersja zmiennej otaczającego kontekstu jest równa prywatnej wersji danego wątku wykonuje ostateczną iterację (konstrukcja pętla) lub ostatnią sekcję (#pragma sekcje).
 
 ```cpp
 lastprivate(var)
@@ -301,23 +301,23 @@ lastprivate(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Zmienna, która jest równa wersji prywatnej wątku, który wykonuje ostateczną iterację (konstrukcja dla pętli) lub ostatnią sekcję (#pragma sekcje).
+*funkcję*<br/>
+Zmienna, która jest ustawiona jako jest równa prywatnej wersji tego wątku, wykonuje ostateczną iterację (konstrukcja pętli) lub ostatnią sekcję (#pragma sekcje).
 
 ### <a name="remarks"></a>Uwagi
 
-`lastprivate`ma zastosowanie do następujących dyrektyw:
+`lastprivate` dotyczy następujących dyrektyw:
 
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.3 lastprivate](../2-directives.md#2723-lastprivate).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [harmonogram](#schedule) na przykład `lastprivate` using klauzuli.
+Zapoznaj [się](#schedule) z przykładem klauzuli using `lastprivate` .
 
-## <a name="nowait"></a><a name="nowait"></a>Nowait
+## <a name="nowait"></a><a name="nowait"></a> nowait
 
 Zastępuje barierę niejawną w dyrektywie.
 
@@ -327,13 +327,13 @@ nowait
 
 ### <a name="remarks"></a>Uwagi
 
-`nowait`ma zastosowanie do następujących dyrektyw:
+`nowait` dotyczy następujących dyrektyw:
 
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
-- [Pojedynczy](openmp-directives.md#single)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
+- [wiersz](openmp-directives.md#single)
 
-Aby uzyskać więcej informacji, zobacz [2.4.1 dla konstrukcji,](../../../parallel/openmp/2-4-1-for-construct.md) [2.4.2 sekcje konstrukcji](../../../parallel/openmp/2-4-2-sections-construct.md)i [2.4.3 pojedynczej konstrukcji.](../../../parallel/openmp/2-4-3-single-construct.md)
+Aby uzyskać więcej informacji, zobacz [2.4.1 for konstrukcja](../2-directives.md#241-for-construct), [2.4.2 sekcje konstrukcja](../2-directives.md#242-sections-construct)i [2.4.3 Single konstrukcja](../2-directives.md#243-single-construct).
 
 ### <a name="example"></a>Przykład
 
@@ -382,9 +382,9 @@ int main( )
 4, 16, 2
 ```
 
-## <a name="num_threads"></a><a name="num-threads"></a>Num_threads
+## <a name="num_threads"></a><a name="num-threads"></a> num_threads
 
-Ustawia liczbę wątków w zespole wątków.
+Ustawia liczbę wątków w zespole wątku.
 
 ```cpp
 num_threads(num)
@@ -392,28 +392,28 @@ num_threads(num)
 
 ### <a name="parameters"></a>Parametry
 
-*num*<br/>
+*numerowan*<br/>
 Liczba wątków
 
 ### <a name="remarks"></a>Uwagi
 
-Klauzula `num_threads` ma taką samą funkcjonalność jak [funkcja omp_set_num_threads.](openmp-functions.md#omp-set-num-threads)
+`num_threads`Klauzula ma takie same funkcje jak funkcja [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) .
 
-`num_threads`ma zastosowanie do następujących dyrektyw:
+`num_threads` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).
+Aby uzyskać więcej informacji, zobacz [2,3 równoległa konstrukcja](../2-directives.md#23-parallel-construct).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [równolegle](openmp-directives.md#parallel) na przykład `num_threads` using klauzuli.
+Zobacz [Parallel](openmp-directives.md#parallel) dla przykładu klauzuli using `num_threads` .
 
-## <a name="ordered"></a><a name="ordered-openmp-clauses"></a>Zamówione
+## <a name="ordered"></a><a name="ordered-openmp-clauses"></a> każe
 
-Wymagane na równolegle [dla](openmp-directives.md#for-openmp) instrukcji, jeśli [uporządkowana](openmp-directives.md#ordered-openmp-directives) dyrektywa ma być używany w pętli.
+Wymagane w przypadku instrukcji Parallel [for](openmp-directives.md#for-openmp) , jeśli [uporządkowana](openmp-directives.md#ordered-openmp-directives) dyrektywa ma być używana w pętli.
 
 ```cpp
 ordered
@@ -421,15 +421,15 @@ ordered
 
 ### <a name="remarks"></a>Uwagi
 
-`ordered`ma zastosowanie do dyrektywy [for.](openmp-directives.md#for-openmp)
+`ordered` dotyczy dyrektywy [for](openmp-directives.md#for-openmp) .
 
-Aby uzyskać więcej informacji, zobacz [2.4.1 dla konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.4.1 for konstrukcja](../2-directives.md#241-for-construct).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [uporządkowane](openmp-directives.md#ordered-openmp-directives) na przykład `ordered` przy użyciu klauzuli.
+Patrz [zamówione](openmp-directives.md#ordered-openmp-directives) dla przykładu `ordered` klauzuli using.
 
-## <a name="private"></a><a name="private-openmp"></a>Prywatny
+## <a name="private"></a><a name="private-openmp"></a> użytek
 
 Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.
 
@@ -439,19 +439,19 @@ private(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Zmienna ma wystąpienia w każdym wątku.
+*funkcję*<br/>
+Zmienna, która ma wystąpienia w każdym wątku.
 
 ### <a name="remarks"></a>Uwagi
 
-`private`ma zastosowanie do następujących dyrektyw:
+`private` dotyczy następujących dyrektyw:
 
-- [for](openmp-directives.md#for-openmp)
-- [parallel](openmp-directives.md#parallel)
-- [Sekcje](openmp-directives.md#sections-openmp)
-- [Pojedynczy](openmp-directives.md#single)
+- [dla](openmp-directives.md#for-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [poszczególne](openmp-directives.md#sections-openmp)
+- [wiersz](openmp-directives.md#single)
 
-Więcej informacji można znaleźć w [2.7.2.1 private](../../../parallel/openmp/2-7-2-1-private.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.1 Private](../2-directives.md#2721-private).
 
 ### <a name="example"></a>Przykład
 
@@ -631,9 +631,9 @@ nFirstPrivate = 4 (The value prior to entering parallel region)
        nShared = 1 (The value assigned, from the delayed thread, 1)
 ```
 
-## <a name="reduction"></a><a name="reduction"></a>Redukcji
+## <a name="reduction"></a><a name="reduction"></a> szum
 
-Określa, że jedna lub więcej zmiennych, które są prywatne dla każdego wątku są przedmiotem operacji redukcji na końcu regionu równoległego.
+Określa, że jedna lub więcej zmiennych, które są prywatne dla każdego wątku, jest podmiotem operacji zmniejszania na końcu regionu równoległego.
 
 ```cpp
 reduction(operation:var)
@@ -641,21 +641,21 @@ reduction(operation:var)
 
 ### <a name="parameters"></a>Parametry
 
-*Operacji*<br/>
-Operator operacji do wykonania na zmiennych *var* na końcu regionu równoległego.
+*operacje*<br/>
+Operator dla operacji, który ma zostać przekształcony na *zmienne na końcu* równoległego regionu.
 
-*var*<br/>
-Co najmniej jedna zmienna, na której ma być skalarna redukcja. Jeśli określono więcej niż jedną zmienną, należy oddzielić nazwy zmiennych przecinkiem.
+*funkcję*<br/>
+Co najmniej jedna zmienna, dla której ma zostać obniżona skalarna. Jeśli określono więcej niż jedną zmienną, oddziel nazwy zmiennych przecinkami.
 
 ### <a name="remarks"></a>Uwagi
 
-`reduction`ma zastosowanie do następujących dyrektyw:
+`reduction` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Więcej informacji można znaleźć w [2.7.2.6 redukcja](../../../parallel/openmp/2-7-2-6-reduction.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.6 — zmniejszenie](../2-directives.md#2726-reduction).
 
 ### <a name="example"></a>Przykład
 
@@ -770,9 +770,9 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the functions, func1 through func5 succeeded!
 ```
 
-## <a name="schedule"></a><a name="schedule"></a>Harmonogram
+## <a name="schedule"></a><a name="schedule"></a> rozkład
 
-Dotyczy dyrektywy [for.](openmp-directives.md#for-openmp)
+Dotyczy dyrektywy [for](openmp-directives.md#for-openmp) .
 
 ```cpp
 schedule(type[,size])
@@ -780,15 +780,15 @@ schedule(type[,size])
 
 ### <a name="parameters"></a>Parametry
 
-*Typu*<br/>
-`dynamic`Rodzaj planowania, albo , `guided`, `runtime`, `static`lub .
+*Wprowadź*<br/>
+Rodzaj planowania,,, `dynamic` `guided` `runtime` lub `static` .
 
-*Rozmiar*<br/>
-(Opcjonalnie) Określa rozmiar iteracji. *rozmiar* musi być liczeniem całkowitym. Nieprawidłowe, *type* gdy `runtime`typ jest .
+*zmienia*<br/>
+Obowiązkowe Określa rozmiar iteracji. *rozmiar* musi być liczbą całkowitą. Nieprawidłowa, gdy *typem* jest `runtime` .
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [2.4.1 dla konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.4.1 for konstrukcja](../2-directives.md#241-for-construct).
 
 ### <a name="example"></a>Przykład
 
@@ -904,9 +904,9 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared"></a><a name="shared-openmp"></a>Udostępnionych
+## <a name="shared"></a><a name="shared-openmp"></a> udostępniać
 
-Określa, że jedna lub więcej zmiennych powinny być współużytkowane przez wszystkie wątki.
+Określa, że co najmniej jedna zmienna powinna być współdzielona między wszystkie wątki.
 
 ```cpp
 shared(var)
@@ -914,21 +914,21 @@ shared(var)
 
 ### <a name="parameters"></a>Parametry
 
-*var*<br/>
-Co najmniej jedna zmienna do udostępnienia. Jeśli określono więcej niż jedną zmienną, należy oddzielić nazwy zmiennych przecinkiem.
+*funkcję*<br/>
+Co najmniej jedna zmienna do udostępnienia. Jeśli określono więcej niż jedną zmienną, oddziel nazwy zmiennych przecinkami.
 
 ### <a name="remarks"></a>Uwagi
 
-Innym sposobem udostępniania zmiennych między wątkami jest z [copyprivate klauzuli.](#copyprivate)
+Innym sposobem udostępniania zmiennych między wątkami jest klauzula [copyprivate](#copyprivate) .
 
-`shared`ma zastosowanie do następujących dyrektyw:
+`shared` dotyczy następujących dyrektyw:
 
-- [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [Sekcje](openmp-directives.md#sections-openmp)
+- [równoległ](openmp-directives.md#parallel)
+- [dla](openmp-directives.md#for-openmp)
+- [poszczególne](openmp-directives.md#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.7.2.4 udostępnione](../../../parallel/openmp/2-7-2-4-shared.md).
+Aby uzyskać więcej informacji, zobacz [2.7.2.4 Shared](../2-directives.md#2724-shared).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [prywatny](#private-openmp) przykład użycia `shared`.
+Zapoznaj się z przykładem [prywatnym](#private-openmp) `shared` .

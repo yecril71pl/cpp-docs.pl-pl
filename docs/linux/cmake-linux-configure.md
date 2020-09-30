@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu systemu Linux CMake w programie Visual Studio
 description: Jak skonfigurować ustawienia CMake systemu Linux w programie Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414551"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504730"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Konfigurowanie projektu systemu Linux CMake w programie Visual Studio
 
@@ -53,6 +53,7 @@ Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -97,6 +98,7 @@ W programie Visual Studio 2019 w wersji 16,6 lub nowszej Ninja jest domyślnym g
 Aby uzyskać więcej informacji na temat tych ustawień, zobacz [CMakeSettings.json Reference](../build/cmakesettings-reference.md).
 
 Po wykonaniu kompilacji:
+
 - Jeśli obiektem docelowym jest system zdalny, program Visual Studio wybiera pierwszy system zdalny na liście w obszarze **Narzędzia** > **Opcje** > **Cross Platform** > **Menedżer połączeń** wielu platform domyślnie dla zdalnych obiektów docelowych.
 - Jeśli nie zostaną znalezione żadne połączenia zdalne, zostanie wyświetlony monit o utworzenie jednego z nich. Aby uzyskać więcej informacji, zobacz [nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](connect-to-your-remote-linux-computer.md).
 
@@ -155,7 +157,7 @@ Użyj następujących ustawień, aby uruchomić polecenia w systemie Linux przed
 
 [Konfigurowanie sesji debugowania narzędzia CMake](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z właściwościami projektu](../build/working-with-project-properties.md)<br/>
 [Dostosuj ustawienia CMake](../build/customize-cmake-settings.md)<br/>

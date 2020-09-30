@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228677"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504693"
 ---
 # <a name="add-a-property"></a>Dodawanie właściwości
 
@@ -69,7 +69,7 @@ Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
 - **Typ zwracany**
 
-  Tylko interfejsy ATL. Ustawia zwracany typ dla właściwości. W przypadku podwójnych interfejsów `HRESULT` jest zawsze typem zwracanym, a to pole jest niedostępne. W przypadku interfejsów niestandardowych można wybrać typ zwracany z listy. `HRESULT`jest nadal zalecane, ponieważ zapewnia standardowy sposób zwracania błędów.
+  Tylko interfejsy ATL. Ustawia zwracany typ dla właściwości. W przypadku podwójnych interfejsów `HRESULT` jest zawsze typem zwracanym, a to pole jest niedostępne. W przypadku interfejsów niestandardowych można wybrać typ zwracany z listy. `HRESULT` jest nadal zalecane, ponieważ zapewnia standardowy sposób zwracania błędów.
 
 - **Nazwa zmiennej**
 
@@ -107,8 +107,8 @@ Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
   |Opcja|Opis|
   |------------|-----------------|
-  |**PropPut**|Funkcja [propput](../windows/propput.md) zwraca kopię obiektu. Jest to domyślny i najbardziej typowy sposób na zapisanie właściwości.|
-  |**PropPutRef**|Funkcja [PropPutRef](../windows/propputref.md) zwraca odwołanie do obiektu, zamiast zwracać kopię samego obiektu. Należy rozważyć użycie tej opcji dla obiektów, takich jak duże struktury lub tablice, które mogą mieć obciążenie inicjalizacją.|
+  |**PropPut**|Funkcja [propput](../windows/attributes/propput.md) zwraca kopię obiektu. Jest to domyślny i najbardziej typowy sposób na zapisanie właściwości.|
+  |**PropPutRef**|Funkcja [PropPutRef](../windows/attributes/propputref.md) zwraca odwołanie do obiektu, zamiast zwracać kopię samego obiektu. Należy rozważyć użycie tej opcji dla obiektów, takich jak duże struktury lub tablice, które mogą mieć obciążenie inicjalizacją.|
 
 - **Atrybuty parametru**
 
@@ -179,17 +179,17 @@ Nie wszystkie opcje są dostępne dla wszystkich typów właściwości.
 
 ## <a name="stock-properties"></a>Właściwości podstawowe
 
-Jeśli dodajesz właściwość do dispinterface MFC przy użyciu [Kreatora dodawania właściwości](#idl-attributes-add-property-wizard), możesz wybrać Właściwość giełdową z listy **Nazwa właściwości** na stronie [nazwy](../ide/names-add-property-wizard.md) kreatora. Właściwości są następujące:
+Jeśli dodajesz właściwość do dispinterface MFC przy użyciu [Kreatora dodawania właściwości](#idl-attributes-add-property-wizard), możesz wybrać Właściwość giełdową z listy **Nazwa właściwości** na stronie [nazwy](#names-add-property-wizard) kreatora. Właściwości są następujące:
 
 |Nazwa właściwości|Opis|
 |-------------------|-----------------|
 |`Appearance`|Zwraca lub ustawia wartość określającą wygląd formantu. Właściwość kontrolki `Appearance` może zawierać lub pominąć trójwymiarowe efekty wyświetlania. Ta właściwość jest otaczającą właściwością odczytu/zapisu.|
 |`BackColor`|Zwraca lub ustawia właściwość otoczenia kontrolki `BackColor` na kolor palety (RGB) lub wstępnie zdefiniowany kolor systemu. Domyślnie jego wartość odnosi się do koloru pierwszego planu kontenera formantu. Ta właściwość jest otaczającą właściwością odczytu/zapisu.|
 |`BorderStyle`|Zwraca lub ustawia styl obramowania kontrolki. Ta właściwość jest właściwością odczytu/zapisu.|
-|`Caption`|Zwraca lub ustawia właściwość kontrolki `Caption` . Podpis jest tytułem okna. `Caption`nie ma typu implementacji **zmiennej składowej** .|
+|`Caption`|Zwraca lub ustawia właściwość kontrolki `Caption` . Podpis jest tytułem okna. `Caption` nie ma typu implementacji **zmiennej składowej** .|
 |`Enabled`|Zwraca lub ustawia właściwość kontrolki `Enabled` . Włączona kontrola może odpowiadać na zdarzenia generowane przez użytkownika.|
 |`Font`|Zwraca lub ustawia otaczającą czcionkę formantu. Wartość null, Jeśli kontrolka nie ma czcionki.|
 |`ForeColor`|Zwraca lub ustawia właściwość otoczenia kontrolki `ForeColor` .|
-|`hWnd`|Zwraca lub ustawia właściwość kontrolki `hWnd` . `hWnd`nie ma typu implementacji **zmiennej składowej** .|
+|`hWnd`|Zwraca lub ustawia właściwość kontrolki `hWnd` . `hWnd` nie ma typu implementacji **zmiennej składowej** .|
 |`ReadyState`|Zwraca lub ustawia właściwość kontrolki `ReadyState` . Kontrolka może być niezainicjowana, zainicjowana, załadowana, interaktywna lub ukończona. Aby uzyskać więcej informacji, zobacz [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) w *zestawie Internet SDK*.|
-|`Text`|Zwraca lub ustawia tekst zawarty w kontrolce. `Text`nie ma typu implementacji **zmiennej składowej** .|
+|`Text`|Zwraca lub ustawia tekst zawarty w kontrolce. `Text` nie ma typu implementacji **zmiennej składowej** .|

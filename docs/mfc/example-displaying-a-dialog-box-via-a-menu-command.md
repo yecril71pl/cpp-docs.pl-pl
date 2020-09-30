@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616034"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506757"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu
 
@@ -38,7 +38,7 @@ W procedurach użyto następujących nazw i wartości:
 
 ### <a name="to-display-a-modal-dialog-box"></a>Aby wyświetlić modalne okno dialogowe
 
-1. Utwórz polecenie menu; Zobacz [Tworzenie menu lub elementów menu](../windows/creating-a-menu.md).
+1. Utwórz polecenie menu; Zobacz [Tworzenie menu lub elementów menu](../windows/menu-editor.md).
 
 1. Utwórz okno dialogowe; Zobacz [Uruchamianie edytora okien dialogowych](../windows/creating-a-new-dialog-box.md).
 
@@ -113,4 +113,4 @@ W procedurach użyto następujących nazw i wartości:
 ## <a name="see-also"></a>Zobacz też
 
 [Okna dialogowe](dialog-boxes.md)<br/>
-[Modalne i niemodalne okna dialogowe](modal-and-modeless-dialog-boxes.md)
+[Modalne i Niemodalne okna dialogowe](modal-and-modeless-dialog-boxes.md)

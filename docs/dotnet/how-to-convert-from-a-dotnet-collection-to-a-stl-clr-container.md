@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686460"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506432"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Porady: konwertowanie kolekcji .NET na kontener STL/CLR
 
@@ -24,7 +24,7 @@ W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników ko
 
 — Lub —
 
-1. Utwórz ogólny kontener STL/CLR przez utworzenie obiektu [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Ta klasa szablonu przyjmuje jako argument interfejs kolekcji .NET. Aby sprawdzić, które interfejsy są obsługiwane, zobacz [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Utwórz ogólny kontener STL/CLR przez utworzenie obiektu [collection_adapter](./adapter-stl-clr.md#collection_adapter) . Ta klasa szablonu przyjmuje jako argument interfejs kolekcji .NET. Aby sprawdzić, które interfejsy są obsługiwane, zobacz [collection_adapter (STL/CLR)](./adapter-stl-clr.md#collection_adapter).
 
 1. Skopiuj zawartość kolekcji .NET do kontenera. Można to zrobić za pomocą [algorytmu](../dotnet/algorithm-stl-clr.md)STL/CLR lub przez iterację kolekcji .NET i wstawianie kopii każdego elementu do kontenera STL/CLR.
 
@@ -126,7 +126,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

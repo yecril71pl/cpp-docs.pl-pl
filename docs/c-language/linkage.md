@@ -5,12 +5,12 @@ helpviewer_keywords:
 - linkage [C++]
 - linkage [C++], identifier names and scope
 ms.assetid: 986ee549-2d6c-487a-9e3b-a1f643bc5bdc
-ms.openlocfilehash: 4dc4e1d39ee95178a5ed6bc40834ae80262a3d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ca606dedab2739892a64aa4b6f4cbb80a016ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232844"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505647"
 ---
 # <a name="linkage"></a>Połączenie
 
@@ -18,4 +18,4 @@ Nazwy identyfikatorów mogą odwoływać się do różnych identyfikatorów w r�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
+[Użycie zewnętrznie w celu określenia powiązania](../cpp/extern-cpp.md)

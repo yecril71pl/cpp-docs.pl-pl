@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556791"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505607"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -76,7 +76,6 @@ Funkcje **ASINH —** zwracają odwrotność hyberbolic sinus (łuk hiperboliczn
 Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C, jeśli nie używasz \<tgmath.h> makra do wywołania tej funkcji, **ASINH —** zawsze przyjmuje i zwraca **`double`** .
 
 Jeśli używasz \<tgmath.h> `asinh()` makra, typ argumentu określa, która wersja funkcji jest wybrana. Aby uzyskać szczegółowe informacje, zobacz [matematyka typu ogólnego](../../c-runtime-library/tgmath.md) .
-
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

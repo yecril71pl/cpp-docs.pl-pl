@@ -35,18 +35,18 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623068"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505726"
 ---
 # <a name="how-to-manage-symbols"></a>Instrukcje: Zarządzanie symbolami
 
 Podczas tworzenia nowego zasobu lub obiektu zasobu środowisko programistyczne przypisuje mu domyślną nazwę symbolu, na przykład `IDD_DIALOG1` . Za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window) można zmienić domyślną nazwę symbolu lub zmienić nazwę dowolnego symbolu, który jest już skojarzony z zasobem.
 
-W przypadku symboli skojarzonych z pojedynczym zasobem można także użyć okna **Właściwości** , aby zmienić wartość symbolu. Za pomocą [okna dialogowego symbole zasobów](../windows/resource-symbols-dialog-box.md) można zmienić wartość symboli, które nie są aktualnie przypisane do zasobu.
+W przypadku symboli skojarzonych z pojedynczym zasobem można także użyć okna **Właściwości** , aby zmienić wartość symbolu. Za pomocą [okna dialogowego symbole zasobów](./creating-new-symbols.md) można zmienić wartość symboli, które nie są aktualnie przypisane do zasobu.
 
 Zwykle wszystkie definicje symboli są zapisywane w `Resource.h` . Może jednak być konieczna zmiana nazwy pliku dołączanego, aby można było na przykład współpracować z więcej niż jednym plikiem zasobów w tym samym katalogu.
 
@@ -74,7 +74,7 @@ Ograniczenia dotyczące nazw symboli są następujące:
 
 Nazwy symboli mają opisowe prefiksy wskazujące rodzaj zasobów lub obiektów, które reprezentują. Te prefiksy opisowe zaczynają się od identyfikatora kombinacji tekstu. Biblioteka Microsoft Foundation Class (MFC) używa konwencji nazewnictwa symboli pokazanych w poniższej tabeli:
 
-|Kategoria|Prefiks|Użycie|
+|Kategoria|Prefiks|Zastosowanie|
 |--------------|------------|---------|
 |Zasoby|IDR_, IDD_, IDC_, IDI_, IDB_|Akcelerator lub menu (oraz skojarzone lub niestandardowe zasoby), okno dialogowe, kursor, ikona, mapa bitowa|
 |Elementy menu|ID_|Element menu|
@@ -92,7 +92,7 @@ Nazwy symboli mają opisowe prefiksy wskazujące rodzaj zasobów lub obiektów, 
    Wpisanie nowej nazwy symbolu powoduje automatyczne przypisanie wartości.
 
 > [!NOTE]
-> Za pomocą [okna dialogowego symbole zasobów](../windows/resource-symbols-dialog-box.md) można zmienić nazwy symboli, które nie są aktualnie przypisane do zasobu.
+> Za pomocą [okna dialogowego symbole zasobów](./creating-new-symbols.md) można zmienić nazwy symboli, które nie są aktualnie przypisane do zasobu.
 
 ## <a name="symbol-value-restrictions"></a>Ograniczenia dotyczące wartości symbolu
 
@@ -141,7 +141,7 @@ Niektóre ograniczenia dotyczące wartości symboli są następujące:
 
 ## <a name="change-or-delete-symbols"></a>Zmień lub Usuń symbole
 
-W [oknie dialogowym symbole zasobów](../windows/resource-symbols-dialog-box.md)można edytować lub usuwać istniejące symbole, które nie są już przypisane do zasobu lub obiektu.
+W [oknie dialogowym symbole zasobów](./creating-new-symbols.md)można edytować lub usuwać istniejące symbole, które nie są już przypisane do zasobu lub obiektu.
 
 ### <a name="to-change-an-unassigned-symbol"></a>Aby zmienić nieprzypisany symbol
 
@@ -161,11 +161,11 @@ W oknie dialogowym **symbole zasobów** wybierz symbol, który chcesz usunąć, 
 
 ## <a name="include-symbols"></a>Dołącz symbole
 
-Gdy środowisko programistyczne odczytuje plik zasobów utworzony przez inną aplikację, oznacza wszystkie dołączone pliki nagłówkowe jako tylko do odczytu. Chociaż możesz użyć [okna dialogowego zasób zawiera](../windows/resource-includes-dialog-box.md) , aby dodać dodatkowe pliki nagłówka symboli tylko do odczytu.
+Gdy środowisko programistyczne odczytuje plik zasobów utworzony przez inną aplikację, oznacza wszystkie dołączone pliki nagłówkowe jako tylko do odczytu. Chociaż możesz użyć [okna dialogowego zasób zawiera](./how-to-include-resources-at-compile-time.md) , aby dodać dodatkowe pliki nagłówka symboli tylko do odczytu.
 
 Jedną z przyczyn może być użycie definicji symboli tylko do odczytu dla plików symboli, które planujesz udostępnić między kilka projektów.
 
-Można również użyć dołączonych plików symboli, jeśli masz istniejące zasoby z definicjami symboli, które używają wyrażeń zamiast prostych liczb całkowitych, aby zdefiniować wartość symbolu. Przykład:
+Można również użyć dołączonych plików symboli, jeśli masz istniejące zasoby z definicjami symboli, które używają wyrażeń zamiast prostych liczb całkowitych, aby zdefiniować wartość symbolu. Na przykład:
 
 ```cpp
 #define   IDC_CONTROL1 2100
@@ -185,7 +185,7 @@ Można również użyć dołączonych plików symboli, jeśli masz istniejące z
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Aby uwzględnić udostępnione symbole (tylko do odczytu) w pliku zasobów
 
-1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](./how-to-include-resources-at-compile-time.md).
 
 1. W polu **dyrektywy symboli tylko do odczytu** Użyj `#include` dyrektywy kompilatora, aby określić plik, w którym mają zostać zachowane symbole tylko do odczytu.
 
@@ -204,7 +204,7 @@ Można również użyć dołączonych plików symboli, jeśli masz istniejące z
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Aby zmienić nazwę pliku nagłówkowego symboli zasobów
 
-1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](./how-to-include-resources-at-compile-time.md).
 
 1. W polu **plik nagłówka symbolu** wpisz nową nazwę dla pliku dołączanego.
 

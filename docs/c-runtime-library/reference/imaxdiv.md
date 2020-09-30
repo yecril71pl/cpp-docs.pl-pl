@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954634"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505636"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -96,15 +96,15 @@ int main(int argc, char *argv[])
 }
 ```
 
-Po skompilowaniu `9460730470000000 8766`, a następnie wywołaniu przy użyciu parametrów wiersza polecenia, kod generuje te dane wyjściowe:
+Po skompilowaniu, a następnie wywołaniu przy użyciu parametrów wiersza polecenia `9460730470000000 8766` , kod generuje te dane wyjściowe:
 
 ```Output
 The call to imaxdiv(9460730470000000, 8766)
 results in a quotient of 1079252848505, and a remainder of 5170
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv](./div.md)<br/>

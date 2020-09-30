@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933830"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505540"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -93,7 +93,7 @@ Ciąg zakończony znakiem null do przekonwertowania.
 *endptr*<br/>
 Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -135,9 +135,9 @@ Opcjonalne *odstępy* wiodące mogą zawierać spacje i znaki tabulacji, które 
 *podstawy* jest znakiem punktu podstawy, kropką (.) w domyślnych ustawieniach regionalnych "C" lub wartość specyficzną dla ustawień regionalnych, jeśli bieżące ustawienia regionalne są różne lub jeśli określono *Ustawienia regionalne* . \
  *Sekwencja* jest sekwencją znaków alfanumerycznych lub podkreślenia.
 
-W formularzach liczb dziesiętnych i szesnastkowych, jeśli żadne cyfry nie pojawiają się przed znakiem punktu podstawy, co najmniej jeden musi występować po znaku podstawy. 
+W formularzach liczb dziesiętnych i szesnastkowych, jeśli żadne cyfry nie pojawiają się przed znakiem punktu podstawy, co najmniej jeden musi występować po znaku podstawy.
 
-W postaci dziesiętnej cyfry dziesiętne mogą następować według wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie podpisanej liczby całkowitej. 
+W postaci dziesiętnej cyfry dziesiętne mogą następować według wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie podpisanej liczby całkowitej.
 
 W postaci szesnastkowej cyfry szesnastkowe mogą następować przy użyciu wykładnika, która składa się z litery wprowadzającej (**p** lub **p**) i opcjonalnie podpisanej dziesiętnej liczby całkowitej, która reprezentuje wykładnik jako potęgę 2.
 
@@ -221,12 +221,12 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

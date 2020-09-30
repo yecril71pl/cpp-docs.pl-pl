@@ -1,5 +1,5 @@
 ---
-title: Kontrolki okna dialogowegoC++() | Microsoft Docs
+title: Kontrolki okna dialogowego (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160414"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505710"
 ---
-# <a name="dialog-box-controls-c"></a>Kontrolki okna dialogowegoC++()
+# <a name="dialog-box-controls-c"></a>Kontrolki okna dialogowego (C++)
 
 Można dodać kontrolki do okna dialogowego za pomocą karty **edytora okien dialogowych** w [oknie przybornika](/visualstudio/ide/reference/toolbox) , która umożliwia wybranie żądanego formantu i przeciągnięcie go do okna dialogowego. Domyślnie w oknie **przybornika** jest ustawiona wartość Autoukrywanie. Pojawia się jako karta na lewym marginesie rozwiązania, gdy **Edytor okien dialogowych** jest otwarty. Można jednak przypiąć okno **przybornika** do pozycji, wybierając przycisk **Autoukrywanie** w prawym górnym rogu okna. Aby uzyskać więcej informacji na temat sposobu kontrolowania zachowania tego okna, zobacz [Zarządzanie systemem Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -51,13 +51,13 @@ Standardowe kontrolki dostępne w **przyborniku** z domyślnymi zdarzeniami są 
 |[Kontrolka paska przewijania](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat używania formantu **richedit 1,0** z MFC, zobacz [Używanie kontrolki RichEdit 1,0 z](../windows/using-the-richedit-1-0-control-with-mfc.md) [przykładami formantów MFC i Rich Edit](../mfc/rich-edit-control-examples.md).
+> Aby uzyskać więcej informacji na temat używania formantu **richedit 1,0** z MFC, zobacz [Używanie kontrolki RichEdit 1,0 z](./adding-editing-or-deleting-controls.md) [przykładami formantów MFC i Rich Edit](../mfc/rich-edit-control-examples.md).
 
 [Formanty standardowe systemu Windows](../mfc/controls-mfc.md) dostępne w **przyborniku** zapewniają zwiększoną funkcjonalność:
 
 |Nazwa kontrolki|Zdarzenie domyślne|
 |---|---|
-|[Kontrolka suwaka](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[suwak](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[Kontrolka pokrętła](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Kontrolka postępu](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Kontrolka klawisza dostępu](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
@@ -78,7 +78,7 @@ Standardowe kontrolki dostępne w **przyborniku** z domyślnymi zdarzeniami są 
 > [!NOTE]
 > Kontrolki niestandardowe w tym sensie nie należy mylić z kontrolkami ActiveX. Formanty ActiveX były czasami nazywane kontrolkami niestandardowymi OLE. Ponadto nie należy mylić tych kontrolek z kontrolkami rysowanymi przez właściciela w systemie Windows.
 
-Ta funkcja ma umożliwić korzystanie z kontrolek innych niż dostarczane przez system Windows. W czasie wykonywania kontrolka jest skojarzona z klasą okna (nie jest to taka sama C++ jak Klasa). Bardziej typowym sposobem wykonania tego samego zadania jest zainstalowanie dowolnej kontrolki, takiej jak kontrolka statyczna, w oknie dialogowym. Następnie w czasie wykonywania w funkcji [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) Usuń tę kontrolkę i Zastąp ją własną kontrolką niestandardową.
+Ta funkcja ma umożliwić korzystanie z kontrolek innych niż dostarczane przez system Windows. W czasie wykonywania kontrolka jest skojarzona z klasą okna (nie taka sama jak Klasa języka C++). Bardziej typowym sposobem wykonania tego samego zadania jest zainstalowanie dowolnej kontrolki, takiej jak kontrolka statyczna, w oknie dialogowym. Następnie w czasie wykonywania w funkcji [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) Usuń tę kontrolkę i Zastąp ją własną kontrolką niestandardową.
 
 > [!NOTE]
 > Jest to stara technika. Dzisiaj zaleca się, aby w większości przypadków napisać kontrolkę ActiveX lub podklasę ze wspólną kontrolą systemu Windows.
@@ -104,6 +104,6 @@ Win32
 [Edytor okien dialogowych](../windows/dialog-editor.md)
 
 <!--
-[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adding Event Handlers for Dialog Box Controls](./adding-editing-or-deleting-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/adding-a-member-variable-visual-cpp.md#dialog-box-controls-and-variable-types)<br/>
 [Controls](../mfc/controls-mfc.md)<br/>-->

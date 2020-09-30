@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3047
 ms.assetid: 91c14566-5958-433d-8549-0e8bc3196f76
-ms.openlocfilehash: c6b8530aa1a1d5b8a0bfa735a9cc759a698ae841
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 41312e09996e2fe007cdc13c0369b5154e720841
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761328"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506220"
 ---
 # <a name="compiler-error-c3047"></a>Błąd kompilatora C3047
 
 Blok strukturalny w regionie "sections" OpenMP musi być poprzedzony przez "#pragma sekcji OMP"
 
-Każdy kod w bloku kodu wprowadzony przez dyrektywę sections musi znajdować się w bloku kodu wprowadzonym [przez dyrektywę `section`](../../parallel/openmp/reference/sections-openmp.md) .
+Każdy kod w bloku kodu wprowadzony [przez dyrektywę](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) sections musi znajdować się w bloku kodu wprowadzonym przez `section` dyrektywę.
 
 Poniższy przykład generuje C3047:
 
