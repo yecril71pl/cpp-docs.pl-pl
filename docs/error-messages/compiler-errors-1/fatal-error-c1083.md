@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389782"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509751"
 ---
 # <a name="fatal-error-c1083"></a>Błąd krytyczny C1083
 
@@ -63,7 +63,7 @@ plik nie zostanie znaleziony. Użyj poprawnej ścieżki względem katalogu okre�
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteką innych firm i vcpkg
 
-Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, rozważ użycie [`vcpkg`](../../vcpkg.md) Menedżera pakietów języka C++, aby zainstalować i skompilować bibliotekę. Program vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu.
+Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, rozważ użycie [`vcpkg`](../../build/vcpkg.md) Menedżera pakietów języka C++, aby zainstalować i skompilować bibliotekę. Program vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Plik znajduje się w projekcie, ale nie ścieżka wyszukiwania dołączania
 

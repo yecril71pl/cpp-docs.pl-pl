@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221695"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509143"
 ---
 # <a name="delete-operator-c"></a>delete — Operator (C++)
 
@@ -50,7 +50,7 @@ Gdy **`delete`** jest używany do cofnięcia przydziału pamięci dla obiektu kl
 
 Jeśli argument operacji **`delete`** operatora jest modyfikowalną wartością l, jej wartość jest niezdefiniowana po usunięciu obiektu.
 
-Jeśli określono opcję kompilatora [/SDL (Włącz dodatkowe kontrole zabezpieczeń)](/cpp/build/reference/sdl-enable-additional-security-checks) , operand do **`delete`** operatora jest ustawiony na nieprawidłową wartość po usunięciu obiektu.
+Jeśli określono opcję kompilatora [/SDL (Włącz dodatkowe kontrole zabezpieczeń)](../build/reference/sdl-enable-additional-security-checks.md) , operand do **`delete`** operatora jest ustawiony na nieprawidłową wartość po usunięciu obiektu.
 
 ## <a name="using-delete"></a>Używanie opcji usuwania
 
@@ -92,7 +92,7 @@ Operator delete wywołuje **operator funkcji Delete**.
 
 Dla obiektów, które nie są typu klasy ([Klasa](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)lub [Unia](../cpp/unions.md)), jest wywoływany operator usuwania globalnego. W przypadku obiektów typu klasy nazwa funkcji cofania alokacji jest rozpoznawana w zakresie globalnym, jeśli wyrażenie delete zaczyna się od jednoargumentowego operatora rozpoznawania zakresu ( `::` ). W przeciwnym razie operator delete wywołuje destruktor dla obiektu przed cofnięciem alokacji pamięci (jeśli wskaźnik nie ma wartości null). Operator delete można zdefiniować dla poszczególnych klas. Jeśli nie ma takiej definicji dla danej klasy, zostanie wywołany globalny operator delete. Jeśli wyrażenie delete służy do cofnięcia alokacji obiektu klasy, którego typ statyczny ma destruktor wirtualny, funkcja cofania alokacji jest rozwiązywana przez destruktor wirtualny typu dynamicznego obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)\
 [Służąc](../cpp/keywords-cpp.md)\

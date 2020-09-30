@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834339"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509070"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
 
@@ -60,7 +60,7 @@ Klasa, która pochodzi od `IDBPropertiesImpl` .
 
 ## <a name="remarks"></a>Uwagi
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) to obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs dla modułów wyliczających. Jeśli jednak moduł wyliczający ujawnia [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musi uwidocznić `IDBProperties` . `IDBPropertiesImpl` implementuje przy `IDBProperties` użyciu funkcji statycznej zdefiniowanej przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) to obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs dla modułów wyliczających. Jeśli jednak moduł wyliczający ujawnia [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musi uwidocznić `IDBProperties` . `IDBPropertiesImpl` implementuje przy `IDBProperties` użyciu funkcji statycznej zdefiniowanej przez [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl:: GetProperties
 
@@ -119,7 +119,7 @@ Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* r
 
 ### <a name="remarks"></a>Uwagi
 
-Używa [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) w celu zaimplementowania tej funkcji.
+Używa [IDBInitializeImpl:: m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) w celu zaimplementowania tej funkcji.
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl:: SetProperties
 

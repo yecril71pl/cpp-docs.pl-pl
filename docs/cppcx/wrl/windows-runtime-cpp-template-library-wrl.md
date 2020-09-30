@@ -3,12 +3,12 @@ title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Window
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840542"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509805"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -32,7 +32,7 @@ Biblioteka szablonów C++ środowisko wykonawcze systemu Windows i C++/CX zapewn
 - C++/CX reprezentuje wartości HRESULT modelu COM jako wyjątki. Jeśli została dziedziczona baza kodu, która używa modelu COM lub taka, która nie korzysta z wyjątków, może się okazać, że środowisko wykonawcze systemu Windows Biblioteka szablonów C++ jest bardziej naturalnym sposobem pracy z środowisko wykonawcze systemu Windows, ponieważ nie trzeba używać wyjątków.
 
    > [!NOTE]
-   > Biblioteka szablonów języka C++ środowisko wykonawcze systemu Windows używa wartości HRESULT i nie generuje wyjątków. Ponadto Biblioteka szablonów języka C++ środowisko wykonawcze systemu Windows korzysta z inteligentnych wskaźników i wzorca RAII, aby pomóc zagwarantować, że obiekty są poprawnie niszczone, gdy kod aplikacji zgłasza wyjątek. Aby uzyskać więcej informacji na temat inteligentnych wskaźników i RAII, zobacz [inteligentne wskaźniki](../../cpp/smart-pointers-modern-cpp.md) i [obiekty własne (RAII)](../../cpp/objects-own-resources-raii.md).
+   > Biblioteka szablonów języka C++ środowisko wykonawcze systemu Windows używa wartości HRESULT i nie generuje wyjątków. Ponadto Biblioteka szablonów języka C++ środowisko wykonawcze systemu Windows korzysta z inteligentnych wskaźników i wzorca RAII, aby pomóc zagwarantować, że obiekty są poprawnie niszczone, gdy kod aplikacji zgłasza wyjątek. Aby uzyskać więcej informacji na temat inteligentnych wskaźników i RAII, zobacz [inteligentne wskaźniki](../../cpp/smart-pointers-modern-cpp.md) i [obiekty własne (RAII)](../../cpp/object-lifetime-and-resource-management-modern-cpp.md).
 
 - Cel i projekt biblioteki szablonów w języku środowisko wykonawcze systemu Windows C++ są inspirowane Active Template Library (ATL), czyli zestawem klas C++ opartych na szablonach, które upraszczają programowanie obiektów COM. Ponieważ Biblioteka szablonów C++ środowisko wykonawcze systemu Windows używa standardowego języka C++ do zawijania środowisko wykonawcze systemu Windows, można łatwiej portować i korzystać z wielu istniejących składników COM, które są zapisywane w ATL, do środowisko wykonawcze systemu Windows. Jeśli znasz już ATL, może się okazać, że programowanie biblioteki szablonów w języku C++ środowisko wykonawcze systemu Windows jest łatwiejsze.
 

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209446"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509435"
 ---
 # <a name="user-records"></a>Rekordy użytkownika
 
 > [!NOTE]
 > Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
-Aby użyć statycznej metody dostępu (czyli metody dostępu pochodzącej z `CAccessor`), odbiorca musi mieć rekord użytkownika. Rekord użytkownika jest C++ klasą zawierającą elementy danych do obsługi danych wejściowych lub wyjściowych. **Kreator OLE DB klienta ATL** generuje rekord użytkownika dla konsumenta. Do rekordu użytkownika można dodać metody dla opcjonalnych zadań, takich jak obsługa poleceń.
+Aby użyć statycznej metody dostępu (czyli metody dostępu pochodnej od `CAccessor` ), odbiorca musi mieć rekord użytkownika. Rekord użytkownika jest klasą języka C++, która zawiera elementy danych do obsługi danych wejściowych lub wyjściowych. **Kreator OLE DB klienta ATL** generuje rekord użytkownika dla konsumenta. Do rekordu użytkownika można dodać metody dla opcjonalnych zadań, takich jak obsługa poleceń.
 
 Poniższy kod przedstawia przykładowy rekord, który obsługuje polecenia. W rekordzie użytkownika BEGIN_COLUMN_MAP reprezentuje zestaw wierszy danych przesłany do konsumenta od dostawcy. BEGIN_PARAM_MAP reprezentuje zestaw parametrów poleceń. W tym przykładzie zastosowano klasę [CCommand](../../data/oledb/ccommand-class.md) , aby obsłużyć parametry polecenia. Elementy członkowskie danych w pozycji mapy reprezentują przesunięcia do jednego ciągłego bloku pamięci dla każdego wystąpienia klasy. Makra COLUMN_ENTRY odpowiadają makro PROVIDER_COLUMN_ENTRY po stronie dostawcy.
 
@@ -64,7 +64,7 @@ Jeśli użytkownik korzysta z **kreatora ATL OLE DB Consumer** do wygenerowania 
 
 Aby uzyskać szczegółowe omówienie scenariuszy, w których należy użyć wielu metod dostępu, zobacz [Używanie wielu metod dostępu w zestawie wierszy](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-Poniższy przykład pokazuje rekord użytkownika zmodyfikowany w celu obsługi wielu metod dostępu w zestawie wierszy. Zamiast BEGIN_COLUMN_MAP i END_COLUMN_MAP, używa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) i [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) dla każdego metody dostępu. Makro BEGIN_ACCESSOR określa numer akcesora (przesunięcie od zera) i czy akcesor jest autodostępnym. Autodostępy wywołują `GetData`, aby automatycznie pobierać dane w wywołaniu elementu [MoveNext](../../data/oledb/crowset-movenext.md). Nieautomatyczne metody dostępu wymagają jawnego pobrania danych. Użyj nieautomatycznej metody dostępu, jeśli łączysz się z dużym polem danych (na przykład obrazem mapy bitowej), które może nie być pobierane dla każdego rekordu.
+Poniższy przykład pokazuje rekord użytkownika zmodyfikowany w celu obsługi wielu metod dostępu w zestawie wierszy. Zamiast BEGIN_COLUMN_MAP i END_COLUMN_MAP, używa [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) i [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) dla każdego metody dostępu. Makro BEGIN_ACCESSOR określa numer akcesora (przesunięcie od zera) i czy akcesor jest autodostępnym. Autodostępy są wywoływane `GetData` w celu automatycznego pobierania danych w wywołaniu elementu [MoveNext](./crowset-class.md#movenext). Nieautomatyczne metody dostępu wymagają jawnego pobrania danych. Użyj nieautomatycznej metody dostępu, jeśli łączysz się z dużym polem danych (na przykład obrazem mapy bitowej), które może nie być pobierane dla każdego rekordu.
 
 ```cpp
 class CMultiArtists

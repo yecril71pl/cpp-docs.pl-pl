@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209787"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509515"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odwoływanie się do właściwości w dostawcy
 
@@ -25,7 +25,7 @@ Utwórz obiekt [CDBPropSet](../../data/oledb/cdbpropset-class.md) za pomocą gru
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Wywołaj metodę [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazując ją do identyfikatora właściwości i wartości, która ma zostać przypisana do właściwości. Typ wartości zależy od używanej właściwości.
+Wywołaj metodę [AddProperty](./cdbpropset-class.md#addproperty), przekazując ją do identyfikatora właściwości i wartości, która ma zostać przypisana do właściwości. Typ wartości zależy od używanej właściwości.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-Użyj interfejsu `IRowset`, aby wywołać `GetProperties`. Przekaż właściwość ustawioną jako parametr. Oto ostatni kod:
+Użyj `IRowset` interfejsu do wywołania `GetProperties` . Przekaż właściwość ustawioną jako parametr. Oto ostatni kod:
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;

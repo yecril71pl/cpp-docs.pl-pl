@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: cb19b0d9987ef4ff4624602426930c9f9920dbcd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2898c06d998653a25ce771c80086ef8aef27a60b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040018"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509942"
 ---
 # <a name="set-class"></a>set — Klasa
 
@@ -190,7 +190,7 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `set` .|
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w a `set` z kluczem, który jest większy niż określony klucz i do pierwszego elementu w `set` kluczu, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w zestawie z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|
-|[find](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `set` , który ma klucz równoważny określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `set` , który ma klucz równoważny określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `set` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `set` .|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `set` .|
@@ -490,7 +490,7 @@ Wartość klucza elementu do wyszukania.
 
 `contains()` Nowość w języku C++ 20. Aby go użyć, określ [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md) opcja kompilatora.
 
-`template<class K> bool contains(const K& key) const` występuje tylko w przypadku, gdy `key_compare` jest przezroczysty. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) .
+`template<class K> bool contains(const K& key) const` występuje tylko w przypadku, gdy `key_compare` jest przezroczysty. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) .
 
 ### <a name="example"></a>Przykład
 

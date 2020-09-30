@@ -10,33 +10,33 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e929142181ebd849c820ad50e5ce64c2d4f5ab44
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079224"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509327"
 ---
 # <a name="c-project-templates"></a>Szablony projektów w języku C++
 
-Szablony projektu programu Visual Studio generują pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i instrukcje `#include`, które są odpowiednie dla rodzaju projektu, który chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów C++ szablonów projektów i udostępnia kreatorów dla wielu z nich, aby można było dostosować projekty podczas ich tworzenia. Natychmiast po utworzeniu projektu można skompilować i uruchomić aplikację. dobrym sposobem jest utworzenie nieprzerwanie podczas opracowywania aplikacji.
+Szablony projektu programu Visual Studio generują pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i `#include` instrukcje, które są odpowiednie dla rodzaju projektu, który chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów szablonów projektów C++ i udostępnia kreatorów dla wielu z nich, aby można było dostosować projekty podczas ich tworzenia. Natychmiast po utworzeniu projektu można skompilować i uruchomić aplikację. dobrym sposobem jest utworzenie nieprzerwanie podczas opracowywania aplikacji.
 
 > [!NOTE]
-> Projekt języka C można utworzyć przy użyciu C++ szablonów projektu. W wygenerowanym projekcie zlokalizuj pliki o rozszerzeniu nazwy pliku. cpp i zmień je na. c. Następnie na stronie **właściwości projektu** dla projektu (nie dla rozwiązania) rozwiń węzeł **Właściwości konfiguracji**, **C++ C/** i wybierz pozycję **Zaawansowane**. Zmień ustawienie **Kompiluj jako** na **Kompiluj jako kod C (/TC)** .
+> Projekt języka C można utworzyć przy użyciu szablonów projektów języka C++. W wygenerowanym projekcie zlokalizuj pliki o rozszerzeniu nazwy pliku. cpp i zmień je na. c. Następnie na stronie **właściwości projektu** dla projektu (nie dla rozwiązania) rozwiń węzeł **Właściwości konfiguracji**, **C/C++** i wybierz pozycję **Zaawansowane**. Zmień ustawienie **Kompiluj jako** na **Kompiluj jako kod C (/TC)**.
 
 ## <a name="project-templates"></a>Szablony projektów
 
-Szablony projektu zawarte w programie Visual Studio zależą od wersji produktu i zainstalowanych obciążeń. Jeśli zainstalowano Tworzenie aplikacji klasycznych C++ przy użyciu obciążenia, program Visual C++ Studio ma te szablony projektów.
+Szablony projektu zawarte w programie Visual Studio zależą od wersji produktu i zainstalowanych obciążeń. Jeśli zainstalowano Programowanie aplikacji klasycznych w języku C++, program Visual Studio ma te szablony projektów języka C++.
 
 ### <a name="windows-desktop"></a>Pulpit systemu Windows
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[Aplikacja konsolowa systemu Windows](../../windows/creating-a-console-application.md)|Projekt służący do tworzenia aplikacji konsolowej systemu Windows.|
+|[Aplikacja konsolowa systemu Windows](../../windows/overview-of-windows-programming-in-cpp.md)|Projekt służący do tworzenia aplikacji konsolowej systemu Windows.|
 |[Aplikacja klasyczna systemu Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projekt służący do tworzenia aplikacji klasycznej systemu Windows (Win32).|
 |[Biblioteka dołączana dynamicznie](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projekt służący do tworzenia biblioteki dołączanej dynamicznie (DLL).|
-|[Biblioteka statyczna](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Projekt służący do tworzenia biblioteki statycznej (LIB).|
-|[Kreator aplikacji klasycznej systemu Windows](../../windows/windows-desktop-wizard.md)|Kreator do tworzenia aplikacji klasycznych i bibliotek systemu Windows z dodatkowymi opcjami.|
+|[Biblioteka statyczna](../walkthrough-creating-and-using-a-static-library-cpp.md)|Projekt służący do tworzenia biblioteki statycznej (LIB).|
+|[Kreator pulpitu systemu Windows](../../windows/windows-desktop-wizard.md)|Kreator do tworzenia aplikacji klasycznych i bibliotek systemu Windows z dodatkowymi opcjami.|
 
 ### <a name="general"></a>Ogólne
 
@@ -56,7 +56,7 @@ Szablony projektu zawarte w programie Visual Studio zależą od wersji produktu 
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[Natywny projekt testów jednostkowych](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt, który zawiera natywne C++ testy jednostkowe.|
+|[Natywny projekt testów jednostkowych](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt, który zawiera natywne testy jednostkowe języka C++.|
 
 ### <a name="mfc"></a>MFC
 
@@ -70,9 +70,9 @@ Jeśli dodasz składnik obsługi MFC i ATL do instalacji programu Visual Studio,
 
 ### <a name="windows-universal-apps"></a>Aplikacje uniwersalne systemu Windows
 
-W przypadku dodania składnika C++ narzędzia platformy uniwersalnej systemu Windows do instalacji programu Visual Studio te szablony projektu zostaną dodane do programu Visual Studio.
+W przypadku dodania składnika narzędzia platformy uniwersalnej systemu Windows dla języka C++ do instalacji programu Visual Studio te szablony projektu zostaną dodane do programu Visual Studio.
 
-Aby zapoznać się z omówieniem uniwersalnych aplikacji C++systemu Windows w programie, zobacz [aplikacje uniwersalne systemu WindowsC++()](../../cppcx/universal-windows-apps-cpp.md).
+Aby zapoznać się z omówieniem uniwersalnych aplikacji systemu Windows w języku C++, zobacz [aplikacje uniwersalne systemu Windows (c++)](../../cppcx/universal-windows-apps-cpp.md).
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
@@ -84,7 +84,7 @@ Aby zapoznać się z omówieniem uniwersalnych aplikacji C++systemu Windows w pr
 |DLL|Projekt natywnej biblioteki dołączanej dynamicznie (DLL), która może być używana przez aplikację platforma uniwersalna systemu Windows lub składnik środowiska uruchomieniowego.|
 |Biblioteka statyczna|Projekt natywnej biblioteki dołączanej statycznie (LIB), która może być używana przez aplikację platforma uniwersalna systemu Windows lub składnik środowiska uruchomieniowego.|
 |Składnik środowiska wykonawczego systemu Windows|Projekt składnika środowisko wykonawcze systemu Windows, który może być używany przez aplikację platforma uniwersalna systemu Windows, niezależnie od języka programowania, w którym napisano aplikację.|
-|Projekt pakietu aplikacji systemu Windows|Projekt tworzący pakiet platformy UWP, który umożliwia aplikacjom klasycznym ładowanie lub dystrybuowanie za pośrednictwem Microsoft Store.|
+| Projekt pakietu aplikacji systemu Windows|Projekt tworzący pakiet platformy UWP, który umożliwia aplikacjom klasycznym ładowanie lub dystrybuowanie za pośrednictwem Microsoft Store.|
 
 ## <a name="todo-comments"></a>Komentarze do zrobienia
 

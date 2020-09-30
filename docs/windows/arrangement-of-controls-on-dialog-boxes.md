@@ -80,22 +80,22 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ee732cfb414f011e95edbbb57b218d81179d44f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168580"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509663"
 ---
 # <a name="how-to-layout-controls-c"></a>Instrukcje: kontrolki układu (C++)
 
-**Edytor okien dialogowych** udostępnia narzędzia układu, które automatycznie dopasowują i dopasowują rozmiar formantów. W przypadku większości zadań można użyć [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Wszystkie polecenia paska narzędzi **edytora okien dialogowych** są również dostępne w menu **Format** i większość [klawiszy skrótów](../windows/accelerator-keys-for-the-dialog-editor.md).
+**Edytor okien dialogowych** udostępnia narzędzia układu, które automatycznie dopasowują i dopasowują rozmiar formantów. W przypadku większości zadań można użyć [paska narzędzi edytora okien dialogowych](./dialog-editor.md). Wszystkie polecenia paska narzędzi **edytora okien dialogowych** są również dostępne w menu **Format** i większość [klawiszy skrótów](./dialog-editor.md).
 
 Wiele poleceń układu okien dialogowych jest dostępnych tylko wtedy, gdy wybrano więcej niż jeden formant. Można wybrać pojedynczą kontrolkę lub wiele kontrolek, po wybraniu więcej niż jednej kontrolki, pierwszy wybierany jest domyślnie formant dominujący.
 
 Położenie, Wysokość i szerokość bieżącego formantu są wyświetlane w prawym dolnym rogu paska stanu. Po wybraniu całego okna dialogowego pasek stanu wyświetla pozycję okna dialogowego jako całość i jego wysokość i szerokość.
 
-## <a name="arrange-controls"></a>Rozmieszczanie formantów
+## <a name="arrange-controls"></a>Rozmieszczanie kontrolek
 
 Kontrolki można rozmieścić w oknach dialogowych przy użyciu **edytora okien dialogowych** w jednym z trzech różnych stanów:
 
@@ -105,16 +105,16 @@ Kontrolki można rozmieścić w oknach dialogowych przy użyciu **edytora okien 
 
 - Bez żadnych funkcji przyciągania ani wyrównania.
 
-[Pasek narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) zawiera przyciski kontrolujące stan.
+[Pasek narzędzi edytora okien dialogowych](./dialog-editor.md) zawiera przyciski kontrolujące stan.
 
-- Aby zmienić stan, wybierz odpowiednią ikonę lub przejdź do menu **Format** , > **ustawienia przewodnika**.
+- Aby zmienić stan, wybierz odpowiednią ikonę lub przejdź do menu **Formatowanie**  >  **ustawienia przewodnika**.
 
 Okno dialogowe **ustawienia przewodnika** ma następujące właściwości:
 
 |Właściwość|Opis|
 |---|---|
 |**Prowadnice układu**|Wyświetla ustawienia prowadnic układu.|
-|**Dawaj**|Ukrywa narzędzia układu.|
+|**Brak**|Ukrywa narzędzia układu.|
 |**Reguły i prowadnice**|Gdy ta funkcja jest włączona, dodaje do narzędzi układu reguły i umożliwia prowadnice umieszczane w linijkach. Domyślnymi prowadnicami są marginesy.|
 |**Siatka**|Tworzy siatkę układu. Nowe kontrolki zostaną automatycznie wyrównane do siatki.|
 |**Odstępy siatki**|Wyświetla ustawienia odstępów siatki w jednostkach okna dialogowego (DLU).|
@@ -145,17 +145,17 @@ Prowadnice są wyświetlane jako niebieskie linie kropkowane w oknie dialogowym 
 
 Znaczniki w linijkach, które określają odstępy między prowadnicami i kontrolkami, są definiowane przez jednostki okna dialogowego (DLU). DLU jest oparta na rozmiarze czcionki okna dialogowego, zazwyczaj 8-punktowego okna powłoki MS Shell. DLU poziomy to średnia szerokość czcionki okna dialogowego podzielona przez cztery. Pionowa DLU jest średnią wysokością czcionki podzieloną przez 8.
 
-- Aby zmienić interwały znaczników, przejdź do menu **Format** , > **ustawienia przewodnika**, a następnie w polu **odstępy siatki** określ nową szerokość i wysokość w DLU.
+- Aby zmienić interwały znaczników, przejdź do menu **Formatowanie**  >  **ustawień przewodnika**, a następnie w polu **odstępy siatki** określ nową szerokość i wysokość w DLU.
 
 ### <a name="layout-grid"></a>Siatka układu
 
 Gdy umieszczasz lub układasz kontrolki w oknie dialogowym, użyj siatki układu w celu dokładniejszego pozycjonowania. Gdy siatka jest włączona, formanty będą przyciągane do linii kropkowanych siatki, tak jakby były magnesne.
 
-- Aby włączyć lub wyłączyć siatkę układu, przejdź do menu **Format** , > **ustawienia przewodnika** i wybierz lub wyczyść przycisk **siatki** .
+- Aby włączyć lub wyłączyć siatkę układu, przejdź do menu **Formatowanie**  >  **ustawień przewodnika** i wybierz lub wyczyść przycisk **siatki** .
 
-   Można nadal kontrolować siatkę w poszczególnych oknach **edytora okien dialogowych** za pomocą przycisku **Przełącz siatkę** na [pasku narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+   Można nadal kontrolować siatkę w poszczególnych oknach **edytora okien dialogowych** za pomocą przycisku **Przełącz siatkę** na [pasku narzędzi edytora okien dialogowych](./dialog-editor.md).
 
-- Aby zmienić rozmiar siatki układu, przejdź do menu **Format** , > **Ustawienia prowadnic** i wpisz wysokość i szerokość w DLU dla komórek siatki. Minimalna wysokość lub szerokość to 4.
+- Aby zmienić rozmiar siatki układu, przejdź do **pozycji menu**  >  **ustawienia przewodnika** i wpisz wysokość i szerokość w DLU dla komórek siatki. Minimalna wysokość lub szerokość to 4.
 
 ### <a name="disable-guides"></a>Wyłącz przewodniki
 
@@ -165,14 +165,14 @@ Aby wyłączyć efekt przyciągania przewodników, można użyć klawiszy specja
 
 - Aby przenieść prowadnice bez przenoszenia przyciągniętych kontrolek, przeciągnij prowadnicę, trzymając wciśnięty klawisz **SHIFT** .
 
-- Aby wyłączyć przewodniki, przejdź do menu **Format** , > **ustawienia przewodnika**. Następnie w obszarze **prowadnice układu**wybierz opcję **Brak**.
+- Aby wyłączyć przewodniki, przejdź do menu **Formatowanie**  >  **ustawienia przewodnika**. Następnie w obszarze **prowadnice układu**wybierz opcję **Brak**.
 
    > [!TIP]
-   > Możesz również użyć skrótu w **formacie** menu > **Przełącz prowadnice**.
+   > Możesz również użyć skrótu w **formacie**menu  >  **Przełącz prowadnice**.
 
 ## <a name="select-controls"></a>Wybierz kontrolki
 
-Wybierz pozycję kontrolki, aby zmienić rozmiar, Wyrównaj, Przenieś, skopiuj lub Usuń, a następnie ukończ żądaną operację. W większości przypadków należy wybrać więcej niż jedną kontrolkę, aby użyć narzędzi do ustalania rozmiarów i wyrównania na [pasku narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+Wybierz pozycję kontrolki, aby zmienić rozmiar, Wyrównaj, Przenieś, skopiuj lub Usuń, a następnie ukończ żądaną operację. W większości przypadków należy wybrać więcej niż jedną kontrolkę, aby użyć narzędzi do ustalania rozmiarów i wyrównania na [pasku narzędzi edytora okien dialogowych](./dialog-editor.md).
 
 Gdy kontrolka jest zaznaczona, ma zacienione obramowanie wokół niej z pełnymi (aktywnymi) lub pustymi (nieaktywnymi) uchwytami zmiany rozmiarów, małych kwadratów, które pojawiają się w obramowaniu zaznaczenia. Gdy wybrano wiele kontrolek, formant dominujący ma pełne dojścia do rozmiarów i wszystkie pozostałe zaznaczone kontrolki mają puste uchwyty zmiany rozmiarów.
 
@@ -212,7 +212,7 @@ Użyj uchwytów rozmiaru, aby zmienić rozmiar kontrolki. Gdy wskaźnik jest ust
 
 - Aby automatycznie dopasować rozmiar formantu do tekstu w nim, przejdź do menu **Format** lub kliknij prawym przyciskiem myszy kontrolkę, a następnie wybierz pozycję **rozmiar do zawartości**.
 
-- Aby kontrolować ten sam rozmiar, wybierz kontrolki, których rozmiar chcesz zmienić, i przejdź do **formatu** menu, > **ten sam rozmiar**, a następnie wybierz **jedną z opcji**, **wysokość**lub **Szerokość**.
+- Aby kontrolować ten sam rozmiar, wybierz kontrolki, które chcesz zmienić, a następnie przejdź do **formatu**menu  >  **Make Same Size**, a następnie wybierz jedną z **opcji**, **wysokość**lub **Szerokość**.
 
    Zmiana rozmiaru grupy kontrolek zależy od rozmiaru kontrolki dominującej, która jest wybierana w pierwszej kolejności w serii. Końcowy rozmiar kontrolek w grupie zależy od rozmiaru kontrolki dominującej.
 
@@ -222,7 +222,7 @@ Użyj uchwytów rozmiaru, aby zmienić rozmiar kontrolki. Gdy wskaźnik jest ust
 
 ### <a name="other-controls"></a>Inne kontrolki
 
-Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również określić rozmiar pola listy rozwijanej. Aby uzyskać więcej informacji, zobacz [Dodawanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md).
+Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również określić rozmiar pola listy rozwijanej. Aby uzyskać więcej informacji, zobacz [Dodawanie wartości do kontrolki pola kombi](./defining-mnemonics-access-keys.md).
 
 1. Wybierz przycisk strzałki listy rozwijanej z prawej strony pola kombi.
 
@@ -232,7 +232,7 @@ Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również 
 
 1. Użyj dolnego uchwytu zmiany rozmiaru, aby zmienić początkowy rozmiar obszaru listy rozwijanej.
 
-   ![Wymiarowanie pola kombi&#45;w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+   ![Wymiarowanie pola&#45;kombi w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
 
 1. Ponownie wybierz strzałkę listy rozwijanej, aby zamknąć część listy rozwijanej pola kombi.
 
@@ -241,9 +241,9 @@ Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również 
 >
 > Ustaw maksymalną szerokość dla najszerszego elementu przez wywołanie [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) w kodzie. Bez tego zestawu wartości pasek przewijania nie zostanie wyświetlony, nawet gdy elementy w polu listy są szersze niż pole.
 
-## <a name="align-controls"></a>Wyrównaj kontrolki
+## <a name="align-controls"></a>Wyrównywanie kontrolek
 
-- Aby wyrównać kontrolki, wybierz kontrolki, które chcesz wyrównać. Przejdź do menu **Format** , > **Wyrównaj** i wybierz jedno z następujących wyrównania:
+- Aby wyrównać kontrolki, wybierz kontrolki, które chcesz wyrównać. Przejdź do pozycji menu **Format**  >  **Wyrównaj** i wybierz jedno z następujących wyrównania:
 
    |Wyrównanie|Opis|
    |-----|-----------|
@@ -256,26 +256,26 @@ Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również 
 
    Upewnij się, że wybierasz kontrolkę, która ma być pierwszą osobą dominującą, lub ustaw ją jako formant dominujący przed wykonaniem polecenia wyrównania lub zmiany rozmiarów, gdy końcowa pozycja grupy kontrolek zależy od pozycji kontrolki dominującej.
 
-- Aby równomiernie przemieścić kontrolki, wybierz kontrolki, które chcesz zmienić. Przejdź do menu **Format** , > **miejsce równomiernie** i wybierz jeden z następujących wyrównania odstępów:
+- Aby równomiernie przemieścić kontrolki, wybierz kontrolki, które chcesz zmienić. Przejdź do pozycji **menu**  >  **Space Evenly** , a następnie wybierz jedno z następujących wyrównania odstępów:
 
    |Odstępy|Opis|
    |---|---|
    |**Całą**|Kontrolki odstępu są równomiernie dostępne między skrajną lewą i prawą wybraną kontrolką.|
-   |**Notuj**|Kontrolki odstępu są równomiernie dostępne między górną i najniższej zaznaczonej kontrolki.|
+   |**W dół**|Kontrolki odstępu są równomiernie dostępne między górną i najniższej zaznaczonej kontrolki.|
 
-- Aby wyśrodkować kontrolki, zaznacz kontrolkę lub kontrolki, które chcesz zmienić. Przejdź do menu **Format** > **Wyśrodkuj w oknie dialogowym** i wybierz jedną z następujących czynności:
+- Aby wyśrodkować kontrolki, zaznacz kontrolkę lub kontrolki, które chcesz zmienić. Przejdź do menu **Format**  >  **centrum w oknie dialogowym** , a następnie wybierz jedną z następujących czynności:
 
    |Szkic|Opis|
    |---|---|
-   |**Pionow**|Wyśrodkuj kontrolki w pionie w oknie dialogowym.|
+   |**Pionowa**|Wyśrodkuj kontrolki w pionie w oknie dialogowym.|
    |**Układ**|Wyśrodkuj kontrolki w poziomie w oknie dialogowym.|
 
-- Aby wyrównać przyciski push, wybierz jeden lub więcej przycisków wypychania. Przejdź do menu **Format** > **Rozmieść przyciski**, a następnie wybierz jedną z następujących czynności:
+- Aby wyrównać przyciski push, wybierz jeden lub więcej przycisków wypychania. Przejdź do menu **Format**  >  **Rozmieść przyciski**, a następnie wybierz jedną z następujących czynności:
 
    |Szkic|Opis|
    |---|---|
    |**Kliknij**|Wyrównuje przyciski push wzdłuż prawej krawędzi okna dialogowego.|
-   |**Stop**|Wyrównuje przyciski push wzdłuż dolnej krawędzi okna dialogowego.|
+   |**Dolne**|Wyrównuje przyciski push wzdłuż dolnej krawędzi okna dialogowego.|
 
    Jeśli wybierzesz kontrolkę inną niż przycisk push, jej pozycja nie ma żadnego oddziaływania.
 

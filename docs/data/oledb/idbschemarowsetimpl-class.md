@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844005"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509037"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl — Klasa
 
@@ -78,13 +78,13 @@ Klasa, według której `IDBSchemaRowsetImpl` jest dziedziczona. Typowo, ta klasa
 | Nazwa | Opis |
 |-|-|
 |[GetRowset](#getrowset)|Zwraca zestaw wierszy schematu.|
-|[GetSchemas](#getschemas)|Zwraca listę zestawów wierszy schematu dostępnych przez [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).|
+|[GetSchemas](#getschemas)|Zwraca listę zestawów wierszy schematu dostępnych przez [IDBSchemaRowsetImpl:: GetRowset](#getrowset).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa implementuje interfejs [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) i funkcję Szablonowana Creator [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
+Ta klasa implementuje interfejs [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) i funkcję Szablonowana Creator [CreateSchemaRowset](#createschemarowset).
 
-OLE DB używa zestawów wierszy schematu, aby zwracać dane dotyczące danych w dostawcy. Takie dane są często nazywane "metadanymi". Domyślnie dostawca musi zawsze obsługiwać `DBSCHEMA_TABLES` , `DBSCHEMA_COLUMNS` , i `DBSCHEMA_PROVIDER_TYPES` , zgodnie z opisem w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , w *dokumentacji programisty OLE DB*. Zestawy wierszy schematu są wyznaczeni w mapie schematów. Aby uzyskać informacje na temat wpisów mapy schematu, zobacz [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB używa zestawów wierszy schematu, aby zwracać dane dotyczące danych w dostawcy. Takie dane są często nazywane "metadanymi". Domyślnie dostawca musi zawsze obsługiwać `DBSCHEMA_TABLES` , `DBSCHEMA_COLUMNS` , i `DBSCHEMA_PROVIDER_TYPES` , zgodnie z opisem w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , w *dokumentacji programisty OLE DB*. Zestawy wierszy schematu są wyznaczeni w mapie schematów. Aby uzyskać informacje na temat wpisów mapy schematu, zobacz [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry).
 
 Kreator dostawcy OLE DB w Kreatorze obiektów ATL automatycznie generuje kod dla zestawów wierszy schematu w projekcie. (Domyślnie Kreator obsługuje obowiązkowe wcześniej wymienione zestawy wierszy schematu). Podczas tworzenia konsumenta przy użyciu kreatora obiektów ATL Kreator używa zestawów wierszy schematu, aby powiązać odpowiednie dane z dostawcą. Jeśli zestaw wierszy schematu nie zostanie wdrożony w celu zapewnienia poprawnych metadanych, Kreator nie będzie powiązać prawidłowych danych.
 
@@ -112,13 +112,13 @@ podczas Odwołanie do żądanego identyfikatora GUID zestawu wierszy schematu (n
 podczas Liczba ograniczeń, które konsument przeszedł dla zestawu wierszy schematu.
 
 *rgRestrictions*<br/>
-podczas Tablica długości *cRestrictions* wartości ograniczeń, które mają zostać ustawione. Aby uzyskać więcej informacji, zobacz opis parametru *rgRestrictions* w temacie [setograniczenia](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+podczas Tablica długości *cRestrictions* wartości ograniczeń, które mają zostać ustawione. Aby uzyskać więcej informacji, zobacz opis parametru *rgRestrictions* w temacie [setograniczenia](#setrestrictions).
 
 ### <a name="remarks"></a>Uwagi
 
 Służy `CheckRestrictions` do sprawdzania poprawności ograniczeń dla zestawu wierszy schematu. Sprawdza ograniczenia dotyczące `DBSCHEMA_TABLES` `DBSCHEMA_COLUMNS` zestawów wierszy, i `DBSCHEMA_PROVIDER_TYPES` schematu. Wywołaj tę metodę, aby określić, czy wywołanie odbiorcy `IDBSchemaRowset::GetRowset` jest poprawne. Jeśli chcesz obsługiwać zestawy wierszy schematu inne niż wymienione powyżej, należy utworzyć własną funkcję do wykonania tego zadania.
 
-`CheckRestrictions` Określa, czy odbiorca wywołuje metodę [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) z prawidłowym ograniczeniem i poprawnym typem ograniczenia (na przykład VT_BSTR ciągu) obsługiwanego przez dostawcę. Określa również, czy są obsługiwane poprawne liczby ograniczeń. Domyślnie program `CheckRestrictions` poprosił dostawcę za pomocą wywołania [setograniczenia](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , które ograniczenia obsługuje dla danego zestawu wierszy. Następnie porównuje ograniczenia od konsumenta z tymi obsługiwanymi przez dostawcę i powiedzie się lub zakończy się niepowodzeniem.
+`CheckRestrictions` Określa, czy odbiorca wywołuje metodę [GetRowset](#getrowset) z prawidłowym ograniczeniem i poprawnym typem ograniczenia (na przykład VT_BSTR ciągu) obsługiwanego przez dostawcę. Określa również, czy są obsługiwane poprawne liczby ograniczeń. Domyślnie program `CheckRestrictions` poprosił dostawcę za pomocą wywołania [setograniczenia](#setrestrictions) , które ograniczenia obsługuje dla danego zestawu wierszy. Następnie porównuje ograniczenia od konsumenta z tymi obsługiwanymi przez dostawcę i powiedzie się lub zakończy się niepowodzeniem.
 
 Aby uzyskać więcej informacji na temat zestawów wierszy schematu, zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) w *dokumentacji programisty OLE DB* w Windows SDK.
 
@@ -199,7 +199,7 @@ podczas Tablica długości *cRestrictions* wartości ograniczeń, które mają z
 
 ### <a name="remarks"></a>Uwagi
 
-`IDBSchemaRowset`Obiekt wywołuje, `SetRestrictions` Aby określić, które ograniczenia są obsługiwane w konkretnym zestawie wierszy schematu (wywoływane przez [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) za pomocą wskaźnika ze wskaźnikiem). Ograniczenia umożliwiają konsumentom pobieranie tylko pasujących wierszy (na przykład Znajdź wszystkie kolumny w tabeli "MyTable"). Ograniczenia są opcjonalne i w przypadku, gdy żaden z nich nie jest obsługiwany (wartość domyślna), wszystkie dane są zawsze zwracane.
+`IDBSchemaRowset`Obiekt wywołuje, `SetRestrictions` Aby określić, które ograniczenia są obsługiwane w konkretnym zestawie wierszy schematu (wywoływane przez [GetSchemas](#getschemas) za pomocą wskaźnika ze wskaźnikiem). Ograniczenia umożliwiają konsumentom pobieranie tylko pasujących wierszy (na przykład Znajdź wszystkie kolumny w tabeli "MyTable"). Ograniczenia są opcjonalne i w przypadku, gdy żaden z nich nie jest obsługiwany (wartość domyślna), wszystkie dane są zawsze zwracane.
 
 Domyślna implementacja tej metody ustawia elementy tablicy *rgRestrictions* na 0. Zastąp wartość domyślną w klasie sesji, aby ustawić ograniczenia inne niż domyślne.
 
@@ -254,13 +254,13 @@ określoną Wskaźnik do żądanego interfejsu dla nowo utworzonego zestawu wier
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga, aby użytkownik miał mapę schematu w klasie sesji. Przy użyciu informacji o mapie schematu program `GetRowset` tworzy dany obiekt zestawu wierszy, jeśli parametr *rguidSchema* jest równy jednemu z identyfikatorów GUID wpisów mapy. Aby uzyskać opis wpisu mapy, zobacz [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) .
+Ta metoda wymaga, aby użytkownik miał mapę schematu w klasie sesji. Przy użyciu informacji o mapie schematu program `GetRowset` tworzy dany obiekt zestawu wierszy, jeśli parametr *rguidSchema* jest równy jednemu z identyfikatorów GUID wpisów mapy. Aby uzyskać opis wpisu mapy, zobacz [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) .
 
 Zobacz [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) w Windows SDK.
 
 ## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
 
-Zwraca listę zestawów wierszy schematu dostępnych przez [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
+Zwraca listę zestawów wierszy schematu dostępnych przez [IDBSchemaRowsetImpl:: GetRowset](#getrowset).
 
 ### <a name="syntax"></a>Składnia
 
@@ -291,5 +291,5 @@ Implementacja tej funkcji wymaga, aby użytkownik miał mapę schematu w klasie 
 
 [Klasy zestawów wierszy schematu i klasy typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Obsługa zestawów wierszy schematu](../../data/oledb/supporting-schema-rowsets.md)<br/>
-[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
+[SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

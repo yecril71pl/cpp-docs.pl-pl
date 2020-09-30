@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f3650d994e3102f71ab1d3598a4d1482f50b3334
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749116"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510040"
 ---
 # <a name="compiler-error-c3899"></a>Błąd kompilatora C3899
 
 "var": wykorzystanie wartości l składowej danych initonly nie jest dozwolone bezpośrednio w ramach równoległego regionu w klasie "Class"
 
-Nie można zainicjować składowej danych [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) w obrębie tej części konstruktora, która znajduje się w regionie [równoległym](../../parallel/openmp/reference/parallel.md) .  Dzieje się tak, ponieważ kompilator wykonuje wewnętrzną relokację tego kodu, tak że nie jest już częścią konstruktora.
+Nie można zainicjować składowej danych [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) wewnątrz tej części konstruktora, która znajduje się w regionie [równoległym](../../parallel/openmp/reference/openmp-directives.md#parallel) .  Dzieje się tak, ponieważ kompilator wykonuje wewnętrzną relokację tego kodu, tak że nie jest już częścią konstruktora.
 
 Aby rozwiązać ten problem, zainicjuj element członkowski danych initonly w konstruktorze, ale poza regionem równoległym.
 

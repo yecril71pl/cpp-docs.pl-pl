@@ -6,12 +6,12 @@ helpviewer_keywords:
 - external linkage, about external linkage
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
-ms.openlocfilehash: 05fd4bd07aca995a938c7744dfd506d2a71b8774
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8a7655b7504aa8458bda8db24ff3f919b5b09c1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217093"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509917"
 ---
 # <a name="external-linkage"></a>Połączenie zewnętrzne
 
@@ -21,6 +21,6 @@ Jeśli deklaracja identyfikatora dla funkcji nie ma *specyfikatora klasy magazyn
 
 Nazwa identyfikatora z zewnętrznym powiązaniem wyznacza tę samą funkcję lub obiekt danych, tak jak każda inna Deklaracja dla tej samej nazwy z zewnętrznym powiązaniem. Dwie deklaracje mogą znajdować się w tej samej jednostce translacji lub w różnych jednostkach tłumaczenia. Jeśli obiekt lub funkcja ma także globalny okres istnienia, obiekt lub funkcja jest współużytkowany przez cały program.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
+[Użycie zewnętrznie w celu określenia powiązania](../cpp/extern-cpp.md)

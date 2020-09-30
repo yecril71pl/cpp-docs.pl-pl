@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844928"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509782"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 
@@ -163,7 +163,7 @@ Zobacz [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=v
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda przesłania metodę [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) , ale zawiera buforowanie oryginalnych danych w celu zezwolenia na natychmiastowe lub odroczone przetwarzanie operacji.
+Ta metoda przesłania metodę [IRowsetChangeImpl:: SetData](./irowsetchangeimpl-class.md#setdata) , ale zawiera buforowanie oryginalnych danych w celu zezwolenia na natychmiastowe lub odroczone przetwarzanie operacji.
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl:: GetOriginalData
 
@@ -278,7 +278,7 @@ Aby poznać inne parametry, zobacz [IRowsetUpdate:: Update](/previous-versions/w
 
 ### <a name="remarks"></a>Uwagi
 
-Zmiany są przesyłane przez wywołanie [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Aby zmiany zaczęły obowiązywać, konsument musi wywołać [CRowset:: Update](../../data/oledb/crowset-update.md) . Ustaw *prgRowStatus* na odpowiednią wartość, zgodnie z opisem w temacie [Stany wierszy](/previous-versions/windows/desktop/ms722752(v=vs.85)) w *Kompendium OLE DB programisty*.
+Zmiany są przesyłane przez wywołanie [IRowsetChangeImpl:: FlushData](./irowsetchangeimpl-class.md#flushdata). Aby zmiany zaczęły obowiązywać, konsument musi wywołać [CRowset:: Update](./crowset-class.md#update) . Ustaw *prgRowStatus* na odpowiednią wartość, zgodnie z opisem w temacie [Stany wierszy](/previous-versions/windows/desktop/ms722752(v=vs.85)) w *Kompendium OLE DB programisty*.
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl:: IsUpdateAllowed
 
@@ -305,7 +305,7 @@ określoną Stan zwrócony użytkownikowi.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ustalisz, że aktualizacja powinna być dozwolona, zwraca S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, musisz także ustawić `DBROWSTATUS` w [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) do odpowiedniego [stanu wiersza](/previous-versions/windows/desktop/ms722752(v=vs.85)).
+Jeśli ustalisz, że aktualizacja powinna być dozwolona, zwraca S_OK; w przeciwnym razie zwraca E_FAIL. Jeśli zezwolisz na aktualizację, musisz także ustawić `DBROWSTATUS` w [IRowsetUpdateImpl:: Update](#update) do odpowiedniego [stanu wiersza](/previous-versions/windows/desktop/ms722752(v=vs.85)).
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl:: m_mapCachedData
 

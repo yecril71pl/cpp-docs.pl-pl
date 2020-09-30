@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845669"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509086"
 ---
 # <a name="cutlprops-class"></a>CUtlProps — Klasa
 
@@ -72,9 +72,9 @@ Klasa, która zawiera `BEGIN_PROPSET_MAP` .
 
 Większość tej klasy jest szczegółami implementacji.
 
-`CUtlProps` zawiera dwa elementy członkowskie do ustawiania właściwości wewnętrznie: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) i [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` zawiera dwa elementy członkowskie do ustawiania właściwości wewnętrznie: [GetPropValue](#getpropvalue) i [SetPropValue](#setpropvalue).
 
-Aby uzyskać więcej informacji na temat makr używanych na mapie zestawu właściwości, zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) i [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Aby uzyskać więcej informacji na temat makr używanych na mapie zestawu właściwości, zobacz [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) i [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map).
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
@@ -163,7 +163,7 @@ Jeśli odbiorca otworzy obiekt i zażąda opcjonalnego interfejsu, dostawca powi
 
 - `IRowsetScroll`
 
-Jeśli chcesz obsłużyć inne interfejsy, Przesłoń tę funkcję w klasie źródła danych, sesji, polecenia lub zestawu wierszy, aby przetwarzać funkcje. Przesłonięcie powinno przekroczyć normalne interfejsy zestawu/pobierania właściwości, aby upewnić się, że właściwości ustawienia również ustawiają wszystkie właściwości łańcucha (zobacz [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
+Jeśli chcesz obsłużyć inne interfejsy, Przesłoń tę funkcję w klasie źródła danych, sesji, polecenia lub zestawu wierszy, aby przetwarzać funkcje. Przesłonięcie powinno przekroczyć normalne interfejsy zestawu/pobierania właściwości, aby upewnić się, że właściwości ustawienia również ustawiają wszystkie właściwości łańcucha (zobacz [OnPropertyChanged](#onpropertychanged)).
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 

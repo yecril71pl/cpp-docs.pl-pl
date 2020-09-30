@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0016926ff82be9ef2b52cf55b16bde2a6099f237
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040316"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509989"
 ---
 # <a name="basic_string-class"></a>basic_string — Klasa
 
@@ -180,7 +180,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |Funkcja członkowska|Opis|
 |-|-|
 |[łączono](#append)|Dodaje znaki na końcu ciągu.|
-|[przypisać](#assign)|Przypisuje nowe wartości znakowe do zawartości ciągu.|
+|[ponownie](#assign)|Przypisuje nowe wartości znakowe do zawartości ciągu.|
 |[w](#at)|Zwraca odwołanie do elementu w określonej lokalizacji w ciągu.|
 |[Wstecz](#back)||
 |[zaczną](#begin)|Zwraca iterator odnoszący się do pierwszego elementu w ciągu.|
@@ -199,7 +199,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w ciągu.|
 |[ends_with](#ends_with)<sup>c++ 20</sup>|Sprawdza, czy ciąg jest zakończony określonym sufiksem.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w ciągu z określonego położenia.|
-|[find](#find)|Wyszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
+|[wyświetlić](#find)|Wyszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
 |[find_first_not_of](#find_first_not_of)|Wyszukuje w ciągu pierwszy znak, który nie jest żadnym elementem określonego ciągu.|
 |[find_first_of](#find_first_of)|Wyszukuje w ciągu pierwszy znak, który pasuje do dowolnego elementu określonego ciągu.|
 |[find_last_not_of](#find_last_not_of)|Wyszukuje w ciągu ostatni znak, który nie jest żadnym elementem określonego ciągu.|
@@ -4765,7 +4765,7 @@ int main()
 {
     std::basic_string<char> str = "abcdefg";
 
-    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
     std::cout << str.starts_with('b') << '\n';
     std::cout << str.starts_with("aBc") << '\n';
 
@@ -4958,7 +4958,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string>](../standard-library/string.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

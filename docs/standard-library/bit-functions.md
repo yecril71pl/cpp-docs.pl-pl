@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039818"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509979"
 ---
 # <a name="ltbitgt-functions"></a>&lt;&gt;funkcje bitowe
 
@@ -106,14 +106,17 @@ std::bit_cat<int>(f) = 7f800000
 Kod niskiego poziomu często musi interpretować obiekt z jednym typem jako inny typ. Reinterpretowany obiekt ma taką samą reprezentację bitową jak oryginalna, ale jest innym typem.
 
 Zamiast używać `reinterpret_cast` , lub `memcpy()` , `bit_cast()` jest lepszym sposobem dokonania konwersji. Lepszym rozwiązaniem jest:
+
 - `bit_cast()` to `constexpr`
 - `bit_cast()` wymaga, aby typy były jednocześnie kopiujące i miały ten sam rozmiar. Zapobiega to potencjalnym problemom, które można napotkać przy użyciu `reinterpret_cast` i `memcpy` ponieważ mogą one być używane do przypadkowego i niepoprawnie konwersji typów, które nie są możliwe do kopiowania. Ponadto, `memcpy()` może być używany do przypadkowego kopiowania typów, które nie mają tego samego rozmiaru. Na przykład podwójna (8 bajtów) do niepodpisanej int (4 bajty) lub w inny sposób.
 
 To Przeciążenie uczestniczy tylko w rozwiązaniu przeciążenia, jeśli:
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` i `From` są [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Ten szablon funkcji jest `constexpr` if i tylko wtedy `To` , gdy, `From` i typy ich podobiektów są:
+
 - nie jest typem Unii ani wskaźnikiem
 - nie jest wskaźnikiem do typu elementu członkowskiego
 - nietrwałe — kwalifikowana
@@ -490,7 +493,7 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 Sprawdź, czy wartość ma tylko jeden zestaw bitów. Jest to takie samo, jak testowanie, czy wartość jest potęgą liczby 2.
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -544,7 +547,7 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 ## <a name="popcount"></a>`popcount`
 
 Liczba bitów ustawionych na jedną wartość w postaci liczby całkowitej bez znaku.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -603,7 +606,7 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 ## <a name="rotl"></a>`rotl`
 
 Obraca bity wartości liczby całkowitej bez znaku, pozostawioną określoną liczbę razy. Bity "spadek" bitu z lewej strony są obracane na bit z prawej strony.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -665,7 +668,7 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 ## <a name="rotr"></a>`rotr`
 
 Obraca bity o `value` określoną liczbę razy. Bity "spadek" bitu z prawej strony są obracane z powrotem do bitu z lewej strony.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -732,6 +735,6 @@ Ta funkcja szablonu jest częścią tylko rozpoznawania przeciążenia `T` , je�
 
 [/std: wymagany jest język c + +](../build/reference/std-specify-language-standard-version.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<bit>](bit.md)

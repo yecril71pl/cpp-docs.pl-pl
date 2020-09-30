@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f9742ce1e15a817923c144544eb3bb6325e76765
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040057"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509953"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -52,6 +52,6 @@ Na przykład znajdują się funkcje, które umożliwiają obracanie bitów, wysz
 |[rotl](bit-functions.md#rotl) | Oblicza wynik dla bitowej lewej obrotu. |
 |[rotr](bit-functions.md#rotr) | Oblicza wynik dwustopniowego obrotu. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)

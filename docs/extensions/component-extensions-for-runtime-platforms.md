@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219771"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509709"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows
 
@@ -65,7 +65,7 @@ Dodano następujące słowa kluczowe do obsługi typów ogólnych. Aby uzyskać 
 |Słowo kluczowe|Kontekstowe|Przeznaczenie|
 |-------------|-----------------------|-------------|
 |**ogólnego**|Nie|Deklaruje typ ogólny.|
-|**miejscu**|Tak|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|
+|**gdzie**|Tak|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|
 
 ## <a name="miscellaneous-keywords"></a>Różne słowa kluczowe
 
@@ -87,7 +87,7 @@ Poniższe konstrukcje języka są implementowane jako szablony, a nie słowa klu
 
 |Słowo kluczowe|Przeznaczenie|Dokumentacja|
 |-------------|-------------|---------------|
-|**array**|Deklaruje tablicę.|[Macierze](arrays-cpp-component-extensions.md)|
+|**array**|Deklaruje tablicę.|[Tablice](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Tylko CLR) Wskazuje dane w typie referencyjnym.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Tylko CLR) Wskazuje typy odwołań CLR do tymczasowego pomijania systemu odzyskiwania pamięci.|[pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)|
 |**safe_cast**|Określa i wykonuje metodę optymalnego rzutowania dla typu środowiska uruchomieniowego.|[safe_cast](safe-cast-cpp-component-extensions.md)|
@@ -110,7 +110,7 @@ Ta sekcja zawiera listę dodatkowych konstrukcji programistycznych i tematów od
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Umożliwia używanie słów kluczowych jako identyfikatorów.|
 |[Listy zmiennych argumentów (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Włącza funkcję, aby przyjmować zmienną liczbę argumentów.|
-|[Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Wyświetla listę typów CLR, które są używane zamiast typów całkowitych języka C++.|
+|[Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)|Wyświetla listę typów CLR, które są używane zamiast typów całkowitych języka C++.|
 |[domena aplikacji](../cpp/appdomain.md) **`__declspec`** modyfikator|**`__declspec`** modyfikator, który jest upoważniony do istnienia zmiennych statycznych i globalnych na domenę aplikacji.|
 |[Rzutowania w stylu C i kompilator /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Opisuje, jak są interpretowane rzutowania w stylu języka C.|
 |[__clrcall](../cpp/clrcall.md) konwencji wywoływania|Wskazuje konwencję wywoływania zgodną ze środowiskiem CLR.|
@@ -130,7 +130,7 @@ Ta sekcja zawiera listę dodatkowych konstrukcji programistycznych i tematów od
 |[#using — dyrektywa](../preprocessor/hash-using-directive-cpp.md)|Importuje zestawy zewnętrzne.|
 |[Dokumentacja XML](../build/reference/xml-documentation-visual-cpp.md)|Objaśnia dokumentację kodu opartą na języku XML za pomocą [/doc (Przetwarzaj komentarze dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317643"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509336"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nazywanie pliku .TLB)
 
@@ -26,38 +26,38 @@ ms.locfileid: "62317643"
 
 ## <a name="arguments"></a>Argumenty
 
-*Ścieżka*<br/>
-Specyfikacja bezwzględną lub ścieżką względną tworzona pliku .tlb.
+*ścieżka*<br/>
+Bezwzględna lub względna Specyfikacja ścieżki dla lokalizacji, w której ma zostać utworzony plik. tlb.
 
 *Nazwa pliku*<br/>
-Określa nazwę pliku .tlb utworzony przez kompilator MIDL. Przyjęto, że brak rozszerzenia pliku; Określ *filename*.tlb, jeśli chcesz, aby rozszerzenie .tlb.
+Określa nazwę pliku TLB utworzonego przez kompilator MIDL. Nie założono rozszerzenia pliku; Określ *filename*. tlb, jeśli chcesz mieć rozszerzenie. tlb.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/tlbout Określa nazwę i rozszerzenie pliku .tlb.
+Opcja/TLBOUT określa nazwę i rozszerzenie pliku. tlb.
 
-Kompilator MIDL jest wywoływana przez konsolidator MSVC podczas łączenia projektów, które mają [modułu](../../windows/module-cpp.md) atrybutu.
+Kompilator MIDL jest wywoływany przez konsolidator MSVC podczas łączenia projektów, które mają atrybut [modułu](../../windows/attributes/module-cpp.md) .
 
-Jeśli nie określono/tlbout, pliku .tlb otrzymają nazwy z [/idlout](idlout-name-midl-output-files.md) *filename*. Jeśli nie określono/idlout, pliku .tlb zostanie wywołana metoda vc70.tlb.
+Jeśli/TLBOUT nie zostanie określony, plik. tlb pobierze nazwę z *pliku* [/IDLOUT](idlout-name-midl-output-files.md) . Jeśli/IDLOUT nie zostanie określony, plik. tlb będzie miał nazwę vc70. tlb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **osadzone IDL** stronę właściwości.
+1. Kliknij stronę właściwości **osadzony IDL** .
 
-1. Modyfikowanie **biblioteki typów** właściwości.
+1. Zmodyfikuj właściwość **biblioteki typów** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)<br/>
-[/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[MSVC Opcje konsolidatora](linker-options.md)<br/>
+[/IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (Określ opcje wiersza polecenia MIDL)](midl-specify-midl-command-line-options.md)<br/>
-[Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)
+[Kompilowanie programu opartego na atrybutach](../../windows/attributes/cpp-attributes-com-net.md)

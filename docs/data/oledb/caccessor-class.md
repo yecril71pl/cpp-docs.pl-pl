@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212306"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509560"
 ---
 # <a name="caccessor-class"></a>Klasa CAccessor
 
@@ -30,7 +30,7 @@ class CAccessor : public CAccessorBase, public T
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Klasa rekordu użytkownika.
 
 ## <a name="remarks"></a>Uwagi
@@ -39,7 +39,7 @@ Jest on używany, gdy rekord jest statycznie powiązany ze źródłem danych. Re
 
 Użyj tego typu metody dostępu, gdy znasz strukturę i typ bazy danych.
 
-Jeśli metoda dostępu zawiera pola wskazujące na pamięć (na przykład `BSTR` lub interfejs), które muszą zostać zwolnione, wywołaj funkcję członkowską [CAccessorRowset:: FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) przed odczytaniem następnego rekordu.
+Jeśli metoda dostępu zawiera pola, które wskazują na pamięć (na przykład `BSTR` interfejs lub), które muszą zostać zwolnione, wywołaj funkcję członkowską [CAccessorRowset:: FreeRecordMemory](./caccessorrowset-class.md#freerecordmemory) przed odczytaniem następnego rekordu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -48,4 +48,4 @@ Jeśli metoda dostępu zawiera pola wskazujące na pamięć (na przykład `BSTR`
 ## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

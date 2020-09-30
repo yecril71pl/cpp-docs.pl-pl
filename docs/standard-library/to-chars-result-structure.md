@@ -1,19 +1,19 @@
 ---
-title: Struktura to_chars_result
+title: to_chars_result, struktura
 ms.date: 07/22/2020
 f1_keywords:
 - charconv/std::to_chars_result
 helpviewer_keywords:
 - to_chars_result class
 - to_chars_result structure
-ms.openlocfilehash: a840b8d030f0ed0d2a4afcc57e1bef1161c76ff3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e46d1cc9d0b6a02d731ad25c2e85c99300d7234
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212064"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509647"
 ---
-# <a name="to_chars_result-struct"></a>Struktura to_chars_result
+# <a name="to_chars_result-struct"></a>to_chars_result, struktura
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,6 +39,6 @@ struct to_chars_result {
 
 **Opcja kompilatora:** /std: c++ 17 lub nowsza, jest wymagana
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [to_chars](charconv-functions.md#to_chars)

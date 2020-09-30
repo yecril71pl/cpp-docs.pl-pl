@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4537c6c76814f2aeb8f8d62579caec86785de252
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750094"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510142"
 ---
 # <a name="compiler-error-c3531"></a>Błąd kompilatora C3531
 
@@ -25,7 +25,7 @@ Określona zmienna nie ma wyrażenia inicjatora.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3531, ponieważ zmienne `x1`, `y1, y2, y3`i `z2` nie zostały zainicjowane.
+Poniższy przykład daje C3531 ze względu na to, że zmienne `x1` , `y1, y2, y3` i `z2` nie zostały zainicjowane.
 
 ```cpp
 // C3531.cpp
@@ -39,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-cpp.md)

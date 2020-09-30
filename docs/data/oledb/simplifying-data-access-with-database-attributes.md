@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: faee3ea47a6d96b09729d9d4b5bfa21584096d31
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509463"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509466"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Upraszczanie dostępu do danych za pomocą atrybutów bazy danych
 
@@ -28,26 +28,26 @@ Aby zademonstrować użycie atrybutów bazy danych, w poniższych sekcjach przed
 
 Porównując dwa pliki, można zobaczyć, jak dużo łatwiej jest używać atrybutów. Różnice są następujące:
 
-- Przy użyciu atrybutów należy tylko zadeklarować jedną klasę: `CAuthors`, ale z szablonami należy zadeklarować dwa: `CAuthorsNoAttrAccessor` i `CAuthorsNoAttr`.
+- Przy użyciu atrybutów należy tylko zadeklarować jedną klasę: `CAuthors` , chociaż z szablonami należy zadeklarować dwa: `CAuthorsNoAttrAccessor` i `CAuthorsNoAttr` .
 
-- Wywołanie `db_source` w wersji z atrybutami jest równoważne wywołaniu `OpenDataSource()` w deklaracji szablonu.
+- `db_source`Wywołanie w wersji z atrybutami jest równoważne `OpenDataSource()` wywołaniu w deklaracji szablonu.
 
-- Wywołanie `db_table` w wersji z atrybutami jest równoważne następującej deklaracji szablonu:
+- `db_table`Wywołanie w wersji z atrybutami jest równoważne następującej deklaracji szablonu:
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- Wywołania `db_column` w wersji z atrybutami są równoważne z mapą kolumn (zobacz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) w deklaracji szablonu.
+- `db_column`Wywołania w wersji z atrybutami są równoważne z mapą kolumn (zobacz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP` ) w deklaracji szablonu.
 
-Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika. Klasa rekordu użytkownika jest równa `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli Klasa tabeli jest `CAuthors`, wprowadzona Klasa rekordu użytkownika ma nazwę `CAuthorsAccessor`i można ją wyświetlić tylko w wstrzykiwanym kodzie. Aby uzyskać więcej informacji, zobacz "klasy rekordów użytkowników z Wstrzykiwanymi atrybutami" w [rekordach użytkowników](../../data/oledb/user-records.md).
+Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika. Klasa rekordu użytkownika jest równa wartości `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli klasą tabeli jest `CAuthors` , wstrzykiwana Klasa rekordu użytkownika ma nazwę `CAuthorsAccessor` i można ją wyświetlić tylko w wstrzykiwanym kodzie. Aby uzyskać więcej informacji, zobacz "klasy rekordów użytkowników z Wstrzykiwanymi atrybutami" w [rekordach użytkowników](../../data/oledb/user-records.md).
 
-W obu atrybutach i kodzie z szablonem, należy ustawić właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty`.
+W obu atrybutach i kodzie z szablonem, należy ustawić właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty` .
 
-Aby uzyskać informacje o atrybutach omawianych w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/ole-db-consumer-attributes.md).
+Aby uzyskać informacje o atrybutach omawianych w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/attributes/ole-db-consumer-attributes.md).
 
 > [!NOTE]
-> Następujące instrukcje `include` są wymagane do skompilowania przykładów poniżej:
+> Poniższe `include` instrukcje są wymagane do skompilowania przykładów poniżej:
 
 > ```cpp
 > #include <atlbase.h>
@@ -57,7 +57,7 @@ Aby uzyskać informacje o atrybutach omawianych w tym temacie, zobacz [OLE DB at
 
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Deklaracja tabeli i metody dostępu przy użyciu atrybutów
 
-Poniższy kod wywołuje `db_source` i `db_table` klasy Table. `db_source` określa źródło danych i połączenie, które ma być używane. `db_table` wstrzyknąć odpowiedni kod szablonu, aby zadeklarować klasę tabeli. `db_column` określić mapę kolumn i wstrzyknąć deklarację metody dostępu. W każdym projekcie, który obsługuje ATL, można użyć atrybutów klienta OLE DB.
+Poniższy kod wywołuje `db_source` i `db_table` w klasie Table. `db_source` Określa źródło danych i połączenie, które ma być używane. `db_table` wprowadza odpowiedni kod szablonu, aby zadeklarować klasę tabeli. `db_column` Określ mapę kolumn i wstrzyknąć deklarację metody dostępu. W każdym projekcie, który obsługuje ATL, można użyć atrybutów klienta OLE DB.
 
 Oto deklaracja tabeli i metody dostępu przy użyciu atrybutów:
 
@@ -202,4 +202,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)
+[OLE DB atrybuty konsumenta](../../windows/attributes/ole-db-consumer-attributes.md)
