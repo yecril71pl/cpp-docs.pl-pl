@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757985"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508000"
 ---
 # <a name="compiler-error-c3706"></a>Błąd kompilatora C3706
 
 "Function": musi być interfejsem COM, aby uruchamiać zdarzenia COM
 
-Interfejs zdarzenia używany do wyzwalania zdarzeń COM musi być interfejsem COM. W takiej sytuacji interfejs powinien być zdefiniowany przy użyciu atrybutu wizualizacji C++ lub importowany przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów z atrybutem embedded_idl #import.
+Interfejs zdarzenia używany do wyzwalania zdarzeń COM musi być interfejsem COM. W takiej sytuacji interfejs powinien być zdefiniowany przy użyciu atrybutu Visual C++ lub zaimportowany przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów z atrybutem embedded_idl #import.
 
-Należy pamiętać, że w przypadku korzystania z zdarzeń COM wymagane są `#include` wierszy plików nagłówkowych ATL przedstawionych w poniższym przykładzie. Aby naprawić ten błąd, należy wprowadzić `IEvents` (interfejs zdarzenia) interfejsu COM, stosując jeden z następujących atrybutów do definicji interfejsu: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)lub [dispinterface](../../windows/dispinterface.md).
+Należy zauważyć, że `#include` wiersze plików nagłówkowych ATL przedstawione w poniższym przykładzie są wymagane do korzystania z zdarzeń com. Aby naprawić ten błąd, wprowadź `IEvents` (interfejs zdarzenia) Interfejs com, stosując jeden z następujących atrybutów do definicji interfejsu: [Object](../../windows/attributes/object-cpp.md), [Dual](../../windows/attributes/dual.md)lub [dispinterface](../../windows/attributes/dispinterface.md).
 
 Jeśli interfejs pochodzi z pliku nagłówka wygenerowanego przez MIDL, kompilator nie rozpoznaje go jako interfejsu COM.
 

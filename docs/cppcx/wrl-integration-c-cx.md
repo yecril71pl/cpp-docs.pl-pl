@@ -2,32 +2,32 @@
 title: Integracja z WRL (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ea0f6aece985a2ee74916e737b9aab1bf0d1d96
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304153"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507414"
 ---
 # <a name="wrl-integration-ccx"></a>Integracja z WRL (C++/CX)
 
-Za darmo można łączyć WRL kodu za pomocą kodu systemu Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL). W tej samej jednostce translacji, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwytu do obiektu (`^`) notacją i WRL inteligentnego wskaźnika (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracane wartości i kody błędów WRL HRESULT i wyjątków biblioteki WRL.
+Możesz swobodnie mieszać kod WRL za pomocą kodu biblioteki C++ (WRL) środowisko wykonawcze systemu Windows. W tej samej jednostce translacji można używać obiektów zadeklarowanych za pomocą notacji uchwytu WRL-to-Object ( `^` ) i WRL inteligentnego wskaźnika ( `ComPtr<T>` ). Należy jednak ręcznie obsłużyć wartości zwracane i WRL kody błędów HRESULT oraz wyjątki WRL.
 
-## <a name="wrl-development"></a>Tworzenie biblioteki WRL
+## <a name="wrl-development"></a>Programowanie WRL
 
-Aby uzyskać więcej informacji na temat tworzenia i używania składników biblioteki WRL, zobacz [Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Aby uzyskać więcej informacji na temat tworzenia i używania składników WRL, zobacz [środowisko wykonawcze systemu Windows C++ Template Library (WRL)](./wrl/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższy fragment kodu pokazuje i za pomocą biblioteki WRL i platformy WRL używanie klasy środowiska wykonawczego Windows w pliku metadanych.
+Poniższy fragment kodu ilustruje użycie WRL i WRL w celu użycia klas środowisko wykonawcze systemu Windows i przeanalizowania pliku metadanych.
 
-Przykład jest pobierana z forum aplikacji Microsoft Store Tworzenie fragmentu kodu. Autor ten fragment kodu oferuje następujące zastrzeżenia i przekazanie ustalonych:
+Przykład jest pobierany ze fragmentu kodu na forum kompilowania aplikacji Microsoft Store. Autor tego fragmentu kodu oferuje następujące odrzuty i klauzule:
 
-1. C++ nie zapewnia określonych interfejsów API na zastanowienie się nad typów środowiska wykonawczego Windows, ale pliki metadanych Windows (.winmd) dla typu są w pełni zgodne z plikami metadanych CLR. Windows oferuje nową wykrywania metadanych interfejsy API (RoGetMetaDataFile), aby przejść do pliku winmd dla danego typu. Jednak te interfejsy API są ograniczone zastosowanie dla deweloperów C++, ponieważ nie można utworzyć wystąpienia klasy.
+1. Język C++ nie zapewnia określonych interfejsów API do odzwierciedlenia na typach środowisko wykonawcze systemu Windows, ale pliki metadanych systemu Windows (WinMD) dla typu są w pełni zgodne z plikami metadanych CLR. System Windows udostępnia nowe interfejsy API odnajdowania metadanych (RoGetMetaDataFile), aby uzyskać dostęp do pliku winmd dla danego typu. Jednak te interfejsy API są ograniczone do deweloperów języka C++, ponieważ nie można utworzyć wystąpienia klasy.
 
-1. Jest skompilowany kod, należy również przekazać Runtimeobject.lib i Rometadata.lib do konsolidatora.
+1. Po skompilowaniu kodu należy również przekazać plik Runtimeobject. lib i Rometadata. lib do konsolidatora.
 
-1. Ten fragment kodu jest przedstawiany jako-to. Podczas gdy oczekiwano działała prawidłowo, prawdopodobnie może zawierać błędy.
+1. Ten fragment kodu jest prezentowany w postaci, w jakiej jest. Chociaż oczekiwanie działa prawidłowo, może ono zawierać błędy.
 
 ```cpp
 #include <hstring.h>
@@ -110,6 +110,6 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Współdziałanie z innymi językami](interoperating-with-other-languages-c-cx.md)

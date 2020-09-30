@@ -97,12 +97,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-ms.openlocfilehash: 6a2491b5c9e3c95a805d69265caf3267fd1e9c8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6bdd9b308a4917fde7de7b97ed7b9f7cfc8519a9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212933"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508560"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -114,9 +114,9 @@ W poniższym opisie `GValue` jest taka sama jak:
 
 gdzie:
 
-`GKey`jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest`Key^`
+`GKey` jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest `Key^`
 
-`GMapped`jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w tym przypadku jest to`Mapped^`
+`GMapped` jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w tym przypadku jest to `Mapped^`
 
 ## <a name="syntax"></a>Składnia
 
@@ -219,11 +219,11 @@ Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły. Wstawia elementy do (niemal) zrównoważonego drzewa, które zachowuje uporządkowane przez zmianę linków między węzłami, a nigdy przez kopiowanie zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów.
 
-Obiekt porządkuje sekwencję, która kontroluje, wywołując zapisany obiekt delegata typu [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Można określić przechowywany obiekt delegowany podczas konstruowania multimap; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<(key_type, key_type)` . Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md) `()` .
+Obiekt porządkuje sekwencję, która kontroluje, wywołując zapisany obiekt delegata typu [multimap:: key_compare (STL/CLR)](#key_compare). Można określić przechowywany obiekt delegowany podczas konstruowania multimap; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<(key_type, key_type)` . Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [multimap:: key_comp (STL/CLR)](#key_comp) `()` .
 
-Taki obiekt delegata musi nałożyć ścisłe słabe porządkowanie dla kluczy typu [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
+Taki obiekt delegata musi nałożyć ścisłe słabe porządkowanie dla kluczy typu [multimap:: key_type (STL/CLR)](#key_type). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
 
-`key_comp()(X, Y)`zwraca ten sam wynik Boolean dla każdego wywołania.
+`key_comp()(X, Y)` zwraca ten sam wynik Boolean dla każdego wywołania.
 
 Jeśli `key_comp()(X, Y)` ma wartość true, a następnie `key_comp()(Y, X)` musi mieć wartość false.
 
@@ -235,7 +235,7 @@ Dla każdego elementu `X` , który poprzedza `Y` w kontrolowanej sekwencji, `key
 
 Każdy element zawiera oddzielny klucz i zamapowane wartości. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z liczbą operacji proporcjonalnie do logarytmu liczby elementów w sekwencji (czas logarytmu). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
-Multimap obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator multimap, aby dotrzeć do węzła głównego. następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
+Multimap obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [multimap:: end (STL/CLR)](#end) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator multimap, aby dotrzeć do węzła głównego. następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
 
 Należy zauważyć, że nie można odwołać się do elementu multimap bezpośrednio przy użyciu jego pozycji liczbowej — który wymaga iteratora dostępu swobodnego.
 
@@ -245,7 +245,7 @@ Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej w
 
 ## <a name="members"></a>Elementy członkowskie
 
-## <a name="multimapbegin-stlclr"></a><a name="begin"></a>multimap:: begin (STL/CLR)
+## <a name="multimapbegin-stlclr"></a><a name="begin"></a> multimap:: begin (STL/CLR)
 
 Określa początek kontrolowanej sekwencji.
 
@@ -296,7 +296,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="multimapclear-stlclr"></a><a name="clear"></a>multimap:: Clear (STL/CLR)
+## <a name="multimapclear-stlclr"></a><a name="clear"></a> multimap:: Clear (STL/CLR)
 
 Usuwa wszystkie elementy.
 
@@ -308,7 +308,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje [multimap:: Erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
+Funkcja członkowska skutecznie wywołuje [multimap:: Erase (STL/CLR)](#erase) `(` [multimap:: begin (STL/CLR)](#begin) `(),` [multimap:: end (STL/CLR)](#end) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>multimap:: const_iterator (STL/CLR)
+## <a name="multimapconst_iterator-stlclr"></a><a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapconst_reference-stlclr"></a><a name="const_reference"></a>multimap:: const_reference (STL/CLR)
+## <a name="multimapconst_reference-stlclr"></a><a name="const_reference"></a> multimap:: const_reference (STL/CLR)
 
 Typ stałego odwołania do elementu.
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multimap:: const_reverse_iterator (STL/CLR)
+## <a name="multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
 
 Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="multimapcount-stlclr"></a><a name="count"></a>multimap:: Count (STL/CLR)
+## <a name="multimapcount-stlclr"></a><a name="count"></a> multimap:: Count (STL/CLR)
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -536,7 +536,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="multimapdifference_type-stlclr"></a><a name="difference_type"></a>multimap::d ifference_type (STL/CLR)
+## <a name="multimapdifference_type-stlclr"></a><a name="difference_type"></a> multimap::d ifference_type (STL/CLR)
 
 Typy podpisanej odległości między dwoma elementami.
 
@@ -591,7 +591,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="multimapempty-stlclr"></a><a name="empty"></a>multimap:: empty (STL/CLR)
+## <a name="multimapempty-stlclr"></a><a name="empty"></a> multimap:: empty (STL/CLR)
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -603,7 +603,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne [multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy multimap jest pusty.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne [multimap:: size (STL/CLR)](#size) `() == 0` . Służy do sprawdzania, czy multimap jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="multimapend-stlclr"></a><a name="end"></a>multimap:: end (STL/CLR)
+## <a name="multimapend-stlclr"></a><a name="end"></a> multimap:: end (STL/CLR)
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="multimapequal_range-stlclr"></a><a name="equal_range"></a>multimap:: equal_range (STL/CLR)
+## <a name="multimapequal_range-stlclr"></a><a name="equal_range"></a> multimap:: equal_range (STL/CLR)
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -713,7 +713,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zwraca parę iteratorów `-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md) `(_Keyval)` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Metoda zwraca parę iteratorów `-` [multimap:: lower_bound (STL/CLR)](#lower_bound) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](#upper_bound) `(_Keyval)` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -757,7 +757,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="multimaperase-stlclr"></a><a name="erase"></a>multimap:: Erase (STL/CLR)
+## <a name="multimaperase-stlclr"></a><a name="erase"></a> multimap:: Erase (STL/CLR)
 
 Usuwa elementy z określonych pozycji.
 
@@ -780,12 +780,12 @@ Wartość klucza do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*miejscu*<br/>
+*gdzie*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [multimap:: end (STL/CLR)](#end) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
 
 Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="multimapfind-stlclr"></a><a name="find"></a>multimap:: Find (STL/CLR)
+## <a name="multimapfind-stlclr"></a><a name="find"></a> multimap:: Find (STL/CLR)
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -867,7 +867,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
+Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [multimap:: end (STL/CLR)](#end) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
 
 ### <a name="example"></a>Przykład
 
@@ -909,7 +909,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="multimapgeneric_container-stlclr"></a><a name="generic_container"></a>multimap:: generic_container (STL/CLR)
+## <a name="multimapgeneric_container-stlclr"></a><a name="generic_container"></a> multimap:: generic_container (STL/CLR)
 
 Typ interfejsu generycznego dla kontenera.
 
@@ -973,7 +973,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multimap:: generic_iterator (STL/CLR)
+## <a name="multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> multimap:: generic_iterator (STL/CLR)
 
 Typ iteratora do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1030,7 +1030,7 @@ int main()
 [a 1]
 ```
 
-## <a name="multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multimap:: generic_reverse_iterator (STL/CLR)
+## <a name="multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> multimap:: generic_reverse_iterator (STL/CLR)
 
 Typ iteratora odwrotnego do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1086,7 +1086,7 @@ int main()
 [c 3]
 ```
 
-## <a name="multimapgeneric_value-stlclr"></a><a name="generic_value"></a>multimap:: generic_value (STL/CLR)
+## <a name="multimapgeneric_value-stlclr"></a><a name="generic_value"></a> multimap:: generic_value (STL/CLR)
 
 Typ elementu do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="multimapinsert-stlclr"></a><a name="insert"></a>multimap:: Insert (STL/CLR)
+## <a name="multimapinsert-stlclr"></a><a name="insert"></a> multimap:: Insert (STL/CLR)
 
 Dodaje elementy.
 
@@ -1168,7 +1168,7 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość klucza do wstawienia.
 
-*miejscu*<br/>
+*gdzie*<br/>
 Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 ### <a name="remarks"></a>Uwagi
@@ -1258,7 +1258,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="multimapiterator-stlclr"></a><a name="iterator"></a>multimap:: iterator (STL/CLR)
+## <a name="multimapiterator-stlclr"></a><a name="iterator"></a> multimap:: iterator (STL/CLR)
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapkey_comp-stlclr"></a><a name="key_comp"></a>multimap:: key_comp (STL/CLR)
+## <a name="multimapkey_comp-stlclr"></a><a name="key_comp"></a> multimap:: key_comp (STL/CLR)
 
 Kopiuje delegata porządkowania dla dwóch kluczy.
 
@@ -1359,7 +1359,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multimapkey_compare-stlclr"></a><a name="key_compare"></a>multimap:: key_compare (STL/CLR)
+## <a name="multimapkey_compare-stlclr"></a><a name="key_compare"></a> multimap:: key_compare (STL/CLR)
 
 Delegat porządkowania dla dwóch kluczy.
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multimapkey_type-stlclr"></a><a name="key_type"></a>multimap:: key_type (STL/CLR)
+## <a name="multimapkey_type-stlclr"></a><a name="key_type"></a> multimap:: key_type (STL/CLR)
 
 Typ klucza sortowania.
 
@@ -1464,7 +1464,7 @@ int main()
 a b c
 ```
 
-## <a name="multimaplower_bound-stlclr"></a><a name="lower_bound"></a>multimap:: lower_bound (STL/CLR)
+## <a name="multimaplower_bound-stlclr"></a><a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
 
 Znajduje początek zakresu, który odpowiada określonemu kluczowi.
 
@@ -1481,7 +1481,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [multimap:: end (STL/CLR)](#end) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1523,7 +1523,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="multimapmake_value-stlclr"></a><a name="make_value"></a>multimap:: make_value (STL/CLR)
+## <a name="multimapmake_value-stlclr"></a><a name="make_value"></a> multimap:: make_value (STL/CLR)
 
 Konstruuje obiekt wartości.
 
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapmapped_type-stlclr"></a><a name="mapped_type"></a>multimap:: mapped_type (STL/CLR)
+## <a name="multimapmapped_type-stlclr"></a><a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
 
 Typ mapowanej wartości skojarzonej z poszczególnymi kluczami.
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimapmultimap-stlclr"></a><a name="multimap"></a>multimap:: multimap (STL/CLR)
+## <a name="multimapmultimap-stlclr"></a><a name="multimap"></a> multimap:: multimap (STL/CLR)
 
 Konstruuje obiekt kontenera.
 
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapoperator-stlclr"></a><a name="op_as"></a>multimap:: operator = (STL/CLR)
+## <a name="multimapoperator-stlclr"></a><a name="op_as"></a> multimap:: operator = (STL/CLR)
 
 Zastępuje kontrolowaną sekwencję.
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimaprbegin-stlclr"></a><a name="rbegin"></a>multimap:: rbegin (STL/CLR)
+## <a name="multimaprbegin-stlclr"></a><a name="rbegin"></a> multimap:: rbegin (STL/CLR)
 
 Określa początek odwróconej sekwencji kontrolowanej.
 
@@ -1896,7 +1896,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="multimapreference-stlclr"></a><a name="reference"></a>multimap:: Reference (STL/CLR)
+## <a name="multimapreference-stlclr"></a><a name="reference"></a> multimap:: Reference (STL/CLR)
 
 Typ odwołania do elementu.
 
@@ -1941,7 +1941,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimaprend-stlclr"></a><a name="rend"></a>multimap:: rend (STL/CLR)
+## <a name="multimaprend-stlclr"></a><a name="rend"></a> multimap:: rend (STL/CLR)
 
 Określa koniec odwróconej kontrolowanej sekwencji.
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multimap:: reverse_iterator (STL/CLR)
+## <a name="multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
 
 Typ iteratora odwrotnego dla kontrolowanej sekwencji.
 
@@ -2036,7 +2036,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="multimapsize-stlclr"></a><a name="size"></a>multimap:: size (STL/CLR)
+## <a name="multimapsize-stlclr"></a><a name="size"></a> multimap:: size (STL/CLR)
 
 Liczy liczbę elementów.
 
@@ -2048,7 +2048,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [multimap:: empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md) `()` .
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [multimap:: empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -2088,7 +2088,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="multimapsize_type-stlclr"></a><a name="size_type"></a>multimap:: size_type (STL/CLR)
+## <a name="multimapsize_type-stlclr"></a><a name="size_type"></a> multimap:: size_type (STL/CLR)
 
 Typ podpisanej odległości między dwoma elementami.
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="multimapswap-stlclr"></a><a name="swap"></a>multimap:: swap (STL/CLR)
+## <a name="multimapswap-stlclr"></a><a name="swap"></a> multimap:: swap (STL/CLR)
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2204,7 +2204,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapto_array-stlclr"></a><a name="to_array"></a>multimap:: to_array (STL/CLR)
+## <a name="multimapto_array-stlclr"></a><a name="to_array"></a> multimap:: to_array (STL/CLR)
 
 Kopiuje przekontrolowaną sekwencję do nowej tablicy.
 
@@ -2254,7 +2254,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapupper_bound-stlclr"></a><a name="upper_bound"></a>multimap:: upper_bound (STL/CLR)
+## <a name="multimapupper_bound-stlclr"></a><a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
 
 Znajduje koniec zakresu, który odpowiada określonemu kluczowi.
 
@@ -2271,7 +2271,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [multimap:: end (STL/CLR)](#end) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2313,7 +2313,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="multimapvalue_comp-stlclr"></a><a name="value_comp"></a>multimap:: value_comp (STL/CLR)
+## <a name="multimapvalue_comp-stlclr"></a><a name="value_comp"></a> multimap:: value_comp (STL/CLR)
 
 Kopiuje delegata porządkowania dla dwóch wartości elementów.
 
@@ -2360,7 +2360,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="multimapvalue_compare-stlclr"></a><a name="value_compare"></a>multimap:: value_compare (STL/CLR)
+## <a name="multimapvalue_compare-stlclr"></a><a name="value_compare"></a> multimap:: value_compare (STL/CLR)
 
 Delegat porządkowania dla dwóch wartości elementów.
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="multimapvalue_type-stlclr"></a><a name="value_type"></a>multimap:: value_type (STL/CLR)
+## <a name="multimapvalue_type-stlclr"></a><a name="value_type"></a> multimap:: value_type (STL/CLR)
 
 Typ elementu.
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="operator-multimap-stlclr"></a><a name="op_neq"></a>operator! = (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_neq"></a> operator! = (multimap) (STL/CLR)
 
 Nierówne porównanie.
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-multimap-stlclr"></a><a name="op_lt"></a>operator &lt; (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lt"></a> operator &lt; (multimap) (STL/CLR)
 
 Lista jest mniejsza niż porównanie.
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-multimap-stlclr"></a><a name="op_lteq"></a>operator &lt; = (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lteq"></a> operator &lt; = (multimap) (STL/CLR)
 
 Lista jest mniejsza niż lub równa.
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-multimap-stlclr"></a><a name="op_eq"></a>operator = = (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_eq"></a> operator = = (multimap) (STL/CLR)
 
 Wyświetl równe porównanie.
 
@@ -2736,7 +2736,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-multimap-stlclr"></a><a name="op_gt"></a>operator &gt; (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gt"></a> operator &gt; (multimap) (STL/CLR)
 
 Lista większa niż porównanie.
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-multimap-stlclr"></a><a name="op_gteq"></a>operator &gt; = (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gteq"></a> operator &gt; = (multimap) (STL/CLR)
 
 Lista jest większa lub równa porównaniu.
 

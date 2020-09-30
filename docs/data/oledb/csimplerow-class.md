@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841080"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507234"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 
@@ -75,7 +75,7 @@ class CSimpleRow
 
 ## <a name="remarks"></a>Uwagi
 
-Dojście do wiersza jest logicznie unikatowym tagiem dla wiersza wynikowego. `IRowsetImpl` Tworzy nowy `CSimpleRow` dla każdego wiersza żądanego w [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` można również zastąpić własną implementacją uchwytu wiersza, ponieważ jest to domyślny argument szablonu `IRowsetImpl` . Jedynym wymaganiem do zamiany tej klasy jest posiadanie konstruktora, który akceptuje pojedynczy parametr typu **Long**.
+Dojście do wiersza jest logicznie unikatowym tagiem dla wiersza wynikowego. `IRowsetImpl` Tworzy nowy `CSimpleRow` dla każdego wiersza żądanego w [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` można również zastąpić własną implementacją uchwytu wiersza, ponieważ jest to domyślny argument szablonu `IRowsetImpl` . Jedynym wymaganiem do zamiany tej klasy jest posiadanie konstruktora, który akceptuje pojedynczy parametr typu **Long**.
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: AddRefRow
 
@@ -123,7 +123,7 @@ podczas Indeks do bieżącego zestawu wierszy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) na *iRowsetCur*.
+Ustawia [m_iRowset](#irowset) na *iRowsetCur*.
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: ReleaseRow
 

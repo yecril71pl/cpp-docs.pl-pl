@@ -2,12 +2,12 @@
 title: Znaki znaczące bez zewnętrznego połączenia
 ms.date: 11/04/2016
 ms.assetid: 396cfb36-391a-4aa9-885d-20198d4dc2ec
-ms.openlocfilehash: f509eb730a7c68d84a1e71686fee1ba02e73b366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 243a9b052a31c87a73ebd03c6f5d3c2009116722
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158296"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507610"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Znaki znaczące bez zewnętrznego połączenia
 
@@ -17,4 +17,4 @@ Identyfikatory są znaczące do 247 znaków. Kompilator nie ogranicza liczby zna
 
 ## <a name="see-also"></a>Zobacz też
 
-[Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
+[Użycie zewnętrznie w celu określenia powiązania](../cpp/extern-cpp.md)

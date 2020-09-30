@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508802"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>Odwołanie: widoki Analizatora wydajności systemu Windows
 
@@ -28,7 +28,7 @@ Ten artykuł zawiera szczegółowe informacje dotyczące każdego z widoków two
 - opisy kolumn danych; lub
 - dostępne ustawienia wstępne dla każdego widoku, w tym ich zamierzone użycie i preferowany tryb wyświetlania.
 
-Jeśli dopiero zaczynasz korzystanie z protokołu WPA, zalecamy zapoznanie się z [podstawowymi informacjami na temat usługi WPA for C++ build Insights](/cpp/build-insights/tutorials/wpa-basics).
+Jeśli dopiero zaczynasz korzystanie z protokołu WPA, zalecamy zapoznanie się z [podstawowymi informacjami na temat usługi WPA for C++ build Insights](../tutorials/wpa-basics.md).
 
 ## <a name="build-explorer"></a>Eksplorator kompilacji
 
@@ -53,7 +53,7 @@ Widok Eksplorator kompilacji służy do:
 | InvocationDescription    | Tekstowy opis wywołania, w którym wystąpiło to zdarzenie. Opis zawiera wartość *cl.exe* lub *link.exe*i unikatowy identyfikator wywołania numerycznego. Jeśli ma to zastosowanie, obejmuje pełną ścieżkę do składnika skompilowanego lub połączonego podczas wywołania. W przypadku wywołań, które nie kompilują żadnego składnika lub dla tych, które kompilują wiele składników, ścieżka jest pusta. Identyfikator wywołania jest taki sam jak w kolumnie InvocationId. |
 | InvocationId             | Unikatowy identyfikator liczbowy wywołania, w którym wystąpiło zdarzenie. |
 | Nazwa                     | Nazwa działania lub Właściwości reprezentowanej przez to zdarzenie. |
-| Czas                     | Sygnatura czasowa identyfikująca czas wystąpienia zdarzenia. |
+| Godzina                     | Sygnatura czasowa identyfikująca czas wystąpienia zdarzenia. |
 | Narzędzie                     | Narzędzie wykonywane po wystąpieniu tego zdarzenia. Wartość tej kolumny jest równa CL lub link. |
 | Typ                     | Typ bieżącego zdarzenia. Ta wartość to działanie lub właściwość. |
 | Wartość                    | Jeśli bieżące zdarzenie jest właściwością, ta kolumna zawiera jej wartość. Ta kolumna jest pusta, gdy bieżące zdarzenie jest działaniem. |
@@ -64,10 +64,10 @@ Widok Eksplorator kompilacji służy do:
 |-----------------------|---------------------|------------|
 | Statystyka działań   | Wykres/tabela       | To ustawienie wstępne służy do wyświetlania zagregowanych danych statystycznych dla wszystkich działań w programie Build Explorer. W trybie tabeli poinformuj o tym natychmiast, jeśli kompilacja jest zdominowana przez analizowanie, generowanie kodu lub konsolidator. Zagregowane czasy trwania dla każdego działania są sortowane w kolejności malejącej. Przechodzenie do szczegółów przez rozwijanie górnego węzła w celu łatwego znajdowania, które wywołania pobierają najwięcej czasu dla tych najważniejszych działań. Jeśli chcesz, możesz dostosować ustawienia protokołu WPA, aby pokazać średnie lub inne typy agregacji. W trybie grafu, zobacz, kiedy każde działanie jest aktywne podczas kompilacji. |
 | Wywołań           | Graph               | Przewiń w dół listę wywołań w widoku wykresu posortowanych według czasu rozpoczęcia. Można jej użyć razem z widokiem procesora CPU (próbkowanym) w celu znalezienia wywołań, które są wyrównane do małych stref użycia procesora CPU. Wykrywaj równoległe problemy. |
-| Właściwości wywołania | Tabela               | Szybkie znajdowanie najważniejszych informacji o danym kompilatorze lub wywołaniu konsolidatora. Określ wersję, katalog roboczy lub pełny wiersz polecenia, który zostanie użyty do jego wywołania. |
+| Właściwości wywołania | tabela               | Szybkie znajdowanie najważniejszych informacji o danym kompilatorze lub wywołaniu konsolidatora. Określ wersję, katalog roboczy lub pełny wiersz polecenia, który zostanie użyty do jego wywołania. |
 | Osie czasu             | Graph               | Zobacz wykres słupkowy sposobu, w jaki Twoja kompilacja została równoległa. Szybko Identyfikuj problemy równoległe i wąskie gardła. Skonfiguruj protokół WPA, aby przypisać różne średnie do pasków zgodnie z potrzebami. Wybierz pozycję opisy wywołań jako ostatnią zgrupowaną kolumnę, aby wyświetlić wykres słupkowy kodowany kolorem wszystkich wywołań. Ułatwia ona szybkie identyfikowanie czasochłonnych culprits. Następnie Powiększ i wybierz nazwę działania jako ostatnią zgrupowaną kolumnę, aby zobaczyć najdłuższe części. |
 
-## <a name="files"></a>Pliki
+## <a name="files"></a>Files
 
 Widok plików służy do:
 
@@ -92,13 +92,13 @@ Widok plików służy do:
 | StartTime                | Sygnatura czasowa, która reprezentuje czas, w którym bieżące zdarzenie pliku zostało wyemitowane. |
 | Narzędzie                     | * |
 
-\*Wartość tej kolumny jest taka sama jak w widoku programu [Build Explorer](#build-explorer-view-data-columns) .
+\* Wartość tej kolumny jest taka sama jak w widoku programu [Build Explorer](#build-explorer-view-data-columns) .
 
 ### <a name="files-view-presets"></a>Ustawienia wyświetlania plików
 
 | Nazwa ustawienia wstępnego | Preferowany tryb widoku | Jak używać |
 |-------------|---------------------|------------|
-| Statystyki  | Tabela               | Zobacz, które pliki mają największy zagregowany czas analizowania, przeglądając listę w kolejności malejącej. Te informacje ułatwiają restrukturyzację nagłówków lub decydowanie o tym, co należy uwzględnić w Twoim PCH. |
+| Statystyki  | tabela               | Zobacz, które pliki mają największy zagregowany czas analizowania, przeglądając listę w kolejności malejącej. Te informacje ułatwiają restrukturyzację nagłówków lub decydowanie o tym, co należy uwzględnić w Twoim PCH. |
 
 ## <a name="functions"></a>Funkcje
 
@@ -119,20 +119,20 @@ Widok funkcji służy do identyfikowania funkcji z nadmiernie długim czasem gen
 | StartTime                | Sygnatura czasowa, która reprezentuje, kiedy bieżące zdarzenie funkcji zostało emitowane. |
 | Narzędzie                     | * |
 
-\*Wartość tej kolumny jest taka sama jak w widoku programu [Build Explorer](#build-explorer-view-data-columns) .
+\* Wartość tej kolumny jest taka sama jak w widoku programu [Build Explorer](#build-explorer-view-data-columns) .
 
 ### <a name="functions-view-presets"></a>Ustawienia wstępne widoku funkcji
 
 | Nazwa ustawienia wstępnego | Preferowany tryb widoku | Jak używać |
 |-------------|---------------------|------------|
-| Statystyki  | Tabela               | Zobacz, które funkcje mają największy zagregowany czas generowania kodu, przeglądając listę w kolejności malejącej. Mogą one mieć wskazówkę, gdzie kod używa **`__forceinline`** słowa kluczowego, lub że niektóre funkcje mogą być zbyt duże. |
+| Statystyki  | tabela               | Zobacz, które funkcje mają największy zagregowany czas generowania kodu, przeglądając listę w kolejności malejącej. Mogą one mieć wskazówkę, gdzie kod używa **`__forceinline`** słowa kluczowego, lub że niektóre funkcje mogą być zbyt duże. |
 | Osie czasu   | Graph               | Spójrz na ten wykres słupkowy, aby poznać lokalizację i czas trwania funkcji, które pobierają najwięcej czasu. Sprawdź, czy w widoku Eksploratora kompilacji są wyrównane z wąskimi gardłami. Jeśli tak, podejmij odpowiednie działania, aby zmniejszyć czas generowania kodu i korzystać z czasów kompilacji. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wprowadzenie do usługi C++ build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Wprowadzenie do usługi C++ build Insights](../get-started-with-cpp-build-insights.md)\
 [Reference: polecenia vcperf](vcperf-commands.md)\
-[Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows](/cpp/build-insights/tutorials/wpa-basics)\
+[Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows](../tutorials/wpa-basics.md)\
 [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

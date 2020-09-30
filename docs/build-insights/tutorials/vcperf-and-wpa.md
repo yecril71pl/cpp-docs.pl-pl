@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833403"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507771"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Samouczek: vcperf i Analizator wydajności systemu Windows
 
@@ -123,10 +123,10 @@ Inne widoki są dostępne w panelu Eksplorator programu Graph. Przeciągnij je d
 [Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows](wpa-basics.md)\
 Zapoznaj się z typowymi operacjami WPA, które mogą ułatwić analizowanie śladów kompilacji.
 
-[Reference: polecenia vcperf](/cpp/build-insights/reference/vcperf-commands)\
+[Reference: polecenia vcperf](../reference/vcperf-commands.md)\
 Informacje dotyczące poleceń *vcperf.exe* są wyświetlane we wszystkich dostępnych opcjach poleceń.
 
-[Odwołanie: widoki Analizatora wydajności systemu Windows](/cpp/build-insights/reference/wpa-views)\
+[Odwołanie: widoki Analizatora wydajności systemu Windows](../reference/wpa-views.md)\
 Zapoznaj się z tym artykułem, aby uzyskać szczegółowe informacje o widokach kompilacji w języku C++ w protokole WPA.
 
 [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer)\

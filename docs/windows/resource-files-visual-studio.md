@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167878"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507022"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -46,15 +46,15 @@ Termin *plik zasobów* może odwoływać się do wielu typów plików, takich ja
 
 - Pojedynczy zasób istniejący jako plik autonomiczny. Ten typ zawiera mapę bitową, ikonę lub plik kursora, do którego odwołuje się plik. rc.
 
-- Plik nagłówka generowany przez środowisko deweloperskie. Ten typ zawiera `Resource.h`, do którego odwołuje się plik. rc.
+- Plik nagłówka generowany przez środowisko deweloperskie. Ten typ obejmuje `Resource.h` , który jest określany na podstawie pliku. rc.
 
 Zasoby znajdujące się w innych typach plików, takich jak pliki exe, DLL i. res, są określane jako *zasoby*.
 
-Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można również korzystać z tych, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem programistycznym programu Visual Studio. Można na przykład:
+Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można również korzystać z tych, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem programistycznym programu Visual Studio. Możesz na przykład:
 
 - Pracuj z zagnieżdżonymi i warunkowo plikami zasobów.
 
-- Zaktualizuj istniejące zasoby lub Przekonwertuj je na C++wizualizację.
+- Zaktualizuj istniejące zasoby lub Przekonwertuj je na Visual C++.
 
 - Importuj lub Eksportuj zasoby graficzne do lub z bieżącego pliku zasobów.
 
@@ -76,7 +76,7 @@ Aby edytować zawarte w nich zasoby, można otworzyć następujące typy plików
 | . RCT | Pliki szablonów zasobów |
 | . res | Pliki zasobów |
 | .resx | Zarządzane pliki zasobów |
-| . exe | Pliki wykonywalne |
+| .exe | Pliki wykonywalne |
 | .dll | Pliki bibliotek dołączanych dynamicznie |
 | . bmp,. ico,. DIB,. CUR | Pliki map bitowych, ikon, pasków narzędzi i kursorów |
 
@@ -90,7 +90,7 @@ Podczas edytowania zasobów środowisko programu Visual Studio współpracuje z 
 
 ## <a name="manifest-resources"></a>Zasoby manifestu
 
-W C++ projektach klasycznych zasoby manifestu są plikami XML, które opisują zależności używane przez aplikację. Na przykład w programie Visual Studio ten plik manifestu generowany przez kreatora MFC definiuje, która wersja bibliotek DLL wspólnych systemu Windows ma być używana przez aplikację:
+W projektach klasycznych w języku C++ zasoby manifestu są plikami XML, które opisują zależności używane przez aplikację. Na przykład w programie Visual Studio ten plik manifestu generowany przez kreatora MFC definiuje, która wersja bibliotek DLL wspólnych systemu Windows ma być używana przez aplikację:
 
 ```xml
 <description>Your app description here</description>
@@ -108,12 +108,12 @@ W C++ projektach klasycznych zasoby manifestu są plikami XML, które opisują z
 </dependency>
 ```
 
-W przypadku aplikacji systemu Windows XP lub Windows Vista zasób manifestu powinien określać najbardziej aktualną wersję formantów wspólnych systemu Windows, które mają być używane przez aplikację. Powyższy przykład używa wersji `6.0.0.0`, która obsługuje [formant Syslink](/windows/win32/Controls/syslink-overview).
+W przypadku aplikacji systemu Windows XP lub Windows Vista zasób manifestu powinien określać najbardziej aktualną wersję formantów wspólnych systemu Windows, które mają być używane przez aplikację. W powyższym przykładzie używa się wersji `6.0.0.0` , która obsługuje [formant Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Dla każdego modułu można mieć tylko jeden zasób manifestu.
 
-Aby wyświetlić informacje o wersji i typie zawarte w zasobie manifestu, Otwórz plik w przeglądarce XML lub edytorze tekstu programu Visual Studio. Jeśli otworzysz zasób manifestu z [Widok zasobów](../windows/resource-view-window.md), zasób zostanie otwarty w formacie binarnym.
+Aby wyświetlić informacje o wersji i typie zawarte w zasobie manifestu, Otwórz plik w przeglądarce XML lub edytorze tekstu programu Visual Studio. Jeśli otworzysz zasób manifestu z [Widok zasobów](./how-to-create-a-resource-script-file.md), zasób zostanie otwarty w formacie binarnym.
 
 ### <a name="to-open-a-manifest-resource"></a>Aby otworzyć zasób manifestu
 

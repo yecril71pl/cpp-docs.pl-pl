@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 052da13619fae5004ee573bd4957266a545d8335
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617358"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507910"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery formantów ActiveX: wyświetlanie i modyfikowanie właściwości formantu
 
@@ -31,7 +31,7 @@ Pierwszym krokiem wyświetlania właściwości kontrolki jest dodanie wystąpien
 
 1. Otwórz główny szablon okna dialogowego.
 
-1. Wstaw kontrolkę ActiveX przy użyciu okna dialogowego **Wstawianie kontrolki ActiveX** . Aby uzyskać więcej informacji, zobacz [Wyświetlanie i Dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+1. Wstaw kontrolkę ActiveX przy użyciu okna dialogowego **Wstawianie kontrolki ActiveX** . Aby uzyskać więcej informacji, zobacz [Wyświetlanie i Dodawanie kontrolek ActiveX do okna dialogowego](../windows/adding-editing-or-deleting-controls.md).
 
 1. W oknie dialogowym Wybierz kontrolkę ActiveX.
 

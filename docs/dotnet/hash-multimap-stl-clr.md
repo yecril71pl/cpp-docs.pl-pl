@@ -98,12 +98,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: 7faba79dfcd585e9f397c6ecd0bf594a5fb6c501
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4fa42b53f496f1689523d8881c6f0411e6072aa
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221409"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507183"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -115,9 +115,9 @@ W poniższym opisie `GValue` jest taka sama jak:
 
 gdzie:
 
-`GKey`jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest`Key^`
+`GKey` jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest `Key^`
 
-`GMapped`jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w tym przypadku jest to`Mapped^`
+`GMapped` jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w tym przypadku jest to `Mapped^`
 
 ## <a name="syntax"></a>Składnia
 
@@ -220,11 +220,11 @@ Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły na liście połączonej dwukierunkowo. Aby przyspieszyć dostęp, obiekt przechowuje również tablicę o różnej długości wskaźników do listy (tabela skrótów), efektywnie zarządzając całą listą jako sekwencję podlistów lub zasobników. Wstawia elementy do zasobnika, który ma być uporządkowany przez zmianę linków między węzłami, bez kopiowania zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów.
 
-Obiekt porządkuje każdy przedział IT, wywołując zapisany obiekt delegata typu [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<=(key_type, key_type)` .
+Obiekt porządkuje każdy przedział IT, wywołując zapisany obiekt delegata typu [hash_set:: key_compare (STL/CLR)](./hash-set-stl-clr.md#key_compare). Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<=(key_type, key_type)` .
 
-Dostęp do przechowywanego obiektu delegata można uzyskać, wywołując funkcję członkowską [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Taki obiekt delegata musi definiować równoważne porządkowanie między kluczami typu [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
+Dostęp do przechowywanego obiektu delegata można uzyskać, wywołując funkcję członkowską [hash_set:: key_comp (STL/CLR)](./hash-set-stl-clr.md#key_comp) `()` . Taki obiekt delegata musi definiować równoważne porządkowanie między kluczami typu [hash_set:: key_type (STL/CLR)](./hash-set-stl-clr.md#key_type). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
 
-`key_comp()(X, Y)`zwraca ten sam wynik Boolean dla każdego wywołania.
+`key_comp()(X, Y)` zwraca ten sam wynik Boolean dla każdego wywołania.
 
 Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne porządkowanie.
 
@@ -232,17 +232,17 @@ Dowolna reguła porządkowania, która zachowuje się jak `operator<=(key_type, 
 
 Należy zauważyć, że kontener gwarantuje tylko te elementy, których klucze mają równoważne porządkowanie (i które mieszanie z tą samą wartością całkowitą) jest przyległy w obrębie przedziału. W przeciwieństwie do klas szablonu [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)obiekt klasy szablonu nie `hash_multimap` wymaga, aby klucze dla wszystkich elementów były unikatowe. (Co najmniej dwa klucze mogą mieć równoważne porządkowanie).
 
-Obiekt określa, który zasobnik powinien zawierać dany klucz porządkowania, wywołując zapisany obiekt delegata typu [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` w celu uzyskania wartości całkowitej, która zależy od wartości klucza. Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest funkcja `System::Object::hash_value(key_type)` . Oznacza to, że dla wszystkich kluczy `X` i `Y` :
+Obiekt określa, który zasobnik powinien zawierać dany klucz porządkowania, wywołując zapisany obiekt delegata typu [hash_set:: Hasher (STL/CLR)](./hash-set-stl-clr.md#hasher). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [hash_set:: hash_delegate (STL/CLR)](./hash-set-stl-clr.md#hash_delegate) `()` w celu uzyskania wartości całkowitej, która zależy od wartości klucza. Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest funkcja `System::Object::hash_value(key_type)` . Oznacza to, że dla wszystkich kluczy `X` i `Y` :
 
-`hash_delegate()(X)`zwraca ten sam wynik całkowity dla każdego wywołania.
+`hash_delegate()(X)` zwraca ten sam wynik całkowity dla każdego wywołania.
 
 Jeśli `X` i `Y` mają równoważne porządkowanie, wówczas `hash_delegate()(X)` powinna zwracać wynik tego samego typu Integer co `hash_delegate()(Y)` .
 
 Każdy element zawiera oddzielny klucz i zamapowane wartości. Sekwencja jest reprezentowana w sposób umożliwiający wyszukiwanie, wstawianie i usuwanie dowolnego elementu z liczbą operacji, która jest niezależna od liczby elementów w sekwencji (stały czas) — co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
-Jeśli wartości skrótów nie są dystrybuowane równomiernie, może to spowodować wygenerowanie tabeli skrótów. W skrajnym — dla funkcji skrótu, która zawsze zwraca tę samą wartość — wyszukiwanie, wstawianie i usuwanie jest proporcjonalna do liczby elementów w sekwencji (czas liniowy). Kontener przedsięwzięciach, aby wybrać rozsądną funkcję mieszania, średni rozmiar przedziału i rozmiar tabeli skrótów (łączna liczba przedziałów), ale można przesłonić dowolne lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Jeśli wartości skrótów nie są dystrybuowane równomiernie, może to spowodować wygenerowanie tabeli skrótów. W skrajnym — dla funkcji skrótu, która zawsze zwraca tę samą wartość — wyszukiwanie, wstawianie i usuwanie jest proporcjonalna do liczby elementów w sekwencji (czas liniowy). Kontener przedsięwzięciach, aby wybrać rozsądną funkcję mieszania, średni rozmiar przedziału i rozmiar tabeli skrótów (łączna liczba przedziałów), ale można przesłonić dowolne lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set:: max_load_factor (STL/CLR)](./hash-set-stl-clr.md#max_load_factor) i [hash_set:: rehash (STL/CLR)](./hash-set-stl-clr.md#rehash).
 
-Hash_multimap obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator hash_multimap, aby dotrzeć do węzła głównego. następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
+Hash_multimap obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [hash_multimap:: end (STL/CLR)](#end) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator hash_multimap, aby dotrzeć do węzła głównego. następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
 
 Należy zauważyć, że nie można odwołać się do hash_multimap elementu bezpośrednio przy użyciu pozycji liczbowej — która wymaga iteratora dostępu swobodnego.
 
@@ -252,7 +252,7 @@ Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej w
 
 ## <a name="members"></a>Elementy członkowskie
 
-## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a>hash_multimap:: begin (STL/CLR)
+## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a> hash_multimap:: begin (STL/CLR)
 
 Określa początek kontrolowanej sekwencji.
 
@@ -303,7 +303,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multimap:: bucket_count (STL/CLR)
+## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a> hash_multimap:: bucket_count (STL/CLR)
 
 Zlicza liczbę przedziałów.
 
@@ -377,7 +377,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a>hash_multimap:: Clear (STL/CLR)
+## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a> hash_multimap:: Clear (STL/CLR)
 
 Usuwa wszystkie elementy.
 
@@ -389,7 +389,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje [hash_multimap:: Erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
+Funkcja członkowska skutecznie wywołuje [hash_multimap:: Erase (STL/CLR)](#erase) `(` [hash_multimap:: begin (STL/CLR)](#begin) `(),` [hash_multimap:: end (STL/CLR)](#end) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -435,7 +435,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multimap:: const_iterator (STL/CLR)
+## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_multimap:: const_iterator (STL/CLR)
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -477,7 +477,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a>hash_multimap:: const_reference (STL/CLR)
+## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a> hash_multimap:: const_reference (STL/CLR)
 
 Typ stałego odwołania do elementu.
 
@@ -522,7 +522,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multimap:: const_reverse_iterator (STL/CLR)
+## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_multimap:: const_reverse_iterator (STL/CLR)
 
 Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
 
@@ -564,7 +564,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapcount-stlclr"></a><a name="count"></a>hash_multimap:: Count (STL/CLR)
+## <a name="hash_multimapcount-stlclr"></a><a name="count"></a> hash_multimap:: Count (STL/CLR)
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -617,7 +617,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a>hash_multimap::d ifference_type (STL/CLR)
+## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a> hash_multimap::d ifference_type (STL/CLR)
 
 Typy podpisanej odległości między dwoma elementami.
 
@@ -672,7 +672,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a>hash_multimap:: empty (STL/CLR)
+## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a> hash_multimap:: empty (STL/CLR)
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -684,7 +684,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne [hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy hash_multimap jest puste.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne [hash_multimap:: size (STL/CLR)](#size) `() == 0` . Służy do sprawdzania, czy hash_multimap jest puste.
 
 ### <a name="example"></a>Przykład
 
@@ -724,7 +724,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_multimapend-stlclr"></a><a name="end"></a>hash_multimap:: end (STL/CLR)
+## <a name="hash_multimapend-stlclr"></a><a name="end"></a> hash_multimap:: end (STL/CLR)
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -777,7 +777,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a>hash_multimap:: equal_range (STL/CLR)
+## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a> hash_multimap:: equal_range (STL/CLR)
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -794,7 +794,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap:: upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md) `(key))` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](#lower_bound) `(key),` [hash_multimap:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -838,7 +838,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a>hash_multimap:: Erase (STL/CLR)
+## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a> hash_multimap:: Erase (STL/CLR)
 
 Usuwa elementy z określonych pozycji.
 
@@ -861,12 +861,12 @@ Wartość klucza do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*miejscu*<br/>
+*gdzie*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [hash_multimap:: end (STL/CLR)](#end) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
 
 Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
@@ -931,7 +931,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="hash_multimapfind-stlclr"></a><a name="find"></a>hash_multimap:: Find (STL/CLR)
+## <a name="hash_multimapfind-stlclr"></a><a name="find"></a> hash_multimap:: Find (STL/CLR)
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -948,7 +948,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
+Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [hash_multimap:: end (STL/CLR)](#end) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
 
 ### <a name="example"></a>Przykład
 
@@ -990,7 +990,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multimap:: generic_container (STL/CLR)
+## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a> hash_multimap:: generic_container (STL/CLR)
 
 Typ interfejsu generycznego dla kontenera.
 
@@ -1054,7 +1054,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multimap:: generic_iterator (STL/CLR)
+## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_multimap:: generic_iterator (STL/CLR)
 
 Typ iteratora do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1111,7 +1111,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multimap:: generic_reverse_iterator (STL/CLR)
+## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_multimap:: generic_reverse_iterator (STL/CLR)
 
 Typ iteratora odwrotnego do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1167,7 +1167,7 @@ int main()
 [c 3]
 ```
 
-## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multimap:: generic_value (STL/CLR)
+## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a> hash_multimap:: generic_value (STL/CLR)
 
 Typ elementu do użycia z interfejsem ogólnym dla kontenera.
 
@@ -1221,7 +1221,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multimap:: hash_delegate (STL/CLR)
+## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_multimap:: hash_delegate (STL/CLR)
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1259,7 +1259,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a>hash_multimap:: hash_multimap (STL/CLR)
+## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a> hash_multimap:: hash_multimap (STL/CLR)
 
 Konstruuje obiekt kontenera.
 
@@ -1502,7 +1502,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a>hash_multimap:: Hasher (STL/CLR)
+## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a> hash_multimap:: Hasher (STL/CLR)
 
 Delegat skrótu dla klucza.
 
@@ -1541,7 +1541,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a>hash_multimap:: Insert (STL/CLR)
+## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a> hash_multimap:: Insert (STL/CLR)
 
 Dodaje elementy.
 
@@ -1569,7 +1569,7 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość klucza do wstawienia.
 
-*miejscu*<br/>
+*gdzie*<br/>
 Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 ### <a name="remarks"></a>Uwagi
@@ -1659,7 +1659,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a>hash_multimap:: iterator (STL/CLR)
+## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a> hash_multimap:: iterator (STL/CLR)
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -1701,7 +1701,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a>hash_multimap:: key_comp (STL/CLR)
+## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a> hash_multimap:: key_comp (STL/CLR)
 
 Kopiuje delegata porządkowania dla dwóch kluczy.
 
@@ -1760,7 +1760,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a>hash_multimap:: key_compare (STL/CLR)
+## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a> hash_multimap:: key_compare (STL/CLR)
 
 Delegat porządkowania dla dwóch kluczy.
 
@@ -1820,7 +1820,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a>hash_multimap:: key_type (STL/CLR)
+## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a> hash_multimap:: key_type (STL/CLR)
 
 Typ klucza sortowania.
 
@@ -1865,7 +1865,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a>hash_multimap:: load_factor (STL/CLR)
+## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a> hash_multimap:: load_factor (STL/CLR)
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1877,7 +1877,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `(float)` [hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap:: bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md) `()` . Służy do określania średniego rozmiaru przedziału.
+Funkcja członkowska zwraca `(float)` [hash_multimap:: size (STL/CLR)](#size) `() /` [hash_multimap:: bucket_count (STL/CLR)](#bucket_count) `()` . Służy do określania średniego rozmiaru przedziału.
 
 ### <a name="example"></a>Przykład
 
@@ -1939,7 +1939,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a>hash_multimap:: lower_bound (STL/CLR)
+## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a> hash_multimap:: lower_bound (STL/CLR)
 
 Znajduje początek zakresu, który odpowiada określonemu kluczowi.
 
@@ -1956,7 +1956,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [hash_multimap:: end (STL/CLR)](#end) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1998,7 +1998,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a>hash_multimap:: make_value (STL/CLR)
+## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a> hash_multimap:: make_value (STL/CLR)
 
 Konstruuje obiekt wartości.
 
@@ -2047,7 +2047,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a>hash_multimap:: mapped_type (STL/CLR)
+## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a> hash_multimap:: mapped_type (STL/CLR)
 
 Typ mapowanej wartości skojarzonej z poszczególnymi kluczami.
 
@@ -2092,7 +2092,7 @@ int main()
 1 2 3
 ```
 
-## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multimap:: max_load_factor (STL/CLR)
+## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_multimap:: max_load_factor (STL/CLR)
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a>hash_multimap:: operator = (STL/CLR)
+## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a> hash_multimap:: operator = (STL/CLR)
 
 Zastępuje kontrolowaną sekwencję.
 
@@ -2229,7 +2229,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a>hash_multimap:: rbegin (STL/CLR)
+## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a> hash_multimap:: rbegin (STL/CLR)
 
 Określa początek odwróconej sekwencji kontrolowanej.
 
@@ -2280,7 +2280,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a>hash_multimap:: Reference (STL/CLR)
+## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a> hash_multimap:: Reference (STL/CLR)
 
 Typ odwołania do elementu.
 
@@ -2325,7 +2325,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a>hash_multimap:: rehash (STL/CLR)
+## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a> hash_multimap:: rehash (STL/CLR)
 
 Przebudowuje tabelę mieszania.
 
@@ -2337,7 +2337,7 @@ void rehash();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska ponownie kompiluje tablicę skrótów, upewniając się, że [hash_multimap:: load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap:: max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). W przeciwnym razie tabela skrótów zwiększa rozmiar tylko w razie konieczności po wstawieniu. (Rozmiar nigdy nie zmniejsza się automatycznie). Służy do dostosowywania rozmiaru tabeli skrótów.
+Funkcja członkowska ponownie kompiluje tablicę skrótów, upewniając się, że [hash_multimap:: load_factor (STL/CLR)](#load_factor) `() <=` [hash_multimap:: max_load_factor (STL/CLR)](#max_load_factor). W przeciwnym razie tabela skrótów zwiększa rozmiar tylko w razie konieczności po wstawieniu. (Rozmiar nigdy nie zmniejsza się automatycznie). Służy do dostosowywania rozmiaru tabeli skrótów.
 
 ### <a name="example"></a>Przykład
 
@@ -2399,7 +2399,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a>hash_multimap:: rend (STL/CLR)
+## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a> hash_multimap:: rend (STL/CLR)
 
 Określa koniec odwróconej kontrolowanej sekwencji.
 
@@ -2452,7 +2452,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multimap:: reverse_iterator (STL/CLR)
+## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_multimap:: reverse_iterator (STL/CLR)
 
 Typ iteratora odwrotnego dla kontrolowanej sekwencji.
 
@@ -2494,7 +2494,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapsize-stlclr"></a><a name="size"></a>hash_multimap:: size (STL/CLR)
+## <a name="hash_multimapsize-stlclr"></a><a name="size"></a> hash_multimap:: size (STL/CLR)
 
 Liczy liczbę elementów.
 
@@ -2506,7 +2506,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [hash_multimap:: empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md) `()` .
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [hash_multimap:: empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -2546,7 +2546,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a>hash_multimap:: size_type (STL/CLR)
+## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a> hash_multimap:: size_type (STL/CLR)
 
 Typ podpisanej odległości między dwoma elementami.
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a>hash_multimap:: swap (STL/CLR)
+## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a> hash_multimap:: swap (STL/CLR)
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2662,7 +2662,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a>hash_multimap:: to_array (STL/CLR)
+## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a> hash_multimap:: to_array (STL/CLR)
 
 Kopiuje przekontrolowaną sekwencję do nowej tablicy.
 
@@ -2712,7 +2712,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multimap:: upper_bound (STL/CLR)
+## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a> hash_multimap:: upper_bound (STL/CLR)
 
 Znajduje koniec zakresu, który odpowiada określonemu kluczowi.
 
@@ -2729,7 +2729,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [hash_multimap:: end (STL/CLR)](#end) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2771,7 +2771,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multimap:: value_comp (STL/CLR)
+## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a> hash_multimap:: value_comp (STL/CLR)
 
 Kopiuje delegata porządkowania dla dwóch wartości elementów.
 
@@ -2818,7 +2818,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multimap:: value_compare (STL/CLR)
+## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a> hash_multimap:: value_compare (STL/CLR)
 
 Delegat porządkowania dla dwóch wartości elementów.
 
@@ -2866,7 +2866,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a>hash_multimap:: value_type (STL/CLR)
+## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a> hash_multimap:: value_type (STL/CLR)
 
 Typ elementu.
 

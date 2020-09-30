@@ -7,19 +7,20 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075753"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506883"
 ---
 # <a name="compatibility"></a>Zgodność
 
 Biblioteka uniwersalnego środowiska uruchomieniowego języka C (UCRT) obsługuje większość standardowej biblioteki C wymaganej do zgodności z językiem C++. Implementuje bibliotekę C99 (ISO/IEC 9899:1999) z pewnymi wyjątkami:
-- zgodność typu ścisłego w programie \<complex.h> . 
+
+- zgodność typu ścisłego w programie \<complex.h> .
 - `aligned_alloc`, która prawdopodobnie nie zostanie zaimplementowana, ponieważ system operacyjny Windows nie obsługuje wyrównanych przydziałów. `_aligned_malloc`Zamiast tego Użyj niestandardowej.
--  `strerrorlen_s`
+- `strerrorlen_s`
 - Obsługa niepodzielna w \<stdatomic.h>
 - Obsługa wątkowości w programie \<threads.h>
 
@@ -39,7 +40,7 @@ Z wyjątkiem sytuacji, w której zaznaczono w dokumentacji dotyczącej określon
 |-----------|-----------------|
 |[Aplikacje platformy UWP, środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Opisuje, kiedy procedury UCRT są niezgodne z aplikacjami uniwersalnymi systemu Windows lub aplikacjami Microsoft Store.|
 |[Zgodność ze standardem ANSI C](../c-runtime-library/ansi-c-compliance.md)|Opisuje zgodne ze standardami nazewnictwo w UCRT.|
-|[UNIX](../c-runtime-library/unix.md)|Zawiera wytyczne dotyczące przenoszenia programów do systemu UNIX.|
+|[SYSTEMÓW](../c-runtime-library/unix.md)|Zawiera wytyczne dotyczące przenoszenia programów do systemu UNIX.|
 |[Platformy systemu Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Zawiera listę systemów operacyjnych obsługiwanych przez technologię CRT.|
 |[Zgodność z poprzednimi wersjami](../c-runtime-library/backward-compatibility.md)|Opisuje sposób mapowania starych nazw CRT na nowe.|
 |[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)|Zawiera omówienie plików biblioteki CRT (. lib) i skojarzonych z nimi opcji kompilatora.|

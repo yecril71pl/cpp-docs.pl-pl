@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841106"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507237"
 ---
 # <a name="csession-class"></a>Klasa CSession
 
@@ -69,14 +69,14 @@ class CSession
 |-|-|
 |[Anuluj](#abort)|Anuluje (kończy) transakcję.|
 |[Zamknij](#close)|Zamyka sesję.|
-|[Zleca](#commit)|Zatwierdza transakcję.|
+|[Zatwierdzenie](#commit)|Zatwierdza transakcję.|
 |[GetTransactionInfo](#gettransactioninfo)|Zwraca informacje dotyczące transakcji.|
 |[Otwórz](#open)|Otwiera nową sesję dla obiektu źródła danych.|
 |[StartTransaction](#starttransaction)|Rozpoczyna nową transakcję dla tej sesji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Co najmniej jedna sesja może być skojarzona z każdym połączeniem dostawcy (źródłem danych), które jest reprezentowane przez obiekt [CDataSource](../../data/oledb/cdatasource-class.md) . Aby utworzyć nowy `CSession` dla elementu `CDataSource` , wywołaj [CSession:: Open](../../data/oledb/csession-open.md). Aby rozpocząć transakcję bazy danych, program `CSession` udostępnia `StartTransaction` metodę. Po rozpoczęciu transakcji możesz zatwierdzić ją przy użyciu `Commit` metody lub anulować przy użyciu `Abort` metody.
+Co najmniej jedna sesja może być skojarzona z każdym połączeniem dostawcy (źródłem danych), które jest reprezentowane przez obiekt [CDataSource](../../data/oledb/cdatasource-class.md) . Aby utworzyć nowy `CSession` dla elementu `CDataSource` , wywołaj [CSession:: Open](#open). Aby rozpocząć transakcję bazy danych, program `CSession` udostępnia `StartTransaction` metodę. Po rozpoczęciu transakcji możesz zatwierdzić ją przy użyciu `Commit` metody lub anulować przy użyciu `Abort` metody.
 
 ## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
@@ -100,7 +100,7 @@ Standardowa wartość HRESULT.
 
 ## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
-Zamyka sesję otwartą przez [CSession:: Open](../../data/oledb/csession-open.md).
+Zamyka sesję otwartą przez [CSession:: Open](#open).
 
 ### <a name="syntax"></a>Składnia
 
@@ -187,7 +187,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy otworzyć obiekt źródła danych przy użyciu [CDataSource:: Open](../../data/oledb/cdatasource-open.md) przed przekazaniem go do `CSession::Open` .
+Należy otworzyć obiekt źródła danych przy użyciu [CDataSource:: Open](./cdatasource-class.md#open) przed przekazaniem go do `CSession::Open` .
 
 ## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 

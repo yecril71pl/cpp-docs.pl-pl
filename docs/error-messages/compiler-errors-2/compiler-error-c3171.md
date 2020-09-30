@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-ms.openlocfilehash: a3af19fa6b4f4def9bb42325f648109cfafcdaef
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 14f0cedc5448005a29d74f05ae3e68e74eb5cf1c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761754"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508300"
 ---
 # <a name="compiler-error-c3171"></a>Błąd kompilatora C3171
 
 "module": nie można określić innych atrybutów modułu w projekcie
 
-atrybuty [modułu](../../windows/module-cpp.md) o różnych listach parametrów znaleziono w dwóch plikach w kompilacji. Dla kompilacji można określić tylko jeden unikatowy atrybut `module`.
+atrybuty [modułu](../../windows/attributes/module-cpp.md) o różnych listach parametrów znaleziono w dwóch plikach w kompilacji. `module`Dla kompilacji można określić tylko jeden unikatowy atrybut.
 
-Identyczne atrybuty `module` można określić w więcej niż jednym pliku kodu źródłowego.
+Identyczne `module` atrybuty można określić w więcej niż jednym pliku kodu źródłowego.
 
-Na przykład jeśli znaleziono następujące atrybuty `module`:
+Na przykład jeśli `module` znaleziono następujące atrybuty:
 
 ```cpp
 // C3171.cpp

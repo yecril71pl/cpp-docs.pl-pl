@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2380a9d42525cfb662fa014b89751d6dc8b9f192
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761572"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508254"
 ---
 # <a name="compiler-error-c3536"></a>Błąd kompilatora C3536
 
@@ -41,6 +41,6 @@ int main()
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-cpp.md)

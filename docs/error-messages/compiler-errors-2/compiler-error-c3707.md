@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a09bf080c72e154a37cec5cdb75e714c12dd7150
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757959"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507981"
 ---
 # <a name="compiler-error-c3707"></a>Błąd kompilatora C3707
 
 "Function": Metoda dispinterface musi mieć identyfikator DISPID
 
-Jeśli używasz metody `dispinterface`, musisz ją przypisać do `dispid`. Aby naprawić ten błąd, przypisz `dispid` do metody `dispinterface`, na przykład przez usunięcie komentarza do atrybutu `id` w metodzie w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz atrybuty [dispinterface](../../windows/dispinterface.md) i [ID](../../windows/id.md).
+Jeśli używasz `dispinterface` metody, musisz ją przypisać `dispid` . Aby naprawić ten błąd, należy przypisać `dispid` do `dispinterface` metody, na przykład przez usunięcie komentarza `id` atrybutu metody w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz atrybuty [dispinterface](../../windows/attributes/dispinterface.md) i [ID](../../windows/attributes/id.md).
 
 Poniższy przykład generuje C3707:
 

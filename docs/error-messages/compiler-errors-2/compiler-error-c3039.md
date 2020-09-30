@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3039
 ms.assetid: 02776f16-f57a-4ffd-b7f7-9c696b633e08
-ms.openlocfilehash: 344fd32e66881c2529ddb1f9185c25752f0a736c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea6efbfa95992b04ade5496e8c7253ee87319a93
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754982"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508369"
 ---
 # <a name="compiler-error-c3039"></a>Błąd kompilatora C3039
 
 "var": zmienna index w instrukcji "for" OpenMP nie może być zmienną redukcyjną
 
-Zmienna indeksu jest niejawnie prywatna, więc zmienna nie może być używana w klauzuli [redukcyjnej](../../parallel/openmp/reference/reduction.md) w otaczającej dyrektywie [Parallel](../../parallel/openmp/reference/parallel.md) .
+Zmienna indeksu jest niejawnie prywatna, więc zmienna nie może być używana w klauzuli [redukcyjnej](../../parallel/openmp/reference/openmp-clauses.md#reduction) w otaczającej dyrektywie [Parallel](../../parallel/openmp/reference/openmp-directives.md#parallel) .
 
 ## <a name="example"></a>Przykład
 

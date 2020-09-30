@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352755"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508837"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
 Za pomocą **edytora okien**dialogowych można dodawać kontrolki, zmieniać ich rozmiar, edytować i usuwać w oknach dialogowych. Możesz również edytować właściwości kontrolki, takie jak jej identyfikator, lub czy początkowo jest ona widoczna w czasie wykonywania.
 
-Gdy Pracujesz w **edytorze okien dialogowych**, w [oknie przybornika](/visualstudio/ide/reference/toolbox) zostanie wyświetlona karta **Edytor okien dialogowych** . Możesz również dostosować okno **przybornika** , aby ułatwić korzystanie z niego. Aby uzyskać więcej informacji, zobacz [Korzystanie z przybornika](/visualstudio/ide/using-the-toolbox) i [Pokaż lub Ukryj okno przybornika](showing-or-hiding-the-dialog-editor-toolbar.md).
+Gdy Pracujesz w **edytorze okien dialogowych**, w [oknie przybornika](/visualstudio/ide/reference/toolbox) zostanie wyświetlona karta **Edytor okien dialogowych** . Możesz również dostosować okno **przybornika** , aby ułatwić korzystanie z niego. Aby uzyskać więcej informacji, zobacz [Korzystanie z przybornika](/visualstudio/ide/using-the-toolbox) i [Pokaż lub Ukryj okno przybornika](./dialog-editor.md).
 
 > [!TIP]
 > Korzystając z **edytora okien dialogowych**, w wielu przypadkach można wybrać prawy przycisk myszy, aby wyświetlić menu skrótów często używanych poleceń.
@@ -94,7 +94,7 @@ Gdy Pracujesz w **edytorze okien dialogowych**, w [oknie przybornika](/visualstu
 1. Zwolnij przycisk myszy. Kontrolka jest rozliczana w oknie dialogowym o określonym rozmiarze.
 
 > [!TIP]
-> Można zmienić rozmiar kontrolki po porzucenie jej do okna dialogowego, przenosząc uchwyty rozmiaru na granicy formantu. Aby uzyskać więcej informacji, zobacz [ustalanie rozmiarów poszczególnych kontrolek](../windows/sizing-individual-controls.md).
+> Można zmienić rozmiar kontrolki po porzucenie jej do okna dialogowego, przenosząc uchwyty rozmiaru na granicy formantu. Aby uzyskać więcej informacji, zobacz [ustalanie rozmiarów poszczególnych kontrolek](./arrangement-of-controls-on-dialog-boxes.md).
 
 ### <a name="to-add-a-custom-control"></a>Aby dodać kontrolkę niestandardową
 
@@ -129,7 +129,7 @@ Możesz dodać niestandardowe kontrolki do okna dialogowego. Wybierz ikonę **ko
 
 1. Podczas naciskania klawisza **Ctrl** kliknij dwukrotnie formant okna dialogowego.
 
-   Zostanie wyświetlony [Kreator dodawania zmiennej członkowskiej](../ide/add-member-variable-wizard.md) .
+   Zostanie wyświetlony [Kreator dodawania zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) .
 
 1. Wpisz odpowiednie informacje w kreatorze **dodawania zmiennej członkowskiej** . Aby uzyskać więcej informacji, zobacz [wymiana danych w oknie dialogowym](../mfc/dialog-data-exchange.md).
 

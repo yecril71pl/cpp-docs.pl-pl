@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622209"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508863"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Modalne i niemodalne okna dialogowe
 
@@ -30,7 +30,7 @@ Tworzenie okna dialogowego dla programu wymaga wykonania następujących czynno�
 
 1. Utwórz klasę okna dialogowego.
 
-1. Połącz [kontrolki zasobu okna dialogowego z obsługą komunikatów](../windows/adding-event-handlers-for-dialog-box-controls.md) w klasie okna dialogowego.
+1. Połącz [kontrolki zasobu okna dialogowego z obsługą komunikatów](../windows/adding-editing-or-deleting-controls.md) w klasie okna dialogowego.
 
 1. Dodaj elementy członkowskie danych skojarzone z kontrolkami okna dialogowego i, aby określić [wymianę danych okna](dialog-data-exchange.md) dialogowego i [Sprawdzanie poprawności danych okna](dialog-data-validation.md) dialogowego dla kontrolek.
 

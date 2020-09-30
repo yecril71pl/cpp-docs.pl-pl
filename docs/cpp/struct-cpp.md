@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231120"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507458"
 ---
 # <a name="struct-c"></a>struktura (C++)
 
@@ -38,7 +38,7 @@ Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [specy
 *MS-decl-spec*<br/>
 Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zapoznaj się ze słowem kluczowym [__declspec](../cpp/declspec.md) .
 
-*seryjn*<br/>
+*tag*<br/>
 Nazwa typu nadana strukturze. Znacznik staje się słowem zastrzeżonym w obrębie struktury. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana anonimowa struktura. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
 *Lista podstawowa*<br/>
@@ -48,7 +48,7 @@ Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury.
 Lista składników struktury. Aby uzyskać więcej informacji, zapoznaj się z [omówieniem składowej klasy](../cpp/class-member-overview.md) . Jedyną różnicą jest to, że **`struct`** jest używana zamiast **`class`** .
 
 *Deklaratory*<br/>
-Lista deklaratora określająca nazwy struktury. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych struktury są **`public`** . Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **`public`** domyślnie.  Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](../cpp/overview-of-declarators.md) .
+Lista deklaratora określająca nazwy struktury. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych struktury są **`public`** . Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **`public`** domyślnie.  Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](./declarations-and-definitions-cpp.md) .
 
 ## <a name="remarks"></a>Uwagi
 

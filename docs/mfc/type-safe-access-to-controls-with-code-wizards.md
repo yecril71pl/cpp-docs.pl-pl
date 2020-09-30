@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: bfbc27dbcdeeb38c40f5d989bacd65a23198d4f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213973"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507886"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
 
-Jeśli znasz funkcje DDX, możesz użyć właściwości kontrolki w [Kreatorze dodawania zmiennej członkowskiej](../ide/add-member-variable-wizard.md) , aby utworzyć bezpieczny dostęp do typu. Takie podejście jest łatwiejsze niż Tworzenie kontrolek bez użycia kreatorów kodu.
+Jeśli znasz funkcje DDX, możesz użyć właściwości kontrolki w [Kreatorze dodawania zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) , aby utworzyć bezpieczny dostęp do typu. Takie podejście jest łatwiejsze niż Tworzenie kontrolek bez użycia kreatorów kodu.
 
 Jeśli chcesz po prostu uzyskać dostęp do wartości kontrolki, DDX udostępnia ją. Jeśli chcesz uzyskać więcej niż dostęp do wartości kontrolki, użyj Kreatora dodawania zmiennej składowej, aby dodać zmienną członkowską odpowiedniej klasy do klasy okna dialogowego. Dołącz tę zmienną członkowską do właściwości Control.
 
@@ -33,7 +33,7 @@ W tym miejscu zmienna członkowska *m_Checkbox* służy do tego samego celu co f
 
 Aby uzyskać więcej informacji na temat kontrolek, zobacz [Controls](../mfc/controls-mfc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczny dostęp do kontrolek w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Praca z oknami dialogowymi w MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Obsługa plików i we / wy (C++sposób niezamierzony)
+title: Obsługa plików i we-wy (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325003"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508938"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 
-Demonstruje różne operacje na plikach za pomocą programu .NET Framework.
+Pokazuje różne operacje na plikach przy użyciu .NET Framework.
 
-W poniższych tematach pokazano użycie klas zdefiniowanych w <xref:System.IO> przestrzeni nazw, aby wykonywać różne operacje na plikach.
+W poniższych tematach przedstawiono sposób użycia klas zdefiniowanych w <xref:System.IO> przestrzeni nazw do wykonywania różnych operacji na plikach.
 
-## <a name="enumerate"></a> Wyliczanie plików w katalogu
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> Wyliczanie plików w katalogu
 
-Poniższy przykład kodu pokazuje, jak można pobrać listy plików w katalogu. Ponadto podkatalogi są wyliczane. Poniższy przykład kodu wykorzystuje <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> i <xref:System.IO.Directory.GetDirectories%2A> metody, aby wyświetlić zawartość katalogu C:\Windows.
+Poniższy przykład kodu pokazuje, jak pobrać listę plików w katalogu. Ponadto podkatalogi są wyliczane. Poniższy przykład kodu używa <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> metod i, <xref:System.IO.Directory.GetDirectories%2A> Aby wyświetlić zawartość katalogu C:\Windows.
 
 ### <a name="example"></a>Przykład
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> Monitorowanie zmian systemu plików
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> Monitoruj zmiany systemu plików
 
-Poniższy przykład kodu wykorzystuje <xref:System.IO.FileSystemWatcher> do rejestrowania zdarzeń jest tworzone, zmienione, usunięty lub zmieniono nazwy plików. Zamiast okresowe sondowanie katalogu dla zmian w plikach, możesz użyć <xref:System.IO.FileSystemWatcher> klasy wyzwolenie zdarzenia po wykryciu zmiany.
+Poniższy przykład kodu używa <xref:System.IO.FileSystemWatcher> do rejestrowania zdarzeń, które są związane z tworzonymi, zmienionymi, usuniętymi lub nazwami plików. Zamiast okresowo sondować katalog pod kątem zmian plików, można użyć <xref:System.IO.FileSystemWatcher> klasy do wyzwalania zdarzeń w przypadku wykrycia zmiany.
 
 ### <a name="example"></a>Przykład
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> Odczytywanie pliku binarnego
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> Odczytaj plik binarny
 
-Poniższy przykład kodu pokazuje, jak odczytywać dane binarne z pliku, przy użyciu dwóch klas z <xref:System.IO?displayProperty=fullName> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik. <xref:System.IO.BinaryReader> udostępnia interfejs do strumienia, który zezwala na dostęp binarny.
+Poniższy przykład kodu pokazuje, jak odczytywać dane binarne z pliku przy użyciu dwóch klas z <xref:System.IO?displayProperty=fullName> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryReader> . <xref:System.IO.FileStream> reprezentuje rzeczywisty plik. <xref:System.IO.BinaryReader> zapewnia interfejs do strumienia, który umożliwia dostęp do danych binarnych.
 
-Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie do pliku binarnego (C++sposób niezamierzony)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+Przykładowy kod odczytuje plik o nazwie Data. bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacje o tym rodzaju pliku, zobacz [How to: Write a Binary File (C++/CLI)](#write_binary).
 
 ### <a name="example"></a>Przykład
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> Odczytywanie pliku tekstowego
+## <a name="read-a-text-file"></a><a name="read_text"></a> Odczytaj plik tekstowy
 
-Poniższy przykład kodu pokazuje, jak otworzyć i odczytać jeden wiersz pliku tekstowego w czasie, za pomocą <xref:System.IO.StreamReader> klasy, która jest zdefiniowana w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy jest używany do otwierania pliku tekstowego i następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda służy do pobierania każdego wiersza.
+Poniższy przykład kodu demonstruje sposób otwierania i odczytywania pliku tekstowego po jednym wierszu, przy użyciu <xref:System.IO.StreamReader> klasy zdefiniowanej w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy służy do otwierania pliku tekstowego, a następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> Metoda jest używana do pobierania każdego wiersza.
 
-Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie tekstu do pliku (C++sposób niezamierzony)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Ten przykład kodu odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacje o tym rodzaju pliku, zobacz [How to: Write a Text File (C++/CLI)](#write_text).
 
 ### <a name="example"></a>Przykład
 
@@ -216,11 +216,11 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> Pobieranie informacji o pliku
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> Pobierz informacje o pliku
 
-Poniższy przykład kodu demonstruje <xref:System.IO.FileInfo> klasy. Jeśli nazwa pliku, można użyć tej klasy można pobrać informacji o pliku, np. rozmiar pliku, katalogu, imię i nazwisko oraz datę i godzinę utworzenia i ostatniej modyfikacji.
+Poniższy przykład kodu demonstruje <xref:System.IO.FileInfo> klasę. Jeśli masz nazwę pliku, możesz użyć tej klasy do pobrania informacji o pliku, takich jak rozmiar pliku, katalog, pełna nazwa oraz Data i godzina utworzenia oraz ostatniej modyfikacji.
 
-Ten kod pobiera informacje o plikach dla Notepad.exe.
+Ten kod pobiera informacje o pliku dla Notepad.exe.
 
 ### <a name="example"></a>Przykład
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> Wpisywanie do pliku binarnego
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> Napisz plik binarny
 
-Poniższy przykład kodu pokazuje zapisu w pliku danych binarnych. Dwie klasy z <xref:System.IO> przestrzeni nazw są używane: <xref:System.IO.FileStream> i <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik podczas <xref:System.IO.BinaryWriter> zapewnia interfejs do strumienia, który zezwala na dostęp binarny.
+Poniższy przykład kodu ilustruje zapisywanie danych binarnych do pliku. Używane są dwie klasy z <xref:System.IO> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryWriter> . <xref:System.IO.FileStream> reprezentuje rzeczywisty plik, podczas gdy <xref:System.IO.BinaryWriter> udostępnia interfejs do strumienia, który umożliwia dostęp do danych binarnych.
 
-Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [jak: Odczytywanie pliku binarnego (C++sposób niezamierzony)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+Poniższy przykład kodu zapisuje plik zawierający liczby całkowite w formacie binarnym. Ten plik może zostać odczytany przy użyciu kodu w [instrukcje: odczytywanie pliku binarnego (C++/CLI)](#read_binary).
 
 ### <a name="example"></a>Przykład
 
@@ -300,11 +300,11 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> Wpisywanie tekstu do pliku
+## <a name="write-a-text-file"></a><a name="write_text"></a> Napisz plik tekstowy
 
-Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i wpisać tekst za pomocą <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter> Konstruktor przyjmuje nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, zostanie zastąpiony (chyba że przyjmie wartość True jako drugi <xref:System.IO.StringWriter> argumentu konstruktora).
+Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i napisać tekst przy użyciu <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter>Konstruktor Pobiera nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, jest zastępowany (chyba że przeszedł wartość true jako drugi <xref:System.IO.StringWriter> argument konstruktora).
 
-Plik jest złożony za pomocą <xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A> funkcji.
+Plik jest następnie zarejestrowana przy użyciu <xref:System.IO.StreamWriter.Write%2A> <xref:System.IO.TextWriter.WriteLine%2A> funkcji i.
 
 ### <a name="example"></a>Przykład
 
@@ -332,8 +332,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-[We/Wy plików i strumieni](/dotnet/standard/io/index)<br/>
-[System.IO — przestrzeń nazw](/dotnet/api/system.io)
+[We/wy plików i strumieni](/dotnet/standard/io/index)<br/>
+[System.IO przestrzeń nazw](/dotnet/api/system.io)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332012"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508582"
 ---
 # <a name="marshal_context-class"></a>marshal_context — Klasa
 
@@ -27,34 +27,34 @@ class marshal_context
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `marshal_context` klasy dla konwersji danych, które wymagają kontekstu. Aby uzyskać więcej informacji o tym, które konwersje wymagają kontekstu i który plik organizowania musi zostać uwzględniony, zobacz [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md). Wynik organizowania podczas korzystania z kontekstu jest `marshal_context` prawidłowy tylko do momentu zniszczenia obiektu. Aby zachować wynik, należy skopiować dane.
+Użyj `marshal_context` klasy do konwersji danych, które wymagają kontekstu. Aby uzyskać więcej informacji o tym, które konwersje wymagają kontekstu, a plik kierujący musi być uwzględniony, zobacz [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md). Wynik organizowania przy użyciu kontekstu jest prawidłowy tylko do momentu `marshal_context` zniszczenia obiektu. Aby zachować wynik, należy skopiować dane.
 
-To `marshal_context` samo może być używane do wielu konwersji danych. Ponowne przywykanie kontekstu w ten sposób nie wpłynie na wyniki z poprzednich wywołań organizowania.
+Tego samego programu `marshal_context` można użyć do licznych konwersji danych. Użycie kontekstu w ten sposób nie wpłynie na wyniki poprzednich wywołań kierujących.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-constructors"></a>Konstruktorzy publiczni
+### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |---------|-----------|
-|[marshal_context::marshal_context](#marshal-context)|Konstruuje `marshal_context` obiekt do konwersji danych między typami danych zarządzanych i natywnych.|
-|[marshal_context::~marshal_context](#tilde-marshal-context)|Niszczy `marshal_context` obiekt.|
+|[marshal_context::marshal_context](#marshal-context)|Konstruuje obiekt służący do `marshal_context` konwersji danych między typami danych zarządzanych i natywnych.|
+|[marshal_context:: ~ marshal_context](#tilde-marshal-context)|Niszczy `marshal_context` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |---------|-----------|
-|[marshal_context::marshal_as](#marshal-as)|Wykonuje kierowanie na określonym obiekcie danych, aby przekonwertować go między zarządzanym i macierzystym typem danych.|
+|[marshal_context::marshal_as](#marshal-as)|Wykonuje kierowanie dla określonego obiektu danych, aby przekonwertować go między typem danych zarządzanym i natywnym.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówka:** \<msclr\marshal.h \<>, msclr\marshal_windows.h>, \<msclr\marshal_cppstd.h> lub \<msclr\marshal_atl.h>
+**Plik nagłówkowy:** \<msclr\marshal.h> , \<msclr\marshal_windows.h> , \<msclr\marshal_cppstd.h> lub \<msclr\marshal_atl.h>
 
-**Obszar nazw:** msclr::interop
+**Przestrzeń nazw:** msclr:: Interop
 
-## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context::marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a> marshal_context:: marshal_context
 
-Konstruuje `marshal_context` obiekt do konwersji danych między typami danych zarządzanych i natywnych.
+Konstruuje obiekt służący do `marshal_context` konwersji danych między typami danych zarządzanych i natywnych.
 
 ```cpp
 marshal_context();
@@ -62,13 +62,13 @@ marshal_context();
 
 ### <a name="remarks"></a>Uwagi
 
-Niektóre konwersje danych wymagają kontekstu marszałka. Aby uzyskać więcej informacji o tym, które tłumaczenia wymagają kontekstu i który plik organizowania należy uwzględnić w aplikacji, zobacz [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Niektóre konwersje danych wymagają kontekstu Marshal. Aby uzyskać więcej informacji o tym, które tłumaczenia wymagają kontekstu i pliku Marshal, który należy dołączyć do aplikacji, zobacz [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykład: marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).
+Zobacz przykład dla [marshal_context:: marshal_as](#marshal-as).
 
-## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context::~marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a> marshal_context:: ~ marshal_context
 
 Niszczy `marshal_context` obiekt.
 
@@ -78,13 +78,13 @@ Niszczy `marshal_context` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Niektóre konwersje danych wymagają kontekstu marszałka. Zobacz [omówienie organizowania w języku C++,](../dotnet/overview-of-marshaling-in-cpp.md) aby uzyskać więcej informacji o tym, które tłumaczenia wymagają kontekstu i który plik organizowania musi zostać uwzględniony w aplikacji.
+Niektóre konwersje danych wymagają kontekstu Marshal. Zobacz [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md) , aby uzyskać więcej informacji o tym, które tłumaczenia wymagają kontekstu, a plik Marshal musi być uwzględniony w aplikacji.
 
-Usunięcie `marshal_context` obiektu spowoduje unieważnienie danych przekonwertowanych przez ten kontekst. Jeśli chcesz zachować dane `marshal_context` po zniszczeniu obiektu, należy ręcznie skopiować dane do zmiennej, która będzie się powtarzać.
+Usunięcie `marshal_context` obiektu spowoduje unieważnienie danych przekonwertowanych przez ten kontekst. Jeśli chcesz zachować dane po `marshal_context` zniszczeniu obiektu, musisz ręcznie skopiować dane do zmiennej, która będzie trwała.
 
-## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context::marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a> marshal_context:: marshal_as
 
-Wykonuje kierowanie na określonym obiekcie danych, aby przekonwertować go między zarządzanym i macierzystym typem danych.
+Wykonuje kierowanie dla określonego obiektu danych, aby przekonwertować go między typem danych zarządzanym i natywnym.
 
 ```cpp
 To_Type marshal_as<To_Type>(
@@ -94,24 +94,24 @@ To_Type marshal_as<To_Type>(
 
 ### <a name="parameters"></a>Parametry
 
-*Wejście*<br/>
-[w] Wartość, która ma być `To_Type` kierowana do zmiennej.
+*klawiatur*<br/>
+podczas Wartość, którą chcesz zorganizować na `To_Type` zmienną.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zmienna typu, `To_Type` która jest przekonwertowana wartość `input`.
+Zmienna typu `To_Type` , która jest przekonwertowanej wartości `input` .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja wykonuje kierowanie na określonym obiekcie danych. Tej funkcji należy używać tylko z konwersjami wskazanymi w tabeli w [przeglądzie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Ta funkcja wykonuje kierowanie dla określonego obiektu danych. Tej funkcji należy używać tylko w przypadku konwersji wskazanych w tabeli w temacie [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
-Jeśli spróbujesz zorganizować parę typów danych, które `marshal_as` nie są obsługiwane, wygeneruje błąd [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj komunikat dostarczony z tym błędem, aby uzyskać więcej informacji. Błąd `C4996` może być generowany dla więcej niż tylko przestarzałe funkcje. Dwa warunki, które generują ten błąd, próbują zorganizować parę typów danych, `marshal_as` które nie są obsługiwane i próbuje użyć do konwersji, która wymaga kontekstu.
+Jeśli spróbujesz zorganizować parę typów danych, które nie są obsługiwane, `marshal_as` program wygeneruje błąd [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj komunikat dostarczony z tym błędem, aby uzyskać więcej informacji. Ten `C4996` błąd może być wygenerowany dla więcej niż tylko przestarzałych funkcji. Dwa warunki generujące ten błąd próbują zorganizować parę typów danych, które nie są obsługiwane i próbować użyć `marshal_as` dla konwersji wymagającej kontekstu.
 
-Biblioteka organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale jeśli chcesz uwzględnić inne konwersje, możesz dołączyć dodatkowe pliki. Tabela `Marshaling Overview in C++` w wskazuje, który plik organizowania powinny być zawarte dla każdej konwersji.
+Biblioteka organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale można dołączyć dodatkowe pliki, jeśli zachodzi potrzeba przeprowadzenia innych konwersji. W tabeli `Marshaling Overview in C++` wskazuje, który plik Marshal powinien być dołączony dla każdej konwersji.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie tworzy kontekst `System::String` do `const char *` organizowania z typu zmiennej do zmiennej. Przekonwertowane dane nie będą prawidłowe po wierszu, który usuwa kontekst.
+W tym przykładzie tworzony jest kontekst organizowania elementu z `System::String` do `const char *` typu zmiennej. Skonwertowane dane nie będą prawidłowe po wierszu, który usuwa kontekst.
 
 ```cpp
 // marshal_context_test.cpp

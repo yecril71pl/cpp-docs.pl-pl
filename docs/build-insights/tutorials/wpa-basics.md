@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685518"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507731"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows
 
@@ -56,11 +56,11 @@ Ten obraz przedstawia przykładowy wykres słupkowy wywołania linku. Używamy i
 
 ![Krótkie wideo pokazujące, jak można grupować według różnych kolumn.](media/wpa-grouping.gif)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Samouczek: vcperf i Analizator wydajności systemu Windows](vcperf-and-wpa.md)\
-[Reference: polecenia vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Odwołanie: widoki Analizatora wydajności systemu Windows](/cpp/build-insights/reference/wpa-views)\
+[Reference: polecenia vcperf](../reference/vcperf-commands.md)\
+[Odwołanie: widoki Analizatora wydajności systemu Windows](../reference/wpa-views.md)\
 [Analizator wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

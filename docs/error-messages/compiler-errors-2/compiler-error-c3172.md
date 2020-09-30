@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ca0eab35f6e60d81a324156905619ceb7ace8830
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761741"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508294"
 ---
 # <a name="compiler-error-c3172"></a>Błąd kompilatora C3172
 
 "module_name": nie można określić różnych atrybutów idl_module w projekcie
 
-[idl_module](../../windows/idl-module.md) atrybuty o tej samej nazwie, ale w dwóch plikach w kompilacji znaleziono różne parametry `dllname` lub `version`. Dla kompilacji można określić tylko jeden unikatowy atrybut `idl_module`.
+[idl_module](../../windows/attributes/idl-module.md) atrybuty o tej samej nazwie, ale różne `dllname` lub `version` Parametry znajdują się w dwóch plikach w kompilacji. `idl_module`Dla kompilacji można określić tylko jeden unikatowy atrybut.
 
-Identyczne atrybuty `idl_module` można określić w więcej niż jednym pliku kodu źródłowego.
+Identyczne `idl_module` atrybuty można określić w więcej niż jednym pliku kodu źródłowego.
 
-Na przykład jeśli znaleziono następujące atrybuty `idl_module`:
+Na przykład jeśli `idl_module` znaleziono następujące atrybuty:
 
 ```cpp
 // C3172.cpp

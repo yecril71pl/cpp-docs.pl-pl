@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831570"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507279"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 
@@ -265,7 +265,7 @@ Klasa akcesora. Wartość domyślna to `CAccessorBase`.
 |[Zamknij](#close)|Zwalnia wiersze i bieżący `IRowset` interfejs.|
 |[Porównaj](#compare)|Porównuje dwie zakładki przy użyciu [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Tworzy nowy `CRowset` obiekt i (opcjonalnie) kojarzy go z `IRowset` interfejsem dostarczonym jako parametr.|
-|[Usuń](#delete)|Usuwa wiersze z zestawu wierszy przy użyciu [IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Usuwanie](#delete)|Usuwa wiersze z zestawu wierszy przy użyciu [IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Znajduje następny pasujący wiersz po określonej zakładce.|
 |[GetApproximatePosition](#getapproximateposition)|Zwraca przybliżoną pozycję wiersza odpowiadającego zakładce.|
 |[GetData](#getdata)|Pobiera dane z kopii wiersza zestawu wierszy.|
@@ -282,7 +282,7 @@ Klasa akcesora. Wartość domyślna to `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.|
 |[ReleaseRows](#releaserows)|Wywołuje [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) w celu zwolnienia bieżącego uchwytu wiersza.|
 |[Operację](#setdata)|Ustawia wartości danych w co najmniej jednej kolumnie wiersza przy użyciu [IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Cofnij](#undo)|Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](../../data/oledb/crowset-update.md).|
+|[Cofnij](#undo)|Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](#update).|
 |[Aktualizowanie](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone do bieżącego wiersza od momentu ostatniego pobrania lub aktualizacji.|
 |[UpdateAll](#updateall)|Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub aktualizacji.|
 
@@ -308,7 +308,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwiększa liczbę odwołań dla uchwytu bieżącego wiersza. Wywołaj [ReleaseRows](../../data/oledb/crowset-releaserows.md) , aby zmniejszyć liczbę. Wiersze zwracane przez metody Move mają liczbę odwołań o jednej.
+Ta metoda zwiększa liczbę odwołań dla uchwytu bieżącego wiersza. Wywołaj [ReleaseRows](#releaserows) , aby zmniejszyć liczbę. Wiersze zwracane przez metody Move mają liczbę odwołań o jednej.
 
 ## <a name="crowsetclose"></a><a name="close"></a> CRowset:: Close
 
@@ -497,7 +497,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku określenia akcesora, który nie jest autodostępnym w [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), Użyj tej metody, aby jawnie pobrać dane przez przekazanie numeru dostępu.
+W przypadku określenia akcesora, który nie jest autodostępnym w [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor), Użyj tej metody, aby jawnie pobrać dane przez przekazanie numeru dostępu.
 
 ## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset:: GetDataHere
 
@@ -820,7 +820,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla `SetData` formularza, który nie akceptuje żadnych argumentów, do aktualizacji są używane wszystkie metody dostępu. Zwykle jest wywoływana `SetData` , aby ustawić wartości danych w kolumnach w wierszu, a następnie wywołać polecenie [Update](../../data/oledb/crowset-update.md) , aby przesłać te zmiany.
+Dla `SetData` formularza, który nie akceptuje żadnych argumentów, do aktualizacji są używane wszystkie metody dostępu. Zwykle jest wywoływana `SetData` , aby ustawić wartości danych w kolumnach w wierszu, a następnie wywołać polecenie [Update](#update) , aby przesłać te zmiany.
 
 Ta metoda wymaga opcjonalnego interfejsu `IRowsetChange` , który może nie być obsługiwany przez wszystkich dostawców. w takim przypadku metoda zwraca E_NOINTERFACE. `DBPROP_IRowsetChange`Przed wywołaniem `Open` tabeli lub polecenia zawierającego zestaw wierszy należy również ustawić wartość VARIANT_TRUE.
 
@@ -828,7 +828,7 @@ Operacja ustawienia może zakończyć się niepowodzeniem, jeśli co najmniej je
 
 ## <a name="crowsetundo"></a><a name="undo"></a> CRowset:: Undo
 
-Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](../../data/oledb/crowset-update.md).
+Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](#update).
 
 ### <a name="syntax"></a>Składnia
 
@@ -886,7 +886,7 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesyła wszystkie oczekujące zmiany dokonane w bieżącym wierszu od momentu ostatniego pobrania lub zaktualizowania tego wiersza (przy użyciu `Update` lub [UPDATEALL](../../data/oledb/crowset-updateall.md)). Zazwyczaj wywoływanie metody [SetData](../../data/oledb/crowset-setdata.md) , aby ustawić wartości danych w kolumnach w wierszu, a następnie wywołać, `Update` Aby przesłać te zmiany.
+Przesyła wszystkie oczekujące zmiany dokonane w bieżącym wierszu od momentu ostatniego pobrania lub zaktualizowania tego wiersza (przy użyciu `Update` lub [UPDATEALL](#updateall)). Zazwyczaj wywoływanie metody [SetData](#setdata) , aby ustawić wartości danych w kolumnach w wierszu, a następnie wywołać, `Update` Aby przesłać te zmiany.
 
 Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate` , który może nie być obsługiwany przez wszystkich dostawców. w takim przypadku metoda zwraca E_NOINTERFACE. `DBPROP_IRowsetUpdate`Przed wywołaniem `Open` tabeli lub polecenia zawierającego zestaw wierszy należy również ustawić wartość VARIANT_TRUE.
 
@@ -915,7 +915,7 @@ określoną Wskaźnik do lokalizacji, gdzie `Update` zwraca wartość stanu wier
 
 ### <a name="remarks"></a>Uwagi
 
-Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub zaktualizowania tych wierszy przy użyciu [aktualizacji](../../data/oledb/crowset-update.md) lub `UpdateAll` . `UpdateAll` program zaktualizuje wszystkie wiersze, które zostały zmodyfikowane, niezależnie od tego, czy nadal masz dla nich uchwyt (zobacz *pphRow*).
+Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub zaktualizowania tych wierszy przy użyciu [aktualizacji](#update) lub `UpdateAll` . `UpdateAll` program zaktualizuje wszystkie wiersze, które zostały zmodyfikowane, niezależnie od tego, czy nadal masz dla nich uchwyt (zobacz *pphRow*).
 
 Na przykład, jeśli użyto `Insert` do wstawienia pięciu wierszy w zestawie wierszy, można wywołać `Update` pięć razy lub wywołać `UpdateAll` raz, aby zaktualizować je wszystkie.
 

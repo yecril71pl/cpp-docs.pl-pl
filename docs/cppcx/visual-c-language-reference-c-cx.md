@@ -2,16 +2,16 @@
 title: Dokumentacja języka C++/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 4f3816280630a6a061eb037a33367ef4e9d90375
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f28270ace3965a3cf89e250a873af14e48390708
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403858"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507421"
 ---
 # <a name="ccx-language-reference"></a>Dokumentacja języka C++/CX
 
-C++/CX to zestaw rozszerzeń języka C++, które umożliwiają tworzenie aplikacji systemu Windows i środowisko wykonawcze systemu Windows składników w idiom, który jest możliwie blisko nowoczesnego języka C++. Za pomocą języka C++/CX zapisuj aplikacje i składniki systemu Windows w kodzie natywnym, które łatwo współpracują z językami Visual C#, Visual Basic i JavaScript oraz innymi językami, które obsługują środowisko wykonawcze systemu Windows. W tych rzadkich przypadkach, które wymagają bezpośredniego dostępu do nieprzetworzonych interfejsów COM lub niewyjątkowego kodu, można użyć [środowisko wykonawcze systemu Windows biblioteki szablonów C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+C++/CX to zestaw rozszerzeń języka C++, które umożliwiają tworzenie aplikacji systemu Windows i środowisko wykonawcze systemu Windows składników w idiom, który jest możliwie blisko nowoczesnego języka C++. Za pomocą języka C++/CX zapisuj aplikacje i składniki systemu Windows w kodzie natywnym, które łatwo współpracują z językami Visual C#, Visual Basic i JavaScript oraz innymi językami, które obsługują środowisko wykonawcze systemu Windows. W tych rzadkich przypadkach, które wymagają bezpośredniego dostępu do nieprzetworzonych interfejsów COM lub niewyjątkowego kodu, można użyć [środowisko wykonawcze systemu Windows biblioteki szablonów C++ (WRL)](./wrl/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
 > Język ** [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) jest zalecaną alternatywą dla języka c++/CX**. Jest to nowy, standardowy Standard języka C++ 17 dla środowisko wykonawcze systemu Windows interfejsów API, dostępny w najnowszym zestawie SDK systemu Windows 10 w wersji 1803. Język C++/WinRT jest implementowany całkowicie w plikach nagłówkowych i zaprojektowany w celu zapewnienia pierwszej klasy dostępu do nowoczesnego interfejsu API systemu Windows.
@@ -28,7 +28,7 @@ Za pomocą języka C++/CX można tworzyć:
 
 ## <a name="related-articles"></a>Pokrewne artykuły:
 
-| Link | Opis |
+| Łącze | Opis |
 |--|--|
 | [Krótki przewodnik](../cppcx/quick-reference-c-cx.md) | Tabela słów kluczowych i operatorów dla C++/CX. |
 | [System typów](../cppcx/type-system-c-cx.md) | Opisuje podstawowe typy/CX języka C++ i konstrukcje programistyczne oraz sposób używania języka C++/CX do użycia i tworzenia typów środowisko wykonawcze systemu Windows. |

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225621"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508655"
 ---
 # <a name="lock-class"></a>Klasa lock
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>Uwagi
 
-`lock`jest dostępny tylko dla obiektów CLR i może być używany tylko w kodzie CLR.
+`lock` jest dostępny tylko dla obiektów CLR i może być używany tylko w kodzie CLR.
 
 Wewnętrznie, Klasa Lock używa <xref:System.Threading.Monitor> do synchronizowania dostępu. Aby uzyskać więcej informacji, zobacz artykuł, którego dotyczy odwołanie.
 
@@ -69,7 +69,7 @@ Wewnętrznie, Klasa Lock używa <xref:System.Threading.Monitor> do synchronizowa
 
 Msclr **przestrzeni nazw**
 
-## <a name="locklock"></a><a name="lock"></a>Lock:: Lock
+## <a name="locklock"></a><a name="lock"></a> Lock:: Lock
 
 Konstruuje `lock` obiekt, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.
 
@@ -107,11 +107,11 @@ Zwraca wartość, <xref:System.ApplicationException> Jeśli nie nastąpiło prze
 
 Pierwsze trzy formy konstruktora próbują uzyskać blokadę w `_object` określonym przedziale czasu (lub <xref:System.Threading.Timeout.Infinite> Jeśli żadna wartość nie jest określona).
 
-Czwarta postać konstruktora nie uzyskuje blokady `_object` . `lock_later`jest elementem członkowskim [wyliczenia lock_when](../dotnet/lock-when-enum.md). Użyj [blokady:: Acquire](../dotnet/lock-acquire.md) lub [lock:: try_acquire](../dotnet/lock-try-acquire.md) w celu uzyskania blokady w tym przypadku.
+Czwarta postać konstruktora nie uzyskuje blokady `_object` . `lock_later` jest elementem członkowskim [wyliczenia lock_when](../dotnet/lock-when-enum.md). Użyj [blokady:: Acquire](#acquire) lub [lock:: try_acquire](#try-acquire) w celu uzyskania blokady w tym przypadku.
 
 Blokada zostanie automatycznie wydana po wywołaniu destruktora.
 
-`_object`nie może być <xref:System.Threading.ReaderWriterLock> .  Jeśli tak, zostanie zwrócony błąd kompilatora.
+`_object` nie może być <xref:System.Threading.ReaderWriterLock> .  Jeśli tak, zostanie zwrócony błąd kompilatora.
 
 ### <a name="example"></a>Przykład
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>Lock:: ~ Lock
+## <a name="locklock"></a><a name="tilde-lock"></a> Lock:: ~ Lock
 
 Destruktory `lock` obiektu.
 
@@ -213,7 +213,7 @@ Destruktory `lock` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor wywołuje [blokadę:: Release](../dotnet/lock-release.md).
+Destruktor wywołuje [blokadę:: Release](#release).
 
 ### <a name="example"></a>Przykład
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Blokada:: pozyskiwanie
+## <a name="lockacquire"></a><a name="acquire"></a> Blokada:: pozyskiwanie
 
 Uzyskuje blokadę obiektu, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Blokada:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> Blokada:: is_locked
 
 Wskazuje, czy blokada jest utrzymywana.
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock:: operator — bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> Lock:: operator — bool
 
 Operator do użycia `lock` w wyrażeniu warunkowym.
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Lock:: Release
+## <a name="lockrelease"></a><a name="release"></a> Lock:: Release
 
 Zwalnia blokadę.
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Blokada:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> Blokada:: try_acquire
 
 Uzyskuje blokadę obiektu, czeka na określoną ilość czasu i zwraca wartość, **`bool`** Aby zgłosić pomyślne uzyskanie, zamiast zgłaszać wyjątek.
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> Lock:: operator = =
 
 Operator równości.
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> Lock:: operator! =
 
 Operator nierówności.
 
