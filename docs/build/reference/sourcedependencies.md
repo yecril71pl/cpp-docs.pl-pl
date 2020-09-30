@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies (zgłaszaj zależności na poziomie źródła)
+title: /sourceDependencies (Zgłaszaj zależności na poziomie źródła)
 description: Przewodnik dotyczący opcji kompilatora/sourceDependencies w programie Microsoft C++.
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528073"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502843"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`(Zależności na poziomie źródła raportu)
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (Zależności na poziomie źródła raportu)
 
 Instruuje kompilator, aby wygenerował plik JSON, który zawiera szczegółowe informacje o zależnościach poziomu źródła użytych podczas kompilacji.
 
 Plik JSON zawiera listę zależności źródłowych, takich jak:
+
 - Pliki nagłówkowe (zarówno przechodnie, jak i bezpośrednio dołączone nagłówki).
 - Użyta wartość PCH (Jeśli **`/Yu`** jest określona).
 - Zaimportowane moduły i zaimportowane jednostki nagłówka (zarówno przechodnie, jak i bezpośrednio importowane moduły/jednostki nagłówkowe).
@@ -96,7 +97,7 @@ Użyto `...` do skracania raportowanych ścieżek. Raport zawiera ścieżki bezw
 
 - Ta opcja nie ma programowego odpowiednika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>

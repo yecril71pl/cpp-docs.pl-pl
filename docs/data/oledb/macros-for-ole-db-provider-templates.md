@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840729"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504007"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 
@@ -118,7 +118,7 @@ podczas Identyfikator GUID właściwości.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ podczas UPROPSET_HIDDEN dla dowolnych zestawów właściwości, których nie chc
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ podczas Identyfikator GUID właściwości.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ podczas Wartość [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85
 
 #### <a name="remarks"></a>Uwagi
 
-To makro ustawia wartość właściwości typu `DWORD` na wartość domyślną zdefiniowaną w ATLDB. C. Aby ustawić właściwość na wybraną wartość, użyj [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić `VARTYPE` i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) dla właściwości w tym samym czasie, użyj [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+To makro ustawia wartość właściwości typu `DWORD` na wartość domyślną zdefiniowaną w ATLDB. H. Aby ustawić właściwość na wybraną wartość, użyj [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Aby ustawić `VARTYPE` i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) dla właściwości w tym samym czasie, użyj [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED lub DBPROPOPTIONS_SETIFCHEAP. Zwykle dostawca nie musi us
 
 #### <a name="remarks"></a>Uwagi
 
-Za pomocą tego makra można bezpośrednio określić wartość właściwości Typ `DWORD` , a także opcje i flagi. Aby tylko ustawić właściwość na wartość domyślną zdefiniowaną w ATLDB. H, użyj [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Aby ustawić właściwość na wybraną wartość, bez ustawiania dla niej opcji lub flag, użyj [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+Za pomocą tego makra można bezpośrednio określić wartość właściwości Typ `DWORD` , a także opcje i flagi. Aby tylko ustawić właściwość na wartość domyślną zdefiniowaną w ATLDB. H, użyj [PROPERTY_INFO_ENTRY](#property_info_entry). Aby ustawić właściwość na wybraną wartość, bez ustawiania dla niej opcji lub flag, użyj [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ podczas Wartość właściwości typu `DWORD` .
 
 #### <a name="remarks"></a>Uwagi
 
-Za pomocą tego makra można bezpośrednio określić wartość właściwości typu `DWORD` . Aby ustawić wartość domyślną dla właściwości zdefiniowanej w ATLDB. H, użyj [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Aby ustawić wartość, flagi i opcje właściwości, użyj [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Za pomocą tego makra można bezpośrednio określić wartość właściwości typu `DWORD` . Aby ustawić wartość domyślną dla właściwości zdefiniowanej w ATLDB. H, użyj [PROPERTY_INFO_ENTRY](#property_info_entry). Aby ustawić wartość, flagi i opcje właściwości, użyj [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Zobacz [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Zobacz [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -394,7 +394,7 @@ Pozwala określić typ danych kolumny.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Zobacz [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -466,7 +466,7 @@ Pozwala określić rozmiar kolumny.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Zobacz [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -495,7 +495,7 @@ Użyj tego makra, gdy przyjmuje się, że dane kolumny mają być [DBTYPE_STR](/
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Zobacz [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -526,7 +526,7 @@ podczas Zmienna członkowska w klasie danych, która przechowuje dane.
 
 #### <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , ale pozwala także określić typ danych kolumny i rozmiar.
+Podobnie jak w przypadku [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) , ale pozwala także określić typ danych kolumny i rozmiar.
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 

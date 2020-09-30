@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165889"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502908"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
 > [!WARNING]
-> Ta sekcja dotyczy aplikacji klasycznych systemu Windows utworzonych C++w systemie.
+> Ta sekcja ma zastosowanie do aplikacji klasycznych systemu Windows utworzonych w języku C++.
 >
-> Aby uzyskać informacje o zasobach w platforma uniwersalna systemu Windows aplikacjach C++pisanych w systemie, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/)lub Dodawanie zasobów C++do projektów/CLI (zarządzanych), zobacz artykuł [zasoby w aplikacjach klasycznych](/dotnet/framework/resources/index) w przewodniku .NET Framework dewelopera.
+> Aby uzyskać informacje o zasobach w platforma uniwersalna systemu Windows aplikacjach utworzonych w języku C++, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/)lub Dodawanie zasobów do projektów C++/CLI (zarządzane), zobacz artykuł [zasoby w aplikacjach klasycznych](/dotnet/framework/resources/index) w podręczniku .NET Framework dewelopera.
 
 Zasoby mogą składać się z szerokiego zakresu elementów, takich jak:
 
@@ -27,7 +27,7 @@ Zasoby mogą składać się z szerokiego zakresu elementów, takich jak:
 - Zasoby wersji, które są używane przez Instalatora interfejsów API.
 - Zasoby menu i okna dialogowego.
 
-Do projektu można dodawać nowe zasoby i modyfikować je za pomocą odpowiedniego edytora zasobów. Większość kreatorów wizualizacji C++ automatycznie generuje plik. RC dla projektu.
+Do projektu można dodawać nowe zasoby i modyfikować je za pomocą odpowiedniego edytora zasobów. Większość kreatorów Visual C++ automatycznie generuje plik. RC dla projektu.
 
 > [!NOTE]
 > **Edytory zasobów** i **Widok zasobów** nie są dostępne w wersjach Express.
@@ -57,5 +57,5 @@ Zawiera łącza do informacji na temat korzystania z zestawu dokumentacji, konta
 
 ## <a name="see-also"></a>Zobacz też
 
-[Aplikacje klasyczne systemu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Aplikacje klasyczne systemu Windows](./desktop-applications-visual-cpp.md)<br/>
 [Menu i inne zasoby](/windows/win32/menurc/resources)

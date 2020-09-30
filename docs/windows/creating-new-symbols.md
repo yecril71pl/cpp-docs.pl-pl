@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 1c69e8878885acd80c285691fb0861a476af03ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160518"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504500"
 ---
 # <a name="how-to-create-symbols-c"></a>Instrukcje: Tworzenie symboli (C++)
 
@@ -39,13 +39,13 @@ Okno dialogowe zawiera następujące właściwości:
 
 |Właściwość|Opis|
 |--------------------------|------------------------------------------|
-|**Nazwa**|Wyświetla nazwę symbolu.<br/><br/>Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące nazw symboli](../windows/symbol-name-restrictions.md).|
-|**Wartość**|Wyświetla wartość liczbową symbolu.<br/><br/>Aby uzyskać więcej informacji, zobacz [ograniczenia wartości symboli](../windows/symbol-value-restrictions.md).|
+|**Nazwa**|Wyświetla nazwę symbolu.<br/><br/>Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące nazw symboli](./changing-a-symbol-or-symbol-name-id.md).|
+|**Wartość**|Wyświetla wartość liczbową symbolu.<br/><br/>Aby uzyskać więcej informacji, zobacz [ograniczenia wartości symboli](./changing-a-symbol-or-symbol-name-id.md).|
 |**W użyciu**|Po wybraniu określa, że symbol jest używany przez co najmniej jeden zasób.<br/><br/>Zasób lub zasoby są wymienione w polu **używane przez** .|
 |**Pokaż symbole tylko do odczytu**|Po wybraniu wyświetla zasoby tylko do odczytu.<br/><br/>Domyślnie w oknie dialogowym **symbol zasobu** są wyświetlane tylko zasoby, które można modyfikować w pliku skryptu zasobu, ale w przypadku wybrania tej opcji zasoby, które można modyfikować, są wyświetlane w postaci pogrubionego tekstu, a zasoby tylko do odczytu są wyświetlane w postaci zwykłego tekstu.|
 |**Używane przez**|Wyświetla zasób lub zasoby przy użyciu symbolu wybranego na liście symbole.<br/><br/>Aby przejść do edytora dla danego zasobu, wybierz zasób w polu **używane przez** , a następnie wybierz pozycję **Wyświetl Użyj**.|
-|**Nowy**|Otwiera okno dialogowe **Nowy symbol** , które pozwala zdefiniować nazwę i, w razie potrzeby, wartość nowego symbolicznego identyfikatora zasobu.|
-|**Zmień**|Otwiera okno dialogowe **Zmień symbol** , które pozwala zmienić nazwę lub wartość symbolu.<br/><br/>Jeśli symbol dotyczy kontrolki lub zasobu w użyciu, symbol można zmienić tylko z odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [Zarządzanie symbolami](../windows/changing-unassigned-symbols.md).|
+|**Nowe**|Otwiera okno dialogowe **Nowy symbol** , które pozwala zdefiniować nazwę i, w razie potrzeby, wartość nowego symbolicznego identyfikatora zasobu.|
+|**Zmień**|Otwiera okno dialogowe **Zmień symbol** , które pozwala zmienić nazwę lub wartość symbolu.<br/><br/>Jeśli symbol dotyczy kontrolki lub zasobu w użyciu, symbol można zmienić tylko z odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [Zarządzanie symbolami](./changing-a-symbol-or-symbol-name-id.md).|
 |**Wyświetl użycie**|Otwiera zasób zawierający symbol w odpowiednim edytorze zasobów.|
 
 ## <a name="create-symbols"></a>Tworzenie symboli

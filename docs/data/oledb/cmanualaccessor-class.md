@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838103"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504106"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor — Klasa
 
@@ -104,7 +104,7 @@ podczas Wskaźnik do zmiennej, która ma zostać powiązana ze stanem kolumny, j
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć tej funkcji, należy najpierw wywołać metodę [dostępu](../../data/oledb/cmanualaccessor-createaccessor.md). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor` .
+Aby użyć tej funkcji, należy najpierw wywołać metodę [dostępu](#createaccessor). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor` .
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
@@ -148,7 +148,7 @@ podczas Określa, czy parametr, z którym jest skojarzone powiązanie, jest para
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć tej funkcji, należy najpierw wywołać [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Aby użyć tej funkcji, należy najpierw wywołać [CreateParameterAccessor](#createparameteraccessor).
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: isdostępu
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>Parametry
 
 *nBindEntries*<br/>
-podczas Liczba kolumn. Ta liczba powinna być zgodna z liczbą wywołań funkcji [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
+podczas Liczba kolumn. Ta liczba powinna być zgodna z liczbą wywołań funkcji [CManualAccessor:: AddBindEntry](#addbindentry) .
 
 *pBuffer*<br/>
 podczas Wskaźnik do buforu, w którym są przechowywane kolumny wyjściowe.
@@ -210,7 +210,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)należy wywołać tę funkcję.
+Przed wywołaniem [AddParameterEntry](#addparameterentry)należy wywołać tę funkcję.
 
 ## <a name="see-also"></a>Zobacz też
 

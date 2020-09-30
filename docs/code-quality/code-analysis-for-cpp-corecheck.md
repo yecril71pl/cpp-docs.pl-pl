@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389951"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503390"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++
 
-Ta sekcja zawiera listę ostrzeżeń narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++. Aby uzyskać informacje na temat analizy kodu, zobacz [ `/analyze` (analiza kodu)](/cpp/build/reference/analyze-code-analysis) i [Szybki Start: Analiza kodu C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Ta sekcja zawiera listę ostrzeżeń narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++. Aby uzyskać informacje na temat analizy kodu, zobacz [ `/analyze` (analiza kodu)](../build/reference/analyze-code-analysis.md) i [Szybki Start: Analiza kodu C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Niektóre ostrzeżenia należy do więcej niż jednej grupy, a nie wszystkie ostrzeżenia zawierają kompletny temat odwołania.
@@ -196,7 +196,7 @@ Ta *Funkcja* wywołuje funkcję, `constexpr` Jeśli pożądane jest Szacowanie c
 Nie używaj wycinków. Zobacz [podstawowe wytyczne dotyczące języka C++ es. 63](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es63-dont-slice).
 
 [C26465 NO_CONST_CAST_UNNECESSARY](c26465.md)\
-Nie używaj `const_cast` do rzutowania `const` . `const_cast`nie jest wymagane; nie jest usuwana stała lub lotna w ramach tej konwersji. Zobacz [podstawowe wytyczne dotyczące języka C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
+Nie używaj `const_cast` do rzutowania `const` . `const_cast` nie jest wymagane; nie jest usuwana stała lub lotna w ramach tej konwersji. Zobacz [podstawowe wytyczne dotyczące języka C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
 
 [C26466 NO_STATIC_DOWNCAST_POLYMORPHIC](c26466.md)\
 Nie używaj `static_cast` rzutowań. Rzutowanie z typu polimorficznego powinno używać dynamic_cast. Zobacz [podstawowe wytyczne dotyczące języka C++ Type. 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast).
@@ -264,7 +264,7 @@ Wolisz używać `gsl::at()` zamiast niesprawdzonego operatora indeksu. Zobacz [p
 Rozważ użycie `gsl::finally` Jeśli ostateczna akcja jest zamierzona. Zobacz [podstawowe wytyczne dotyczące języka C++: GSL. util: Utilities](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities).
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md)\
-`gsl::span`lub `std::string_view` utworzony na podstawie elementu tymczasowego będzie nieprawidłowy, gdy tymczasowy jest unieważniony. Zobacz [podstawowe wytyczne dotyczące języka C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
+`gsl::span` lub `std::string_view` utworzony na podstawie elementu tymczasowego będzie nieprawidłowy, gdy tymczasowy jest unieważniony. Zobacz [podstawowe wytyczne dotyczące języka C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
 
 ## <a name="deprecated-warnings"></a>Przestarzałe ostrzeżenia
 

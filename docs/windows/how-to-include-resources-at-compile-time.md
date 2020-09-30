@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: e931a0246340e81049df6ed0f8e26a4b91b570c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5ac4cba4e8ad8a08fa1010758c5a343501d3af2c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215198"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504420"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Instrukcje: uwzględnianie zasobów w czasie kompilacji (C++)
 
@@ -40,24 +40,24 @@ Domyślnie wszystkie zasoby znajdują się w jednym pliku skryptu zasobu (. RC),
 
 - Aby uwzględnić zasoby, które są używane przez różne projekty lub które są częścią systemu kontroli wersji kodu źródłowego. Te zasoby muszą znajdować się w centralnej lokalizacji, w której modyfikacje wpłyną na wszystkie projekty.
 
-- Aby uwzględnić zasoby (takie jak zasoby RCDATA), które są niestandardowym formatem. Zasoby RCDATA mają specjalne wymagania, w przypadku których nie można użyć wyrażenia jako wartości pola `nameID`.
+- Aby uwzględnić zasoby (takie jak zasoby RCDATA), które są niestandardowym formatem. Zasoby RCDATA mają specjalne wymagania, w przypadku których nie można użyć wyrażenia jako wartości `nameID` pola.
 
 Jeśli masz sekcje w istniejących plikach. RC, które spełniają którykolwiek z tych warunków, Umieść te sekcje w jednym lub kilku oddzielnych plikach. RC, a następnie dołącz je do projektu przy użyciu okna dialogowego **zasób zawiera** .
 
 ## <a name="resource-includes"></a>Zasób obejmuje
 
-Możesz dodać zasoby z innych plików do projektu w czasie kompilacji, umieszczając je w polu **dyrektywy kompilacji** w oknie dialogowym **zasób zawiera** . Za pomocą okna dialogowego **zasób zawiera** można modyfikować normalne działania środowiska projektu dotyczące przechowywania wszystkich zasobów w pliku Project. RC i wszystkich [symboli](../windows/symbols-resource-identifiers.md) w `Resource.h`.
+Możesz dodać zasoby z innych plików do projektu w czasie kompilacji, umieszczając je w polu **dyrektywy kompilacji** w oknie dialogowym **zasób zawiera** . Za pomocą okna dialogowego **zasób zawiera** można modyfikować normalne działania środowiska projektu dotyczące przechowywania wszystkich zasobów w pliku Project. RC i wszystkich [symboli](../windows/symbols-resource-identifiers.md) w `Resource.h` .
 
 Aby rozpocząć, Otwórz okno dialogowe **zasób zawiera** , klikając prawym przyciskiem myszy plik. rc w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz pozycję **zasób zawiera** i zanotuj następujące właściwości:
 
 | Właściwość | Opis |
 |---|---|
-| **Plik nagłówka symboli** | Pozwala zmienić nazwę pliku nagłówka, w którym są przechowywane definicje symboli dla plików zasobów.<br/><br/>Aby uzyskać więcej informacji, zobacz [zmiana nazw plików nagłówkowych symboli](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Dyrektywy symboli tylko do odczytu** | Umożliwia dołączenie plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane.<br/><br/>Na przykład pliki symboli mają być współużytkowane z innymi projektami. Może to również obejmować pliki MFC. h. Aby uzyskać więcej informacji, zobacz [Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Plik nagłówka symboli** | Pozwala zmienić nazwę pliku nagłówka, w którym są przechowywane definicje symboli dla plików zasobów.<br/><br/>Aby uzyskać więcej informacji, zobacz [zmiana nazw plików nagłówkowych symboli](./changing-a-symbol-or-symbol-name-id.md). |
+| **Dyrektywy symboli tylko do odczytu** | Umożliwia dołączenie plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane.<br/><br/>Na przykład pliki symboli mają być współużytkowane z innymi projektami. Może to również obejmować pliki MFC. h. Aby uzyskać więcej informacji, zobacz [Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych](./changing-a-symbol-or-symbol-name-id.md). |
 | **Dyrektywy czasu kompilacji** | Umożliwia dołączenie plików zasobów, które są tworzone i edytowane niezależnie od zasobów w głównym pliku zasobów, zawierają dyrektywy czasu kompilowania (takie jak dyrektywy, które warunkowo obejmują zasoby) lub zawierają zasoby w formacie niestandardowym.<br/><br/>Możesz również użyć **pola dyrektywy czasu kompilacji** , aby uwzględnić standardowe pliki zasobów MFC. |
 
 > [!NOTE]
-> Wpisy w tych polach tekstowych pojawiają się w pliku. RC oznaczone odpowiednio `TEXTINCLUDE 1`, `TEXTINCLUDE 2`i `TEXTINCLUDE 3`. Aby uzyskać więcej informacji, zobacz [TN035: używanie wielu plików zasobów i plików nagłówkowych C++z wizualizacją ](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
+> Wpisy w tych polach tekstowych pojawiają się w pliku. RC oznaczone przez `TEXTINCLUDE 1` , `TEXTINCLUDE 2` , i `TEXTINCLUDE 3` odpowiednio. Aby uzyskać więcej informacji, zobacz [TN035: używanie wielu plików zasobów i plików nagłówkowych z Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
 Po wprowadzeniu zmian w pliku zasobów przy użyciu okna dialogowego **zasób zawiera** należy zamknąć i ponownie otworzyć plik *. RC* , aby zmiany zaczęły obowiązywać.
 
@@ -79,12 +79,12 @@ Zasoby w plikach zawarte w ten sposób są częścią pliku wykonywalnego w czas
 
 ### <a name="to-find-symbols-in-resources"></a>Aby znaleźć symbole w zasobach
 
-1. Przejdź do menu **Edycja** , > [znaleźć symbol](/visualstudio/ide/go-to).
+1. Przejdź do menu **Edycja**  >  [Znajdź symbol](/visualstudio/ide/go-to).
 
    > [!TIP]
    > Aby używać [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) w wyszukiwaniu, wybierz pozycję [Znajdź w plikach](/visualstudio/ide/reference/find-command) w menu **Edycja** zamiast **symbolu Znajdź**. Zaznacz pole wyboru **Użyj: wyrażenia regularne** w oknie [dialogowym Znajdź](/visualstudio/ide/finding-and-replacing-text) , a następnie w polu **Znajdź** możesz wybrać wyrażenie regularne wyszukiwanie z listy rozwijanej. Po wybraniu wyrażenia z tej listy zostanie on zastąpiony jako tekst wyszukiwania w polu **Znajdź** .
 
-1. W polu **Znajdź** , wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisz akceleratora, który chcesz znaleźć, na przykład `ID_ACCEL1`.
+1. W polu **Znajdź** , wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisz akceleratora, który chcesz znaleźć, na przykład `ID_ACCEL1` .
 
 1. Wybierz dowolną z opcji **Znajdź** i wybierz pozycję **Znajdź dalej**.
 

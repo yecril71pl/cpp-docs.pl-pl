@@ -42,26 +42,26 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: a97c08baaf3c11b0436e52bb4fd4ac380999d69a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e63e63b914b9db64139b9b81a2c749a78ac4a58f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615588"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503861"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń standardowych do kontrolki ActiveX
 
-Zdarzenia giełdowe różnią się od zdarzeń niestandardowych w tym, że są one automatycznie uruchamiane przez klasę [COleControl](reference/colecontrol-class.md). `COleControl`zawiera wstępnie zdefiniowane funkcje członkowskie, które wyzwalają zdarzenia powstałe w wyniku wykonywania typowych akcji. Niektóre typowe akcje implementowane przez funkcję `COleControl` obejmują pojedyncze kliknięcia kontrolki, zdarzenia klawiatury oraz zmiany stanu przycisków myszy. Wpisy mapy zdarzeń dla zdarzeń giełdowych są zawsze poprzedzane prefiksem EVENT_STOCK.
+Zdarzenia giełdowe różnią się od zdarzeń niestandardowych w tym, że są one automatycznie uruchamiane przez klasę [COleControl](reference/colecontrol-class.md). `COleControl` zawiera wstępnie zdefiniowane funkcje członkowskie, które wyzwalają zdarzenia powstałe w wyniku wykonywania typowych akcji. Niektóre typowe akcje implementowane przez funkcję `COleControl` obejmują pojedyncze kliknięcia kontrolki, zdarzenia klawiatury oraz zmiany stanu przycisków myszy. Wpisy mapy zdarzeń dla zdarzeń giełdowych są zawsze poprzedzane prefiksem EVENT_STOCK.
 
-## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>Zdarzenia giełdowe obsługiwane przez Kreatora dodawania zdarzenia
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a> Zdarzenia giełdowe obsługiwane przez Kreatora dodawania zdarzenia
 
-`COleControl`Klasa zawiera dziesięć zdarzeń podstawowych wymienionych w poniższej tabeli. Możesz określić żądane zdarzenia w kontrolce za pomocą [Kreatora dodawania zdarzenia](../ide/add-event-wizard.md).
+`COleControl`Klasa zawiera dziesięć zdarzeń podstawowych wymienionych w poniższej tabeli. Możesz określić żądane zdarzenia w kontrolce za pomocą [Kreatora dodawania zdarzenia](../ide/adding-an-event-visual-cpp.md#add-event-wizard).
 
 ### <a name="stock-events"></a>Zdarzenia giełdowe
 
 |Zdarzenie|Funkcja uruchamiania|Komentarze|
 |-----------|---------------------|--------------|
-|Kliknij pozycję|**void FireClick ()**|Uruchamiany, gdy kontrolka przechwytuje mysz, zostanie odebrana wiadomość dowolnego **BUTTONUP** (Left, Middle lub right), a przycisk zostanie zwolniony przez kontrolkę. Zdarzenia MouseDown i MouseUp są wykonywane przed tym zdarzeniem.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_CLICK ()**|
+|Kliknij|**void FireClick ()**|Uruchamiany, gdy kontrolka przechwytuje mysz, zostanie odebrana wiadomość dowolnego **BUTTONUP** (Left, Middle lub right), a przycisk zostanie zwolniony przez kontrolkę. Zdarzenia MouseDown i MouseUp są wykonywane przed tym zdarzeniem.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_CLICK ()**|
 |DblClick|**void FireDblClick ()**|Podobne do kliknięcia, ale wywoływane po odebraniu komunikatu **BUTTONDBLCLK** .<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_DBLCLICK ()**|
 |Błąd|**void FireError — (SCODE***SCODE* **, LPCSTR** `lpszDescription` **, uint** `nHelpID` **= 0)**        |Uruchamiany w przypadku wystąpienia błędu w kontrolce ActiveX poza zakresem wywołania metody lub dostępu do właściwości.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_ERROREVENT ()**|
 |Zdarzenia|**void FireKeyDown (krótkie** `nChar` **, krótkie** `nShiftState` **)**      |Uruchamiany po `WM_SYSKEYDOWN` `WM_KEYDOWN` odebraniu komunikatu lub.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_KEYDOWN ()**|
@@ -72,7 +72,7 @@ Zdarzenia giełdowe różnią się od zdarzeń niestandardowych w tym, że są o
 |MouseUp|**void FireMouseUp (Short** `nButton` **, Short** `nShiftState` **, float***x* **, float***y***)**          |Uruchamiany w przypadku otrzymania dowolnego **BUTTONUP** (Left, Middle lub right). Przechwytywanie myszy jest uwalniane przed uruchomieniem tego zdarzenia.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_MOUSEUP ()**|
 |ReadyStateChange|**void FireReadyStateChange ()**|Uruchamiany, gdy kontrolka przechodzi do następnego stanu gotowości ze względu na ilość odebranych danych.<br /><br /> Wpis mapy zdarzeń: **EVENT_STOCK_READYSTATECHANGE ()**|
 
-## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>Dodawanie zdarzenia giełdowego za pomocą Kreatora dodawania zdarzenia
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a> Dodawanie zdarzenia giełdowego za pomocą Kreatora dodawania zdarzenia
 
 Dodanie zdarzeń giełdowych wymaga mniejszej ilości pracy niż dodanie zdarzeń niestandardowych, ponieważ wyzwolenie rzeczywistego zdarzenia jest obsługiwane automatycznie przez klasę bazową `COleControl` . Poniższa procedura dodaje zdarzenie podstawowe do kontrolki, która została opracowana za pomocą [Kreatora kontrolek ActiveX MFC](reference/mfc-activex-control-wizard.md). Zdarzenie wywoływane przez naciśnięcie klawisza i jest wyzwalane po naciśnięciu przycisku, a kontrolka jest aktywna. Ta procedura służy również do dodawania innych zdarzeń giełdowych. Zastąp wybraną nazwę zdarzenia podstawowego dla KeyPress.
 
@@ -90,7 +90,7 @@ Dodanie zdarzeń giełdowych wymaga mniejszej ilości pracy niż dodanie zdarze�
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>Dodaj zmiany kreatora zdarzeń dla zdarzeń giełdowych
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a> Dodaj zmiany kreatora zdarzeń dla zdarzeń giełdowych
 
 Ponieważ zdarzenia giełdowe są obsługiwane przez klasę bazową formantu, Kreator dodawania zdarzeń nie zmienia deklaracji klasy w żaden sposób. Dodaje zdarzenie do mapy zdarzeń kontrolki i tworzy wpis w nim. Plik IDL. Poniższy wiersz jest dodawany do mapy zdarzeń kontrolki, która znajduje się w implementacji klasy kontrolki (. CPP):
 

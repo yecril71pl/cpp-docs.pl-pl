@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0feff4e595be7929fd0bc80eb53a0a65a9a61f43
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040044"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502955"
 ---
 # <a name="unordered_set-class"></a>unordered_set — Klasa
 
@@ -214,7 +214,7 @@ Klasa alokatora.
 |[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
 |[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[find](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
 |[wstawienia](#insert)|Dodaje elementy.|
@@ -894,7 +894,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedSet.contains(2) << '\n';
     std::cout << theUnorderedSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```

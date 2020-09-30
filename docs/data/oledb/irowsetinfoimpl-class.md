@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840391"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504051"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 
@@ -69,7 +69,7 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 ## <a name="remarks"></a>Uwagi
 
-Obowiązkowy interfejs dla zestawów wierszy. Ta klasa implementuje właściwości zestawu wierszy przy użyciu [mapy zestawu właściwości](../../data/oledb/begin-propset-map.md) zdefiniowanej w klasie poleceń. Chociaż Klasa zestawu wierszy wydaje się używać klas poleceń klasy, zestaw wierszy jest dostarczany z własną kopią właściwości czasu wykonywania, gdy jest tworzony przez polecenie lub obiekt sesji.
+Obowiązkowy interfejs dla zestawów wierszy. Ta klasa implementuje właściwości zestawu wierszy przy użyciu [mapy zestawu właściwości](./macros-for-ole-db-provider-templates.md#begin_propset_map) zdefiniowanej w klasie poleceń. Chociaż Klasa zestawu wierszy wydaje się używać klas poleceń klasy, zestaw wierszy jest dostarczany z własną kopią właściwości czasu wykonywania, gdy jest tworzony przez polecenie lub obiekt sesji.
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 

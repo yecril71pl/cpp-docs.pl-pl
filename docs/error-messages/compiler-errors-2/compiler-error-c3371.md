@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3371
 ms.assetid: f7ecf1aa-ed0a-4f73-81e5-62cf98f88ea1
-ms.openlocfilehash: d30df6edc546fc539bdc9938b4ca35b521f96fd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f4b4b516c3c06bd575b114da62030c94fcee6806
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758609"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503169"
 ---
 # <a name="compiler-error-c3371"></a>Błąd kompilatora C3371
 
 "idl_module": tylko właściwość "name" jest dozwolona w tym miejscu
 
-[idl_module](../../windows/idl-module.md) użycie bezpośrednio w deklaracji funkcji nie może mieć żadnych parametrów innych niż nazwa.
+[idl_module](../../windows/attributes/idl-module.md) użycie bezpośrednio w deklaracji funkcji nie może mieć żadnych parametrów innych niż nazwa.
 
 Poniższy przykład generuje C3371:
 

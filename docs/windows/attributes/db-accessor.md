@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833143"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503553"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -25,7 +25,7 @@ Grupuje `db_column` atrybuty, które uczestniczą w `IAccessor` powiązaniu.
 
 #### <a name="parameters"></a>Parametry
 
-*num*<br/>
+*numerowan*<br/>
 Określa numer metody dostępu (indeks liczby całkowitej liczony od zera). Numery metod dostępu należy określić w kolejności rosnącej, przy użyciu liczb całkowitych lub zdefiniowanych wartości.
 
 *Automatycznie*<br/>
@@ -33,7 +33,7 @@ Wartość logiczna określająca, czy metoda dostępu jest pobierana automatyczn
 
 ## <a name="remarks"></a>Uwagi
 
-**db_accessor** definiuje podstawowe metody dostępu OLE DB dla kolejnych `db_column` i `db_param` atrybutów w tej samej klasie lub funkcji. **db_accessor** można używać na poziomie elementu członkowskiego i służy do grupowania `db_column` atrybutów, które uczestniczą w `IAccessor` powiązaniu opartym na OLE DB. Jest używany w połączeniu z `db_table` `db_command` atrybutami lub. Wywołanie tego atrybutu jest podobne do wywoływania [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makr.
+**db_accessor** definiuje podstawowe metody dostępu OLE DB dla kolejnych `db_column` i `db_param` atrybutów w tej samej klasie lub funkcji. **db_accessor** można używać na poziomie elementu członkowskiego i służy do grupowania `db_column` atrybutów, które uczestniczą w `IAccessor` powiązaniu opartym na OLE DB. Jest używany w połączeniu z `db_table` `db_command` atrybutami lub. Wywołanie tego atrybutu jest podobne do wywoływania [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) i [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) makr.
 
 **db_accessor** generuje zestaw wierszy i wiąże go z odpowiednimi mapami dostępu. Jeśli nie wywołasz **db_accessor**, metoda dostępu 0 zostanie wygenerowana automatycznie, a wszystkie powiązania kolumn zostaną zamapowane na ten blok dostępu.
 

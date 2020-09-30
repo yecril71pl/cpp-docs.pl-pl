@@ -16,12 +16,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: e5f5b75057985dc769c8f1ab84765d628dc42fcc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040308"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504189"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Analiza kodu C/C++ — Omówienie
 
@@ -45,7 +45,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>Obsługa #pragma
 
-Można użyć `#pragma` dyrektywy do traktowania ostrzeżeń jako błędów, włączania lub wyłączania ostrzeżeń oraz pomijania ostrzeżeń dla poszczególnych wierszy kodu. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Można użyć `#pragma` dyrektywy do traktowania ostrzeżeń jako błędów, włączania lub wyłączania ostrzeżeń oraz pomijania ostrzeżeń dla poszczególnych wierszy kodu. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="annotation-support"></a>Obsługa adnotacji
 
@@ -59,7 +59,7 @@ Można wymagać, aby wszystkie operacje ewidencjonowania kodu źródłowego spe�
 
 W celu uruchomienia narzędzia do analizy kodu w ramach procesu kompilacji DevOps platformy Azure można użyć zintegrowanych funkcji systemu kompilacji. Aby uzyskać więcej informacji, zobacz [Azure Pipelines](/azure/devops/pipelines/index).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Szybki start: analiza kodu C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Przewodnik: Analizowanie kodu C/C++ pod kątem wad](walkthrough-analyzing-c-cpp-code-for-defects.md)

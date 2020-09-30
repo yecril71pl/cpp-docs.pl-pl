@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230496"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503886"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
 
@@ -40,7 +40,7 @@ Właściwości niestandardowe są dostępne w czterech odmianach implementacji: 
 
    Implementacja sparametryzowanej jest obsługiwana przez Kreatora dodawania właściwości. Właściwość sparametryzowane (czasami nazywana tablicą właściwości) może być używana do uzyskiwania dostępu do zestawu wartości za pomocą pojedynczej właściwości kontrolki. Makro wpisu mapy wysyłania dla tej implementacji ma DISP_PROPERTY_PARAM. Aby uzyskać więcej informacji na temat implementowania tego typu, zobacz [implementowanie właściwości sparametryzowanej](mfc-activex-controls-advanced-topics.md) w formantach ActiveX artykułów: Tematy zaawansowane.
 
-## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>Za pomocą Kreatora dodawania właściwości, aby dodać właściwość niestandardową
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a> Za pomocą Kreatora dodawania właściwości, aby dodać właściwość niestandardową
 
 Poniższa procedura przedstawia Dodawanie właściwości niestandardowej CircleOffset, która używa implementacji metod get/set. Właściwość niestandardowa CircleOffset umożliwia użytkownikowi kontrolce przesunięcie okręgu od środka prostokąta obwiedni kontrolki. Procedura dodawania właściwości niestandardowych z implementacją inną niż metody get/set jest bardzo podobna.
 
@@ -56,7 +56,7 @@ Tę samą procedurę można także użyć w celu dodania innych niestandardowych
 
 1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.
 
-   Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/names-add-property-wizard.md).
+   Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. W polu **Nazwa właściwości** wpisz *CircleOffset*.
 
@@ -68,7 +68,7 @@ Tę samą procedurę można także użyć w celu dodania innych niestandardowych
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>Dodawanie zmian kreatora właściwości dla właściwości niestandardowych
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Dodawanie zmian kreatora właściwości dla właściwości niestandardowych
 
 Po dodaniu właściwości niestandardowej CircleOffset Kreator dodawania właściwości wprowadza zmiany do nagłówka (. H) i implementację (. CPP) pliki klasy Control.
 
@@ -92,7 +92,7 @@ Wreszcie implementacje `GetCircleOffset` `SetCircleOffset` funkcji i są dodawan
 
 Należy zauważyć, że Kreator dodawania właściwości automatycznie dodaje wywołanie do [SetModifiedFlag](reference/colecontrol-class.md#setmodifiedflag)do treści funkcji Set. Wywołanie tej funkcji oznacza kontrolkę jako zmodyfikowaną. Jeśli formant został zmodyfikowany, jego nowy stan zostanie zapisany podczas zapisywania kontenera. Ta funkcja powinna być wywoływana zawsze, gdy właściwość jest zapisywana jako część trwałego stanu kontrolki, zmienia wartość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)<br/>
 [Kontrolki ActiveX MFC: właściwości](mfc-activex-controls-properties.md)<br/>

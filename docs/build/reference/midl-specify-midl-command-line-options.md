@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3f1b6526f51e5aaa48008792361d3e63249d9f16
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492720"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502850"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
 
@@ -24,7 +24,7 @@ Określa plik odpowiedzi dla opcji wiersza polecenia MIDL
 
 ## <a name="syntax"></a>Składnia
 
-> **/MIDL:\@** <em>plik</em>
+> **/MIDL: \@ ** <em>plik</em>
 
 ## <a name="arguments"></a>Argumenty
 
@@ -39,21 +39,21 @@ Plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja** > **konsolidator** > **osadzony** właściwości.
+1. Wybierz stronę właściwości **Konfiguracja**  >  **konsolidator**  >  **osadzony** właściwości.
 
 1. Zmodyfikuj właściwość **MIDL Commands** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)<br/>
-[/IDLOUT (Nazwij wyjściowe pliki MIDL)](idlout-name-midl-output-files.md)<br/>
-[/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/TLBOUT (Nazywanie pliku .TLB)](tlbout-name-dot-tlb-file.md)<br/>
-[Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)
+[MSVC Opcje konsolidatora](linker-options.md)<br/>
+[/IDLOUT (Nazwij MIDL pliki wyjściowe)](idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (Name. Plik TLB)](tlbout-name-dot-tlb-file.md)<br/>
+[Kompilowanie programu opartego na atrybutach](../../windows/attributes/cpp-attributes-com-net.md)

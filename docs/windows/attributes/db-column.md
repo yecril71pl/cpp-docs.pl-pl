@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686486"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503547"
 ---
 # <a name="db_column"></a>db_column
 
@@ -50,7 +50,7 @@ Obowiązkowe Zmienna członkowska używana do przechowywania rozmiaru kolumny w 
 
 ## <a name="remarks"></a>Uwagi
 
-**Db_column** wiąże określoną kolumnę tabeli ze zmienną w zestawie wierszy. Ogranicza dane elementów członkowskich, które mogą uczestniczyć w `IAccessor` powiązaniu opartym na OLE DB. Ten atrybut służy do ustawiania mapy kolumn zwykle zdefiniowanej przy użyciu OLE DB makr [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)i [COLUMN_ENTRY](../../data/oledb/column-entry.md). Umożliwiają one manipulowanie OLE DB [strukturą DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) , aby powiązać określoną kolumnę. Każdy element członkowski, który jest oznaczony za pomocą atrybutu **Db_column** , będzie zajmował jeden wpis w mapie kolumn w postaci wpisu kolumny. W związku z tym należy wywołać ten atrybut, w którym można umieścić mapę kolumn, czyli w klasie polecenia lub tabeli.
+**Db_column** wiąże określoną kolumnę tabeli ze zmienną w zestawie wierszy. Ogranicza dane elementów członkowskich, które mogą uczestniczyć w `IAccessor` powiązaniu opartym na OLE DB. Ten atrybut służy do ustawiania mapy kolumn zwykle zdefiniowanej przy użyciu OLE DB makr [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)i [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Umożliwiają one manipulowanie OLE DB [strukturą DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) , aby powiązać określoną kolumnę. Każdy element członkowski, który jest oznaczony za pomocą atrybutu **Db_column** , będzie zajmował jeden wpis w mapie kolumn w postaci wpisu kolumny. W związku z tym należy wywołać ten atrybut, w którym można umieścić mapę kolumn, czyli w klasie polecenia lub tabeli.
 
 Użyj **Db_column** w połączeniu z atrybutami [DB_Table](db-table.md) lub [db_command](db-command.md) .
 
@@ -107,7 +107,7 @@ class CProducts {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

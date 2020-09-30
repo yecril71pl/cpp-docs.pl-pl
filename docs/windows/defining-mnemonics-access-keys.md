@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222072"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504455"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Instrukcje: definiowanie dostępu i wartości kontroli (C++)
 
@@ -103,14 +103,14 @@ Możesz dodać wartości do kontrolki pola kombi, o ile jest otwarty **Edytor ok
 
 1. Naciśnij klawisz **Enter** po zakończeniu dodawania wartości.
 
-Aby uzyskać informacje na temat powiększania części listy rozwijanej pola kombi, zobacz [Ustawianie rozmiaru pola kombi i jego listy rozwijanej](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).
+Aby uzyskać informacje na temat powiększania części listy rozwijanej pola kombi, zobacz [Ustawianie rozmiaru pola kombi i jego listy rozwijanej](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Nie można dodawać wartości do projektów Win32 przy użyciu tej procedury (Właściwość **Data** jest wyszarzona dla projektów Win32). Ponieważ projekty Win32 nie mają bibliotek, które dodają tę możliwość, należy programowo dodać wartości do pola kombi z projektem Win32.
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Aby przetestować wygląd wartości w polu kombi
 
-1. Po wprowadzeniu wartości we właściwości **dane** wybierz przycisk **Testuj** na [pasku narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Po wprowadzeniu wartości we właściwości **dane** wybierz przycisk **Testuj** na [pasku narzędzi edytora okien dialogowych](./dialog-editor.md).
 
 1. Spróbuj przewinięcie w dół listy całych wartości. Wartości są wyświetlane dokładnie tak, jak zostały wpisane we właściwości **dane** w oknie **Właściwości** . Nie ma sprawdzania pisowni ani wielkich liter.
 
@@ -118,7 +118,7 @@ Aby uzyskać informacje na temat powiększania części listy rozwijanej pola ko
 
 ## <a name="radio-button-values"></a>Wartości przycisków radiowych
 
-Po dodaniu przycisków radiowych do okna dialogowego Traktuj je jako grupę, ustawiając właściwość **grupy** w oknie **Właściwości** dla pierwszego przycisku w grupie. Identyfikator kontrolki dla tego przycisku radiowego pojawia się w [Kreatorze dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), co umożliwia dodanie zmiennej składowej dla grupy przycisków radiowych.
+Po dodaniu przycisków radiowych do okna dialogowego Traktuj je jako grupę, ustawiając właściwość **grupy** w oknie **Właściwości** dla pierwszego przycisku w grupie. Identyfikator kontrolki dla tego przycisku radiowego pojawia się w [Kreatorze dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), co umożliwia dodanie zmiennej składowej dla grupy przycisków radiowych.
 
 Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym. Dodaj każdą grupę, wykonując poniższą procedurę.
 
@@ -139,7 +139,7 @@ Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym
 
 1. Kliknij prawym przyciskiem myszy pierwszą kontrolkę przycisk radiowy w kolejności tabulacji (formant dominujący i jeden z właściwością **grupy** ustawioną na **true**) i wybierz polecenie **Dodaj zmienną**.
 
-1. W [Kreatorze dodawania zmiennej członkowskiej](../ide/add-member-variable-wizard.md)zaznacz pole wyboru **zmienna kontroli** , a następnie wybierz przycisk radiowy **wartość** .
+1. W [Kreatorze dodawania zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)zaznacz pole wyboru **zmienna kontroli** , a następnie wybierz przycisk radiowy **wartość** .
 
    - W polu **Nazwa zmiennej** wpisz nazwę nowej zmiennej członkowskiej.
 
@@ -151,7 +151,7 @@ Można mieć więcej niż jedną grupę przycisków radiowych w oknie dialogowym
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie kontrolkami okien dialogowych](controls-in-dialog-boxes.md)<br/>
 [Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)<br/>

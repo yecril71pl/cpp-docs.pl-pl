@@ -3,12 +3,12 @@ title: 'Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwe
 description: Sposoby używania istniejących aplikacji i bibliotek kodu w aplikacjach platforma uniwersalna systemu Windows.
 ms.date: 09/04/2020
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1e946d588f1a14018ebb11a60b319c2d54658f25
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: fd23c875d67654e96a828f4dba412dd74652912a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609131"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503678"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows
 
@@ -30,7 +30,7 @@ Aby uwidocznić funkcjonalność dla obiektów wywołujących w innych językach
 
 Powyższe dyskusje nie dotyczą składników modelu COM, które muszą być obsługiwane inaczej. Jeśli w pliku EXE lub DLL znajduje się serwer COM, można go użyć w uniwersalnym projekcie systemu Windows. Spakuj go jako [składnik COM bez rejestracji](/windows/win32/sbscs/creating-registration-free-com-objects), Dodaj go do projektu jako plik zawartości i utwórz jego wystąpienie przy użyciu [`CoCreateInstanceFromApp`](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) . Aby uzyskać więcej informacji, zobacz [Korzystanie z biblioteki DLL Free-com w projekcie w Sklepie Windows w języku C++](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project).
 
-Jeśli chcesz przenieść istniejącą bibliotekę COM do platformy UWP, możliwe jest również przekonwertowanie jej na składnik środowisko wykonawcze systemu Windows. Zalecamy użycie biblioteki C++/WinRT dla takich portów, ale możliwe jest również korzystanie z [środowisko wykonawcze systemu Windows biblioteki szablonów c++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). WRL jest przestarzała i nie obsługuje wszystkich funkcji ATL i OLE. Czy taki port jest wykonalny, zależy od funkcji COM, ATL i OLE, których wymaga składnik.
+Jeśli chcesz przenieść istniejącą bibliotekę COM do platformy UWP, możliwe jest również przekonwertowanie jej na składnik środowisko wykonawcze systemu Windows. Zalecamy użycie biblioteki C++/WinRT dla takich portów, ale możliwe jest również korzystanie z [środowisko wykonawcze systemu Windows biblioteki szablonów c++ (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md). WRL jest przestarzała i nie obsługuje wszystkich funkcji ATL i OLE. Czy taki port jest wykonalny, zależy od funkcji COM, ATL i OLE, których wymaga składnik.
 
 W zależności od wybranych scenariuszy programistycznych należy pamiętać o kilku definicjach makr. Możesz użyć tych makr w kodzie, aby kompilować kod warunkowo w klasycznym środowisku Win32 i platformy UWP.
 

@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 64f1ef513f34f11f2569f0afb854a0e2762082b6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415844"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503484"
 ---
 # <a name="sal-annotations"></a>Adnotacje SAL
 
-Jeśli przebadasz pliki nagłówkowe biblioteki, możesz zauważyć, że niektóre nietypowe adnotacje, na przykład `_In_z` i `_Out_z_cap_(_Size)`. Są to przykłady języka kodu źródłowego firmy Microsoft (SAL), który zawiera zestaw adnotacji do opisywania, w jaki sposób funkcja używa jej parametrów, na przykład założeń na ich temat oraz gwarancji, które wykonuje po zakończeniu. Plik nagłówkowy \<sal. h > definiuje adnotacje.
+Jeśli przebadasz pliki nagłówkowe biblioteki, możesz zauważyć, że niektóre nietypowe adnotacje, na przykład, `_In_z` i `_Out_z_cap_(_Size)` . Są to przykłady języka kodu źródłowego firmy Microsoft (SAL), który zawiera zestaw adnotacji do opisywania, w jaki sposób funkcja używa jej parametrów, na przykład założeń na ich temat oraz gwarancji, które wykonuje po zakończeniu. Plik nagłówkowy \<sal.h> definiuje adnotacje.
 
-Aby uzyskać więcej informacji o korzystaniu z adnotacji SAL w programie Visual Studio, zobacz [Używanie adnotacji sal w celu zmniejszenia wad języka CC++ /Code](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+Aby uzyskać więcej informacji na temat używania adnotacji SAL w programie Visual Studio, zobacz [Używanie adnotacji sal w celu zmniejszenia wad kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

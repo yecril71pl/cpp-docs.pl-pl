@@ -3,12 +3,12 @@ title: Aplikacje klasyczne (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404964"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504437"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
@@ -38,13 +38,13 @@ Dowolna aplikacja klasyczna w języku C++ może korzystać z klas środowiska ur
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Aplikacje konsoli systemu Windows w języku C++](console-applications-in-visual-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsolowa Win32 (lub win64) nie ma własnego okna i nie zawiera pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pomocą wiersza polecenia.|
+|[Aplikacje konsoli systemu Windows w języku C++](./overview-of-windows-programming-in-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsolowa Win32 (lub win64) nie ma własnego okna i nie zawiera pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pomocą wiersza polecenia.|
 |[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację klasyczną systemu Windows.|
-|[Tworzenie pustej aplikacji klasycznej systemu Windows](creating-an-empty-windows-desktop-application.md)|Jak utworzyć projekt pulpitu systemu Windows, który nie ma plików domyślnych.|
-|[Dodawanie plików do pustych aplikacji Win32](adding-files-to-an-empty-win32-applications.md)|Jak dodać pliki do pustego projektu.|
+|[Tworzenie pustej aplikacji klasycznej systemu Windows](./overview-of-windows-programming-in-cpp.md)|Jak utworzyć projekt pulpitu systemu Windows, który nie ma plików domyślnych.|
+|[Dodawanie plików do pustych aplikacji Win32](./overview-of-windows-programming-in-cpp.md)|Jak dodać pliki do pustego projektu.|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i inne zasoby do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Linki do zawartości na potrzeby tworzenia gier w języku C++.|
-|[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny. lib.|
+|[Przewodnik: Tworzenie i używanie biblioteki statycznej](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny. lib.|
 |[Instrukcje: korzystanie z zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera kroki konfigurowania projektu do kompilowania przy użyciu zestawu SDK systemu Windows 10.|
 
 ## <a name="related-articles"></a>Powiązane artykuły

@@ -99,12 +99,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 07fbdf7dfcd82937721955c5ba08e2241df162e5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846540"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504037"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra i funkcje globalne dla szablonów konsumentów OLE DB
 
@@ -169,7 +169,7 @@ Szablony konsumentów OLE DB obejmują następujące makra i funkcje globalne:
 
 | Nazwa | Opis |
 |-|-|
-|[DEFINE_COMMAND](#define_command)|Określa polecenie, które zostanie użyte do utworzenia zestawu wierszy przy użyciu klasy [CCommand](../../data/oledb/ccommand-class.md) . Akceptuje tylko typy ciągów zgodne z określonym typem aplikacji (ANSI lub Unicode). Zaleca się używanie [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) zamiast DEFINE_COMMAND.|
+|[DEFINE_COMMAND](#define_command)|Określa polecenie, które zostanie użyte do utworzenia zestawu wierszy przy użyciu klasy [CCommand](../../data/oledb/ccommand-class.md) . Akceptuje tylko typy ciągów zgodne z określonym typem aplikacji (ANSI lub Unicode). Zaleca się używanie [DEFINE_COMMAND_EX](#define_command_ex) zamiast DEFINE_COMMAND.|
 |[DEFINE_COMMAND_EX](#define_command_ex)|Określa polecenie, które zostanie użyte do utworzenia zestawu wierszy przy użyciu klasy [CCommand](../../data/oledb/ccommand-class.md) . Obsługuje aplikacje ANSI i Unicode.|
 
 ## <a name="parameter-map-macros"></a>Makra mapy parametrów
@@ -211,7 +211,7 @@ BEGIN_ACCESSOR(num, bAuto)
 
 #### <a name="parameters"></a>Parametry
 
-*num*<br/>
+*numerowan*<br/>
 podczas Numer przesunięcia zerowego dla metody dostępu w tej mapie metody dostępu.
 
 *bAuto*<br/>
@@ -223,7 +223,7 @@ W przypadku wielu metod dostępu w zestawie wierszy należy określić BEGIN_ACC
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Zobacz [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
 ### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a> BEGIN_ACCESSOR_MAP
 
@@ -240,14 +240,14 @@ BEGIN_ACCESSOR_MAP(x, num)
 *x*<br/>
 podczas Nazwa klasy rekordu użytkownika.
 
-*num*<br/>
+*numerowan*<br/>
 podczas Liczba metod dostępu w tej mapie metody dostępu.
 
 #### <a name="remarks"></a>Uwagi
 
 W przypadku wielu metod dostępu w zestawie wierszy należy określić BEGIN_ACCESSOR_MAP na początku i użyć makra BEGIN_ACCESSOR dla każdego indywidualnego metody dostępu. Makro BEGIN_ACCESSOR zostało wykonane z makrem END_ACCESSOR. Mapa akcesora została zakończona przy użyciu makra END_ACCESSOR_MAP.
 
-Jeśli w rekordzie użytkownika istnieje tylko jedna metoda dostępu, użyj makra [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+Jeśli w rekordzie użytkownika istnieje tylko jedna metoda dostępu, użyj makra [BEGIN_COLUMN_MAP](#begin_column_map).
 
 #### <a name="example"></a>Przykład
 
@@ -310,7 +310,7 @@ Dla wielu metod dostępu w zestawie wierszy należy określić BEGIN_ACCESSOR_MA
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Zobacz [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
 ### <a name="end_accessor_map"></a><a name="end_accessor_map"></a> END_ACCESSOR_MAP
 
@@ -328,7 +328,7 @@ Dla wielu metod dostępu w zestawie wierszy należy określić BEGIN_ACCESSOR_MA
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Zobacz [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
 ### <a name="begin_column_map"></a><a name="begin_column_map"></a> BEGIN_COLUMN_MAP
 
@@ -347,7 +347,7 @@ podczas Nazwa klasy rekordu użytkownika, która pochodzi od `CAccessor` .
 
 #### <a name="remarks"></a>Uwagi
 
-To makro jest używane w przypadku pojedynczej metody dostępu dla zestawu wierszy. Jeśli masz wiele metod dostępu w zestawie wierszy, użyj [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+To makro jest używane w przypadku pojedynczej metody dostępu dla zestawu wierszy. Jeśli masz wiele metod dostępu w zestawie wierszy, użyj [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
 Makro BEGIN_COLUMN_MAP zostało wykonane z makrem END_COLUMN_MAP. To makro jest używane, gdy w rekordzie użytkownika jest wymagana tylko jedna metoda dostępu.
 
@@ -389,7 +389,7 @@ Zobacz [Jak mogę pobrać obiekt BLOB?](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_length"></a><a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro pobiera również długość w bajtach kolumny obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](#blob_entry), z tą różnicą, że to makro pobiera również długość w bajtach kolumny obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -411,7 +411,7 @@ podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OL
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 określoną Długość (rzeczywista) w bajtach kolumny obiektu BLOB.
 
 #### <a name="example"></a>Przykład
@@ -420,7 +420,7 @@ Zobacz [Jak mogę pobrać obiekt BLOB?](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro pobiera również długość i stan kolumny obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](#blob_entry), z tą różnicą, że to makro pobiera również długość i stan kolumny obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -448,7 +448,7 @@ podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OL
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 określoną Długość (rzeczywista) w bajtach kolumny obiektu BLOB.
 
 *Stany*<br/>
@@ -460,7 +460,7 @@ Zobacz [Jak mogę pobrać obiekt BLOB?](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_status"></a><a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-Używane z BEGIN_COLUMN_MAP lub BEGIN_ACCESSOR_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro pobiera również stan kolumny obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP lub BEGIN_ACCESSOR_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](#blob_entry), z tą różnicą, że to makro pobiera również stan kolumny obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -491,7 +491,7 @@ Zobacz [Jak mogę pobrać obiekt BLOB?](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_name"></a><a name="blob_name"></a> BLOB_NAME
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro Pobiera nazwę kolumny zamiast numeru kolumny.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_ENTRY](#blob_entry), z tą różnicą, że to makro Pobiera nazwę kolumny zamiast numeru kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -519,7 +519,7 @@ Zobacz [Jak mogę pobrać obiekt BLOB?](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_name_length"></a><a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro pobiera również długość w bajtach kolumny danych obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](#blob_name), z tą różnicą, że to makro pobiera również długość w bajtach kolumny danych obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -541,12 +541,12 @@ podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OL
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 określoną Długość (rzeczywista) w bajtach kolumny obiektu BLOB.
 
 ### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro pobiera również długość i stan kolumny dane obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](#blob_name), z tą różnicą, że to makro pobiera również długość i stan kolumny dane obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -568,7 +568,7 @@ podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OL
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 określoną Długość (rzeczywista) w bajtach kolumny obiektu BLOB.
 
 *Stany*<br/>
@@ -576,7 +576,7 @@ określoną Stan pola obiektu BLOB.
 
 ### <a name="blob_name_status"></a><a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro pobiera również stan kolumny dane obiektu BLOB.
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP do powiązania dużego obiektu binarnego ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobnie jak [BLOB_NAME](#blob_name), z tą różnicą, że to makro pobiera również stan kolumny dane obiektu BLOB.
 
 #### <a name="syntax"></a>Składnia
 
@@ -690,15 +690,15 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 Makro COLUMN_ENTRY jest używane w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 #### <a name="example"></a>Przykład
 
-Zobacz przykłady w tematach makr, [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Zobacz przykłady w tematach makr, [BEGIN_COLUMN_MAP](#begin_column_map) i [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
 ### <a name="column_entry_ex"></a><a name="column_entry_ex"></a> COLUMN_ENTRY_EX
 
@@ -732,7 +732,7 @@ podczas Skala do użycia podczas pobierania danych i *wType* jest `DBTYPE_NUMERI
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -742,15 +742,15 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 Makro COLUMN_ENTRY_EX jest używane w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Zobacz [BOOKMARK_ENTRY](#bookmark_entry).
 
 ### <a name="column_entry_length"></a><a name="column_entry_length"></a> COLUMN_ENTRY_LENGTH
 
@@ -772,18 +772,18 @@ podczas Numer kolumny, zaczynając od 1. Zakładka odpowiada zerowej kolumnie.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
 To makro obsługuje zmienną *długości* . Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a> COLUMN_ENTRY_LENGTH_STATUS
 
@@ -805,7 +805,7 @@ podczas Numer kolumny.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -815,11 +815,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 Użyj tego makra, gdy chcesz obsługiwać zmienne długości i stanu. Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_ps"></a><a name="column_entry_ps"></a> COLUMN_ENTRY_PS
 
@@ -851,11 +851,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 Pozwala określić precyzję i skalę kolumny, która ma zostać powiązana. Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a> COLUMN_ENTRY_PS_LENGTH
 
@@ -883,18 +883,18 @@ podczas Skala kolumny, która ma zostać powiązana.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
 Pozwala określić precyzję i skalę kolumny, która ma zostać powiązana. To makro obsługuje zmienną *długości* . Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a> COLUMN_ENTRY_PS_LENGTH_STATUS
 
@@ -922,7 +922,7 @@ podczas Skala kolumny, która ma zostać powiązana.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -932,11 +932,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 Pozwala określić precyzję i skalę kolumny, która ma zostać powiązana. Użyj tego makra, gdy chcesz obsługiwać zmienne długości i stanu. Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a> COLUMN_ENTRY_PS_STATUS
 
@@ -971,11 +971,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 Pozwala określić precyzję i skalę kolumny, która ma zostać powiązana. To makro obsługuje zmienną *stanu* . Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_status"></a><a name="column_entry_status"></a> COLUMN_ENTRY_STATUS
 
@@ -1004,11 +1004,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 To makro obsługuje zmienną *stanu* . Jest on używany w następujących miejscach:
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_entry_type"></a><a name="column_entry_type"></a> COLUMN_ENTRY_TYPE
 
@@ -1033,7 +1033,7 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-To makro jest wyspecjalizowaną odmianą [COLUMN_ENTRY](../../data/oledb/column-entry.md) makro, które zapewnia metodę określania typu danych.
+To makro jest wyspecjalizowaną odmianą [COLUMN_ENTRY](#column_entry) makro, które zapewnia metodę określania typu danych.
 
 ### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a> COLUMN_ENTRY_TYPE_SIZE
 
@@ -1061,11 +1061,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-To makro jest wyspecjalizowaną odmianą [COLUMN_ENTRY](../../data/oledb/column-entry.md) makro, które zapewnia metodę określania rozmiaru i typu danych.
+To makro jest wyspecjalizowaną odmianą [COLUMN_ENTRY](#column_entry) makro, które zapewnia metodę określania rozmiaru i typu danych.
 
 ### <a name="column_name"></a><a name="column_name"></a> COLUMN_NAME
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [COLUMN_ENTRY](../../data/oledb/column-entry.md), z tą różnicą, że to makro przyjmuje nazwę kolumny zamiast numeru kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [COLUMN_ENTRY](#column_entry), z tą różnicą, że to makro przyjmuje nazwę kolumny zamiast numeru kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1083,17 +1083,17 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Makra COLUMN_NAME_ * są używane w tych samych miejscach co [COLUMN_ENTRY](../../data/oledb/column-entry.md):
+Makra COLUMN_NAME_ * są używane w tych samych miejscach co [COLUMN_ENTRY](#column_entry):
 
-- Między makrami [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) i [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
+- Między makrami [BEGIN_COLUMN_MAP](#begin_column_map) i [END_COLUMN_MAP](#end_column_map) .
 
-- Między makrami [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+- Między makrami [BEGIN_ACCESSOR](#begin_accessor) i [END_ACCESSOR](#end_accessor) .
 
-- Między makrami [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) i [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
+- Między makrami [BEGIN_PARAM_MAP](#begin_param_map) i [END_PARAM_MAP](#end_param_map) .
 
 ### <a name="column_name_ex"></a><a name="column_name_ex"></a> COLUMN_NAME_EX
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro pobiera również typ danych, rozmiar, dokładność, skalę, długość kolumny i stan kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro pobiera również typ danych, rozmiar, dokładność, skalę, długość kolumny i stan kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1121,7 +1121,7 @@ podczas Skala do użycia podczas pobierania danych i *wType* jest `DBTYPE_NUMERI
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -1129,11 +1129,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_length"></a><a name="column_name_length"></a> COLUMN_NAME_LENGTH
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również przyjmuje długość kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również przyjmuje długość kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1149,16 +1149,16 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_length_status"></a><a name="column_name_length_status"></a> COLUMN_NAME_LENGTH_STATUS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro pobiera również długość kolumny i stan kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro pobiera również długość kolumny i stan kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1174,7 +1174,7 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -1182,11 +1182,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_ps"></a><a name="column_name_ps"></a> COLUMN_NAME_PS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również pobiera precyzję i skalowalność.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również pobiera precyzję i skalowalność.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1210,11 +1210,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a> COLUMN_NAME_PS_LENGTH
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również pobiera precyzję, skalę i długość kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również pobiera precyzję, skalę i długość kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1236,16 +1236,16 @@ podczas Skala kolumny, która ma zostać powiązana.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a> COLUMN_NAME_PS_LENGTH_STATUS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również pobiera precyzję, skalę, długość kolumny i stan kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również pobiera precyzję, skalę, długość kolumny i stan kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1267,7 +1267,7 @@ podczas Skala kolumny, która ma zostać powiązana.
 *data*<br/>
 podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
-*Długość*<br/>
+*length*<br/>
 podczas Zmienna, która ma zostać powiązana z długością kolumny.
 
 *Stany*<br/>
@@ -1275,11 +1275,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a> COLUMN_NAME_PS_STATUS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również Pobiera stan dokładności, skali i kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również Pobiera stan dokładności, skali i kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1306,11 +1306,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_status"></a><a name="column_name_status"></a> COLUMN_NAME_STATUS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro również przyjmuje stan kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro również przyjmuje stan kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1331,11 +1331,11 @@ podczas Zmienna, która ma zostać powiązana ze stanem kolumny.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_type"></a><a name="column_name_type"></a> COLUMN_NAME_TYPE
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro pobiera również typ danych.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro pobiera również typ danych.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1356,11 +1356,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a> COLUMN_NAME_TYPE_PS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro pobiera również typ danych, dokładność i skalowanie.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro pobiera również typ danych, dokładność i skalowanie.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1387,11 +1387,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_type_size"></a><a name="column_name_type_size"></a> COLUMN_NAME_TYPE_SIZE
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro pobiera również typ danych i rozmiar.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak [column_name](#column_name), z tą różnicą, że to makro pobiera również typ danych i rozmiar.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1415,11 +1415,11 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="column_name_type_status"></a><a name="column_name_type_status"></a> COLUMN_NAME_TYPE_STATUS
 
-Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak w przypadku [column_name](../../data/oledb/column-name.md), z tą różnicą, że to makro wymaga również typu danych i kolumny.
+Reprezentuje powiązanie zestawu wierszy z określoną kolumną w zestawie wierszy. Podobnie jak w przypadku [column_name](#column_name), z tą różnicą, że to makro wymaga również typu danych i kolumny.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1443,7 +1443,7 @@ podczas Odpowiadający element członkowski danych w rekordzie użytkownika.
 
 #### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](../../data/oledb/column-name.md) .
+Aby uzyskać informacje o tym, gdzie są używane makra COLUMN_NAME_ *, zobacz [column_name](#column_name) .
 
 ### <a name="end_column_map"></a><a name="end_column_map"></a> END_COLUMN_MAP
 
@@ -1461,14 +1461,14 @@ Jest on używany z pojedynczym akcesorem zestawu wierszy. Makro BEGIN_COLUMN_MAP
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+Zobacz [BEGIN_COLUMN_MAP](#begin_column_map).
 
 ### <a name="define_command"></a><a name="define_command"></a> DEFINE_COMMAND
 
 Określa polecenie, które zostanie użyte do utworzenia zestawu wierszy przy użyciu klasy [CCommand](../../data/oledb/ccommand-class.md) . Akceptuje tylko typy ciągów zgodne z określonym typem aplikacji (ANSI lub Unicode).
 
 > [!NOTE]
-> Zaleca się używanie [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) zamiast DEFINE_COMMAND.
+> Zaleca się używanie [DEFINE_COMMAND_EX](#define_command_ex) zamiast DEFINE_COMMAND.
 
 #### <a name="syntax"></a>Składnia
 
@@ -1486,13 +1486,13 @@ podczas Ciąg polecenia, który zostanie użyty do utworzenia zestawu wierszy pr
 
 #### <a name="remarks"></a>Uwagi
 
-Określony ciąg polecenia będzie używany jako domyślny, jeśli nie określisz tekstu polecenia w metodzie [CCommand:: Open](../../data/oledb/ccommand-open.md) .
+Określony ciąg polecenia będzie używany jako domyślny, jeśli nie określisz tekstu polecenia w metodzie [CCommand:: Open](./ccommand-class.md#open) .
 
-To makro akceptuje ciągi ANSI w przypadku kompilowania aplikacji jako ANSI lub ciągów Unicode w przypadku kompilowania aplikacji jako Unicode. Zaleca się używanie [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) zamiast DEFINE_COMMAND, ponieważ dawniej akceptuje ciągi Unicode, niezależnie od typu aplikacji ANSI lub Unicode.
+To makro akceptuje ciągi ANSI w przypadku kompilowania aplikacji jako ANSI lub ciągów Unicode w przypadku kompilowania aplikacji jako Unicode. Zaleca się używanie [DEFINE_COMMAND_EX](#define_command_ex) zamiast DEFINE_COMMAND, ponieważ dawniej akceptuje ciągi Unicode, niezależnie od typu aplikacji ANSI lub Unicode.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Zobacz [BOOKMARK_ENTRY](#bookmark_entry).
 
 ### <a name="define_command_ex"></a><a name="define_command_ex"></a> DEFINE_COMMAND_EX
 
@@ -1514,13 +1514,13 @@ podczas Ciąg polecenia, który zostanie użyty do utworzenia zestawu wierszy pr
 
 #### <a name="remarks"></a>Uwagi
 
-Określony ciąg polecenia będzie używany jako domyślny, jeśli nie określisz tekstu polecenia w metodzie [CCommand:: Open](../../data/oledb/ccommand-open.md) .
+Określony ciąg polecenia będzie używany jako domyślny, jeśli nie określisz tekstu polecenia w metodzie [CCommand:: Open](./ccommand-class.md#open) .
 
-To makro akceptuje ciągi Unicode, niezależnie od typu aplikacji. To makro jest preferowane względem [DEFINE_COMMAND](../../data/oledb/define-command.md) , ponieważ obsługuje standard Unicode oraz aplikacje ANSI.
+To makro akceptuje ciągi Unicode, niezależnie od typu aplikacji. To makro jest preferowane względem [DEFINE_COMMAND](#define_command) , ponieważ obsługuje standard Unicode oraz aplikacje ANSI.
 
 #### <a name="example"></a>Przykład
 
-Zobacz [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Zobacz [BOOKMARK_ENTRY](#bookmark_entry).
 
 ### <a name="begin_param_map"></a><a name="begin_param_map"></a> BEGIN_PARAM_MAP
 
@@ -1543,7 +1543,7 @@ Parametry są używane przez [polecenia](/previous-versions/windows/desktop/ms72
 
 #### <a name="example"></a>Przykład
 
-Zobacz przykład dla makra [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) .
+Zobacz przykład dla makra [BEGIN_COLUMN_MAP](#begin_column_map) .
 
 ### <a name="end_param_map"></a><a name="end_param_map"></a> END_PARAM_MAP
 
@@ -1557,7 +1557,7 @@ END_PARAM_MAP()
 
 #### <a name="example"></a>Przykład
 
-Zobacz przykład dla makra [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) .
+Zobacz przykład dla makra [BEGIN_PARAM_MAP](#begin_param_map) .
 
 ### <a name="set_param_type"></a><a name="set_param_type"></a> SET_PARAM_TYPE
 

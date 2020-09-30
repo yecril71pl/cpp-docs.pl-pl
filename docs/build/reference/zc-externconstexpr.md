@@ -7,14 +7,14 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: 7546ab6d81137a2abb053cd18f0d5d74913c3b00
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db5a8892bcc11538c3ff883a0e9a3a27db0ee14f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211908"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502802"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr`(Włącz zmienne constexpr extern)
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr` (Włącz zmienne constexpr extern)
 
 **`/Zc:externConstexpr`** Opcja kompilatora instruuje kompilator, aby był zgodny ze standardem C++ i zezwala na zewnętrzne powiązanie dla **`constexpr`** zmiennych. Domyślnie program Visual Studio zawsze zapewnia **`constexpr`** zmienny związek wewnętrzny, nawet w przypadku określenia **`extern`** słowa kluczowego.
 
@@ -36,7 +36,7 @@ Jeśli plik nagłówkowy zawiera zmienną zadeklarowaną `extern constexpr` , na
 
 1. Dodaj **`/Zc:externConstexpr`** lub **`/Zc:externConstexpr-`** do **opcji dodatkowe:** okienko.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[`/Zc`Zgodności](zc-conformance.md)<br/>
-[`auto`Kodu](../../cpp/auto-keyword.md)
+[`/Zc` Zgodności](zc-conformance.md)<br/>
+[`auto` Kodu](../../cpp/auto-cpp.md)

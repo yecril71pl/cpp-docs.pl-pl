@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615346"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503532"
 ---
 # <a name="binary-editor-c"></a>Edytor binarny (C++)
 
@@ -116,7 +116,7 @@ Nowy zasób niestandardowy lub dane można utworzyć, umieszczając zasób w oso
 
 1. Wybierz **przycisk OK** , aby zapisać zmiany.
 
-Innym sposobem na utworzenie zasobu niestandardowego jest zaimportowanie pliku zewnętrznego jako zasobu niestandardowego, zobacz [How to: Manage Resources](../windows/how-to-import-and-export-resources.md).
+Innym sposobem na utworzenie zasobu niestandardowego jest zaimportowanie pliku zewnętrznego jako zasobu niestandardowego, zobacz [How to: Manage Resources](./how-to-copy-resources.md).
 
 > [!NOTE]
 > Tworzenie nowych zasobów niestandardowych lub danych wymaga Win32.

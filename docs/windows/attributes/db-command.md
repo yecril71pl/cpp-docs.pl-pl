@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684589"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504593"
 ---
 # <a name="db_command"></a>db_command
 
@@ -125,7 +125,7 @@ Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmie
 
 ## <a name="examples"></a>Przykłady
 
-Ten przykład definiuje polecenie, które wybiera imiona i nazwiska z tabeli, w której kolumna State pasuje do "CA". **db_command** tworzy i odczytuje zestaw wierszy, w którym można wywołać funkcje generowane przez kreatora, takie jak [metody OpenAll i CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), a także `CRowset` funkcje członkowskie, takie jak [MoveNext](../../data/oledb/crowset-movenext.md).
+Ten przykład definiuje polecenie, które wybiera imiona i nazwiska z tabeli, w której kolumna State pasuje do "CA". **db_command** tworzy i odczytuje zestaw wierszy, w którym można wywołać funkcje generowane przez kreatora, takie jak [metody OpenAll i CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), a także `CRowset` funkcje członkowskie, takie jak [MoveNext](../../data/oledb/crowset-class.md#movenext).
 
 Należy zauważyć, że ten kod wymaga podania własnych parametrów połączenia, które łączą się z bazą danych pubs. Aby uzyskać informacje o tym, jak to zrobić w środowisku deweloperskim, zobacz [How to: Connect to a Database and Browse Existing objectss](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) and [Add New Connections](/visualstudio/data-tools/add-new-connections).
 
@@ -243,7 +243,7 @@ int main() {
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)<br/>
 [Atrybuty autonomiczne](stand-alone-attributes.md)
