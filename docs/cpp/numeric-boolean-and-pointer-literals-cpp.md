@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: def223682b58f3d0c8bd3dd88f6d54fc5aa8b8a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84fdac7010805fc4d0a429231a080ab11d5c595a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186454"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662259"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Literały numeryczne, wartości logicznych i wskaźników
 
@@ -31,11 +31,11 @@ Czasami ważne jest, aby poinformować kompilator, jak interpretuje literał lub
 
 ## <a name="integer-literals"></a>Literały całkowite
 
-Literały całkowite zaczynają się cyfrą i nie mają części ułamkowych ani wykładników. Literały całkowite można określić w postaci dziesiętnej, ósemkowej lub szesnastkowej. Można określić typy podpisane lub niepodpisane oraz typy Long lub short.
+Literały całkowite zaczynają się cyfrą i nie mają części ułamkowych ani wykładników. Literały całkowite można określić w postaci dziesiętnej, binarnej, ósemkowej lub szesnastkowej. Opcjonalnie można określić literał liczby całkowitej jako unsigned, a jako Long lub long long, używając sufiksu.
 
 Gdy nie ma żadnego prefiksu lub sufiksu, kompilator poda całkowity typ wartości literału **`int`** (32 bitów), jeśli wartość będzie pasować. w przeciwnym razie będzie to miało typ **`long long`** (64 bitów).
 
-Aby określić dziesiętny literał całkowity, Rozpocznij specyfikację z cyfrą różną od zera. Na przykład:
+Aby określić dziesiętny literał całkowity, Rozpocznij specyfikację z cyfrą różną od zera. Przykład:
 
 ```cpp
 int i = 157;        // Decimal literal
@@ -44,21 +44,21 @@ int k = 0365;       // Leading zero specifies octal literal, not decimal
 int m = 36'000'000  // digit separators make large values more readable
 ```
 
-Aby określić literał całkowity w postaci ósemkowej, Rozpocznij specyfikację 0, a następnie sekwencję cyfr z zakresu od 0 do 7. Cyfry 8 i 9 są błędami określającymi literał ósemkowy. Na przykład:
+Aby określić literał całkowity w postaci ósemkowej, Rozpocznij specyfikację 0, a następnie sekwencję cyfr z zakresu od 0 do 7. Cyfry 8 i 9 są błędami określającymi literał ósemkowy. Przykład:
 
 ```cpp
 int i = 0377;   // Octal literal
 int j = 0397;   // Error: 9 is not an octal digit
 ```
 
-Aby określić szesnastkowy literał całkowity, Rozpocznij specyfikację z `0x` lub `0X` (przypadek "x" nie ma znaczenia), po którym następuje sekwencja cyfr w zakresie od `0` `9` i `a` (lub `A` ) do `f` (lub `F` ). Cyfry szesnastkowe od `a` (lub `A`) do `f` (lub `F`) reprezentują wartości z zakresu od 10 do 15. Na przykład:
+Aby określić szesnastkowy literał całkowity, Rozpocznij specyfikację z `0x` lub `0X` (przypadek "x" nie ma znaczenia), po którym następuje sekwencja cyfr w zakresie od `0` `9` i `a` (lub `A` ) do `f` (lub `F` ). Cyfry szesnastkowe od `a` (lub `A`) do `f` (lub `F`) reprezentują wartości z zakresu od 10 do 15. Przykład:
 
 ```cpp
 int i = 0x3fff;   // Hexadecimal literal
 int j = 0X3FFF;   // Equal to i
 ```
 
-Aby określić typ bez znaku, użyj `u` `U` sufiksu or. Aby określić typ Long, użyj `l` `L` sufiksu or. Aby określić 64-bitowy typ całkowity, użyj sufiksu LL lub LL. Sufiks I64 jest nadal obsługiwany, ale nie jest to zalecane. Jest on specyficzny dla firmy Microsoft i nie jest przenośny. Na przykład:
+Aby określić typ bez znaku, użyj `u` `U` sufiksu or. Aby określić typ Long, użyj `l` `L` sufiksu or. Aby określić 64-bitowy typ całkowity, użyj sufiksu LL lub LL. Sufiks I64 jest nadal obsługiwany, ale nie jest to zalecane. Jest on specyficzny dla firmy Microsoft i nie jest przenośny. Przykład:
 
 ```cpp
 unsigned val_1 = 328u;                  // Unsigned value
@@ -79,7 +79,7 @@ long long i = 24'847'458'121
 
 Literały zmiennoprzecinkowe określają wartości, które muszą mieć część ułamkową. Te wartości zawierają punkty dziesiętne ( **`.`** ) i mogą zawierać wykładniki.
 
-Literały zmiennoprzecinkowe mają *mantysę* (czasami nazywane *mantysy*), która określa wartość liczby. Mają *wykładnik*, który określa wielkość liczby. I mają opcjonalne sufiksy, który określa typ literału. Mantysę jest określony jako sekwencja cyfr, po których następuje kropka, po której następuje opcjonalna sekwencja cyfr reprezentująca część ułamkową liczby. Na przykład:
+Literały zmiennoprzecinkowe mają *mantysę* (czasami nazywane *mantysy*), która określa wartość liczby. Mają *wykładnik*, który określa wielkość liczby. I mają opcjonalne sufiksy, który określa typ literału. Mantysę jest określony jako sekwencja cyfr, po których następuje kropka, po której następuje opcjonalna sekwencja cyfr reprezentująca część ułamkową liczby. Przykład:
 
 ```cpp
 18.46
@@ -137,7 +137,7 @@ if (num < 100)
 
 W poprzednim przykładzie lepszym rozwiązaniem jest użycie nazwanej stałej, która daje jasne znaczenie, na przykład "MAXIMUM_ERROR_THRESHOLD". A jeśli wartość zwracana "powodzenie" jest widoczna dla użytkowników końcowych, lepiej jest użyć nazwanego ciągu znaków. Można przechowywać stałe ciągów w pojedynczej lokalizacji w pliku, który można lokalizować w innych językach. Używanie nazwanych stałych pomaga zarówno samemu, jak i innym użytkownikom zrozumieć intencję kodu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje leksykalne](../cpp/lexical-conventions.md)<br/>
 [Literały ciągu języka C++](../cpp/string-and-character-literals-cpp.md)<br/>

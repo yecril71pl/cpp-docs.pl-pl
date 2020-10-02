@@ -14,14 +14,14 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 6c0009e5236f33119ed411dc81ce6a4385f21a2a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180802"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662271"
 ---
-# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(Generowanie kodu w czasie konsolidacji)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG` (Generowanie kodu w czasie konsolidacji)
 
 Służy **`/LTCG`** do przeprowadzania optymalizacji całego programu lub do tworzenia Instrumentacji optymalizacji opartej na profilach (PGO), wykonywania szkoleń i tworzenia zoptymalizowanych kompilacji opartych na profilach.
 
@@ -38,20 +38,20 @@ Te opcje są przestarzałe, począwszy od programu Visual Studio 2015:
 **`INCREMENTAL`**<br/>
 Obowiązkowe Określa, że konsolidator stosuje tylko pełną optymalizację programu lub generowanie kodu w czasie konsolidacji (LTCG) do plików, których dotyczy Edycja, a nie cały projekt. Domyślnie ta flaga nie jest ustawiona, gdy **`/LTCG`** jest określona, a cały projekt jest połączony przy użyciu funkcji optymalizacji całego programu.
 
-**`NOSTATUS`**&#124;**`STATUS`**<br/>
+**`NOSTATUS`** &#124; **`STATUS`**<br/>
 Obowiązkowe Określa, czy konsolidator wyświetla wskaźnik postępu, który pokazuje, jaki procent łącza został ukończony. Domyślnie te informacje o stanie nie są wyświetlane.
 
 **`OFF`**<br/>
 Obowiązkowe Wyłącza generowanie kodu w czasie konsolidacji. Takie zachowanie jest takie samo, jak w przypadku, gdy **`/LTCG`** nie jest określone w wierszu polecenia.
 
 **`PGINSTRUMENT`**<br/>
-Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego użyj **`/LTCG`** i `[/GENPROFILE` lub `/FASTGENPROFILE` ] (GENPROFILE-fastgenprofile-Generate-Profiling-instrumented-Build.MD), aby wygenerować instrumentację kompilacji dla optymalizacji opartej na profilach. Dane zbierane z przebiegów Instrumentacji są używane do tworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGI`** .
+Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **`/LTCG`** i [ `/GENPROFILE` `/FASTGENPROFILE` lub](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) wygenerować instrumentację kompilacji dla optymalizacji opartej na profilach. Dane zbierane z przebiegów Instrumentacji są używane do tworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGI`** .
 
 **`PGOPTIMIZE`**<br/>
-Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **`/LTCG`** i [`/USEPROFILE`](useprofile.md) do skompilowania zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGO`** .
+Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **`/LTCG`** i  [`/USEPROFILE`](useprofile.md) do skompilowania zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGO`** .
 
 **`PGUPDATE`**<br/>
-Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **`/LTCG`** i **`/USEPROFILE`** w celu odbudowania zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGU`** .
+Obowiązkowe Ta opcja jest przestarzała począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **`/LTCG`** i  **`/USEPROFILE`** w celu odbudowania zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane. Krótka forma tej opcji to **`/LTCG:PGU`** .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -129,13 +129,13 @@ Jeśli funkcja jest wywoływana za pośrednictwem wskaźnika funkcji lub jeśli 
 > [!NOTE]
 > Jeśli używasz **`/LTCG`** i przedefiniujesz `mainCRTStartup` , aplikacja może mieć nieprzewidywalne zachowanie, które odnosi się do kodu użytkownika, który jest wykonywany przed zainicjowaniem obiektów globalnych. Istnieją trzy sposoby rozwiązania tego problemu: nie należy przedefiniować `mainCRTStartup` , nie Kompiluj pliku, który zawiera `mainCRTStartup` za pomocą **`/LTCG`** lub zainicjuj zmienne globalne i obiekty statycznie.
 
-### <a name="ltcg-and-msil-modules"></a>`/LTCG`Moduły MSIL i
+### <a name="ltcg-and-msil-modules"></a>`/LTCG` Moduły MSIL i
 
 Moduły, które są kompilowane przy użyciu [`/GL`](gl-whole-program-optimization.md) i [`/clr`](clr-common-language-runtime-compilation.md) mogą być używane jako dane wejściowe konsolidatora, gdy **`/LTCG`** jest określony.
 
 - **`/LTCG`** może akceptować natywne pliki obiektów i mieszane pliki obiektów natywnych/zarządzanych (skompilowane przy użyciu **`/clr`** ). **`/clr:pure`** **`/clr:safe`** Opcje kompilatora i są przestarzałe w programie visual Studio 2015 i nie są obsługiwane w programie visual Studio 2017 lub nowszym.
 
-- **`/LTCG:PGI`** nie akceptuje modułów natywnych skompilowanych za pomocą **`/GL`** i**`/clr`**
+- **`/LTCG:PGI`** nie akceptuje modułów natywnych skompilowanych za pomocą **`/GL`** i **`/clr`**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
