@@ -7,7 +7,15 @@ ms.lasthandoff: 03/24/2020
 ms.locfileid: "80208311"
 ---
 > [!IMPORTANT]
-> Kompilatory i narzędzia kompilacji programu Visual Studio mogą raportować wiele rodzajów błędów i ostrzeżeń. Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą wprowadzić założenia dotyczące założeń kodu i podjąć próbę kontynuowania, aby można było zgłosić więcej problemów w tym samym czasie. Jeśli narzędzia te nie mają niewłaściwego założeń, późniejsze błędy lub ostrzeżenia mogą nie dotyczyć Twojego projektu. W przypadku rozwiązywania problemów w projekcie należy zawsze rozpoczynać się od pierwszego błędu lub ostrzeżenia, które zostało zgłoszone, i często ponownie skompilować. Jedna poprawka może spowodować, że wiele kolejnych błędów nie zniknie.
+> Kompilatory i narzędzia kompilacji programu Visual Studio mogą zgłaszać
+wiele rodzajów błędów i ostrzeżeń.
+Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą przyjąć
+pewne założenia dotyczące założeń kodu i podjąć próbę kontynuowania,
+aby ewentualnie zgłosić więcej problemów w tym samym przebiegu.
+Jeśli te założenia okażą się nietrafne,
+późniejsze błędy lub ostrzeżenia mogą nie dotyczyć Twojego projektu.
+W przypadku rozwiązywania problemów w projekcie należy zawsze rozpoczynać od pierwszego błędu lub ostrzeżenia, które zostało zgłoszone, i często powtórzyć kompilację.
+Jedna poprawka może spowodować, że wiele kolejnych błędów zniknie.
 
 Aby uzyskać pomoc dotyczącą konkretnego komunikatu diagnostycznego w programie Visual Studio, wybierz go w oknie **danych wyjściowych** i naciśnij klawisz **F1** . Program Visual Studio otwiera stronę dokumentacji dla tego błędu, jeśli taka istnieje. Możesz również użyć powyższego narzędzia wyszukiwania, aby znaleźć artykuły o określonych błędach lub ostrzeżeniach. Można też przeglądać listę błędów i ostrzeżeń według narzędzia i pisać w okienku nawigacji na tej stronie.
 
